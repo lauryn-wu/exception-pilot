@@ -2,12 +2,19 @@
 
 ## Current follow-up: 640-call question × uncertainty diagnostic
 
+**If `factorial-001` stopped at attempt 596 on an invalid final-answer format:**
+use the [documented continuation](FACTORIAL_RECOVERY.md). It preserves that
+returned response and finishes only the 44 unattempted tasks. Do not restart
+the study or resample the invalid answer. The original strict analysis stays
+unchanged; the continuation is explicitly recorded as a post-result amendment.
+
 Use **`python3 -m exception_factorial`** with `configs/factorial.json`. This study
 separates two changes that were bundled in the completed wording experiment:
 asking for the recorded class and removing the uncertainty sentence. It tests
 all four combinations on 20 fresh lists, with direct and neutral reasoning
 responses in supporting and conflicting backgrounds. The model remains
-**`gpt-4o-2024-08-06`**. No live calls have been made for this new study.
+**`gpt-4o-2024-08-06`**. Initial data collection is underway; the protocol below
+was fixed before it began.
 
 Read [FACTORIAL_PROTOCOL.md](FACTORIAL_PROTOCOL.md) for the exact prompts,
 predefined contrasts, interpretation plan, and limitations. This is a separately
