@@ -1,6 +1,49 @@
 # Exception pilot
 
-## Current follow-up: 640-call question × uncertainty diagnostic
+## Current follow-up: 384-call explanatory diagnostic
+
+Use **`python3 -m exception_explanation`** with `configs/explanation.json`.
+This asks whether failures persist after correctly copying a verified class,
+and whether copying that class helps more than copying another field from the
+same row. A three-label design changes only the target class cell while keeping
+the surrounding pattern fixed. Original-format binary anchors check that the
+earlier behavior still appears. The model remains **`gpt-4o-2024-08-06`**.
+
+There are **24 independent worlds and 384 planned calls**, with a hard cap of
+400 total attempts including transport errors. This is a bounded exploratory
+diagnostic, not a claim of novelty or a guarantee of a publishable result.
+Read [EXPLANATION_PROTOCOL.md](EXPLANATION_PROTOCOL.md) for the example, exact
+design, contrasts, interpretation limits, and recovery instructions.
+
+From your existing Git checkout on macOS:
+
+```bash
+git pull --ff-only
+python3 -m exception_explanation prepare --config configs/explanation.json --output runs/explanation-001
+open runs/explanation-001/preview.md
+caffeinate -i python3 -m exception_explanation run --config configs/explanation.json --output runs/explanation-001 --max-calls 16
+caffeinate -i python3 -m exception_explanation run --config configs/explanation.json --output runs/explanation-001 --max-calls 384 --resume
+open runs/explanation-001/summary.md
+zip -r explanation-001.zip runs/explanation-001
+```
+
+The first 16 calls count toward the 384 total. After an error-free first block,
+resume makes only 368 additional calls. Use the same `OPENAI_API_KEY`; setup for
+a new terminal is in the protocol. `prepare` makes no API calls. No new packages
+or GPU are required. If using a source ZIP rather than Git, download the updated
+source into a separate folder and keep your existing results.
+
+Completed but unparseable answers are retained while the other tasks continue;
+they are never sampled again. Copy errors are scored separately from final
+answers. Missing-class cases have no accuracy score. The report uses world-paired
+contrasts and reports uncertainty, not an automated scientific pass. For a
+transport failure, add `--retry-errors` to the resume command. For an incomplete
+provider response, preserve the run and inspect the report before continuing.
+
+Earlier studies and their frozen source packages are preserved. Do not rerun
+them for this diagnostic. All commands below are historical reference.
+
+## Completed follow-up: 640-call question × uncertainty diagnostic
 
 **If `factorial-001` stopped at attempt 596 on an invalid final-answer format:**
 use the [documented continuation](FACTORIAL_RECOVERY.md). It preserves that
@@ -13,8 +56,10 @@ separates two changes that were bundled in the completed wording experiment:
 asking for the recorded class and removing the uncertainty sentence. It tests
 all four combinations on 20 fresh lists, with direct and neutral reasoning
 responses in supporting and conflicting backgrounds. The model remains
-**`gpt-4o-2024-08-06`**. Initial data collection is underway; the protocol below
-was fixed before it began.
+**`gpt-4o-2024-08-06`**. Collection is complete: 640 returned responses, 639
+scorable final answers, and 19 complete worlds for the strict paired analysis.
+The interaction interval included zero. The protocol below was fixed before
+collection; the recovery amendment preserved the single unparseable response.
 
 Read [FACTORIAL_PROTOCOL.md](FACTORIAL_PROTOCOL.md) for the exact prompts,
 predefined contrasts, interpretation plan, and limitations. This is a separately
@@ -59,7 +104,7 @@ study tests the positive counterfactual pilot on 20 fresh lists, crossing the
 original versus recorded-class question with direct answers, the original
 reasoning instruction, and neutral “Think step by step” reasoning. The model
 remains `gpt-4o-2024-08-06`. This study is now completed; its commands are retained
-here for reference. Use the factorial commands above for the current follow-up.
+here for reference. Use the explanation commands above for the current follow-up.
 
 Read [WORDING_PROTOCOL.md](WORDING_PROTOCOL.md) for all six wording combinations,
 the primary contrast, ordered decision rules, limitations, and recovery steps.
@@ -117,10 +162,10 @@ any original Python source, so the original run's source fingerprint is preserve
 
 Does asking a model to reason make it repeatedly misclassify verified exceptions?
 This repository implements a bounded replication screen followed by conditional
-diagnostics. It contains **no real model results**. Simulated tests are explicitly
-labeled and cannot authorize a live diagnostic run.
+diagnostics. Raw model responses stay in ignored run folders and are not committed.
+Simulated tests are explicitly labeled and cannot authorize a live diagnostic run.
 
-**Start here:** use the 1,200-call stage-1 configuration on
+**Historical starting instructions:** use the 1,200-call stage-1 configuration on
 `gpt-4o-2024-08-06`. Run eight calls first to check access and formatting, then
 resume the same run. Stage 2 is a separate 320-call command and only starts when
 its completed stage-1 parent meets the predeclared exploratory gate.
