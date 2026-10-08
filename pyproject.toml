@@ -13,6 +13,7 @@ dependencies = []
 exception-pilot = "exception_pilot.__main__:main"
 exception-counterfactual = "exception_counterfactual.__main__:main"
 exception-wording = "exception_wording.__main__:main"
+exception-factorial = "exception_factorial.__main__:main"
 
 [tool.setuptools.packages.find]
-include = ["exception_pilot*", "exception_counterfactual*", "exception_wording*"]
+include = ["exception_pilot*", "exception_counterfactual*", "exception_wording*", "exception_factorial*"]

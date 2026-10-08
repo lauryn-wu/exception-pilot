@@ -1,12 +1,58 @@
 # Exception pilot
 
-## Current follow-up: 480-call wording confirmation
+## Current follow-up: 640-call question × uncertainty diagnostic
+
+Use **`python3 -m exception_factorial`** with `configs/factorial.json`. This study
+separates two changes that were bundled in the completed wording experiment:
+asking for the recorded class and removing the uncertainty sentence. It tests
+all four combinations on 20 fresh lists, with direct and neutral reasoning
+responses in supporting and conflicting backgrounds. The model remains
+**`gpt-4o-2024-08-06`**. No live calls have been made for this new study.
+
+Read [FACTORIAL_PROTOCOL.md](FACTORIAL_PROTOCOL.md) for the exact prompts,
+predefined contrasts, interpretation plan, and limitations. This is a separately
+specified explanatory follow-up after inspecting earlier results. It preserves
+the earlier `stop_explicit_record_boundary` decision and has no new pass gate.
+
+From your Git checkout on macOS:
+
+```bash
+git pull --ff-only
+python3 -m exception_factorial prepare --config configs/factorial.json --output runs/factorial-001
+open runs/factorial-001/preview.md
+caffeinate -i python3 -m exception_factorial run --config configs/factorial.json --output runs/factorial-001 --max-calls 32
+caffeinate -i python3 -m exception_factorial run --config configs/factorial.json --output runs/factorial-001 --max-calls 640 --resume
+zip -r factorial-001.zip runs/factorial-001
+```
+
+The first 32 calls are included in the **640 total**; the resume command makes
+608 additional calls after an error-free check. Use the same `OPENAI_API_KEY`.
+In a new zsh terminal, set it using the instructions below or in the protocol.
+Prepare makes no API calls. No new dependencies or GPU are needed. On Linux,
+omit `caffeinate -i`. If the folder came from a ZIP and is not a Git checkout,
+download the updated source or clone the private repo into a separate folder;
+keep all existing run folders.
+
+Completion reports `complete_ready_for_interpretation`, not a scientific pass.
+The report includes all 16 cell accuracies, the four extra conflict penalties,
+the question-by-sentence interaction, and both factors' simple effects. Run
+`python3 -m exception_factorial analyze --output runs/factorial-001` to regenerate
+the report without API calls. Transport-error recovery uses the same run command
+with `--resume --retry-errors`; returned invalid answers cannot be resampled.
+
+Keep `reference-001`, `counterfactual-001`, and `wording-001` in their existing
+folders. Their source packages, configs, protocols, and decisions are unchanged.
+The new module rejects earlier run directories and preserves their source
+fingerprints. No second model or further study starts automatically.
+
+## Earlier follow-up: 480-call wording confirmation
 
 Use **`python3 -m exception_wording`** with `configs/wording.json`. This separate
 study tests the positive counterfactual pilot on 20 fresh lists, crossing the
 original versus recorded-class question with direct answers, the original
 reasoning instruction, and neutral “Think step by step” reasoning. The model
-remains `gpt-4o-2024-08-06`; no model calls have been made for this new study.
+remains `gpt-4o-2024-08-06`. This study is now completed; its commands are retained
+here for reference. Use the factorial commands above for the current follow-up.
 
 Read [WORDING_PROTOCOL.md](WORDING_PROTOCOL.md) for all six wording combinations,
 the primary contrast, ordered decision rules, limitations, and recovery steps.
