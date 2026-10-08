@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "exception-pilot"
+version = "0.1.0"
+description = "A staged pilot of reasoning and learning verified exceptions"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+exception-pilot = "exception_pilot.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["exception_pilot*"]
