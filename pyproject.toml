@@ -12,6 +12,7 @@ dependencies = []
 [project.scripts]
 exception-pilot = "exception_pilot.__main__:main"
 exception-counterfactual = "exception_counterfactual.__main__:main"
+exception-wording = "exception_wording.__main__:main"
 
 [tool.setuptools.packages.find]
-include = ["exception_pilot*", "exception_counterfactual*"]
+include = ["exception_pilot*", "exception_counterfactual*", "exception_wording*"]

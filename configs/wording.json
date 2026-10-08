@@ -1,0 +1,10 @@
+{
+  "protocol": "verified-facts-wording-v1",
+  "n_lists": 20,
+  "seed": 2026100848,
+  "model": "gpt-4o-2024-08-06",
+  "api_key_env": "OPENAI_API_KEY",
+  "temperature": 0.0,
+  "max_completion_tokens": {"direct": 10, "cot": 1000},
+  "timeout_seconds": 120
+}

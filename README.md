@@ -1,6 +1,34 @@
 # Exception pilot
 
-## Current follow-up: 160-call verified-facts diagnostic
+## Current follow-up: 480-call wording confirmation
+
+Use **`python3 -m exception_wording`** with `configs/wording.json`. This separate
+study tests the positive counterfactual pilot on 20 fresh lists, crossing the
+original versus recorded-class question with direct answers, the original
+reasoning instruction, and neutral “Think step by step” reasoning. The model
+remains `gpt-4o-2024-08-06`; no model calls have been made for this new study.
+
+Read [WORDING_PROTOCOL.md](WORDING_PROTOCOL.md) for all six wording combinations,
+the primary contrast, ordered decision rules, limitations, and recovery steps.
+From your Git checkout:
+
+```bash
+git pull --ff-only
+python3 -m exception_wording prepare --config configs/wording.json --output runs/wording-001
+open runs/wording-001/preview.md
+caffeinate -i python3 -m exception_wording run --config configs/wording.json --output runs/wording-001 --max-calls 24
+caffeinate -i python3 -m exception_wording run --config configs/wording.json --output runs/wording-001 --max-calls 480 --resume
+zip -r wording-001.zip runs/wording-001
+```
+
+The first 24 calls count toward the **480 total**. Use the same `OPENAI_API_KEY`;
+the protocol explains how to set it in a new terminal. Prepare makes no API
+calls. On Linux omit `caffeinate -i`. No new dependencies or GPU are needed.
+Keep `reference-001` and `counterfactual-001` in their existing folders. Their
+source packages, protocols, and decisions are unchanged. The new study's source
+fingerprint is separate, and it cannot resume either previous run.
+
+## Earlier follow-up: 160-call verified-facts diagnostic
 
 The new, separate experiment uses **`python3 -m exception_counterfactual`**, model
 `gpt-4o-2024-08-06`, and `configs/counterfactual.json`. It changes only other
