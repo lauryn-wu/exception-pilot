@@ -1,6 +1,56 @@
 # Exception pilot
 
-## Current follow-up: 384-call explanatory diagnostic
+## Current follow-up: 40-call false-missingness diagnostic
+
+Use **`python3 -m exception_missingness`** with the existing, completed
+`runs/explanation-001` as input. The model remains **`gpt-4o-2024-08-06`**.
+This tests whether changing a false claim that the target class is missing
+changes the continuation's answer, without supplying the class itself.
+It uses **10 selected traces from 9 worlds**, including 2 originally correct
+and 8 originally wrong answers. It is a post hoc text-intervention diagnostic.
+
+Read [MISSINGNESS_PROTOCOL.md](MISSINGNESS_PROTOCOL.md) for the exact edits,
+selection, analysis, limitations, and recovery commands. From your existing
+Git checkout on macOS:
+
+```bash
+git pull --ff-only
+python3 -m exception_missingness prepare --parent runs/explanation-001 --config configs/missingness.json --output runs/missingness-001
+open runs/missingness-001/preview.md
+caffeinate -i python3 -m exception_missingness run --output runs/missingness-001 --phase replay --max-calls 10
+open runs/missingness-001/summary.md
+```
+
+**Check the replay decision before continuing.** All 10 replays must be
+scorable and at least 8 must reproduce the saved original answer. This is a
+practical feasibility check, not a statistical finding. If the decision is
+`stop`, stop this diagnostic and share the run; do not retune or start over.
+If it is `pass`, run the remaining 30 calls:
+
+```bash
+caffeinate -i python3 -m exception_missingness run --output runs/missingness-001 --phase interventions --max-calls 30 --resume
+open runs/missingness-001/summary.md
+zip -r missingness-001.zip runs/missingness-001
+```
+
+The first 10 calls are included in the **40 total**. The cumulative cap is
+48 attempts, allowing only explicitly requested transport retries. Returned
+invalid answers are retained and never resampled. The intervention command
+cannot run unless the replay gate passes; all 10 cases remain in the study.
+Preparation and analysis make no API calls. Your parent results are read-only;
+the prepared plan contains the selected source records for later auditing.
+Use the same `OPENAI_API_KEY`; no new dependencies or GPU are needed.
+
+Earlier studies below are preserved as historical reference. Do not rerun
+them for this diagnostic.
+
+## Completed follow-up: 384-call explanatory diagnostic
+
+Collection is complete: 384 valid answers. On the 48 visible-record cases,
+neutral CoT answered 25 correctly, class copying 48, and same-row marker copying
+29. None of the 48 correct class copies was followed by a wrong final answer.
+The selected false-missingness follow-up above tests a narrower hypothesis;
+these results alone do not identify an internal mechanism or establish novelty.
 
 Use **`python3 -m exception_explanation`** with `configs/explanation.json`.
 This asks whether failures persist after correctly copying a verified class,
