@@ -1,5 +1,39 @@
 # Exception pilot
 
+## Current follow-up: 160-call verified-facts diagnostic
+
+The new, separate experiment uses **`python3 -m exception_counterfactual`**, model
+`gpt-4o-2024-08-06`, and `configs/counterfactual.json`. It changes only other
+vehicles' labels while keeping both target records and the 20% exception rate
+fixed. It contains no generated history. There are 20 independent matched lists
+and 160 planned calls.
+
+Read [COUNTERFACTUAL_PROTOCOL.md](COUNTERFACTUAL_PROTOCOL.md) for the exact design,
+decision rule, preview, and recovery instructions. Keep the completed reference
+run in its original folder. The original stage-1 stop decision and Stage 2 gate
+remain intact; this follow-up is explicitly exploratory.
+
+From this folder, prepare without API calls:
+
+```bash
+python3 -m exception_counterfactual prepare --config configs/counterfactual.json --output runs/counterfactual-001
+```
+
+After inspecting `runs/counterfactual-001/preview.md` and setting `OPENAI_API_KEY`,
+run an eight-call check, then finish the same plan:
+
+```bash
+caffeinate -i python3 -m exception_counterfactual run --config configs/counterfactual.json --output runs/counterfactual-001 --max-calls 8
+caffeinate -i python3 -m exception_counterfactual run --config configs/counterfactual.json --output runs/counterfactual-001 --max-calls 160 --resume
+```
+
+The second command skips completed calls. Open `runs/counterfactual-001/summary.md`
+after completion. On Linux, omit `caffeinate -i`. No packages or GPU are required.
+The new code shares the original provider and parsing helpers without modifying
+any original Python source, so the original run's source fingerprint is preserved.
+
+## Original staged experiment (preserved)
+
 Does asking a model to reason make it repeatedly misclassify verified exceptions?
 This repository implements a bounded replication screen followed by conditional
 diagnostics. It contains **no real model results**. Simulated tests are explicitly
