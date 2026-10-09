@@ -1,6 +1,26 @@
 # Exception pilot
 
-## Current follow-up: continuation mapping with a whitespace-scoring amendment
+## Current follow-up: complete-screen continuation mapping
+
+V3 handles common answer presentation, including `ANSWER:` followed by a newline
+and `**ANSWER: A**`. It collects the full fixed screen, retains unscorable
+responses, then evaluates the unchanged feasibility thresholds. Format failures
+no longer cause repeated early stops. Operational failures still stop immediately.
+
+Read [MISTRAL_MAP_V3_PROTOCOL.md](MISTRAL_MAP_V3_PROTOCOL.md). Keep the previous
+runs and migrate all nine saved responses offline; none will be regenerated:
+
+```bash
+python3 -m exception_mistral_map_v3 migrate --config configs/mistral_map_v3.json --source runs/mistral-map-v2-001 --output runs/mistral-map-v3-001
+caffeinate -i python3 -m exception_mistral_map_v3 run --config configs/mistral_map_v3.json --output runs/mistral-map-v3-001 --max-calls 49 --resume
+```
+
+With the reported nine responses, 40 new check calls remain. Mapping still
+requires a separate command after a passing check. Every original raw response,
+failed report, and V1/V2 score is preserved; this is a disclosed retrospective
+amendment, not a fresh confirmation run.
+
+## Archived V2: continuation mapping with a whitespace-scoring amendment
 
 The first map stopped when a model wrote `ANSWER:` and `A` on separate lines.
 The final label was clear, but the strict V1 parser rejected the newline.
