@@ -1,6 +1,52 @@
 # Exception pilot
 
-## Current follow-up: 144-call reasoning instruction/output diagnostic
+## Current follow-up: 96-call cue test with enforced answer-only output
+
+Use **`python3 -m exception_constrained_cue`** with
+`configs/constrained_cue.json`. This compares direct answering with a
+step-by-step instruction while **both conditions use the same strict JSON
+schema permitting only an A/B/C answer**. It repairs the previous cue study's
+failed answer-only control.
+
+The design reuses all 24 cue worlds and both recorded-class variants:
+**24 × 2 × 2 = 96 planned calls**. The model remains
+**`gpt-4o-2024-08-06`**, with equal token ceilings and separate conversations.
+These are previously examined worlds, not a fresh-item replication. Read
+[CONSTRAINED_CUE_PROTOCOL.md](CONSTRAINED_CUE_PROTOCOL.md) for the exact schema,
+prompts, paired analysis, and interpretation limits.
+
+From your existing checkout on macOS, using your existing `OPENAI_API_KEY`:
+
+```bash
+git pull --ff-only
+python3 -m exception_constrained_cue prepare --config configs/constrained_cue.json --output runs/constrained-cue-001
+open runs/constrained-cue-001/preview.md
+caffeinate -i python3 -m exception_constrained_cue run --config configs/constrained_cue.json --output runs/constrained-cue-001 --max-calls 4
+caffeinate -i python3 -m exception_constrained_cue run --config configs/constrained_cue.json --output runs/constrained-cue-001 --max-calls 96 --resume
+open runs/constrained-cue-001/summary.md
+zip -r constrained-cue-001.zip runs/constrained-cue-001
+```
+
+The four-call execution check counts toward the total; an error-free resume
+makes only 92 more calls. Continue based on correct execution, irrespective
+of answer accuracy. No new dependencies or GPU are needed. Preparation and
+analysis make no API calls. Transport retries require `--resume --retry-errors`
+and count toward the hard cap of 112 attempts. Any schema violation, refusal,
+truncation, or wrong-model response is retained and stops collection; it cannot
+be resampled. Completed runs have 96 valid answers and zero invalid answers.
+
+A harmful cue effect would show that a written explanation is unnecessary
+under this interface. A null difference would not prove that written reasoning
+caused the earlier errors: constraining output may also change task strategy.
+This study does not identify hidden reasoning or a neural mechanism.
+
+## Completed follow-up: 144-call reasoning instruction/output diagnostic
+
+Collection returned 144 valid final answers: direct **48/48**, cue **33/48**,
+and requested written reasoning **23/48**. All 48 cue responses wrote
+explanations, so this study did not isolate the cue without generated text.
+Preserve these results. The original run instructions below are historical;
+use the separate constrained experiment above for the new follow-up.
 
 Use **`python3 -m exception_cue`** with `configs/cue.json`. The model remains
 **`gpt-4o-2024-08-06`**. This compares:
