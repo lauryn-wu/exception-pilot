@@ -1,6 +1,60 @@
 # Exception pilot
 
-## Current follow-up: 72-call answer-order diagnostic
+## Current follow-up: 192-call answer-revision diagnostic
+
+Use **`python3 -m exception_revision`** with **`configs/revision.json`**.
+This asks whether a correct initial answer can be overturned after the model
+generates reasoning. The original classification question is preserved.
+
+| Arm | Required output order |
+|---|---|
+| Original reasoning-first | reasoning → answer |
+| Original answer-first | answer → reasoning |
+| New revision | initial_answer → reasoning → final_answer |
+| New repeat control | initial_answer → final_answer → reasoning |
+
+The new pair has identical instructions and fields; only schema property order
+differs. Both permit the final answer to match or differ from the initial one.
+The primary comparison is repeat-control minus revision **final accuracy**,
+using every case, not only initially correct answers. The original order pair
+checks replication on the same new worlds. Transition counts describe changes
+between initial and final answers, including changes to the background pattern.
+
+The fixed design is **24 fresh worlds × 2 recorded-class variants × 4 arms =
+192 calls**, with the same GPT-4o snapshot and equal token ceilings. See
+[REVISION_PROTOCOL.md](REVISION_PROTOCOL.md) for exact prompts, analysis, and
+interpretation limits. This tests reasoning placement around a revisable
+answer; it does not identify the effect of a specific reasoning statement.
+
+From your existing checkout on macOS, using your existing `OPENAI_API_KEY`:
+
+```bash
+git fetch origin
+git merge --no-edit origin/main
+python3 -m exception_revision prepare --config configs/revision.json --output runs/revision-001
+open runs/revision-001/preview.md
+caffeinate -i python3 -m exception_revision run --config configs/revision.json --output runs/revision-001 --max-calls 8
+caffeinate -i python3 -m exception_revision run --config configs/revision.json --output runs/revision-001 --max-calls 192 --resume
+open runs/revision-001/summary.md
+zip -r revision-001.zip runs/revision-001
+```
+
+The first eight calls check execution and count toward 192; a normal resume
+makes 184 more. Continue regardless of accuracy. Any returned schema/order
+failure, empty reasoning, refusal, truncation, or model mismatch is retained
+and stops collection. Valid wrong answers do not stop the run. Explicit
+transport retries count toward the fixed cap of 224 attempts. Preparation and
+analysis are offline; no new dependencies or GPU are required. Fetch/merge
+preserves local commits; resolve any conflict before running.
+
+## Completed follow-up: 72-call answer-order diagnostic
+
+The supplied `order-001` run returned **24/24 correct for answer-only, 15/24
+for reasoning-first, and 24/24 for answer-first**. All 72 outputs complied;
+all nine errors followed the competing background pattern. Correct answers
+in answer-first could still be followed by incorrect explanatory statements.
+These are 12-world, single-model results. The commands below document that
+earlier experiment; use the separate revision experiment above next.
 
 Use **`python3 -m exception_order`** with **`configs/order.json`**. This tests
 whether an answer changes when the model writes an explanation before versus
@@ -51,7 +105,7 @@ Collection returned **48/48 correct in both direct and cue conditions**, with
 all 96 outputs complying with the single-answer schema. These reused the earlier
 24 worlds. The disappearance of the observed cue gap under this interface does
 not establish that written explanations caused the earlier errors. The commands
-in this section are historical; use the separate answer-order study above next.
+in this section are historical; use the separate revision study above next.
 
 Use **`python3 -m exception_constrained_cue`** with
 `configs/constrained_cue.json`. This compares direct answering with a
