@@ -17,6 +17,7 @@ exception-factorial = "exception_factorial.__main__:main"
 exception-explanation = "exception_explanation.__main__:main"
 exception-missingness = "exception_missingness.__main__:main"
 exception-cue = "exception_cue.__main__:main"
+exception-constrained-cue = "exception_constrained_cue.__main__:main"
 
 [tool.setuptools.packages.find]
-include = ["exception_pilot*", "exception_counterfactual*", "exception_wording*", "exception_factorial*", "exception_explanation*", "exception_missingness*", "exception_cue*"]
+include = ["exception_pilot*", "exception_counterfactual*", "exception_wording*", "exception_factorial*", "exception_explanation*", "exception_missingness*", "exception_cue*", "exception_constrained_cue*"]
