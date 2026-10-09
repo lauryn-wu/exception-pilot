@@ -1,6 +1,26 @@
 # Exception pilot
 
-## Current follow-up: exploratory continuation mapping
+## Current follow-up: continuation mapping with a whitespace-scoring amendment
+
+The first map stopped when a model wrote `ANSWER:` and `A` on separate lines.
+The final label was clear, but the strict V1 parser rejected the newline.
+V2 permits whitespace between `ANSWER:` and its label, preserves strict scores,
+and imports all saved responses without repeating their API calls.
+Prompts, settings, checkpoints, and accuracy thresholds are unchanged.
+
+Read [MISTRAL_MAP_V2_PROTOCOL.md](MISTRAL_MAP_V2_PROTOCOL.md) for the amendment
+and complete instructions. Keep the old run, then migrate it offline:
+
+```bash
+python3 -m exception_mistral_map_v2 migrate --config configs/mistral_map_v2.json --source runs/mistral-map-001 --output runs/mistral-map-v2-001
+caffeinate -i python3 -m exception_mistral_map_v2 run --config configs/mistral_map_v2.json --output runs/mistral-map-v2-001 --max-calls 49 --resume
+```
+
+With the reported six responses, only 43 new check calls remain. The default
+stage stops after the check; mapping still requires an explicit second command.
+The original failure remains archived, and the scoring amendment is disclosed.
+
+## Archived V1: exploratory continuation mapping
 
 Use `python3 -m exception_mistral_map` with `configs/mistral_map.json`.
 This maps where retaining additional reasoning changes the answer distribution,
