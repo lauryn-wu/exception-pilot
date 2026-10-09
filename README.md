@@ -1,6 +1,27 @@
 # Exception pilot
 
-## Current follow-up: Mistral prefix-continuation feasibility
+## Current follow-up: Mistral V2 word-boundary setup check
+
+V1 stopped on its first returned capability response: `Cobalt Mape Lantern`.
+The supplied prefix was preserved, but the exact required continuation was not.
+V1's probe cut inside a word; the research replays always cut after whitespace.
+V2 changes only that setup prefix to `Cobalt ` (one trailing ASCII space), keeps
+the exact full-answer requirement, and preserves every research-case request,
+sample size, replay rule, and scientific gate. Read the documented amendment in
+[MISTRAL_PREFIX_V2_PROTOCOL.md](MISTRAL_PREFIX_V2_PROTOCOL.md).
+
+Keep the failed V1 run. With `MISTRAL_API_KEY` already exported, first run one
+request in a new directory:
+
+```bash
+python3 -m exception_mistral_prefix_v2 prepare --config configs/mistral_prefix_v2.json --output runs/mistral-prefix-v2-001
+caffeinate -i python3 -m exception_mistral_prefix_v2 run --config configs/mistral_prefix_v2.json --output runs/mistral-prefix-v2-001 --max-calls 1
+```
+
+Inspect the output before collecting research cases. A returned invalid response
+still stops the run and cannot be replaced by a retry.
+
+## Archived V1: Mistral prefix-continuation feasibility
 
 Use **`python3 -m exception_mistral_prefix`** with
 **`configs/mistral_prefix.json`**. This uses **Mistral Small 4**
