@@ -1,6 +1,61 @@
 # Exception pilot
 
-## Current follow-up: DeepSeek prefix-continuation feasibility
+## Current follow-up: Mistral prefix-continuation feasibility
+
+Use **`python3 -m exception_mistral_prefix`** with
+**`configs/mistral_prefix.json`**. This uses **Mistral Small 4**
+(`mistral-small-2603`) through Mistral's API. It replaces the proposed DeepSeek
+collection because account funding failed. Model behavior has not yet been
+established on Mistral. No GPU, local model download, or new dependencies are
+required. Mistral documents Free-mode API access without a credit card, subject
+to the account's usage and rate limits; the whole pilot is not guaranteed free.
+
+The same bounded design has **at most 73 returned responses**: one prefix-contract
+check, 48 direct-versus-visible-explanation requests on 12 worlds, and 24
+unchanged continuations only if the behavioral gate passes. The cumulative cap
+is 89 attempts. These are feasibility checks, not mechanism evidence; no edited
+explanation experiment starts automatically. Read
+[MISTRAL_PREFIX_PROTOCOL.md](MISTRAL_PREFIX_PROTOCOL.md) for the fixed design.
+
+Mistral returns the supplied prefix as part of its response. This adapter checks
+that exact prefix and scores the full completion once. The DeepSeek package's
+suffix-only contract is separate; keep any old run directories unchanged.
+
+Create a key in [Mistral Studio](https://console.mistral.ai/) under **API Keys**.
+From your existing macOS checkout:
+
+```bash
+git fetch origin
+git merge --no-edit origin/main
+python3 -m exception_mistral_prefix prepare --config configs/mistral_prefix.json --output runs/mistral-prefix-001
+open runs/mistral-prefix-001/preview.md
+```
+
+In the same zsh terminal:
+
+```zsh
+read -s "MISTRAL_API_KEY?Paste your Mistral API key: "
+export MISTRAL_API_KEY
+```
+
+Run five calls first. If they complete normally, resume the permitted remainder:
+
+```bash
+caffeinate -i python3 -m exception_mistral_prefix run --config configs/mistral_prefix.json --output runs/mistral-prefix-001 --max-calls 5
+caffeinate -i python3 -m exception_mistral_prefix run --config configs/mistral_prefix.json --output runs/mistral-prefix-001 --max-calls 73 --resume
+open runs/mistral-prefix-001/summary.md
+zip -r mistral-prefix-001.zip runs/mistral-prefix-001
+```
+
+The first five calls count toward the total. A failed behavioral gate stops at
+49 responses; otherwise the run attempts the 24 unchanged replays. A returned
+technical/formatting failure is retained and stops collection. Only after a
+retryable transport error, add `--retry-errors` to the resume command. For a rate
+limit, wait for the account's limit to reset first. Preparation and analysis are
+offline. Default mock runs are simulated and intentionally stop at 49 all-correct
+responses. Never mix model providers in one run.
+
+## Alternative provider: DeepSeek prefix-continuation feasibility
 
 Use **`python3 -m exception_prefix`** with **`configs/prefix.json`**. This checks
 whether one model reproduces the direct-versus-explanation failure and can
