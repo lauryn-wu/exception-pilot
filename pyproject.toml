@@ -24,6 +24,7 @@ exception-prefix = "exception_prefix.__main__:main"
 exception-mistral-prefix = "exception_mistral_prefix.__main__:main"
 exception-mistral-prefix-v2 = "exception_mistral_prefix_v2.__main__:main"
 exception-mistral-map = "exception_mistral_map.__main__:main"
+exception-mistral-map-v2 = "exception_mistral_map_v2.__main__:main"
 
 [tool.setuptools.packages.find]
 include = ["exception_pilot*", "exception_counterfactual*", "exception_wording*", "exception_factorial*", "exception_explanation*", "exception_missingness*", "exception_cue*", "exception_constrained_cue*", "exception_order*", "exception_revision*", "exception_prefix*", "exception_mistral_prefix*", "exception_mistral_map*"]
