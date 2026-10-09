@@ -1,6 +1,60 @@
 # Exception pilot
 
-## Current follow-up: 192-call answer-revision diagnostic
+## Current follow-up: DeepSeek prefix-continuation feasibility
+
+Use **`python3 -m exception_prefix`** with **`configs/prefix.json`**. This checks
+whether one model reproduces the direct-versus-explanation failure and can
+continue unchanged explanation prefixes reliably enough for a later causal
+experiment. It uses the **DeepSeek API** (`deepseek-flash`, currently
+DeepSeek-V4.1-Flash), with the provider's separate thinking mode disabled and
+visible explanations requested explicitly. No local model or GPU is required.
+
+The fixed maximum is **73 returned responses**: one prefix-contract check,
+48 base requests on 12 fresh worlds, and 24 unchanged continuations if the base
+behavior meets the fixed practical criteria. The attempt cap is 89, including
+explicit transport retries. This is a feasibility check; it does not edit
+reasoning, identify a mechanism, or automatically start another experiment.
+Read [PREFIX_PROTOCOL.md](PREFIX_PROTOCOL.md) for exact prompts, cut rules,
+thresholds, price assumptions, and interpretation limits.
+
+From your existing macOS checkout:
+
+```bash
+git fetch origin
+git merge --no-edit origin/main
+python3 -m exception_prefix prepare --config configs/prefix.json --output runs/prefix-001
+open runs/prefix-001/preview.md
+```
+
+Use a **DeepSeek API key**, not an OpenAI key. In the same zsh terminal:
+
+```zsh
+read -s "DEEPSEEK_API_KEY?Paste your DeepSeek API key: "
+export DEEPSEEK_API_KEY
+```
+
+```bash
+caffeinate -i python3 -m exception_prefix run --config configs/prefix.json --output runs/prefix-001 --max-calls 5
+caffeinate -i python3 -m exception_prefix run --config configs/prefix.json --output runs/prefix-001 --max-calls 73 --resume
+open runs/prefix-001/summary.md
+zip -r prefix-001.zip runs/prefix-001
+```
+
+The first five calls count toward the total. If there is insufficient target
+behavior, collection stops after 49 responses; otherwise it completes all 24
+unchanged replays. These are predefined investment checks, not significance
+tests. Any returned technical or formatting failure is retained and stops the
+run. Only retryable transport errors permit `--resume --retry-errors`; no
+returned answer can be replaced. Preparation and analysis make no model calls.
+
+The model name is a changing provider alias rather than a pinned snapshot;
+returned metadata and timestamps are saved. Published peak rates on 2026-10-09
+are $0.30/M uncached input tokens and $1.20/M output tokens. As an illustration,
+100 requests averaging 2,000 input and 1,000 output tokens cost about $0.18.
+The actual bill depends on usage and current provider pricing. No new Python
+dependencies are required. Preserve older studies and run directories.
+
+## Separate follow-up: 192-call answer-revision diagnostic
 
 Use **`python3 -m exception_revision`** with **`configs/revision.json`**.
 This asks whether a correct initial answer can be overturned after the model
@@ -54,7 +108,7 @@ for reasoning-first, and 24/24 for answer-first**. All 72 outputs complied;
 all nine errors followed the competing background pattern. Correct answers
 in answer-first could still be followed by incorrect explanatory statements.
 These are 12-world, single-model results. The commands below document that
-earlier experiment; use the separate revision experiment above next.
+earlier experiment.
 
 Use **`python3 -m exception_order`** with **`configs/order.json`**. This tests
 whether an answer changes when the model writes an explanation before versus

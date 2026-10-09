@@ -20,6 +20,7 @@ exception-cue = "exception_cue.__main__:main"
 exception-constrained-cue = "exception_constrained_cue.__main__:main"
 exception-order = "exception_order.__main__:main"
 exception-revision = "exception_revision.__main__:main"
+exception-prefix = "exception_prefix.__main__:main"
 
 [tool.setuptools.packages.find]
-include = ["exception_pilot*", "exception_counterfactual*", "exception_wording*", "exception_factorial*", "exception_explanation*", "exception_missingness*", "exception_cue*", "exception_constrained_cue*", "exception_order*", "exception_revision*"]
+include = ["exception_pilot*", "exception_counterfactual*", "exception_wording*", "exception_factorial*", "exception_explanation*", "exception_missingness*", "exception_cue*", "exception_constrained_cue*", "exception_order*", "exception_revision*", "exception_prefix*"]
