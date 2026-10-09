@@ -1,6 +1,115 @@
 # Exception pilot
 
-## Current follow-up: 192-call answer-revision diagnostic
+## Current follow-up: Mistral prefix-continuation feasibility
+
+Use **`python3 -m exception_mistral_prefix`** with
+**`configs/mistral_prefix.json`**. This uses **Mistral Small 4**
+(`mistral-small-2603`) through Mistral's API. It replaces the proposed DeepSeek
+collection because account funding failed. Model behavior has not yet been
+established on Mistral. No GPU, local model download, or new dependencies are
+required. Mistral documents Free-mode API access without a credit card, subject
+to the account's usage and rate limits; the whole pilot is not guaranteed free.
+
+The same bounded design has **at most 73 returned responses**: one prefix-contract
+check, 48 direct-versus-visible-explanation requests on 12 worlds, and 24
+unchanged continuations only if the behavioral gate passes. The cumulative cap
+is 89 attempts. These are feasibility checks, not mechanism evidence; no edited
+explanation experiment starts automatically. Read
+[MISTRAL_PREFIX_PROTOCOL.md](MISTRAL_PREFIX_PROTOCOL.md) for the fixed design.
+
+Mistral returns the supplied prefix as part of its response. This adapter checks
+that exact prefix and scores the full completion once. The DeepSeek package's
+suffix-only contract is separate; keep any old run directories unchanged.
+
+Create a key in [Mistral Studio](https://console.mistral.ai/) under **API Keys**.
+From your existing macOS checkout:
+
+```bash
+git fetch origin
+git merge --no-edit origin/main
+python3 -m exception_mistral_prefix prepare --config configs/mistral_prefix.json --output runs/mistral-prefix-001
+open runs/mistral-prefix-001/preview.md
+```
+
+In the same zsh terminal:
+
+```zsh
+read -s "MISTRAL_API_KEY?Paste your Mistral API key: "
+export MISTRAL_API_KEY
+```
+
+Run five calls first. If they complete normally, resume the permitted remainder:
+
+```bash
+caffeinate -i python3 -m exception_mistral_prefix run --config configs/mistral_prefix.json --output runs/mistral-prefix-001 --max-calls 5
+caffeinate -i python3 -m exception_mistral_prefix run --config configs/mistral_prefix.json --output runs/mistral-prefix-001 --max-calls 73 --resume
+open runs/mistral-prefix-001/summary.md
+zip -r mistral-prefix-001.zip runs/mistral-prefix-001
+```
+
+The first five calls count toward the total. A failed behavioral gate stops at
+49 responses; otherwise the run attempts the 24 unchanged replays. A returned
+technical/formatting failure is retained and stops collection. Only after a
+retryable transport error, add `--retry-errors` to the resume command. For a rate
+limit, wait for the account's limit to reset first. Preparation and analysis are
+offline. Default mock runs are simulated and intentionally stop at 49 all-correct
+responses. Never mix model providers in one run.
+
+## Alternative provider: DeepSeek prefix-continuation feasibility
+
+Use **`python3 -m exception_prefix`** with **`configs/prefix.json`**. This checks
+whether one model reproduces the direct-versus-explanation failure and can
+continue unchanged explanation prefixes reliably enough for a later causal
+experiment. It uses the **DeepSeek API** (`deepseek-flash`, currently
+DeepSeek-V4.1-Flash), with the provider's separate thinking mode disabled and
+visible explanations requested explicitly. No local model or GPU is required.
+
+The fixed maximum is **73 returned responses**: one prefix-contract check,
+48 base requests on 12 fresh worlds, and 24 unchanged continuations if the base
+behavior meets the fixed practical criteria. The attempt cap is 89, including
+explicit transport retries. This is a feasibility check; it does not edit
+reasoning, identify a mechanism, or automatically start another experiment.
+Read [PREFIX_PROTOCOL.md](PREFIX_PROTOCOL.md) for exact prompts, cut rules,
+thresholds, price assumptions, and interpretation limits.
+
+From your existing macOS checkout:
+
+```bash
+git fetch origin
+git merge --no-edit origin/main
+python3 -m exception_prefix prepare --config configs/prefix.json --output runs/prefix-001
+open runs/prefix-001/preview.md
+```
+
+Use a **DeepSeek API key**, not an OpenAI key. In the same zsh terminal:
+
+```zsh
+read -s "DEEPSEEK_API_KEY?Paste your DeepSeek API key: "
+export DEEPSEEK_API_KEY
+```
+
+```bash
+caffeinate -i python3 -m exception_prefix run --config configs/prefix.json --output runs/prefix-001 --max-calls 5
+caffeinate -i python3 -m exception_prefix run --config configs/prefix.json --output runs/prefix-001 --max-calls 73 --resume
+open runs/prefix-001/summary.md
+zip -r prefix-001.zip runs/prefix-001
+```
+
+The first five calls count toward the total. If there is insufficient target
+behavior, collection stops after 49 responses; otherwise it completes all 24
+unchanged replays. These are predefined investment checks, not significance
+tests. Any returned technical or formatting failure is retained and stops the
+run. Only retryable transport errors permit `--resume --retry-errors`; no
+returned answer can be replaced. Preparation and analysis make no model calls.
+
+The model name is a changing provider alias rather than a pinned snapshot;
+returned metadata and timestamps are saved. Published peak rates on 2026-10-09
+are $0.30/M uncached input tokens and $1.20/M output tokens. As an illustration,
+100 requests averaging 2,000 input and 1,000 output tokens cost about $0.18.
+The actual bill depends on usage and current provider pricing. No new Python
+dependencies are required. Preserve older studies and run directories.
+
+## Separate follow-up: 192-call answer-revision diagnostic
 
 Use **`python3 -m exception_revision`** with **`configs/revision.json`**.
 This asks whether a correct initial answer can be overturned after the model
@@ -54,7 +163,7 @@ for reasoning-first, and 24/24 for answer-first**. All 72 outputs complied;
 all nine errors followed the competing background pattern. Correct answers
 in answer-first could still be followed by incorrect explanatory statements.
 These are 12-world, single-model results. The commands below document that
-earlier experiment; use the separate revision experiment above next.
+earlier experiment.
 
 Use **`python3 -m exception_order`** with **`configs/order.json`**. This tests
 whether an answer changes when the model writes an explanation before versus

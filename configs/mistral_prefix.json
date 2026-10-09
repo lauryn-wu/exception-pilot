@@ -1,0 +1,13 @@
+{
+  "protocol": "verified-facts-mistral-prefix-feasibility-v1",
+  "n_worlds": 12,
+  "seed": 2026100941,
+  "model": "mistral-small-2603",
+  "endpoint": "https://api.mistral.ai/v1/chat/completions",
+  "api_key_env": "MISTRAL_API_KEY",
+  "temperature": 0.0,
+  "reasoning_effort": "none",
+  "max_tokens": {"capability": 32, "direct": 1600, "visible": 1600, "replay": 1600},
+  "max_total_attempts": 89,
+  "timeout_seconds": 120
+}

@@ -1,0 +1,13 @@
+{
+  "protocol": "verified-facts-prefix-feasibility-v1",
+  "n_worlds": 12,
+  "seed": 2026100941,
+  "model": "deepseek-flash",
+  "endpoint": "https://api.deepseek.com/beta/chat/completions",
+  "api_key_env": "DEEPSEEK_API_KEY",
+  "temperature": 0.0,
+  "thinking": {"type": "disabled"},
+  "max_tokens": {"capability": 32, "direct": 1600, "visible": 1600, "replay": 1600},
+  "max_total_attempts": 89,
+  "timeout_seconds": 120
+}
