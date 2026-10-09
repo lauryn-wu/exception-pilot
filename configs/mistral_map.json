@@ -1,0 +1,15 @@
+{
+  "protocol": "verified-facts-mistral-continuation-map-v1",
+  "model": "mistral-small-2603",
+  "endpoint": "https://api.mistral.ai/v1/chat/completions",
+  "api_key_env": "MISTRAL_API_KEY",
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "reasoning_effort": "none",
+  "repeats": 6,
+  "seed": 2026100943,
+  "max_tokens": {"capability": 32, "direct": 1600, "visible": 1600, "map": 1600},
+  "max_total_attempts": 1107,
+  "timeout_seconds": 120,
+  "min_request_interval_seconds": 10
+}

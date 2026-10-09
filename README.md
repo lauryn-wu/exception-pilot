@@ -1,6 +1,30 @@
 # Exception pilot
 
-## Current follow-up: Mistral V2 word-boundary setup check
+## Current follow-up: exploratory continuation mapping
+
+Use `python3 -m exception_mistral_map` with `configs/mistral_map.json`.
+This maps where retaining additional reasoning changes the answer distribution,
+using all 24 saved visible explanations from `mistral-prefix-v2-001`.
+The old replay gate remains failed. This is a separate exploratory study with
+new continuation distributions, not a retry of that gate or a mechanism claim.
+
+Read [MISTRAL_MAP_PROTOCOL.md](MISTRAL_MAP_PROTOCOL.md) for the exact design and
+all run/resume commands. It uses the same Mistral model, with temperature 0.6
+and top_p 0.95. Preparation makes no API calls and previews every cut and request:
+
+```bash
+python3 -m exception_mistral_map prepare --config configs/mistral_map.json --source runs/mistral-prefix-v2-001 --output runs/mistral-map-001
+open runs/mistral-map-001/preview.md
+caffeinate -i python3 -m exception_mistral_map run --config configs/mistral_map.json --output runs/mistral-map-001 --max-calls 49
+```
+
+The default stage stops after the 49-call sampling check. If it passes, mapping
+requires a separate `--stage map --resume` invocation. For the uploaded source,
+171 checkpoints × six continuations gives 1,026 map calls and 1,075 total planned
+calls, with a fixed 1,107-attempt cap. No corrective intervention starts afterward.
+The six draws per checkpoint provide a coarse map, not precise case-level proof.
+
+## Archived: Mistral V2 word-boundary setup check
 
 V1 stopped on its first returned capability response: `Cobalt Mape Lantern`.
 The supplied prefix was preserved, but the exact required continuation was not.
