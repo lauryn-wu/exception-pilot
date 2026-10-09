@@ -1,6 +1,57 @@
 # Exception pilot
 
-## Current follow-up: 96-call cue test with enforced answer-only output
+## Current follow-up: 72-call answer-order diagnostic
+
+Use **`python3 -m exception_order`** with **`configs/order.json`**. This tests
+whether an answer changes when the model writes an explanation before versus
+after it, with a contemporaneous answer-only control. All three conditions use
+strict JSON; the two explanation conditions have identical prompts and fields,
+with only the schema property order changed. The raw response order is checked.
+
+The fixed design is **12 fresh worlds × 2 target-record variants × 3 conditions
+= 72 planned calls**, using **`gpt-4o-2024-08-06`**. The independent sampling unit
+is the world. This is a small diagnostic for large differences, not a definitive
+mechanism test. Read [ORDER_PROTOCOL.md](ORDER_PROTOCOL.md) for exact prompts,
+scoring, analysis, and interpretation limits.
+
+From your existing checkout on macOS, using your existing `OPENAI_API_KEY`:
+
+```bash
+git fetch origin
+git merge --no-edit origin/main
+python3 -m exception_order prepare --config configs/order.json --output runs/order-001
+open runs/order-001/preview.md
+caffeinate -i python3 -m exception_order run --config configs/order.json --output runs/order-001 --max-calls 6
+caffeinate -i python3 -m exception_order run --config configs/order.json --output runs/order-001 --max-calls 72 --resume
+open runs/order-001/summary.md
+zip -r order-001.zip runs/order-001
+```
+
+The initial six calls count toward 72; a normal resume makes 66 more. They check
+execution and output compliance only. Finish the fixed plan regardless of
+accuracy. A malformed response, wrong field order, empty explanation, refusal,
+truncation, or wrong-model response is retained and stops the run; do not
+resample it. Valid but incorrect answers are retained and do not stop collection.
+Eligible transport retries require `--resume --retry-errors` and count toward
+the cumulative cap of 88 attempts. No new dependencies or GPU are needed;
+preparation and analysis make no model calls.
+
+If Git reports a merge conflict, resolve it before running rather than
+discarding local commits. The fetch/merge commands above preserve your history.
+
+The primary contrast is answer-first minus reasoning-first accuracy. Answer-only
+comparisons test whether asking for a future explanation can affect the answer
+before explanatory text is written. An order effect does not distinguish
+self-conditioning from changed strategy or early answer commitment. There is no
+automatic scientific pass gate, claim of novelty, or outcome-driven expansion.
+
+## Completed follow-up: 96-call cue test with enforced answer-only output
+
+Collection returned **48/48 correct in both direct and cue conditions**, with
+all 96 outputs complying with the single-answer schema. These reused the earlier
+24 worlds. The disappearance of the observed cue gap under this interface does
+not establish that written explanations caused the earlier errors. The commands
+in this section are historical; use the separate answer-order study above next.
 
 Use **`python3 -m exception_constrained_cue`** with
 `configs/constrained_cue.json`. This compares direct answering with a

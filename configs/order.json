@@ -1,0 +1,11 @@
+{
+  "protocol": "verified-facts-answer-order-v1",
+  "n_worlds": 12,
+  "seed": 2026100893,
+  "model": "gpt-4o-2024-08-06",
+  "api_key_env": "OPENAI_API_KEY",
+  "temperature": 0.0,
+  "max_completion_tokens": {"answer_only": 1000, "reasoning_first": 1000, "answer_first": 1000},
+  "max_total_attempts": 88,
+  "timeout_seconds": 120
+}
