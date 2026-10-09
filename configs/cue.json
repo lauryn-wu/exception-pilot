@@ -1,0 +1,11 @@
+{
+  "protocol": "verified-facts-reasoning-cue-v1",
+  "n_worlds": 24,
+  "seed": 2026100892,
+  "model": "gpt-4o-2024-08-06",
+  "api_key_env": "OPENAI_API_KEY",
+  "temperature": 0.0,
+  "max_completion_tokens": {"direct": 1000, "cue": 1000, "visible": 1000},
+  "max_total_attempts": 160,
+  "timeout_seconds": 120
+}

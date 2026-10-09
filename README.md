@@ -1,56 +1,64 @@
 # Exception pilot
 
-## Current follow-up: 40-call false-missingness diagnostic
+## Current follow-up: 144-call reasoning instruction/output diagnostic
 
-Use **`python3 -m exception_missingness`** with the existing, completed
-`runs/explanation-001` as input. The model remains **`gpt-4o-2024-08-06`**.
-This tests whether changing a false claim that the target class is missing
-changes the continuation's answer, without supplying the class itself.
-It uses **10 selected traces from 9 worlds**, including 2 originally correct
-and 8 originally wrong answers. It is a post hoc text-intervention diagnostic.
+Use **`python3 -m exception_cue`** with `configs/cue.json`. The model remains
+**`gpt-4o-2024-08-06`**. This compares:
 
-Read [MISSINGNESS_PROTOCOL.md](MISSINGNESS_PROTOCOL.md) for the exact edits,
-selection, analysis, limitations, and recovery commands. From your existing
-Git checkout on macOS:
+- **A:** answer only.
+- **B:** a step-by-step instruction, with the same answer-only requirement.
+- **C:** a step-by-step instruction requiring written reasoning before the answer.
+
+There are **24 fresh worlds × 2 recorded-class variants × 3 conditions = 144
+planned calls**. Every condition has the same 1,000-token completion allowance.
+Answer correctness and output compliance are reported separately; violations
+are retained and never retried. Read [CUE_PROTOCOL.md](CUE_PROTOCOL.md) for exact
+prompts, fixed analysis, limitations, and error recovery.
+
+From your existing Git checkout on macOS:
 
 ```bash
 git pull --ff-only
-python3 -m exception_missingness prepare --parent runs/explanation-001 --config configs/missingness.json --output runs/missingness-001
-open runs/missingness-001/preview.md
-caffeinate -i python3 -m exception_missingness run --output runs/missingness-001 --phase replay --max-calls 10
-open runs/missingness-001/summary.md
+python3 -m exception_cue prepare --config configs/cue.json --output runs/cue-001
+open runs/cue-001/preview.md
+caffeinate -i python3 -m exception_cue run --config configs/cue.json --output runs/cue-001 --max-calls 6
+caffeinate -i python3 -m exception_cue run --config configs/cue.json --output runs/cue-001 --max-calls 144 --resume
+open runs/cue-001/summary.md
+zip -r cue-001.zip runs/cue-001
 ```
 
-**Check the replay decision before continuing.** All 10 replays must be
-scorable and at least 8 must reproduce the saved original answer. This is a
-practical feasibility check, not a statistical finding. If the decision is
-`stop`, stop this diagnostic and share the run; do not retune or start over.
-If it is `pass`, run the remaining 30 calls:
+The first six calls count toward the total; the second command makes only 138
+more if there are no errors. The six-call block checks execution, not whether
+the result looks promising. Finish the fixed plan regardless of its accuracy.
+Use your existing `OPENAI_API_KEY`; no new dependencies or GPU are needed.
+Preparation and analysis make no API calls. A transport failure can be resumed
+with `--resume --retry-errors`, within the hard cap of 160 total attempts.
+Returned wrong or unscorable answers are never resampled.
 
-```bash
-caffeinate -i python3 -m exception_missingness run --output runs/missingness-001 --phase interventions --max-calls 30 --resume
-open runs/missingness-001/summary.md
-zip -r missingness-001.zip runs/missingness-001
-```
+This can narrow which prompt requirement matters; it does not by itself identify
+an internal mechanism. If the A–C harm does not reappear, this run cannot explain
+the earlier gap. There is no automatic sample extension or scientific pass gate.
 
-The first 10 calls are included in the **40 total**. The cumulative cap is
-48 attempts, allowing only explicitly requested transport retries. Returned
-invalid answers are retained and never resampled. The intervention command
-cannot run unless the replay gate passes; all 10 cases remain in the study.
-Preparation and analysis make no API calls. Your parent results are read-only;
-the prepared plan contains the selected source records for later auditing.
-Use the same `OPENAI_API_KEY`; no new dependencies or GPU are needed.
+## Stopped follow-up: false-missingness replay
 
-Earlier studies below are preserved as historical reference. Do not rerun
-them for this diagnostic.
+The selected-case replay returned 10 valid answers and reproduced **7/10** saved
+parent answers. It failed the fixed feasibility threshold of 8/10, so the
+remaining 30 interventions were **not run**. Preserve `runs/missingness-001` as
+`replay_gate_failed_stop`. Do not restart it, loosen the threshold, or run its
+intervention phase. There are no causal arm contrasts from this stopped study.
+The implementation and [MISSINGNESS_PROTOCOL.md](MISSINGNESS_PROTOCOL.md) remain
+available for audit. The new cue diagnostic does not reuse its selected cases.
+
+Earlier studies below are historical reference. Do not rerun them for this
+new diagnostic.
 
 ## Completed follow-up: 384-call explanatory diagnostic
 
 Collection is complete: 384 valid answers. On the 48 visible-record cases,
 neutral CoT answered 25 correctly, class copying 48, and same-row marker copying
 29. None of the 48 correct class copies was followed by a wrong final answer.
-The selected false-missingness follow-up above tests a narrower hypothesis;
-these results alone do not identify an internal mechanism or establish novelty.
+The selected false-missingness follow-up stopped at its replay gate; these
+results alone do not identify an internal mechanism or establish novelty.
 
 Use **`python3 -m exception_explanation`** with `configs/explanation.json`.
 This asks whether failures persist after correctly copying a verified class,
