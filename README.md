@@ -1,6 +1,35 @@
 # Exception pilot
 
-## Current follow-up: complete-screen continuation mapping
+## Current follow-up: record-status wording intervention
+
+Test whether calling a correctly copied class something still to "confirm or
+predict" causes the model to override it. Four unfinished explanations preserve
+the same correct label and change one parenthetical: observed prediction wording,
+a paraphrase, explicitly recorded-fact wording, or no parenthetical.
+
+Read [MISTRAL_FRAMING_PROTOCOL.md](MISTRAL_FRAMING_PROTOCOL.md) for the exact
+manipulation, causal limits, and run/resume commands. The design fixes 24 fresh
+worlds, 96 direct/visible baseline calls, and 576 intervention calls, plus one
+capability probe. There is no outcome-based world selection. Preparation previews
+every prompt and makes zero API calls:
+
+```bash
+python3 -m exception_mistral_framing prepare --config configs/mistral_framing.json --output runs/mistral-framing-001
+open runs/mistral-framing-001/preview.md
+caffeinate -i python3 -m exception_mistral_framing run --config configs/mistral_framing.json --output runs/mistral-framing-001 --stage baseline --max-calls 97
+```
+
+After baseline collection, start the four-arm intervention explicitly:
+
+```bash
+caffeinate -i python3 -m exception_mistral_framing run --config configs/mistral_framing.json --output runs/mistral-framing-001 --stage intervene --max-calls 576 --resume
+```
+
+This tests the effect of supplied wording. Establishing its contribution to
+natural failures requires later edits to naturally occurring statements; the
+protocol describes that follow-up. Existing mapping results remain unchanged.
+
+## Completed exploratory study: complete-screen continuation mapping
 
 V3 handles common answer presentation, including `ANSWER:` followed by a newline
 and `**ANSWER: A**`. It collects the full fixed screen, retains unscorable
