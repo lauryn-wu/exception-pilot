@@ -1,0 +1,20 @@
+{
+  "protocol": "query-conditioned-fact-use-v1",
+  "n_worlds": 12,
+  "worlds_per_family": 6,
+  "seed": 2026101001,
+  "model": "mistral-small-2603",
+  "endpoint": "https://api.mistral.ai/v1/chat/completions",
+  "api_key_env": "MISTRAL_API_KEY",
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "reasoning_effort": "none",
+  "max_tokens": 1600,
+  "max_total_attempts": 153,
+  "max_extra_attempts": 9,
+  "max_retries_per_task": 2,
+  "timeout_seconds": 120,
+  "min_request_interval_seconds": 10,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 2026101002
+}

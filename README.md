@@ -1,6 +1,33 @@
 # Exception pilot
 
-## Current follow-up: record-status wording intervention
+## Current study: reporting a fact versus using it
+
+The new `exception_query_role` screen tests whether a visible explanation reduces
+record tracking when reporting a supplied fact but preserves tracking when using
+it to answer another question. Encoded reporting and downstream use share the
+same mapping and answer symbols. Literal reporting is a secondary reference.
+
+The fixed first screen uses **144 calls, 12 independent worlds, two task families**
+(vehicle records and device configuration overrides), and `mistral-small-2603`.
+Read [QUERY_ROLE_PROTOCOL.md](QUERY_ROLE_PROTOCOL.md) for exact manipulations,
+analysis, stopping criteria, API-key setup, and transport-error recovery.
+
+```bash
+python3 -m exception_query_role prepare --config configs/query_role.json --output runs/query-role-001
+open runs/query-role-001/preview.md
+caffeinate -i python3 -m exception_query_role run --config configs/query_role.json --output runs/query-role-001 --max-calls 144
+```
+
+Preparation is offline. It freezes and previews all 144 complete requests and
+their gold answers. Every response is retained, including malformed answers;
+the spending decision is evaluated after the fixed batch finishes. No second
+experiment starts automatically. Results are written to `report.md` and
+`summary.json` in the run directory. Existing runs are not imported or changed.
+
+## Paused earlier follow-up: record-status wording intervention
+
+This earlier protocol is retained for reproducibility. The current research
+plan pauses its remaining intervention calls in favor of the query-role screen.
 
 Test whether calling a correctly copied class something still to "confirm or
 predict" causes the model to override it. Four unfinished explanations preserve
