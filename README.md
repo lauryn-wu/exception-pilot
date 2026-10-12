@@ -1,5 +1,20 @@
 # Reasoning prompts and exception records
 
+## Matched evidence-role study
+
+The new [evidence-role protocol](EVIDENCE_ROLE_PROTOCOL.md) compares copying the
+class as a recorded fact, copying it as an initial answer, choosing an initial
+answer, copying the audit marker, and emitting no preliminary information. Each
+condition has reasoning before or after the final answer, with identical schema
+fields and permission to differ. The target is always in row 10: 24 fresh worlds,
+two record variants and **480 planned GPT-4o calls**. The package is implemented
+for offline preparation/mock checks and live execution; no live result is claimed.
+
+Inspect the [exact prompts](previews/evidence-role-gpt4o/preview.md). Run from the
+repository root with `python3 -m exception_evidence_role`; the protocol contains
+prepare/run/analyze commands and separate-worktree instructions for concurrent
+studies. All historical packages and run files are preserved.
+
 These experiments ask GPT-4o to answer questions about synthetic vehicle records.
 Under the original classification wording, asking for reasoning made the model
 more likely to follow the surrounding labels even when they conflicted with the

@@ -1,0 +1,13 @@
+{
+  "protocol": "verified-facts-evidence-role-v1",
+  "provider": "openai",
+  "model": "gpt-4o-2024-08-06",
+  "api_key_env": "OPENAI_API_KEY",
+  "n_worlds": 24,
+  "seed": 2026101201,
+  "target_position": 10,
+  "temperature": 0,
+  "max_completion_tokens": 1000,
+  "max_total_attempts": 528,
+  "timeout_seconds": 120
+}
