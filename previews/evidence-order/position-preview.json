@@ -1,0 +1,409 @@
+{
+  "status": "MODEL_TOKENIZER_NOT_SUPPLIED; LIVE_BLOCKED",
+  "plan_hash": "2834c611d1d47063a8087df82f359a8cf0c947bfa791368d327c6e51789b3db7",
+  "planned_responses": 7680,
+  "sample": [
+    {
+      "world": "order-new-023",
+      "variant": 0,
+      "rotation": 3,
+      "before_after_match": null,
+      "quartet_match": null,
+      "positions": {
+        "before/visible": {
+          "scope": "user_message_only",
+          "characters": 1413,
+          "spans": {
+            "row": [
+              786,
+              851
+            ],
+            "plate": [
+              788,
+              794
+            ],
+            "class": [
+              848,
+              849
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        },
+        "after/direct": {
+          "scope": "user_message_only",
+          "characters": 1333,
+          "spans": {
+            "row": [
+              780,
+              845
+            ],
+            "plate": [
+              782,
+              788
+            ],
+            "class": [
+              842,
+              843
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        },
+        "both_left_near/direct": {
+          "scope": "user_message_only",
+          "characters": 1333,
+          "spans": {
+            "row": [
+              780,
+              845
+            ],
+            "plate": [
+              782,
+              788
+            ],
+            "class": [
+              842,
+              843
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        },
+        "after/visible": {
+          "scope": "user_message_only",
+          "characters": 1413,
+          "spans": {
+            "row": [
+              780,
+              845
+            ],
+            "plate": [
+              782,
+              788
+            ],
+            "class": [
+              842,
+              843
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        },
+        "before/direct": {
+          "scope": "user_message_only",
+          "characters": 1333,
+          "spans": {
+            "row": [
+              786,
+              851
+            ],
+            "plate": [
+              788,
+              794
+            ],
+            "class": [
+              848,
+              849
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        },
+        "both_left_near/visible": {
+          "scope": "user_message_only",
+          "characters": 1413,
+          "spans": {
+            "row": [
+              780,
+              845
+            ],
+            "plate": [
+              782,
+              788
+            ],
+            "class": [
+              842,
+              843
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        },
+        "both_right_near/direct": {
+          "scope": "user_message_only",
+          "characters": 1333,
+          "spans": {
+            "row": [
+              780,
+              845
+            ],
+            "plate": [
+              782,
+              788
+            ],
+            "class": [
+              842,
+              843
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        },
+        "both_right_near/visible": {
+          "scope": "user_message_only",
+          "characters": 1413,
+          "spans": {
+            "row": [
+              780,
+              845
+            ],
+            "plate": [
+              782,
+              788
+            ],
+            "class": [
+              842,
+              843
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        }
+      }
+    },
+    {
+      "world": "order-new-023",
+      "variant": 1,
+      "rotation": 3,
+      "before_after_match": null,
+      "quartet_match": null,
+      "positions": {
+        "after/visible": {
+          "scope": "user_message_only",
+          "characters": 1413,
+          "spans": {
+            "row": [
+              780,
+              845
+            ],
+            "plate": [
+              782,
+              788
+            ],
+            "class": [
+              842,
+              843
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        },
+        "both_left_near/direct": {
+          "scope": "user_message_only",
+          "characters": 1333,
+          "spans": {
+            "row": [
+              780,
+              845
+            ],
+            "plate": [
+              782,
+              788
+            ],
+            "class": [
+              842,
+              843
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        },
+        "after/direct": {
+          "scope": "user_message_only",
+          "characters": 1333,
+          "spans": {
+            "row": [
+              780,
+              845
+            ],
+            "plate": [
+              782,
+              788
+            ],
+            "class": [
+              842,
+              843
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        },
+        "before/visible": {
+          "scope": "user_message_only",
+          "characters": 1413,
+          "spans": {
+            "row": [
+              786,
+              851
+            ],
+            "plate": [
+              788,
+              794
+            ],
+            "class": [
+              848,
+              849
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        },
+        "both_right_near/visible": {
+          "scope": "user_message_only",
+          "characters": 1413,
+          "spans": {
+            "row": [
+              780,
+              845
+            ],
+            "plate": [
+              782,
+              788
+            ],
+            "class": [
+              842,
+              843
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        },
+        "before/direct": {
+          "scope": "user_message_only",
+          "characters": 1333,
+          "spans": {
+            "row": [
+              786,
+              851
+            ],
+            "plate": [
+              788,
+              794
+            ],
+            "class": [
+              848,
+              849
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        },
+        "both_right_near/direct": {
+          "scope": "user_message_only",
+          "characters": 1333,
+          "spans": {
+            "row": [
+              780,
+              845
+            ],
+            "plate": [
+              782,
+              788
+            ],
+            "class": [
+              842,
+              843
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        },
+        "both_left_near/visible": {
+          "scope": "user_message_only",
+          "characters": 1413,
+          "spans": {
+            "row": [
+              780,
+              845
+            ],
+            "plate": [
+              782,
+              788
+            ],
+            "class": [
+              842,
+              843
+            ],
+            "query_plate": [
+              1229,
+              1235
+            ]
+          },
+          "status": "UNMEASURED",
+          "tokens": null
+        }
+      }
+    }
+  ]
+}
