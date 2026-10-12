@@ -1,6 +1,7 @@
 import collections
 import copy
 import json
+import re
 from pathlib import Path
 import tempfile
 import unittest
@@ -53,6 +54,65 @@ class OrderingTests(unittest.TestCase):
             metrics.append(a['token_spans']['plate'][0])
         self.assertGreater(len(set(metrics)), 1)
         self.assertEqual(core.token_audit(text, spans)['status'], 'UNMEASURED')
+
+    def test_complete_matched_prompt_invariants(self):
+        groups = collections.defaultdict(list)
+        for task in self.plan['tasks']:
+            groups[task['world'], task['variant'], task['rotation']].append(task)
+        self.assertEqual(len(groups), 960)
+        for tasks in groups.values():
+            inventories, targets, queries, counts = [], [], [], []
+            for t in tasks:
+                text = t['request']['messages'][0]['content']
+                records = [line for line in text.splitlines() if line.startswith('| ')][1:]
+                inventories.append(sorted(records))
+                targets.append(text[slice(*t['position']['spans']['row'])])
+                queries.append(text.split('\nLicense plate: ', 1)[1].rsplit('\n', 1)[0])
+                counts.append(collections.Counter(row.split('|')[-2].strip() for row in records))
+                self.assertEqual(len(records), 10)
+                self.assertEqual(records[4], targets[-1])
+                self.assertEqual(t['row'], 5)
+                self.assertEqual(targets[-1].split('|')[-2].strip(), t['expected'])
+            for values in (inventories, targets, queries, counts):
+                self.assertTrue(all(value == values[0] for value in values))
+            self.assertEqual({t['placement'] for t in tasks}, set(core.SLOTS))
+            self.assertEqual({t['arm'] for t in tasks}, {'direct', 'visible'})
+
+    def test_offset_report_retains_lengths_and_nonmatches(self):
+        class WordFixture:
+            # Synthetic test tokenizer, NOT the deployed model's tokenizer.
+            def encode(self, text, add_special_tokens=False):
+                offsets = [m.span() for m in re.finditer(r'\w+|[^\w\s]', text)]
+                return type('Encoded', (), {'offsets': offsets, 'ids': list(range(len(offsets)))})()
+        first = self.plan['tasks'][0]
+        tasks = copy.deepcopy([t for t in self.plan['tasks'] if all(t[k] == first[k] for k in ('world', 'variant', 'rotation'))])
+        for t in tasks:
+            text = t['request']['messages'][0]['content']
+            t['position'] = core.token_audit(text, t['position']['spans'], WordFixture())
+            encoded = WordFixture().encode(text)
+            self.assertEqual(t['position']['tokens'], len(encoded.ids))
+            for name, (a, b) in t['position']['spans'].items():
+                overlap = [i for i, (s, e) in enumerate(encoded.offsets) if s < b and e > a]
+                self.assertEqual(t['position']['token_spans'][name], [overlap[0], overlap[-1]+1])
+        report = runner.position_report(dict(tasks=tasks, tokenizer={'SOFTWARE_FIXTURE': True}))
+        entry = report['comparisons'][0]
+        self.assertEqual(report['measured'], 1)
+        expected = len({tuple(t['position']['token_spans'][s][0] for s in ('plate', 'class')) for t in tasks if t['placement'] in ('before', 'after')}) == 1
+        self.assertEqual(entry['before_after_match'], expected)
+        self.assertGreater(len({p['tokens'] for p in entry['positions'].values()}), 1)
+        # A class-token shift alone must defeat an exact match, even if plate starts match.
+        for t in tasks:
+            t['position']['token_spans']['plate'] = [100, 104]
+            t['position']['token_spans']['class'] = [120, 121]
+        next(t for t in tasks if t['placement'] == 'after')['position']['token_spans']['class'] = [121, 122]
+        self.assertFalse(runner.position_report(dict(tasks=tasks, tokenizer={}))['comparisons'][0]['before_after_match'])
+
+    def test_unmeasured_report_does_not_assert_token_control(self):
+        report = runner.position_report(self.plan)
+        self.assertEqual(report['measured'], 0)
+        self.assertEqual(report['matched_before_after'], 0)
+        self.assertTrue(all(e['before_after_match'] is None and e['quartet_match'] is None for e in report['comparisons']))
+        self.assertTrue(all(t['position']['tokens'] is None for t in self.plan['tasks']))
 
     def test_scoring_retains_invalid_and_truncation(self):
         task = self.plan['tasks'][0]
