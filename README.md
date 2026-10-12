@@ -71,6 +71,23 @@ and class copying on all 24 explanation-study worlds (576 new calls). It is
 implemented and checked offline; no live results are included with this addition.
 The protocol has the run commands and describes the paired answer comparisons.
 
+Two further studies are implemented in this branch:
+
+- [Feature competition](FEATURES_PROTOCOL.md) changes which class matches the
+  target's transmission, seat cover, and doors, independently of the target's
+  recorded class. Thirty-six fresh tables keep the same layout and attribute-value
+  counts across conditions. The fixed plan contains 648 calls.
+- [Explanation follow-up](DOWNSTREAM_PROTOCOL.md) asks a factual question after
+  saved responses that copied the correct class, falsely called it missing, and
+  still answered correctly. It compares the original explanation with targeted
+  edits and removal, with separate availability controls and a failure example.
+  The fixed plan contains 342 calls.
+
+Neither follow-up has live results yet. The first tests controlled feature
+patterns; the second tests whether the saved explanation affects a later answer.
+They do not infer a hidden belief from a copied label or an explanation.
+See [running both studies](FOLLOWUP_STUDIES.md) for a separate-worktree setup.
+
 ## Interpretation
 
 The model sometimes answered from the background pattern despite having the
