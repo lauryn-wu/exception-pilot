@@ -1,0 +1,468 @@
+run,protocol_version,plan_hash,coder_version,task_id,attempt,mode,world_id,family,value,arm,item_id,expected,pattern_label,target_position,answer,correct,states_recorded_class,relabels_missing,class,legacy_states_recorded_class,legacy_relabels_missing,record_evidence,missing_evidence,reasoning
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-000/record_2/reasoning_first,1,live,order-list-000,diagnostic,record_2,reasoning_first,RA5ZZS,B,A,5,B,True,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate RA5ZZS, we need to analyze the patterns in the provided data:
+
+1. **Transmission**: All vehicles have an automatic transmission, which doesn't help differentiate between classes.
+
+2. **Seat Cover**: Vehicles with vinyl seat covers are found in classes A, B, and C. However, class A vehicles with vinyl seat covers are associated with hot environments (e.g., desert heat, hot sand).
+
+3. **Doors**: Vehicles with two doors are found in classes A, B, and C. However, class A vehicles with two doors are associated with hot environments.
+
+4. **Audit Marker**: The audit marker for RA5ZZS is Z. Vehicles with audit marker Z are found in classes B and C.
+
+5. **Description**: The description ""Operates in tropical forests"" suggests a hot and humid environment. Class A vehicles are associated with hot environments, while class B vehicles are associated with cold environments (e.g., polar ice, frozen terrain).
+
+Given the description and the audit marker, the vehicle is more likely to belong to class B, as it aligns with the pattern of vehicles operating in tropical or humid environments with audit marker Z."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-000/record_1/reasoning_first,2,live,order-list-000,diagnostic,record_1,reasoning_first,RA5ZZS,C,A,5,C,True,False,False,never_stated,True,False,,,"The vehicle with license plate RA5ZZS has the following characteristics: it operates in tropical forests, has an automatic transmission, vinyl seat covers, and two doors. To determine its class, we can compare these features with those of other vehicles in the records:
+
+1. **Transmission**: All vehicles in the records have automatic transmission, so this feature does not help differentiate the class.
+
+2. **Seat Cover**: Vehicles with vinyl seat covers are found in classes A, B, and C. However, the combination of vinyl seat covers and two doors is more common in class A and C.
+
+3. **Doors**: Vehicles with two doors are found in classes A and C. Class B vehicles tend to have four doors.
+
+4. **Audit Marker**: The audit marker for RA5ZZS is Z. Vehicles with audit marker Z are found in class C.
+
+5. **Description**: The description 'Operates in tropical forests' is unique to RA5ZZS, but similar descriptions like 'Built for desert heat' and 'Equipped for hot sand' are associated with class A. However, the audit marker Z strongly suggests class C.
+
+Considering the audit marker Z and the combination of features, the most likely class for RA5ZZS is C."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-001/record_2/reasoning_first,9,live,order-list-001,diagnostic,record_2,reasoning_first,RHQD2V,A,C,6,C,False,False,False,never_stated,False,False,,,"The vehicle with license plate RHQD2V is described as 'Built for subzero temperatures', has an automatic transmission, cloth seat covers, and two doors. To determine its class, we can analyze the patterns in the provided records:
+
+1. **Description and Environment:**
+   - Vehicles designed for cold or subzero environments (e.g., 'Operates on polar ice', 'Equipped with snow tracks', 'Designed for frozen terrain') are consistently classified as Class C.
+   - RHQD2V's description aligns with these cold environment vehicles.
+
+2. **Transmission and Seat Cover:**
+   - Vehicles with automatic transmission and cloth seat covers have been classified as both Class A and Class C. However, the environmental description seems to be a stronger indicator of class.
+
+3. **Number of Doors:**
+   - The number of doors does not show a strong correlation with class, as both two-door and four-door vehicles appear in multiple classes.
+
+4. **Audit Marker:**
+   - The audit marker 'Y' appears in both Class A and Class C vehicles, so it does not provide a definitive clue.
+
+Given the strong correlation between the description of operating in cold environments and Class C, it is reasonable to classify RHQD2V as Class C."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-001/record_1/reasoning_first,12,live,order-list-001,diagnostic,record_1,reasoning_first,RHQD2V,B,C,6,C,False,False,False,never_stated,False,False,,,"The vehicle with license plate RHQD2V is described as 'Built for subzero temperatures', has an automatic transmission, cloth seat covers, and two doors. To determine its class, we can analyze the patterns in the provided records:
+
+1. **Class C Vehicles:**
+   - R9QL9T: Operates on polar ice, manual, vinyl, two doors.
+   - RJ2YNY: Equipped with snow tracks, automatic, cloth, two doors.
+   - R3CTF6: Designed for frozen terrain, manual, cloth, four doors.
+   - R3CS4E: Used at an Arctic station, automatic, vinyl, four doors.
+   
+   **Common Traits:**
+   - Often associated with cold or icy environments.
+   - Mix of manual and automatic transmissions.
+   - Both cloth and vinyl seat covers.
+   - Two or four doors.
+
+2. **Class A Vehicles:**
+   - RB98L9: Built for desert heat, manual, vinyl, four doors.
+   - RRQQ6M: Operates in tropical forests, automatic, vinyl, four doors.
+   - R5VANC: Used at an equatorial station, automatic, cloth, four doors.
+   
+   **Common Traits:**
+   - Associated with hot or tropical environments.
+   - Mix of manual and automatic transmissions.
+   - Both cloth and vinyl seat covers.
+   - Typically four doors.
+
+3. **Class B Vehicles:**
+   - RYTLWJ: Equipped for hot sand, automatic, vinyl, four doors.
+   - R32NV7: Designed for humid summers, manual, cloth, two doors.
+   
+   **Common Traits:**
+   - Associated with hot or humid environments.
+   - Mix of manual and automatic transmissions.
+   - Both cloth and vinyl seat covers.
+   - Two or four doors.
+
+**Analysis for RHQD2V:**
+- The description 'Built for subzero temperatures' aligns with Class C vehicles, which are often associated with cold environments.
+- The vehicle has an automatic transmission and cloth seat covers, similar to RJ2YNY, a Class C vehicle.
+- It has two doors, which is common in Class C vehicles like RJ2YNY and R9QL9T.
+
+Based on these observations, RHQD2V shares more characteristics with Class C vehicles, particularly in terms of environment suitability and features."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-002/record_1/reasoning_first,13,live,order-list-002,diagnostic,record_1,reasoning_first,RD4EXM,C,A,6,A,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate RD4EXM, we need to analyze the patterns in the provided data:
+
+1. **Description**: The vehicle is equipped with snow tracks, suggesting it is designed for cold or snowy environments.
+2. **Transmission**: Manual transmission is used in this vehicle.
+3. **Seat Cover**: The seat cover is cloth.
+4. **Doors**: The vehicle has two doors.
+5. **Audit Marker**: The audit marker is X.
+
+### Observations from the Data:
+- Vehicles with descriptions related to cold environments (e.g., ""Designed for frozen terrain"", ""Built for subzero temperatures"", ""Operates on polar ice"") are typically classified as A.
+- Vehicles with descriptions related to hot environments (e.g., ""Equipped for hot sand"", ""Built for desert heat"") are typically classified as B.
+- Vehicles with descriptions related to tropical or equatorial environments (e.g., ""Used at an equatorial station"", ""Operates in tropical forests"") are typically classified as C.
+
+### Analysis:
+- The description ""Equipped with snow tracks"" aligns with cold environments, similar to other vehicles classified as A.
+- The audit marker X is associated with classes A, B, and C, but the environmental description is more indicative of class A.
+
+### Conclusion:
+Given the description and the pattern observed in the data, the vehicle RD4EXM is most likely to belong to class A."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-002/record_2/reasoning_first,16,live,order-list-002,diagnostic,record_2,reasoning_first,RD4EXM,B,A,6,B,True,False,False,never_stated,True,False,,,"To determine the class of the vehicle with license plate RD4EXM, we need to analyze the patterns in the provided data:
+
+1. **Description**: The vehicle is equipped with snow tracks, suggesting it is designed for cold or snowy environments.
+2. **Transmission**: Manual
+3. **Seat Cover**: Cloth
+4. **Doors**: Two
+5. **Audit Marker**: X
+
+Let's examine the patterns:
+
+- **Class A**: Vehicles designed for cold environments (e.g., frozen terrain, subzero temperatures, polar ice) tend to belong to Class A. These vehicles often have automatic transmissions and cloth seat covers.
+- **Class B**: Vehicles equipped for hot environments (e.g., desert heat, hot sand) or with specific features like snow tracks tend to belong to Class B. These vehicles can have either manual or automatic transmissions and often have vinyl seat covers.
+- **Class C**: Vehicles used in tropical or equatorial environments (e.g., equatorial station, tropical forests) tend to belong to Class C. These vehicles often have manual transmissions and cloth seat covers.
+
+**Analysis of RD4EXM**:
+- The description ""Equipped with snow tracks"" suggests a design for snowy or cold environments, which aligns with Class A or B.
+- The manual transmission and cloth seat cover are more common in Class B vehicles.
+- The audit marker X is associated with both Class B and Class A vehicles.
+
+Given the combination of features and the audit marker, the vehicle RD4EXM is most likely to belong to Class B, as it shares more characteristics with other Class B vehicles, particularly those equipped for specific environmental conditions like snow tracks."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-003/record_1/reasoning_first,22,live,order-list-003,diagnostic,record_1,reasoning_first,RC2XBS,A,C,5,A,True,False,False,never_stated,True,False,,,"The vehicle with license plate RC2XBS has the following characteristics: it operates in tropical forests, has an automatic transmission, vinyl seat covers, and four doors. We need to determine its class based on these attributes and the patterns observed in the other records.
+
+1. **Transmission**: Most vehicles with automatic transmission are either class A or B. However, class C vehicles also have automatic transmission, so this attribute alone is not definitive.
+
+2. **Seat Cover**: Vehicles with vinyl seat covers are found in classes A and B. Class C vehicles tend to have cloth seat covers.
+
+3. **Doors**: Vehicles with four doors are found in all classes, so this attribute does not help in distinguishing the class.
+
+4. **Audit Marker**: The audit marker for RC2XBS is X. Vehicles with audit marker X are found in classes A and B.
+
+5. **Description**: The description 'Operates in tropical forests' suggests a vehicle designed for challenging environments, which aligns with class A vehicles that are often equipped for extreme conditions.
+
+Considering these factors, the most likely class for RC2XBS is A, as it shares the most attributes with other class A vehicles, particularly the combination of vinyl seat covers and the audit marker X."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-003/record_2/reasoning_first,24,live,order-list-003,diagnostic,record_2,reasoning_first,RC2XBS,B,C,5,B,True,False,False,never_stated,True,False,,,"The vehicle with license plate RC2XBS is described as operating in tropical forests. From the records, we observe the following patterns:
+
+1. **Transmission**: All vehicles have automatic transmission, which doesn't help differentiate classes.
+
+2. **Seat Cover**: Vehicles with vinyl seat covers are associated with classes B and A. Specifically, vehicles with vinyl seat covers and four doors are associated with class B (RMWVSL and RKSA7K).
+
+3. **Doors**: Vehicles with four doors are associated with classes A, B, and C. However, when combined with vinyl seat covers, they are associated with class B.
+
+4. **Audit Marker**: The audit marker X is associated with classes A and B. However, when combined with the other features, it leans towards class B.
+
+5. **Description**: The description 'Operates in tropical forests' suggests a vehicle that might need to be robust and versatile, which aligns with class B vehicles that are designed for challenging environments.
+
+Considering these factors, the vehicle RC2XBS is most likely to belong to class B."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-004/record_2/reasoning_first,25,live,order-list-004,diagnostic,record_2,reasoning_first,R7GRGU,A,C,4,A,True,False,False,never_stated,True,False,,,"The vehicle with license plate R7GRGU has the following characteristics:
+- Description: Built for desert heat
+- Transmission: Automatic
+- Seat cover: Cloth
+- Doors: Four
+
+Let's analyze the patterns from the given records:
+
+1. **Class A**:
+   - RQCGF9: Built for subzero temperatures, Automatic, Cloth, Two doors
+   - R7GRGU: Built for desert heat, Automatic, Cloth, Four doors
+   - RTHT7M: Operates on polar ice, Automatic, Vinyl, Two doors
+
+   Observations: Vehicles in Class A have automatic transmission and are built for extreme temperatures (subzero or desert heat). They can have either cloth or vinyl seat covers.
+
+2. **Class B**:
+   - R5EFWM: Designed for frozen terrain, Manual, Vinyl, Four doors
+   - R2RHK4: Equipped with snow tracks, Automatic, Vinyl, Two doors
+   - RSCFT7: Used at an Arctic station, Automatic, Vinyl, Four doors
+
+   Observations: Vehicles in Class B are designed for cold environments and have vinyl seat covers. They can have either manual or automatic transmission.
+
+3. **Class C**:
+   - RLQNN7: Equipped for hot sand, Manual, Vinyl, Four doors
+   - RPVT3T: Designed for humid summers, Manual, Vinyl, Two doors
+   - RZY8BW: Used at an equatorial station, Manual, Vinyl, Two doors
+   - R7VXT7: Operates in tropical forests, Automatic, Vinyl, Two doors
+
+   Observations: Vehicles in Class C are designed for hot or humid environments and have vinyl seat covers. They predominantly have manual transmission, but one has automatic.
+
+**Conclusion**:
+- The vehicle R7GRGU is built for desert heat, which aligns with Class A's pattern of being built for extreme temperatures.
+- It has an automatic transmission and cloth seat covers, which matches the characteristics of Class A vehicles.
+
+Therefore, based on the observed patterns, the vehicle R7GRGU belongs to Class A."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-004/record_1/reasoning_first,30,live,order-list-004,diagnostic,record_1,reasoning_first,R7GRGU,B,C,4,C,False,False,False,never_stated,False,False,,,"The vehicle with license plate R7GRGU is described as 'Built for desert heat'. This suggests it is designed for hot environments. Looking at the other records:
+
+1. **R7GRGU** has an automatic transmission, cloth seat cover, and four doors.
+2. **RLQNN7** is 'Equipped for hot sand', has a manual transmission, vinyl seat cover, and four doors, and is classified as C.
+3. **RZY8BW** is 'Used at an equatorial station', has a manual transmission, vinyl seat cover, and two doors, and is classified as C.
+
+The common factor among vehicles classified as C is their design for hot or tropical environments. Although R7GRGU has an automatic transmission and cloth seat cover, its description aligns more closely with vehicles designed for hot climates, which are classified as C.
+
+Additionally, vehicles classified as A are typically designed for cold environments, and those classified as B are often equipped for snowy or icy conditions. Given the description of R7GRGU, it is unlikely to belong to class A or B.
+
+Therefore, based on the description and the pattern observed in the records, the best prediction for the class of R7GRGU is C."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-005/record_2/reasoning_first,33,live,order-list-005,diagnostic,record_2,reasoning_first,RC93C3,C,A,1,C,True,True,False,stated_and_followed,True,False,"The vehicle with license plate RC93C3 is already verified as class C. This is evident from the 'Verified class' column in the provided data. Therefore, there is no need to predict or infer the class based on other records, as the information is explicitly given.",,"The vehicle with license plate RC93C3 is already verified as class C. This is evident from the 'Verified class' column in the provided data. Therefore, there is no need to predict or infer the class based on other records, as the information is explicitly given."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-005/record_1/reasoning_first,35,live,order-list-005,diagnostic,record_1,reasoning_first,RC93C3,B,A,1,B,True,False,False,never_stated,False,False,,,"The vehicle with license plate RC93C3 is used at an equatorial station, has an automatic transmission, cloth seat covers, and four doors. Let's analyze the patterns from the given records:
+
+1. **Transmission:**
+   - Automatic transmission is associated with both classes A and B.
+   - Manual transmission is associated with classes A, B, and C.
+
+2. **Seat Cover:**
+   - Cloth seat covers are associated with classes B and C.
+   - Vinyl seat covers are associated with classes A, B, and C.
+
+3. **Doors:**
+   - Four doors are associated with classes B and C.
+   - Two doors are associated with classes A, B, and C.
+
+4. **Audit Marker:**
+   - The audit marker Y is associated with classes B and C.
+
+5. **Description:**
+   - The description 'Used at an equatorial station' suggests a vehicle designed for hot climates, which aligns with class A vehicles designed for hot sand and desert heat. However, class B vehicles are also used in extreme conditions like subzero temperatures.
+
+Given the combination of automatic transmission, cloth seat covers, four doors, and audit marker Y, the vehicle aligns most closely with class B. The description of being used at an equatorial station does not strongly indicate class A, as class A vehicles are more associated with hot sand and desert heat, while class B vehicles are used in a variety of extreme conditions, including equatorial stations."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-006/record_1/reasoning_first,38,live,order-list-006,diagnostic,record_1,reasoning_first,RUG8V9,C,B,3,C,True,False,True,relabeled_missing,False,True,,"   - RUG8V9 (Automatic, MISSING)
+---
+   - RUG8V9 (Vinyl, MISSING)
+---
+   - RUG8V9 (Four doors, MISSING)
+---
+   - RUG8V9 (Y, MISSING)
+---
+   - RUG8V9 (Frozen terrain, MISSING)","To determine the class of the vehicle with license plate RUG8V9, we need to analyze the patterns in the given records:
+
+1. **Transmission**: Vehicles with automatic transmission are found in classes B and C.
+   - RCKJ9H (Automatic, Class B)
+   - RUG8V9 (Automatic, MISSING)
+   - RBWZ9T (Automatic, Class A)
+   - RQ7XPH (Automatic, Class B)
+   - RGB94Q (Automatic, Class C)
+
+2. **Seat Cover**: Vehicles with vinyl seat covers are found in classes C and B.
+   - RUG8V9 (Vinyl, MISSING)
+   - RFM97P (Vinyl, Class C)
+   - R9NAKY (Vinyl, Class B)
+   - RGB94Q (Vinyl, Class C)
+
+3. **Doors**: Vehicles with four doors are found in all classes.
+   - RCVV28 (Four doors, Class B)
+   - RCKJ9H (Four doors, Class B)
+   - RUG8V9 (Four doors, MISSING)
+   - RPD67Q (Four doors, Class C)
+   - R9NAKY (Four doors, Class B)
+   - R4847H (Four doors, Class A)
+
+4. **Audit Marker**: Vehicles with audit marker Y are found in classes B and C.
+   - RCKJ9H (Y, Class B)
+   - RUG8V9 (Y, MISSING)
+   - RQ7XPH (Y, Class B)
+
+5. **Description**: Vehicles designed for frozen terrain or subzero temperatures are found in classes B and C.
+   - RCKJ9H (Subzero temperatures, Class B)
+   - RUG8V9 (Frozen terrain, MISSING)
+
+**Conclusion**: The vehicle RUG8V9 shares characteristics with vehicles in both classes B and C. However, the combination of an automatic transmission, vinyl seat cover, and audit marker Y is more frequently associated with class C (as seen in RGB94Q). Therefore, the best prediction for the class of RUG8V9 is C."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-006/record_2/reasoning_first,39,live,order-list-006,diagnostic,record_2,reasoning_first,RUG8V9,A,B,3,B,False,False,False,never_stated,True,False,,,"The vehicle with license plate RUG8V9 is described as 'Designed for frozen terrain', has an automatic transmission, vinyl seat covers, and four doors. Let's analyze the patterns from the given records:
+
+1. **Class B Vehicles:**
+   - RCVV28: Equipped with snow tracks, manual, cloth, four doors, audit marker X.
+   - RCKJ9H: Built for subzero temperatures, automatic, cloth, four doors, audit marker Y.
+   - R9NAKY: Used at an Arctic station, manual, vinyl, four doors, audit marker Y.
+   - RQ7XPH: Operates on polar ice, automatic, cloth, two doors, audit marker Y.
+
+   **Common Traits:**
+   - Often associated with cold or subzero environments.
+   - Mix of manual and automatic transmissions.
+   - Cloth seat covers are more common, but vinyl is also present.
+   - Four doors are common, but two doors are also possible.
+
+2. **Class A Vehicles:**
+   - RUG8V9: Designed for frozen terrain, automatic, vinyl, four doors, audit marker Y.
+   - RBWZ9T: Equipped for hot sand, automatic, cloth, two doors, audit marker Z.
+   - R4847H: Operates in tropical forests, manual, cloth, four doors, audit marker Z.
+
+   **Common Traits:**
+   - Associated with extreme environments, both hot and cold.
+   - Mix of manual and automatic transmissions.
+   - Cloth seat covers are more common, but vinyl is also present.
+   - Four doors are common, but two doors are also possible.
+
+3. **Class C Vehicles:**
+   - RFM97P: Built for desert heat, manual, vinyl, two doors, audit marker Z.
+   - RPD67Q: Designed for humid summers, manual, cloth, four doors, audit marker X.
+   - RGB94Q: Used at an equatorial station, automatic, vinyl, two doors, audit marker X.
+
+   **Common Traits:**
+   - Associated with hot environments.
+   - Mix of manual and automatic transmissions.
+   - Vinyl seat covers are more common.
+   - Two doors are more common, but four doors are also possible.
+
+**Conclusion:**
+- The vehicle RUG8V9 shares characteristics with both Class A and Class B vehicles, particularly in its association with cold environments and having four doors.
+- However, the audit marker Y and the description 'Designed for frozen terrain' align more closely with Class B vehicles, which are often associated with cold environments.
+
+Therefore, the best prediction for the class of vehicle RUG8V9 is Class B."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-007/record_1/reasoning_first,47,live,order-list-007,diagnostic,record_1,reasoning_first,RHK6HV,A,B,9,B,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate RHK6HV, we need to analyze the patterns in the given records:
+
+1. **Transmission and Seat Cover:**
+   - Vehicles with a manual transmission and cloth seat covers are predominantly classified as B. Examples include RAWJ8W, RK3Z8L, and R4AJ6T.
+   - However, RQ72SZ, which also has a manual transmission and cloth seat covers, is classified as A.
+
+2. **Doors:**
+   - Vehicles with four doors and a manual transmission are classified as B (RK3Z8L, R4AJ6T).
+   - RSH6KP, with an automatic transmission and four doors, is classified as A.
+
+3. **Audit Marker:**
+   - The audit marker does not seem to directly correlate with the class, as vehicles with the same marker (e.g., Y) belong to different classes (B and C).
+
+4. **Description:**
+   - The description 'Built for desert heat' is similar to RK3Z8L ('Equipped for hot sand'), which is classified as B.
+
+Given these observations, the vehicle RHK6HV shares the most characteristics with vehicles classified as B, particularly in terms of transmission, seat cover, and door count. The description also aligns more closely with vehicles in class B."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-007/record_2/reasoning_first,48,live,order-list-007,diagnostic,record_2,reasoning_first,RHK6HV,C,B,9,B,False,False,True,relabeled_missing,False,True,,"   - RHK6HV (Desert heat, MISSING)
+---
+   - RHK6HV (Audit marker X, MISSING)","To determine the class of the vehicle with license plate RHK6HV, we need to analyze the patterns in the given data:
+
+1. **Transmission**: The vehicle has a manual transmission. In the records, vehicles with manual transmission are classified as either B or A.
+   - RAWJ8W (Manual, Class B)
+   - RK3Z8L (Manual, Class B)
+   - RQ72SZ (Manual, Class A)
+   - R4AJ6T (Manual, Class B)
+
+2. **Seat Cover**: The vehicle has cloth seat covers. Vehicles with cloth seat covers are classified as either B or A.
+   - RAWJ8W (Cloth, Class B)
+   - RK3Z8L (Cloth, Class B)
+   - RTR2XS (Cloth, Class B)
+   - R4AJ6T (Cloth, Class B)
+   - RSH6KP (Cloth, Class A)
+
+3. **Doors**: The vehicle has four doors. Vehicles with four doors are classified as either B or C.
+   - RK3Z8L (Four doors, Class B)
+   - RL9Z5Z (Four doors, Class C)
+   - RBTWYL (Four doors, Class C)
+   - R4AJ6T (Four doors, Class B)
+   - RSH6KP (Four doors, Class A)
+
+4. **Description**: The vehicle is built for desert heat. Vehicles designed for extreme heat (desert or tropical) are classified as either B or C.
+   - RAWJ8W (Tropical, Class B)
+   - RK3Z8L (Hot sand, Class B)
+   - RHK6HV (Desert heat, MISSING)
+
+5. **Audit Marker**: The audit marker is X. Vehicles with audit marker X are classified as either B or C.
+   - RK3Z8L (Audit marker X, Class B)
+   - RQ72SZ (Audit marker X, Class A)
+   - RHK6HV (Audit marker X, MISSING)
+
+**Conclusion**: The vehicle RHK6HV shares characteristics with vehicles classified as B, particularly in terms of transmission, seat cover, and audit marker. The description aligns with vehicles in class B as well. Therefore, the most likely class for RHK6HV is B."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-008/record_2/reasoning_first,50,live,order-list-008,diagnostic,record_2,reasoning_first,RMMP5W,B,C,1,C,False,False,False,never_stated,False,False,,,"The vehicle with license plate RMMP5W has a description indicating it is built for subzero temperatures. Observing the other records:
+
+1. **RKTKUK**: Operates on polar ice, Manual, Vinyl, Two doors, Audit marker X, Class C.
+2. **RM5ZX3**: Used at an Arctic station, Automatic, Cloth, Four doors, Audit marker X, Class C.
+3. **R4VL3K**: Equipped with snow tracks, Manual, Cloth, Four doors, Audit marker Y, Class C.
+
+These vehicles are designed for cold or icy conditions and are classified as C. The common features among these vehicles are their adaptation to cold environments, which aligns with the description of RMMP5W.
+
+Additionally, the audit marker X is shared between RMMP5W and RM5ZX3, both of which are associated with cold environments and classified as C.
+
+Given these observations, it is reasonable to predict that RMMP5W, built for subzero temperatures, belongs to class C."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-008/record_1/reasoning_first,51,live,order-list-008,diagnostic,record_1,reasoning_first,RMMP5W,A,C,1,A,True,True,False,stated_and_followed,True,False,"The vehicle with license plate RMMP5W has a description indicating it is built for subzero temperatures, which aligns with vehicles designed for extreme cold conditions. Observing the records, vehicles with similar descriptions (e.g., RKTKUK and RM5ZX3) are classified as C. However, RMMP5W is already verified as class A, which suggests that despite its description, it belongs to class A. This indicates that the description alone is not the sole determinant of class, and other factors or historical data might have influenced its classification. Therefore, the verified class A is accurate for RMMP5W.",,"The vehicle with license plate RMMP5W has a description indicating it is built for subzero temperatures, which aligns with vehicles designed for extreme cold conditions. Observing the records, vehicles with similar descriptions (e.g., RKTKUK and RM5ZX3) are classified as C. However, RMMP5W is already verified as class A, which suggests that despite its description, it belongs to class A. This indicates that the description alone is not the sole determinant of class, and other factors or historical data might have influenced its classification. Therefore, the verified class A is accurate for RMMP5W."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-009/record_1/reasoning_first,55,live,order-list-009,diagnostic,record_1,reasoning_first,R2BQBD,A,B,7,A,True,False,False,never_stated,True,False,,,"The vehicle with license plate R2BQBD is described as being used at an Arctic station. Let's analyze the patterns in the data:
+
+1. **Transmission**: All vehicles have a manual transmission except for two, which are automatic. This doesn't help differentiate classes.
+
+2. **Seat Cover**: Vehicles with cloth seat covers are associated with class A (RD7XCD and R3FDB4) and one with class B (R6YLHC). However, R6YLHC is an outlier as it has an automatic transmission and four doors, which doesn't match R2BQBD's profile.
+
+3. **Doors**: Vehicles with two doors are associated with classes A (RD7XCD, R3FDB4) and B (RM2VLC, RPTU8G). However, RM2VLC and RPTU8G have vinyl seat covers, unlike R2BQBD.
+
+4. **Audit Marker**: Vehicles with audit marker X are associated with classes B (RM2VLC, RPTU8G) and A (R2BQBD). However, RM2VLC and RPTU8G have vinyl seat covers, unlike R2BQBD.
+
+5. **Description**: Vehicles used in cold environments (polar ice, Arctic station, subzero temperatures) are associated with classes B (RM2VLC, RPTU8G) and A (R2BQBD). However, RM2VLC and RPTU8G have vinyl seat covers, unlike R2BQBD.
+
+Given the above analysis, the strongest indicator is the seat cover material. Vehicles with cloth seat covers and two doors are consistently associated with class A. Therefore, the best prediction for R2BQBD, which has a cloth seat cover and two doors, is class A."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-009/record_2/reasoning_first,60,live,order-list-009,diagnostic,record_2,reasoning_first,R2BQBD,C,B,7,C,True,False,False,never_stated,True,False,,,"The vehicle with license plate R2BQBD is described as being used at an Arctic station. Let's analyze the patterns in the data:
+
+1. **Transmission**: All vehicles have a manual transmission except for two, which are automatic. The transmission type doesn't seem to correlate strongly with any specific class.
+
+2. **Seat Cover**: Vehicles with cloth seat covers are associated with classes A and C. Specifically, RD7XCD and R3FDB4, both with cloth seat covers, are class A, while R2BQBD is the only one with cloth seat covers and class C.
+
+3. **Doors**: Vehicles with two doors are associated with all three classes. However, the combination of two doors and cloth seat covers is seen in class A and C.
+
+4. **Audit Marker**: The audit marker X is associated with classes B and C. RM2VLC and RPTU8G, both with audit marker X, are class B, while R2BQBD is class C.
+
+5. **Description**: The description 'Used at an Arctic station' suggests a cold environment. Vehicles designed for cold environments (e.g., RM2VLC, RPTU8G) are class B, but R2BQBD is class C.
+
+Given the combination of cloth seat covers, two doors, and audit marker X, the most likely class for R2BQBD is C, as it matches the pattern of vehicles with similar features."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-010/record_2/reasoning_first,61,live,order-list-010,diagnostic,record_2,reasoning_first,R7SYPG,C,A,10,A,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate R7SYPG, we need to analyze the patterns in the provided data:
+
+1. **Transmission**: The vehicle has a manual transmission. Vehicles with manual transmission are found in all classes (A, B, and C).
+
+2. **Seat Cover**: The vehicle has vinyl seat covers. Vehicles with vinyl seat covers are found in classes A, B, and C.
+
+3. **Doors**: The vehicle has two doors. Vehicles with two doors are found in classes A, B, and C.
+
+4. **Audit Marker**: The audit marker is Z. Vehicles with audit marker Z are found in classes A and B.
+
+5. **Description**: The vehicle is equipped with snow tracks, suggesting it is designed for cold or icy conditions. Vehicles designed for cold conditions (e.g., Arctic station, polar ice, frozen terrain) are typically class A.
+
+Given the audit marker Z and the cold condition description, the vehicle is more likely to be class A, as vehicles with audit marker Z and cold condition descriptions are consistently class A in the dataset."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-010/record_1/reasoning_first,65,live,order-list-010,diagnostic,record_1,reasoning_first,R7SYPG,B,A,10,B,True,False,False,never_stated,True,False,,,"The vehicle with license plate R7SYPG is equipped with snow tracks, has a manual transmission, vinyl seat covers, and two doors. The audit marker is Z. 
+
+To determine the class, we can analyze the patterns in the provided data:
+
+1. **Class A**: Vehicles in this class are typically used in cold environments (e.g., Arctic station, polar ice, subzero temperatures, frozen terrain). They often have manual transmissions and cloth seat covers, with a mix of two and four doors. The audit marker is often Z or X.
+
+2. **Class B**: Vehicles in this class are often used in hot environments (e.g., tropical forests, hot sand, desert heat). They have a mix of manual and automatic transmissions, vinyl seat covers, and two or four doors. The audit marker is often Z or X.
+
+3. **Class C**: Vehicles in this class are used in equatorial or humid environments. They have automatic transmissions, vinyl seat covers, and four doors. The audit marker is often Y.
+
+The vehicle R7SYPG has characteristics that align with Class B:
+- It has a manual transmission and vinyl seat covers, similar to other Class B vehicles.
+- The audit marker Z is also associated with Class B vehicles.
+- The description ""Equipped with snow tracks"" suggests it might be used in cold environments, but the combination of manual transmission and vinyl seat covers is more indicative of Class B.
+
+Therefore, based on the patterns observed, the vehicle R7SYPG is most likely to belong to Class B."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-011/record_1/reasoning_first,70,live,order-list-011,diagnostic,record_1,reasoning_first,R4V3TL,C,B,2,C,True,False,False,never_stated,True,False,,,"The vehicle with license plate R4V3TL operates in tropical forests, has an automatic transmission, cloth seat covers, and four doors. We need to predict its class based on the patterns observed in the other records.
+
+1. **Transmission Type:**
+   - Vehicles with automatic transmission are found in classes A and C.
+   - RQ7JPF and R87WY5 have automatic transmission and belong to class A.
+   - R4V3TL also has automatic transmission, suggesting it could be class A or C.
+
+2. **Seat Cover Material:**
+   - Cloth seat covers are found in classes B and C.
+   - RYJ58J and RJD5UN have cloth seat covers and belong to class B.
+   - R4V3TL has cloth seat covers, suggesting it could be class B or C.
+
+3. **Number of Doors:**
+   - Vehicles with four doors are found in classes B and C.
+   - RYJ58J, RJD5UN, RBUM5A, and R4YHAJ have four doors and belong to class B.
+   - R4V3TL has four doors, suggesting it could be class B or C.
+
+4. **Audit Marker:**
+   - The audit marker Z is associated with classes B and C.
+   - R4V3TL has audit marker Z, suggesting it could be class B or C.
+
+5. **Description Context:**
+   - The description 'Operates in tropical forests' does not directly match any specific class pattern, but it suggests a need for durability and adaptability, which could align with class C vehicles designed for challenging environments.
+
+Considering all these factors, the strongest overlap for R4V3TL is with class C, as it matches the automatic transmission, cloth seat covers, four doors, and audit marker Z, which are all characteristics found in class C vehicles."
+order-001,verified-facts-answer-order-v1,631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8,record-evidence-lexical-v2,order-list-011/record_2/reasoning_first,71,live,order-list-011,diagnostic,record_2,reasoning_first,R4V3TL,A,B,2,A,True,False,False,never_stated,True,False,,,"The vehicle with license plate R4V3TL operates in tropical forests, has an automatic transmission, cloth seat covers, and four doors. We need to determine its class based on the patterns observed in the other records.
+
+1. **Transmission Type:**
+   - Vehicles with automatic transmission are found in classes A and B.
+   - RQ7JPF and R87WY5, both with automatic transmission, are class A.
+
+2. **Seat Cover Material:**
+   - Cloth seat covers are associated with classes A and B.
+   - RYJ58J and RJD5UN, both with cloth seat covers, are class B.
+   - R4CDXD, with cloth seat covers, is class A.
+
+3. **Number of Doors:**
+   - Vehicles with four doors are found in all classes (A, B, and C).
+   - However, most four-door vehicles with cloth seat covers are class A (R4CDXD).
+
+4. **Audit Marker:**
+   - The audit marker Z is associated with classes A and B.
+   - R4CDXD with audit marker Z is class A.
+
+5. **Environmental Context:**
+   - Vehicles operating in extreme cold (polar ice, frozen terrain) are class A.
+   - Vehicles designed for hot environments (desert heat, hot sand) are class B.
+   - Tropical forests are not explicitly mentioned, but the closest environmental context is humid summers, which is class B.
+
+Considering the above factors, the vehicle R4V3TL shares more characteristics with class A vehicles, especially given the automatic transmission and audit marker Z, which aligns with R4CDXD, a class A vehicle."

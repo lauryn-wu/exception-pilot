@@ -1,0 +1,12 @@
+{
+  "protocol": "verified-facts-query-form-v1",
+  "provider": "openai",
+  "model": "gpt-4o-2024-08-06",
+  "api_key_env": "OPENAI_API_KEY",
+  "seed": 2026101001,
+  "n_worlds": 24,
+  "temperature": 0,
+  "max_completion_tokens": {"direct": 1000, "visible": 1000, "filler": 1000},
+  "max_total_attempts": 316,
+  "timeout_seconds": 120
+}

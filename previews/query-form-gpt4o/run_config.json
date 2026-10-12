@@ -1,0 +1,20 @@
+{
+  "config": {
+    "protocol": "verified-facts-query-form-v1",
+    "provider": "openai",
+    "model": "gpt-4o-2024-08-06",
+    "api_key_env": "OPENAI_API_KEY",
+    "seed": 2026101001,
+    "n_worlds": 24,
+    "temperature": 0,
+    "max_completion_tokens": {
+      "direct": 1000,
+      "visible": 1000,
+      "filler": 1000
+    },
+    "max_total_attempts": 316,
+    "timeout_seconds": 120
+  },
+  "config_hash": "bb00f0daebb6cd612703fa453f1341b3c839e9f25531117c662d9e4e91edb171",
+  "plan_hash": "9b5eb991d39777590c2d3fca7cc22abf840c8ff130103d9bca139583b0528097"
+}

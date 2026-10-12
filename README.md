@@ -1,5 +1,31 @@
 # Reasoning prompts and exception records
 
+## Next experiment: query form × response
+
+The revised [query-form protocol](QUERY_FORM_PROTOCOL.md) is implemented and
+prepared for GPT-4o and Mistral; **no new live collection has been performed**.
+It crosses profile/key queries with direct, visible-reasoning, and same-response
+neutral-copy conditions: 24 fresh worlds and 288 calls per model. The shared
+plan is identical across providers. See the exact [GPT-4o previews](previews/query-form-gpt4o/preview.md)
+and [Mistral previews](previews/query-form-mistral/preview.md).
+
+The corrected sensitivity scale is [−1,1]. Both live models must satisfy the
+predeclared spending rule before analysis can issue `proceed_to_dose`. Mock runs
+are labeled SIMULATED and cannot pass that rule. Run 2 remains deferred pending
+redesign of its peer fractions, counterfactual pairing and description pools.
+
+The [offline rationale audit](analysis/rationales/README.md) covers 240 archived
+responses, with CSV evidence excerpts and 20 blinded samples per run. Its codes
+are provisional descriptions of text, not measures of hidden reasoning.
+
+The separate [query-role-001 report](results/query-role-001-report.md) records
+144/144 correct answers across literal, encoded and downstream queries, including
+both direct and visible responses (24/24 per cell). That Mistral screen returned
+`stop_this_screen`: the predicted deterioration was absent in those 12 worlds.
+
+Run commands are in the new protocol. Run from the repository root; the existing
+package manifest and historical studies remain unchanged.
+
 These experiments ask GPT-4o to answer questions about synthetic vehicle records.
 Under the original classification wording, asking for reasoning made the model
 more likely to follow the surrounding labels even when they conflicted with the

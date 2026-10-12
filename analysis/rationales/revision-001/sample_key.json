@@ -1,0 +1,142 @@
+[
+  {
+    "sample": 1,
+    "task_id": "revision-list-009/record_1/reasoning_first",
+    "answer": "C",
+    "expected": "A",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 2,
+    "task_id": "revision-list-001/record_1/revision",
+    "answer": "A",
+    "expected": "C",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 3,
+    "task_id": "revision-list-014/record_1/revision",
+    "answer": "C",
+    "expected": "C",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 4,
+    "task_id": "revision-list-010/record_2/revision",
+    "answer": "C",
+    "expected": "C",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 5,
+    "task_id": "revision-list-023/record_2/revision",
+    "answer": "A",
+    "expected": "A",
+    "automatic_class": "stated_and_followed"
+  },
+  {
+    "sample": 6,
+    "task_id": "revision-list-021/record_1/reasoning_first",
+    "answer": "B",
+    "expected": "B",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 7,
+    "task_id": "revision-list-000/record_2/reasoning_first",
+    "answer": "B",
+    "expected": "C",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 8,
+    "task_id": "revision-list-016/record_1/revision",
+    "answer": "C",
+    "expected": "C",
+    "automatic_class": "stated_and_followed"
+  },
+  {
+    "sample": 9,
+    "task_id": "revision-list-007/record_2/reasoning_first",
+    "answer": "A",
+    "expected": "A",
+    "automatic_class": "stated_and_followed"
+  },
+  {
+    "sample": 10,
+    "task_id": "revision-list-010/record_2/reasoning_first",
+    "answer": "C",
+    "expected": "C",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 11,
+    "task_id": "revision-list-009/record_2/revision",
+    "answer": "C",
+    "expected": "B",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 12,
+    "task_id": "revision-list-015/record_2/reasoning_first",
+    "answer": "A",
+    "expected": "C",
+    "automatic_class": "stated_then_overridden"
+  },
+  {
+    "sample": 13,
+    "task_id": "revision-list-004/record_1/reasoning_first",
+    "answer": "A",
+    "expected": "B",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 14,
+    "task_id": "revision-list-022/record_2/reasoning_first",
+    "answer": "B",
+    "expected": "B",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 15,
+    "task_id": "revision-list-006/record_2/reasoning_first",
+    "answer": "A",
+    "expected": "A",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 16,
+    "task_id": "revision-list-023/record_1/revision",
+    "answer": "C",
+    "expected": "C",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 17,
+    "task_id": "revision-list-019/record_1/reasoning_first",
+    "answer": "C",
+    "expected": "C",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 18,
+    "task_id": "revision-list-018/record_2/reasoning_first",
+    "answer": "C",
+    "expected": "C",
+    "automatic_class": "stated_and_followed"
+  },
+  {
+    "sample": 19,
+    "task_id": "revision-list-008/record_2/revision",
+    "answer": "A",
+    "expected": "A",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 20,
+    "task_id": "revision-list-022/record_1/revision",
+    "answer": "A",
+    "expected": "A",
+    "automatic_class": "never_stated"
+  }
+]
