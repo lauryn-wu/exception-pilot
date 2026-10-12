@@ -1,0 +1,21 @@
+{
+  "config": {
+    "protocol": "verified-facts-row-position-confirm-v1",
+    "provider": "mistral",
+    "model": "mistral-small-2603",
+    "endpoint": "https://api.mistral.ai/v1/chat/completions",
+    "api_key_env": "MISTRAL_API_KEY",
+    "seed": 2026101202,
+    "n_worlds": 24,
+    "temperature": 0,
+    "reasoning_effort": "none",
+    "max_tokens": {
+      "direct": 1600,
+      "visible": 1600
+    },
+    "max_total_attempts": 1056,
+    "timeout_seconds": 120
+  },
+  "config_hash": "e521e1732aafd0cc0a808ea80398fef17cbac1d667d436422a7c9c3b73c0c76a",
+  "plan_hash": "534e56c260494450ce31dfb9fd295b565ef5ed1291a5772e1e9503c049efb506"
+}
