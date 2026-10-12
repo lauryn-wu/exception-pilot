@@ -16,10 +16,10 @@ def annotate(path, collection, positive_count=1):
     for i, a in enumerate(review['rows']):
         a.update(reviewed=True, false_missing=i < positive_count, reviewer='offline-test',
                  justification='SOFTWARE FIXTURE: compare exact target row',
-                 first_false_missing_certified=True, semantic_certified=True)
+                 first_false_missing_certified=True, semantic_certified=True, grammar_certified=True)
         if i < positive_count:
             old = 'Its verified class is missing.'
-            a.update(span=[0, len(old)], old=old, replacements={
+            a.update(statement_span=[0, len(old)], statement=old, span=[0, len(old)], old=old, replacements={
                 'availability_repair': 'Its verified class is recorded.',
                 'meaning_control': 'Its verified class is absent.',
                 'value_repair': 'Its verified class is recorded as ' + gold[a['task_id']] + '.'})
@@ -28,16 +28,16 @@ def annotate(path, collection, positive_count=1):
 
 
 class BadReplay(MockBackend):
-    def generate(self, ids, budget):
-        result = super().generate(ids, budget)
+    def generate(self, ids, budget, capture_at=()):
+        result = super().generate(ids, budget, capture_at)
         if ids[-1] != 1000000:
             result['tokens'] = [ord('!')] + result['tokens']; result['text'] = self.decode(result['tokens'])
         return result
 
 
 class ScientificBadReplay(MockBackend):
-    def generate(self, ids, budget):
-        result = super().generate(ids, budget)
+    def generate(self, ids, budget, capture_at=()):
+        result = super().generate(ids, budget, capture_at)
         if 'Verified class' in self.decode(ids) and ids[-1] != 1000000:
             result['tokens'] = [ord('!')] + result['tokens']
         return result
@@ -126,7 +126,7 @@ class ContinuationTests(unittest.TestCase):
             annotate(review, collection)
             plan = edits.freeze_edits(out, review)
             self.assertEqual(len(plan['cases']), 1)
-            self.assertEqual(plan['cases'][0]['k'], 32)
+            self.assertEqual(plan['cases'][0]['k'], len('Its verified class is missing.'))
             original_bytes = (out/'collection.json').read_bytes()
             response = edits.intervene(out, mock=True)
             case = response['rows'][0]
@@ -136,12 +136,12 @@ class ContinuationTests(unittest.TestCase):
             result = analysis.analyze(out)
             self.assertEqual(result['mode'], 'SIMULATED')
             self.assertEqual(result['interventions']['planned_cases'], 1)
+            self.assertEqual(result['real_model_validation'], 'PENDING')
+            self.assertFalse(result['study_2b']['validated_same_response_interventions'])
             self.assertEqual(result['longitudinal_primary_64_minus_0']['worlds'], 12)
             with self.assertRaises(ValueError): edits.freeze_edits(out, review)
-            p = runner.prepare(confirm, 'confirmation', core.DEFAULT_CONFIG, out, 'SOFTWARE TEST ONLY')
-            self.assertEqual(p['selection_lock']['mode'], 'SIMULATED')
-            fake_live = MockBackend(); fake_live.simulated = False
-            with self.assertRaises(ValueError): runner.Session(confirm, p, fake_live)
+            with self.assertRaisesRegex(ValueError, 'behavioral calibration'):
+                runner.prepare(confirm, 'confirmation', core.DEFAULT_CONFIG, out, 'SOFTWARE TEST ONLY')
 
     def test_raw_invalid_truncation_and_corruption_retained(self):
         self.assertIsNone(core.final_score('ANSWER: A', False, 'A')['answer'])

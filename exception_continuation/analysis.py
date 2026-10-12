@@ -5,6 +5,7 @@ from statistics import mean
 from exception_pilot.core import rng_for
 from .core import read_plan
 from .runner import sealed_read, sealed_write, collection_summary, validate_collection
+from .validation import calibration_result
 
 
 def clustered(values):
@@ -18,12 +19,26 @@ def clustered(values):
 
 
 def analyze(output):
-    out = Path(output); plan = read_plan(out); collection = sealed_read(out/'collection.json')
+    out = Path(output); plan = read_plan(out)
+    if not (out/'collection.json').exists():
+        result = dict(mode='NOT_COLLECTED', phase=plan['phase'], real_model_validation='PENDING',
+                      study_2a={'status': 'PENDING'}, study_2b={'status': 'PENDING', 'validated_same_response_interventions': False})
+        sealed_write(out/'summary.json', result)
+        return result
+    collection = sealed_read(out/'collection.json')
     validate_collection(plan, collection)
     execution = sealed_read(out/'execution.json')
+    technical = sealed_read(out/'validation.json')
+    if (technical['artifact_hash'] != collection['validation_hash'] or
+            technical['backend_hash'] != execution['backend_hash'] or
+            collection['backend_hash'] != execution['backend_hash']):
+        raise ValueError('Validation/backend identity mismatch')
     tasks = {t['id']: t for t in plan['tasks']}
     result = dict(mode=execution['mode'], phase=plan['phase'], baseline=collection_summary(collection),
-                  interpretation='Readouts are conditional on cue/prefix; edits are text interventions, not hidden-belief measurements.')
+                  interpretation='Answer preferences under a checkpoint readout; not direct internal beliefs.',
+                  behavioral_calibration=calibration_result(plan, collection),
+                  real_model_validation='PENDING' if execution['mode'] == 'SIMULATED' else ('TECHNICAL_PASSED' if technical['passed'] else 'FAILED'),
+                  study_2a={'status': 'PENDING'}, study_2b={'status': 'PENDING', 'validated_same_response_interventions': False})
     if (out/'measurements.json').exists():
         ms = sealed_read(out/'measurements.json')
         if ms['collection_hash'] != collection['artifact_hash']: raise ValueError('Stale measurements')
@@ -34,7 +49,7 @@ def analyze(output):
             cuts = {c['k']: c for c in row['cuts']}
             for k, c in cuts.items():
                 coverage[k]['planned'] += 1; coverage[k]['eligible'] += c['eligible']
-                coverage[k]['replay_valid'] += bool(c.get('exact_suffix_match'))
+                coverage[k]['replay_valid'] += bool(c.get('passed'))
                 coverage[k]['measured'] += 'readout' in c
             if all('readout' in cuts[k] for k in (0, 64)):
                 paired[t['world']].append(cuts[64]['readout']['gold_pattern_log_odds']-cuts[0]['readout']['gold_pattern_log_odds'])
@@ -50,9 +65,32 @@ def analyze(output):
         result['readout_by_checkpoint'] = {k: clustered({w: vs for w, vs in worlds.items() if len(vs) == 2})
                                            for k, worlds in by_cut.items()}
         result['replay_failures'] = sum(not r['replay_passed'] for r in ms['rows'])
+        original = {r['task']['id']: r for r in collection['rows']}
+        strata, sensitivity = defaultdict(lambda: defaultdict(list)), defaultdict(lambda: defaultdict(list))
+        for row in ms['rows']:
+            saved = original[row['task_id']]
+            outcome = 'correct' if saved['score']['correct'] is True else 'wrong' if saved['score']['valid'] else 'invalid'
+            wid = saved['task']['world']
+            for c in row['cuts']:
+                if 'readout' not in c: continue
+                base = c['readout']['gold_pattern_log_odds']
+                strata[f"{outcome}/k{c['k']}" ][wid].append(base)
+                for ci, probe in c.get('readouts', {}).items():
+                    if ci != '0': sensitivity[f"cue{ci}/k{c['k']}" ][wid].append(probe['gold_pattern_log_odds']-base)
+        result['study_2a'] = dict(primary=result['longitudinal_primary_64_minus_0'],
+            coverage=result['readout_coverage'], checkpoint_means=result['readout_by_checkpoint'],
+            by_final_outcome_descriptive={name: clustered(values) for name, values in strata.items()},
+            cue_sensitivity={name: clustered(values) for name, values in sensitivity.items()},
+            cues=plan['config']['readout_cues'], interpretation='Answer preferences under a checkpoint readout')
+        sealed_write(out/'study-2a-summary.json', result['study_2a'])
+
     if (out/'interventions.json').exists():
         es = sealed_read(out/'edit-plan.json'); data = sealed_read(out/'interventions.json')
-        if data['edit_plan_hash'] != es['artifact_hash']: raise ValueError('Stale interventions')
+        if (data['edit_plan_hash'] != es['artifact_hash'] or
+                data['collection_hash'] != collection['artifact_hash'] or
+                es['collection_hash'] != collection['artifact_hash'] or
+                data['backend_hash'] != execution['backend_hash']):
+            raise ValueError('Stale interventions')
         byid = {r['task_id']: r for r in data['rows']}
         eligible_worlds = defaultdict(list)
         for case in es['cases']: eligible_worlds[tasks[case['task_id']]['world']].append(case['task_id'])
@@ -79,7 +117,16 @@ def analyze(output):
                 bounds.append([mean(lows), mean(highs)])
             comparisons[name] = dict(accuracy=clustered(values), readout=clustered(readouts),
                 eligible_worlds=len(eligible_worlds), full_plan_accuracy_bounds=[mean(b[i] for b in bounds) for i in (0,1)] if bounds else None)
-        result['interventions'] = dict(planned_cases=len(es['cases']), reviewed=es['reviewed'], excluded=es['excluded'],
+        result['interventions'] = dict(real_model_status=data['real_model_status'],
+            validated_same_response_interventions=bool(execution['mode'] == 'LIVE_LOCAL' and technical['passed']
+                and data['real_model_status'] == 'VALIDATED_FOR_RECORDED_CASES' and es['cases']
+                and set(byid) == {c['task_id'] for c in es['cases']}
+                and all(r.get('same_response_validated') and r.get('validation', {}).get('passed')
+                        and r.get('control_validation', {}).get('passed') for r in data['rows'])),
+            planned_cases=len(es['cases']), reviewed=es['reviewed'], excluded=es['excluded'],
             returned_cases=len(data['rows']), invalid_or_replay_failed=sum(not r.get('unchanged_replay_passed', False) for r in data['rows']), comparisons=comparisons)
+    if 'interventions' in result:
+        result['study_2b'] = result['interventions']
+        sealed_write(out/'study-2b-summary.json', result['study_2b'])
     sealed_write(out/'summary.json', result)
     return result

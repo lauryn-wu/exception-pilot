@@ -1,0 +1,152 @@
+{
+  "notice": "SYNTHETIC SOFTWARE PREVIEW ONLY. One illustrative case, not a cohort or model evidence. Character IDs are NOT model tokenization. Real validation PENDING.",
+  "protocol": "within-reasoning-continuation-v2",
+  "task_id": "selection-continuation-v2-011/v1/visible",
+  "original_prompt": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| GZMDZ9 | Built for desert heat | Automatic | Cloth | Four | Y | A |\n| GA8X6U | Used at an Arctic station | Manual | Cloth | Four | X | B |\n| GYB387 | Operates on polar ice | Automatic | Vinyl | Four | X | C |\n| GA86PJ | Operates in tropical forests | Manual | Vinyl | Two | Z | A |\n| GMK46S | Equipped with snow tracks | Manual | Cloth | Four | Z | B |\n| G7EU4A | Equipped for hot sand | Manual | Cloth | Two | Z | A |\n| GNKFHT | Designed for humid summers | Manual | Vinyl | Two | Y | A |\n| GCLQX9 | Built for subzero temperatures | Automatic | Vinyl | Four | Y | B |\n| G4BQGE | Designed for frozen terrain | Manual | Cloth | Two | Z | C |\n| GZXD9Z | Used at an equatorial station | Manual | Vinyl | Two | X | C |\n\nLicense plate: GZXD9Z\nWhich class, A, B, or C, does this vehicle belong to?\nThink step by step before answering. Write your reasoning, then put ANSWER: followed by A, B, or C alone on the final line.",
+  "original_mock_response": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \nANSWER: A",
+  "study_2a": [
+    {
+      "k": 0,
+      "assistant_prefix": "",
+      "probe_text_by_cue": {
+        "0": "\nANSWER:",
+        "1": "\nFinal answer:"
+      },
+      "candidate_texts": {
+        "A": " A\n",
+        "B": " B\n",
+        "C": " C\n"
+      },
+      "original_prompt_included": true,
+      "no_later_reasoning_in_context": true
+    },
+    {
+      "k": 32,
+      "assistant_prefix": "Its verified class is missing. C",
+      "probe_text_by_cue": {
+        "0": "Its verified class is missing. C\nANSWER:"
+      },
+      "candidate_texts": {
+        "A": " A\n",
+        "B": " B\n",
+        "C": " C\n"
+      },
+      "original_prompt_included": true,
+      "no_later_reasoning_in_context": true
+    },
+    {
+      "k": 64,
+      "assistant_prefix": "Its verified class is missing. Consider the table carefully. Con",
+      "probe_text_by_cue": {
+        "0": "Its verified class is missing. Consider the table carefully. Con\nANSWER:",
+        "1": "Its verified class is missing. Consider the table carefully. Con\nFinal answer:"
+      },
+      "candidate_texts": {
+        "A": " A\n",
+        "B": " B\n",
+        "C": " C\n"
+      },
+      "original_prompt_included": true,
+      "no_later_reasoning_in_context": true
+    },
+    {
+      "k": 128,
+      "assistant_prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Conside",
+      "probe_text_by_cue": {
+        "0": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Conside\nANSWER:"
+      },
+      "candidate_texts": {
+        "A": " A\n",
+        "B": " B\n",
+        "C": " C\n"
+      },
+      "original_prompt_included": true,
+      "no_later_reasoning_in_context": true
+    }
+  ],
+  "study_2b": {
+    "branch_k": 30,
+    "statement_span": [
+      0,
+      30
+    ],
+    "edit_span": [
+      0,
+      30
+    ],
+    "branches": {
+      "meaning_control": {
+        "original_prompt_included": true,
+        "assistant_prefix": "Its verified class is absent.",
+        "fresh_mock_suffix": "\nANSWER: A",
+        "changed_tokens_mock_only": {
+          "old_span": [
+            22,
+            29
+          ],
+          "new_span": [
+            22,
+            28
+          ],
+          "delta": -1
+        },
+        "no_answer_cue_in_generation_input": true
+      },
+      "unchanged": {
+        "original_prompt_included": true,
+        "assistant_prefix": "Its verified class is missing.",
+        "fresh_mock_suffix": " Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \nANSWER: A",
+        "changed_tokens_mock_only": {
+          "old_span": [
+            30,
+            30
+          ],
+          "new_span": [
+            30,
+            30
+          ],
+          "delta": 0
+        },
+        "no_answer_cue_in_generation_input": true
+      },
+      "availability_repair": {
+        "original_prompt_included": true,
+        "assistant_prefix": "Its verified class is recorded.",
+        "fresh_mock_suffix": "\nANSWER: A",
+        "changed_tokens_mock_only": {
+          "old_span": [
+            22,
+            29
+          ],
+          "new_span": [
+            22,
+            30
+          ],
+          "delta": 1
+        },
+        "no_answer_cue_in_generation_input": true
+      },
+      "value_repair": {
+        "original_prompt_included": true,
+        "assistant_prefix": "Its verified class is recorded as C.",
+        "fresh_mock_suffix": "\nANSWER: A",
+        "changed_tokens_mock_only": {
+          "old_span": [
+            22,
+            29
+          ],
+          "new_span": [
+            22,
+            35
+          ],
+          "delta": 6
+        },
+        "no_answer_cue_in_generation_input": true
+      }
+    }
+  },
+  "validation": {
+    "real_model_status": "PENDING",
+    "same_response_validated": false
+  }
+}

@@ -62,6 +62,11 @@ class LocalBackend:
                     add_generation_prompt=True, return_dict=False, **self.config['chat_template_kwargs'])
         if not isinstance(ids, list) or not ids or not all(type(i) is int for i in ids):
             raise ValueError('Unsupported template return type')
+        rendered = self.tokenizer.apply_chat_template([{'role': 'user', 'content': text}], tokenize=False,
+                    add_generation_prompt=True, **self.config['chat_template_kwargs'])
+        if text not in rendered:
+            raise ValueError('Cannot audit this template serialization; unsupported interface')
+        assert_plain_format(rendered.rsplit(text, 1)[-1])
         return ids
 
     def encode(self, text):
@@ -73,17 +78,32 @@ class LocalBackend:
     def tensor(self, ids):
         return self.torch.tensor([ids], dtype=self.torch.long, device=self.model.device)
 
-    def generate(self, ids, budget):
+    def generate(self, ids, budget, capture_at=()):
         if budget <= 0: raise ValueError('Positive remaining budget required')
-        with self.torch.inference_mode():
-            x = self.tensor(ids)
-            result = self.model.generate(input_ids=x, attention_mask=self.torch.ones_like(x),
-                      generation_config=self.generation, max_new_tokens=budget)
+        captured, step = {}, [0]
+        # Observe the raw next-token logits in the uninterrupted generation itself.
+        # A forward hook stores only requested steps; it does not alter any outputs.
+        def capture(module, args, outputs):
+            k = step[0]
+            if k in capture_at:
+                values = outputs.logits[0, -1].detach().float().cpu().tolist()
+                # Preserve invalid telemetry in strict JSON; validation rejects it.
+                captured[str(k)] = [v if math.isfinite(v) else str(v) for v in values]
+            step[0] += 1
+        handle = self.model.register_forward_hook(capture)
+        try:
+            with self.torch.inference_mode():
+                x = self.tensor(ids)
+                result = self.model.generate(input_ids=x, attention_mask=self.torch.ones_like(x),
+                          generation_config=self.generation, max_new_tokens=budget)
+        finally:
+            handle.remove()
+
         all_ids = result[0].tolist()
         if all_ids[:len(ids)] != ids: raise ValueError('Backend changed input prefix')
         suffix = all_ids[len(ids):]
         return dict(tokens=suffix, stopped=bool(suffix and suffix[-1] in self.eos_ids),
-                    text=self.decode(suffix), finish='eos' if suffix and suffix[-1] in self.eos_ids else 'length')
+                    text=self.decode(suffix), next_token_logits=captured, finish='eos' if suffix and suffix[-1] in self.eos_ids else 'length')
 
     def score(self, context, candidate):
         tokens = self.encode(candidate)
@@ -107,12 +127,13 @@ class MockBackend:
     def encode(self, text): return [ord(c) for c in text]
     def decode(self, tokens): return ''.join(chr(t) for t in tokens if t not in self.special_ids)
     def prompt(self, text): return self.encode(text) + [1000000]
-    def generate(self, ids, budget):
+    def generate(self, ids, budget, capture_at=()):
         body = ids[ids.index(1000000)+1:]
         source = self.encode(self.script) + [0]
         if source[:len(body)] == body: suffix = source[len(body):][:budget]
         else: suffix = (self.encode('\nANSWER: A') + [0])[:budget]
-        return dict(tokens=suffix, stopped=bool(suffix and suffix[-1] == 0), text=self.decode(suffix),
+        captured = {str(k): [0.0, -1.0, -2.0] for k in capture_at if k < len(suffix)}
+        return dict(tokens=suffix, stopped=bool(suffix and suffix[-1] == 0), text=self.decode(suffix), next_token_logits=captured,
                     finish='eos' if suffix and suffix[-1] == 0 else 'length')
     def score(self, context, candidate):
         tokens = self.encode(candidate)
@@ -120,12 +141,18 @@ class MockBackend:
         return dict(tokens=tokens, token_logprobs=lp, logprob=sum(lp))
 
 
-def readout(backend, input_ids, prefix_ids, gold, pattern):
-    cue = backend.encode('\nANSWER:')
-    if any(t in backend.special_ids for t in cue) or backend.decode(cue) != '\nANSWER:':
+def assert_plain_format(text):
+    if text.count('<think>') > text.count('</think>') or '<|channel|>analysis' in text or '[THINK]' in text:
+        raise ValueError('Open thinking/channel formatting is unsupported by this plain-visible interface')
+
+
+def readout(backend, input_ids, prefix_ids, gold, pattern, cue_text='\nANSWER:'):
+    assert_plain_format(backend.decode(prefix_ids))
+    cue = backend.encode(cue_text)
+    if any(t in backend.special_ids for t in cue) or backend.decode(cue) != cue_text:
         raise ValueError('Readout cue must round trip without special tokens')
     context = input_ids + prefix_ids + cue
-    if backend.decode(context) != backend.decode(input_ids + prefix_ids) + '\nANSWER:':
+    if backend.decode(context) != backend.decode(input_ids + prefix_ids) + cue_text:
         raise ValueError('Cue tokens do not preserve the intended concatenated text')
     for label in 'ABC':
         candidate = ' ' + label + '\n'
@@ -134,7 +161,7 @@ def readout(backend, input_ids, prefix_ids, gold, pattern):
     scores = {label: backend.score(context, ' ' + label + '\n') for label in 'ABC'}
     top = max(s['logprob'] for s in scores.values())
     z = top + math.log(sum(math.exp(s['logprob']-top) for s in scores.values()))
-    return dict(cue_ids=cue, context_hash=digest(context), scores=scores,
+    return dict(cue_text=cue_text, cue_ids=cue, candidate_texts={c: ' ' + c + '\n' for c in 'ABC'}, context_hash=digest(context), scores=scores,
                 normalized={c: math.exp(s['logprob']-z) for c, s in scores.items()},
                 candidate_log_mass=z, gold_pattern_log_odds=scores[gold]['logprob']-scores[pattern]['logprob'],
-                interpretation='CONDITIONAL_ON_PREFIX_AND_READOUT_CUE_NOT_HIDDEN_BELIEF')
+                interpretation='ANSWER_PREFERENCES_UNDER_A_CHECKPOINT_READOUT_NOT_INTERNAL_BELIEFS')
