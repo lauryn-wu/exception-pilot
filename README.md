@@ -64,6 +64,13 @@ so collection stopped before the intervention. The
 [copying experiment](results/explanation-001.zip) and
 [stopped replay run](results/missingness-001.zip) are both archived.
 
+The [column experiment](COLUMNS_PROTOCOL.md) varies which attributes appear in
+the table: plate and class only, Description added, the four other attributes
+added, or the full table. It crosses these versions with direct answers, reasoning,
+and class copying on all 24 explanation-study worlds (576 new calls). It is
+implemented and checked offline; no live results are included with this addition.
+The protocol has the run commands and describes the paired answer comparisons.
+
 ## Interpretation
 
 The model sometimes answered from the background pattern despite having the

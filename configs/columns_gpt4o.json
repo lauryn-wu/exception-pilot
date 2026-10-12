@@ -1,0 +1,9 @@
+{
+  "protocol": "verified-facts-columns-v1",
+  "model": "gpt-4o-2024-08-06",
+  "api_key_env": "OPENAI_API_KEY",
+  "temperature": 0,
+  "max_completion_tokens": 1000,
+  "max_total_attempts": 608,
+  "timeout_seconds": 120
+}
