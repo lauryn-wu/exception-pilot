@@ -113,6 +113,12 @@ def local_decision(summary):
         return "stop_tokens_account_live"
     if all(clear_harm(q + "_direct_minus_visible") for q in QUERIES):
         return "stop_query_form"
+    # Equal failure in both key arms must not count as retained record use.
+    # Full-plan accuracy bounds count missing/invalid responses as incorrect.
+    if any(summary["metrics"]["accuracy"][cell]["full_plan_bounds"][0]
+           < DECISION_RULE["minimum_accuracy_lower_bound"]
+           for cell in DECISION_RULE["competence_cells"]):
+        return "insufficient_record_competence"
     interaction = stats["interaction"]
     eligible = (stats["profile_direct_minus_visible"]["full_plan_bounds"][0] >= .30
                 and stats["key_direct_minus_visible"]["full_plan_bounds"][1] <= .10
@@ -134,7 +140,8 @@ def combine_decisions(first, second=None):
     if decisions == {"eligible_for_dose_review"}:
         return "proceed_to_dose"
     for decision in ("incomplete", "model_identity_failure", "output_manipulation_inconclusive",
-                     "insufficient_complete_worlds", "stop_tokens_account_live", "stop_query_form"):
+                     "insufficient_complete_worlds", "stop_tokens_account_live", "stop_query_form",
+                     "insufficient_record_competence"):
         if decision in decisions:
             return decision
     return "inconclusive"

@@ -6,7 +6,8 @@ values were read into reports or saved files. Run 2 is deferred for redesign.
 
 Completed checks:
 
-- `python3 -m unittest discover -s tests -v`: **393 tests passed**, including
+- Initial implementation, before the review amendment below:
+  `python3 -m unittest discover -s tests -v`: **393 tests passed**, including
   all existing tests and 24 new offline tests. Final full-suite duration: 87.750 s.
 - Mock end-to-end checks for both providers completed 288 tasks, resumed after
   12 calls, retained invalid responses, blocked config/source/mode changes and
@@ -19,7 +20,8 @@ Completed checks:
   attempts cannot be resampled. The cumulative 316-attempt cap is enforced.
 - Preparation ran with socket connections blocked and made zero network calls.
   Both prepared plans are byte-identical, with plan hash
-  `9b5eb991d39777590c2d3fca7cc22abf840c8ff130103d9bca139583b0528097`.
+  `110bbe5e3f1dd1cc1b5967c3c2cdd8e52a35c6f266fec6d2215107de019cd74a`
+  after the precollection review amendment below.
 - Exact world-000 prompts and all 288 requests per provider are committed under
   `previews/query-form-gpt4o/` and `previews/query-form-mistral/`. Run configurations
   are frozen separately from the model-independent plan.
@@ -37,3 +39,25 @@ Live collection must still be performed with the commands in
 remaining schedule, regardless of interim accuracy. `analyze --replication`
 recomputes both models before a combined decision can be written. No dose
 execution is implemented or authorized by a simulated result.
+
+## Precollection review amendment
+
+The original spending rule could pass with zero key accuracy when both key arms
+failed equally. The reviewed rule also requires full-plan accuracy lower bounds
+of at least 0.90 for profile/direct, key/direct and key/visible: at least 44/48
+correct in each cell. Invalid answers count conservatively as incorrect. Failure
+returns `insufficient_record_competence`, preventing a floor effect from being
+mistaken for preserved record use. Existing clear-harm stops retain precedence.
+
+All 18 query-form tests and all 8 rationale tests passed after the change. New
+regressions reproduce the zero-accuracy false approval and verify the 44/48
+threshold. Both provider previews were regenerated and revalidated offline with
+socket connections blocked. Prompts, models, tasks and provider settings are
+unchanged. Only the decision rule, documentation and resulting plan hashes changed.
+No live API calls were made. Use fresh run directories for this reviewed plan.
+
+The study is suitable as a bounded test of whether query form moderates harm from
+requesting written reasoning. A positive result does not identify an internal
+retrieval or task-recognition mechanism. The filler condition is an approximate
+content/length control. `stop_query_form` rejects the prespecified near-elimination
+criterion; it does not show that query form has no effect.

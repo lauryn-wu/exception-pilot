@@ -38,6 +38,11 @@ results do not establish general absence of reasoning harm.
    excerpts. Its provisional categories never enter the spending decision.
 4. The spending decision is explicit, requires replication and conservative
    full-plan bounds, and can be inconclusive. It does not execute another study.
+5. Precollection review added a competence requirement: full-plan accuracy lower
+   bounds must be at least 0.90 for profile/direct, key/direct and key/visible.
+   This requires at least 44/48 correct in each cell, counting invalid or missing
+   answers as incorrect. Otherwise equally poor key performance could pass the
+   no-additional-harm criterion through a floor effect. Prompts are unchanged.
 
 ## Design and exact prompts
 
@@ -157,6 +162,7 @@ There is no answer-selection or retry based on these controls.
 | Control adherence below threshold or fewer than 22 complete primary worlds | Inconclusive; no proceed |
 | Either query's filler-harm full-plan lower bound > 0.10 and descriptive CI lower endpoint > 0 | `stop_tokens_account_live` |
 | Both queries' visible-harm full-plan lower bounds > 0.10 and both CI lower endpoints > 0 | `stop_query_form` |
+| Profile/direct, key/direct or key/visible full-plan accuracy lower bound < 0.90 | `insufficient_record_competence`; no proceed |
 | Profile-harm full-plan lower bound ≥ 0.30; key-harm upper bound ≤ 0.10; interaction lower bound ≥ 0.20 and sign p < 0.05; both filler-harm upper bounds ≤ 0.10 | Local `eligible_for_dose_review` |
 | Other complete results | `inconclusive` |
 | Both distinct live models locally eligible, recomputed from journals with the same plan hash | `proceed_to_dose` |

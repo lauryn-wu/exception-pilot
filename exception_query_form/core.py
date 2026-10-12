@@ -73,13 +73,16 @@ DECISION_RULE = {
     "minimum_complete_worlds_primary": 22,
     "minimum_filler_exact_fraction": 0.95,
     "minimum_visible_pretext_fraction": 0.95,
+    "minimum_accuracy_lower_bound": 0.90,
+    "competence_cells": ["profile/direct", "key/direct", "key/visible"],
     "proceed": {"profile_harm_lower_bound": 0.30, "key_harm_upper_bound": 0.10,
                 "interaction_lower_bound": 0.20, "sign_p_less_than": 0.05,
                 "filler_harm_upper_bound_each_query": 0.10},
     "stop_filler": "Either filler harm full-plan lower bound > 0.10 and bootstrap lower endpoint > 0.",
     "stop_query": "Both visible harm full-plan lower bounds > 0.10 and both bootstrap lower endpoints > 0.",
     "precedence": ["incomplete", "model_identity_failure", "output_manipulation_inconclusive",
-                   "stop_tokens_account_live", "stop_query_form", "eligible_for_dose_review", "inconclusive"],
+                   "stop_tokens_account_live", "stop_query_form", "insufficient_record_competence",
+                   "eligible_for_dose_review", "inconclusive"],
     "cross_model": "Both complete live models must be eligible on the same design; otherwise no proceed_to_dose. Missing peer -> awaiting_replication. Mock -> simulated_only.",
 }
 ANALYSIS_PLAN = {

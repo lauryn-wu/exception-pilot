@@ -194,6 +194,37 @@ class QueryFormTests(unittest.TestCase):
                 r["filler_exact"] = False
         self.assertEqual(summarize(self.plan, self.cfg, {"mode": "live"}, broken)["decision"], "output_manipulation_inconclusive")
 
+    def test_key_floor_cannot_pass_as_retained_record_use(self):
+        rows = fixture(self.plan, self.cfg, live=True)
+        for row in rows:
+            if row["meta"]["query"] != "key":
+                continue
+            text = row["response"]["text"].rsplit("ANSWER: ", 1)[0] + "ANSWER: " + row["meta"]["pattern_label"]
+            response = provider.normalize(raw_response(text, self.cfg["model"]), self.cfg, "live")
+            row.update(response=response, **core.score_response(row["meta"], response))
+        result = summarize(self.plan, self.cfg, {"mode": "live"}, rows)
+        self.assertEqual(result["metrics"]["accuracy"]["key/visible"]["estimate"], 0)
+        self.assertEqual(result["metrics"]["record_sensitivity"]["key_direct_minus_visible"]["estimate"], 0)
+        self.assertEqual(result["decision"], "insufficient_record_competence")
+        peer = dict(result, model="mistral-small-2603")
+        self.assertEqual(combine_decisions(result, peer), "insufficient_record_competence")
+
+    def test_competence_threshold_requires_44_of_48_correct(self):
+        slots = [(world["id"], value) for world in self.plan["worlds"] for value in core.VALUES]
+        for errors, decision in ((4, "eligible_for_dose_review"), (5, "insufficient_record_competence")):
+            rows = fixture(self.plan, self.cfg, live=True)
+            affected = set(slots[:errors])
+            for row in rows:
+                if (row["meta"]["world_id"], row["meta"]["value"]) not in affected:
+                    continue
+                text = row["response"]["text"].rsplit("ANSWER: ", 1)[0] + "ANSWER: " + row["meta"]["pattern_label"]
+                response = provider.normalize(raw_response(text, self.cfg["model"]), self.cfg, "live")
+                row.update(response=response, **core.score_response(row["meta"], response))
+            result = summarize(self.plan, self.cfg, {"mode": "live"}, rows)
+            self.assertEqual(result["local_decision"], decision)
+            for cell in core.DECISION_RULE["competence_cells"]:
+                self.assertAlmostEqual(result["metrics"]["accuracy"][cell]["full_plan_bounds"][0], (48 - errors) / 48)
+
     def test_prepare_zero_network_cross_config_bytes_and_change_block(self):
         with tempfile.TemporaryDirectory() as directory, patch.object(provider, "credential", side_effect=AssertionError("prepare must not need key")):
             a, b = Path(directory) / "a", Path(directory) / "b"

@@ -1,6 +1,6 @@
 {
   "protocol_version": "verified-facts-query-form-v1",
-  "source_digest": "4b2b987146df8af914c4fdd7dc4a9d869653e0bb161eafd0e6eaf2ec59b33b0f",
+  "source_digest": "7fe2b75b4c5d5663616988b6aa6756256929378ca11796356cc65f814fd376f1",
   "design": {
     "seed": 2026101001,
     "n_worlds": 24,
@@ -6730,6 +6730,12 @@
       "minimum_complete_worlds_primary": 22,
       "minimum_filler_exact_fraction": 0.95,
       "minimum_visible_pretext_fraction": 0.95,
+      "minimum_accuracy_lower_bound": 0.9,
+      "competence_cells": [
+        "profile/direct",
+        "key/direct",
+        "key/visible"
+      ],
       "proceed": {
         "profile_harm_lower_bound": 0.3,
         "key_harm_upper_bound": 0.1,
@@ -6745,6 +6751,7 @@
         "output_manipulation_inconclusive",
         "stop_tokens_account_live",
         "stop_query_form",
+        "insufficient_record_competence",
         "eligible_for_dose_review",
         "inconclusive"
       ],
@@ -6753,5 +6760,5 @@
     "filler": "Same-response verbatim neutral-text generation; approximately length matched from historical traces. Input length and instruction semantics still differ.",
     "rationale_coding": "Provisional lexical evidence coding; no inference about hidden reasoning or retrieval; P5 never gates spending."
   },
-  "plan_hash": "9b5eb991d39777590c2d3fca7cc22abf840c8ff130103d9bca139583b0528097"
+  "plan_hash": "110bbe5e3f1dd1cc1b5967c3c2cdd8e52a35c6f266fec6d2215107de019cd74a"
 }
