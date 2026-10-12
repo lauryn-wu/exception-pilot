@@ -1,0 +1,4399 @@
+{
+  "source_protocol": "verified-facts-query-form-v1",
+  "source_plan_hash": "110bbe5e3f1dd1cc1b5967c3c2cdd8e52a35c6f266fec6d2215107de019cd74a",
+  "worlds_digest": "3eeaf3a09137f7faa60539f3b34c78916ea5f1cf068f2562df94720c644c74a4",
+  "worlds": [
+    {
+      "id": "qf-list-000",
+      "items": [
+        {
+          "id": "UBRD8C",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UL7RZM",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UVLNNP",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UHHZ4N",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UBUX9A",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UV4MU5",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UKZTG5",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U8JPYQ",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UHCVUS",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UV4BS7",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "B",
+          "B",
+          "B",
+          "A",
+          "B",
+          "A",
+          "B",
+          "A",
+          "A",
+          "A"
+        ],
+        "support": [
+          "B",
+          "A",
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "A",
+          "B",
+          "B"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "B",
+          "warm": "A"
+        },
+        "support": {
+          "cold": "A",
+          "warm": "B"
+        }
+      },
+      "target_indices": [
+        3,
+        6
+      ],
+      "support_exception_indices": [
+        0,
+        7
+      ],
+      "order": [
+        3,
+        8,
+        0,
+        1,
+        6,
+        7,
+        4,
+        5,
+        9,
+        2
+      ],
+      "target_index": 3,
+      "roles": {
+        "record_1": "C",
+        "record_2": "B",
+        "pattern": "A"
+      },
+      "record_labels": {
+        "record_1": [
+          "A",
+          "A",
+          "A",
+          "C",
+          "A",
+          "C",
+          "C",
+          "B",
+          "C",
+          "B"
+        ],
+        "record_2": [
+          "A",
+          "A",
+          "A",
+          "B",
+          "A",
+          "C",
+          "C",
+          "B",
+          "C",
+          "B"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-001",
+      "items": [
+        {
+          "id": "UA8Q73",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U5BKGJ",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UWN83S",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U3M3JW",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U7KS77",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "U4M7D4",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U35J8X",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UBYSZ6",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UUY4BK",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UAUWDJ",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A",
+          "B",
+          "A",
+          "A",
+          "A"
+        ],
+        "support": [
+          "A",
+          "A",
+          "A",
+          "A",
+          "B",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "B",
+          "warm": "A"
+        },
+        "support": {
+          "cold": "A",
+          "warm": "B"
+        }
+      },
+      "target_indices": [
+        0,
+        6
+      ],
+      "support_exception_indices": [
+        4,
+        5
+      ],
+      "order": [
+        6,
+        1,
+        4,
+        0,
+        2,
+        9,
+        5,
+        3,
+        7,
+        8
+      ],
+      "target_index": 6,
+      "roles": {
+        "record_1": "C",
+        "record_2": "A",
+        "pattern": "B"
+      },
+      "record_labels": {
+        "record_1": [
+          "A",
+          "A",
+          "C",
+          "C",
+          "A",
+          "B",
+          "C",
+          "B",
+          "B",
+          "B"
+        ],
+        "record_2": [
+          "A",
+          "A",
+          "C",
+          "C",
+          "A",
+          "B",
+          "A",
+          "B",
+          "B",
+          "B"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-002",
+      "items": [
+        {
+          "id": "UNJHCQ",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UMXA6U",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U9SPB6",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "URPNJR",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UB5YDF",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UPXJJ4",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UVU6XY",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UGYJUQ",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U89FG6",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U2GLED",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A"
+        ],
+        "support": [
+          "B",
+          "B",
+          "B",
+          "A",
+          "B",
+          "A",
+          "A",
+          "A",
+          "B",
+          "A"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "A",
+          "warm": "B"
+        },
+        "support": {
+          "cold": "B",
+          "warm": "A"
+        }
+      },
+      "target_indices": [
+        4,
+        9
+      ],
+      "support_exception_indices": [
+        3,
+        8
+      ],
+      "order": [
+        8,
+        2,
+        4,
+        6,
+        5,
+        7,
+        3,
+        9,
+        0,
+        1
+      ],
+      "target_index": 9,
+      "roles": {
+        "record_1": "A",
+        "record_2": "B",
+        "pattern": "C"
+      },
+      "record_labels": {
+        "record_1": [
+          "B",
+          "A",
+          "A",
+          "B",
+          "A",
+          "C",
+          "C",
+          "C",
+          "C",
+          "A"
+        ],
+        "record_2": [
+          "B",
+          "A",
+          "A",
+          "B",
+          "A",
+          "C",
+          "C",
+          "C",
+          "C",
+          "B"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-003",
+      "items": [
+        {
+          "id": "UASDWV",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UCVEWU",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UUT27N",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "URP9YW",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UDCYKU",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UPE98H",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "URYHT8",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UQJU4H",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UNVVCQ",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U3GT9K",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "A",
+          "A",
+          "B",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B"
+        ],
+        "support": [
+          "B",
+          "B",
+          "B",
+          "B",
+          "A",
+          "A",
+          "A",
+          "B",
+          "A",
+          "A"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "A",
+          "warm": "B"
+        },
+        "support": {
+          "cold": "B",
+          "warm": "A"
+        }
+      },
+      "target_indices": [
+        3,
+        5
+      ],
+      "support_exception_indices": [
+        4,
+        7
+      ],
+      "order": [
+        6,
+        4,
+        3,
+        9,
+        1,
+        7,
+        0,
+        8,
+        2,
+        5
+      ],
+      "target_index": 3,
+      "roles": {
+        "record_1": "A",
+        "record_2": "B",
+        "pattern": "C"
+      },
+      "record_labels": {
+        "record_1": [
+          "C",
+          "C",
+          "C",
+          "A",
+          "C",
+          "B",
+          "A",
+          "B",
+          "B",
+          "A"
+        ],
+        "record_2": [
+          "C",
+          "C",
+          "C",
+          "B",
+          "C",
+          "B",
+          "A",
+          "B",
+          "B",
+          "A"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-004",
+      "items": [
+        {
+          "id": "UQWCEY",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U3D3AH",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UB8Y9A",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UWAVQG",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UGUMTF",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UDRHAJ",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UZ24UL",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U2KNHK",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U6GFU7",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UTN5LN",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "B",
+          "B",
+          "B",
+          "A",
+          "B",
+          "A",
+          "A",
+          "A",
+          "B",
+          "A"
+        ],
+        "support": [
+          "B",
+          "A",
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "A",
+          "B",
+          "B"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "B",
+          "warm": "A"
+        },
+        "support": {
+          "cold": "A",
+          "warm": "B"
+        }
+      },
+      "target_indices": [
+        3,
+        8
+      ],
+      "support_exception_indices": [
+        0,
+        7
+      ],
+      "order": [
+        0,
+        3,
+        5,
+        8,
+        6,
+        4,
+        1,
+        7,
+        2,
+        9
+      ],
+      "target_index": 3,
+      "roles": {
+        "record_1": "A",
+        "record_2": "B",
+        "pattern": "C"
+      },
+      "record_labels": {
+        "record_1": [
+          "C",
+          "C",
+          "C",
+          "A",
+          "C",
+          "B",
+          "B",
+          "A",
+          "A",
+          "A"
+        ],
+        "record_2": [
+          "C",
+          "C",
+          "C",
+          "B",
+          "C",
+          "B",
+          "B",
+          "A",
+          "A",
+          "A"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-005",
+      "items": [
+        {
+          "id": "UPUWHW",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U4XGLV",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U48GBE",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "ULQMXW",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U8D678",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UKUT78",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UWBKPK",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UTSZYL",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UDGDQL",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UG2M8F",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "B",
+          "A",
+          "A",
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B"
+        ],
+        "support": [
+          "B",
+          "B",
+          "B",
+          "B",
+          "A",
+          "A",
+          "A",
+          "A",
+          "A",
+          "B"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "A",
+          "warm": "B"
+        },
+        "support": {
+          "cold": "B",
+          "warm": "A"
+        }
+      },
+      "target_indices": [
+        0,
+        5
+      ],
+      "support_exception_indices": [
+        4,
+        9
+      ],
+      "order": [
+        8,
+        7,
+        1,
+        9,
+        5,
+        6,
+        3,
+        4,
+        0,
+        2
+      ],
+      "target_index": 5,
+      "roles": {
+        "record_1": "C",
+        "record_2": "A",
+        "pattern": "B"
+      },
+      "record_labels": {
+        "record_1": [
+          "C",
+          "C",
+          "A",
+          "A",
+          "A",
+          "C",
+          "B",
+          "B",
+          "B",
+          "B"
+        ],
+        "record_2": [
+          "C",
+          "C",
+          "A",
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-006",
+      "items": [
+        {
+          "id": "UNSF7G",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UWXYN8",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UT42CM",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UHX6RA",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UBSV37",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UHCGTS",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UKB39J",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UQZ82Z",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UYARFF",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U4XVBQ",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A",
+          "A",
+          "B",
+          "A",
+          "A"
+        ],
+        "support": [
+          "A",
+          "A",
+          "B",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B",
+          "A",
+          "B"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "B",
+          "warm": "A"
+        },
+        "support": {
+          "cold": "A",
+          "warm": "B"
+        }
+      },
+      "target_indices": [
+        0,
+        7
+      ],
+      "support_exception_indices": [
+        2,
+        8
+      ],
+      "order": [
+        5,
+        8,
+        0,
+        3,
+        2,
+        7,
+        4,
+        6,
+        9,
+        1
+      ],
+      "target_index": 0,
+      "roles": {
+        "record_1": "C",
+        "record_2": "B",
+        "pattern": "A"
+      },
+      "record_labels": {
+        "record_1": [
+          "C",
+          "A",
+          "A",
+          "A",
+          "A",
+          "C",
+          "B",
+          "C",
+          "B",
+          "C"
+        ],
+        "record_2": [
+          "B",
+          "A",
+          "A",
+          "A",
+          "A",
+          "C",
+          "B",
+          "C",
+          "B",
+          "C"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-007",
+      "items": [
+        {
+          "id": "ULZEFH",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UDNVGU",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UGH99F",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UXWZLJ",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U2P5QW",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UTCL4R",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UDMR8S",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "U82MP6",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UVUL8Q",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "U7ES77",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A",
+          "A",
+          "B",
+          "A",
+          "A"
+        ],
+        "support": [
+          "A",
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "B",
+          "warm": "A"
+        },
+        "support": {
+          "cold": "A",
+          "warm": "B"
+        }
+      },
+      "target_indices": [
+        0,
+        7
+      ],
+      "support_exception_indices": [
+        4,
+        9
+      ],
+      "order": [
+        0,
+        2,
+        8,
+        3,
+        5,
+        9,
+        6,
+        1,
+        4,
+        7
+      ],
+      "target_index": 0,
+      "roles": {
+        "record_1": "B",
+        "record_2": "C",
+        "pattern": "A"
+      },
+      "record_labels": {
+        "record_1": [
+          "B",
+          "A",
+          "A",
+          "A",
+          "A",
+          "C",
+          "C",
+          "B",
+          "B",
+          "C"
+        ],
+        "record_2": [
+          "C",
+          "A",
+          "A",
+          "A",
+          "A",
+          "C",
+          "C",
+          "B",
+          "B",
+          "C"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-008",
+      "items": [
+        {
+          "id": "UKDCK3",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UYF6SQ",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U8RWES",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UTGDK9",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U5533V",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UMK3U4",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U6UTT7",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UZBHCS",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UZFR5P",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U2CH28",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A",
+          "A",
+          "A",
+          "A",
+          "B"
+        ],
+        "support": [
+          "A",
+          "A",
+          "A",
+          "B",
+          "A",
+          "B",
+          "A",
+          "B",
+          "B",
+          "B"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "B",
+          "warm": "A"
+        },
+        "support": {
+          "cold": "A",
+          "warm": "B"
+        }
+      },
+      "target_indices": [
+        0,
+        9
+      ],
+      "support_exception_indices": [
+        3,
+        6
+      ],
+      "order": [
+        2,
+        7,
+        3,
+        1,
+        9,
+        6,
+        8,
+        0,
+        5,
+        4
+      ],
+      "target_index": 0,
+      "roles": {
+        "record_1": "B",
+        "record_2": "A",
+        "pattern": "C"
+      },
+      "record_labels": {
+        "record_1": [
+          "B",
+          "C",
+          "C",
+          "C",
+          "C",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B"
+        ],
+        "record_2": [
+          "A",
+          "C",
+          "C",
+          "C",
+          "C",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-009",
+      "items": [
+        {
+          "id": "UNKZ6N",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U2FKQN",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UVYYJY",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UBGTE2",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "USBH6H",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UJ7K6T",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UDQHDY",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UBGPCU",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UXV5ST",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UGMRZ9",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A",
+          "B",
+          "A",
+          "A",
+          "A"
+        ],
+        "support": [
+          "A",
+          "A",
+          "B",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B",
+          "A",
+          "B"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "B",
+          "warm": "A"
+        },
+        "support": {
+          "cold": "A",
+          "warm": "B"
+        }
+      },
+      "target_indices": [
+        0,
+        6
+      ],
+      "support_exception_indices": [
+        2,
+        8
+      ],
+      "order": [
+        8,
+        6,
+        4,
+        9,
+        3,
+        5,
+        7,
+        0,
+        1,
+        2
+      ],
+      "target_index": 0,
+      "roles": {
+        "record_1": "C",
+        "record_2": "A",
+        "pattern": "B"
+      },
+      "record_labels": {
+        "record_1": [
+          "C",
+          "B",
+          "B",
+          "B",
+          "B",
+          "C",
+          "A",
+          "A",
+          "C",
+          "A"
+        ],
+        "record_2": [
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "C",
+          "A",
+          "A",
+          "C",
+          "A"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-010",
+      "items": [
+        {
+          "id": "UGZ5TH",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "US74XM",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U4VDUQ",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "U2HNK9",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UCU2L3",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UU5PHC",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UA8YL4",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "USPK7D",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UJP9ME",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UATNYH",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "B",
+          "A",
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A"
+        ],
+        "support": [
+          "B",
+          "A",
+          "B",
+          "B",
+          "B",
+          "A",
+          "A",
+          "B",
+          "A",
+          "A"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "A",
+          "warm": "B"
+        },
+        "support": {
+          "cold": "B",
+          "warm": "A"
+        }
+      },
+      "target_indices": [
+        0,
+        9
+      ],
+      "support_exception_indices": [
+        1,
+        7
+      ],
+      "order": [
+        5,
+        3,
+        1,
+        2,
+        8,
+        6,
+        9,
+        0,
+        7,
+        4
+      ],
+      "target_index": 9,
+      "roles": {
+        "record_1": "C",
+        "record_2": "B",
+        "pattern": "A"
+      },
+      "record_labels": {
+        "record_1": [
+          "B",
+          "C",
+          "C",
+          "C",
+          "B",
+          "A",
+          "A",
+          "A",
+          "A",
+          "C"
+        ],
+        "record_2": [
+          "B",
+          "C",
+          "C",
+          "C",
+          "B",
+          "A",
+          "A",
+          "A",
+          "A",
+          "B"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-011",
+      "items": [
+        {
+          "id": "UFL525",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U9UVBY",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UZC4XT",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "U8A666",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UQQHGY",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U6KVT6",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UGT86F",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "U9Q4P5",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "USEGGT",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UJ8CM2",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "A",
+          "A",
+          "B",
+          "A",
+          "B",
+          "B",
+          "B",
+          "A",
+          "B"
+        ],
+        "support": [
+          "B",
+          "B",
+          "A",
+          "B",
+          "B",
+          "A",
+          "A",
+          "B",
+          "A",
+          "A"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "A",
+          "warm": "B"
+        },
+        "support": {
+          "cold": "B",
+          "warm": "A"
+        }
+      },
+      "target_indices": [
+        3,
+        8
+      ],
+      "support_exception_indices": [
+        2,
+        7
+      ],
+      "order": [
+        8,
+        5,
+        9,
+        6,
+        3,
+        4,
+        2,
+        7,
+        0,
+        1
+      ],
+      "target_index": 3,
+      "roles": {
+        "record_1": "A",
+        "record_2": "C",
+        "pattern": "B"
+      },
+      "record_labels": {
+        "record_1": [
+          "B",
+          "B",
+          "B",
+          "A",
+          "B",
+          "C",
+          "C",
+          "A",
+          "A",
+          "C"
+        ],
+        "record_2": [
+          "B",
+          "B",
+          "B",
+          "C",
+          "B",
+          "C",
+          "C",
+          "A",
+          "A",
+          "C"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-012",
+      "items": [
+        {
+          "id": "U8CR8S",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "U93EC4",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "URVMSA",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UHYTD7",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UXB3XJ",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UMCANP",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UVENAK",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U2NX8Q",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UD4WAK",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UQ5ZBF",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "B",
+          "B",
+          "B",
+          "B",
+          "A",
+          "A",
+          "A",
+          "A",
+          "A",
+          "B"
+        ],
+        "support": [
+          "B",
+          "A",
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B",
+          "A",
+          "B"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "B",
+          "warm": "A"
+        },
+        "support": {
+          "cold": "A",
+          "warm": "B"
+        }
+      },
+      "target_indices": [
+        4,
+        9
+      ],
+      "support_exception_indices": [
+        0,
+        8
+      ],
+      "order": [
+        2,
+        3,
+        8,
+        0,
+        6,
+        7,
+        1,
+        5,
+        4,
+        9
+      ],
+      "target_index": 9,
+      "roles": {
+        "record_1": "B",
+        "record_2": "A",
+        "pattern": "C"
+      },
+      "record_labels": {
+        "record_1": [
+          "A",
+          "B",
+          "A",
+          "B",
+          "B",
+          "C",
+          "C",
+          "C",
+          "C",
+          "B"
+        ],
+        "record_2": [
+          "A",
+          "B",
+          "A",
+          "B",
+          "B",
+          "C",
+          "C",
+          "C",
+          "C",
+          "A"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-013",
+      "items": [
+        {
+          "id": "URFTB4",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UUWPV6",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U8CEJ3",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UK7BPH",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UYLW97",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "USPR3G",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UTKZDV",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UHRRT6",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UK6LHF",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UR73CW",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "A",
+          "A",
+          "B",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A"
+        ],
+        "support": [
+          "B",
+          "B",
+          "A",
+          "B",
+          "B",
+          "A",
+          "B",
+          "A",
+          "A",
+          "A"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "A",
+          "warm": "B"
+        },
+        "support": {
+          "cold": "B",
+          "warm": "A"
+        }
+      },
+      "target_indices": [
+        3,
+        9
+      ],
+      "support_exception_indices": [
+        2,
+        6
+      ],
+      "order": [
+        3,
+        4,
+        7,
+        2,
+        0,
+        1,
+        8,
+        9,
+        5,
+        6
+      ],
+      "target_index": 3,
+      "roles": {
+        "record_1": "A",
+        "record_2": "C",
+        "pattern": "B"
+      },
+      "record_labels": {
+        "record_1": [
+          "B",
+          "B",
+          "B",
+          "A",
+          "B",
+          "C",
+          "C",
+          "A",
+          "A",
+          "C"
+        ],
+        "record_2": [
+          "B",
+          "B",
+          "B",
+          "C",
+          "B",
+          "C",
+          "C",
+          "A",
+          "A",
+          "C"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-014",
+      "items": [
+        {
+          "id": "URD2R7",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UFC4LD",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UTWE5Y",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UWBAHS",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UBX2WV",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "ULSMKS",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UTLYHH",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UDL93C",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "U4S6AH",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UUF55A",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "A",
+          "A",
+          "B",
+          "A",
+          "B",
+          "A",
+          "B",
+          "B",
+          "B"
+        ],
+        "support": [
+          "B",
+          "A",
+          "B",
+          "B",
+          "B",
+          "A",
+          "A",
+          "A",
+          "A",
+          "B"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "A",
+          "warm": "B"
+        },
+        "support": {
+          "cold": "B",
+          "warm": "A"
+        }
+      },
+      "target_indices": [
+        3,
+        6
+      ],
+      "support_exception_indices": [
+        1,
+        9
+      ],
+      "order": [
+        6,
+        9,
+        8,
+        4,
+        0,
+        2,
+        5,
+        7,
+        3,
+        1
+      ],
+      "target_index": 6,
+      "roles": {
+        "record_1": "B",
+        "record_2": "A",
+        "pattern": "C"
+      },
+      "record_labels": {
+        "record_1": [
+          "A",
+          "B",
+          "B",
+          "B",
+          "A",
+          "C",
+          "B",
+          "C",
+          "C",
+          "C"
+        ],
+        "record_2": [
+          "A",
+          "B",
+          "B",
+          "B",
+          "A",
+          "C",
+          "A",
+          "C",
+          "C",
+          "C"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-015",
+      "items": [
+        {
+          "id": "U5D33P",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UG8PEK",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UGUX9G",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U8N58C",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UCGNMV",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UPKLMU",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UA2B8J",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UAYCB7",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UDLU25",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UJ4XHS",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "B",
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "A",
+          "B",
+          "B"
+        ],
+        "support": [
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A",
+          "B",
+          "A",
+          "A",
+          "A"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "A",
+          "warm": "B"
+        },
+        "support": {
+          "cold": "B",
+          "warm": "A"
+        }
+      },
+      "target_indices": [
+        1,
+        7
+      ],
+      "support_exception_indices": [
+        0,
+        6
+      ],
+      "order": [
+        9,
+        2,
+        8,
+        4,
+        5,
+        6,
+        7,
+        0,
+        1,
+        3
+      ],
+      "target_index": 1,
+      "roles": {
+        "record_1": "B",
+        "record_2": "C",
+        "pattern": "A"
+      },
+      "record_labels": {
+        "record_1": [
+          "A",
+          "B",
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "C",
+          "C",
+          "C"
+        ],
+        "record_2": [
+          "A",
+          "C",
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "C",
+          "C",
+          "C"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-016",
+      "items": [
+        {
+          "id": "UCA5QX",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UW5D53",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UN8CGG",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UYD4VD",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UQZBRB",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U2LKTG",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "U7H7WJ",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UY2HTS",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "ULEQNE",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "U9PKCQ",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "B",
+          "A",
+          "B",
+          "B",
+          "B",
+          "A",
+          "B",
+          "A",
+          "A",
+          "A"
+        ],
+        "support": [
+          "B",
+          "A",
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "B",
+          "warm": "A"
+        },
+        "support": {
+          "cold": "A",
+          "warm": "B"
+        }
+      },
+      "target_indices": [
+        1,
+        6
+      ],
+      "support_exception_indices": [
+        0,
+        9
+      ],
+      "order": [
+        0,
+        2,
+        9,
+        1,
+        7,
+        3,
+        5,
+        4,
+        6,
+        8
+      ],
+      "target_index": 6,
+      "roles": {
+        "record_1": "A",
+        "record_2": "C",
+        "pattern": "B"
+      },
+      "record_labels": {
+        "record_1": [
+          "A",
+          "C",
+          "A",
+          "A",
+          "C",
+          "B",
+          "A",
+          "B",
+          "B",
+          "B"
+        ],
+        "record_2": [
+          "A",
+          "C",
+          "A",
+          "A",
+          "C",
+          "B",
+          "C",
+          "B",
+          "B",
+          "B"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-017",
+      "items": [
+        {
+          "id": "URUSEJ",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UZZG4M",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U4BQKP",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "U3PP3Y",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UQVFZ2",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UMZJXD",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UGY4LE",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UAJVY9",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UC9J3J",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UJLUX2",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "B",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A",
+          "A",
+          "A",
+          "A"
+        ],
+        "support": [
+          "A",
+          "A",
+          "A",
+          "B",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "B",
+          "warm": "A"
+        },
+        "support": {
+          "cold": "A",
+          "warm": "B"
+        }
+      },
+      "target_indices": [
+        1,
+        5
+      ],
+      "support_exception_indices": [
+        3,
+        9
+      ],
+      "order": [
+        8,
+        7,
+        9,
+        0,
+        3,
+        4,
+        1,
+        6,
+        5,
+        2
+      ],
+      "target_index": 5,
+      "roles": {
+        "record_1": "C",
+        "record_2": "B",
+        "pattern": "A"
+      },
+      "record_labels": {
+        "record_1": [
+          "B",
+          "C",
+          "B",
+          "C",
+          "B",
+          "C",
+          "A",
+          "A",
+          "A",
+          "A"
+        ],
+        "record_2": [
+          "B",
+          "C",
+          "B",
+          "C",
+          "B",
+          "B",
+          "A",
+          "A",
+          "A",
+          "A"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-018",
+      "items": [
+        {
+          "id": "UCCFQ4",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UH6XYS",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UBAYHN",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UAMRE5",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UZ5SNN",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UK7MCU",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UYMKPD",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U63HDU",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UL4CZL",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UZ4LHW",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "A",
+          "A",
+          "B",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A"
+        ],
+        "support": [
+          "B",
+          "B",
+          "B",
+          "B",
+          "A",
+          "A",
+          "A",
+          "B",
+          "A",
+          "A"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "A",
+          "warm": "B"
+        },
+        "support": {
+          "cold": "B",
+          "warm": "A"
+        }
+      },
+      "target_indices": [
+        3,
+        9
+      ],
+      "support_exception_indices": [
+        4,
+        7
+      ],
+      "order": [
+        5,
+        0,
+        1,
+        4,
+        2,
+        6,
+        9,
+        8,
+        3,
+        7
+      ],
+      "target_index": 3,
+      "roles": {
+        "record_1": "C",
+        "record_2": "A",
+        "pattern": "B"
+      },
+      "record_labels": {
+        "record_1": [
+          "B",
+          "B",
+          "B",
+          "C",
+          "B",
+          "C",
+          "C",
+          "A",
+          "A",
+          "C"
+        ],
+        "record_2": [
+          "B",
+          "B",
+          "B",
+          "A",
+          "B",
+          "C",
+          "C",
+          "A",
+          "A",
+          "C"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-019",
+      "items": [
+        {
+          "id": "U36XU5",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U44WR2",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U2JPWC",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UHV2NF",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UD3XR4",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UADXA7",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UW9EXE",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UP9RHV",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UU8BUE",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UPH44X",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "A",
+          "A",
+          "B",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B"
+        ],
+        "support": [
+          "B",
+          "A",
+          "B",
+          "B",
+          "B",
+          "A",
+          "B",
+          "A",
+          "A",
+          "A"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "A",
+          "warm": "B"
+        },
+        "support": {
+          "cold": "B",
+          "warm": "A"
+        }
+      },
+      "target_indices": [
+        3,
+        5
+      ],
+      "support_exception_indices": [
+        1,
+        6
+      ],
+      "order": [
+        3,
+        6,
+        4,
+        1,
+        2,
+        0,
+        5,
+        7,
+        8,
+        9
+      ],
+      "target_index": 5,
+      "roles": {
+        "record_1": "A",
+        "record_2": "C",
+        "pattern": "B"
+      },
+      "record_labels": {
+        "record_1": [
+          "A",
+          "A",
+          "C",
+          "C",
+          "C",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B"
+        ],
+        "record_2": [
+          "A",
+          "A",
+          "C",
+          "C",
+          "C",
+          "C",
+          "B",
+          "B",
+          "B",
+          "B"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-020",
+      "items": [
+        {
+          "id": "U9S37J",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U34H74",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UYXF57",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UN7X9Y",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UCEA5E",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UBY48F",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "U3ME8A",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U9QAZG",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UE2UD3",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UBCAXJ",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "B",
+          "B",
+          "B",
+          "B",
+          "A",
+          "B",
+          "A",
+          "A",
+          "A",
+          "A"
+        ],
+        "support": [
+          "B",
+          "A",
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B",
+          "A",
+          "B"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "B",
+          "warm": "A"
+        },
+        "support": {
+          "cold": "A",
+          "warm": "B"
+        }
+      },
+      "target_indices": [
+        4,
+        5
+      ],
+      "support_exception_indices": [
+        0,
+        8
+      ],
+      "order": [
+        8,
+        9,
+        7,
+        5,
+        1,
+        3,
+        4,
+        6,
+        0,
+        2
+      ],
+      "target_index": 5,
+      "roles": {
+        "record_1": "A",
+        "record_2": "B",
+        "pattern": "C"
+      },
+      "record_labels": {
+        "record_1": [
+          "A",
+          "B",
+          "B",
+          "A",
+          "A",
+          "A",
+          "C",
+          "C",
+          "C",
+          "C"
+        ],
+        "record_2": [
+          "A",
+          "B",
+          "B",
+          "A",
+          "A",
+          "B",
+          "C",
+          "C",
+          "C",
+          "C"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-021",
+      "items": [
+        {
+          "id": "UDNKGU",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U7D67K",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UFACU8",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UZ428D",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UBTVRB",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UYRX7M",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "X"
+        },
+        {
+          "id": "U26FZ2",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "URG7XX",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UQBJQ3",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UBZANB",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "B",
+          "A",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A"
+        ],
+        "support": [
+          "B",
+          "B",
+          "A",
+          "B",
+          "B",
+          "A",
+          "A",
+          "B",
+          "A",
+          "A"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "A",
+          "warm": "B"
+        },
+        "support": {
+          "cold": "B",
+          "warm": "A"
+        }
+      },
+      "target_indices": [
+        1,
+        9
+      ],
+      "support_exception_indices": [
+        2,
+        7
+      ],
+      "order": [
+        3,
+        5,
+        8,
+        0,
+        6,
+        4,
+        2,
+        7,
+        9,
+        1
+      ],
+      "target_index": 1,
+      "roles": {
+        "record_1": "B",
+        "record_2": "A",
+        "pattern": "C"
+      },
+      "record_labels": {
+        "record_1": [
+          "C",
+          "B",
+          "C",
+          "C",
+          "C",
+          "B",
+          "A",
+          "B",
+          "A",
+          "A"
+        ],
+        "record_2": [
+          "C",
+          "A",
+          "C",
+          "C",
+          "C",
+          "B",
+          "A",
+          "B",
+          "A",
+          "A"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-022",
+      "items": [
+        {
+          "id": "UA3ZDP",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UZP9NJ",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UKMZGL",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "U6753N",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UGE9C7",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UCFJSR",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UMXX6T",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "U6XF8R",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UW7LLE",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UZ5STS",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Automatic",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A",
+          "A",
+          "A",
+          "B",
+          "A"
+        ],
+        "support": [
+          "A",
+          "A",
+          "B",
+          "A",
+          "A",
+          "B",
+          "B",
+          "A",
+          "B",
+          "B"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "B",
+          "warm": "A"
+        },
+        "support": {
+          "cold": "A",
+          "warm": "B"
+        }
+      },
+      "target_indices": [
+        0,
+        8
+      ],
+      "support_exception_indices": [
+        2,
+        7
+      ],
+      "order": [
+        7,
+        9,
+        3,
+        1,
+        4,
+        0,
+        5,
+        6,
+        8,
+        2
+      ],
+      "target_index": 8,
+      "roles": {
+        "record_1": "B",
+        "record_2": "C",
+        "pattern": "A"
+      },
+      "record_labels": {
+        "record_1": [
+          "B",
+          "C",
+          "B",
+          "C",
+          "B",
+          "A",
+          "A",
+          "A",
+          "B",
+          "A"
+        ],
+        "record_2": [
+          "B",
+          "C",
+          "B",
+          "C",
+          "B",
+          "A",
+          "A",
+          "A",
+          "C",
+          "A"
+        ]
+      }
+    },
+    {
+      "id": "qf-list-023",
+      "items": [
+        {
+          "id": "UB6H2X",
+          "descriptor": "Used at an Arctic station",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "U8H6BY",
+          "descriptor": "Operates on polar ice",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UJ5MZU",
+          "descriptor": "Built for subzero temperatures",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "U2MMFJ",
+          "descriptor": "Designed for frozen terrain",
+          "climate": "cold",
+          "transmission": "Automatic",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UQV98Y",
+          "descriptor": "Equipped with snow tracks",
+          "climate": "cold",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "UX6AJ6",
+          "descriptor": "Operates in tropical forests",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Two",
+          "audit_marker": "Z"
+        },
+        {
+          "id": "UWZFF7",
+          "descriptor": "Equipped for hot sand",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "USDSCV",
+          "descriptor": "Designed for humid summers",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        },
+        {
+          "id": "USM3XU",
+          "descriptor": "Used at an equatorial station",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Cloth",
+          "doors": "Four",
+          "audit_marker": "Y"
+        },
+        {
+          "id": "UYF6M2",
+          "descriptor": "Built for desert heat",
+          "climate": "warm",
+          "transmission": "Manual",
+          "seat_cover": "Vinyl",
+          "doors": "Two",
+          "audit_marker": "X"
+        }
+      ],
+      "labels": {
+        "conflict": [
+          "A",
+          "A",
+          "B",
+          "A",
+          "A",
+          "B",
+          "B",
+          "B",
+          "B",
+          "A"
+        ],
+        "support": [
+          "B",
+          "B",
+          "B",
+          "B",
+          "A",
+          "A",
+          "B",
+          "A",
+          "A",
+          "A"
+        ]
+      },
+      "majority_labels": {
+        "conflict": {
+          "cold": "A",
+          "warm": "B"
+        },
+        "support": {
+          "cold": "B",
+          "warm": "A"
+        }
+      },
+      "target_indices": [
+        2,
+        9
+      ],
+      "support_exception_indices": [
+        4,
+        6
+      ],
+      "order": [
+        8,
+        0,
+        3,
+        4,
+        7,
+        6,
+        5,
+        2,
+        9,
+        1
+      ],
+      "target_index": 9,
+      "roles": {
+        "record_1": "B",
+        "record_2": "C",
+        "pattern": "A"
+      },
+      "record_labels": {
+        "record_1": [
+          "B",
+          "B",
+          "C",
+          "C",
+          "C",
+          "A",
+          "A",
+          "A",
+          "A",
+          "B"
+        ],
+        "record_2": [
+          "B",
+          "B",
+          "C",
+          "C",
+          "C",
+          "A",
+          "A",
+          "A",
+          "A",
+          "C"
+        ]
+      }
+    }
+  ]
+}
