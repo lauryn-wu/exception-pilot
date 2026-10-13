@@ -1,0 +1,6370 @@
+{
+  "protocol_version": "verified-facts-row-position-v1",
+  "plan_hash": "ae4423a09d6d1652ba829f6fe9b5c3759320f2e942a5733e5c9c1dc271171ea0",
+  "config_hash": "1d051f2237c1cb2aa0a8fc13442c1f498545ad8f191d3a89982a03ba5e1a6a7c",
+  "model": "mistral-small-2603",
+  "provider": "mistral",
+  "mode": "live",
+  "is_simulated": false,
+  "evidence_label": "LIVE",
+  "attempts": 288,
+  "planned_calls": 288,
+  "returned_answers": 288,
+  "valid_answers": 288,
+  "invalid_answers": 0,
+  "transport_errors": 0,
+  "unresolved_attempts": 0,
+  "model_identity_failures": 0,
+  "analysis_status": "complete",
+  "controls": {
+    "1/direct": {
+      "position": 1,
+      "arm": "direct",
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 48,
+      "wrong": 0,
+      "pattern_choices": 0,
+      "other_wrong": 0,
+      "invalid": 0,
+      "unreturned": 0,
+      "accuracy_valid_only": 1.0,
+      "strict_answer_matches": 48,
+      "contract_met_count": 48,
+      "answer_only_count": 48,
+      "pre_answer_text_count": 0,
+      "answer_only_fraction": 1.0,
+      "pretext_fraction": 0.0,
+      "manipulation_adherence_fraction": 1.0,
+      "median_pre_answer_words": 0.0,
+      "median_completion_tokens": 6.0
+    },
+    "1/visible": {
+      "position": 1,
+      "arm": "visible",
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 47,
+      "wrong": 1,
+      "pattern_choices": 1,
+      "other_wrong": 0,
+      "invalid": 0,
+      "unreturned": 0,
+      "accuracy_valid_only": 0.9791666666666666,
+      "strict_answer_matches": 48,
+      "contract_met_count": 48,
+      "answer_only_count": 0,
+      "pre_answer_text_count": 48,
+      "answer_only_fraction": 0.0,
+      "pretext_fraction": 1.0,
+      "manipulation_adherence_fraction": 1.0,
+      "median_pre_answer_words": 94.5,
+      "median_completion_tokens": 144.5
+    },
+    "5/direct": {
+      "position": 5,
+      "arm": "direct",
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 47,
+      "wrong": 1,
+      "pattern_choices": 1,
+      "other_wrong": 0,
+      "invalid": 0,
+      "unreturned": 0,
+      "accuracy_valid_only": 0.9791666666666666,
+      "strict_answer_matches": 48,
+      "contract_met_count": 48,
+      "answer_only_count": 48,
+      "pre_answer_text_count": 0,
+      "answer_only_fraction": 1.0,
+      "pretext_fraction": 0.0,
+      "manipulation_adherence_fraction": 1.0,
+      "median_pre_answer_words": 0.0,
+      "median_completion_tokens": 6.0
+    },
+    "5/visible": {
+      "position": 5,
+      "arm": "visible",
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 40,
+      "wrong": 8,
+      "pattern_choices": 8,
+      "other_wrong": 0,
+      "invalid": 0,
+      "unreturned": 0,
+      "accuracy_valid_only": 0.8333333333333334,
+      "strict_answer_matches": 48,
+      "contract_met_count": 48,
+      "answer_only_count": 0,
+      "pre_answer_text_count": 48,
+      "answer_only_fraction": 0.0,
+      "pretext_fraction": 1.0,
+      "manipulation_adherence_fraction": 1.0,
+      "median_pre_answer_words": 179.5,
+      "median_completion_tokens": 286.0
+    },
+    "10/direct": {
+      "position": 10,
+      "arm": "direct",
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 48,
+      "wrong": 0,
+      "pattern_choices": 0,
+      "other_wrong": 0,
+      "invalid": 0,
+      "unreturned": 0,
+      "accuracy_valid_only": 1.0,
+      "strict_answer_matches": 48,
+      "contract_met_count": 48,
+      "answer_only_count": 48,
+      "pre_answer_text_count": 0,
+      "answer_only_fraction": 1.0,
+      "pretext_fraction": 0.0,
+      "manipulation_adherence_fraction": 1.0,
+      "median_pre_answer_words": 0.0,
+      "median_completion_tokens": 6.0
+    },
+    "10/visible": {
+      "position": 10,
+      "arm": "visible",
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 19,
+      "wrong": 29,
+      "pattern_choices": 26,
+      "other_wrong": 3,
+      "invalid": 0,
+      "unreturned": 0,
+      "accuracy_valid_only": 0.3958333333333333,
+      "strict_answer_matches": 46,
+      "contract_met_count": 46,
+      "answer_only_count": 0,
+      "pre_answer_text_count": 48,
+      "answer_only_fraction": 0.0,
+      "pretext_fraction": 1.0,
+      "manipulation_adherence_fraction": 1.0,
+      "median_pre_answer_words": 259.5,
+      "median_completion_tokens": 470.0
+    }
+  },
+  "metrics": {
+    "accuracy": {
+      "1/direct": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": true,
+        "sign_test": {
+          "p_two_sided": 1.1920928955078125e-07,
+          "positive": 24,
+          "negative": 0,
+          "ties": 0
+        },
+        "full_plan_bounds": [
+          1.0,
+          1.0
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      "1/visible": {
+        "estimate": 0.9791666666666666,
+        "ci95": [
+          0.9375,
+          1.0
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 1.1920928955078125e-07,
+          "positive": 24,
+          "negative": 0,
+          "ties": 0
+        },
+        "full_plan_bounds": [
+          0.9791666666666666,
+          0.9791666666666666
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      "5/direct": {
+        "estimate": 0.9791666666666666,
+        "ci95": [
+          0.9375,
+          1.0
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 1.1920928955078125e-07,
+          "positive": 24,
+          "negative": 0,
+          "ties": 0
+        },
+        "full_plan_bounds": [
+          0.9791666666666666,
+          0.9791666666666666
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      "5/visible": {
+        "estimate": 0.8333333333333334,
+        "ci95": [
+          0.7291666666666666,
+          0.9166666666666666
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 1.1920928955078125e-07,
+          "positive": 24,
+          "negative": 0,
+          "ties": 0
+        },
+        "full_plan_bounds": [
+          0.8333333333333334,
+          0.8333333333333334
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          }
+        ]
+      },
+      "10/direct": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": true,
+        "sign_test": {
+          "p_two_sided": 1.1920928955078125e-07,
+          "positive": 24,
+          "negative": 0,
+          "ties": 0
+        },
+        "full_plan_bounds": [
+          1.0,
+          1.0
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      "10/visible": {
+        "estimate": 0.3958333333333333,
+        "ci95": [
+          0.25,
+          0.5416666666666666
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 0.0001220703125,
+          "positive": 14,
+          "negative": 0,
+          "ties": 10
+        },
+        "full_plan_bounds": [
+          0.3958333333333333,
+          0.3958333333333333
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "1_direct_minus_visible": {
+        "estimate": 0.020833333333333332,
+        "ci95": [
+          0.0,
+          0.0625
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 1.0,
+          "positive": 1,
+          "negative": 0,
+          "ties": 23
+        },
+        "full_plan_bounds": [
+          0.020833333333333332,
+          0.020833333333333332
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "5_direct_minus_visible": {
+        "estimate": 0.14583333333333334,
+        "ci95": [
+          0.0625,
+          0.25
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 0.015625,
+          "positive": 7,
+          "negative": 0,
+          "ties": 17
+        },
+        "full_plan_bounds": [
+          0.14583333333333334,
+          0.14583333333333334
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          }
+        ]
+      },
+      "10_direct_minus_visible": {
+        "estimate": 0.6041666666666666,
+        "ci95": [
+          0.4583333333333333,
+          0.75
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 3.814697265625e-06,
+          "positive": 19,
+          "negative": 0,
+          "ties": 5
+        },
+        "full_plan_bounds": [
+          0.6041666666666666,
+          0.6041666666666666
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      "direct_last_minus_first": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": true,
+        "sign_test": {
+          "p_two_sided": 1.0,
+          "positive": 0,
+          "negative": 0,
+          "ties": 24
+        },
+        "full_plan_bounds": [
+          0.0,
+          0.0
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "visible_last_minus_first": {
+        "estimate": -0.5833333333333334,
+        "ci95": [
+          -0.7291666666666666,
+          -0.4375
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 3.814697265625e-06,
+          "positive": 0,
+          "negative": 19,
+          "ties": 5
+        },
+        "full_plan_bounds": [
+          -0.5833333333333334,
+          -0.5833333333333334
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          }
+        ]
+      },
+      "middle_harm_minus_endpoint_average": {
+        "estimate": -0.16666666666666666,
+        "ci95": [
+          -0.28125,
+          -0.052083333333333336
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 0.007537841796875,
+          "positive": 3,
+          "negative": 15,
+          "ties": 6
+        },
+        "full_plan_bounds": [
+          -0.16666666666666666,
+          -0.16666666666666666
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "interaction": {
+        "estimate": 0.5833333333333334,
+        "ci95": [
+          0.4375,
+          0.7291666666666666
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 3.814697265625e-06,
+          "positive": 19,
+          "negative": 0,
+          "ties": 5
+        },
+        "full_plan_bounds": [
+          0.5833333333333334,
+          0.5833333333333334
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      }
+    },
+    "record_sensitivity": {
+      "1/direct": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": true,
+        "sign_test": {
+          "p_two_sided": 1.1920928955078125e-07,
+          "positive": 24,
+          "negative": 0,
+          "ties": 0
+        },
+        "full_plan_bounds": [
+          1.0,
+          1.0
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      "1/visible": {
+        "estimate": 0.9791666666666666,
+        "ci95": [
+          0.9375,
+          1.0
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 1.1920928955078125e-07,
+          "positive": 24,
+          "negative": 0,
+          "ties": 0
+        },
+        "full_plan_bounds": [
+          0.9791666666666666,
+          0.9791666666666666
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      "5/direct": {
+        "estimate": 0.9791666666666666,
+        "ci95": [
+          0.9375,
+          1.0
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 1.1920928955078125e-07,
+          "positive": 24,
+          "negative": 0,
+          "ties": 0
+        },
+        "full_plan_bounds": [
+          0.9791666666666666,
+          0.9791666666666666
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      "5/visible": {
+        "estimate": 0.8333333333333334,
+        "ci95": [
+          0.7291666666666666,
+          0.9166666666666666
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 1.1920928955078125e-07,
+          "positive": 24,
+          "negative": 0,
+          "ties": 0
+        },
+        "full_plan_bounds": [
+          0.8333333333333334,
+          0.8333333333333334
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          }
+        ]
+      },
+      "10/direct": {
+        "estimate": 1.0,
+        "ci95": [
+          1.0,
+          1.0
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": true,
+        "sign_test": {
+          "p_two_sided": 1.1920928955078125e-07,
+          "positive": 24,
+          "negative": 0,
+          "ties": 0
+        },
+        "full_plan_bounds": [
+          1.0,
+          1.0
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      "10/visible": {
+        "estimate": 0.3333333333333333,
+        "ci95": [
+          0.14583333333333334,
+          0.5
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 0.00738525390625,
+          "positive": 13,
+          "negative": 2,
+          "ties": 9
+        },
+        "full_plan_bounds": [
+          0.3333333333333333,
+          0.3333333333333333
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "1_direct_minus_visible": {
+        "estimate": 0.020833333333333332,
+        "ci95": [
+          0.0,
+          0.0625
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 1.0,
+          "positive": 1,
+          "negative": 0,
+          "ties": 23
+        },
+        "full_plan_bounds": [
+          0.020833333333333332,
+          0.020833333333333332
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "5_direct_minus_visible": {
+        "estimate": 0.14583333333333334,
+        "ci95": [
+          0.0625,
+          0.25
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 0.015625,
+          "positive": 7,
+          "negative": 0,
+          "ties": 17
+        },
+        "full_plan_bounds": [
+          0.14583333333333334,
+          0.14583333333333334
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          }
+        ]
+      },
+      "10_direct_minus_visible": {
+        "estimate": 0.6666666666666666,
+        "ci95": [
+          0.5,
+          0.8541666666666666
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 3.814697265625e-06,
+          "positive": 19,
+          "negative": 0,
+          "ties": 5
+        },
+        "full_plan_bounds": [
+          0.6666666666666666,
+          0.6666666666666666
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 1.5,
+            "bounds": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 1.5,
+            "bounds": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      },
+      "direct_last_minus_first": {
+        "estimate": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": true,
+        "sign_test": {
+          "p_two_sided": 1.0,
+          "positive": 0,
+          "negative": 0,
+          "ties": 24
+        },
+        "full_plan_bounds": [
+          0.0,
+          0.0
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "visible_last_minus_first": {
+        "estimate": -0.6458333333333334,
+        "ci95": [
+          -0.8125,
+          -0.4791666666666667
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 3.814697265625e-06,
+          "positive": 0,
+          "negative": 19,
+          "ties": 5
+        },
+        "full_plan_bounds": [
+          -0.6458333333333334,
+          -0.6458333333333334
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": -1.5,
+            "bounds": [
+              -1.5,
+              -1.5
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": -1.5,
+            "bounds": [
+              -1.5,
+              -1.5
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": -1.0,
+            "bounds": [
+              -1.0,
+              -1.0
+            ]
+          }
+        ]
+      },
+      "middle_harm_minus_endpoint_average": {
+        "estimate": -0.19791666666666666,
+        "ci95": [
+          -0.3229166666666667,
+          -0.0625
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 0.007537841796875,
+          "positive": 3,
+          "negative": 15,
+          "ties": 6
+        },
+        "full_plan_bounds": [
+          -0.19791666666666666,
+          -0.19791666666666666
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.25,
+            "bounds": [
+              0.25,
+              0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": -0.5,
+            "bounds": [
+              -0.5,
+              -0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": -0.75,
+            "bounds": [
+              -0.75,
+              -0.75
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": -0.25,
+            "bounds": [
+              -0.25,
+              -0.25
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": -0.75,
+            "bounds": [
+              -0.75,
+              -0.75
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          }
+        ]
+      },
+      "interaction": {
+        "estimate": 0.6458333333333334,
+        "ci95": [
+          0.4791666666666667,
+          0.8125
+        ],
+        "complete_worlds": 24,
+        "bootstrap_degenerate": false,
+        "sign_test": {
+          "p_two_sided": 3.814697265625e-06,
+          "positive": 19,
+          "negative": 0,
+          "ties": 5
+        },
+        "full_plan_bounds": [
+          0.6458333333333334,
+          0.6458333333333334
+        ],
+        "worlds": [
+          {
+            "world_id": "qf-list-000",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-001",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-002",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-003",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-004",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-005",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-006",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-007",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-008",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-009",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-010",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-011",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-012",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          },
+          {
+            "world_id": "qf-list-013",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-014",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-015",
+            "complete": true,
+            "value": 1.5,
+            "bounds": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "world_id": "qf-list-016",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-017",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-018",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-019",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-020",
+            "complete": true,
+            "value": 0.0,
+            "bounds": [
+              0.0,
+              0.0
+            ]
+          },
+          {
+            "world_id": "qf-list-021",
+            "complete": true,
+            "value": 0.5,
+            "bounds": [
+              0.5,
+              0.5
+            ]
+          },
+          {
+            "world_id": "qf-list-022",
+            "complete": true,
+            "value": 1.5,
+            "bounds": [
+              1.5,
+              1.5
+            ]
+          },
+          {
+            "world_id": "qf-list-023",
+            "complete": true,
+            "value": 1.0,
+            "bounds": [
+              1.0,
+              1.0
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "analysis_plan": {
+    "primary": "accuracy/interaction",
+    "interaction": "(direct - visible) at row 10 minus (direct - visible) at row 1",
+    "secondary": "Row 5 harm minus average endpoint harm; each position's reasoning harm; direct and visible first/last shifts; pattern-label choices; and record sensitivity.",
+    "unit": "One source world; average its two record-label variants, then pair positions and arms within that world.",
+    "primary_complete_world": "All eight first/last responses valid; middle-row availability does not change the primary complete-world set.",
+    "bootstrap_resamples": 10000,
+    "bootstrap_seed": 981723,
+    "intervals": "Descriptive, unadjusted 95% percentile intervals from whole-world resampling; degenerate intervals do not prove equivalence.",
+    "sign_test": "Exact two-sided sign test with ties reported; tests sign balance, not the mean interaction.",
+    "bounds": "All 24 planned worlds; every missing/invalid accuracy ranges independently over 0..1, retaining each contrast coefficient's sign. Sensitivity ranges over -1..1.",
+    "evidence": "Development follow-up on all 24 previously observed worlds, selected before this study without filtering their outcomes. No old model answers are imported.",
+    "hypothesis": "Last-row placement increases direct-minus-visible accuracy harm. A substantial reverse interaction is reported and also eligible for confirmation review.",
+    "decision_rule": {
+      "purpose": "Fixed development-study spending rule, not a mechanism, significance or equivalence claim.",
+      "meaningful_effect": 0.2,
+      "minimum_complete_worlds_primary": 22,
+      "minimum_output_adherence": 0.95,
+      "collection": "All 288 planned responses must return before a scientific spending recommendation; no outcome-selected extension.",
+      "confirmation": "Absolute first/last interaction at least 0.20, 95% interval excluding zero, and full-plan bounds beyond the same 0.20 threshold in that direction. A constant large effect can merit confirmation review, but its degenerate bootstrap interval cannot establish precision.",
+      "deprioritize": "The interval and full-plan bounds both lie strictly inside (-0.20,0.20), with a nondegenerate bootstrap interval; not an equivalence test.",
+      "otherwise": "Inconclusive, including degenerate small/null effects; no automatic follow-up calls.",
+      "adherence": "Each position/arm: at least 95% of planned responses have answer-only output for direct, nonempty pre-answer text for visible. Cosmetic terminal formatting is reported separately."
+    }
+  },
+  "decision_rule": {
+    "purpose": "Fixed development-study spending rule, not a mechanism, significance or equivalence claim.",
+    "meaningful_effect": 0.2,
+    "minimum_complete_worlds_primary": 22,
+    "minimum_output_adherence": 0.95,
+    "collection": "All 288 planned responses must return before a scientific spending recommendation; no outcome-selected extension.",
+    "confirmation": "Absolute first/last interaction at least 0.20, 95% interval excluding zero, and full-plan bounds beyond the same 0.20 threshold in that direction. A constant large effect can merit confirmation review, but its degenerate bootstrap interval cannot establish precision.",
+    "deprioritize": "The interval and full-plan bounds both lie strictly inside (-0.20,0.20), with a nondegenerate bootstrap interval; not an equivalence test.",
+    "otherwise": "Inconclusive, including degenerate small/null effects; no automatic follow-up calls.",
+    "adherence": "Each position/arm: at least 95% of planned responses have answer-only output for direct, nonempty pre-answer text for visible. Cosmetic terminal formatting is reported separately."
+  },
+  "decision": "review_fresh_world_confirmation",
+  "primary_direction": "last_more_harm",
+  "primary_uncertainty_envelope": [
+    0.4375,
+    0.7291666666666666
+  ],
+  "primary_bootstrap_warning": null
+}

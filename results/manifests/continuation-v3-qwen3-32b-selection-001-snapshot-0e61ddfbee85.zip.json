@@ -1,0 +1,29 @@
+{
+  "archive": "results/archives/continuation-v3-qwen3-32b-selection-001-snapshot-0e61ddfbee85.zip",
+  "members": {
+    "runs/continuation-v3-qwen3-32b-selection-001/plan.json": {
+      "sha256": "12c0346a1618349477704139216426b905297453e86e157740b6ce3ab78a4f72",
+      "bytes": 119434
+    },
+    "runs/continuation-v3-qwen3-32b-selection-001/preview.json": {
+      "sha256": "6964fd9e6fb177a5ac142d6c0d75519aa3dc16ff27fc66d81d4e284d3831b578",
+      "bytes": 73975
+    },
+    "runs/continuation-v3-qwen3-32b-selection-001/preview.md": {
+      "sha256": "d7e96ef19129a46a44405acfee9df99ce41004a224f9c5f2dadd58926419e1f2",
+      "bytes": 5805
+    },
+    "runs/continuation-v3-qwen3-32b-selection-001/selection-summary.json": {
+      "sha256": "753ff0dde320a3c7f87a7ab9ae59e771eae86b5ab3a04fa871616172b42541fa",
+      "bytes": 2983
+    },
+    "runs/continuation-v3-qwen3-32b-selection-001/selection-summary.md": {
+      "sha256": "222c2303f7bd20c1410a3dda1e8855d248cc527479d4ccb38198ec2720da8828",
+      "bytes": 1069
+    },
+    "runs/continuation-v3-qwen3-32b-selection-001/validation-status.json": {
+      "sha256": "cacc42bdf64015af0866c702a81533eefaa0df933c3fa6c97a947fe76e33bb1d",
+      "bytes": 259
+    }
+  }
+}

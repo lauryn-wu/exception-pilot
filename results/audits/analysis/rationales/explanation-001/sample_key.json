@@ -1,0 +1,142 @@
+[
+  {
+    "sample": 1,
+    "task_id": "ex-list-009/record_1/cot",
+    "answer": "B",
+    "expected": "B",
+    "automatic_class": "stated_and_followed"
+  },
+  {
+    "sample": 2,
+    "task_id": "ex-list-001/record_1/cot",
+    "answer": "C",
+    "expected": "C",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 3,
+    "task_id": "ex-list-014/record_2/cot",
+    "answer": "B",
+    "expected": "C",
+    "automatic_class": "relabeled_missing"
+  },
+  {
+    "sample": 4,
+    "task_id": "ex-list-010/record_2/cot",
+    "answer": "A",
+    "expected": "B",
+    "automatic_class": "relabeled_missing"
+  },
+  {
+    "sample": 5,
+    "task_id": "ex-list-021/record_2/cot",
+    "answer": "A",
+    "expected": "A",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 6,
+    "task_id": "ex-list-000/record_2/cot",
+    "answer": "C",
+    "expected": "C",
+    "automatic_class": "relabeled_missing"
+  },
+  {
+    "sample": 7,
+    "task_id": "ex-list-016/record_1/cot",
+    "answer": "C",
+    "expected": "C",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 8,
+    "task_id": "ex-list-007/record_2/cot",
+    "answer": "A",
+    "expected": "A",
+    "automatic_class": "stated_and_followed"
+  },
+  {
+    "sample": 9,
+    "task_id": "ex-list-010/record_1/cot",
+    "answer": "A",
+    "expected": "A",
+    "automatic_class": "relabeled_missing"
+  },
+  {
+    "sample": 10,
+    "task_id": "ex-list-009/record_2/cot",
+    "answer": "A",
+    "expected": "A",
+    "automatic_class": "stated_and_followed"
+  },
+  {
+    "sample": 11,
+    "task_id": "ex-list-015/record_1/cot",
+    "answer": "A",
+    "expected": "A",
+    "automatic_class": "stated_and_followed"
+  },
+  {
+    "sample": 12,
+    "task_id": "ex-list-004/record_1/cot",
+    "answer": "C",
+    "expected": "A",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 13,
+    "task_id": "ex-list-006/record_1/cot",
+    "answer": "C",
+    "expected": "B",
+    "automatic_class": "stated_then_overridden"
+  },
+  {
+    "sample": 14,
+    "task_id": "ex-list-020/record_2/cot",
+    "answer": "B",
+    "expected": "C",
+    "automatic_class": "relabeled_missing"
+  },
+  {
+    "sample": 15,
+    "task_id": "ex-list-008/record_2/cot",
+    "answer": "C",
+    "expected": "A",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 16,
+    "task_id": "ex-list-014/record_1/cot",
+    "answer": "B",
+    "expected": "B",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 17,
+    "task_id": "ex-list-018/record_2/cot",
+    "answer": "A",
+    "expected": "A",
+    "automatic_class": "stated_and_followed"
+  },
+  {
+    "sample": 18,
+    "task_id": "ex-list-020/record_1/cot",
+    "answer": "B",
+    "expected": "A",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 19,
+    "task_id": "ex-list-022/record_1/cot",
+    "answer": "C",
+    "expected": "C",
+    "automatic_class": "never_stated"
+  },
+  {
+    "sample": 20,
+    "task_id": "ex-list-017/record_2/cot",
+    "answer": "C",
+    "expected": "C",
+    "automatic_class": "stated_and_followed"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "protocol": "verified-facts-columns-v1",
+  "plan_hash": "123cb38bc7000b1d78bcb0fc267b546d47f985259615fc547da715d43f043135",
+  "source_digest": "28f53ba03987723b3d9f41b91bd820c9c3f2ee913c9ab2deb17270c002d05e6d",
+  "source_plan_hash": "81d29ff260b9b06999bd26f5cbea5611d3b5a9e507af31692b6ce0bff33c2a5a",
+  "source_world_snapshot_hash": "a40ba696bfde0d863692f1f4ec53ca247aaf9378e76b16116a802256e69831c7",
+  "base_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e",
+  "live_calls": 0,
+  "offline_tests_passed": 27,
+  "simulated_returned": 576,
+  "simulated_valid": 576,
+  "summary_reproduced_exactly_from_journal": true,
+  "response_rows": 576,
+  "column_transition_rows": 432,
+  "record_pair_rows": 288,
+  "existing_source_files_changed": [],
+  "existing_documentation_files_changed": [
+    "README.md"
+  ],
+  "preview_json_sha256": "2162811105f4b162d3069b7ec864df8d5fc3896234ba796d042f4c93fdd4d0d5"
+}

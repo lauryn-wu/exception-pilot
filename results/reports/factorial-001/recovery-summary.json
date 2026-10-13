@@ -1,0 +1,75 @@
+{
+  "amendment": "factorial-format-continuation-v1",
+  "plan_hash": "997d8af356c344da0664f3ffbd374a878ee02daa11fc744b2c26cf90abad0cbd",
+  "mode": "live",
+  "is_simulated": false,
+  "planned_calls": 640,
+  "returned_answers": 640,
+  "valid_answers": 639,
+  "invalid_answers": 1,
+  "unattempted_or_unresolved_tasks": 0,
+  "all_planned_tasks_returned": true,
+  "strict_paired_lists": 19,
+  "strict_analysis_status": "technical_failure",
+  "retained_invalid": [
+    {
+      "task_id": "fx-list-018/9/conflict/original/absent/cot_neutral",
+      "attempt": 596,
+      "final_line": "Therefore, based on the description and the pattern observed, the vehicle with license plate FYXZL5 belongs to class B.",
+      "complete_but_unparseable": true
+    }
+  ],
+  "sensitivity": {
+    "description": "Full-plan point-estimate bounds across every 0/1 assignment to invalid answers. These are sensitivity bounds, not scored answers or confidence intervals.",
+    "invalid_answers_varied": 1,
+    "independent_lists": 20,
+    "bounds": {
+      "extra_penalty/original/absent": [
+        0.525,
+        0.55
+      ],
+      "extra_penalty/original/present": [
+        0.5,
+        0.5
+      ],
+      "extra_penalty/recorded/absent": [
+        0.0,
+        0.0
+      ],
+      "extra_penalty/recorded/present": [
+        0.17499999999999993,
+        0.17499999999999993
+      ],
+      "question_by_uncertainty_interaction": [
+        -0.22499999999999998,
+        -0.19999999999999996
+      ],
+      "uncertainty_effect/original": [
+        -0.050000000000000044,
+        -0.025000000000000022
+      ],
+      "uncertainty_effect/recorded": [
+        0.17499999999999993,
+        0.17499999999999993
+      ],
+      "question_effect/absent": [
+        0.525,
+        0.55
+      ],
+      "question_effect/present": [
+        0.32500000000000007,
+        0.32500000000000007
+      ],
+      "average_uncertainty_effect": [
+        0.062499999999999944,
+        0.07499999999999996
+      ],
+      "average_question_effect": [
+        0.42500000000000004,
+        0.43750000000000006
+      ]
+    }
+  },
+  "automatic_followup": false,
+  "interpretation": "The original strict analysis is unchanged. Returned invalid answers remain invalid and are never resampled. Continuation is a documented post-result amendment, not an unmodified completion of the original protocol."
+}

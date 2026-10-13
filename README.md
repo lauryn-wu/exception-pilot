@@ -1,5 +1,7 @@
 # Reasoning prompts and exception records
 
+**Results:** [complete index](results/README.md) · [branch/experiment status](results/BRANCH_STATUS.md) · [archive verification](results/VERIFY.md). All available local exports were consolidated on 2026-10-13, including completed, stopped and unstarted runs. Experimental code branches remain separate. The findings below summarize earlier GPT-4o comparisons; later GPT-4o and Mistral results are in the index.
+
 These experiments ask GPT-4o to answer questions about synthetic vehicle records.
 Under the original classification wording, asking for reasoning made the model
 more likely to follow the surrounding labels even when they conflicted with the
@@ -25,7 +27,7 @@ The first diagnostic used 20 independent lists and 160 requests. Each list had t
 Reasoning added a 60-percentage-point penalty from the conflicting background
 (descriptive 95% bootstrap interval: [47.5, 72.5] points). Eighteen lists had a
 positive interaction and two had zero. The bootstrap resamples whole lists.
-See the [report](results/summary-counterfactual-001.md) and
+See the [report](results/reports/counterfactual-001/summary.md) and
 [protocol](COUNTERFACTUAL_PROTOCOL.md).
 
 ## Changing the question
@@ -47,7 +49,7 @@ The recorded-class variant also removed an uncertainty sentence, so this
 comparison does not isolate the question text. A later factorial study
 separated these changes but retained one invalid response; its status is in the
 [results index](results/README.md). The
-[wording report](results/summary-wording-001.md) includes all six conditions and
+[wording report](results/reports/wording-001/summary.md) includes all six conditions and
 paired comparisons.
 
 ## Copying the class or a marker
@@ -61,8 +63,8 @@ answer.
 A subsequent diagnostic attempted to continue responses on selected cases. Only
 7/10 unchanged replays matched their original answers, below the required 8/10,
 so collection stopped before the intervention. The
-[copying experiment](results/explanation-001.zip) and
-[stopped replay run](results/missingness-001.zip) are both archived.
+[copying experiment](results/archives/explanation-001.zip) and
+[stopped replay run](results/archives/missingness-001.zip) are both archived.
 
 ## Interpretation
 
@@ -78,17 +80,17 @@ model produced, do not establish an internal mechanism or show that reasoning
 generally harms retrieval. Parser changes, invalid responses, and stopped runs
 are documented in the [results index](results/README.md). The
 [study guide](STUDY_GUIDE.md) retains the longer development history and
-instructions for later diagnostics, including work without a complete archive
-in this repository.
+historical instructions for later diagnostics. Current export coverage is listed
+in the results index.
 
 ## Inspect or reanalyze the archived results
 
-Start with the [results index](results/README.md). The two main reports are available as Markdown and JSON without downloading a ZIP; the archives contain the full requests and responses.
+Start with the [results index](results/README.md). Per-run reports are available as Markdown and JSON without downloading a ZIP; the archives contain the full requests and responses. Failed checks and duplicate-plan executions are explicitly labeled.
 
 Python 3.10+ and the standard library are sufficient. From the repository root, these commands reanalyze a working copy of the wording run without model API calls:
 
 ```bash
-python3 -m zipfile -e results/wording-001.zip runs/reproduce-wording
+python3 -m zipfile -e results/archives/wording-001.zip runs/reproduce-wording
 python3 -m exception_wording analyze \
   --output runs/reproduce-wording/runs/wording-001
 ```

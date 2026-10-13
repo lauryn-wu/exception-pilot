@@ -1,0 +1,2737 @@
+{
+  "archive": "results/archives/mistral-framing-001-results.zip",
+  "members": {
+    "runs/mistral-framing-001/summary.json": {
+      "sha256": "d3a791d4ae536b55c9a42282f00b2e8b7ba5f6e08a73d9a451931de3161a2695",
+      "bytes": 3283706
+    },
+    "runs/mistral-framing-001/run.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/mistral-framing-001/plan.json": {
+      "sha256": "36eda48cc288204cb2634e4f0814c862fcff78473cb54a285a509f797dd65187",
+      "bytes": 218847
+    },
+    "runs/mistral-framing-001/spontaneous-visible-traces.md": {
+      "sha256": "ba0b55c0f4554006e27e74fe9529f93763182eac67bd9f6e4d370bee951357b6",
+      "bytes": 72184
+    },
+    "runs/mistral-framing-001/report.md": {
+      "sha256": "4948551af1c168e9f4e1922fefc85a3fb172b6ba5f3e7fe7be6834186410e60b",
+      "bytes": 5532
+    },
+    "runs/mistral-framing-001/preview.md": {
+      "sha256": "82be4e7b39f69e3df1f0b2506c3cc0455abdd554c5f351fa17572dcc79c252de",
+      "bytes": 279396
+    },
+    "runs/mistral-framing-001/plan.sha256": {
+      "sha256": "d9014ed7c5c0efc3f9473dd1871dc55108de3aad47b6919b3e2283d2eca81450",
+      "bytes": 65
+    },
+    "runs/mistral-framing-001/attempts/000283.json": {
+      "sha256": "c7e0cd38a7e9a00bae326a4db7ad607f0fa34d0155b16905393da659d0218eab",
+      "bytes": 11586
+    },
+    "runs/mistral-framing-001/attempts/000329.json": {
+      "sha256": "567df9433aceca5d9528a6a678087a12306a310d504acf3af0d02713e33ce5b8",
+      "bytes": 12262
+    },
+    "runs/mistral-framing-001/attempts/000145.json": {
+      "sha256": "8dfba884f18e5863b3d637f07be44180691bc16815df6fd5e9613ae48a94e80a",
+      "bytes": 8237
+    },
+    "runs/mistral-framing-001/attempts/000515.json": {
+      "sha256": "1b3696c09c1ba93345f26212011a4cc1ff38e72b010a4492fdb833a15f2d7388",
+      "bytes": 15570
+    },
+    "runs/mistral-framing-001/attempts/000450.json": {
+      "sha256": "a5c844f5c5eef120de91167780e80d70dd8e8da225e5bd5f7f754c09976b6d88",
+      "bytes": 13447
+    },
+    "runs/mistral-framing-001/attempts/000391.json": {
+      "sha256": "5f80bfec0cfd87b2d25cf5b4990bfaeaf89812415e5347e9b89e116ee36793aa",
+      "bytes": 8747
+    },
+    "runs/mistral-framing-001/attempts/000542.json": {
+      "sha256": "b6bc217f8936890b2f1cc4c92a52b255da8dc64a043bc74bc0faf5ead0e94e6e",
+      "bytes": 8731
+    },
+    "runs/mistral-framing-001/attempts/000112.json": {
+      "sha256": "838368bd85ad7a4d5920ce7cee49e001c5611acd16cc2daf02eb8f49f32a1722",
+      "bytes": 7844
+    },
+    "runs/mistral-framing-001/attempts/000407.json": {
+      "sha256": "2f53032ab14bec05e830e1ba8eea5576fb5ab865f0bfca2e047310c0f37dcd43",
+      "bytes": 14152
+    },
+    "runs/mistral-framing-001/attempts/000057.json": {
+      "sha256": "9ef262a136de6b9c5c93ddc3181a224b1e7626fcb00e49bca796341dcd0a485e",
+      "bytes": 4471
+    },
+    "runs/mistral-framing-001/attempts/000368.json": {
+      "sha256": "233cea4581e9ae3073a18a013763b9d158902b98611b597c135d850ade0569a1",
+      "bytes": 11582
+    },
+    "runs/mistral-framing-001/attempts/000387.json": {
+      "sha256": "020fd2d962bf02f9c332ad220910ce309c7fe651df85e93db2bd8d1403940e5c",
+      "bytes": 8226
+    },
+    "runs/mistral-framing-001/attempts/000104.json": {
+      "sha256": "79af365c2f9078653f7b448333dda17962713d3da9b25c2c5d64ad8efb8667e0",
+      "bytes": 8493
+    },
+    "runs/mistral-framing-001/attempts/000554.json": {
+      "sha256": "30168b180c72b0eaded540c1a4018d65a836db9671f51ce4efb5fd0dce2357be",
+      "bytes": 7608
+    },
+    "runs/mistral-framing-001/attempts/000041.json": {
+      "sha256": "db3b08241491bce775360855cc8245010d33c56390536e82fce5af35b287b190",
+      "bytes": 7775
+    },
+    "runs/mistral-framing-001/attempts/000411.json": {
+      "sha256": "1b5c2f0314099adce4be0d6a4be4e70771d545819f188aee9132de362228cb46",
+      "bytes": 10679
+    },
+    "runs/mistral-framing-001/attempts/000295.json": {
+      "sha256": "56bae90cc0bc73ab2b9c102dd559cf27b3eacb9ce59c8b011dc79afba6fe39c3",
+      "bytes": 11460
+    },
+    "runs/mistral-framing-001/attempts/000503.json": {
+      "sha256": "fff53ee84cd1fa0082996e749e06f4d45e32bfafe251dfe7214bfd5cbf7a3335",
+      "bytes": 8582
+    },
+    "runs/mistral-framing-001/attempts/000153.json": {
+      "sha256": "ae6ca122945233c9266bd60a1f7200539556cf21339dc864f082b247cc4917eb",
+      "bytes": 10249
+    },
+    "runs/mistral-framing-001/attempts/000446.json": {
+      "sha256": "e789ace4c4101f5f82daf3fba39ab6a2494abde25e0234174cf25a2392045d87",
+      "bytes": 9057
+    },
+    "runs/mistral-framing-001/attempts/000016.json": {
+      "sha256": "e5abe582496aef033bec6c59c86b8e5edf0934a94e27d5ff4043d72053e0eb5c",
+      "bytes": 7133
+    },
+    "runs/mistral-framing-001/attempts/000201.json": {
+      "sha256": "965da14b99e7ab56cdba8a654fe82f5c4dc96398d0dfac9cef5da461d9cc59af",
+      "bytes": 8810
+    },
+    "runs/mistral-framing-001/attempts/000651.json": {
+      "sha256": "9cc91a3f13254c4b5a2518e6e0a6c790638d669dd4e60ecf9c20ddc2cc61969c",
+      "bytes": 13308
+    },
+    "runs/mistral-framing-001/attempts/000344.json": {
+      "sha256": "9cb449b61b0da95d151d7c0870df099f0e33a38b9419cdbfb275616255de2a52",
+      "bytes": 12449
+    },
+    "runs/mistral-framing-001/attempts/000597.json": {
+      "sha256": "7651531f954a5a94605aaaf0c96577c142fff301bb20cbbff8ecaa089f8db68c",
+      "bytes": 7703
+    },
+    "runs/mistral-framing-001/attempts/000082.json": {
+      "sha256": "7b50bd92f83fa7fc56937d6b7b340afe5c1e51541f192c247241d1b714c6be7e",
+      "bytes": 3764
+    },
+    "runs/mistral-framing-001/attempts/000578.json": {
+      "sha256": "e96349ff3b2235adc55aaa9887e41425f5eed9ef6ca771883ddb64c733c150c0",
+      "bytes": 10870
+    },
+    "runs/mistral-framing-001/attempts/000128.json": {
+      "sha256": "24b3a71bee109049fd5fefeb8f8e322e87d56f12bc2d87e3dea373c4165131f4",
+      "bytes": 10716
+    },
+    "runs/mistral-framing-001/attempts/000606.json": {
+      "sha256": "df02d3defee97c76956dc3a99dcb093ca99654e8fc5b8be23f44a98655958fab",
+      "bytes": 7680
+    },
+    "runs/mistral-framing-001/attempts/000256.json": {
+      "sha256": "e452766468cd39a5d90a9c796530451bc607a563dfb6d14e99e20a3208f19d93",
+      "bytes": 7946
+    },
+    "runs/mistral-framing-001/attempts/000313.json": {
+      "sha256": "d75a6eff2c5523965aa126532941af2fbe9bcf06c99f6d0ca817bcdaceff5212",
+      "bytes": 14143
+    },
+    "runs/mistral-framing-001/attempts/000190.json": {
+      "sha256": "99846fb7c4a387c83e5eb5cc259b0ba20238fa527135dee15ed66221f63ca291",
+      "bytes": 12397
+    },
+    "runs/mistral-framing-001/attempts/000485.json": {
+      "sha256": "c53f02e665a15ac10c7f3cad75f3904a32dd4fc70a67c751933dc2d8ea1dd4b9",
+      "bytes": 11119
+    },
+    "runs/mistral-framing-001/attempts/000240.json": {
+      "sha256": "41d3c48e936dd2e08647139b46760ee868370c041690939a3b2c5752ea3e501f",
+      "bytes": 15258
+    },
+    "runs/mistral-framing-001/attempts/000610.json": {
+      "sha256": "4287fc5541918ff64272a02774336d496803cb90e852b51ee3fcc6d878c4ec63",
+      "bytes": 8362
+    },
+    "runs/mistral-framing-001/attempts/000305.json": {
+      "sha256": "856aa60c84ae7bcc07616535e863c8f05fbca162cd39b69e1408fe5531d7e3de",
+      "bytes": 12400
+    },
+    "runs/mistral-framing-001/attempts/000186.json": {
+      "sha256": "9dfe21f246d1987190f5cc39b4c5362e8e09b3f1c49ccbe03bf07bdb48cc1432",
+      "bytes": 11284
+    },
+    "runs/mistral-framing-001/attempts/000539.json": {
+      "sha256": "923dea759cbe31baf18a5fb75f90f155eccc5169dc096c50811b593a742922f6",
+      "bytes": 9284
+    },
+    "runs/mistral-framing-001/attempts/000493.json": {
+      "sha256": "45c730363a6558785de0433f8f24a623ba12ce7492cd5746458d0e2dfbfa5163",
+      "bytes": 12158
+    },
+    "runs/mistral-framing-001/attempts/000169.json": {
+      "sha256": "cb9806ff8f8b1d3d1ed1e9653bafca225428a30e8b28522d08b1710735d15afe",
+      "bytes": 11117
+    },
+    "runs/mistral-framing-001/attempts/000647.json": {
+      "sha256": "c7e847f604be9fe7e54e74910791cd2a07ab84dee50c01f7f8084099e87c0d78",
+      "bytes": 10579
+    },
+    "runs/mistral-framing-001/attempts/000217.json": {
+      "sha256": "fb2d8aacb9324274cb659ae0358844d78169bd74456023dbb3ea109be58af040",
+      "bytes": 11551
+    },
+    "runs/mistral-framing-001/attempts/000352.json": {
+      "sha256": "0aab9bc10f9b32da9070974268549964735411647b23ffb4284cb16869c8a9ba",
+      "bytes": 11031
+    },
+    "runs/mistral-framing-001/attempts/000581.json": {
+      "sha256": "c006a79b606186dc18c2d0e63ba38fdf0efc167b0725106f9fb2e35e61563a7e",
+      "bytes": 7677
+    },
+    "runs/mistral-framing-001/attempts/000094.json": {
+      "sha256": "d016afeca2abe70ffe883328e0f11c387b1bbd6377439915cb4d9ccd1464ba40",
+      "bytes": 3764
+    },
+    "runs/mistral-framing-001/attempts/000519.json": {
+      "sha256": "97befd812d8d1a34ac45ca8c98f92264210c9371e4871835b309e56cfe8af668",
+      "bytes": 11775
+    },
+    "runs/mistral-framing-001/attempts/000149.json": {
+      "sha256": "3915e3993679327a39e18085cc881a8b42b40c01c7524db27a841f0143e7ed22",
+      "bytes": 7992
+    },
+    "runs/mistral-framing-001/attempts/000325.json": {
+      "sha256": "6b1219f47e6808bb1f419f8714a0fc0d309d009976d1e03dda888d5e282179ed",
+      "bytes": 9245
+    },
+    "runs/mistral-framing-001/attempts/000260.json": {
+      "sha256": "647774afdde54cd7ccd5f8ba1d3a3b1ac502a6c710cf68a1bb337ae147a53c76",
+      "bytes": 9955
+    },
+    "runs/mistral-framing-001/attempts/000630.json": {
+      "sha256": "9f2589e28b3d3166bf137cad585c18c66e900327f9ca1259179477b43e0b2ec3",
+      "bytes": 9613
+    },
+    "runs/mistral-framing-001/attempts/000372.json": {
+      "sha256": "10b613ac9c24a8ac206833e836bd8a6836afb3bba474baa5214f488c0ad17163",
+      "bytes": 11566
+    },
+    "runs/mistral-framing-001/attempts/000667.json": {
+      "sha256": "72fad4c7683c3c6efc6c5105f4792fc710ab94c442e656c6b1916d8f59b205cf",
+      "bytes": 10429
+    },
+    "runs/mistral-framing-001/attempts/000237.json": {
+      "sha256": "7819cb71e497163b55112d5c178cd761e6aa98f681886e91cd13d8f4c2f29542",
+      "bytes": 12286
+    },
+    "runs/mistral-framing-001/attempts/000558.json": {
+      "sha256": "86f85197e848d775e7e188e2c0f2fc9e6df1ba26bd99656883e99f34d15b6c69",
+      "bytes": 13800
+    },
+    "runs/mistral-framing-001/attempts/000108.json": {
+      "sha256": "ba26325c1f947de75ff83e9b824714c319dcd57557183976fc3b8711dad3f095",
+      "bytes": 11787
+    },
+    "runs/mistral-framing-001/attempts/000364.json": {
+      "sha256": "8233cc6bfccb862f5138129e44b6cc1ae5c302b4afa0452add829a0f8d4c258f",
+      "bytes": 9065
+    },
+    "runs/mistral-framing-001/attempts/000221.json": {
+      "sha256": "7bd810f2b4125de08a572f5010326e60602e68458f53f051e03624b6d418a8cc",
+      "bytes": 9032
+    },
+    "runs/mistral-framing-001/attempts/000671.json": {
+      "sha256": "dc2750e9e1dc21af243a13674ba84d8279604990deddea06b2af043061d1472e",
+      "bytes": 8282
+    },
+    "runs/mistral-framing-001/attempts/000299.json": {
+      "sha256": "8c0620452a220b0f1a631386daa1159a6187c31c1d5b72575e1f7352f1812b5c",
+      "bytes": 13238
+    },
+    "runs/mistral-framing-001/attempts/000333.json": {
+      "sha256": "91bb040992be599a0619dfe56fe3f04a873dcca640bd8b16becdb784d83222c3",
+      "bytes": 9367
+    },
+    "runs/mistral-framing-001/attempts/000626.json": {
+      "sha256": "4b8446af9621c41c5e1f097b629813d3736b58a5e09491bf7f1fcc114f8f6829",
+      "bytes": 14976
+    },
+    "runs/mistral-framing-001/attempts/000276.json": {
+      "sha256": "dc8ceb3690d4b6bc680b8350cb444f7366f885105204e0b43de8281c1d410e10",
+      "bytes": 7935
+    },
+    "runs/mistral-framing-001/attempts/000061.json": {
+      "sha256": "f5ca1a09c6dfbfc1a8afeeadb81a48f627d4f1b29670963a533b04d550c9e7f0",
+      "bytes": 3754
+    },
+    "runs/mistral-framing-001/attempts/000431.json": {
+      "sha256": "2e01ef9e06d0d74976d6d5bf97dad0ee657c927a7457cab0e058f32abcbbc679",
+      "bytes": 8123
+    },
+    "runs/mistral-framing-001/attempts/000124.json": {
+      "sha256": "32e44a162b6273310a937965429ea9128157afb673b64c23f5e345318e5ae97e",
+      "bytes": 12094
+    },
+    "runs/mistral-framing-001/attempts/000574.json": {
+      "sha256": "0756a215151589a7f05b1964aca669b2c50b5f8daad07291d2a00e832c46a439",
+      "bytes": 11525
+    },
+    "runs/mistral-framing-001/attempts/000348.json": {
+      "sha256": "0d32fedb41785a6a83006bb6f43f7465138ca09297c8a5bbdddb37246dbd1df5",
+      "bytes": 10766
+    },
+    "runs/mistral-framing-001/attempts/000466.json": {
+      "sha256": "05885fa6115d5ef783b2501e44abcb52821cd1042c29a1247e6b57ccc81de896",
+      "bytes": 7506
+    },
+    "runs/mistral-framing-001/attempts/000036.json": {
+      "sha256": "55549e60531268f02955607d56a166c12e6c61eeb1ecab6124ecf3ec3d06a2a3",
+      "bytes": 3756
+    },
+    "runs/mistral-framing-001/attempts/000523.json": {
+      "sha256": "c719d543f1282f3c35e2b9d18ff59076cef06d864f29a2f55d38adb7a136c432",
+      "bytes": 14015
+    },
+    "runs/mistral-framing-001/attempts/000489.json": {
+      "sha256": "cfd45914c3840931048b2c15dbc7a85d617f9aa8d08a0b579867c7177097ff62",
+      "bytes": 10006
+    },
+    "runs/mistral-framing-001/attempts/000173.json": {
+      "sha256": "6645c72746ff00483442484f074ecd99502d5433c31123f091b84de353b71216",
+      "bytes": 8702
+    },
+    "runs/mistral-framing-001/attempts/000020.json": {
+      "sha256": "ae9c7fa0de5a17ff17304af8c402b2b3e44ab4cbdcc2d64ce509f5ffd6954163",
+      "bytes": 8652
+    },
+    "runs/mistral-framing-001/attempts/000470.json": {
+      "sha256": "c9a1e0dce996276b8b66e35e4ebf562ba89a55263e03d9aa8e15be9bf8bf660b",
+      "bytes": 12872
+    },
+    "runs/mistral-framing-001/attempts/000165.json": {
+      "sha256": "185e04858fa9cdc563cfedba373c9bfbf336dd6a37a3a49217e094901e89708b",
+      "bytes": 9751
+    },
+    "runs/mistral-framing-001/attempts/000535.json": {
+      "sha256": "c4aaa13f3f96011b1da0245ddd3d678273ffbd09826621c280c8b955c4c34cc9",
+      "bytes": 10048
+    },
+    "runs/mistral-framing-001/attempts/000309.json": {
+      "sha256": "43c6374181bcbdefcddbba4b81f1ce8b83c236e7708d2952b420568151655725",
+      "bytes": 9892
+    },
+    "runs/mistral-framing-001/attempts/000427.json": {
+      "sha256": "2de316010695700dfe2c729fe4126e118223da03bdb0dffb1b0b4bb30fe1f8f5",
+      "bytes": 10705
+    },
+    "runs/mistral-framing-001/attempts/000077.json": {
+      "sha256": "d97ff5db0652f2d2bcf4685a85f480aa6f26c0587f6add162419b954257e810f",
+      "bytes": 8170
+    },
+    "runs/mistral-framing-001/attempts/000098.json": {
+      "sha256": "e7146631dd1784ff86b3ad7476e6d122f6b2aa3b03805f482a98a82f203bac21",
+      "bytes": 11142
+    },
+    "runs/mistral-framing-001/attempts/000562.json": {
+      "sha256": "2708d9a82416594d112effc27fcd13d06aa2ab796e0acdfd0b4e6a58ca76889b",
+      "bytes": 9460
+    },
+    "runs/mistral-framing-001/attempts/000132.json": {
+      "sha256": "89aae57e82e4f614cbc4a22ff62eb80635887d816e7c8533b9eec246068d30a3",
+      "bytes": 11188
+    },
+    "runs/mistral-framing-001/attempts/000426.json": {
+      "sha256": "eafdbc42ef5e41b40b1b0a61c943f30b729cfe34ae03774ccb17e04d5fdd39b3",
+      "bytes": 10623
+    },
+    "runs/mistral-framing-001/attempts/000076.json": {
+      "sha256": "00721675dd3767ccd74f646379e429f27bb05e73e70cac8be2ed6c5b9ba90f2a",
+      "bytes": 3763
+    },
+    "runs/mistral-framing-001/attempts/000099.json": {
+      "sha256": "75de7b8b09083b8eab6ad34242e814d31a7360364307d6fb02a2a0a7ccdaccb1",
+      "bytes": 7617
+    },
+    "runs/mistral-framing-001/attempts/000563.json": {
+      "sha256": "0013b343e37394665185434e6394353c19c2bc90add53611b21f3238368ef53e",
+      "bytes": 17082
+    },
+    "runs/mistral-framing-001/attempts/000133.json": {
+      "sha256": "0b6f0ac66d0573157c8b4317de554b4885608739dd3506a7783ce1769f4ff4a9",
+      "bytes": 13084
+    },
+    "runs/mistral-framing-001/attempts/000308.json": {
+      "sha256": "cc38534ebf12bcd94af5fe75e983ed2e3e33192086a563a9a57f714e6c3b076f",
+      "bytes": 10581
+    },
+    "runs/mistral-framing-001/attempts/000021.json": {
+      "sha256": "1755df00cfedceddf75b8a24514bf54ac7c37755006eed9ee9182ee7c29b7ae3",
+      "bytes": 3775
+    },
+    "runs/mistral-framing-001/attempts/000471.json": {
+      "sha256": "116cad0feadfc7bce7b3169eafc2be1099697dc3ff0b1356d6c0651c5b1c1e80",
+      "bytes": 8294
+    },
+    "runs/mistral-framing-001/attempts/000164.json": {
+      "sha256": "14b90e293d98b33b89bddf89fb146350f69943eadee0d73097ccd5b73454cd86",
+      "bytes": 14206
+    },
+    "runs/mistral-framing-001/attempts/000534.json": {
+      "sha256": "0c10851a1ad800fac8ba0b934dd380001d46facff362429d52e1bbe7e3185f97",
+      "bytes": 8399
+    },
+    "runs/mistral-framing-001/attempts/000467.json": {
+      "sha256": "673c172b1a2e573182d0338d22ef779d7964537ec51865d3ea03c994be0f9f84",
+      "bytes": 9761
+    },
+    "runs/mistral-framing-001/attempts/000037.json": {
+      "sha256": "eae9f7ed38be9905e6246bf8370d612eaae94dafaefb058eab5a2f1b9391a446",
+      "bytes": 7169
+    },
+    "runs/mistral-framing-001/attempts/000522.json": {
+      "sha256": "aabc57aee93d3f4bb7097756e7db9f2a3b005142a6dd41d9b08b017eacfeaaa8",
+      "bytes": 9588
+    },
+    "runs/mistral-framing-001/attempts/000488.json": {
+      "sha256": "d7c481a7fb700e97db8f66d1b387fd6723d08552255c7529a79e864628c9115e",
+      "bytes": 12678
+    },
+    "runs/mistral-framing-001/attempts/000172.json": {
+      "sha256": "e3825882de2849023e23ddd12e76c2623ae95df407471f97cc686d6f201c6b3d",
+      "bytes": 13514
+    },
+    "runs/mistral-framing-001/attempts/000349.json": {
+      "sha256": "785fb65a943bd9233eb7a944213738bab607181bf317a56fade8c9b404330e72",
+      "bytes": 10130
+    },
+    "runs/mistral-framing-001/attempts/000060.json": {
+      "sha256": "6a99403d96a454744623acf2b125839aab0e8725bc7c373bf376805886411eb9",
+      "bytes": 6571
+    },
+    "runs/mistral-framing-001/attempts/000430.json": {
+      "sha256": "df000867e0be2fde209cbb52ce6b2b826c9360b30faaaa1b10692d1a1948b077",
+      "bytes": 9573
+    },
+    "runs/mistral-framing-001/attempts/000125.json": {
+      "sha256": "d691592303ced5925146b11a983a2a8939caab4eb10292e3a26e3a805b1ea6fa",
+      "bytes": 11350
+    },
+    "runs/mistral-framing-001/attempts/000575.json": {
+      "sha256": "b89e734d9b342889b416243a4c06817a4e8188162b43400249fefc2013d17cc9",
+      "bytes": 8798
+    },
+    "runs/mistral-framing-001/attempts/000298.json": {
+      "sha256": "720c85cd493a8a582329d98818b4982877d1683b14ab164757033dcc70ed4353",
+      "bytes": 13545
+    },
+    "runs/mistral-framing-001/attempts/000332.json": {
+      "sha256": "3c725bb889e8903e17c00925be155fe774f015756216da47917c6a7e02c581fe",
+      "bytes": 9508
+    },
+    "runs/mistral-framing-001/attempts/000627.json": {
+      "sha256": "ca6b7ae4d0985b9981b115dcfbb8dd507e691172ae431270ae7ddf553d767ec2",
+      "bytes": 9510
+    },
+    "runs/mistral-framing-001/attempts/000277.json": {
+      "sha256": "1a398db265e3e0639bb8cacaea638ca18ce012ea8beb5499eb178966148966a4",
+      "bytes": 9682
+    },
+    "runs/mistral-framing-001/attempts/000365.json": {
+      "sha256": "370e2862bcdc70d9ed15619ff5cde92c731a446500272ee0119c4b9617aed415",
+      "bytes": 8648
+    },
+    "runs/mistral-framing-001/attempts/000220.json": {
+      "sha256": "4e28290915aa215efee60199e0c87454f5a1dee7004d366fafcf169077086be3",
+      "bytes": 13431
+    },
+    "runs/mistral-framing-001/attempts/000670.json": {
+      "sha256": "7bb4170ed14a5d3747fbfc9860b631fceda48f9aca5a18725c6b9059b2944231",
+      "bytes": 9370
+    },
+    "runs/mistral-framing-001/attempts/000559.json": {
+      "sha256": "ace7a9ef03db6239ec68445b87a03cc71880f1ab626c4811d2a4aed1763c6bdd",
+      "bytes": 8678
+    },
+    "runs/mistral-framing-001/attempts/000109.json": {
+      "sha256": "18d068295ba22e350103b5ef68dd16067a068c34839db68df8f0115053be05ef",
+      "bytes": 10246
+    },
+    "runs/mistral-framing-001/attempts/000373.json": {
+      "sha256": "d1c8863814ca06cda432c2f8915b27142594fab205ab03d440aad612ef4ea763",
+      "bytes": 13375
+    },
+    "runs/mistral-framing-001/attempts/000666.json": {
+      "sha256": "4ccc46c44c1d35d7059cc8a17c864f4834d23a230dea349cf2d5938abc1eed97",
+      "bytes": 9000
+    },
+    "runs/mistral-framing-001/attempts/000236.json": {
+      "sha256": "d60f8e0a3b6a1b0c425576655d1a0294a65475ab80417da0e19de55311bfd53c",
+      "bytes": 8900
+    },
+    "runs/mistral-framing-001/attempts/000324.json": {
+      "sha256": "cf80f4bfb7d44d4f16afe59d550473ef18a6511f28ae7309ede0951f31c606f8",
+      "bytes": 7448
+    },
+    "runs/mistral-framing-001/attempts/000261.json": {
+      "sha256": "17370fa13d154edb3944a6c3a50d9a05ca0cacb9ccde5c19dc54eb437ff554ec",
+      "bytes": 13038
+    },
+    "runs/mistral-framing-001/attempts/000631.json": {
+      "sha256": "a4a8e215ccebce2f9a4a3a931417d9ac2491a87b9f50f04a53f12500b3a59e37",
+      "bytes": 10130
+    },
+    "runs/mistral-framing-001/attempts/000518.json": {
+      "sha256": "b620508d32a4846941fd5fc68a87619781d2ff4dd0d8464d28b14077e0f5f42a",
+      "bytes": 11988
+    },
+    "runs/mistral-framing-001/attempts/000148.json": {
+      "sha256": "5b0a15b6634af13146fa0d5520c54c80c26028c093b1bb0e66fe7f664d64db50",
+      "bytes": 8973
+    },
+    "runs/mistral-framing-001/attempts/000580.json": {
+      "sha256": "d17c57606f27ad0e396e7dcc16b8b0b7981c369ef9930bbd6567f1e354caa9de",
+      "bytes": 11384
+    },
+    "runs/mistral-framing-001/attempts/000095.json": {
+      "sha256": "e784474e150969b188cc67191668014a7a72eac32e379409de9c6be5b6339363",
+      "bytes": 5517
+    },
+    "runs/mistral-framing-001/attempts/000646.json": {
+      "sha256": "93ce9f84b671b75d5e851272e82f485ce5e387be9d7ae83acdc3d52518e6e593",
+      "bytes": 11357
+    },
+    "runs/mistral-framing-001/attempts/000216.json": {
+      "sha256": "3132422edbb31d3ffba57dc89dc1fafcfa37f931cdf00195953e5eb82d8b511a",
+      "bytes": 12438
+    },
+    "runs/mistral-framing-001/attempts/000353.json": {
+      "sha256": "af213ce098eb92cb14e9ca762a6fabc08e9024546ce218bad67c104a957b6669",
+      "bytes": 19647
+    },
+    "runs/mistral-framing-001/attempts/000187.json": {
+      "sha256": "31835f653f7b723af439c9c33c5a717c23ff70b7d22dd87a50b4f37aa2472fbb",
+      "bytes": 10859
+    },
+    "runs/mistral-framing-001/attempts/000538.json": {
+      "sha256": "53c8ad99acfd4004f9a73139cbbf759c06c4d19ef10aed40fa12dcc81dec5ad2",
+      "bytes": 11296
+    },
+    "runs/mistral-framing-001/attempts/000492.json": {
+      "sha256": "2c34643e8243b022dd5624eab3daf3203b55c1f2284d6ec63709a2149a5ee2c8",
+      "bytes": 10459
+    },
+    "runs/mistral-framing-001/attempts/000168.json": {
+      "sha256": "09c0cb7266280493477f1447af139916b52144bfc1aa0428acae0bbda77fd3eb",
+      "bytes": 10692
+    },
+    "runs/mistral-framing-001/attempts/000241.json": {
+      "sha256": "f62455c76ab96f343e9a7c1ba15713f269ad9fc6d81ecdff7d18de0b1cccb6cc",
+      "bytes": 11097
+    },
+    "runs/mistral-framing-001/attempts/000611.json": {
+      "sha256": "15fe7f1c1a94473394fca4b97aba77d65d31e22e7acc8ead3b288545ac704007",
+      "bytes": 10000
+    },
+    "runs/mistral-framing-001/attempts/000304.json": {
+      "sha256": "b024a959e09d1491f0e8730c65daac9eb37ceefeb9b75b638aa7d3f80bb6c9ff",
+      "bytes": 11178
+    },
+    "runs/mistral-framing-001/attempts/000191.json": {
+      "sha256": "cbd30a5f7d6926045b355c618e6f1f00fac9cf3fcdf2d6394dd9958f503e7cc7",
+      "bytes": 9343
+    },
+    "runs/mistral-framing-001/attempts/000484.json": {
+      "sha256": "c9ab3f0205460b5e6d52b297bd352749f56ff477b67a45b36b076b31d2d65d53",
+      "bytes": 13532
+    },
+    "runs/mistral-framing-001/attempts/000607.json": {
+      "sha256": "ca7c01af494dd6ad8c8cddbfee284e342428e6d39ab15452a99bedf982063530",
+      "bytes": 9283
+    },
+    "runs/mistral-framing-001/attempts/000257.json": {
+      "sha256": "e6602e4dccc0f324c62f25e378ebcd8cb40b6bb1350b1b3c1eb6cc709099c44d",
+      "bytes": 9052
+    },
+    "runs/mistral-framing-001/attempts/000312.json": {
+      "sha256": "63a7e11e0424e0953969f895437a3fa4ad52ef3a6431c2e59e5e2d75c0601366",
+      "bytes": 7616
+    },
+    "runs/mistral-framing-001/attempts/000596.json": {
+      "sha256": "1072b0370902d0b85d737cc6793ada99f5535d39379347632a395e418e0cbcf5",
+      "bytes": 7436
+    },
+    "runs/mistral-framing-001/attempts/000083.json": {
+      "sha256": "4ea96a891f005f155b766105b8c328c8da60260a7fd7f1a0d3218364b34a4d9b",
+      "bytes": 6259
+    },
+    "runs/mistral-framing-001/attempts/000579.json": {
+      "sha256": "17642fec12df1de716ab3819dc24f85e090699e85c5fedbed2ac3a590aa2a775",
+      "bytes": 8419
+    },
+    "runs/mistral-framing-001/attempts/000129.json": {
+      "sha256": "9ba83f863ba103ed8d183133c63cf7ee62e4a0949e9e9937ce60705e21d3f780",
+      "bytes": 10210
+    },
+    "runs/mistral-framing-001/attempts/000200.json": {
+      "sha256": "1f62036bbcb944fd407556ce34df8185214c93e7c198c917037773505168a6d5",
+      "bytes": 12366
+    },
+    "runs/mistral-framing-001/attempts/000650.json": {
+      "sha256": "12da749eaaa1eed47b04b2277580a5f9edfe163532108787f924d01b174126dc",
+      "bytes": 10412
+    },
+    "runs/mistral-framing-001/attempts/000345.json": {
+      "sha256": "3accc723e42e9a6a9e3af1e2e3c20b4558e4d4bf15abc76059a990764a14aa52",
+      "bytes": 10220
+    },
+    "runs/mistral-framing-001/attempts/000502.json": {
+      "sha256": "0822eed8c0c9ef663384363bdbbfa7585f740cd1fcc08e0c774fe24d7a84fa50",
+      "bytes": 9135
+    },
+    "runs/mistral-framing-001/attempts/000152.json": {
+      "sha256": "ca9675efcc7d7b63c4518c91191fea6fa5866eeade4a43e77e5596a368d06ff8",
+      "bytes": 7860
+    },
+    "runs/mistral-framing-001/attempts/000447.json": {
+      "sha256": "cd38dd3d06470c88b557b9b02751afebdd08d1c64ffadb629458a4b58dbfdc05",
+      "bytes": 12945
+    },
+    "runs/mistral-framing-001/attempts/000017.json": {
+      "sha256": "e5f17ce400b00ba64eeb52e8b4df701768f93e5f74148bd1024e0149d83d6adf",
+      "bytes": 3754
+    },
+    "runs/mistral-framing-001/attempts/000294.json": {
+      "sha256": "a75cf82795a3fc94d134f062889be3f84218ba06e53d82e7102785af75e389f6",
+      "bytes": 9470
+    },
+    "runs/mistral-framing-001/attempts/000105.json": {
+      "sha256": "71a0ab799682244099e9b6226741f849cbbc0528c886eb1f6e3f0597906befef",
+      "bytes": 13124
+    },
+    "runs/mistral-framing-001/attempts/000555.json": {
+      "sha256": "78153a7be8dc934e7aee192102b98e4a89fb32ab3d5ec4a7f7a09a2645ef6364",
+      "bytes": 7580
+    },
+    "runs/mistral-framing-001/attempts/000040.json": {
+      "sha256": "3f1337a363b32e46dcbd23d655a31beb39307a7db8a9b49903551b925ea28697",
+      "bytes": 3762
+    },
+    "runs/mistral-framing-001/attempts/000410.json": {
+      "sha256": "0c166fe9b11585294b1b5d8995f5f6d7b69cc3499da7e37f17f6b8740e68239f",
+      "bytes": 7600
+    },
+    "runs/mistral-framing-001/attempts/000369.json": {
+      "sha256": "1526d2e7cc2ce4bc4cf60cec19c14b87c3705cc38d58b3d944573597bba9a668",
+      "bytes": 9821
+    },
+    "runs/mistral-framing-001/attempts/000386.json": {
+      "sha256": "21ba792306baabdea11490b134f22733657f14c66720d25d784c67996218ddd0",
+      "bytes": 8211
+    },
+    "runs/mistral-framing-001/attempts/000543.json": {
+      "sha256": "64ee3c06fed2f2e5efa7680c9f99136bb6f5c62a59f2e590ea1decc3afafc687",
+      "bytes": 8459
+    },
+    "runs/mistral-framing-001/attempts/000113.json": {
+      "sha256": "f27fb203b3452762c739088d625e00358dbdeaf7dca4cc1f6f3cd5927c07fb04",
+      "bytes": 8621
+    },
+    "runs/mistral-framing-001/attempts/000406.json": {
+      "sha256": "83cee5ec2b76ea7a433d4fc833ffe69933eae53c5d6452748f81c7597513ed93",
+      "bytes": 9066
+    },
+    "runs/mistral-framing-001/attempts/000056.json": {
+      "sha256": "bd87ca86e096d4d213e72f9b69e3382d0314a62d332f80989e4e29bc9cec99c8",
+      "bytes": 3762
+    },
+    "runs/mistral-framing-001/attempts/000390.json": {
+      "sha256": "4de3de1d6831eaf20c9ba0b4a0561932b2087aea12b94c0308a54a9838917599",
+      "bytes": 10004
+    },
+    "runs/mistral-framing-001/attempts/000144.json": {
+      "sha256": "eaec5ac470d61bff00c89d8246e7b54e94bb515c103d4a765a5fc85d5ca65d0d",
+      "bytes": 13087
+    },
+    "runs/mistral-framing-001/attempts/000514.json": {
+      "sha256": "82e12198965a590ad588fedab8b1425250365e4741141248cb97f4e0c7c4cb74",
+      "bytes": 8703
+    },
+    "runs/mistral-framing-001/attempts/000001.json": {
+      "sha256": "5ac2cdcc3150f4e26570f04431581ec6dc7eb28f1ac7c5eaf74a6ecc217163a8",
+      "bytes": 2503
+    },
+    "runs/mistral-framing-001/attempts/000451.json": {
+      "sha256": "4ff881a60a152301c6bd6cda61628cc90b0b581210c61ab2fa40bb1eb6bc81b5",
+      "bytes": 11815
+    },
+    "runs/mistral-framing-001/attempts/000282.json": {
+      "sha256": "8df2dd5cbcf52d34a6d48bdaf75156a09dac5ab83cc47021e4911e3cd7496723",
+      "bytes": 11199
+    },
+    "runs/mistral-framing-001/attempts/000328.json": {
+      "sha256": "5b356fe70186b56c9e8338b67104590bb4f841c09e3093fc932eca9f97e18932",
+      "bytes": 9404
+    },
+    "runs/mistral-framing-001/attempts/000323.json": {
+      "sha256": "21e06ff97ab1e924f0f692263bb0b2c96ac612e46837a7f6acb01dbdf36a2b7e",
+      "bytes": 10504
+    },
+    "runs/mistral-framing-001/attempts/000289.json": {
+      "sha256": "eaf0ff6a27e8346d0a40a99f4dd13c01feb739ce73da3ffca716a77d41a2734c",
+      "bytes": 8854
+    },
+    "runs/mistral-framing-001/attempts/000266.json": {
+      "sha256": "3a20da6c675d8e94b7d4011b284ee45ddc5f025bb7edf00e8388b676a1cfd298",
+      "bytes": 9239
+    },
+    "runs/mistral-framing-001/attempts/000636.json": {
+      "sha256": "6545e5fdf0c57e5d235f97e2ccfdbe2c59dc9570b6402969b5d1a6f4919ab02e",
+      "bytes": 12031
+    },
+    "runs/mistral-framing-001/attempts/000118.json": {
+      "sha256": "f52f2d81ef4cdc30472951ba357bba3a5a27791e07583fda3c417f9241a521ee",
+      "bytes": 7755
+    },
+    "runs/mistral-framing-001/attempts/000548.json": {
+      "sha256": "ed6c9faeffe86088a04e6300338253c3ffc2c30dd654151b0c66148d888c5f5c",
+      "bytes": 9346
+    },
+    "runs/mistral-framing-001/attempts/000374.json": {
+      "sha256": "89695bb62bf31b641c76dd6b6c4bc48eefc1e556709c6ce60b60d97d4335c3d3",
+      "bytes": 8395
+    },
+    "runs/mistral-framing-001/attempts/000661.json": {
+      "sha256": "6b97c27f85bda7abed0cb135e54505ec0819eb37ca13bbfe39988da6b93ebf5b",
+      "bytes": 10132
+    },
+    "runs/mistral-framing-001/attempts/000231.json": {
+      "sha256": "b9469eff5185bdf4d692f4009faf2cafeb4603fb279203562891475eceb02f1c",
+      "bytes": 10260
+    },
+    "runs/mistral-framing-001/attempts/000362.json": {
+      "sha256": "06c988b202cfa5296f1721053bd1af1c95a9edeaa8169dd0cec17ada7d1085e6",
+      "bytes": 10317
+    },
+    "runs/mistral-framing-001/attempts/000227.json": {
+      "sha256": "453c8ea48670431b65ce5b4b9d4ba889a457c8fac53d6ee7ee5bbae9823d90d2",
+      "bytes": 11272
+    },
+    "runs/mistral-framing-001/attempts/000159.json": {
+      "sha256": "257c0d0708d71629f48165acc2f014db4b3b9b6ed4ce4cdb796075ebd48aeaba",
+      "bytes": 12516
+    },
+    "runs/mistral-framing-001/attempts/000509.json": {
+      "sha256": "fb52ab2a0fccc13a3ab158a031df3193642d37d6587eafe95faaf0d632d6c2bc",
+      "bytes": 8955
+    },
+    "runs/mistral-framing-001/attempts/000335.json": {
+      "sha256": "1d3133142adfc1abbb6f4475e971ebb6228c78377d13ffeffc4cbe8f16590079",
+      "bytes": 7925
+    },
+    "runs/mistral-framing-001/attempts/000620.json": {
+      "sha256": "40e6cd99d946fad26ddd6935f70e4bb8b4cbc608d8c833fe42fc2fc8923074bc",
+      "bytes": 10749
+    },
+    "runs/mistral-framing-001/attempts/000270.json": {
+      "sha256": "528ec590f7a82e0e7d292bd361e42869134a68c72e8c706c85aaacd8e877a23b",
+      "bytes": 10967
+    },
+    "runs/mistral-framing-001/attempts/000067.json": {
+      "sha256": "5683f8cbb22c98e67d63a69cf3b079e0f19e4223fbabda1a7f1fa1cd3efbce9e",
+      "bytes": 5193
+    },
+    "runs/mistral-framing-001/attempts/000437.json": {
+      "sha256": "9b40fa5154b165ffb50cbdc6a95303f3ff23f2a6a18884385c966d3e75c5516f",
+      "bytes": 9341
+    },
+    "runs/mistral-framing-001/attempts/000122.json": {
+      "sha256": "d8bd5f90a7ddf02b42d30c28d291a65e9d3d0aaa05199e862440db82c927c31b",
+      "bytes": 9079
+    },
+    "runs/mistral-framing-001/attempts/000088.json": {
+      "sha256": "497e9b867bdb7e85e24dbe6537ecbad47c7ac6abf373a8d757901ed58b1c59e4",
+      "bytes": 6398
+    },
+    "runs/mistral-framing-001/attempts/000572.json": {
+      "sha256": "5744b2ef1a20ef79b67c8d417dee25a27000c6b1c84aefb89494adf47a24b0d4",
+      "bytes": 6474
+    },
+    "runs/mistral-framing-001/attempts/000460.json": {
+      "sha256": "f87a9b0c63211963e4296d7f1bfeddea0f65582ec6da198fd71d93d59b1b5ff2",
+      "bytes": 8748
+    },
+    "runs/mistral-framing-001/attempts/000030.json": {
+      "sha256": "0e8f3e567ea708673d5563f76fea8a01d1f42431432f7deb2214a33562523822",
+      "bytes": 7169
+    },
+    "runs/mistral-framing-001/attempts/000525.json": {
+      "sha256": "d2c7d39db2b5e1193fe4c5a4f2edf8e657a87a9423441be7ff7d93513eac6364",
+      "bytes": 10992
+    },
+    "runs/mistral-framing-001/attempts/000175.json": {
+      "sha256": "823cec2e67f77fe99ca930186ba2ad18e31e0b15698c9f8f6bae75dcd36406e3",
+      "bytes": 13857
+    },
+    "runs/mistral-framing-001/attempts/000319.json": {
+      "sha256": "138a108a36ac668d40c40a49a0d56049886a0ac19c6e7e59e3332ae9eb33239c",
+      "bytes": 7595
+    },
+    "runs/mistral-framing-001/attempts/000026.json": {
+      "sha256": "2a635ee84bb211a6950a4a0971778ee2ce6acf5736dc598651e96e6ade621fae",
+      "bytes": 5954
+    },
+    "runs/mistral-framing-001/attempts/000476.json": {
+      "sha256": "613dbaa3b41ab9db985e6edd2f6b4fdb2f7caf6ec4bc151f65f7e65672d07bf3",
+      "bytes": 12543
+    },
+    "runs/mistral-framing-001/attempts/000499.json": {
+      "sha256": "19ba7b040d7866997a66bbd41f9e5b2ff37e47e7781d67e536d7475aab644c4b",
+      "bytes": 8171
+    },
+    "runs/mistral-framing-001/attempts/000163.json": {
+      "sha256": "84bbcf81bcf664950f8a03f8ade0881df460d95d65bfb30f3bdba981feb47270",
+      "bytes": 12427
+    },
+    "runs/mistral-framing-001/attempts/000533.json": {
+      "sha256": "34bfbe42b328f96424aece6d0430a0a529327183cc810c2993eb0ba8ea306323",
+      "bytes": 11324
+    },
+    "runs/mistral-framing-001/attempts/000421.json": {
+      "sha256": "aff6d651728adae7214f5ca7f8c1a0d3155a2db77d9f4cd2239ae4c0f62e5c2c",
+      "bytes": 10639
+    },
+    "runs/mistral-framing-001/attempts/000071.json": {
+      "sha256": "881b3b572a41765d0ec3c47c8d1e3b3ac54e8ce3eeb973151371441ad87f4fe5",
+      "bytes": 5420
+    },
+    "runs/mistral-framing-001/attempts/000564.json": {
+      "sha256": "f32fb330277cdec4be0e319106c6288231bbde1dce41e53cb31645c6b3946c3f",
+      "bytes": 8286
+    },
+    "runs/mistral-framing-001/attempts/000134.json": {
+      "sha256": "6e5157d6ed540c3388c26107125ad91b3f042a2f51d61466090a427d699256cf",
+      "bytes": 13273
+    },
+    "runs/mistral-framing-001/attempts/000358.json": {
+      "sha256": "e06b5e7a0f222388babb8bea01ab548bf56373e35ef10bd4ce61dd1a5e84925c",
+      "bytes": 7869
+    },
+    "runs/mistral-framing-001/attempts/000285.json": {
+      "sha256": "9a3fcceabd780eeb43d8dd5144a6ebdac40b6907e73397f91c9f2197f2df72c9",
+      "bytes": 12298
+    },
+    "runs/mistral-framing-001/attempts/000143.json": {
+      "sha256": "3724ee28e0833961fdee2396b82d0e19ef2f299f77fac5b00792c0d135a2fd41",
+      "bytes": 12169
+    },
+    "runs/mistral-framing-001/attempts/000513.json": {
+      "sha256": "7c115c1bd4a3451a72b5a80cde7c186076bc6a2af87aa315cf4546fdb6f5f53f",
+      "bytes": 11613
+    },
+    "runs/mistral-framing-001/attempts/000006.json": {
+      "sha256": "075cf4ea740d6016e4961fca5547291399c04b59a7fec27ed301b3ccd61312a9",
+      "bytes": 3745
+    },
+    "runs/mistral-framing-001/attempts/000456.json": {
+      "sha256": "1e1f8bae38151bd4f37e628e5a0026e861cbfd1a28bac17dbec64c35e8bd9929",
+      "bytes": 11004
+    },
+    "runs/mistral-framing-001/attempts/000378.json": {
+      "sha256": "34ee16493d1953b666a378eb61b21ba79add2c894f24018481e21d4c246d9ccc",
+      "bytes": 8478
+    },
+    "runs/mistral-framing-001/attempts/000397.json": {
+      "sha256": "4b6da97fe14709dd62434f0a560e59722cccc60586dab9726479ca84bf470f96",
+      "bytes": 8252
+    },
+    "runs/mistral-framing-001/attempts/000544.json": {
+      "sha256": "cafd57429b7414017f6e033ef28ba0cdbeb13a4164eec9688e3f26e165a6014c",
+      "bytes": 10584
+    },
+    "runs/mistral-framing-001/attempts/000114.json": {
+      "sha256": "377dd20ede4cc2e03f9ea30339a842412c74efc8679bc5809b3962e9ca4396ee",
+      "bytes": 8654
+    },
+    "runs/mistral-framing-001/attempts/000401.json": {
+      "sha256": "202d8eb3d83a70eff1ad345ac07f59e6a4bc52fc0370ff24624b19f8543a86ab",
+      "bytes": 10657
+    },
+    "runs/mistral-framing-001/attempts/000051.json": {
+      "sha256": "35fa5cfa75baf06cef0058bb83317de5556eea4f90893934d1f929e09944befc",
+      "bytes": 3760
+    },
+    "runs/mistral-framing-001/attempts/000381.json": {
+      "sha256": "7c6f49f49cd81bc3c372d1fe9056697e0a1b6881268104acb669cc80b01da268",
+      "bytes": 9140
+    },
+    "runs/mistral-framing-001/attempts/000102.json": {
+      "sha256": "e2bf8ab54b5407f9d57796d581d41c13cf42ffcc347903e128d1459137afc17d",
+      "bytes": 14597
+    },
+    "runs/mistral-framing-001/attempts/000552.json": {
+      "sha256": "00a55d754b9158b8d46abeaed2f2fe21e658b49965895ec0b2c0f5ba6a61949d",
+      "bytes": 17067
+    },
+    "runs/mistral-framing-001/attempts/000047.json": {
+      "sha256": "31d85f077d5c16edfca6137835bee287ced44c6b1a556d550d0dfe9dd2ae2313",
+      "bytes": 3763
+    },
+    "runs/mistral-framing-001/attempts/000417.json": {
+      "sha256": "a1627ce15f610d2c579feb314e39e15105d2ae8b07a4b9b3e3351ba03f231ed6",
+      "bytes": 12385
+    },
+    "runs/mistral-framing-001/attempts/000339.json": {
+      "sha256": "7cfa7f537178739316cc3f9cb3aadc7ae189c5c88131ff1f8b94a71960534b14",
+      "bytes": 11009
+    },
+    "runs/mistral-framing-001/attempts/000293.json": {
+      "sha256": "58661001e4bc83ea517260c035ac77daaae70628554be944043de98eb853455d",
+      "bytes": 8795
+    },
+    "runs/mistral-framing-001/attempts/000505.json": {
+      "sha256": "47f6f3c106e3ffb625380f835837e74c826fba7167641554a9ac919020c8cb23",
+      "bytes": 7718
+    },
+    "runs/mistral-framing-001/attempts/000155.json": {
+      "sha256": "df79a660ebe8e58ff8f09ad678000d135e2613309b1bc29d8928b002cfc337bf",
+      "bytes": 6681
+    },
+    "runs/mistral-framing-001/attempts/000440.json": {
+      "sha256": "f7eda81c00981e7174a7fca380c8bac2d2942df8ecfae72761bc592028b63917",
+      "bytes": 11049
+    },
+    "runs/mistral-framing-001/attempts/000010.json": {
+      "sha256": "7481ed3a225365283734c1e406ec930dbb61260b668134898b4f378907f176d8",
+      "bytes": 6016
+    },
+    "runs/mistral-framing-001/attempts/000207.json": {
+      "sha256": "0fa30735d627eb3a8c3c0429bdac8a227d51cab6bed61aa3f68719963509ed06",
+      "bytes": 12793
+    },
+    "runs/mistral-framing-001/attempts/000657.json": {
+      "sha256": "24095263056c96753b2c5859221244f85b11517a61ffab077699c1644c2584fb",
+      "bytes": 11458
+    },
+    "runs/mistral-framing-001/attempts/000342.json": {
+      "sha256": "3a13d992d52b8cda81151251f3ed3c6d208a9f6f6fcd90dac804ab60be5babcd",
+      "bytes": 11041
+    },
+    "runs/mistral-framing-001/attempts/000591.json": {
+      "sha256": "a13a2174a3c582b58419218d5ee8558716f6e32a0fee97c31812f119f1df6ff9",
+      "bytes": 10132
+    },
+    "runs/mistral-framing-001/attempts/000084.json": {
+      "sha256": "001fa566d3fc864a15480caa2852e02c3d6f544156da6d538b66b4f7a1105d8c",
+      "bytes": 3763
+    },
+    "runs/mistral-framing-001/attempts/000600.json": {
+      "sha256": "e8e69c26e1932db056a282a8e61e62752328b55dbbd6510ad5b7217b8300ed8c",
+      "bytes": 7307
+    },
+    "runs/mistral-framing-001/attempts/000250.json": {
+      "sha256": "a2ed3c1283a89168f7e30ef2219518580d44f6febb7a76fe28c60645356024d9",
+      "bytes": 9022
+    },
+    "runs/mistral-framing-001/attempts/000315.json": {
+      "sha256": "30ed565db7e6313919986e7f8819914cf2e0c3986acf3c0f813ee0f427c3a36a",
+      "bytes": 11872
+    },
+    "runs/mistral-framing-001/attempts/000196.json": {
+      "sha256": "409d5be241150b30e113e6473fcc27b3c2fff82cf37ce3e5b254f6561df6b9cd",
+      "bytes": 16285
+    },
+    "runs/mistral-framing-001/attempts/000483.json": {
+      "sha256": "b8a269bc3bcc303e66cea7b8a093a522b327515f72893fca6a65fec7d5c5ceca",
+      "bytes": 8145
+    },
+    "runs/mistral-framing-001/attempts/000179.json": {
+      "sha256": "4bbf3b5d631c5383d7efd6474d30eebf4ec443c2bb2c0035f66c0dee2f94d67c",
+      "bytes": 9469
+    },
+    "runs/mistral-framing-001/attempts/000529.json": {
+      "sha256": "6d6185cf573a6705be20e4c3613d7ebccfba42b31713ff6f96bb6b034c50fdb2",
+      "bytes": 12622
+    },
+    "runs/mistral-framing-001/attempts/000246.json": {
+      "sha256": "ee4c30c3cb1afcfc744afa1c00342384bf39be20a286f7b2ff4af9cd887bd22b",
+      "bytes": 9846
+    },
+    "runs/mistral-framing-001/attempts/000616.json": {
+      "sha256": "3fa56dd038d247ea86d4e5015f3616975add13a7525b7be471d1ea766818953e",
+      "bytes": 16201
+    },
+    "runs/mistral-framing-001/attempts/000303.json": {
+      "sha256": "7a301947af1b61393cbc5218413498aa976574c35b297220d798bf37d337d2b3",
+      "bytes": 8771
+    },
+    "runs/mistral-framing-001/attempts/000180.json": {
+      "sha256": "9ec248ce5f0abc96d15bd7898547e742c62b1e8d1cd40ef6fcb8eac1c070cb6a",
+      "bytes": 10087
+    },
+    "runs/mistral-framing-001/attempts/000495.json": {
+      "sha256": "9c3c69f9fa59ecfc59b94b213b1b32798ca7f2a750fc46ed9c31c5991d12bbbd",
+      "bytes": 10809
+    },
+    "runs/mistral-framing-001/attempts/000641.json": {
+      "sha256": "84b42ccf5b5b3cdebf73f3876944c73bdd25d50837691818ee72fd825da47fcd",
+      "bytes": 13918
+    },
+    "runs/mistral-framing-001/attempts/000211.json": {
+      "sha256": "b366984b287e4ec76e8b58915b2a4d980825769851e74cc7e959324ee99a90bf",
+      "bytes": 12946
+    },
+    "runs/mistral-framing-001/attempts/000354.json": {
+      "sha256": "441bfdec3f549d5e971c2c0d0c06d38783ede7abfbf2f2bafc0d08b83131936d",
+      "bytes": 8291
+    },
+    "runs/mistral-framing-001/attempts/000587.json": {
+      "sha256": "268e344479876c746d631892acfbcac7e439e4b5ebce14513bddee4e3d3d1f2e",
+      "bytes": 11443
+    },
+    "runs/mistral-framing-001/attempts/000138.json": {
+      "sha256": "d581e953d93eb58d1585490e5f4cfee042e3f1864b5a87c654cb97688d353f82",
+      "bytes": 13476
+    },
+    "runs/mistral-framing-001/attempts/000092.json": {
+      "sha256": "a31c46f195033660c5bb246a7d195ab5b9462f4585a9dd8f5d68f8152eaa3055",
+      "bytes": 5133
+    },
+    "runs/mistral-framing-001/attempts/000568.json": {
+      "sha256": "9870ed6b2705a99729f94803298da30e439b053017c516bf9cb87b17283409ac",
+      "bytes": 11429
+    },
+    "runs/mistral-framing-001/attempts/000586.json": {
+      "sha256": "adeec080ab0b9c098d8c12b67a0fe4ff7c72790c244e2cf1c3709969d7434df9",
+      "bytes": 8173
+    },
+    "runs/mistral-framing-001/attempts/000139.json": {
+      "sha256": "e26a5af7a53662a24a4ebbda02f5ad58726cfac52acfd1c5052899fad8a63bac",
+      "bytes": 8297
+    },
+    "runs/mistral-framing-001/attempts/000093.json": {
+      "sha256": "1a0096f1980db72990296f39e6910e22c032fc086fde6d892c723c310e65673a",
+      "bytes": 3762
+    },
+    "runs/mistral-framing-001/attempts/000569.json": {
+      "sha256": "9cf1731c35cb6c0804052781ac9be87377d39781911f01ff849b198e665b1085",
+      "bytes": 7647
+    },
+    "runs/mistral-framing-001/attempts/000640.json": {
+      "sha256": "2a5d616840e017953e3500e01603e2c394ae210278d347c0c18d2eaa9f58b924",
+      "bytes": 11715
+    },
+    "runs/mistral-framing-001/attempts/000210.json": {
+      "sha256": "61e6a556e74e6f415b59deb3555daf3cfe631061c73553133d837decbd8bb349",
+      "bytes": 8176
+    },
+    "runs/mistral-framing-001/attempts/000355.json": {
+      "sha256": "3a4ece34cff704c3cb308be050af444f4a77bee785e639cbd47428a2842952cc",
+      "bytes": 9396
+    },
+    "runs/mistral-framing-001/attempts/000181.json": {
+      "sha256": "3e2968c8755efefa9a80227be192dca7e97710a1f41c72238fb7ac3d67fc4944",
+      "bytes": 10705
+    },
+    "runs/mistral-framing-001/attempts/000494.json": {
+      "sha256": "46bb77afc4c90d6c6a36a2df0ac1cf819c0f5c7c5765d3094f3ccbe601b1aadc",
+      "bytes": 10983
+    },
+    "runs/mistral-framing-001/attempts/000247.json": {
+      "sha256": "a8c6c926f8c635970466f335699c0cccd3a986f249b854d1901570dd96e78a8e",
+      "bytes": 7902
+    },
+    "runs/mistral-framing-001/attempts/000617.json": {
+      "sha256": "8a251d2628f374706fe92567aeaf3d89fa5053b5d30e43f7cb69261c66820a8e",
+      "bytes": 10116
+    },
+    "runs/mistral-framing-001/attempts/000302.json": {
+      "sha256": "5520e91c9211c4c339fba582d46fab3ab219be24050843ab921f99e5b95ac6d6",
+      "bytes": 10652
+    },
+    "runs/mistral-framing-001/attempts/000197.json": {
+      "sha256": "0fcc45eaa67c7c29c2e885763f9980aba3587444cadcbc3f245777c9bf5a5afc",
+      "bytes": 9364
+    },
+    "runs/mistral-framing-001/attempts/000482.json": {
+      "sha256": "12713c8044ad60987de1007fd37fac0d0f16b73af7ab340a752c4d627351c80f",
+      "bytes": 8476
+    },
+    "runs/mistral-framing-001/attempts/000178.json": {
+      "sha256": "91eaa424dbc445e2f2ff6a3c5e9d3c90ed7697f3c9e8a200cf35caebf86f3374",
+      "bytes": 11387
+    },
+    "runs/mistral-framing-001/attempts/000528.json": {
+      "sha256": "753167f33208f82bf5e31fc31963be46c8ab08b5cae4fd9f3102675cbab8a619",
+      "bytes": 10239
+    },
+    "runs/mistral-framing-001/attempts/000601.json": {
+      "sha256": "3c1e70a62fa28c27785b480234b8b75f093276289d7e89e9cf0c0bef05e77ecc",
+      "bytes": 9736
+    },
+    "runs/mistral-framing-001/attempts/000251.json": {
+      "sha256": "f72b0cb93588bdf98bf0e3f7e6b385b38d79f5b0c8a815737e03a45e58ed0b1f",
+      "bytes": 11397
+    },
+    "runs/mistral-framing-001/attempts/000314.json": {
+      "sha256": "b6ea74b5e4f7dd85049209b30a252684b03c9800a9c88c2cbbfddf6493caba8b",
+      "bytes": 8692
+    },
+    "runs/mistral-framing-001/attempts/000590.json": {
+      "sha256": "66ddfdd0b7aab7a32246ab97cf5a0b20d3c43d6f0942c070ecd35262f98e1d4c",
+      "bytes": 8238
+    },
+    "runs/mistral-framing-001/attempts/000085.json": {
+      "sha256": "584d19b0223295ed628eee1b69d1471655c53ce0b2d5aad4f125dc423bddab1b",
+      "bytes": 6322
+    },
+    "runs/mistral-framing-001/attempts/000206.json": {
+      "sha256": "f112f8e57ec30b8fbd43c547142132269e6aa2eac49e5bdd678839d039f32027",
+      "bytes": 11254
+    },
+    "runs/mistral-framing-001/attempts/000656.json": {
+      "sha256": "25c816d5840b95d9a7c44f4e5da1cac5deb04c003e6b48947a0a9840e5fb4304",
+      "bytes": 10836
+    },
+    "runs/mistral-framing-001/attempts/000343.json": {
+      "sha256": "709819e97cbe8e1093930f724d60b5285742e0af7b81a60e9df0c2304f85963f",
+      "bytes": 8169
+    },
+    "runs/mistral-framing-001/attempts/000504.json": {
+      "sha256": "ee6bb8138a98396e18f0d6c566bbb009101bfa4c882bb8e931c2fbf1f1290a10",
+      "bytes": 9743
+    },
+    "runs/mistral-framing-001/attempts/000154.json": {
+      "sha256": "6b280c6c85f5ecad2f61f9601de44c18ece1067dabbbd17f7900f448b2000cf0",
+      "bytes": 8702
+    },
+    "runs/mistral-framing-001/attempts/000441.json": {
+      "sha256": "ec27761f5e75e109efc5c3a4fcfac9692d97f908f49b8605939cb83482ffd3ac",
+      "bytes": 16159
+    },
+    "runs/mistral-framing-001/attempts/000011.json": {
+      "sha256": "db6c8e936112cba34ed354ba01d7850d7684de5b3cffad41b4635776b8684edc",
+      "bytes": 3775
+    },
+    "runs/mistral-framing-001/attempts/000338.json": {
+      "sha256": "0aedae5b9b2875cf0eb2e9e8d781480501d8e612d738deffd7b97f22d53f2621",
+      "bytes": 9917
+    },
+    "runs/mistral-framing-001/attempts/000292.json": {
+      "sha256": "28e3a9227018fd0b9ee66febc4e75fa4c16164172718d7b8299b0f13cbea6e45",
+      "bytes": 14596
+    },
+    "runs/mistral-framing-001/attempts/000103.json": {
+      "sha256": "4ceffcc5793bbdb0d8a87f869d1da1c5c81550bd2ace7ccf9cfd3bb9c0cf5af6",
+      "bytes": 8949
+    },
+    "runs/mistral-framing-001/attempts/000553.json": {
+      "sha256": "bf65c9eb913e5ee24a9966e8686ecce40259dd21ff74936e9c92b7b83e4927e8",
+      "bytes": 10607
+    },
+    "runs/mistral-framing-001/attempts/000046.json": {
+      "sha256": "78a838c9abbd99c04aa98553c1b1b87a2760a023652b26b9f6d25b44fbfc5681",
+      "bytes": 9120
+    },
+    "runs/mistral-framing-001/attempts/000416.json": {
+      "sha256": "020a4301aea745e138a029a9ed4aacdc5c744790198572953db393304b8b7bfc",
+      "bytes": 11297
+    },
+    "runs/mistral-framing-001/attempts/000380.json": {
+      "sha256": "a8d17b3f10beeca6a26fd2e7433b33d325bbec122eabb6c47772de73215a3a0d",
+      "bytes": 12015
+    },
+    "runs/mistral-framing-001/attempts/000545.json": {
+      "sha256": "941d157347d90b8c685721ce22bb0d606a1f64247304ee907af20ef069ecb903",
+      "bytes": 9146
+    },
+    "runs/mistral-framing-001/attempts/000115.json": {
+      "sha256": "0f6abf6d714d0541eff142fd30dfa944294aea75182489fae6a43ef5c3344668",
+      "bytes": 10511
+    },
+    "runs/mistral-framing-001/attempts/000400.json": {
+      "sha256": "133f82573fa03bd95ed01f0a6ea48b491d29c6084ee7879a5d4219d6db6aea42",
+      "bytes": 8744
+    },
+    "runs/mistral-framing-001/attempts/000050.json": {
+      "sha256": "816f8c24281249fa831078b5a71a8463e373a4356270c34fa0a1df609bc0f8f3",
+      "bytes": 6049
+    },
+    "runs/mistral-framing-001/attempts/000379.json": {
+      "sha256": "074b87762b0bb1e253da8d2d940f5f080c9519b4b414e9770a6bdb51b6121573",
+      "bytes": 8204
+    },
+    "runs/mistral-framing-001/attempts/000396.json": {
+      "sha256": "932427feaacac46128134fa93adc9ef2a78f2389fccc5d84c2212e86eec3c50b",
+      "bytes": 9323
+    },
+    "runs/mistral-framing-001/attempts/000142.json": {
+      "sha256": "545f53bba4db499600fb493d7a20f3ea717d6cf5c62827b6ff4e2bb4ae32c174",
+      "bytes": 10478
+    },
+    "runs/mistral-framing-001/attempts/000512.json": {
+      "sha256": "6dcfd98722858f23a196258e9943c6cec94820aad02e650dd0ad041dab6cf79c",
+      "bytes": 11112
+    },
+    "runs/mistral-framing-001/attempts/000007.json": {
+      "sha256": "f6dc2b93d7e07bdebc40dd1cb6bd9678152b63efd54676b8ae1788841979c8f2",
+      "bytes": 9102
+    },
+    "runs/mistral-framing-001/attempts/000457.json": {
+      "sha256": "99e92cab65e2bc76ada54f2bfd3757f379a48e3dc4a1fcb31888ca3ea5f17020",
+      "bytes": 12162
+    },
+    "runs/mistral-framing-001/attempts/000284.json": {
+      "sha256": "ad09b8590b591555924eba9fd1301a50c94028d4e2572da5226f716ee20fc3c1",
+      "bytes": 6959
+    },
+    "runs/mistral-framing-001/attempts/000359.json": {
+      "sha256": "a1f695883efad335b5c1b0643ff2ce22551964546a42b99b490af754ff5298da",
+      "bytes": 10632
+    },
+    "runs/mistral-framing-001/attempts/000420.json": {
+      "sha256": "c0f6cc7303331a4e834529ae7dbf37f0d9e82ea544a7f6b5004bce09d2697881",
+      "bytes": 10371
+    },
+    "runs/mistral-framing-001/attempts/000070.json": {
+      "sha256": "898cedf21e5d9c444ebdc38cef0ed136f5420a27876ed9431208dafa498e5a86",
+      "bytes": 3751
+    },
+    "runs/mistral-framing-001/attempts/000565.json": {
+      "sha256": "7d8e7ca6051e30af036e00db299c7affed7c82b1a94d2498eb0db72502471130",
+      "bytes": 11582
+    },
+    "runs/mistral-framing-001/attempts/000135.json": {
+      "sha256": "b19c99508952392b38a6a51cb6ba1d4d091a7edea5f8a7f6cfd680ddca63c94f",
+      "bytes": 10779
+    },
+    "runs/mistral-framing-001/attempts/000027.json": {
+      "sha256": "4f09e8c3ef484f80dc11c4c7b899a81c5366ce57cb7575d727681524157131d0",
+      "bytes": 3763
+    },
+    "runs/mistral-framing-001/attempts/000477.json": {
+      "sha256": "ba6106e123658a12b3375e5e1bc9a0c6e60ad74e272d4cc5f875e2e225e8d906",
+      "bytes": 9322
+    },
+    "runs/mistral-framing-001/attempts/000498.json": {
+      "sha256": "5cde6f49f2c3a98b1028d1e60c94ff57bb50f64fb348230d5394c9640744e596",
+      "bytes": 8736
+    },
+    "runs/mistral-framing-001/attempts/000162.json": {
+      "sha256": "8abc5444cfecb9c49a1db3ef5c4aa809355132bcd15e69b32bbb601a342673aa",
+      "bytes": 12946
+    },
+    "runs/mistral-framing-001/attempts/000532.json": {
+      "sha256": "3211259ca6f2b93717f7f226a58d0ba07de14b5fd3fb8dae3f76d48ab203bcd3",
+      "bytes": 13469
+    },
+    "runs/mistral-framing-001/attempts/000318.json": {
+      "sha256": "2b73c952f89dd524641fbfe168eb20532a54bd85cfb07b3420872c1f8ad56163",
+      "bytes": 10892
+    },
+    "runs/mistral-framing-001/attempts/000461.json": {
+      "sha256": "08497052ae2ea9217a8d3cacc06c2816892c98b0abec9b1c16455082387ba1fe",
+      "bytes": 9044
+    },
+    "runs/mistral-framing-001/attempts/000031.json": {
+      "sha256": "da83df8ac8ea1714463d9ef78707fdef25e05860429ec9e662edfa358ae4a566",
+      "bytes": 3766
+    },
+    "runs/mistral-framing-001/attempts/000524.json": {
+      "sha256": "5236f8740f621bccb52e41d47c64c2815db0f062c386ff87312a9288bcba2645",
+      "bytes": 11622
+    },
+    "runs/mistral-framing-001/attempts/000174.json": {
+      "sha256": "f08e28091058169600c7bc8c89411d3a651ca9384cebd2483ea3a393fb60c090",
+      "bytes": 8241
+    },
+    "runs/mistral-framing-001/attempts/000066.json": {
+      "sha256": "a1642cfb1ccf0a3867405b174c63f7f1a5cb853e56fc3725a0d40f99870ddbfa",
+      "bytes": 3760
+    },
+    "runs/mistral-framing-001/attempts/000436.json": {
+      "sha256": "f881e3641ca2d29039ca0b924c3203184f7051191cc6d664d7efc7b074c29af6",
+      "bytes": 8768
+    },
+    "runs/mistral-framing-001/attempts/000123.json": {
+      "sha256": "b7fea3b51c551faa8a8a832d972672a834e54a854436300cfdc1dabf70661d41",
+      "bytes": 10740
+    },
+    "runs/mistral-framing-001/attempts/000089.json": {
+      "sha256": "dbe06d0cd1df87fa7ec431f28f7ad5a052d0647bab9632ca8ea0a930644d4092",
+      "bytes": 3765
+    },
+    "runs/mistral-framing-001/attempts/000573.json": {
+      "sha256": "be3fdd3927e198c2cb39cc6e8da4740a83abc09d7d018acbad00165a7c17d05a",
+      "bytes": 8756
+    },
+    "runs/mistral-framing-001/attempts/000334.json": {
+      "sha256": "a6099b22884d8490e3768be264f08ca032a64e82153b67ad43ed1097e6b38d41",
+      "bytes": 9321
+    },
+    "runs/mistral-framing-001/attempts/000621.json": {
+      "sha256": "ce1e86a2add790b14e9fa6845a796c90244b66c7b445b7810f2e88a671fe5ca4",
+      "bytes": 11248
+    },
+    "runs/mistral-framing-001/attempts/000271.json": {
+      "sha256": "ec67a78ae2597536324e5f96357503880e75ca454e76684205b766bda572bfcb",
+      "bytes": 8657
+    },
+    "runs/mistral-framing-001/attempts/000158.json": {
+      "sha256": "6d2424ecf9ad610eb39e2738c17e8392335dd6564b325aa4137ef5cc31388b89",
+      "bytes": 8256
+    },
+    "runs/mistral-framing-001/attempts/000508.json": {
+      "sha256": "a8bbc64d72be04ff2444c02760eac9b236511d37882d19df866000ad5f41c959",
+      "bytes": 12330
+    },
+    "runs/mistral-framing-001/attempts/000363.json": {
+      "sha256": "4d33c757748b3f347f5f3987431d94708bde8c95060db5baf92d0170f12792e6",
+      "bytes": 9532
+    },
+    "runs/mistral-framing-001/attempts/000226.json": {
+      "sha256": "1bfced990d9768facbadd1962ddbcb5b5c2fbf77eabfc1174ffc43bbded436d9",
+      "bytes": 10123
+    },
+    "runs/mistral-framing-001/attempts/000375.json": {
+      "sha256": "a451f934545290165c6e91231665dfb83d82e1f55aad9b22c247a54bdc9ea8ba",
+      "bytes": 11965
+    },
+    "runs/mistral-framing-001/attempts/000660.json": {
+      "sha256": "0ef48767f0fde0804b9241264e50a122f473e6deabff20fe0ab7becb6d941d35",
+      "bytes": 10408
+    },
+    "runs/mistral-framing-001/attempts/000230.json": {
+      "sha256": "db944d9c7e8b6d7f34fe7ed8f90e86cd1a54bc6a90ac18363df3ceb3a3d18991",
+      "bytes": 8872
+    },
+    "runs/mistral-framing-001/attempts/000119.json": {
+      "sha256": "87025b5bb27364ee382d3fd922a80ea782a5468af86906700acb52bb6191b4a4",
+      "bytes": 10478
+    },
+    "runs/mistral-framing-001/attempts/000549.json": {
+      "sha256": "4896dcbc9e7c3c1ae0409e9a77f4ab453bbba818a40a7f4bf2fdd3977218d87d",
+      "bytes": 11936
+    },
+    "runs/mistral-framing-001/attempts/000322.json": {
+      "sha256": "05c7e8b1be70e2e1d13d25fbdb6d0b6bb9bcab663dac2ed0d6cfd19fdd5c7c93",
+      "bytes": 9800
+    },
+    "runs/mistral-framing-001/attempts/000288.json": {
+      "sha256": "099793638f3a23b7ce229f8b3d139d1229143bbb407f3c97b8663c84ba85ba1c",
+      "bytes": 9561
+    },
+    "runs/mistral-framing-001/attempts/000267.json": {
+      "sha256": "01ae7d2ae71107e4fe25a04d10e3c5a0fa2fc41f94694f5afa45c91e8630cc0b",
+      "bytes": 10809
+    },
+    "runs/mistral-framing-001/attempts/000637.json": {
+      "sha256": "64440ec9b94acfd977f0e37876290841f506a92efd37f53f4d56d3f7de15facc",
+      "bytes": 8877
+    },
+    "runs/mistral-framing-001/attempts/000566.json": {
+      "sha256": "7239cb5957aef600983cf1b6b0a7573522fcca2861269cd2637def793e45f1e4",
+      "bytes": 9791
+    },
+    "runs/mistral-framing-001/attempts/000136.json": {
+      "sha256": "1fc4cb537d8f2706d828ae895a161c7f96d927e96c03b6f9cebdc680a97d036d",
+      "bytes": 10471
+    },
+    "runs/mistral-framing-001/attempts/000423.json": {
+      "sha256": "761afdaa7cecb51a57d7f72ce52da5663ab5519058f9190d7615e4ceae149afe",
+      "bytes": 12200
+    },
+    "runs/mistral-framing-001/attempts/000589.json": {
+      "sha256": "b68edca7dd9aca5fe2de81475cd99cf9250057aa15a71a96831649b799288f11",
+      "bytes": 11386
+    },
+    "runs/mistral-framing-001/attempts/000073.json": {
+      "sha256": "25603818f0b2e3a6b6ee7f86101d7a60196064f6d937ed6601c7da0a4cfbaefe",
+      "bytes": 3765
+    },
+    "runs/mistral-framing-001/attempts/000618.json": {
+      "sha256": "f5c8a5095848bfa71d86f7007a61fb10cc7449a32bd73fe13df03523f0e288ce",
+      "bytes": 10373
+    },
+    "runs/mistral-framing-001/attempts/000248.json": {
+      "sha256": "fe0c18c2533be5a0a3ac2eb1c3f778d30c92ad20eef83033e74df627a07bb338",
+      "bytes": 9447
+    },
+    "runs/mistral-framing-001/attempts/000161.json": {
+      "sha256": "2a7333cd6562d929f713329c3abad9c25cf7df3d1beb9b832fb8d50b91395724",
+      "bytes": 11728
+    },
+    "runs/mistral-framing-001/attempts/000531.json": {
+      "sha256": "758fe94c89ceccd72e042129fdeb083cdaf7729fdf17075913555731a9f0f682",
+      "bytes": 9768
+    },
+    "runs/mistral-framing-001/attempts/000024.json": {
+      "sha256": "f234bdad9f778e92a854df907a0f62eac56ffb34e6f8bfd0c5db045a7960120f",
+      "bytes": 5753
+    },
+    "runs/mistral-framing-001/attempts/000474.json": {
+      "sha256": "e2d2e53a840b460bc1feea6acfeb3f97e1e99d97ed2cbff94d3bfc5bab54ab5b",
+      "bytes": 10008
+    },
+    "runs/mistral-framing-001/attempts/000527.json": {
+      "sha256": "356b1da00c12236cd174d2512eb8d0e0bf98c47431adb410af45d52794a0ac53",
+      "bytes": 7745
+    },
+    "runs/mistral-framing-001/attempts/000177.json": {
+      "sha256": "fa9026b22dfdf3193385e0d74ad21f141f8778e1545d9b77f7a3d3699830b80e",
+      "bytes": 9703
+    },
+    "runs/mistral-framing-001/attempts/000198.json": {
+      "sha256": "3bde16b4663b560c92b126eebfb79b7420846c800a33f19e1f0af21a45688cf7",
+      "bytes": 10703
+    },
+    "runs/mistral-framing-001/attempts/000462.json": {
+      "sha256": "d9c1ae8ce0557394217fe603520acbe438bdd7f455d35e9bfd396fdea020f863",
+      "bytes": 8441
+    },
+    "runs/mistral-framing-001/attempts/000032.json": {
+      "sha256": "948ce261f7c71e9bdb59bcba30759e1fca559bb4faa85eec5180dab1ad277e02",
+      "bytes": 3760
+    },
+    "runs/mistral-framing-001/attempts/000659.json": {
+      "sha256": "375a8f939f16a2dbb45a5241f4c39ac6480ad96cb1001e5b5e5766785cdf41fb",
+      "bytes": 12568
+    },
+    "runs/mistral-framing-001/attempts/000209.json": {
+      "sha256": "384ae72e7d89e88c206f38403c32d4dc0157114ea0ab2a41af248c946e2ba4cc",
+      "bytes": 9255
+    },
+    "runs/mistral-framing-001/attempts/000120.json": {
+      "sha256": "a6889e780083aed65095ca1d9d931a2798e694f5a7ca9d816405c0369d8f8376",
+      "bytes": 12894
+    },
+    "runs/mistral-framing-001/attempts/000570.json": {
+      "sha256": "05edd7765cbcb935368b981409e1eab47f79204409cfd0ad40a086828ac8a735",
+      "bytes": 6177
+    },
+    "runs/mistral-framing-001/attempts/000065.json": {
+      "sha256": "b9814c15bec614a0d2718dd47a4ff4c53249958ab0ad07578562ebe9e4e81ab2",
+      "bytes": 3761
+    },
+    "runs/mistral-framing-001/attempts/000435.json": {
+      "sha256": "3b630a514f07b14f50d684665fd13938bb3bba2db72d6e25823bd57f6876159b",
+      "bytes": 12744
+    },
+    "runs/mistral-framing-001/attempts/000622.json": {
+      "sha256": "ca2e93faccb7bb2480340506bb041dc3faf3119c3e77c92f31fb51ac513188e2",
+      "bytes": 11131
+    },
+    "runs/mistral-framing-001/attempts/000272.json": {
+      "sha256": "94643c1837e3656140d0781a18dfc427dd81144d16149b0b78e687f8d0709160",
+      "bytes": 12360
+    },
+    "runs/mistral-framing-001/attempts/000337.json": {
+      "sha256": "3aab31fd5dafea6fb5df64cce3be08da7c33446862826db79082ee6c9502c952",
+      "bytes": 10073
+    },
+    "runs/mistral-framing-001/attempts/000225.json": {
+      "sha256": "98a3643d7bc68018bee6e3c3b1bc89896ab72d1ecf145b04f4161fac38e7e67d",
+      "bytes": 10423
+    },
+    "runs/mistral-framing-001/attempts/000360.json": {
+      "sha256": "e48d404add332a8e7ee8ebe12a8ae336d329cdfdba52416f0c2a821c37e03cb9",
+      "bytes": 11788
+    },
+    "runs/mistral-framing-001/attempts/000419.json": {
+      "sha256": "6f5ea3911168eccef5ef0653058ac043c9e29f9e6dafa13f913cf24adad6a8ec",
+      "bytes": 11767
+    },
+    "runs/mistral-framing-001/attempts/000049.json": {
+      "sha256": "334ff355dd77c10d94e9b1eac71f543ea02994f0499ac5a24fb107c9bb5f86d5",
+      "bytes": 3753
+    },
+    "runs/mistral-framing-001/attempts/000399.json": {
+      "sha256": "a5cff03b236da4345801bac9af5b1a5e9dcae57f2c47b9747bacb1ae2b638dcc",
+      "bytes": 10102
+    },
+    "runs/mistral-framing-001/attempts/000663.json": {
+      "sha256": "c7e1695a639effcdcbc148638d1a29bf840706496d3b4527b6497c0fb515e39a",
+      "bytes": 13257
+    },
+    "runs/mistral-framing-001/attempts/000233.json": {
+      "sha256": "e76aa18c6661e529493378065099ffa0338793dc50e70b03e49cda96751de456",
+      "bytes": 8633
+    },
+    "runs/mistral-framing-001/attempts/000376.json": {
+      "sha256": "ea32be255bc9d5242e2b2f87fe41480e4a77f95e560ffcbc0daab432843fcd51",
+      "bytes": 8955
+    },
+    "runs/mistral-framing-001/attempts/000264.json": {
+      "sha256": "e6036673998cf2f906e0e58f142dea3e855cffeebe60b36164fa581274e38e73",
+      "bytes": 9769
+    },
+    "runs/mistral-framing-001/attempts/000634.json": {
+      "sha256": "429e92b98cfcc236ca2e76b59567dd75ffd7e7cc6d9ed18ded8415a7228da0b7",
+      "bytes": 10056
+    },
+    "runs/mistral-framing-001/attempts/000321.json": {
+      "sha256": "0f32dca1627594d813b300046b05c41c57f9ffb40cff266bd0e98f81b9428b54",
+      "bytes": 10357
+    },
+    "runs/mistral-framing-001/attempts/000458.json": {
+      "sha256": "a109fd91fd0cf44649c24e098982bf47938ec2fa5819b9319a0097da60fb4cd2",
+      "bytes": 7405
+    },
+    "runs/mistral-framing-001/attempts/000008.json": {
+      "sha256": "82b472cc8cb77b8f624a0564eebb1027c82531d2b9a78a972fae2c3c1b1ca816",
+      "bytes": 5536
+    },
+    "runs/mistral-framing-001/attempts/000090.json": {
+      "sha256": "b0265505cd336396143a2b9130a823e04228e42d0863bb5e84e4640c1f6d04c3",
+      "bytes": 6586
+    },
+    "runs/mistral-framing-001/attempts/000585.json": {
+      "sha256": "5267c14f9519c5f491a1571a9cd51447c26d779c1c9b129a67ad1cd3e584833c",
+      "bytes": 8903
+    },
+    "runs/mistral-framing-001/attempts/000356.json": {
+      "sha256": "ce483a70a66d08375808963fb9be217f8c4303078ae25b82edf53cc8a1fa0393",
+      "bytes": 11388
+    },
+    "runs/mistral-framing-001/attempts/000643.json": {
+      "sha256": "e755f7015d84f446ad90ad9540883ee0f446282b7947ca2feff9989d908b24bf",
+      "bytes": 7648
+    },
+    "runs/mistral-framing-001/attempts/000213.json": {
+      "sha256": "3d63fd0f68ab24da85e2c9e8bd61ae3af1c492d4b6e153d40810363813d2c16a",
+      "bytes": 8685
+    },
+    "runs/mistral-framing-001/attempts/000497.json": {
+      "sha256": "802471deae5828aa438cf50c8a654c3bdea449235fc4c2f026cd78cf43f43fea",
+      "bytes": 8216
+    },
+    "runs/mistral-framing-001/attempts/000182.json": {
+      "sha256": "3d4e36a2a27346e1d413dc7caf6af63e4eb948c405189d8dfb9e494ebf34b229",
+      "bytes": 8485
+    },
+    "runs/mistral-framing-001/attempts/000478.json": {
+      "sha256": "69d94a14eeafaf2d3ea51942fe48e8f9e9ee8dfa2ab9966e6b757cd8fcd44782",
+      "bytes": 8554
+    },
+    "runs/mistral-framing-001/attempts/000028.json": {
+      "sha256": "8b10382d97005e30525e098b3180f677af2f13a8528e856cd3a21195adf41e3d",
+      "bytes": 3749
+    },
+    "runs/mistral-framing-001/attempts/000301.json": {
+      "sha256": "640e5d2f8af5b9a3352bd975d470a7d19d6de3166181e8b08b83e4a91e1db498",
+      "bytes": 11810
+    },
+    "runs/mistral-framing-001/attempts/000244.json": {
+      "sha256": "9d741fdc01ecf34a0f8533da17f2a8b23a05775c0ef76e3368887fd764cc315b",
+      "bytes": 10438
+    },
+    "runs/mistral-framing-001/attempts/000614.json": {
+      "sha256": "37c8b508509dfc0411e15b06bf2bfe616c941c3915f462ee3cc4c0bd78dcb44f",
+      "bytes": 8512
+    },
+    "runs/mistral-framing-001/attempts/000481.json": {
+      "sha256": "f4de3ed7cd08f6931cb01ffef413cfaa3ce07aea43e253eaeb0d2b5ef9cfc08c",
+      "bytes": 10131
+    },
+    "runs/mistral-framing-001/attempts/000194.json": {
+      "sha256": "e709976cbd8652ce9f16a0595e31815dafabb3b6c52c1a36d1d3f9d1ae6aa61f",
+      "bytes": 11781
+    },
+    "runs/mistral-framing-001/attempts/000317.json": {
+      "sha256": "750fcdb46cc34ffe3686e9fcd73d5b624db5bb600fdf26eeba0c70a147de2c5f",
+      "bytes": 8369
+    },
+    "runs/mistral-framing-001/attempts/000602.json": {
+      "sha256": "3a1a1c6e9888568e7483abf5f130916815b7644adb7cd89827836512756a7901",
+      "bytes": 9638
+    },
+    "runs/mistral-framing-001/attempts/000252.json": {
+      "sha256": "42e94960cee4b7a8936e85e68110026c7d42d340d1f164b08d61edb6c2d0e3ea",
+      "bytes": 10072
+    },
+    "runs/mistral-framing-001/attempts/000086.json": {
+      "sha256": "43ebc6ef583f1552827df43d2dc758ce2b14014bb4b71147ffb93fe6d69dfa02",
+      "bytes": 3751
+    },
+    "runs/mistral-framing-001/attempts/000439.json": {
+      "sha256": "77e2acfdc20538a8840e2294dfb45a87cd8e48974d4f8114a4500808dd68a59a",
+      "bytes": 11434
+    },
+    "runs/mistral-framing-001/attempts/000593.json": {
+      "sha256": "50b82755991fb73def9189838459a27a7257f5e1e52694500ba48f9d4be43861",
+      "bytes": 10203
+    },
+    "runs/mistral-framing-001/attempts/000069.json": {
+      "sha256": "bcc0228b74e58e67462b632dda69a41eb8d3a97b4941770a152ed1d659a6da42",
+      "bytes": 3761
+    },
+    "runs/mistral-framing-001/attempts/000340.json": {
+      "sha256": "106fc3ce8b29a57c1d792422378ea1d307ac621421e9f0d5ab3fff81073f328a",
+      "bytes": 10275
+    },
+    "runs/mistral-framing-001/attempts/000205.json": {
+      "sha256": "a1e4fba29fbf0dd3cffdb5a1b044e758713650fd70c49d8e0e13401256ec7cdd",
+      "bytes": 10536
+    },
+    "runs/mistral-framing-001/attempts/000655.json": {
+      "sha256": "f6a94257080a75d78e09e26207a0d356fe815e6d45e95323442188b5bdb87df6",
+      "bytes": 9203
+    },
+    "runs/mistral-framing-001/attempts/000442.json": {
+      "sha256": "5c5174c824e6a543ac506b13a6f606d525838158ec10ea7f40c57b5a87242c38",
+      "bytes": 8762
+    },
+    "runs/mistral-framing-001/attempts/000012.json": {
+      "sha256": "0fb864ce0967146ce98ec68406143c9366ab64297e9a7c221b18bf58d0a63f54",
+      "bytes": 3749
+    },
+    "runs/mistral-framing-001/attempts/000507.json": {
+      "sha256": "f9733638fd324ab88dc5de011b013ecb364616735471a42995bed0f9b572eb32",
+      "bytes": 11273
+    },
+    "runs/mistral-framing-001/attempts/000157.json": {
+      "sha256": "1e5dfa79b10fa5707eb5d9eae9f0083df14ddb2b65fa9363b8376a5a8878a156",
+      "bytes": 11270
+    },
+    "runs/mistral-framing-001/attempts/000291.json": {
+      "sha256": "9bfcba0c720f00022a5972fad432377f1e7db478838ab5be7865fc47b0463db8",
+      "bytes": 13293
+    },
+    "runs/mistral-framing-001/attempts/000045.json": {
+      "sha256": "6b09b4b0c59ef0316aca054819d9d3eb15b124e365e249c700003746a55c437d",
+      "bytes": 4587
+    },
+    "runs/mistral-framing-001/attempts/000415.json": {
+      "sha256": "eb2001459326ddde2c337c449663617c1e16449304d75461ac9de5613c6694eb",
+      "bytes": 9672
+    },
+    "runs/mistral-framing-001/attempts/000100.json": {
+      "sha256": "b9248c27e660317a4c2855ddb6d87065f27fb3d6c207d543f63b07627fcd0618",
+      "bytes": 9217
+    },
+    "runs/mistral-framing-001/attempts/000550.json": {
+      "sha256": "5236282c76fac603193f3d648382d2a0f77d64c1a7554305b35e1059fa02a8dc",
+      "bytes": 11181
+    },
+    "runs/mistral-framing-001/attempts/000383.json": {
+      "sha256": "114dc5f7cd4052e19c534dd3c75c3af9901d3414803fb6b88411baa86d1abf38",
+      "bytes": 8523
+    },
+    "runs/mistral-framing-001/attempts/000229.json": {
+      "sha256": "095bf5bc66396d62bedf8d6d76f351916db3ca0d3d101a1b71994221ca5b5aa2",
+      "bytes": 12605
+    },
+    "runs/mistral-framing-001/attempts/000403.json": {
+      "sha256": "c34b1700224f1a2b8db736ac422c6c291381b2f4efb9840e4efb3bae8a8d1ec6",
+      "bytes": 7617
+    },
+    "runs/mistral-framing-001/attempts/000053.json": {
+      "sha256": "038cf906a934f1f4e8b3f56f7913328e3728d443006d1f502e17b3d61e98ce77",
+      "bytes": 3766
+    },
+    "runs/mistral-framing-001/attempts/000546.json": {
+      "sha256": "fb6e63bb848777d6396daab37af73ae0c4e4c7bab6d8f50fad92386414bd8d44",
+      "bytes": 10372
+    },
+    "runs/mistral-framing-001/attempts/000116.json": {
+      "sha256": "29b73e24b07ac91d3eb9d62f5eb5ad758504fa2c6c73f871e5c63d71f848dbef",
+      "bytes": 9505
+    },
+    "runs/mistral-framing-001/attempts/000395.json": {
+      "sha256": "c7d4af61fdf8f14ba3c5d2f1be731a88e632fe8163e00c1480d74f39f2d7c6ec",
+      "bytes": 12920
+    },
+    "runs/mistral-framing-001/attempts/000004.json": {
+      "sha256": "c41860ae2d5ef2e819c74a8896b40b42cfa07a621113d76a13269fd35d898e7e",
+      "bytes": 7009
+    },
+    "runs/mistral-framing-001/attempts/000454.json": {
+      "sha256": "4628b4ae08844486a1ce7d1226deb1d7533895fc9dcfa0394f6ee728ff53c923",
+      "bytes": 13032
+    },
+    "runs/mistral-framing-001/attempts/000141.json": {
+      "sha256": "7525c693f9549d6686a62f5e59c4121bdc9ec1d1583ed74b05e4c54d031d83b5",
+      "bytes": 10810
+    },
+    "runs/mistral-framing-001/attempts/000511.json": {
+      "sha256": "6c42f8b68776eee47021dd1e48d5e6bcdd31a2f0c6d8bd4b0de55564bfd9a432",
+      "bytes": 10160
+    },
+    "runs/mistral-framing-001/attempts/000638.json": {
+      "sha256": "4a768f1e167b2eb33e8cecd954564e6566fd5e3f6c35016e77c44899cdc5f07c",
+      "bytes": 7380
+    },
+    "runs/mistral-framing-001/attempts/000268.json": {
+      "sha256": "387ed746681e48c8bfd4b6e86a737b4b9ff4364229bd9a73b2ebe25f37c46fe1",
+      "bytes": 9747
+    },
+    "runs/mistral-framing-001/attempts/000287.json": {
+      "sha256": "8917f56e7283b17933f76efb267311df83d2a3190324f69f8d04eb3c0d06777a",
+      "bytes": 11258
+    },
+    "runs/mistral-framing-001/attempts/000639.json": {
+      "sha256": "264b456a327a4ab602609d8cf0fa3493a2d047735df5d4cc4da77d343df2a249",
+      "bytes": 11158
+    },
+    "runs/mistral-framing-001/attempts/000269.json": {
+      "sha256": "e3badab0e549400de598a89d4a5312a2e0967c058e3fae78e4bd2ade4c522a54",
+      "bytes": 11007
+    },
+    "runs/mistral-framing-001/attempts/000286.json": {
+      "sha256": "bae48d3b75563a6812fad7864c83f11f137c6f5350564922fab6d78874e8357b",
+      "bytes": 11309
+    },
+    "runs/mistral-framing-001/attempts/000005.json": {
+      "sha256": "6de09f556030fe9be6ecdb7df2f960ac731e09ef73ee7e2b0472a85c3c1485c4",
+      "bytes": 3764
+    },
+    "runs/mistral-framing-001/attempts/000455.json": {
+      "sha256": "a60bf45ca6a554d11f7d4fc1f8ecac132139666c8a78604d38c83aa6783859de",
+      "bytes": 10206
+    },
+    "runs/mistral-framing-001/attempts/000140.json": {
+      "sha256": "2a89a4fa4fa53906fca5b43177cd754774ea90847f93767f199a462a81004d92",
+      "bytes": 8375
+    },
+    "runs/mistral-framing-001/attempts/000510.json": {
+      "sha256": "24d62369bce4f812405db647daf467c6daf0f4d8b1552b2e8f7a079572880acb",
+      "bytes": 8645
+    },
+    "runs/mistral-framing-001/attempts/000394.json": {
+      "sha256": "8a8c641d21037d1a7628aa0bcafe76576c26577983d09a84d49265f16762074c",
+      "bytes": 9446
+    },
+    "runs/mistral-framing-001/attempts/000402.json": {
+      "sha256": "8b74aeae35bf2f813bfde456b2875818c489ebe072c9c088f9c24097acb127be",
+      "bytes": 6284
+    },
+    "runs/mistral-framing-001/attempts/000052.json": {
+      "sha256": "93e31c3c8a08ce7087df7fd0dd23941f7c91eb106b9985e9b2c7f609421bc018",
+      "bytes": 6603
+    },
+    "runs/mistral-framing-001/attempts/000547.json": {
+      "sha256": "995afa704d021618e120613e9fa7b60ff5c56def9f39d9db82d64a4141ddf23d",
+      "bytes": 11487
+    },
+    "runs/mistral-framing-001/attempts/000117.json": {
+      "sha256": "0a395d51777518e045d98c54163eb6c5967a05624f8cf46997e28c4a8cde2f96",
+      "bytes": 10608
+    },
+    "runs/mistral-framing-001/attempts/000382.json": {
+      "sha256": "9be3e0f9a36e9111f7ca69efd5a464023256d5a2cc2ef58afc7fcb5da3b30efe",
+      "bytes": 7886
+    },
+    "runs/mistral-framing-001/attempts/000228.json": {
+      "sha256": "2a35295dd32a6c64416f020dfc35f421e6a12bab9ad5fbb523e3eb81a644b293",
+      "bytes": 11903
+    },
+    "runs/mistral-framing-001/attempts/000044.json": {
+      "sha256": "512c8314ae5884e4fcfe6b439223b7daac2b28aece3ad4579768a79c1309af04",
+      "bytes": 3756
+    },
+    "runs/mistral-framing-001/attempts/000414.json": {
+      "sha256": "8e2249b291b626c44bfff0e1cda1d1fcc2c0d257c88ef23a9eb63279fad9b70e",
+      "bytes": 13074
+    },
+    "runs/mistral-framing-001/attempts/000101.json": {
+      "sha256": "44cabceb6bfdc75373b501de26ea79f6e0c69977a8176cd27fa7beb55d3ffb62",
+      "bytes": 12366
+    },
+    "runs/mistral-framing-001/attempts/000551.json": {
+      "sha256": "34609dd867b46fe51db2dd3e5ff3504e4bc68543629d555a54598996249f7e15",
+      "bytes": 8289
+    },
+    "runs/mistral-framing-001/attempts/000290.json": {
+      "sha256": "b41e8770b9fc10b81197713b81f02a37b3ae8a32712f58646a982286f88b127c",
+      "bytes": 9187
+    },
+    "runs/mistral-framing-001/attempts/000443.json": {
+      "sha256": "2dcf11eea811a4e79143aa571e11059aa6d26cd7055fae591a24fbc056930277",
+      "bytes": 12222
+    },
+    "runs/mistral-framing-001/attempts/000013.json": {
+      "sha256": "9b0f032ad17f355c72593e82e52ad9bd00f2b3bf01b4de16c8380d84854ff1ad",
+      "bytes": 7140
+    },
+    "runs/mistral-framing-001/attempts/000506.json": {
+      "sha256": "97a0e57249e410a9e57403fd2ce9b228790b93577f9001c7fc6fbbf300fcfe42",
+      "bytes": 10267
+    },
+    "runs/mistral-framing-001/attempts/000156.json": {
+      "sha256": "398546ed18120468636f813f9eb160a3f43a2b39f9b16fe6a8bc4809a35f79d9",
+      "bytes": 8624
+    },
+    "runs/mistral-framing-001/attempts/000341.json": {
+      "sha256": "709441c201e6a997c191b07307fd9f6d571a5da7108dfc2ade5df593224b54b4",
+      "bytes": 8566
+    },
+    "runs/mistral-framing-001/attempts/000204.json": {
+      "sha256": "ecc68802d307a9969796f4ab26e7618f89f6de7598de3b6881d58253887c1d28",
+      "bytes": 14914
+    },
+    "runs/mistral-framing-001/attempts/000654.json": {
+      "sha256": "b78ff0d289b009e70b54427d9ca34e17f980e983b93efd83b680629cadfb8b37",
+      "bytes": 10622
+    },
+    "runs/mistral-framing-001/attempts/000087.json": {
+      "sha256": "b614136a8cfd2ade6b786cbca3bf59a5346e32f2f116dd62758c517fdf9e8e66",
+      "bytes": 5268
+    },
+    "runs/mistral-framing-001/attempts/000438.json": {
+      "sha256": "90383c811f2f876a80c7ea283adba298c33c5bc943b5483fe73152ce8ba98c3e",
+      "bytes": 11834
+    },
+    "runs/mistral-framing-001/attempts/000592.json": {
+      "sha256": "1dcbdc5a7dceac048228d45a2140f02436606f31c6ca6fab668ef6188febba07",
+      "bytes": 7829
+    },
+    "runs/mistral-framing-001/attempts/000068.json": {
+      "sha256": "59d6b43844be57799d9669b9041378acb643844f39fb88a15480fb575f66f7d6",
+      "bytes": 7992
+    },
+    "runs/mistral-framing-001/attempts/000316.json": {
+      "sha256": "13fb6e0b77dd2bfaafa57ebe7a11140ce656e53e1d99d7c9144b115acceb8ec4",
+      "bytes": 9579
+    },
+    "runs/mistral-framing-001/attempts/000603.json": {
+      "sha256": "0d4311c478a800a159b4fbd7127315ce28bb9288fa8543ef35dac1b416538b38",
+      "bytes": 10840
+    },
+    "runs/mistral-framing-001/attempts/000253.json": {
+      "sha256": "555da23a21dcdfaf226bfb7f6db833b00b179d50a45ac16b04ea39c5140737a0",
+      "bytes": 10021
+    },
+    "runs/mistral-framing-001/attempts/000480.json": {
+      "sha256": "c94fc344552deeda8280f404898fd8e993f6ad5ce52f567b7bb7265849c42e83",
+      "bytes": 10801
+    },
+    "runs/mistral-framing-001/attempts/000195.json": {
+      "sha256": "ef1520239a0e80451c6439e904c1d75eb0a12043756f57face5efac1dd495e15",
+      "bytes": 9300
+    },
+    "runs/mistral-framing-001/attempts/000300.json": {
+      "sha256": "caa6b174355987f081affcddc1a58782b0ed0cdc4ac169c124d79f1130bb0980",
+      "bytes": 10306
+    },
+    "runs/mistral-framing-001/attempts/000245.json": {
+      "sha256": "0dc8737abe2f5aef33c345e03f0c15b3af7ab6cf1588ba40a3d4668f5fb8266b",
+      "bytes": 8687
+    },
+    "runs/mistral-framing-001/attempts/000615.json": {
+      "sha256": "d74e9c286bd9539161838778654555fca7f1163aa2b91d87492d2c3b6a134068",
+      "bytes": 10582
+    },
+    "runs/mistral-framing-001/attempts/000496.json": {
+      "sha256": "0d6ae2616e681287714753bd51e4931c3de940802e9194602ac827d8e4d3e420",
+      "bytes": 7409
+    },
+    "runs/mistral-framing-001/attempts/000183.json": {
+      "sha256": "b37417a23d716e3414af0326fda645a780bf26c5bbf9b014a97ae1f387964a67",
+      "bytes": 8534
+    },
+    "runs/mistral-framing-001/attempts/000479.json": {
+      "sha256": "2458cfa2c7f6369c1a3cc895a768ed83b297f58d0a214ab487e105a30d59126f",
+      "bytes": 12337
+    },
+    "runs/mistral-framing-001/attempts/000029.json": {
+      "sha256": "411421956ce3b2a003c347488d277d45f543025ca2c4fb2ae393c723affeece6",
+      "bytes": 5424
+    },
+    "runs/mistral-framing-001/attempts/000357.json": {
+      "sha256": "7bdb67fd4f37affabd24bf7885888e278c5eded45eff0c72b618fe54f4f10cf1",
+      "bytes": 7756
+    },
+    "runs/mistral-framing-001/attempts/000642.json": {
+      "sha256": "50e87efc0ef11c92800488a85630fa7694d474b5feeda104b2fe657119237324",
+      "bytes": 8370
+    },
+    "runs/mistral-framing-001/attempts/000212.json": {
+      "sha256": "e3b22c4eddc4e092054588447388d2a993116af761f92649bd25f9d23898bba2",
+      "bytes": 10649
+    },
+    "runs/mistral-framing-001/attempts/000091.json": {
+      "sha256": "e164b4ce6a9fd05977aa0f0cf4175aaaa3a0438eafcc8bf03cdcf0538117602d",
+      "bytes": 3767
+    },
+    "runs/mistral-framing-001/attempts/000584.json": {
+      "sha256": "8171f4adb5b68212ef4decc84d2d9e56a16ff9090b14ec69554846eca97b3b25",
+      "bytes": 11464
+    },
+    "runs/mistral-framing-001/attempts/000459.json": {
+      "sha256": "33bc490b818588ad7d6c8d39b347ef26d068b5916c8093f0a1ed6a37bdd4848b",
+      "bytes": 11756
+    },
+    "runs/mistral-framing-001/attempts/000009.json": {
+      "sha256": "aa1298b0645838afc9dec49267c27f43d61bde6a40aadf5fb286834c65588769",
+      "bytes": 3757
+    },
+    "runs/mistral-framing-001/attempts/000265.json": {
+      "sha256": "a4d49c001fad37b8ecd8a57bcc127f87061c933e4dac521146c615cb8f398709",
+      "bytes": 8252
+    },
+    "runs/mistral-framing-001/attempts/000635.json": {
+      "sha256": "7fcc1c5b69624ce7ca469f11fe39f488f34a03e1af222f141450dc3f571d048c",
+      "bytes": 12323
+    },
+    "runs/mistral-framing-001/attempts/000320.json": {
+      "sha256": "36588af57a319688d9c33e0e89ace35d0e1577aeea9b991840a224705ff463b9",
+      "bytes": 10995
+    },
+    "runs/mistral-framing-001/attempts/000398.json": {
+      "sha256": "54ccc0e8b5cc77d94c3783642fc0d11a3fc87a7780ac33bd43b8d89c48fa69cb",
+      "bytes": 10153
+    },
+    "runs/mistral-framing-001/attempts/000662.json": {
+      "sha256": "94ac493319d17635d31c588e1c084acd5e8cd45036669dc803671eb3e43e7145",
+      "bytes": 10700
+    },
+    "runs/mistral-framing-001/attempts/000232.json": {
+      "sha256": "2b4db7f8ffb588b51ad37ca933c963a5e8fb847b4cb4cfc61a6a74cb5cbb656a",
+      "bytes": 8735
+    },
+    "runs/mistral-framing-001/attempts/000377.json": {
+      "sha256": "6d4903576c6a40643601c3db263f1dcb488461829945e0c3745e2ba99faeb1e6",
+      "bytes": 10904
+    },
+    "runs/mistral-framing-001/attempts/000418.json": {
+      "sha256": "d393879da3d54384481d19c7578b61d7f37846141e8a03fb940fb82a22bc406b",
+      "bytes": 7422
+    },
+    "runs/mistral-framing-001/attempts/000048.json": {
+      "sha256": "030a8677477981b82d8eb4afdab98eb4caafb3535e06f169ec474b92ed4bc64b",
+      "bytes": 5526
+    },
+    "runs/mistral-framing-001/attempts/000224.json": {
+      "sha256": "9576225fd44ccabcf561750c8506883d8e0839127e5b1b57f3c4e1bda9d6a312",
+      "bytes": 10369
+    },
+    "runs/mistral-framing-001/attempts/000361.json": {
+      "sha256": "8cf3fbe76a037a127c9b324ba7ef948dc07f885e3c7332a6c1951102d837ea53",
+      "bytes": 7733
+    },
+    "runs/mistral-framing-001/attempts/000623.json": {
+      "sha256": "d77137554c9ffcbf6be3b748354cd7d7c0985a4ae34d812709578e030fe1f386",
+      "bytes": 7447
+    },
+    "runs/mistral-framing-001/attempts/000273.json": {
+      "sha256": "ef81e1d4f41b766a2d5fbd7827af99d933a0567694806a3d77a4e4accc4d9c05",
+      "bytes": 12223
+    },
+    "runs/mistral-framing-001/attempts/000336.json": {
+      "sha256": "0643abd6796afe36e39d317c3f2fbbe36a6154dbce852b7f23a54d95ee444c31",
+      "bytes": 8600
+    },
+    "runs/mistral-framing-001/attempts/000121.json": {
+      "sha256": "161e003008b6e96cfb880e73fcc57e9e8a97702585482f90aeda69bae296f8ae",
+      "bytes": 10326
+    },
+    "runs/mistral-framing-001/attempts/000571.json": {
+      "sha256": "2521b0e8c3dbb18d617e6e624dc2e9246e65574020f8964120b813c3fbdcd163",
+      "bytes": 10622
+    },
+    "runs/mistral-framing-001/attempts/000064.json": {
+      "sha256": "0c04de31b1f81b83bd00b96fa382b8c15e700ffe21aa9403e2fa36657cecfa38",
+      "bytes": 10810
+    },
+    "runs/mistral-framing-001/attempts/000434.json": {
+      "sha256": "df1e744d2c862228b3a195239f35881e80ef0128638f10bf5c95a4376e340b31",
+      "bytes": 12146
+    },
+    "runs/mistral-framing-001/attempts/000658.json": {
+      "sha256": "240002a8c522ecaa49482688cb3b56f49ee81bac31c5a8337f34f7442471aa41",
+      "bytes": 11263
+    },
+    "runs/mistral-framing-001/attempts/000208.json": {
+      "sha256": "4a141f68b7f5d434fb6e1a72d0cbee662ff37d56a9ec16c0311e4b7d7e37fbac",
+      "bytes": 10013
+    },
+    "runs/mistral-framing-001/attempts/000526.json": {
+      "sha256": "ea669f1fb80777da233ad9df54250bf7c4ac583cfb850070e92016e8b08d7e75",
+      "bytes": 10919
+    },
+    "runs/mistral-framing-001/attempts/000176.json": {
+      "sha256": "78c095b54e227d73d665c979470caa55e91e7996fa14202777024a0d00bdb8fc",
+      "bytes": 11353
+    },
+    "runs/mistral-framing-001/attempts/000199.json": {
+      "sha256": "67081a2fa8f1fae359241138b53d02ac60bc1c850c55dea4b2195f730e96820c",
+      "bytes": 7931
+    },
+    "runs/mistral-framing-001/attempts/000463.json": {
+      "sha256": "ece98653a24086d060f3e1a29787cc18344b27d5c9e6a66e8d268d03099c1cf6",
+      "bytes": 10435
+    },
+    "runs/mistral-framing-001/attempts/000033.json": {
+      "sha256": "d6863fa36fa2a693e1d415a72fb1de31a6e64ff32d6ef3613fa71fa799b916ee",
+      "bytes": 7253
+    },
+    "runs/mistral-framing-001/attempts/000160.json": {
+      "sha256": "39fd7cdc4ad8cda17c0d8f0e97f095a1cae290a44e4fb3ea395b517bb4636099",
+      "bytes": 8495
+    },
+    "runs/mistral-framing-001/attempts/000530.json": {
+      "sha256": "b8b2116859c45de780c7ccc12561f33edb3321f4015c29634236c911e00f5d1b",
+      "bytes": 11252
+    },
+    "runs/mistral-framing-001/attempts/000025.json": {
+      "sha256": "262545ba65c13f388b2c61feb8f790aab8d6309abbb0d17d613007743b93629a",
+      "bytes": 3766
+    },
+    "runs/mistral-framing-001/attempts/000475.json": {
+      "sha256": "1ba26c9fc1fb96c990b485a8be51b0daed958b563b94006e62dfea2f40ee7bb7",
+      "bytes": 10784
+    },
+    "runs/mistral-framing-001/attempts/000619.json": {
+      "sha256": "5c244405b18750bbaf2ffcb0605f633a83c51939fe94fed6bf69083b0fe21568",
+      "bytes": 9958
+    },
+    "runs/mistral-framing-001/attempts/000249.json": {
+      "sha256": "c7bef6967e182dfd7205d81256b73398053065890c7837beb93235629a27c227",
+      "bytes": 8970
+    },
+    "runs/mistral-framing-001/attempts/000567.json": {
+      "sha256": "7c14c3f47316cfcce42c093948ecc924db169a7d5256e68c56df9a08b70e52ef",
+      "bytes": 7803
+    },
+    "runs/mistral-framing-001/attempts/000137.json": {
+      "sha256": "680bbb360f7cbadf61147fe988f56facbb77dd39c38d87dea6ffcd1921cd9c5d",
+      "bytes": 8890
+    },
+    "runs/mistral-framing-001/attempts/000422.json": {
+      "sha256": "a1e138c9c6da0816361bff145fb6795876f414d5b3adf46af71b1afaec7712be",
+      "bytes": 8066
+    },
+    "runs/mistral-framing-001/attempts/000588.json": {
+      "sha256": "5aa109a4e8cd42054e461e573fa81059178a824c1b79067cd0b914b912a67de1",
+      "bytes": 13371
+    },
+    "runs/mistral-framing-001/attempts/000072.json": {
+      "sha256": "9dbbf91440565e13bf19091d174831d18652dddcf4685d0747694bc2b1b8956c",
+      "bytes": 6368
+    },
+    "runs/mistral-framing-001/attempts/000096.json": {
+      "sha256": "a8012bb8caafd89c3724fd91745d529915bf3f7b0817e78e4424b02b7bf63dea",
+      "bytes": 3761
+    },
+    "runs/mistral-framing-001/attempts/000583.json": {
+      "sha256": "290bba1020f93585b0627c670b8fa24a71d64f6619a5dec5857739b345ba1bfc",
+      "bytes": 10258
+    },
+    "runs/mistral-framing-001/attempts/000079.json": {
+      "sha256": "16005f2646ba574fa1d790b2c645ebb05346022921dfaff3449d4157e83a2f6f",
+      "bytes": 4832
+    },
+    "runs/mistral-framing-001/attempts/000429.json": {
+      "sha256": "f0b391088dcc5584a83e793a36e6c9145f29ff129abf6903a3de2f9234d76de9",
+      "bytes": 8565
+    },
+    "runs/mistral-framing-001/attempts/000350.json": {
+      "sha256": "8c410d015f8650331ccdb8694abc94ab2c3413ccde9dfd054c5c7916b69aa8e2",
+      "bytes": 8751
+    },
+    "runs/mistral-framing-001/attempts/000645.json": {
+      "sha256": "a5f77f45a52e2d2b366f71b9975fff22f2d59416ebc48e61286689fcfacae3f4",
+      "bytes": 11951
+    },
+    "runs/mistral-framing-001/attempts/000215.json": {
+      "sha256": "6e5e8e0c31710dafa82c86ff8d84003ce156e3f9808912f7950cf2c1df7c09f7",
+      "bytes": 9209
+    },
+    "runs/mistral-framing-001/attempts/000491.json": {
+      "sha256": "b620b9cc8762c71459f06112eb334a247bd5e9680b2acd3b2428f48616485690",
+      "bytes": 9617
+    },
+    "runs/mistral-framing-001/attempts/000184.json": {
+      "sha256": "e8f54312302e46ba956725ccf5e1d20e48d2b402d433fff92f1334c679746cc8",
+      "bytes": 11874
+    },
+    "runs/mistral-framing-001/attempts/000307.json": {
+      "sha256": "7d454bd2feaab19326f541233efedda14475ddfa2de692b90c77583bac541359",
+      "bytes": 12760
+    },
+    "runs/mistral-framing-001/attempts/000242.json": {
+      "sha256": "3b0816e727f4c7f5d8fe1ee35df75dc72dcda418aab0661020f20b5c9c540183",
+      "bytes": 9075
+    },
+    "runs/mistral-framing-001/attempts/000612.json": {
+      "sha256": "3d6bf84ec7eb8162c6a90dd0bb629a9b0610ee392d54a3e7f5652b2d9df1aae0",
+      "bytes": 9331
+    },
+    "runs/mistral-framing-001/attempts/000487.json": {
+      "sha256": "547424d4b13391c0b9ffc458cdc60935fed222855bf5da0e487123e627adfe74",
+      "bytes": 11749
+    },
+    "runs/mistral-framing-001/attempts/000038.json": {
+      "sha256": "68806362ab69090268189052288d1baa378045444ed31b4d70dd88a3738909f5",
+      "bytes": 4983
+    },
+    "runs/mistral-framing-001/attempts/000192.json": {
+      "sha256": "7d6d07cc31deff390946a0d9ba72c903cc8e894ccc2cd1da924486e1a46005c5",
+      "bytes": 9151
+    },
+    "runs/mistral-framing-001/attempts/000468.json": {
+      "sha256": "93c685ada744c78ca0fadd8d483a849fc422c355c2b488f6ec2c61873252c2f3",
+      "bytes": 8502
+    },
+    "runs/mistral-framing-001/attempts/000311.json": {
+      "sha256": "5a5b267cd75f74dc1971695a67883b664c09b57add7d694f067f29f347e0dd90",
+      "bytes": 12765
+    },
+    "runs/mistral-framing-001/attempts/000604.json": {
+      "sha256": "f29745b87813bb5369faef85337780d83a050c9d00a3d9cd9075f5f77dcd0498",
+      "bytes": 9411
+    },
+    "runs/mistral-framing-001/attempts/000254.json": {
+      "sha256": "d16040b2a74f685cbb61536e15bdc6d2fc0a348ff899b98b769c9c0b62cb0b5a",
+      "bytes": 9482
+    },
+    "runs/mistral-framing-001/attempts/000080.json": {
+      "sha256": "b70d72bd68a938239331bb42204f94a77632969cd4c9a914f938f28045a6afab",
+      "bytes": 4637
+    },
+    "runs/mistral-framing-001/attempts/000595.json": {
+      "sha256": "12db1e14aa28fcd38f547f1afb1b55cffb5933fb1e74e79e27370711a2dc485d",
+      "bytes": 10075
+    },
+    "runs/mistral-framing-001/attempts/000346.json": {
+      "sha256": "1370223f7e302c4b14615ee23a24d253c63973e48cd8323ea6ce1519ffb5b4cb",
+      "bytes": 10689
+    },
+    "runs/mistral-framing-001/attempts/000203.json": {
+      "sha256": "9a869aa5f387df0c2b0c760abe35d69a7af6083c567bb28e14112983662b67bd",
+      "bytes": 10681
+    },
+    "runs/mistral-framing-001/attempts/000653.json": {
+      "sha256": "a722ab27b5fbfd02e3fb70bd93b733060e8ed95df86aadc1dbd7b09b2e1577ac",
+      "bytes": 10483
+    },
+    "runs/mistral-framing-001/attempts/000444.json": {
+      "sha256": "a9a7b3ba07c17197f52a3d407d244e78499e2b2d37621314783a126ac260f3b7",
+      "bytes": 8938
+    },
+    "runs/mistral-framing-001/attempts/000014.json": {
+      "sha256": "5fe9cd72a00cad7d3f6f0b2379926840e56726600e54b5829a86aff99b507397",
+      "bytes": 8456
+    },
+    "runs/mistral-framing-001/attempts/000501.json": {
+      "sha256": "9dcecfeaba332b7206961d94183e7feabbe60f372509d03bf767a7e2a156f1d0",
+      "bytes": 11824
+    },
+    "runs/mistral-framing-001/attempts/000151.json": {
+      "sha256": "b78cb1d71a8215861f648ce7d458e1b399affb3c26dabdf8af58315b012c35fd",
+      "bytes": 13871
+    },
+    "runs/mistral-framing-001/attempts/000278.json": {
+      "sha256": "f00a32a013135f0f62431706601809f9969a83aa5b13540c10dc15aeb5057b27",
+      "bytes": 10063
+    },
+    "runs/mistral-framing-001/attempts/000628.json": {
+      "sha256": "a038a2911d9f0662a3d4ebe83a43e3d8e8b0cf155b1d19451d2d5769a69f23a3",
+      "bytes": 14282
+    },
+    "runs/mistral-framing-001/attempts/000297.json": {
+      "sha256": "266472560da9235aa9165ef60acd38015361520364588aa50f5cbbb28dc5753b",
+      "bytes": 11723
+    },
+    "runs/mistral-framing-001/attempts/000043.json": {
+      "sha256": "b1c4941bdbff5052c221c14afad0c48f243298ec0ee07421b366c7656c52f384",
+      "bytes": 3770
+    },
+    "runs/mistral-framing-001/attempts/000413.json": {
+      "sha256": "68f3309ca8066af7ee27b725aefe377aefb1c57d419565155a12c5e398e2c840",
+      "bytes": 9479
+    },
+    "runs/mistral-framing-001/attempts/000106.json": {
+      "sha256": "8c3bb06c691c0da4740ba06918539f5d2c339d989b1bf0106e42c4f9bfd5de36",
+      "bytes": 11544
+    },
+    "runs/mistral-framing-001/attempts/000556.json": {
+      "sha256": "399bf82d0c31ff49b900ad651f8922c86a66a453dbfa06211fb9707d0be83f16",
+      "bytes": 11035
+    },
+    "runs/mistral-framing-001/attempts/000385.json": {
+      "sha256": "ddb85cccee2f6bd0f5ac342435200c7cef09a36ce83b09f0494021f7f802aca7",
+      "bytes": 12347
+    },
+    "runs/mistral-framing-001/attempts/000405.json": {
+      "sha256": "341c5431150a934dc7e2489ad429d0e874a7f4f0acfffe16199fdb8d5f5df721",
+      "bytes": 11429
+    },
+    "runs/mistral-framing-001/attempts/000055.json": {
+      "sha256": "e7f1fed35e98160b508bbfa0a05cd53b6f43d31def300010ddb72c80396f5b1d",
+      "bytes": 7333
+    },
+    "runs/mistral-framing-001/attempts/000540.json": {
+      "sha256": "61eaeb64c51e18d45c019b6e03db7527e4bb35d1d965bb7fe0327a69c027c620",
+      "bytes": 11065
+    },
+    "runs/mistral-framing-001/attempts/000110.json": {
+      "sha256": "c20908ce77dafc7515536b8af7b74fd0fb041ccc5a38d72970623f3728afa950",
+      "bytes": 16063
+    },
+    "runs/mistral-framing-001/attempts/000239.json": {
+      "sha256": "50a0957890239fdb16b43564f3ddcdd64fc0c7468ce1db62dc445d134bc93e05",
+      "bytes": 7715
+    },
+    "runs/mistral-framing-001/attempts/000393.json": {
+      "sha256": "17d7b8d27ac47a0446118fb45ef89c2083da13de843ce1c437a6e89454f7c095",
+      "bytes": 11835
+    },
+    "runs/mistral-framing-001/attempts/000669.json": {
+      "sha256": "1149f5d833bdf240b6df21868b0f5d316a60b8b89793053f431c1c0183b216b4",
+      "bytes": 9675
+    },
+    "runs/mistral-framing-001/attempts/000002.json": {
+      "sha256": "2e06a367cf58f361075f012ad4668a7cc38a7efddc7fd52393f6aeeb2266f988",
+      "bytes": 3765
+    },
+    "runs/mistral-framing-001/attempts/000452.json": {
+      "sha256": "a771c57368ee045167fbbcc52907a8c571ab7219142f17a73dfe71cbc562f17f",
+      "bytes": 8234
+    },
+    "runs/mistral-framing-001/attempts/000147.json": {
+      "sha256": "aa593aff81bbb4646f0f93f9b92adb5bba0711d855baf8665aa68ca707f7fe68",
+      "bytes": 10465
+    },
+    "runs/mistral-framing-001/attempts/000517.json": {
+      "sha256": "93376efd30909cf646bba22c343e793ff00849224846091d1be9ab7bfb8d2794",
+      "bytes": 8361
+    },
+    "runs/mistral-framing-001/attempts/000281.json": {
+      "sha256": "b9f558efc8835e16be36f7d5dde65fae2ff2f74b81cb35e06e859600a0c2a683",
+      "bytes": 10428
+    },
+    "runs/mistral-framing-001/attempts/000219.json": {
+      "sha256": "18e252a652e8d789407513f1c2e0598f37718233983acd547b2d3d4641394290",
+      "bytes": 11113
+    },
+    "runs/mistral-framing-001/attempts/000649.json": {
+      "sha256": "abac2d54e311e9e94a3834ccf7fad673c78f02a43a1dee3b6a43fa7bc8e0aad7",
+      "bytes": 8204
+    },
+    "runs/mistral-framing-001/attempts/000560.json": {
+      "sha256": "585f9cc71635c85f418aac9da92433ce947ef147eddfff0ef3602198ca178614",
+      "bytes": 9672
+    },
+    "runs/mistral-framing-001/attempts/000130.json": {
+      "sha256": "cd0cd9cff0f772490791aebe09dd673baeddfa2991df196da63c82cb4a40863a",
+      "bytes": 11075
+    },
+    "runs/mistral-framing-001/attempts/000425.json": {
+      "sha256": "9a550eabd42e044ef62ee525d82fd044845478305d57fd35f74e0acf2d5fc837",
+      "bytes": 8893
+    },
+    "runs/mistral-framing-001/attempts/000075.json": {
+      "sha256": "8aa01984d452ef89fed909fd2abdf65d737647803b4c36de4897a29cf5850f4b",
+      "bytes": 5928
+    },
+    "runs/mistral-framing-001/attempts/000167.json": {
+      "sha256": "b9f4a6cbf1d6d2d51707e4ea525fdc48d9ed021850432d428daaaa650ad59f57",
+      "bytes": 8359
+    },
+    "runs/mistral-framing-001/attempts/000537.json": {
+      "sha256": "73f21cbd96b0b2d9646e29e0bc40523dbefbd9be34688c44327c268a0675f007",
+      "bytes": 8576
+    },
+    "runs/mistral-framing-001/attempts/000022.json": {
+      "sha256": "80608009d71dd6f0978d9c0389b650056da0119b8c44224cfdeaf428335f7379",
+      "bytes": 8340
+    },
+    "runs/mistral-framing-001/attempts/000188.json": {
+      "sha256": "467e9d8701443e2a483a59aa36050ebb9e85fff13a039df3a980b401f0595a02",
+      "bytes": 8982
+    },
+    "runs/mistral-framing-001/attempts/000472.json": {
+      "sha256": "0006a9e3001f67a74f5e04e2e062242265d9b140dea294504281d5ff8f4b8b5a",
+      "bytes": 13462
+    },
+    "runs/mistral-framing-001/attempts/000258.json": {
+      "sha256": "2ff21d7daf7a6512b81e425fd037fdfec39934f28cba186595f790a1f4a30ad6",
+      "bytes": 9408
+    },
+    "runs/mistral-framing-001/attempts/000608.json": {
+      "sha256": "6c44153ed788a66b8b962517426b506f18580f544fe9ed38cb3bf57aab7a1e43",
+      "bytes": 11134
+    },
+    "runs/mistral-framing-001/attempts/000521.json": {
+      "sha256": "19667b931752470fe30945150337f672338e434a48ed15301cde0fb3f6a83fe7",
+      "bytes": 8182
+    },
+    "runs/mistral-framing-001/attempts/000171.json": {
+      "sha256": "ddf995dca7ba69161d7b3d739e54331c3022e57b779059c2428698a4e8867993",
+      "bytes": 9060
+    },
+    "runs/mistral-framing-001/attempts/000464.json": {
+      "sha256": "8dbf33be64751f805eb9adfc673ed7067ebb2744c019180ede4c4a1b31491c2b",
+      "bytes": 12052
+    },
+    "runs/mistral-framing-001/attempts/000034.json": {
+      "sha256": "bf195f7a9453e6cea7c8e336e455866fbcba66896d3c84935994ed0383c91e1a",
+      "bytes": 7420
+    },
+    "runs/mistral-framing-001/attempts/000126.json": {
+      "sha256": "da3b8edc1f001278e672522ec74c85285fe7a4df9869d5c7b99657e57af9de68",
+      "bytes": 10224
+    },
+    "runs/mistral-framing-001/attempts/000576.json": {
+      "sha256": "dee693b5475e0b09a4d09924aed5fa3dcdf34bec3c068c972203fcb0b311e5f9",
+      "bytes": 9179
+    },
+    "runs/mistral-framing-001/attempts/000599.json": {
+      "sha256": "240fb9b2c3333cb21789d83a8f5b635df6d2bff7beefe972114c170bc01c1ce0",
+      "bytes": 10746
+    },
+    "runs/mistral-framing-001/attempts/000063.json": {
+      "sha256": "4afea5ebd118403e7751e705eac359ce27d6c79ef4e3ff090f6b63755312d8ae",
+      "bytes": 7511
+    },
+    "runs/mistral-framing-001/attempts/000433.json": {
+      "sha256": "b335666496a4212b030241162865b8bf70b7f0af184cd676994e2c3a84277f0c",
+      "bytes": 10080
+    },
+    "runs/mistral-framing-001/attempts/000624.json": {
+      "sha256": "e0227ee97da64e31ffabeeb8681b60cb4b5f7cd68ea6d3c66169fbb7257066db",
+      "bytes": 10686
+    },
+    "runs/mistral-framing-001/attempts/000274.json": {
+      "sha256": "3df9abc9e1cd4c9875f5f6dff51627b7033aa1714c238b095855fe8abed645f1",
+      "bytes": 14934
+    },
+    "runs/mistral-framing-001/attempts/000331.json": {
+      "sha256": "5d04c66f54ca79c0730ba7c3c23dbdcdcdab3a778f06c46c7841c4ed2198ca1f",
+      "bytes": 9067
+    },
+    "runs/mistral-framing-001/attempts/000018.json": {
+      "sha256": "f5f23dad1e88f12c13caf377c2868d51ed33202af6253fe6e045c86ae241563b",
+      "bytes": 7868
+    },
+    "runs/mistral-framing-001/attempts/000448.json": {
+      "sha256": "69343fb98fa0a8c55267857fd8272083e2901df0536ac8985e7850b788fc20f6",
+      "bytes": 10288
+    },
+    "runs/mistral-framing-001/attempts/000223.json": {
+      "sha256": "9c85d8c08cd7cf910b8a6e6343e5409a9242175e0a68072a6de37e9e0e89bc0d",
+      "bytes": 9083
+    },
+    "runs/mistral-framing-001/attempts/000389.json": {
+      "sha256": "765d288da1db42c8dff9cb097125894c686913b41874c5e1e0935e55448507c9",
+      "bytes": 10368
+    },
+    "runs/mistral-framing-001/attempts/000673.json": {
+      "sha256": "57ecf425d6963e8d5a718f20b139ff8e36f66d6ed1be6ed46aaf827557d24780",
+      "bytes": 13861
+    },
+    "runs/mistral-framing-001/attempts/000366.json": {
+      "sha256": "80d8147fdf1eace7deb2525591fdcc62c1711879a7be7473f508f171e9818f63",
+      "bytes": 11907
+    },
+    "runs/mistral-framing-001/attempts/000665.json": {
+      "sha256": "6a917ddbcb4380dc96475aaa2c62c8dde2c12e83d8dd0d1027d478a0b6b4296b",
+      "bytes": 10711
+    },
+    "runs/mistral-framing-001/attempts/000235.json": {
+      "sha256": "a7874ad0fce0932895344fabd5ba57c3e6d7621c65e546dd78fd84a28a0fbde3",
+      "bytes": 12252
+    },
+    "runs/mistral-framing-001/attempts/000370.json": {
+      "sha256": "77113a0c4e7f46c21d8dad73ec2d09625b7ddda36a375da0706f038e2ad7d401",
+      "bytes": 11752
+    },
+    "runs/mistral-framing-001/attempts/000059.json": {
+      "sha256": "070bf2a3208f3f179a28ba1b751cfaea8d7119036792bc401fc959f6ff5ecaba",
+      "bytes": 5229
+    },
+    "runs/mistral-framing-001/attempts/000409.json": {
+      "sha256": "0d6699ae3ea8e9b426d70054dd1c7c13fb16b325db3e764c73018c5367bb6212",
+      "bytes": 10032
+    },
+    "runs/mistral-framing-001/attempts/000262.json": {
+      "sha256": "d3980b3a4148f09055bd01e4bf734f17428dcedf3f3bcb0c3ed3da347cb38017",
+      "bytes": 9816
+    },
+    "runs/mistral-framing-001/attempts/000632.json": {
+      "sha256": "7c189cf57035d7a9a3fc0232df7cc69ef2997a34d2d67be2dcc5c6cafe671287",
+      "bytes": 8811
+    },
+    "runs/mistral-framing-001/attempts/000327.json": {
+      "sha256": "456b3bfc60c21011d87f84206b31f11d52cabd6ce5c6595afde683ce632a0b69",
+      "bytes": 8813
+    },
+    "runs/mistral-framing-001/attempts/000263.json": {
+      "sha256": "15dd65c4cf28d93eb06603e7b10fb6fb69ed9bccc7cd6d37dbedfbfa47e5a7b8",
+      "bytes": 10575
+    },
+    "runs/mistral-framing-001/attempts/000633.json": {
+      "sha256": "75fa733c29b49a5127a05beb7ddbf56c1427d1de64d577adc48912be858cc36d",
+      "bytes": 12952
+    },
+    "runs/mistral-framing-001/attempts/000326.json": {
+      "sha256": "28e8da3b99fcb1be433b2e153e991e608ed6baafd8d95c5a59708f83720f0041",
+      "bytes": 9152
+    },
+    "runs/mistral-framing-001/attempts/000058.json": {
+      "sha256": "b91751e2d8a078f13417d6a204c9a7c04e100d2b6a02751077fbc1f7ea937d20",
+      "bytes": 3762
+    },
+    "runs/mistral-framing-001/attempts/000408.json": {
+      "sha256": "e11d23743c0ec697f810bbdd48efedae52323dd130c1e84eecd5689f4f686184",
+      "bytes": 8722
+    },
+    "runs/mistral-framing-001/attempts/000664.json": {
+      "sha256": "f0d5fffba1533095ed2a25dd2db4420f4afb37693c84fdbb8f97497d5a818c5a",
+      "bytes": 10879
+    },
+    "runs/mistral-framing-001/attempts/000234.json": {
+      "sha256": "82114a77156baceb26e4507313f6a86b74db5f6b22fe2d94975f066e4f762645",
+      "bytes": 11340
+    },
+    "runs/mistral-framing-001/attempts/000371.json": {
+      "sha256": "c0cdc1d14b4ee59f51ec75c03a0279575dece9a4fb65e9bb150ebadf2e3ca7bf",
+      "bytes": 12838
+    },
+    "runs/mistral-framing-001/attempts/000222.json": {
+      "sha256": "6ef1cd0dae82d6450649cf20366e828902e269193ef8cd761efe3b713a25fd4a",
+      "bytes": 11434
+    },
+    "runs/mistral-framing-001/attempts/000388.json": {
+      "sha256": "2cdd82fa51e965267c24d9512d6f0a5dce2ddb36604be28e557f11dd40be2905",
+      "bytes": 11179
+    },
+    "runs/mistral-framing-001/attempts/000672.json": {
+      "sha256": "e0dd18142b7bd3332648f04d69861fc2349fd16bfbea2ce754e4ab23c04d40f9",
+      "bytes": 12870
+    },
+    "runs/mistral-framing-001/attempts/000367.json": {
+      "sha256": "9281fac77d4f424363d494312387a62a44a77d7c30e12c29afa6379e5d5bd43b",
+      "bytes": 10585
+    },
+    "runs/mistral-framing-001/attempts/000019.json": {
+      "sha256": "b77cf3c8360314256da8a7caa01ea6ad0022ba4a8fa3e16fa2d8291516474e90",
+      "bytes": 3753
+    },
+    "runs/mistral-framing-001/attempts/000449.json": {
+      "sha256": "7a3f4abd7ab9727a73711b0e2cbf65a3bcf4d0fe4c0fca593e0d4d64c8e8815e",
+      "bytes": 10489
+    },
+    "runs/mistral-framing-001/attempts/000625.json": {
+      "sha256": "c2a5b95a34fb3f3ff92952242ea8938d59f9e6cf8ddfbad2891d6d45b6a5b175",
+      "bytes": 10214
+    },
+    "runs/mistral-framing-001/attempts/000275.json": {
+      "sha256": "aa64f7fa7fe515c20332c695c447802261c8e4afa81e83687e30425f036d5662",
+      "bytes": 10796
+    },
+    "runs/mistral-framing-001/attempts/000330.json": {
+      "sha256": "28a4edcc106e16c22b66033061e09754667410ad69702fb6f07b265636708a4e",
+      "bytes": 11046
+    },
+    "runs/mistral-framing-001/attempts/000127.json": {
+      "sha256": "5a4df1d384965d208e599bb01f3cf6c9bde61eebfdd11678aa00ba6016959890",
+      "bytes": 10102
+    },
+    "runs/mistral-framing-001/attempts/000577.json": {
+      "sha256": "f9527fe116e63ae7d26e1d1256636431c30805142c28de5d111d3fab11b7d402",
+      "bytes": 13977
+    },
+    "runs/mistral-framing-001/attempts/000598.json": {
+      "sha256": "5eab055187271e18f28a0124766b6c1422324c756c0572a9f80a68cf15c80d91",
+      "bytes": 8278
+    },
+    "runs/mistral-framing-001/attempts/000062.json": {
+      "sha256": "414fab546f22916f61af2978491e2f0fdf92d7a65b46e885a44c0f6df4774dd3",
+      "bytes": 3764
+    },
+    "runs/mistral-framing-001/attempts/000432.json": {
+      "sha256": "6ae49bfc355c8274bcd3c5d19ef3359e69b852ab624aa99d0c3a0adf10686b81",
+      "bytes": 9437
+    },
+    "runs/mistral-framing-001/attempts/000520.json": {
+      "sha256": "a9a37181b5ecd106ee2096a82085a431d098995f401302b16b09d63626c90aeb",
+      "bytes": 9705
+    },
+    "runs/mistral-framing-001/attempts/000170.json": {
+      "sha256": "e30f9f00696da749d6c46b0055c951c7ed7068c5374ebfe07326b38bca81b645",
+      "bytes": 8098
+    },
+    "runs/mistral-framing-001/attempts/000465.json": {
+      "sha256": "51f2d2bc0afb8e7ae3e6dd629e8317005e833dc3723b58c8acd68e0681ae77b4",
+      "bytes": 13950
+    },
+    "runs/mistral-framing-001/attempts/000035.json": {
+      "sha256": "cb73fa6a7e98ccd8fe3e9c4e95b244872e64711beade66dc2ed1dd913cd1e0e7",
+      "bytes": 3761
+    },
+    "runs/mistral-framing-001/attempts/000259.json": {
+      "sha256": "224a888d011df7200067e5936b99033c0d530f694086bf05f8dd4d8b4c76e4b4",
+      "bytes": 13819
+    },
+    "runs/mistral-framing-001/attempts/000609.json": {
+      "sha256": "130acae431c9712cd39f6afafb4b3ce89d7b65903d8851cb39e3f86b6899201a",
+      "bytes": 9889
+    },
+    "runs/mistral-framing-001/attempts/000166.json": {
+      "sha256": "cb8a080d34c2abe57fd54f0f517e174f62fd7f1c41bacd1fc857e019262490d8",
+      "bytes": 8864
+    },
+    "runs/mistral-framing-001/attempts/000536.json": {
+      "sha256": "c6f0f870a342020cfd66c4561a20230e3f341dd9693f86e1734874b271d2b1bb",
+      "bytes": 12703
+    },
+    "runs/mistral-framing-001/attempts/000023.json": {
+      "sha256": "bd21b4a8d320da5eb90521fd86d67ad018b34498283dcb5f8e40bbf90a414cc5",
+      "bytes": 3739
+    },
+    "runs/mistral-framing-001/attempts/000189.json": {
+      "sha256": "17348cd4a7b0cb4a30688c00f786d6eb90de32080a9beadc48d4d522c575da25",
+      "bytes": 10819
+    },
+    "runs/mistral-framing-001/attempts/000473.json": {
+      "sha256": "c6bf60af9f7877d69baa4e6ce93837501401b4293f107b0c3e102a7cf4e6f22a",
+      "bytes": 10713
+    },
+    "runs/mistral-framing-001/attempts/000561.json": {
+      "sha256": "9f98db90c8e57a3327d42e49effc88347be7e4ae70dbf9043f83ad292cb92ebf",
+      "bytes": 9395
+    },
+    "runs/mistral-framing-001/attempts/000131.json": {
+      "sha256": "c2dbfd5567ee3d5e2268c205d5d5dfafc57ea5a95ce1c96cade52e24ffb44803",
+      "bytes": 9535
+    },
+    "runs/mistral-framing-001/attempts/000424.json": {
+      "sha256": "a08b9d6d3615ebc9ec0b50067c97dbd4954fab1cbfd49baa974c3467372b205e",
+      "bytes": 10815
+    },
+    "runs/mistral-framing-001/attempts/000074.json": {
+      "sha256": "efa798215a761372296aa2b0be4dbf99a5bf08d18c72be9fd13e6ff9cb4c26a4",
+      "bytes": 3763
+    },
+    "runs/mistral-framing-001/attempts/000218.json": {
+      "sha256": "623fe106a5b11052c1b27ef3a3a4e8124175017edd5818da72dccef72ce57b30",
+      "bytes": 9869
+    },
+    "runs/mistral-framing-001/attempts/000648.json": {
+      "sha256": "4522ac8cb1ad36284bcfdf557f1a3733e7b76561d3af3807975682cdd58deb3b",
+      "bytes": 17651
+    },
+    "runs/mistral-framing-001/attempts/000280.json": {
+      "sha256": "620b61d02d9717e0f6a7730de84d9f180dc5ce589e1800dfc32fd132b3031482",
+      "bytes": 8633
+    },
+    "runs/mistral-framing-001/attempts/000003.json": {
+      "sha256": "9623a6eeb0f4421d0588c1c96fbb2e2b5230d83ff5744cff0fcf623aee7baee8",
+      "bytes": 7706
+    },
+    "runs/mistral-framing-001/attempts/000453.json": {
+      "sha256": "194fa6a0aac307c8463cf9f8a57e3a9dc26313069958f46e4ca087406622f16d",
+      "bytes": 8111
+    },
+    "runs/mistral-framing-001/attempts/000146.json": {
+      "sha256": "a675b35700adb75caddaf96fa0d2e0155baf7e35b311fe4d3fe8df791755acf8",
+      "bytes": 8299
+    },
+    "runs/mistral-framing-001/attempts/000516.json": {
+      "sha256": "c2f35635e0e335c4fdbf872c3a0967f34206a0e6b499d1eeedeadcbfba215df6",
+      "bytes": 12268
+    },
+    "runs/mistral-framing-001/attempts/000238.json": {
+      "sha256": "e3a5a44d57c407547c76326d0dcf41fa597344ca8c4b88b08669185fb5bc4c42",
+      "bytes": 8925
+    },
+    "runs/mistral-framing-001/attempts/000392.json": {
+      "sha256": "c6aa92339dbad36a9854128fe2267c9182934b76cb9e81850afbddaddabae50d",
+      "bytes": 12652
+    },
+    "runs/mistral-framing-001/attempts/000668.json": {
+      "sha256": "91c6bcab0c13db3e58b9c6cb2d232b9edc2a95a7628ad16d590aa31f39851073",
+      "bytes": 11161
+    },
+    "runs/mistral-framing-001/attempts/000404.json": {
+      "sha256": "c55eb54224df7d62951e35089158f686b12e9abe678cff554365ed004ffab1e6",
+      "bytes": 9032
+    },
+    "runs/mistral-framing-001/attempts/000054.json": {
+      "sha256": "3d490211d136a498fb876f9d0045f7733c88319883c6c7e73ea92782a5fef65b",
+      "bytes": 3756
+    },
+    "runs/mistral-framing-001/attempts/000541.json": {
+      "sha256": "3795e0dd8eec4665267adf5a0310e78c52a47348456466f9491a3ae2e92afa2c",
+      "bytes": 8684
+    },
+    "runs/mistral-framing-001/attempts/000111.json": {
+      "sha256": "68047e964b8ec53f0ce92e1e8e00c8c6acc2a23aa108b465e37602acb5d4ede0",
+      "bytes": 14416
+    },
+    "runs/mistral-framing-001/attempts/000384.json": {
+      "sha256": "14b48ac5db708780e0302e9b065a85bbdfacaaa483b92363889b9a93431994b8",
+      "bytes": 8996
+    },
+    "runs/mistral-framing-001/attempts/000042.json": {
+      "sha256": "bf8d4e6a013d8051b263a7d516dd456eb15cadfd42dc903f6aa9ad809500ad14",
+      "bytes": 6675
+    },
+    "runs/mistral-framing-001/attempts/000412.json": {
+      "sha256": "3adb127f291f68369c96808002d937c402e181893564e4159844a7ccbadae110",
+      "bytes": 8739
+    },
+    "runs/mistral-framing-001/attempts/000107.json": {
+      "sha256": "182d70fbbbb9bfa4a91720eccce5d4c6422e1f2815c92c7358b45d90b772c7da",
+      "bytes": 8801
+    },
+    "runs/mistral-framing-001/attempts/000557.json": {
+      "sha256": "0f9b9b5edd8fc28bf8a8a9f94a23ceea6c44a30dc47bc78c3859b6c587973ce9",
+      "bytes": 11657
+    },
+    "runs/mistral-framing-001/attempts/000279.json": {
+      "sha256": "27bab437f54b5711f8c900660bafe6905abebac4f184ccb782b8e747fb82cffe",
+      "bytes": 16434
+    },
+    "runs/mistral-framing-001/attempts/000629.json": {
+      "sha256": "d985450014b5253f09a20b36f8e5b5f34e8554ac033b5f6d7ece5e834c223ed7",
+      "bytes": 10073
+    },
+    "runs/mistral-framing-001/attempts/000296.json": {
+      "sha256": "cfdb7388c9c8ca781582b6c2b1851652b7778ad05defef17994a8fd5def31389",
+      "bytes": 10776
+    },
+    "runs/mistral-framing-001/attempts/000445.json": {
+      "sha256": "6a1530afc8e9eb9035c169752634c9d09c037f0ae2420ed55a9f178fdf316a38",
+      "bytes": 10133
+    },
+    "runs/mistral-framing-001/attempts/000015.json": {
+      "sha256": "1e7f43ba628c4af67aa09575b1a7d4eb06ab4fb4eada9b4d473201c6355c11ec",
+      "bytes": 3743
+    },
+    "runs/mistral-framing-001/attempts/000500.json": {
+      "sha256": "d40f5bc0e2c2233c3204e944ce835631a113acd11e76907a8570f5e765dc68fc",
+      "bytes": 10980
+    },
+    "runs/mistral-framing-001/attempts/000150.json": {
+      "sha256": "62dc59104481e675679e3b6098ab70abb915e01654e8ad234204d5fff226896d",
+      "bytes": 8635
+    },
+    "runs/mistral-framing-001/attempts/000347.json": {
+      "sha256": "76cc187e693b3fb70513bc61840b0de785164537d97d3ab204c8d06a2917352f",
+      "bytes": 11107
+    },
+    "runs/mistral-framing-001/attempts/000202.json": {
+      "sha256": "071a69245020f3e94aa03c5aa17f84c1dd217c29117227fae83b20a8aba53cf4",
+      "bytes": 8781
+    },
+    "runs/mistral-framing-001/attempts/000652.json": {
+      "sha256": "af1ac3449dc9835b6d0e1b3866e2d1e7c753e6060ee3afaeb2fa24efd93e8b72",
+      "bytes": 13564
+    },
+    "runs/mistral-framing-001/attempts/000081.json": {
+      "sha256": "d4e6cf7c3578b51796deb74688830055004feaa9d21c128f9f4623eae9d47284",
+      "bytes": 3748
+    },
+    "runs/mistral-framing-001/attempts/000594.json": {
+      "sha256": "94fe1dc03fbf6954268e1751221e5e2ddd67d703a200d1ebae5654135738d7a4",
+      "bytes": 12991
+    },
+    "runs/mistral-framing-001/attempts/000310.json": {
+      "sha256": "a51371b02568834e50506abf41341b672a1b3770e5dac32001dba7d717851b13",
+      "bytes": 11357
+    },
+    "runs/mistral-framing-001/attempts/000605.json": {
+      "sha256": "dfe58fceece467ac5621de86017a7a75232236bfd59ee1e10a791f048af469df",
+      "bytes": 11964
+    },
+    "runs/mistral-framing-001/attempts/000255.json": {
+      "sha256": "bc8935cf7ddb034773a1a61871cab915a58094fc21f66373f4d5360fdc90db5b",
+      "bytes": 8804
+    },
+    "runs/mistral-framing-001/attempts/000486.json": {
+      "sha256": "8f848c79fa2684fcad119539db997b01208f3aee38c37ccc2d2cf6dd5b5a47b5",
+      "bytes": 10634
+    },
+    "runs/mistral-framing-001/attempts/000039.json": {
+      "sha256": "f3a41d3b6a904c0ca099339c9ecf3a2751f53c801e816c217cf5a643903613cd",
+      "bytes": 3758
+    },
+    "runs/mistral-framing-001/attempts/000193.json": {
+      "sha256": "5461c611b64c9883209e1d4ca914515ed74dad77d765c55d86d99d95ece3ccc4",
+      "bytes": 11748
+    },
+    "runs/mistral-framing-001/attempts/000469.json": {
+      "sha256": "3c84c05ce6e7099a85dd15fbc28844f3b999cca8e2b1e4d4ffff290c5afc9a9c",
+      "bytes": 7476
+    },
+    "runs/mistral-framing-001/attempts/000306.json": {
+      "sha256": "c26fcea7064732c13d8dc8f7d9b19865e521d81735e5b8f1061c7b9b10658170",
+      "bytes": 7896
+    },
+    "runs/mistral-framing-001/attempts/000243.json": {
+      "sha256": "6b7f8ac442545a6c4fcd88110a715e7dec818dbfa881482308805fb121ee90a6",
+      "bytes": 11883
+    },
+    "runs/mistral-framing-001/attempts/000613.json": {
+      "sha256": "be6588f184ce8f4d0efa1020af4b6381f61ae9e83f3426c2d0c67a0cc81b588b",
+      "bytes": 11092
+    },
+    "runs/mistral-framing-001/attempts/000490.json": {
+      "sha256": "cb820885fab825871fd014cb858571e54605660cef76aa9f28ad89c3c121b085",
+      "bytes": 8440
+    },
+    "runs/mistral-framing-001/attempts/000185.json": {
+      "sha256": "e20d0eea4a737af30953f153af4843a68a18adf08e21214c4f55cd2dcfd8f67b",
+      "bytes": 11773
+    },
+    "runs/mistral-framing-001/attempts/000351.json": {
+      "sha256": "585f3c167d77145edabec433b92e7e4690e52e7bbd5f073749a420adfdcaebd8",
+      "bytes": 10855
+    },
+    "runs/mistral-framing-001/attempts/000644.json": {
+      "sha256": "e03e50f3c041fe3ddfbaaf86f573e8cec35bb115d631574b9106b075d4023cb5",
+      "bytes": 8524
+    },
+    "runs/mistral-framing-001/attempts/000214.json": {
+      "sha256": "5f89b0af0708763cd93eaaa94362f07ef62108f4a3c681fcc610b4cbefb1577a",
+      "bytes": 10391
+    },
+    "runs/mistral-framing-001/attempts/000097.json": {
+      "sha256": "f9633b32256664d88dd22748240dc8dbff0a6bc5bd5708f2336cbf3eac8dff67",
+      "bytes": 6562
+    },
+    "runs/mistral-framing-001/attempts/000582.json": {
+      "sha256": "c5cd580f2c3122191a910e965732171439a7b3d2105635ae8876e850e84e82a5",
+      "bytes": 10039
+    },
+    "runs/mistral-framing-001/attempts/000078.json": {
+      "sha256": "2ddc6744f8953d915ec2f5dd80a1e0c579c7facb979686786493e99ab84631bc",
+      "bytes": 3757
+    },
+    "runs/mistral-framing-001/attempts/000428.json": {
+      "sha256": "8dd6bc72f010379a2e1f3f13587b225129bbd16c030f3f65f6fa95557f9814fa",
+      "bytes": 9339
+    },
+    "runs/mistral-framing-001/rows.json": {
+      "sha256": "0bc902e094f3e5a911a5710f05dfb707f90bf4d61da2fcab5e5d2770e8759be8",
+      "bytes": 2889812
+    },
+    "runs/mistral-framing-001/preview.json": {
+      "sha256": "e41614b1fd3101a6fbbea255113df8c2b0e4f6c7ee54158c5dc0743ef74c9cc5",
+      "bytes": 1959597
+    },
+    "runs/mistral-framing-001/execution.json": {
+      "sha256": "e6ffabb652b763aa540ff06fd692483d5c42caec804d3dd1ae290d6e1a044b1d",
+      "bytes": 214
+    }
+  }
+}

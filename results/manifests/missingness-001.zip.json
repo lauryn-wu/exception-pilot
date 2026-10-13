@@ -1,0 +1,77 @@
+{
+  "archive": "results/archives/missingness-001.zip",
+  "members": {
+    "runs/missingness-001/summary.json": {
+      "sha256": "820b1b791ecee7a9e1508b04d9a4e14efca97ce5bbdee4f0641dcb6b629daf92",
+      "bytes": 30794
+    },
+    "runs/missingness-001/run.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/missingness-001/answers.csv": {
+      "sha256": "ebcd96801691b7dc61704a9eaebc55fd54a9c072021fb3364c0dd8ab58bdaa78",
+      "bytes": 4685
+    },
+    "runs/missingness-001/plan.json": {
+      "sha256": "de2f407bdff602b924b7c5262f16a7c62cf11e1971fda1fd375f7d463716cc5c",
+      "bytes": 117593
+    },
+    "runs/missingness-001/summary.md": {
+      "sha256": "a5fb4f5285eda945737be9ca59a15bd621890d5b1c5599939f1b81dce4cff525",
+      "bytes": 3112
+    },
+    "runs/missingness-001/preview.md": {
+      "sha256": "14d77c9d7bd5a7d0deb7a259da1742aad50694913a64ea5df8c5ad6e48a2ce3b",
+      "bytes": 26375
+    },
+    "runs/missingness-001/attempts/000001.json": {
+      "sha256": "50a9f8ae1e735d4900edff7c64a819bf7b049026f56ef2b3617528cb53250ac7",
+      "bytes": 7778
+    },
+    "runs/missingness-001/attempts/000006.json": {
+      "sha256": "254cdf35ef31a7ee2a0b18b6beaab2b7429b5516d9d85464322828843fe2d299",
+      "bytes": 7307
+    },
+    "runs/missingness-001/attempts/000010.json": {
+      "sha256": "4ec835d12ccd6ef70149da319ff2d50cd089b1b9d3d42f15fb384fa91cf2292c",
+      "bytes": 7585
+    },
+    "runs/missingness-001/attempts/000007.json": {
+      "sha256": "8199045a7c3fce9c6d350f4abb7baaf7711e0dfd9ffab6a9b63606e71d386560",
+      "bytes": 7308
+    },
+    "runs/missingness-001/attempts/000008.json": {
+      "sha256": "d43ae632e4be7786bda5bfa88724888e98b02a84423900ffd71bf586f7683d27",
+      "bytes": 7357
+    },
+    "runs/missingness-001/attempts/000004.json": {
+      "sha256": "8b5da93c41948bae5b3cb2491b74f8d5fed1afefaaf76b1cb8bb1ba4ba7980aa",
+      "bytes": 7912
+    },
+    "runs/missingness-001/attempts/000005.json": {
+      "sha256": "f125e82c19e334d7380b6e59f88779e72e6155e0d24c4fa58ea25bf0528c3215",
+      "bytes": 7494
+    },
+    "runs/missingness-001/attempts/000009.json": {
+      "sha256": "7aee5a98d35c814d74fe0d6a1725e09d8b730907001ade6b20d8c9ea4f465250",
+      "bytes": 6919
+    },
+    "runs/missingness-001/attempts/000002.json": {
+      "sha256": "6f80b314bf9cfdf6ba050425c59cf9a9c1f1c7a59fe8847672a679535e9a3099",
+      "bytes": 8186
+    },
+    "runs/missingness-001/attempts/000003.json": {
+      "sha256": "67a0d1c580dc2b7e0cb02c706fdb0609077b62190c9eab4649a865c7956b4caa",
+      "bytes": 7600
+    },
+    "runs/missingness-001/preview.json": {
+      "sha256": "1ddf1998df4645d26f172217a55b88cc00b50aad5119f42c92ee71fb1432c2d5",
+      "bytes": 118019
+    },
+    "runs/missingness-001/execution.json": {
+      "sha256": "4418528c82439134f875974e82aaafe661c53e674b232da1a18bd7728e0eaf5a",
+      "bytes": 209
+    }
+  }
+}

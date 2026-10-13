@@ -1,0 +1,43 @@
+{
+  "slot": "08_prompt_context",
+  "status": "rejected_or_unusable",
+  "requested_fields": [
+    "max_tokens",
+    "messages",
+    "model",
+    "n",
+    "prompt_logprobs",
+    "random_seed",
+    "reasoning_effort",
+    "safe_prompt",
+    "stream",
+    "temperature",
+    "top_p"
+  ],
+  "http_status": 400,
+  "response_bytes": 164,
+  "response_sha256": "1830cac6acc2d869e6cb8a1b3eb8e3708886b02222ba7d84f512589b772a6f44",
+  "headers": {
+    "Date": "Tue, 13 Oct 2026 01:41:53 GMT",
+    "Content-Type": "application/json"
+  },
+  "returned_model": null,
+  "response_id": null,
+  "usage": null,
+  "probability_fields": {
+    "logprobs": {
+      "status": "not_returned",
+      "valid_token_rows": 0,
+      "scored_rows": 0,
+      "rows_with_top_k": 0,
+      "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+    },
+    "prompt_logprobs": {
+      "status": "not_returned",
+      "valid_token_rows": 0,
+      "scored_rows": 0,
+      "rows_with_top_k": 0,
+      "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+    }
+  }
+}

@@ -1,0 +1,405 @@
+{
+  "archive": "results/archives/mistral-map-v2-001-snapshot-6ec09bd13ed7.zip",
+  "members": {
+    "runs/mistral-map-v2-001/answers.csv": {
+      "sha256": "822c1ca168d6a264eeb1ad5cd7ada63e70999c377e5b7d1ebc3c8de2b085573e",
+      "bytes": 165738
+    },
+    "runs/mistral-map-v2-001/attempts/000001.json": {
+      "sha256": "918ad2c27b53b0489aafd3d2769f6afc66e536c6b2795cad6054b009eed70433",
+      "bytes": 3241
+    },
+    "runs/mistral-map-v2-001/attempts/000002.json": {
+      "sha256": "3d841ed4ab5ec23868b54b55853d40853096d3f8829670da3d53d14476027373",
+      "bytes": 4508
+    },
+    "runs/mistral-map-v2-001/attempts/000003.json": {
+      "sha256": "7b0133570f36d0ccbae81fd63d5957b813e741b447e70208612cf71ff8174db4",
+      "bytes": 4512
+    },
+    "runs/mistral-map-v2-001/attempts/000004.json": {
+      "sha256": "1d18cdcc5d28b2b8a3474b253539d0f36257991ddc4ec6dd220d91b548959ef2",
+      "bytes": 8300
+    },
+    "runs/mistral-map-v2-001/attempts/000005.json": {
+      "sha256": "b127957435f624ae299e4a63d60b903d6c8dd7122585766bb7fc527c886f6aad",
+      "bytes": 10490
+    },
+    "runs/mistral-map-v2-001/attempts/000006.json": {
+      "sha256": "6e37dfeebef7664f0c4847259b607c0c3e946b3fc39047bb1296ceba77b9b012",
+      "bytes": 12184
+    },
+    "runs/mistral-map-v2-001/attempts/000007.json": {
+      "sha256": "183028c498d3bf37a3ec05a4c0f6d04d2bc454450c27120472038bbbbcfc9bc3",
+      "bytes": 4294
+    },
+    "runs/mistral-map-v2-001/attempts/000008.json": {
+      "sha256": "9ddea36480ee6d02be2a9d940616f414aeebf0ca0b06ef399a8d00327ab77228",
+      "bytes": 4294
+    },
+    "runs/mistral-map-v2-001/attempts/000009.json": {
+      "sha256": "71db3cfb44f2eb3a2f9809d3c28722a806ee27f0e3aeece31bd25ab4cac592f8",
+      "bytes": 10334
+    },
+    "runs/mistral-map-v2-001/continuations-to-code.csv": {
+      "sha256": "65c59a9bf3013cf29af6e08083aa76f97bfefd6085b88025f13cdca38b84f33a",
+      "bytes": 100
+    },
+    "runs/mistral-map-v2-001/execution.json": {
+      "sha256": "95c070cb29adbed12d762eb56fa455b4a094c0f93c0eca5666a68b37b08f296f",
+      "bytes": 470
+    },
+    "runs/mistral-map-v2-001/plan.json": {
+      "sha256": "0a33aee712dd5314b5ff54e5c514ffaebb492bd9d954078cabc13f3db8920835",
+      "bytes": 536053
+    },
+    "runs/mistral-map-v2-001/preview.json": {
+      "sha256": "370a4ae02b349470fcd5d00d5e8e650f96ee0b90c27683ddc5626c503376f75d",
+      "bytes": 4180613
+    },
+    "runs/mistral-map-v2-001/preview.md": {
+      "sha256": "d0fc12856e0826b6adbe96e5d1c49b476e924be07d42c729ab6e383cffb1fe7f",
+      "bytes": 106474
+    },
+    "runs/mistral-map-v2-001/source-map-v1/attempts/000001.json": {
+      "sha256": "850e807c76adfababc07882c3be60f69485e9d6785400fa5f8b8587cb19809dc",
+      "bytes": 2524
+    },
+    "runs/mistral-map-v2-001/source-map-v1/attempts/000002.json": {
+      "sha256": "5ca643f16c9aa451e69269fdf34a2ba1e5099be3d164dd9104802bcb28e6fe72",
+      "bytes": 3791
+    },
+    "runs/mistral-map-v2-001/source-map-v1/attempts/000003.json": {
+      "sha256": "d1ef2e3447e49fd3571ce574c726e9dae4eb929754311db680e5d3d1871ad79e",
+      "bytes": 3795
+    },
+    "runs/mistral-map-v2-001/source-map-v1/attempts/000004.json": {
+      "sha256": "45c23767f10dd287bd6a0cd3cf86f952194a5f8133e2b31a8643b8af06ff09b1",
+      "bytes": 7584
+    },
+    "runs/mistral-map-v2-001/source-map-v1/attempts/000005.json": {
+      "sha256": "8ac8e2c6fbec319689152e2c8c2e300597e8db7476d0ab7a5348d003bcc60d63",
+      "bytes": 9774
+    },
+    "runs/mistral-map-v2-001/source-map-v1/attempts/000006.json": {
+      "sha256": "36b4cd5bc67e617aed02f33c421e8569c3d394674de58bb55effc949dccebf6e",
+      "bytes": 11469
+    },
+    "runs/mistral-map-v2-001/source-map-v1/execution.json": {
+      "sha256": "d1e0b61aa2c9a0f00910e45c02e902732c98c1fc5a37772e2c5a3a25ea679ce1",
+      "bytes": 216
+    },
+    "runs/mistral-map-v2-001/source-map-v1/plan.json": {
+      "sha256": "5f26198c5df198901479bb298229c412669a9115b8b238d42d111c6c2dea60df",
+      "bytes": 534256
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000001.json": {
+      "sha256": "a6b684ff719338f26e4185632e014ea4eadb7d4b029753dbda2bd22a9ea05d16",
+      "bytes": 2389
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000002.json": {
+      "sha256": "d0c4874e50787a81ff40d22e1d51c6d7b1af5283f482c7db8350a026a5fdb45b",
+      "bytes": 3656
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000003.json": {
+      "sha256": "5aaff89462b9cd87f32ff036e955ca12c455ae92f830a40f28cc41570dcf8bb5",
+      "bytes": 3656
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000004.json": {
+      "sha256": "f74fa5c21f597357c992a6a59e3b731f3b6cc525d70d70f1c52871d750980e45",
+      "bytes": 6171
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000005.json": {
+      "sha256": "b9fc396fc501c15b76f0595a594c0f941cfeb3226b03ab0036e305139808f1c8",
+      "bytes": 5653
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000006.json": {
+      "sha256": "1c583d85ef492612d6863b4ce3986ad9f5c0d92ba5240a5d90b2efa5deba0376",
+      "bytes": 7747
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000007.json": {
+      "sha256": "682229bbb0e4e9d695678d34ccf9b7b13fcea18d5d5aa7ecc074f5fe1f98e9a3",
+      "bytes": 3666
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000008.json": {
+      "sha256": "e7be345c12a2f02e204c33f8d75547d04a460b9b66b56d2b23686aae6637fe77",
+      "bytes": 3664
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000009.json": {
+      "sha256": "2a2ec557116964edd81d401c358bc1d2e0fac8f91c66c3812d6cb626fe30c779",
+      "bytes": 8161
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000010.json": {
+      "sha256": "6dc39e7f53886db73c0cb9784744960f13a32e640981596baa4e873fee912b4e",
+      "bytes": 5723
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000011.json": {
+      "sha256": "40f2c41ee9c1f034ed09bd2bfd762da5735e87bc303952963533439eb36bd4f0",
+      "bytes": 3672
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000012.json": {
+      "sha256": "77ff73f85fd2cff10b4aaa4781a5578668d995f81004b90d2f42805f475ef68b",
+      "bytes": 3672
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000013.json": {
+      "sha256": "61223a00b4b59be7208101fe0c308cb8d2a0c569f6e17bceafcb9e64bc182946",
+      "bytes": 8015
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000014.json": {
+      "sha256": "ea1fee312261e34ea0d42de3bf57e979177ee94a1a8344e5890c0fb26bea792e",
+      "bytes": 8769
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000015.json": {
+      "sha256": "08fe54ae57bc51e97698baaee756730587737fd3b8ae6c592b09f4a4b99a6eeb",
+      "bytes": 9513
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000016.json": {
+      "sha256": "bfa8164cfc28e7dc937ce04a9013db6942f25d1d6fb609a0322c12cfdbca708b",
+      "bytes": 3664
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000017.json": {
+      "sha256": "ee14f3ab6c88725edf1dc0673fc880e0cde09781f5da86bd34addb1b5398462d",
+      "bytes": 3660
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000018.json": {
+      "sha256": "492b771d906e4c09734e144f8d46089ee4dbf63abe0c3b0dd100dd54d812b84c",
+      "bytes": 3663
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000019.json": {
+      "sha256": "904fbae4a28cd0b5c1cfb21d52c457ae77ee60ea5d4788bf764e9069d23054df",
+      "bytes": 8492
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000020.json": {
+      "sha256": "ca9d5a7c8d271dcbfd1c8a294ac92a8e5331579b9b3a5ca63aa97d0b05f69b84",
+      "bytes": 3665
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000021.json": {
+      "sha256": "5ca59769572a8ad0c29bb830faceb3ea8a9b6a34544bbec1d8ae3643e2aed52f",
+      "bytes": 8596
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000022.json": {
+      "sha256": "c20bc637e717f53e567ed2471744a63ffc69cb4c3fdf46b2184bda4690409f81",
+      "bytes": 3671
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000023.json": {
+      "sha256": "641dd31b17c7f601170916d180d2794a033f10cd0a32de31f5724bbf46370bbf",
+      "bytes": 6376
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000024.json": {
+      "sha256": "4d5d25202f61419f8fd692bd4fdbd5a4455ecda01484c57065e1432db3d9d146",
+      "bytes": 6298
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000025.json": {
+      "sha256": "40f7b9f8ab317e5e71649318abe5dff26cda35b14f5404bf476dc52bbafaa801",
+      "bytes": 3673
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000026.json": {
+      "sha256": "87074db0d3f354eedc573dc6350855af4585de28e8bcd3fad324c4c81bcb0c7a",
+      "bytes": 8690
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000027.json": {
+      "sha256": "41dfac77235958a6ddf496c20fd11fe9855af9b8e0b56920eb1158bec1a275d7",
+      "bytes": 3659
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000028.json": {
+      "sha256": "0ec016309df8207bd7630a6afd87b2ebdcc6aaac96d11ac81339259f8ce49726",
+      "bytes": 3661
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000029.json": {
+      "sha256": "be0af2f517f1219b49e2ba2f3eec738686acf7543063fe0218f060d24548cc5e",
+      "bytes": 8696
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000030.json": {
+      "sha256": "99b7f676451df6a1528c111df4784d0da32a48f33276b2b8adf0b771e231e309",
+      "bytes": 3649
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000031.json": {
+      "sha256": "f685c3259188fec8fd5bc928eba82fc5373931bc7dfb27b8573a351d6410fe90",
+      "bytes": 9638
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000032.json": {
+      "sha256": "b5674c23be1ff749aa96b5fe4ab091d3d6c2204380732987769aa33b1c0629dc",
+      "bytes": 3651
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000033.json": {
+      "sha256": "d6b1cb2f05a9f9476a50c8d81e423242de19a51685c8af59938cb98b796e077d",
+      "bytes": 5982
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000034.json": {
+      "sha256": "40dde8d2ec6b6b22244246b946006c2dcc86ecaa40296c074a99507858382dac",
+      "bytes": 8222
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000035.json": {
+      "sha256": "3f1079d2fdbcf22aa3449ec3910a1a5f13063ee2cc1a25d0f25d03c2091018cb",
+      "bytes": 3645
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000036.json": {
+      "sha256": "1e14d155e2932ae5441f1aff744d64e73b1bb3798240758009d2d8674ecab389",
+      "bytes": 4996
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000037.json": {
+      "sha256": "0eb5bd05717a2b0c05d51a63874ff3a6e51c9a289416702d01f0f303d4a20026",
+      "bytes": 3645
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000038.json": {
+      "sha256": "5c2c3718d27e717f7dbf055491e1a65db6355264cfe2b519b9815fc08dc4b94c",
+      "bytes": 3651
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000039.json": {
+      "sha256": "85403c473fad5094d3604c2dfbaafaa881619f217d43eca6960e77e644293c0d",
+      "bytes": 5828
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000040.json": {
+      "sha256": "d883d9675d0cc00bcf70db4b9486e89b5b6117cd0ec3fc90d48be7f67792e950",
+      "bytes": 3653
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000041.json": {
+      "sha256": "3858950492ada578d969e16f72b0dc3ba6b5d3ee62ec579c2a13fb7cfe4643ab",
+      "bytes": 5674
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000042.json": {
+      "sha256": "e82ad13350935cb624006029805a4cb6ca1aee5f6d5f9ce4173604d238720cb3",
+      "bytes": 7243
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000043.json": {
+      "sha256": "c8ea6e3965385ffbfedaeab233187af28cd5b8a969db25d819239ec407af2dab",
+      "bytes": 3672
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000044.json": {
+      "sha256": "dc00749a52f8bec93654ac17ef61a8d083577ea5eeb78ffed3240e9cfa96a12a",
+      "bytes": 7803
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000045.json": {
+      "sha256": "4f390c1d1b73ee8228b3afe9977f1e7ea9960478c9645ed3f4eb96e147b1b4bc",
+      "bytes": 3672
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000046.json": {
+      "sha256": "83c1a9acd93b5386cd6fffb13bacf987187c82332ce5b8c4cfc96744751a9c14",
+      "bytes": 3658
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000047.json": {
+      "sha256": "046f39c6c8591222b98469a58927376725d639d2983e126a96d83f3ef6f5399a",
+      "bytes": 8177
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000048.json": {
+      "sha256": "ff83fee264b3ee2861ccbd70a47470aa8216dc4871b128a1538debd470202abf",
+      "bytes": 7205
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000049.json": {
+      "sha256": "6db63999c15d8cb74850696bc638875fbafb04471492baecc4cf8462cd394f18",
+      "bytes": 3660
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000050.json": {
+      "sha256": "06a65ac7d39fdb294085aa247a2fc547eb31afffbab9600deb26f14780b61afa",
+      "bytes": 12066
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000051.json": {
+      "sha256": "39ae5a01f6d01370c03f5b27ef4d6b8cee5ce571fb52d5a0811006e1b2e3cfeb",
+      "bytes": 8400
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000052.json": {
+      "sha256": "e5a8c8f6c2d9aca4687acf5347a8a070154352ebda9eb7cd456debb015d2241d",
+      "bytes": 13907
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000053.json": {
+      "sha256": "ded5552fd876f3435d828ef229264d836eb80c3b85bbba77f4187ad13ff3e124",
+      "bytes": 12057
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000054.json": {
+      "sha256": "7e786bc0b11fac62974917bf1594a3ddd4b6574292c3c64e455ccde1743bc6af",
+      "bytes": 8867
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000055.json": {
+      "sha256": "fb86650573387f9e4fb700ae77d7c81c50f58c2bea2e39950dec05f945e14e4b",
+      "bytes": 13176
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000056.json": {
+      "sha256": "090d6d23ff26b1373a9e9063f86dac7be9cdc2229d7859105a646c04fa7694a1",
+      "bytes": 15716
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000057.json": {
+      "sha256": "c0d4313dcc69a057eca7ef3ab18e0bf0424a78f6ae31bf9e7df3e8b522d75b41",
+      "bytes": 14530
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000058.json": {
+      "sha256": "96d206cf23f6799941a1cee9b1c3b3a9baa257cd4095abb44c4d07a9660558ae",
+      "bytes": 15083
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000059.json": {
+      "sha256": "c320373c219faf791fef54c660673d19f14c7c17b5eee5a575f4dc514a286e84",
+      "bytes": 13514
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000060.json": {
+      "sha256": "b82ebad6d920ae5b20bd9f0e4c19a0cdf3352ca310079aeee7bc6c514a31d98b",
+      "bytes": 9318
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000061.json": {
+      "sha256": "31f2078d4ed18230784dc4f32b6746875577cdc63247c48411479334b6f87d30",
+      "bytes": 9701
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000062.json": {
+      "sha256": "7f84407f0234ca2e962cc5fbae47f4916cc776f30cc6a4b23921e421b862fef9",
+      "bytes": 15318
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000063.json": {
+      "sha256": "b8d88d7e4a055452f823c7010542adebcf30af678313cc4df9faee95544dad77",
+      "bytes": 14938
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000064.json": {
+      "sha256": "6be9cbc9abd8a27fe85926d7c08d0a44d0e94ba78c647394d45a762be1a26bb9",
+      "bytes": 13939
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000065.json": {
+      "sha256": "74edd09b2245578087e006664bd8e899d39dd1e5f4e527f5eb5bcfb9978681eb",
+      "bytes": 9933
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000066.json": {
+      "sha256": "e8aa0da5b728225e1d15f976d8a81f3be4de5e6ef93e5e020e04b6eee375bcdf",
+      "bytes": 14591
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000067.json": {
+      "sha256": "34398894d874a689ae9eff4a5dfa3016991ad648595cafe6c9fdeb0e6d815d13",
+      "bytes": 7101
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000068.json": {
+      "sha256": "88347435573bca878c06a6df75691db6266b5dca22e0cb42c08b0fc3660af9bc",
+      "bytes": 8633
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000069.json": {
+      "sha256": "04d867e1a83b7dc2a89d9f83e2ea86ee8e637224c8b96d25d46b970710769f54",
+      "bytes": 9249
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000070.json": {
+      "sha256": "0dd8719972028b8392968801e97b1e95b220785f676bdd4d57a10d2e5d07f6ed",
+      "bytes": 12262
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000071.json": {
+      "sha256": "93b842431241204504e03d23b0b486fb40ce720b7ffc6d2c93c28d089517c4c4",
+      "bytes": 11188
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000072.json": {
+      "sha256": "b35eaf1ac07525de9175d0a0bd4f865e966b6f6e36e74339e8475abeecf04b44",
+      "bytes": 10085
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/attempts/000073.json": {
+      "sha256": "495844a72cfc3a9f779ce1a8569009dea1c2dd7ecbdd079a6e0b63f166733303",
+      "bytes": 13677
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/execution.json": {
+      "sha256": "bcb4d16282eb7a1729f0d36527ef85f70f39d3f6a3ad997cab4a8d5b020d5be1",
+      "bytes": 332
+    },
+    "runs/mistral-map-v2-001/source-map-v1/source-parent/plan.json": {
+      "sha256": "3405f32f9b2b1ec6c77b9069646e3994cbfdc7176516bf09ea3d6f30d847ad32",
+      "bytes": 64894
+    },
+    "runs/mistral-map-v2-001/summary.json": {
+      "sha256": "381fed233f73ab6ae8852d5624f2eb0fd148bde31160e0d5636fa883cb0ebd0c",
+      "bytes": 991593
+    },
+    "runs/mistral-map-v2-001/summary.md": {
+      "sha256": "15bdfb66076bf6ce6039d22e072bf52ad63a52d5b4aa609eb2ff3d0dc55bdd15",
+      "bytes": 20085
+    }
+  }
+}

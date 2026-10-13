@@ -1,0 +1,3670 @@
+{
+  "protocol_version": "verified-facts-downstream-v1",
+  "plan_hash": "161bcf61c8c4fec14236cb93a6cd1ba7530e2b166c35e20011f38f1f26ba0df4",
+  "analysis_status": "exploratory_complete",
+  "is_simulated": false,
+  "planned_calls": 342,
+  "attempts_total": 342,
+  "returned_answers": 342,
+  "valid_answers": 342,
+  "invalid_answers": 0,
+  "pending": 0,
+  "max_total_attempts": 378,
+  "cells": [
+    {
+      "cohort": "contradiction",
+      "arm": "original",
+      "planned": 39,
+      "returned": 39,
+      "valid": 39,
+      "invalid_retained": 0,
+      "pending": 0,
+      "correct": 15,
+      "false_missing": 24,
+      "wrong_class": 0,
+      "answer_counts": {
+        "MISSING": 24,
+        "C": 9,
+        "B": 3,
+        "A": 3
+      },
+      "accuracy_valid_calls_only_descriptive": 0.38461538461538464
+    },
+    {
+      "cohort": "contradiction",
+      "arm": "availability_repair",
+      "planned": 39,
+      "returned": 39,
+      "valid": 39,
+      "invalid_retained": 0,
+      "pending": 0,
+      "correct": 31,
+      "false_missing": 8,
+      "wrong_class": 0,
+      "answer_counts": {
+        "MISSING": 8,
+        "C": 14,
+        "B": 6,
+        "A": 11
+      },
+      "accuracy_valid_calls_only_descriptive": 0.7948717948717948
+    },
+    {
+      "cohort": "contradiction",
+      "arm": "missing_synonym",
+      "planned": 39,
+      "returned": 39,
+      "valid": 39,
+      "invalid_retained": 0,
+      "pending": 0,
+      "correct": 29,
+      "false_missing": 10,
+      "wrong_class": 0,
+      "answer_counts": {
+        "MISSING": 10,
+        "C": 14,
+        "B": 6,
+        "A": 9
+      },
+      "accuracy_valid_calls_only_descriptive": 0.7435897435897436
+    },
+    {
+      "cohort": "contradiction",
+      "arm": "value_repair",
+      "planned": 39,
+      "returned": 39,
+      "valid": 39,
+      "invalid_retained": 0,
+      "pending": 0,
+      "correct": 35,
+      "false_missing": 4,
+      "wrong_class": 0,
+      "answer_counts": {
+        "A": 14,
+        "C": 15,
+        "B": 6,
+        "MISSING": 4
+      },
+      "accuracy_valid_calls_only_descriptive": 0.8974358974358975
+    },
+    {
+      "cohort": "contradiction",
+      "arm": "endpoints_only",
+      "planned": 39,
+      "returned": 39,
+      "valid": 39,
+      "invalid_retained": 0,
+      "pending": 0,
+      "correct": 8,
+      "false_missing": 31,
+      "wrong_class": 0,
+      "answer_counts": {
+        "MISSING": 31,
+        "A": 3,
+        "C": 2,
+        "B": 3
+      },
+      "accuracy_valid_calls_only_descriptive": 0.20512820512820512
+    },
+    {
+      "cohort": "availability_control",
+      "arm": "original",
+      "planned": 39,
+      "returned": 39,
+      "valid": 39,
+      "invalid_retained": 0,
+      "pending": 0,
+      "correct": 23,
+      "false_missing": 16,
+      "wrong_class": 0,
+      "answer_counts": {
+        "A": 7,
+        "MISSING": 16,
+        "C": 8,
+        "B": 8
+      },
+      "accuracy_valid_calls_only_descriptive": 0.5897435897435898
+    },
+    {
+      "cohort": "availability_control",
+      "arm": "endpoints_only",
+      "planned": 39,
+      "returned": 39,
+      "valid": 39,
+      "invalid_retained": 0,
+      "pending": 0,
+      "correct": 23,
+      "false_missing": 16,
+      "wrong_class": 0,
+      "answer_counts": {
+        "MISSING": 16,
+        "A": 8,
+        "C": 9,
+        "B": 6
+      },
+      "accuracy_valid_calls_only_descriptive": 0.5897435897435898
+    },
+    {
+      "cohort": "genuine_missing_control",
+      "arm": "original",
+      "planned": 27,
+      "returned": 27,
+      "valid": 27,
+      "invalid_retained": 0,
+      "pending": 0,
+      "correct": 27,
+      "false_missing": 0,
+      "wrong_class": 0,
+      "answer_counts": {
+        "MISSING": 27
+      },
+      "accuracy_valid_calls_only_descriptive": 1.0
+    },
+    {
+      "cohort": "genuine_missing_control",
+      "arm": "endpoints_only",
+      "planned": 27,
+      "returned": 27,
+      "valid": 27,
+      "invalid_retained": 0,
+      "pending": 0,
+      "correct": 27,
+      "false_missing": 0,
+      "wrong_class": 0,
+      "answer_counts": {
+        "MISSING": 27
+      },
+      "accuracy_valid_calls_only_descriptive": 1.0
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "arm": "original",
+      "planned": 3,
+      "returned": 3,
+      "valid": 3,
+      "invalid_retained": 0,
+      "pending": 0,
+      "correct": 0,
+      "false_missing": 3,
+      "wrong_class": 0,
+      "answer_counts": {
+        "MISSING": 3
+      },
+      "accuracy_valid_calls_only_descriptive": 0.0
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "arm": "availability_repair",
+      "planned": 3,
+      "returned": 3,
+      "valid": 3,
+      "invalid_retained": 0,
+      "pending": 0,
+      "correct": 0,
+      "false_missing": 3,
+      "wrong_class": 0,
+      "answer_counts": {
+        "MISSING": 3
+      },
+      "accuracy_valid_calls_only_descriptive": 0.0
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "arm": "missing_synonym",
+      "planned": 3,
+      "returned": 3,
+      "valid": 3,
+      "invalid_retained": 0,
+      "pending": 0,
+      "correct": 0,
+      "false_missing": 3,
+      "wrong_class": 0,
+      "answer_counts": {
+        "MISSING": 3
+      },
+      "accuracy_valid_calls_only_descriptive": 0.0
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "arm": "value_repair",
+      "planned": 3,
+      "returned": 3,
+      "valid": 3,
+      "invalid_retained": 0,
+      "pending": 0,
+      "correct": 1,
+      "false_missing": 2,
+      "wrong_class": 0,
+      "answer_counts": {
+        "MISSING": 2,
+        "C": 1
+      },
+      "accuracy_valid_calls_only_descriptive": 0.3333333333333333
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "arm": "endpoints_only",
+      "planned": 3,
+      "returned": 3,
+      "valid": 3,
+      "invalid_retained": 0,
+      "pending": 0,
+      "correct": 2,
+      "false_missing": 1,
+      "wrong_class": 0,
+      "answer_counts": {
+        "C": 2,
+        "MISSING": 1
+      },
+      "accuracy_valid_calls_only_descriptive": 0.6666666666666666
+    }
+  ],
+  "primary": {
+    "cohort": "contradiction",
+    "metric": "false_missing",
+    "left": "original",
+    "right": "availability_repair",
+    "direction": "left minus right",
+    "planned_worlds": 9,
+    "complete_worlds": 9,
+    "planned_cases": 13,
+    "estimate_complete_worlds": 0.2685185185185185,
+    "world_bootstrap_95_ci": [
+      0.07407407407407407,
+      0.48148148148148145
+    ],
+    "full_plan_bounds": [
+      0.2685185185185185,
+      0.2685185185185185
+    ],
+    "worlds": [
+      {
+        "world_id": "ex-list-000",
+        "n_cases": 1,
+        "complete": true,
+        "left_minus_right": 0.0,
+        "full_plan_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "world_id": "ex-list-002",
+        "n_cases": 1,
+        "complete": true,
+        "left_minus_right": 0.0,
+        "full_plan_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "world_id": "ex-list-004",
+        "n_cases": 1,
+        "complete": true,
+        "left_minus_right": 0.6666666666666667,
+        "full_plan_bounds": [
+          0.6666666666666667,
+          0.6666666666666667
+        ]
+      },
+      {
+        "world_id": "ex-list-005",
+        "n_cases": 1,
+        "complete": true,
+        "left_minus_right": 0.0,
+        "full_plan_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "world_id": "ex-list-008",
+        "n_cases": 1,
+        "complete": true,
+        "left_minus_right": 0.0,
+        "full_plan_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "world_id": "ex-list-014",
+        "n_cases": 2,
+        "complete": true,
+        "left_minus_right": 0.6666666666666666,
+        "full_plan_bounds": [
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      },
+      {
+        "world_id": "ex-list-018",
+        "n_cases": 4,
+        "complete": true,
+        "left_minus_right": 0.75,
+        "full_plan_bounds": [
+          0.75,
+          0.75
+        ]
+      },
+      {
+        "world_id": "ex-list-019",
+        "n_cases": 1,
+        "complete": true,
+        "left_minus_right": 0.0,
+        "full_plan_bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "world_id": "ex-list-023",
+        "n_cases": 1,
+        "complete": true,
+        "left_minus_right": 0.3333333333333333,
+        "full_plan_bounds": [
+          0.3333333333333333,
+          0.3333333333333333
+        ]
+      }
+    ]
+  },
+  "comparisons": [
+    {
+      "cohort": "contradiction",
+      "metric": "false_missing",
+      "left": "original",
+      "right": "availability_repair",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": 0.2685185185185185,
+      "world_bootstrap_95_ci": [
+        0.07407407407407407,
+        0.48148148148148145
+      ],
+      "full_plan_bounds": [
+        0.2685185185185185,
+        0.2685185185185185
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.6666666666666667,
+          "full_plan_bounds": [
+            0.6666666666666667,
+            0.6666666666666667
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": 0.6666666666666666,
+          "full_plan_bounds": [
+            0.6666666666666666,
+            0.6666666666666666
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": 0.75,
+          "full_plan_bounds": [
+            0.75,
+            0.75
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.3333333333333333,
+          "full_plan_bounds": [
+            0.3333333333333333,
+            0.3333333333333333
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "accuracy",
+      "left": "original",
+      "right": "availability_repair",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": -0.26851851851851855,
+      "world_bootstrap_95_ci": [
+        -0.48148148148148145,
+        -0.07407407407407408
+      ],
+      "full_plan_bounds": [
+        -0.26851851851851855,
+        -0.26851851851851855
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.6666666666666666,
+          "full_plan_bounds": [
+            -0.6666666666666666,
+            -0.6666666666666666
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": -0.6666666666666667,
+          "full_plan_bounds": [
+            -0.6666666666666667,
+            -0.6666666666666667
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": -0.75,
+          "full_plan_bounds": [
+            -0.75,
+            -0.75
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.33333333333333337,
+          "full_plan_bounds": [
+            -0.33333333333333337,
+            -0.33333333333333337
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "false_missing",
+      "left": "original",
+      "right": "missing_synonym",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": 0.2777777777777778,
+      "world_bootstrap_95_ci": [
+        0.07407407407407407,
+        0.5185185185185186
+      ],
+      "full_plan_bounds": [
+        0.2777777777777778,
+        0.2777777777777778
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": 0.6666666666666666,
+          "full_plan_bounds": [
+            0.6666666666666666,
+            0.6666666666666666
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": 0.5,
+          "full_plan_bounds": [
+            0.5,
+            0.5
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.3333333333333333,
+          "full_plan_bounds": [
+            0.3333333333333333,
+            0.3333333333333333
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "accuracy",
+      "left": "original",
+      "right": "missing_synonym",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": -0.2777777777777778,
+      "world_bootstrap_95_ci": [
+        -0.5185185185185186,
+        -0.07407407407407408
+      ],
+      "full_plan_bounds": [
+        -0.2777777777777778,
+        -0.2777777777777778
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": -0.6666666666666667,
+          "full_plan_bounds": [
+            -0.6666666666666667,
+            -0.6666666666666667
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": -0.5,
+          "full_plan_bounds": [
+            -0.5,
+            -0.5
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.33333333333333337,
+          "full_plan_bounds": [
+            -0.33333333333333337,
+            -0.33333333333333337
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "false_missing",
+      "left": "original",
+      "right": "value_repair",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": 0.3888888888888889,
+      "world_bootstrap_95_ci": [
+        0.14814814814814814,
+        0.6296296296296297
+      ],
+      "full_plan_bounds": [
+        0.3888888888888889,
+        0.3888888888888889
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.6666666666666667,
+          "full_plan_bounds": [
+            0.6666666666666667,
+            0.6666666666666667
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": 0.6666666666666666,
+          "full_plan_bounds": [
+            0.6666666666666666,
+            0.6666666666666666
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": 0.8333333333333334,
+          "full_plan_bounds": [
+            0.8333333333333334,
+            0.8333333333333334
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.3333333333333333,
+          "full_plan_bounds": [
+            0.3333333333333333,
+            0.3333333333333333
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "accuracy",
+      "left": "original",
+      "right": "value_repair",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": -0.3888888888888889,
+      "world_bootstrap_95_ci": [
+        -0.6296296296296297,
+        -0.14814814814814817
+      ],
+      "full_plan_bounds": [
+        -0.3888888888888889,
+        -0.3888888888888889
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.6666666666666666,
+          "full_plan_bounds": [
+            -0.6666666666666666,
+            -0.6666666666666666
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": -0.6666666666666667,
+          "full_plan_bounds": [
+            -0.6666666666666667,
+            -0.6666666666666667
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": -0.8333333333333334,
+          "full_plan_bounds": [
+            -0.8333333333333334,
+            -0.8333333333333334
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.33333333333333337,
+          "full_plan_bounds": [
+            -0.33333333333333337,
+            -0.33333333333333337
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "false_missing",
+      "left": "original",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": -0.16666666666666666,
+      "world_bootstrap_95_ci": [
+        -0.42592592592592593,
+        0.03703703703703703
+      ],
+      "full_plan_bounds": [
+        -0.16666666666666666,
+        -0.16666666666666666
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.3333333333333333,
+          "full_plan_bounds": [
+            -0.3333333333333333,
+            -0.3333333333333333
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": -0.33333333333333337,
+          "full_plan_bounds": [
+            -0.33333333333333337,
+            -0.33333333333333337
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": -0.16666666666666669,
+          "full_plan_bounds": [
+            -0.16666666666666669,
+            -0.16666666666666669
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.3333333333333333,
+          "full_plan_bounds": [
+            0.3333333333333333,
+            0.3333333333333333
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "accuracy",
+      "left": "original",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": 0.16666666666666666,
+      "world_bootstrap_95_ci": [
+        -0.03703703703703705,
+        0.42592592592592593
+      ],
+      "full_plan_bounds": [
+        0.16666666666666666,
+        0.16666666666666666
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.33333333333333337,
+          "full_plan_bounds": [
+            0.33333333333333337,
+            0.33333333333333337
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": 0.3333333333333333,
+          "full_plan_bounds": [
+            0.3333333333333333,
+            0.3333333333333333
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": 0.16666666666666666,
+          "full_plan_bounds": [
+            0.16666666666666666,
+            0.16666666666666666
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.33333333333333337,
+          "full_plan_bounds": [
+            -0.33333333333333337,
+            -0.33333333333333337
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "false_missing",
+      "left": "availability_repair",
+      "right": "missing_synonym",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": 0.009259259259259257,
+      "world_bootstrap_95_ci": [
+        -0.08333333333333333,
+        0.1111111111111111
+      ],
+      "full_plan_bounds": [
+        0.009259259259259257,
+        0.009259259259259257
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.3333333333333333,
+          "full_plan_bounds": [
+            0.3333333333333333,
+            0.3333333333333333
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": -0.25,
+          "full_plan_bounds": [
+            -0.25,
+            -0.25
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "accuracy",
+      "left": "availability_repair",
+      "right": "missing_synonym",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": -0.009259259259259264,
+      "world_bootstrap_95_ci": [
+        -0.1111111111111111,
+        0.08333333333333333
+      ],
+      "full_plan_bounds": [
+        -0.009259259259259264,
+        -0.009259259259259264
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.33333333333333337,
+          "full_plan_bounds": [
+            -0.33333333333333337,
+            -0.33333333333333337
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": 0.25,
+          "full_plan_bounds": [
+            0.25,
+            0.25
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "false_missing",
+      "left": "availability_repair",
+      "right": "value_repair",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": 0.12037037037037036,
+      "world_bootstrap_95_ci": [
+        0.0,
+        0.3425925925925926
+      ],
+      "full_plan_bounds": [
+        0.12037037037037036,
+        0.12037037037037036
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": 0.08333333333333333,
+          "full_plan_bounds": [
+            0.08333333333333333,
+            0.08333333333333333
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "accuracy",
+      "left": "availability_repair",
+      "right": "value_repair",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": -0.12037037037037036,
+      "world_bootstrap_95_ci": [
+        -0.3425925925925926,
+        0.0
+      ],
+      "full_plan_bounds": [
+        -0.12037037037037036,
+        -0.12037037037037036
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": -0.08333333333333334,
+          "full_plan_bounds": [
+            -0.08333333333333334,
+            -0.08333333333333334
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "false_missing",
+      "left": "availability_repair",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": -0.43518518518518523,
+      "world_bootstrap_95_ci": [
+        -0.7222222222222222,
+        -0.14814814814814817
+      ],
+      "full_plan_bounds": [
+        -0.43518518518518523,
+        -0.43518518518518523
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.3333333333333333,
+          "full_plan_bounds": [
+            -0.3333333333333333,
+            -0.3333333333333333
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.6666666666666667,
+          "full_plan_bounds": [
+            -0.6666666666666667,
+            -0.6666666666666667
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": -0.9166666666666667,
+          "full_plan_bounds": [
+            -0.9166666666666667,
+            -0.9166666666666667
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "accuracy",
+      "left": "availability_repair",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": 0.4351851851851852,
+      "world_bootstrap_95_ci": [
+        0.14814814814814817,
+        0.7222222222222222
+      ],
+      "full_plan_bounds": [
+        0.4351851851851852,
+        0.4351851851851852
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.33333333333333337,
+          "full_plan_bounds": [
+            0.33333333333333337,
+            0.33333333333333337
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.6666666666666666,
+          "full_plan_bounds": [
+            0.6666666666666666,
+            0.6666666666666666
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": 0.9166666666666666,
+          "full_plan_bounds": [
+            0.9166666666666666,
+            0.9166666666666666
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "false_missing",
+      "left": "missing_synonym",
+      "right": "value_repair",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": 0.1111111111111111,
+      "world_bootstrap_95_ci": [
+        -0.07407407407407407,
+        0.3703703703703704
+      ],
+      "full_plan_bounds": [
+        0.1111111111111111,
+        0.1111111111111111
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.3333333333333333,
+          "full_plan_bounds": [
+            -0.3333333333333333,
+            -0.3333333333333333
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": 0.3333333333333333,
+          "full_plan_bounds": [
+            0.3333333333333333,
+            0.3333333333333333
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "accuracy",
+      "left": "missing_synonym",
+      "right": "value_repair",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": -0.1111111111111111,
+      "world_bootstrap_95_ci": [
+        -0.3703703703703704,
+        0.07407407407407408
+      ],
+      "full_plan_bounds": [
+        -0.1111111111111111,
+        -0.1111111111111111
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.33333333333333337,
+          "full_plan_bounds": [
+            0.33333333333333337,
+            0.33333333333333337
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": -0.33333333333333337,
+          "full_plan_bounds": [
+            -0.33333333333333337,
+            -0.33333333333333337
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "false_missing",
+      "left": "missing_synonym",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": -0.4444444444444444,
+      "world_bootstrap_95_ci": [
+        -0.7407407407407408,
+        -0.14814814814814817
+      ],
+      "full_plan_bounds": [
+        -0.4444444444444444,
+        -0.4444444444444444
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.3333333333333333,
+          "full_plan_bounds": [
+            -0.3333333333333333,
+            -0.3333333333333333
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": -0.6666666666666667,
+          "full_plan_bounds": [
+            -0.6666666666666667,
+            -0.6666666666666667
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "accuracy",
+      "left": "missing_synonym",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": 0.4444444444444444,
+      "world_bootstrap_95_ci": [
+        0.14814814814814817,
+        0.7407407407407408
+      ],
+      "full_plan_bounds": [
+        0.4444444444444444,
+        0.4444444444444444
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.33333333333333337,
+          "full_plan_bounds": [
+            0.33333333333333337,
+            0.33333333333333337
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": 0.6666666666666666,
+          "full_plan_bounds": [
+            0.6666666666666666,
+            0.6666666666666666
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "false_missing",
+      "left": "value_repair",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": -0.5555555555555556,
+      "world_bootstrap_95_ci": [
+        -0.8518518518518519,
+        -0.2592592592592593
+      ],
+      "full_plan_bounds": [
+        -0.5555555555555556,
+        -0.5555555555555556
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.3333333333333333,
+          "full_plan_bounds": [
+            -0.3333333333333333,
+            -0.3333333333333333
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.6666666666666667,
+          "full_plan_bounds": [
+            -0.6666666666666667,
+            -0.6666666666666667
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "contradiction",
+      "metric": "accuracy",
+      "left": "value_repair",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": 0.5555555555555556,
+      "world_bootstrap_95_ci": [
+        0.2592592592592593,
+        0.8518518518518519
+      ],
+      "full_plan_bounds": [
+        0.5555555555555556,
+        0.5555555555555556
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.33333333333333337,
+          "full_plan_bounds": [
+            0.33333333333333337,
+            0.33333333333333337
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.6666666666666666,
+          "full_plan_bounds": [
+            0.6666666666666666,
+            0.6666666666666666
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "availability_control",
+      "metric": "false_missing",
+      "left": "original",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": -0.03703703703703703,
+      "world_bootstrap_95_ci": [
+        -0.40740740740740744,
+        0.33333333333333337
+      ],
+      "full_plan_bounds": [
+        -0.03703703703703703,
+        -0.03703703703703703
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.33333333333333337,
+          "full_plan_bounds": [
+            -0.33333333333333337,
+            -0.33333333333333337
+          ]
+        },
+        {
+          "world_id": "ex-list-010",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-015",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-017",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": 0.3333333333333333,
+          "full_plan_bounds": [
+            0.3333333333333333,
+            0.3333333333333333
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.6666666666666666,
+          "full_plan_bounds": [
+            -0.6666666666666666,
+            -0.6666666666666666
+          ]
+        },
+        {
+          "world_id": "ex-list-020",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.3333333333333333,
+          "full_plan_bounds": [
+            -0.3333333333333333,
+            -0.3333333333333333
+          ]
+        },
+        {
+          "world_id": "ex-list-021",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.6666666666666667,
+          "full_plan_bounds": [
+            0.6666666666666667,
+            0.6666666666666667
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "availability_control",
+      "metric": "accuracy",
+      "left": "original",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 13,
+      "estimate_complete_worlds": 0.03703703703703705,
+      "world_bootstrap_95_ci": [
+        -0.3333333333333333,
+        0.40740740740740744
+      ],
+      "full_plan_bounds": [
+        0.03703703703703705,
+        0.03703703703703705
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 1.0,
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.3333333333333333,
+          "full_plan_bounds": [
+            0.3333333333333333,
+            0.3333333333333333
+          ]
+        },
+        {
+          "world_id": "ex-list-010",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -1.0,
+          "full_plan_bounds": [
+            -1.0,
+            -1.0
+          ]
+        },
+        {
+          "world_id": "ex-list-015",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-017",
+          "n_cases": 2,
+          "complete": true,
+          "left_minus_right": -0.33333333333333337,
+          "full_plan_bounds": [
+            -0.33333333333333337,
+            -0.33333333333333337
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.6666666666666667,
+          "full_plan_bounds": [
+            0.6666666666666667,
+            0.6666666666666667
+          ]
+        },
+        {
+          "world_id": "ex-list-020",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.33333333333333337,
+          "full_plan_bounds": [
+            0.33333333333333337,
+            0.33333333333333337
+          ]
+        },
+        {
+          "world_id": "ex-list-021",
+          "n_cases": 4,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.6666666666666666,
+          "full_plan_bounds": [
+            -0.6666666666666666,
+            -0.6666666666666666
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "genuine_missing_control",
+      "metric": "false_missing",
+      "left": "original",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 9,
+      "estimate_complete_worlds": 0.0,
+      "world_bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "full_plan_bounds": [
+        0.0,
+        0.0
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "genuine_missing_control",
+      "metric": "accuracy",
+      "left": "original",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 9,
+      "complete_worlds": 9,
+      "planned_cases": 9,
+      "estimate_complete_worlds": 0.0,
+      "world_bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "full_plan_bounds": [
+        0.0,
+        0.0
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-000",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-002",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-004",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-005",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-008",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-014",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-018",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-019",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "world_id": "ex-list-023",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "false_missing",
+      "left": "original",
+      "right": "availability_repair",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": 0.0,
+      "world_bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "full_plan_bounds": [
+        0.0,
+        0.0
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "accuracy",
+      "left": "original",
+      "right": "availability_repair",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": 0.0,
+      "world_bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "full_plan_bounds": [
+        0.0,
+        0.0
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "false_missing",
+      "left": "original",
+      "right": "missing_synonym",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": 0.0,
+      "world_bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "full_plan_bounds": [
+        0.0,
+        0.0
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "accuracy",
+      "left": "original",
+      "right": "missing_synonym",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": 0.0,
+      "world_bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "full_plan_bounds": [
+        0.0,
+        0.0
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "false_missing",
+      "left": "original",
+      "right": "value_repair",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": 0.33333333333333337,
+      "world_bootstrap_95_ci": [
+        0.33333333333333337,
+        0.33333333333333337
+      ],
+      "full_plan_bounds": [
+        0.33333333333333337,
+        0.33333333333333337
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.33333333333333337,
+          "full_plan_bounds": [
+            0.33333333333333337,
+            0.33333333333333337
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "accuracy",
+      "left": "original",
+      "right": "value_repair",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": -0.3333333333333333,
+      "world_bootstrap_95_ci": [
+        -0.3333333333333333,
+        -0.3333333333333333
+      ],
+      "full_plan_bounds": [
+        -0.3333333333333333,
+        -0.3333333333333333
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.3333333333333333,
+          "full_plan_bounds": [
+            -0.3333333333333333,
+            -0.3333333333333333
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "false_missing",
+      "left": "original",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": 0.6666666666666667,
+      "world_bootstrap_95_ci": [
+        0.6666666666666667,
+        0.6666666666666667
+      ],
+      "full_plan_bounds": [
+        0.6666666666666667,
+        0.6666666666666667
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.6666666666666667,
+          "full_plan_bounds": [
+            0.6666666666666667,
+            0.6666666666666667
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "accuracy",
+      "left": "original",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": -0.6666666666666666,
+      "world_bootstrap_95_ci": [
+        -0.6666666666666666,
+        -0.6666666666666666
+      ],
+      "full_plan_bounds": [
+        -0.6666666666666666,
+        -0.6666666666666666
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.6666666666666666,
+          "full_plan_bounds": [
+            -0.6666666666666666,
+            -0.6666666666666666
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "false_missing",
+      "left": "availability_repair",
+      "right": "missing_synonym",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": 0.0,
+      "world_bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "full_plan_bounds": [
+        0.0,
+        0.0
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "accuracy",
+      "left": "availability_repair",
+      "right": "missing_synonym",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": 0.0,
+      "world_bootstrap_95_ci": [
+        0.0,
+        0.0
+      ],
+      "full_plan_bounds": [
+        0.0,
+        0.0
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.0,
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "false_missing",
+      "left": "availability_repair",
+      "right": "value_repair",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": 0.33333333333333337,
+      "world_bootstrap_95_ci": [
+        0.33333333333333337,
+        0.33333333333333337
+      ],
+      "full_plan_bounds": [
+        0.33333333333333337,
+        0.33333333333333337
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.33333333333333337,
+          "full_plan_bounds": [
+            0.33333333333333337,
+            0.33333333333333337
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "accuracy",
+      "left": "availability_repair",
+      "right": "value_repair",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": -0.3333333333333333,
+      "world_bootstrap_95_ci": [
+        -0.3333333333333333,
+        -0.3333333333333333
+      ],
+      "full_plan_bounds": [
+        -0.3333333333333333,
+        -0.3333333333333333
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.3333333333333333,
+          "full_plan_bounds": [
+            -0.3333333333333333,
+            -0.3333333333333333
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "false_missing",
+      "left": "availability_repair",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": 0.6666666666666667,
+      "world_bootstrap_95_ci": [
+        0.6666666666666667,
+        0.6666666666666667
+      ],
+      "full_plan_bounds": [
+        0.6666666666666667,
+        0.6666666666666667
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.6666666666666667,
+          "full_plan_bounds": [
+            0.6666666666666667,
+            0.6666666666666667
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "accuracy",
+      "left": "availability_repair",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": -0.6666666666666666,
+      "world_bootstrap_95_ci": [
+        -0.6666666666666666,
+        -0.6666666666666666
+      ],
+      "full_plan_bounds": [
+        -0.6666666666666666,
+        -0.6666666666666666
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.6666666666666666,
+          "full_plan_bounds": [
+            -0.6666666666666666,
+            -0.6666666666666666
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "false_missing",
+      "left": "missing_synonym",
+      "right": "value_repair",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": 0.33333333333333337,
+      "world_bootstrap_95_ci": [
+        0.33333333333333337,
+        0.33333333333333337
+      ],
+      "full_plan_bounds": [
+        0.33333333333333337,
+        0.33333333333333337
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.33333333333333337,
+          "full_plan_bounds": [
+            0.33333333333333337,
+            0.33333333333333337
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "accuracy",
+      "left": "missing_synonym",
+      "right": "value_repair",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": -0.3333333333333333,
+      "world_bootstrap_95_ci": [
+        -0.3333333333333333,
+        -0.3333333333333333
+      ],
+      "full_plan_bounds": [
+        -0.3333333333333333,
+        -0.3333333333333333
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.3333333333333333,
+          "full_plan_bounds": [
+            -0.3333333333333333,
+            -0.3333333333333333
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "false_missing",
+      "left": "missing_synonym",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": 0.6666666666666667,
+      "world_bootstrap_95_ci": [
+        0.6666666666666667,
+        0.6666666666666667
+      ],
+      "full_plan_bounds": [
+        0.6666666666666667,
+        0.6666666666666667
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.6666666666666667,
+          "full_plan_bounds": [
+            0.6666666666666667,
+            0.6666666666666667
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "accuracy",
+      "left": "missing_synonym",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": -0.6666666666666666,
+      "world_bootstrap_95_ci": [
+        -0.6666666666666666,
+        -0.6666666666666666
+      ],
+      "full_plan_bounds": [
+        -0.6666666666666666,
+        -0.6666666666666666
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.6666666666666666,
+          "full_plan_bounds": [
+            -0.6666666666666666,
+            -0.6666666666666666
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "false_missing",
+      "left": "value_repair",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": 0.3333333333333333,
+      "world_bootstrap_95_ci": [
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "full_plan_bounds": [
+        0.3333333333333333,
+        0.3333333333333333
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": 0.3333333333333333,
+          "full_plan_bounds": [
+            0.3333333333333333,
+            0.3333333333333333
+          ]
+        }
+      ]
+    },
+    {
+      "cohort": "wrong_final_diagnostic",
+      "metric": "accuracy",
+      "left": "value_repair",
+      "right": "endpoints_only",
+      "direction": "left minus right",
+      "planned_worlds": 1,
+      "complete_worlds": 1,
+      "planned_cases": 1,
+      "estimate_complete_worlds": -0.3333333333333333,
+      "world_bootstrap_95_ci": [
+        -0.3333333333333333,
+        -0.3333333333333333
+      ],
+      "full_plan_bounds": [
+        -0.3333333333333333,
+        -0.3333333333333333
+      ],
+      "worlds": [
+        {
+          "world_id": "ex-list-022",
+          "n_cases": 1,
+          "complete": true,
+          "left_minus_right": -0.3333333333333333,
+          "full_plan_bounds": [
+            -0.3333333333333333,
+            -0.3333333333333333
+          ]
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "All comparisons except the named primary are secondary and unadjusted.",
+    "Primary weights: average three repetitions within each case, then cases within each world, then equal weight each of nine worlds.",
+    "Complete-world estimates require every planned case and repetition in both arms valid; other worlds remain in full-plan bounds.",
+    "Bootstrap intervals describe selected observed worlds; nine worlds and outcome-selected historical traces do not establish population prevalence.",
+    "A degenerate all-zero bootstrap interval is not evidence that the population effect is exactly zero.",
+    "Availability controls have no reviewed false target-missingness claim; their other reasoning is not certified factual.",
+    "Genuine-missing controls originate in a different feature-profile query and calibrate literal retrieval; do not pool cohorts.",
+    "Temperature-zero repetitions measure possible endpoint variation and are not independent worlds.",
+    "No significance threshold, success gate, or outcome-dependent expansion is applied."
+  ]
+}

@@ -1,0 +1,4458 @@
+{
+  "protocol": "query-conditioned-fact-use-v1",
+  "plan_hash": "6fbc5eb49043f0d07b2756880023bfa829147df5e1187e8e49272d0c638b758f",
+  "analysis_status": "screen_complete",
+  "collection_status": "complete",
+  "interpretation_allowed": true,
+  "mode": "live",
+  "is_simulated": false,
+  "attempts_total": 144,
+  "planned_calls": 144,
+  "returned_answers": 144,
+  "valid_answers": 144,
+  "invalid_answers_retained": 0,
+  "pending_answers": 0,
+  "independent_worlds": 12,
+  "counts": {
+    "planned": 144,
+    "returned": 144,
+    "valid": 144,
+    "invalid": 0,
+    "pending": 0,
+    "correct": 144,
+    "pattern": 0,
+    "other": 0,
+    "accuracy_valid_only": 1.0,
+    "accuracy_invalid_as_incorrect": 1.0,
+    "pattern_rate_valid_only": 0.0,
+    "answer_counts": {
+      "A": 8,
+      "B": 8,
+      "Balanced": 8,
+      "C": 8,
+      "Fast": 8,
+      "K": 32,
+      "Quiet": 8,
+      "R": 32,
+      "Z": 32
+    },
+    "full_plan_accuracy_bounds": [
+      1.0,
+      1.0
+    ],
+    "all_returned": true,
+    "all_valid": true,
+    "direct_instruction_adherence": {
+      "planned_direct": 72,
+      "known": 72,
+      "adherent": 72,
+      "nonadherent": 0,
+      "unknown": 0,
+      "rate_known_only": 1.0
+    }
+  },
+  "conditions": {
+    "literal": {
+      "direct": {
+        "planned": 24,
+        "returned": 24,
+        "valid": 24,
+        "invalid": 0,
+        "pending": 0,
+        "correct": 24,
+        "pattern": 0,
+        "other": 0,
+        "accuracy_valid_only": 1.0,
+        "accuracy_invalid_as_incorrect": 1.0,
+        "pattern_rate_valid_only": 0.0,
+        "answer_counts": {
+          "A": 4,
+          "B": 4,
+          "Balanced": 4,
+          "C": 4,
+          "Fast": 4,
+          "Quiet": 4
+        },
+        "full_plan_accuracy_bounds": [
+          1.0,
+          1.0
+        ],
+        "all_returned": true,
+        "all_valid": true,
+        "direct_instruction_adherence": {
+          "planned_direct": 24,
+          "known": 24,
+          "adherent": 24,
+          "nonadherent": 0,
+          "unknown": 0,
+          "rate_known_only": 1.0
+        }
+      },
+      "visible": {
+        "planned": 24,
+        "returned": 24,
+        "valid": 24,
+        "invalid": 0,
+        "pending": 0,
+        "correct": 24,
+        "pattern": 0,
+        "other": 0,
+        "accuracy_valid_only": 1.0,
+        "accuracy_invalid_as_incorrect": 1.0,
+        "pattern_rate_valid_only": 0.0,
+        "answer_counts": {
+          "A": 4,
+          "B": 4,
+          "Balanced": 4,
+          "C": 4,
+          "Fast": 4,
+          "Quiet": 4
+        },
+        "full_plan_accuracy_bounds": [
+          1.0,
+          1.0
+        ],
+        "all_returned": true,
+        "all_valid": true,
+        "direct_instruction_adherence": {
+          "planned_direct": 0,
+          "known": 0,
+          "adherent": 0,
+          "nonadherent": 0,
+          "unknown": 0,
+          "rate_known_only": null
+        }
+      }
+    },
+    "encoded": {
+      "direct": {
+        "planned": 24,
+        "returned": 24,
+        "valid": 24,
+        "invalid": 0,
+        "pending": 0,
+        "correct": 24,
+        "pattern": 0,
+        "other": 0,
+        "accuracy_valid_only": 1.0,
+        "accuracy_invalid_as_incorrect": 1.0,
+        "pattern_rate_valid_only": 0.0,
+        "answer_counts": {
+          "K": 8,
+          "R": 8,
+          "Z": 8
+        },
+        "full_plan_accuracy_bounds": [
+          1.0,
+          1.0
+        ],
+        "all_returned": true,
+        "all_valid": true,
+        "direct_instruction_adherence": {
+          "planned_direct": 24,
+          "known": 24,
+          "adherent": 24,
+          "nonadherent": 0,
+          "unknown": 0,
+          "rate_known_only": 1.0
+        }
+      },
+      "visible": {
+        "planned": 24,
+        "returned": 24,
+        "valid": 24,
+        "invalid": 0,
+        "pending": 0,
+        "correct": 24,
+        "pattern": 0,
+        "other": 0,
+        "accuracy_valid_only": 1.0,
+        "accuracy_invalid_as_incorrect": 1.0,
+        "pattern_rate_valid_only": 0.0,
+        "answer_counts": {
+          "K": 8,
+          "R": 8,
+          "Z": 8
+        },
+        "full_plan_accuracy_bounds": [
+          1.0,
+          1.0
+        ],
+        "all_returned": true,
+        "all_valid": true,
+        "direct_instruction_adherence": {
+          "planned_direct": 0,
+          "known": 0,
+          "adherent": 0,
+          "nonadherent": 0,
+          "unknown": 0,
+          "rate_known_only": null
+        }
+      }
+    },
+    "downstream": {
+      "direct": {
+        "planned": 24,
+        "returned": 24,
+        "valid": 24,
+        "invalid": 0,
+        "pending": 0,
+        "correct": 24,
+        "pattern": 0,
+        "other": 0,
+        "accuracy_valid_only": 1.0,
+        "accuracy_invalid_as_incorrect": 1.0,
+        "pattern_rate_valid_only": 0.0,
+        "answer_counts": {
+          "K": 8,
+          "R": 8,
+          "Z": 8
+        },
+        "full_plan_accuracy_bounds": [
+          1.0,
+          1.0
+        ],
+        "all_returned": true,
+        "all_valid": true,
+        "direct_instruction_adherence": {
+          "planned_direct": 24,
+          "known": 24,
+          "adherent": 24,
+          "nonadherent": 0,
+          "unknown": 0,
+          "rate_known_only": 1.0
+        }
+      },
+      "visible": {
+        "planned": 24,
+        "returned": 24,
+        "valid": 24,
+        "invalid": 0,
+        "pending": 0,
+        "correct": 24,
+        "pattern": 0,
+        "other": 0,
+        "accuracy_valid_only": 1.0,
+        "accuracy_invalid_as_incorrect": 1.0,
+        "pattern_rate_valid_only": 0.0,
+        "answer_counts": {
+          "K": 8,
+          "R": 8,
+          "Z": 8
+        },
+        "full_plan_accuracy_bounds": [
+          1.0,
+          1.0
+        ],
+        "all_returned": true,
+        "all_valid": true,
+        "direct_instruction_adherence": {
+          "planned_direct": 0,
+          "known": 0,
+          "adherent": 0,
+          "nonadherent": 0,
+          "unknown": 0,
+          "rate_known_only": null
+        }
+      }
+    }
+  },
+  "metrics": {
+    "literal_direct_R": {
+      "mean": 1.0,
+      "n_complete_worlds": 12,
+      "n_planned_worlds": 12,
+      "world_values": {
+        "query-role-configuration-000": 1.0,
+        "query-role-configuration-001": 1.0,
+        "query-role-configuration-002": 1.0,
+        "query-role-configuration-003": 1.0,
+        "query-role-configuration-004": 1.0,
+        "query-role-configuration-005": 1.0,
+        "query-role-vehicle-000": 1.0,
+        "query-role-vehicle-001": 1.0,
+        "query-role-vehicle-002": 1.0,
+        "query-role-vehicle-003": 1.0,
+        "query-role-vehicle-004": 1.0,
+        "query-role-vehicle-005": 1.0
+      },
+      "excluded_world_ids": [],
+      "planned_family_counts": {
+        "vehicle": 6,
+        "configuration": 6
+      },
+      "eligible_family_counts": {
+        "configuration": 6,
+        "vehicle": 6
+      },
+      "full_plan_bounds": [
+        1.0,
+        1.0
+      ],
+      "world_bounds": {
+        "query-role-configuration-000": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-001": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-002": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-003": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-004": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-005": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-000": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-001": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-002": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-003": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-004": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-005": [
+          1.0,
+          1.0
+        ]
+      },
+      "unscorable_or_pending_task_ids": [],
+      "descriptive_bootstrap_95_interval": [
+        1.0,
+        1.0
+      ],
+      "interval_status": "available"
+    },
+    "literal_visible_R": {
+      "mean": 1.0,
+      "n_complete_worlds": 12,
+      "n_planned_worlds": 12,
+      "world_values": {
+        "query-role-configuration-000": 1.0,
+        "query-role-configuration-001": 1.0,
+        "query-role-configuration-002": 1.0,
+        "query-role-configuration-003": 1.0,
+        "query-role-configuration-004": 1.0,
+        "query-role-configuration-005": 1.0,
+        "query-role-vehicle-000": 1.0,
+        "query-role-vehicle-001": 1.0,
+        "query-role-vehicle-002": 1.0,
+        "query-role-vehicle-003": 1.0,
+        "query-role-vehicle-004": 1.0,
+        "query-role-vehicle-005": 1.0
+      },
+      "excluded_world_ids": [],
+      "planned_family_counts": {
+        "vehicle": 6,
+        "configuration": 6
+      },
+      "eligible_family_counts": {
+        "configuration": 6,
+        "vehicle": 6
+      },
+      "full_plan_bounds": [
+        1.0,
+        1.0
+      ],
+      "world_bounds": {
+        "query-role-configuration-000": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-001": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-002": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-003": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-004": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-005": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-000": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-001": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-002": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-003": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-004": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-005": [
+          1.0,
+          1.0
+        ]
+      },
+      "unscorable_or_pending_task_ids": [],
+      "descriptive_bootstrap_95_interval": [
+        1.0,
+        1.0
+      ],
+      "interval_status": "available"
+    },
+    "encoded_direct_R": {
+      "mean": 1.0,
+      "n_complete_worlds": 12,
+      "n_planned_worlds": 12,
+      "world_values": {
+        "query-role-configuration-000": 1.0,
+        "query-role-configuration-001": 1.0,
+        "query-role-configuration-002": 1.0,
+        "query-role-configuration-003": 1.0,
+        "query-role-configuration-004": 1.0,
+        "query-role-configuration-005": 1.0,
+        "query-role-vehicle-000": 1.0,
+        "query-role-vehicle-001": 1.0,
+        "query-role-vehicle-002": 1.0,
+        "query-role-vehicle-003": 1.0,
+        "query-role-vehicle-004": 1.0,
+        "query-role-vehicle-005": 1.0
+      },
+      "excluded_world_ids": [],
+      "planned_family_counts": {
+        "vehicle": 6,
+        "configuration": 6
+      },
+      "eligible_family_counts": {
+        "configuration": 6,
+        "vehicle": 6
+      },
+      "full_plan_bounds": [
+        1.0,
+        1.0
+      ],
+      "world_bounds": {
+        "query-role-configuration-000": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-001": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-002": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-003": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-004": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-005": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-000": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-001": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-002": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-003": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-004": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-005": [
+          1.0,
+          1.0
+        ]
+      },
+      "unscorable_or_pending_task_ids": [],
+      "descriptive_bootstrap_95_interval": [
+        1.0,
+        1.0
+      ],
+      "interval_status": "available"
+    },
+    "encoded_visible_R": {
+      "mean": 1.0,
+      "n_complete_worlds": 12,
+      "n_planned_worlds": 12,
+      "world_values": {
+        "query-role-configuration-000": 1.0,
+        "query-role-configuration-001": 1.0,
+        "query-role-configuration-002": 1.0,
+        "query-role-configuration-003": 1.0,
+        "query-role-configuration-004": 1.0,
+        "query-role-configuration-005": 1.0,
+        "query-role-vehicle-000": 1.0,
+        "query-role-vehicle-001": 1.0,
+        "query-role-vehicle-002": 1.0,
+        "query-role-vehicle-003": 1.0,
+        "query-role-vehicle-004": 1.0,
+        "query-role-vehicle-005": 1.0
+      },
+      "excluded_world_ids": [],
+      "planned_family_counts": {
+        "vehicle": 6,
+        "configuration": 6
+      },
+      "eligible_family_counts": {
+        "configuration": 6,
+        "vehicle": 6
+      },
+      "full_plan_bounds": [
+        1.0,
+        1.0
+      ],
+      "world_bounds": {
+        "query-role-configuration-000": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-001": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-002": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-003": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-004": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-005": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-000": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-001": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-002": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-003": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-004": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-005": [
+          1.0,
+          1.0
+        ]
+      },
+      "unscorable_or_pending_task_ids": [],
+      "descriptive_bootstrap_95_interval": [
+        1.0,
+        1.0
+      ],
+      "interval_status": "available"
+    },
+    "downstream_direct_R": {
+      "mean": 1.0,
+      "n_complete_worlds": 12,
+      "n_planned_worlds": 12,
+      "world_values": {
+        "query-role-configuration-000": 1.0,
+        "query-role-configuration-001": 1.0,
+        "query-role-configuration-002": 1.0,
+        "query-role-configuration-003": 1.0,
+        "query-role-configuration-004": 1.0,
+        "query-role-configuration-005": 1.0,
+        "query-role-vehicle-000": 1.0,
+        "query-role-vehicle-001": 1.0,
+        "query-role-vehicle-002": 1.0,
+        "query-role-vehicle-003": 1.0,
+        "query-role-vehicle-004": 1.0,
+        "query-role-vehicle-005": 1.0
+      },
+      "excluded_world_ids": [],
+      "planned_family_counts": {
+        "vehicle": 6,
+        "configuration": 6
+      },
+      "eligible_family_counts": {
+        "configuration": 6,
+        "vehicle": 6
+      },
+      "full_plan_bounds": [
+        1.0,
+        1.0
+      ],
+      "world_bounds": {
+        "query-role-configuration-000": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-001": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-002": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-003": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-004": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-005": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-000": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-001": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-002": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-003": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-004": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-005": [
+          1.0,
+          1.0
+        ]
+      },
+      "unscorable_or_pending_task_ids": [],
+      "descriptive_bootstrap_95_interval": [
+        1.0,
+        1.0
+      ],
+      "interval_status": "available"
+    },
+    "downstream_visible_R": {
+      "mean": 1.0,
+      "n_complete_worlds": 12,
+      "n_planned_worlds": 12,
+      "world_values": {
+        "query-role-configuration-000": 1.0,
+        "query-role-configuration-001": 1.0,
+        "query-role-configuration-002": 1.0,
+        "query-role-configuration-003": 1.0,
+        "query-role-configuration-004": 1.0,
+        "query-role-configuration-005": 1.0,
+        "query-role-vehicle-000": 1.0,
+        "query-role-vehicle-001": 1.0,
+        "query-role-vehicle-002": 1.0,
+        "query-role-vehicle-003": 1.0,
+        "query-role-vehicle-004": 1.0,
+        "query-role-vehicle-005": 1.0
+      },
+      "excluded_world_ids": [],
+      "planned_family_counts": {
+        "vehicle": 6,
+        "configuration": 6
+      },
+      "eligible_family_counts": {
+        "configuration": 6,
+        "vehicle": 6
+      },
+      "full_plan_bounds": [
+        1.0,
+        1.0
+      ],
+      "world_bounds": {
+        "query-role-configuration-000": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-001": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-002": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-003": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-004": [
+          1.0,
+          1.0
+        ],
+        "query-role-configuration-005": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-000": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-001": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-002": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-003": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-004": [
+          1.0,
+          1.0
+        ],
+        "query-role-vehicle-005": [
+          1.0,
+          1.0
+        ]
+      },
+      "unscorable_or_pending_task_ids": [],
+      "descriptive_bootstrap_95_interval": [
+        1.0,
+        1.0
+      ],
+      "interval_status": "available"
+    },
+    "literal_harm": {
+      "mean": 0.0,
+      "n_complete_worlds": 12,
+      "n_planned_worlds": 12,
+      "world_values": {
+        "query-role-configuration-000": 0.0,
+        "query-role-configuration-001": 0.0,
+        "query-role-configuration-002": 0.0,
+        "query-role-configuration-003": 0.0,
+        "query-role-configuration-004": 0.0,
+        "query-role-configuration-005": 0.0,
+        "query-role-vehicle-000": 0.0,
+        "query-role-vehicle-001": 0.0,
+        "query-role-vehicle-002": 0.0,
+        "query-role-vehicle-003": 0.0,
+        "query-role-vehicle-004": 0.0,
+        "query-role-vehicle-005": 0.0
+      },
+      "excluded_world_ids": [],
+      "planned_family_counts": {
+        "vehicle": 6,
+        "configuration": 6
+      },
+      "eligible_family_counts": {
+        "configuration": 6,
+        "vehicle": 6
+      },
+      "full_plan_bounds": [
+        0.0,
+        0.0
+      ],
+      "world_bounds": {
+        "query-role-configuration-000": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-001": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-002": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-003": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-004": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-005": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-000": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-001": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-002": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-003": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-004": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-005": [
+          0.0,
+          0.0
+        ]
+      },
+      "unscorable_or_pending_task_ids": [],
+      "descriptive_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "interval_status": "available"
+    },
+    "encoded_harm": {
+      "mean": 0.0,
+      "n_complete_worlds": 12,
+      "n_planned_worlds": 12,
+      "world_values": {
+        "query-role-configuration-000": 0.0,
+        "query-role-configuration-001": 0.0,
+        "query-role-configuration-002": 0.0,
+        "query-role-configuration-003": 0.0,
+        "query-role-configuration-004": 0.0,
+        "query-role-configuration-005": 0.0,
+        "query-role-vehicle-000": 0.0,
+        "query-role-vehicle-001": 0.0,
+        "query-role-vehicle-002": 0.0,
+        "query-role-vehicle-003": 0.0,
+        "query-role-vehicle-004": 0.0,
+        "query-role-vehicle-005": 0.0
+      },
+      "excluded_world_ids": [],
+      "planned_family_counts": {
+        "vehicle": 6,
+        "configuration": 6
+      },
+      "eligible_family_counts": {
+        "configuration": 6,
+        "vehicle": 6
+      },
+      "full_plan_bounds": [
+        0.0,
+        0.0
+      ],
+      "world_bounds": {
+        "query-role-configuration-000": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-001": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-002": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-003": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-004": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-005": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-000": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-001": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-002": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-003": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-004": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-005": [
+          0.0,
+          0.0
+        ]
+      },
+      "unscorable_or_pending_task_ids": [],
+      "descriptive_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "interval_status": "available"
+    },
+    "downstream_harm": {
+      "mean": 0.0,
+      "n_complete_worlds": 12,
+      "n_planned_worlds": 12,
+      "world_values": {
+        "query-role-configuration-000": 0.0,
+        "query-role-configuration-001": 0.0,
+        "query-role-configuration-002": 0.0,
+        "query-role-configuration-003": 0.0,
+        "query-role-configuration-004": 0.0,
+        "query-role-configuration-005": 0.0,
+        "query-role-vehicle-000": 0.0,
+        "query-role-vehicle-001": 0.0,
+        "query-role-vehicle-002": 0.0,
+        "query-role-vehicle-003": 0.0,
+        "query-role-vehicle-004": 0.0,
+        "query-role-vehicle-005": 0.0
+      },
+      "excluded_world_ids": [],
+      "planned_family_counts": {
+        "vehicle": 6,
+        "configuration": 6
+      },
+      "eligible_family_counts": {
+        "configuration": 6,
+        "vehicle": 6
+      },
+      "full_plan_bounds": [
+        0.0,
+        0.0
+      ],
+      "world_bounds": {
+        "query-role-configuration-000": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-001": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-002": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-003": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-004": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-005": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-000": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-001": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-002": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-003": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-004": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-005": [
+          0.0,
+          0.0
+        ]
+      },
+      "unscorable_or_pending_task_ids": [],
+      "descriptive_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "interval_status": "available"
+    },
+    "primary_D": {
+      "mean": 0.0,
+      "n_complete_worlds": 12,
+      "n_planned_worlds": 12,
+      "world_values": {
+        "query-role-configuration-000": 0.0,
+        "query-role-configuration-001": 0.0,
+        "query-role-configuration-002": 0.0,
+        "query-role-configuration-003": 0.0,
+        "query-role-configuration-004": 0.0,
+        "query-role-configuration-005": 0.0,
+        "query-role-vehicle-000": 0.0,
+        "query-role-vehicle-001": 0.0,
+        "query-role-vehicle-002": 0.0,
+        "query-role-vehicle-003": 0.0,
+        "query-role-vehicle-004": 0.0,
+        "query-role-vehicle-005": 0.0
+      },
+      "excluded_world_ids": [],
+      "planned_family_counts": {
+        "vehicle": 6,
+        "configuration": 6
+      },
+      "eligible_family_counts": {
+        "configuration": 6,
+        "vehicle": 6
+      },
+      "full_plan_bounds": [
+        0.0,
+        0.0
+      ],
+      "world_bounds": {
+        "query-role-configuration-000": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-001": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-002": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-003": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-004": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-005": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-000": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-001": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-002": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-003": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-004": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-005": [
+          0.0,
+          0.0
+        ]
+      },
+      "unscorable_or_pending_task_ids": [],
+      "descriptive_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "interval_status": "available"
+    },
+    "visible_role_gap": {
+      "mean": 0.0,
+      "n_complete_worlds": 12,
+      "n_planned_worlds": 12,
+      "world_values": {
+        "query-role-configuration-000": 0.0,
+        "query-role-configuration-001": 0.0,
+        "query-role-configuration-002": 0.0,
+        "query-role-configuration-003": 0.0,
+        "query-role-configuration-004": 0.0,
+        "query-role-configuration-005": 0.0,
+        "query-role-vehicle-000": 0.0,
+        "query-role-vehicle-001": 0.0,
+        "query-role-vehicle-002": 0.0,
+        "query-role-vehicle-003": 0.0,
+        "query-role-vehicle-004": 0.0,
+        "query-role-vehicle-005": 0.0
+      },
+      "excluded_world_ids": [],
+      "planned_family_counts": {
+        "vehicle": 6,
+        "configuration": 6
+      },
+      "eligible_family_counts": {
+        "configuration": 6,
+        "vehicle": 6
+      },
+      "full_plan_bounds": [
+        0.0,
+        0.0
+      ],
+      "world_bounds": {
+        "query-role-configuration-000": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-001": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-002": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-003": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-004": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-005": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-000": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-001": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-002": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-003": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-004": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-005": [
+          0.0,
+          0.0
+        ]
+      },
+      "unscorable_or_pending_task_ids": [],
+      "descriptive_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "interval_status": "available"
+    },
+    "direct_role_gap": {
+      "mean": 0.0,
+      "n_complete_worlds": 12,
+      "n_planned_worlds": 12,
+      "world_values": {
+        "query-role-configuration-000": 0.0,
+        "query-role-configuration-001": 0.0,
+        "query-role-configuration-002": 0.0,
+        "query-role-configuration-003": 0.0,
+        "query-role-configuration-004": 0.0,
+        "query-role-configuration-005": 0.0,
+        "query-role-vehicle-000": 0.0,
+        "query-role-vehicle-001": 0.0,
+        "query-role-vehicle-002": 0.0,
+        "query-role-vehicle-003": 0.0,
+        "query-role-vehicle-004": 0.0,
+        "query-role-vehicle-005": 0.0
+      },
+      "excluded_world_ids": [],
+      "planned_family_counts": {
+        "vehicle": 6,
+        "configuration": 6
+      },
+      "eligible_family_counts": {
+        "configuration": 6,
+        "vehicle": 6
+      },
+      "full_plan_bounds": [
+        0.0,
+        0.0
+      ],
+      "world_bounds": {
+        "query-role-configuration-000": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-001": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-002": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-003": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-004": [
+          0.0,
+          0.0
+        ],
+        "query-role-configuration-005": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-000": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-001": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-002": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-003": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-004": [
+          0.0,
+          0.0
+        ],
+        "query-role-vehicle-005": [
+          0.0,
+          0.0
+        ]
+      },
+      "unscorable_or_pending_task_ids": [],
+      "descriptive_bootstrap_95_interval": [
+        0.0,
+        0.0
+      ],
+      "interval_status": "available"
+    }
+  },
+  "families": {
+    "configuration": {
+      "counts": {
+        "planned": 72,
+        "returned": 72,
+        "valid": 72,
+        "invalid": 0,
+        "pending": 0,
+        "correct": 72,
+        "pattern": 0,
+        "other": 0,
+        "accuracy_valid_only": 1.0,
+        "accuracy_invalid_as_incorrect": 1.0,
+        "pattern_rate_valid_only": 0.0,
+        "answer_counts": {
+          "Balanced": 8,
+          "Fast": 8,
+          "K": 16,
+          "Quiet": 8,
+          "R": 16,
+          "Z": 16
+        },
+        "full_plan_accuracy_bounds": [
+          1.0,
+          1.0
+        ],
+        "all_returned": true,
+        "all_valid": true,
+        "direct_instruction_adherence": {
+          "planned_direct": 36,
+          "known": 36,
+          "adherent": 36,
+          "nonadherent": 0,
+          "unknown": 0,
+          "rate_known_only": 1.0
+        }
+      },
+      "metrics": {
+        "encoded_harm": {
+          "mean": 0.0,
+          "n_complete_worlds": 6,
+          "n_planned_worlds": 6,
+          "world_values": {
+            "query-role-configuration-000": 0.0,
+            "query-role-configuration-001": 0.0,
+            "query-role-configuration-002": 0.0,
+            "query-role-configuration-003": 0.0,
+            "query-role-configuration-004": 0.0,
+            "query-role-configuration-005": 0.0
+          },
+          "excluded_world_ids": [],
+          "planned_family_counts": {
+            "configuration": 6
+          },
+          "eligible_family_counts": {
+            "configuration": 6
+          },
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ],
+          "world_bounds": {
+            "query-role-configuration-000": [
+              0.0,
+              0.0
+            ],
+            "query-role-configuration-001": [
+              0.0,
+              0.0
+            ],
+            "query-role-configuration-002": [
+              0.0,
+              0.0
+            ],
+            "query-role-configuration-003": [
+              0.0,
+              0.0
+            ],
+            "query-role-configuration-004": [
+              0.0,
+              0.0
+            ],
+            "query-role-configuration-005": [
+              0.0,
+              0.0
+            ]
+          },
+          "unscorable_or_pending_task_ids": [],
+          "descriptive_bootstrap_95_interval": [
+            0.0,
+            0.0
+          ],
+          "interval_status": "available"
+        },
+        "primary_D": {
+          "mean": 0.0,
+          "n_complete_worlds": 6,
+          "n_planned_worlds": 6,
+          "world_values": {
+            "query-role-configuration-000": 0.0,
+            "query-role-configuration-001": 0.0,
+            "query-role-configuration-002": 0.0,
+            "query-role-configuration-003": 0.0,
+            "query-role-configuration-004": 0.0,
+            "query-role-configuration-005": 0.0
+          },
+          "excluded_world_ids": [],
+          "planned_family_counts": {
+            "configuration": 6
+          },
+          "eligible_family_counts": {
+            "configuration": 6
+          },
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ],
+          "world_bounds": {
+            "query-role-configuration-000": [
+              0.0,
+              0.0
+            ],
+            "query-role-configuration-001": [
+              0.0,
+              0.0
+            ],
+            "query-role-configuration-002": [
+              0.0,
+              0.0
+            ],
+            "query-role-configuration-003": [
+              0.0,
+              0.0
+            ],
+            "query-role-configuration-004": [
+              0.0,
+              0.0
+            ],
+            "query-role-configuration-005": [
+              0.0,
+              0.0
+            ]
+          },
+          "unscorable_or_pending_task_ids": [],
+          "descriptive_bootstrap_95_interval": [
+            0.0,
+            0.0
+          ],
+          "interval_status": "available"
+        },
+        "downstream_visible_R": {
+          "mean": 1.0,
+          "n_complete_worlds": 6,
+          "n_planned_worlds": 6,
+          "world_values": {
+            "query-role-configuration-000": 1.0,
+            "query-role-configuration-001": 1.0,
+            "query-role-configuration-002": 1.0,
+            "query-role-configuration-003": 1.0,
+            "query-role-configuration-004": 1.0,
+            "query-role-configuration-005": 1.0
+          },
+          "excluded_world_ids": [],
+          "planned_family_counts": {
+            "configuration": 6
+          },
+          "eligible_family_counts": {
+            "configuration": 6
+          },
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ],
+          "world_bounds": {
+            "query-role-configuration-000": [
+              1.0,
+              1.0
+            ],
+            "query-role-configuration-001": [
+              1.0,
+              1.0
+            ],
+            "query-role-configuration-002": [
+              1.0,
+              1.0
+            ],
+            "query-role-configuration-003": [
+              1.0,
+              1.0
+            ],
+            "query-role-configuration-004": [
+              1.0,
+              1.0
+            ],
+            "query-role-configuration-005": [
+              1.0,
+              1.0
+            ]
+          },
+          "unscorable_or_pending_task_ids": [],
+          "descriptive_bootstrap_95_interval": [
+            1.0,
+            1.0
+          ],
+          "interval_status": "available"
+        }
+      }
+    },
+    "vehicle": {
+      "counts": {
+        "planned": 72,
+        "returned": 72,
+        "valid": 72,
+        "invalid": 0,
+        "pending": 0,
+        "correct": 72,
+        "pattern": 0,
+        "other": 0,
+        "accuracy_valid_only": 1.0,
+        "accuracy_invalid_as_incorrect": 1.0,
+        "pattern_rate_valid_only": 0.0,
+        "answer_counts": {
+          "A": 8,
+          "B": 8,
+          "C": 8,
+          "K": 16,
+          "R": 16,
+          "Z": 16
+        },
+        "full_plan_accuracy_bounds": [
+          1.0,
+          1.0
+        ],
+        "all_returned": true,
+        "all_valid": true,
+        "direct_instruction_adherence": {
+          "planned_direct": 36,
+          "known": 36,
+          "adherent": 36,
+          "nonadherent": 0,
+          "unknown": 0,
+          "rate_known_only": 1.0
+        }
+      },
+      "metrics": {
+        "encoded_harm": {
+          "mean": 0.0,
+          "n_complete_worlds": 6,
+          "n_planned_worlds": 6,
+          "world_values": {
+            "query-role-vehicle-000": 0.0,
+            "query-role-vehicle-001": 0.0,
+            "query-role-vehicle-002": 0.0,
+            "query-role-vehicle-003": 0.0,
+            "query-role-vehicle-004": 0.0,
+            "query-role-vehicle-005": 0.0
+          },
+          "excluded_world_ids": [],
+          "planned_family_counts": {
+            "vehicle": 6
+          },
+          "eligible_family_counts": {
+            "vehicle": 6
+          },
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ],
+          "world_bounds": {
+            "query-role-vehicle-000": [
+              0.0,
+              0.0
+            ],
+            "query-role-vehicle-001": [
+              0.0,
+              0.0
+            ],
+            "query-role-vehicle-002": [
+              0.0,
+              0.0
+            ],
+            "query-role-vehicle-003": [
+              0.0,
+              0.0
+            ],
+            "query-role-vehicle-004": [
+              0.0,
+              0.0
+            ],
+            "query-role-vehicle-005": [
+              0.0,
+              0.0
+            ]
+          },
+          "unscorable_or_pending_task_ids": [],
+          "descriptive_bootstrap_95_interval": [
+            0.0,
+            0.0
+          ],
+          "interval_status": "available"
+        },
+        "primary_D": {
+          "mean": 0.0,
+          "n_complete_worlds": 6,
+          "n_planned_worlds": 6,
+          "world_values": {
+            "query-role-vehicle-000": 0.0,
+            "query-role-vehicle-001": 0.0,
+            "query-role-vehicle-002": 0.0,
+            "query-role-vehicle-003": 0.0,
+            "query-role-vehicle-004": 0.0,
+            "query-role-vehicle-005": 0.0
+          },
+          "excluded_world_ids": [],
+          "planned_family_counts": {
+            "vehicle": 6
+          },
+          "eligible_family_counts": {
+            "vehicle": 6
+          },
+          "full_plan_bounds": [
+            0.0,
+            0.0
+          ],
+          "world_bounds": {
+            "query-role-vehicle-000": [
+              0.0,
+              0.0
+            ],
+            "query-role-vehicle-001": [
+              0.0,
+              0.0
+            ],
+            "query-role-vehicle-002": [
+              0.0,
+              0.0
+            ],
+            "query-role-vehicle-003": [
+              0.0,
+              0.0
+            ],
+            "query-role-vehicle-004": [
+              0.0,
+              0.0
+            ],
+            "query-role-vehicle-005": [
+              0.0,
+              0.0
+            ]
+          },
+          "unscorable_or_pending_task_ids": [],
+          "descriptive_bootstrap_95_interval": [
+            0.0,
+            0.0
+          ],
+          "interval_status": "available"
+        },
+        "downstream_visible_R": {
+          "mean": 1.0,
+          "n_complete_worlds": 6,
+          "n_planned_worlds": 6,
+          "world_values": {
+            "query-role-vehicle-000": 1.0,
+            "query-role-vehicle-001": 1.0,
+            "query-role-vehicle-002": 1.0,
+            "query-role-vehicle-003": 1.0,
+            "query-role-vehicle-004": 1.0,
+            "query-role-vehicle-005": 1.0
+          },
+          "excluded_world_ids": [],
+          "planned_family_counts": {
+            "vehicle": 6
+          },
+          "eligible_family_counts": {
+            "vehicle": 6
+          },
+          "full_plan_bounds": [
+            1.0,
+            1.0
+          ],
+          "world_bounds": {
+            "query-role-vehicle-000": [
+              1.0,
+              1.0
+            ],
+            "query-role-vehicle-001": [
+              1.0,
+              1.0
+            ],
+            "query-role-vehicle-002": [
+              1.0,
+              1.0
+            ],
+            "query-role-vehicle-003": [
+              1.0,
+              1.0
+            ],
+            "query-role-vehicle-004": [
+              1.0,
+              1.0
+            ],
+            "query-role-vehicle-005": [
+              1.0,
+              1.0
+            ]
+          },
+          "unscorable_or_pending_task_ids": [],
+          "descriptive_bootstrap_95_interval": [
+            1.0,
+            1.0
+          ],
+          "interval_status": "available"
+        }
+      }
+    }
+  },
+  "screen": {
+    "decision": "stop_this_screen",
+    "practical_criteria_pass": false,
+    "eligible_for_separate_heldout_review": false,
+    "criteria": [
+      {
+        "criterion": "fixed_144_call_12_world_plan",
+        "observed": 1,
+        "operator": ">=",
+        "threshold": 1,
+        "passed": true
+      },
+      {
+        "criterion": "scorable_answers",
+        "observed": 144,
+        "operator": ">=",
+        "threshold": 137,
+        "passed": true
+      },
+      {
+        "criterion": "literal_direct_correct_invalid_as_incorrect",
+        "observed": 24,
+        "operator": ">=",
+        "threshold": 22,
+        "passed": true
+      },
+      {
+        "criterion": "encoded_direct_correct_invalid_as_incorrect",
+        "observed": 24,
+        "operator": ">=",
+        "threshold": 22,
+        "passed": true
+      },
+      {
+        "criterion": "downstream_direct_correct_invalid_as_incorrect",
+        "observed": 24,
+        "operator": ">=",
+        "threshold": 22,
+        "passed": true
+      },
+      {
+        "criterion": "encoded_harm_worst_case_lower_bound",
+        "observed": 0.0,
+        "operator": ">=",
+        "threshold": 0.15,
+        "passed": false
+      },
+      {
+        "criterion": "downstream_visible_R_worst_case_lower_bound",
+        "observed": 1.0,
+        "operator": ">=",
+        "threshold": 0.75,
+        "passed": true
+      },
+      {
+        "criterion": "primary_D_worst_case_lower_bound",
+        "observed": 0.0,
+        "operator": ">=",
+        "threshold": 0.15,
+        "passed": false
+      },
+      {
+        "criterion": "vehicle_encoded_harm_worst_case_lower_bound",
+        "observed": 0.0,
+        "operator": ">",
+        "threshold": 0,
+        "passed": false
+      },
+      {
+        "criterion": "vehicle_primary_D_worst_case_lower_bound",
+        "observed": 0.0,
+        "operator": ">",
+        "threshold": 0,
+        "passed": false
+      },
+      {
+        "criterion": "configuration_encoded_harm_worst_case_lower_bound",
+        "observed": 0.0,
+        "operator": ">",
+        "threshold": 0,
+        "passed": false
+      },
+      {
+        "criterion": "configuration_primary_D_worst_case_lower_bound",
+        "observed": 0.0,
+        "operator": ">",
+        "threshold": 0,
+        "passed": false
+      }
+    ],
+    "failed_criteria": [
+      "encoded_harm_worst_case_lower_bound",
+      "primary_D_worst_case_lower_bound",
+      "vehicle_encoded_harm_worst_case_lower_bound",
+      "vehicle_primary_D_worst_case_lower_bound",
+      "configuration_encoded_harm_worst_case_lower_bound",
+      "configuration_primary_D_worst_case_lower_bound"
+    ],
+    "statistical_significance_test": false,
+    "automatic_followup_authorized": false
+  },
+  "bootstrap": {
+    "samples": 10000,
+    "seed": 2026101002,
+    "method": "Unadjusted percentile bootstrap of whole eligible worlds, stratified by family; each family's eligible-world count is preserved.",
+    "weighting": "Equal weight per complete world for each reported metric. Missingness can change eligible-family proportions; counts are reported. Fixed-plan bounds instead weight every planned world equally.",
+    "interpretation": "Descriptive intervals, not gate criteria or confidence intervals for missingness bounds. No interval before collection completes; at least two eligible worlds in every planned family are required. Degenerate intervals do not establish certainty or equivalence."
+  },
+  "operational_failures": [],
+  "observed_models": {
+    "mistral-small-2603": 144
+  },
+  "observed_model_counts": {
+    "mistral-small-2603": 144
+  },
+  "observed_model": "mistral-small-2603",
+  "usage_all_attempts": {
+    "prompt_tokens": 42888,
+    "total_tokens": 51399,
+    "completion_tokens": 8511
+  },
+  "rows": [
+    {
+      "task_id": "query-role-vehicle-003/b/downstream/visible",
+      "world_id": "query-role-vehicle-003",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "A",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-003/b/encoded/visible",
+      "world_id": "query-role-vehicle-003",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "A",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-005/a/encoded/visible",
+      "world_id": "query-role-configuration-005",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "Fast",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-002/b/encoded/direct",
+      "world_id": "query-role-configuration-002",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "Fast",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-002/a/encoded/visible",
+      "world_id": "query-role-configuration-002",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "Quiet",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-005/b/literal/direct",
+      "world_id": "query-role-configuration-005",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "Quiet",
+      "score": 1,
+      "decoded_value": "Quiet",
+      "expected": "Quiet",
+      "pattern_label": "Balanced",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-004/b/literal/direct",
+      "world_id": "query-role-vehicle-004",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "A",
+      "score": 1,
+      "decoded_value": "A",
+      "expected": "A",
+      "pattern_label": "B",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-002/a/encoded/visible",
+      "world_id": "query-role-vehicle-002",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "C",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-001/b/downstream/direct",
+      "world_id": "query-role-vehicle-001",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "C",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-002/b/encoded/visible",
+      "world_id": "query-role-vehicle-002",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "B",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-003/b/downstream/direct",
+      "world_id": "query-role-configuration-003",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "Balanced",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-004/a/encoded/visible",
+      "world_id": "query-role-vehicle-004",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "C",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-003/a/downstream/direct",
+      "world_id": "query-role-configuration-003",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "Quiet",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-004/b/downstream/direct",
+      "world_id": "query-role-vehicle-004",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "A",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-000/a/encoded/direct",
+      "world_id": "query-role-vehicle-000",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "A",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-002/a/encoded/direct",
+      "world_id": "query-role-vehicle-002",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "C",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-004/a/encoded/direct",
+      "world_id": "query-role-vehicle-004",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "C",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-001/b/downstream/visible",
+      "world_id": "query-role-vehicle-001",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "C",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-000/b/literal/direct",
+      "world_id": "query-role-vehicle-000",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "C",
+      "score": 1,
+      "decoded_value": "C",
+      "expected": "C",
+      "pattern_label": "B",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-005/a/downstream/visible",
+      "world_id": "query-role-configuration-005",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "Fast",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-003/b/literal/visible",
+      "world_id": "query-role-configuration-003",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "Balanced",
+      "score": 1,
+      "decoded_value": "Balanced",
+      "expected": "Balanced",
+      "pattern_label": "Fast",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-003/a/downstream/visible",
+      "world_id": "query-role-configuration-003",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "Quiet",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-003/b/encoded/direct",
+      "world_id": "query-role-configuration-003",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "Balanced",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-005/b/downstream/visible",
+      "world_id": "query-role-vehicle-005",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "B",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-004/b/downstream/direct",
+      "world_id": "query-role-configuration-004",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "Balanced",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-004/b/encoded/direct",
+      "world_id": "query-role-vehicle-004",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "A",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-003/a/encoded/direct",
+      "world_id": "query-role-configuration-003",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "Quiet",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-005/b/encoded/direct",
+      "world_id": "query-role-configuration-005",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "Quiet",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-004/a/literal/visible",
+      "world_id": "query-role-configuration-004",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "Fast",
+      "score": -1,
+      "decoded_value": "Fast",
+      "expected": "Fast",
+      "pattern_label": "Quiet",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-003/a/encoded/visible",
+      "world_id": "query-role-configuration-003",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "Quiet",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-001/b/encoded/visible",
+      "world_id": "query-role-vehicle-001",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "C",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-005/a/encoded/visible",
+      "world_id": "query-role-vehicle-005",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "A",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-002/a/downstream/direct",
+      "world_id": "query-role-configuration-002",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "Quiet",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-005/a/literal/visible",
+      "world_id": "query-role-configuration-005",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "Fast",
+      "score": -1,
+      "decoded_value": "Fast",
+      "expected": "Fast",
+      "pattern_label": "Balanced",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-000/a/literal/direct",
+      "world_id": "query-role-vehicle-000",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "A",
+      "score": -1,
+      "decoded_value": "A",
+      "expected": "A",
+      "pattern_label": "B",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-001/a/literal/visible",
+      "world_id": "query-role-vehicle-001",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "B",
+      "score": -1,
+      "decoded_value": "B",
+      "expected": "B",
+      "pattern_label": "A",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-003/a/downstream/direct",
+      "world_id": "query-role-vehicle-003",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "B",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-005/a/literal/visible",
+      "world_id": "query-role-vehicle-005",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "A",
+      "score": -1,
+      "decoded_value": "A",
+      "expected": "A",
+      "pattern_label": "C",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-005/a/downstream/direct",
+      "world_id": "query-role-configuration-005",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "Fast",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-005/b/encoded/visible",
+      "world_id": "query-role-vehicle-005",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "B",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-003/b/literal/direct",
+      "world_id": "query-role-vehicle-003",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "A",
+      "score": 1,
+      "decoded_value": "A",
+      "expected": "A",
+      "pattern_label": "C",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-004/a/encoded/visible",
+      "world_id": "query-role-configuration-004",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "Fast",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-005/b/downstream/direct",
+      "world_id": "query-role-configuration-005",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "Quiet",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-000/a/downstream/direct",
+      "world_id": "query-role-vehicle-000",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "A",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-001/a/encoded/visible",
+      "world_id": "query-role-configuration-001",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "Balanced",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-001/a/downstream/direct",
+      "world_id": "query-role-vehicle-001",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "B",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-001/b/encoded/direct",
+      "world_id": "query-role-configuration-001",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "Fast",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-002/b/encoded/visible",
+      "world_id": "query-role-configuration-002",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "Fast",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-001/a/encoded/direct",
+      "world_id": "query-role-vehicle-001",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "B",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-000/b/encoded/direct",
+      "world_id": "query-role-configuration-000",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "Quiet",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-002/b/literal/visible",
+      "world_id": "query-role-configuration-002",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "Fast",
+      "score": 1,
+      "decoded_value": "Fast",
+      "expected": "Fast",
+      "pattern_label": "Balanced",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-002/a/literal/visible",
+      "world_id": "query-role-configuration-002",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "Quiet",
+      "score": -1,
+      "decoded_value": "Quiet",
+      "expected": "Quiet",
+      "pattern_label": "Balanced",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-004/b/literal/visible",
+      "world_id": "query-role-configuration-004",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "Balanced",
+      "score": 1,
+      "decoded_value": "Balanced",
+      "expected": "Balanced",
+      "pattern_label": "Quiet",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-002/a/downstream/direct",
+      "world_id": "query-role-vehicle-002",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "C",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-001/a/downstream/visible",
+      "world_id": "query-role-vehicle-001",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "B",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-000/a/literal/visible",
+      "world_id": "query-role-vehicle-000",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "A",
+      "score": -1,
+      "decoded_value": "A",
+      "expected": "A",
+      "pattern_label": "B",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-002/a/downstream/visible",
+      "world_id": "query-role-configuration-002",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "Quiet",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-005/b/literal/visible",
+      "world_id": "query-role-vehicle-005",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "B",
+      "score": 1,
+      "decoded_value": "B",
+      "expected": "B",
+      "pattern_label": "C",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-004/b/encoded/visible",
+      "world_id": "query-role-vehicle-004",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "A",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-002/b/literal/visible",
+      "world_id": "query-role-vehicle-002",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "B",
+      "score": 1,
+      "decoded_value": "B",
+      "expected": "B",
+      "pattern_label": "A",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-004/a/literal/direct",
+      "world_id": "query-role-vehicle-004",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "C",
+      "score": -1,
+      "decoded_value": "C",
+      "expected": "C",
+      "pattern_label": "B",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-004/b/literal/visible",
+      "world_id": "query-role-vehicle-004",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "A",
+      "score": 1,
+      "decoded_value": "A",
+      "expected": "A",
+      "pattern_label": "B",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-001/b/downstream/visible",
+      "world_id": "query-role-configuration-001",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "Fast",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-003/b/downstream/direct",
+      "world_id": "query-role-vehicle-003",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "A",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-001/b/literal/direct",
+      "world_id": "query-role-vehicle-001",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "C",
+      "score": 1,
+      "decoded_value": "C",
+      "expected": "C",
+      "pattern_label": "A",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-000/b/encoded/visible",
+      "world_id": "query-role-configuration-000",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "Quiet",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-000/b/downstream/direct",
+      "world_id": "query-role-configuration-000",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "Quiet",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-002/b/downstream/direct",
+      "world_id": "query-role-configuration-002",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "Fast",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-002/b/literal/direct",
+      "world_id": "query-role-vehicle-002",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "B",
+      "score": 1,
+      "decoded_value": "B",
+      "expected": "B",
+      "pattern_label": "A",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-000/a/downstream/visible",
+      "world_id": "query-role-vehicle-000",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "A",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-003/a/literal/direct",
+      "world_id": "query-role-configuration-003",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "Quiet",
+      "score": -1,
+      "decoded_value": "Quiet",
+      "expected": "Quiet",
+      "pattern_label": "Fast",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-001/a/encoded/direct",
+      "world_id": "query-role-configuration-001",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "Balanced",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-002/a/downstream/visible",
+      "world_id": "query-role-vehicle-002",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "C",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-000/a/downstream/direct",
+      "world_id": "query-role-configuration-000",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "Balanced",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-001/a/downstream/direct",
+      "world_id": "query-role-configuration-001",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "Balanced",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-000/a/downstream/visible",
+      "world_id": "query-role-configuration-000",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "Balanced",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-000/b/downstream/visible",
+      "world_id": "query-role-configuration-000",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "Quiet",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-001/a/literal/direct",
+      "world_id": "query-role-vehicle-001",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "B",
+      "score": -1,
+      "decoded_value": "B",
+      "expected": "B",
+      "pattern_label": "A",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-005/b/literal/visible",
+      "world_id": "query-role-configuration-005",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "Quiet",
+      "score": 1,
+      "decoded_value": "Quiet",
+      "expected": "Quiet",
+      "pattern_label": "Balanced",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-005/a/downstream/visible",
+      "world_id": "query-role-vehicle-005",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "A",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-004/a/downstream/direct",
+      "world_id": "query-role-configuration-004",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "Fast",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-000/a/encoded/visible",
+      "world_id": "query-role-vehicle-000",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "A",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-003/a/encoded/visible",
+      "world_id": "query-role-vehicle-003",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "B",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-004/a/literal/direct",
+      "world_id": "query-role-configuration-004",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "Fast",
+      "score": -1,
+      "decoded_value": "Fast",
+      "expected": "Fast",
+      "pattern_label": "Quiet",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-004/a/downstream/visible",
+      "world_id": "query-role-vehicle-004",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "C",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-005/b/downstream/direct",
+      "world_id": "query-role-vehicle-005",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "B",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-000/b/literal/direct",
+      "world_id": "query-role-configuration-000",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "Quiet",
+      "score": 1,
+      "decoded_value": "Quiet",
+      "expected": "Quiet",
+      "pattern_label": "Fast",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-001/b/literal/visible",
+      "world_id": "query-role-vehicle-001",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "C",
+      "score": 1,
+      "decoded_value": "C",
+      "expected": "C",
+      "pattern_label": "A",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-001/b/downstream/direct",
+      "world_id": "query-role-configuration-001",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "Fast",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-002/b/literal/direct",
+      "world_id": "query-role-configuration-002",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "Fast",
+      "score": 1,
+      "decoded_value": "Fast",
+      "expected": "Fast",
+      "pattern_label": "Balanced",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-003/b/literal/direct",
+      "world_id": "query-role-configuration-003",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "Balanced",
+      "score": 1,
+      "decoded_value": "Balanced",
+      "expected": "Balanced",
+      "pattern_label": "Fast",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-003/a/literal/visible",
+      "world_id": "query-role-configuration-003",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "Quiet",
+      "score": -1,
+      "decoded_value": "Quiet",
+      "expected": "Quiet",
+      "pattern_label": "Fast",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-004/b/downstream/visible",
+      "world_id": "query-role-vehicle-004",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "A",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-000/a/encoded/visible",
+      "world_id": "query-role-configuration-000",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "Balanced",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-004/a/literal/visible",
+      "world_id": "query-role-vehicle-004",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "C",
+      "score": -1,
+      "decoded_value": "C",
+      "expected": "C",
+      "pattern_label": "B",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-002/b/downstream/visible",
+      "world_id": "query-role-configuration-002",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "Fast",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-004/a/encoded/direct",
+      "world_id": "query-role-configuration-004",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "Fast",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-001/b/literal/direct",
+      "world_id": "query-role-configuration-001",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "Fast",
+      "score": 1,
+      "decoded_value": "Fast",
+      "expected": "Fast",
+      "pattern_label": "Quiet",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-005/a/literal/direct",
+      "world_id": "query-role-vehicle-005",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "A",
+      "score": -1,
+      "decoded_value": "A",
+      "expected": "A",
+      "pattern_label": "C",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-000/a/literal/visible",
+      "world_id": "query-role-configuration-000",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "Balanced",
+      "score": -1,
+      "decoded_value": "Balanced",
+      "expected": "Balanced",
+      "pattern_label": "Fast",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-000/b/literal/visible",
+      "world_id": "query-role-vehicle-000",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "C",
+      "score": 1,
+      "decoded_value": "C",
+      "expected": "C",
+      "pattern_label": "B",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-000/b/literal/visible",
+      "world_id": "query-role-configuration-000",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "Quiet",
+      "score": 1,
+      "decoded_value": "Quiet",
+      "expected": "Quiet",
+      "pattern_label": "Fast",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-004/a/downstream/direct",
+      "world_id": "query-role-vehicle-004",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "C",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-005/b/encoded/visible",
+      "world_id": "query-role-configuration-005",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "Quiet",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-004/b/encoded/visible",
+      "world_id": "query-role-configuration-004",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "Balanced",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-005/a/downstream/direct",
+      "world_id": "query-role-vehicle-005",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "A",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-004/b/downstream/visible",
+      "world_id": "query-role-configuration-004",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "Balanced",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-003/b/downstream/visible",
+      "world_id": "query-role-configuration-003",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "Balanced",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-001/a/downstream/visible",
+      "world_id": "query-role-configuration-001",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "Balanced",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-000/b/encoded/direct",
+      "world_id": "query-role-vehicle-000",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "C",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-001/a/literal/visible",
+      "world_id": "query-role-configuration-001",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "Balanced",
+      "score": -1,
+      "decoded_value": "Balanced",
+      "expected": "Balanced",
+      "pattern_label": "Quiet",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-005/b/literal/direct",
+      "world_id": "query-role-vehicle-005",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "B",
+      "score": 1,
+      "decoded_value": "B",
+      "expected": "B",
+      "pattern_label": "C",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-002/b/encoded/direct",
+      "world_id": "query-role-vehicle-002",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "B",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-003/b/encoded/visible",
+      "world_id": "query-role-configuration-003",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "Balanced",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-000/b/downstream/direct",
+      "world_id": "query-role-vehicle-000",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "C",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-003/b/literal/visible",
+      "world_id": "query-role-vehicle-003",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "A",
+      "score": 1,
+      "decoded_value": "A",
+      "expected": "A",
+      "pattern_label": "C",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-000/a/encoded/direct",
+      "world_id": "query-role-configuration-000",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "Balanced",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-001/b/literal/visible",
+      "world_id": "query-role-configuration-001",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "Fast",
+      "score": 1,
+      "decoded_value": "Fast",
+      "expected": "Fast",
+      "pattern_label": "Quiet",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-003/a/literal/visible",
+      "world_id": "query-role-vehicle-003",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "B",
+      "score": -1,
+      "decoded_value": "B",
+      "expected": "B",
+      "pattern_label": "C",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-003/b/encoded/direct",
+      "world_id": "query-role-vehicle-003",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "A",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-004/b/literal/direct",
+      "world_id": "query-role-configuration-004",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "Balanced",
+      "score": 1,
+      "decoded_value": "Balanced",
+      "expected": "Balanced",
+      "pattern_label": "Quiet",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-005/a/literal/direct",
+      "world_id": "query-role-configuration-005",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "Fast",
+      "score": -1,
+      "decoded_value": "Fast",
+      "expected": "Fast",
+      "pattern_label": "Balanced",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-003/a/downstream/visible",
+      "world_id": "query-role-vehicle-003",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "B",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-003/a/encoded/direct",
+      "world_id": "query-role-vehicle-003",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "B",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-004/a/downstream/visible",
+      "world_id": "query-role-configuration-004",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "Fast",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-005/a/encoded/direct",
+      "world_id": "query-role-vehicle-005",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "R",
+      "score": -1,
+      "decoded_value": "A",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-001/a/literal/direct",
+      "world_id": "query-role-configuration-001",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "Balanced",
+      "score": -1,
+      "decoded_value": "Balanced",
+      "expected": "Balanced",
+      "pattern_label": "Quiet",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-002/a/encoded/direct",
+      "world_id": "query-role-configuration-002",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "Z",
+      "score": -1,
+      "decoded_value": "Quiet",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-003/a/literal/direct",
+      "world_id": "query-role-vehicle-003",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "B",
+      "score": -1,
+      "decoded_value": "B",
+      "expected": "B",
+      "pattern_label": "C",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-004/b/encoded/direct",
+      "world_id": "query-role-configuration-004",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "Balanced",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-000/b/encoded/visible",
+      "world_id": "query-role-vehicle-000",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "C",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-002/b/downstream/direct",
+      "world_id": "query-role-vehicle-002",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "B",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-002/a/literal/visible",
+      "world_id": "query-role-vehicle-002",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "C",
+      "score": -1,
+      "decoded_value": "C",
+      "expected": "C",
+      "pattern_label": "A",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-001/b/encoded/visible",
+      "world_id": "query-role-configuration-001",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "Fast",
+      "expected": "R",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-005/a/encoded/direct",
+      "world_id": "query-role-configuration-005",
+      "family": "configuration",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "Fast",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-005/b/encoded/direct",
+      "world_id": "query-role-vehicle-005",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "B",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-005/b/downstream/visible",
+      "world_id": "query-role-configuration-005",
+      "family": "configuration",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "Quiet",
+      "expected": "Z",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-002/a/literal/direct",
+      "world_id": "query-role-vehicle-002",
+      "family": "vehicle",
+      "query": "literal",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "C",
+      "score": -1,
+      "decoded_value": "C",
+      "expected": "C",
+      "pattern_label": "A",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-configuration-002/a/literal/direct",
+      "world_id": "query-role-configuration-002",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "Quiet",
+      "score": -1,
+      "decoded_value": "Quiet",
+      "expected": "Quiet",
+      "pattern_label": "Balanced",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-000/b/downstream/visible",
+      "world_id": "query-role-vehicle-000",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "K",
+      "score": 1,
+      "decoded_value": "C",
+      "expected": "K",
+      "pattern_label": "R",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-configuration-000/a/literal/direct",
+      "world_id": "query-role-configuration-000",
+      "family": "configuration",
+      "query": "literal",
+      "arm": "direct",
+      "value": "a",
+      "status": "complete",
+      "answer": "Balanced",
+      "score": -1,
+      "decoded_value": "Balanced",
+      "expected": "Balanced",
+      "pattern_label": "Fast",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-002/b/downstream/visible",
+      "world_id": "query-role-vehicle-002",
+      "family": "vehicle",
+      "query": "downstream",
+      "arm": "visible",
+      "value": "b",
+      "status": "complete",
+      "answer": "Z",
+      "score": 1,
+      "decoded_value": "B",
+      "expected": "Z",
+      "pattern_label": "K",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    },
+    {
+      "task_id": "query-role-vehicle-001/b/encoded/direct",
+      "world_id": "query-role-vehicle-001",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "direct",
+      "value": "b",
+      "status": "complete",
+      "answer": "R",
+      "score": 1,
+      "decoded_value": "C",
+      "expected": "R",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": true
+    },
+    {
+      "task_id": "query-role-vehicle-001/a/encoded/visible",
+      "world_id": "query-role-vehicle-001",
+      "family": "vehicle",
+      "query": "encoded",
+      "arm": "visible",
+      "value": "a",
+      "status": "complete",
+      "answer": "K",
+      "score": -1,
+      "decoded_value": "B",
+      "expected": "K",
+      "pattern_label": "Z",
+      "correct": 1,
+      "pattern": 0,
+      "invalid_reason": null,
+      "direct_instruction_adherent": null
+    }
+  ],
+  "limitations": [
+    "The outcome is record-consistent counterfactual responsiveness, not a pure measure of retrieval or internal evidence use. Mapping mistakes remain a competing explanation.",
+    "The primary D is the downstream-minus-encoded responsiveness gap under visible reasoning minus that gap under direct answering. Encoded harm and downstream retention are separate required spending criteria.",
+    "A returned invalid answer is retained, not replaced. Pending and invalid scores range from -1 to 1 in full-plan bounds. Coefficients are combined before bounding shared outcomes.",
+    "Each world is an independent unit; its record variants, queries, and reasoning instructions are paired observations. Component R estimates use complete two-response pairs; contrasts require every response with a nonzero coefficient.",
+    "All gate decisions wait for all 144 responses. Thresholds are practical spending rules, not significance tests. A failed screen is insufficient support for the fixed extension, not proof that no effect exists.",
+    "The two task families remain close analogues of record lookup. Positive findings cannot establish broad task generality, a novel mechanism, or an internal causal explanation.",
+    "Stage two is not implemented or automatically authorized. A passing live screen only supports a separate review of a frozen held-out design."
+  ]
+}

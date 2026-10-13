@@ -1,0 +1,24 @@
+{
+  "model": "mistral-small-2603",
+  "temperature": 0,
+  "top_p": 1,
+  "random_seed": 20261012,
+  "reasoning_effort": "none",
+  "stream": false,
+  "n": 1,
+  "safe_prompt": false,
+  "messages": [
+    {
+      "role": "user",
+      "content": "Write a paragraph of at least 80 words describing the steps for organizing a bookshelf."
+    },
+    {
+      "role": "assistant",
+      "content": "Organizing a bookshelf begins by\nANSWER:",
+      "prefix": true
+    }
+  ],
+  "max_tokens": 1,
+  "logprobs": true,
+  "top_logprobs": 5
+}

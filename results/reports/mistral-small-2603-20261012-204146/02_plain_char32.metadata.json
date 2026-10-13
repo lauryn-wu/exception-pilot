@@ -1,0 +1,50 @@
+{
+  "slot": "02_plain_char32",
+  "status": "observed",
+  "requested_fields": [
+    "max_tokens",
+    "messages",
+    "model",
+    "n",
+    "random_seed",
+    "reasoning_effort",
+    "safe_prompt",
+    "stream",
+    "temperature",
+    "top_p"
+  ],
+  "http_status": 200,
+  "response_bytes": 1145,
+  "response_sha256": "02b4dd7b78583fa1654e68e0642d76a46a645c9fd1e38245240fdea2c8ea756e",
+  "headers": {
+    "Date": "Tue, 13 Oct 2026 01:41:50 GMT",
+    "Content-Type": "application/json"
+  },
+  "returned_model": "mistral-small-2603",
+  "response_id": "a138eaa9defc460ba08b69f376ba0865",
+  "usage": {
+    "prompt_tokens": 41,
+    "total_tokens": 183,
+    "completion_tokens": 142,
+    "prompt_tokens_details": {
+      "cached_tokens": 16
+    },
+    "service_tier": "standard"
+  },
+  "probability_fields": {
+    "logprobs": {
+      "status": "not_returned",
+      "valid_token_rows": 0,
+      "scored_rows": 0,
+      "rows_with_top_k": 0,
+      "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+    },
+    "prompt_logprobs": {
+      "status": "not_returned",
+      "valid_token_rows": 0,
+      "scored_rows": 0,
+      "rows_with_top_k": 0,
+      "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "prefix": "Organizing a bookshelf begins by",
+  "unit": "characters_not_protocol_tokens",
+  "cut": 32,
+  "cue": "\nANSWER:",
+  "context": "Organizing a bookshelf begins by\nANSWER:",
+  "candidates": {
+    "A": " A\n",
+    "B": " B\n",
+    "C": " C\n"
+  }
+}

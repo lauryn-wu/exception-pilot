@@ -1,0 +1,1074 @@
+{
+  "protocol_version": "verified-facts-factorial-v1",
+  "plan_hash": "997d8af356c344da0664f3ffbd374a878ee02daa11fc744b2c26cf90abad0cbd",
+  "model": "gpt-4o-2024-08-06",
+  "mode": "live",
+  "is_simulated": false,
+  "planned_calls": 640,
+  "attempts": 640,
+  "complete_answers": 639,
+  "invalid_answers": 1,
+  "pending_tasks": 0,
+  "provider_errors": 0,
+  "unresolved_attempts": 0,
+  "complete": false,
+  "paired_lists": 19,
+  "list_effects": [
+    {
+      "world_id": "fx-list-000",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 0,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 0.5,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 1,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 1,
+        "original/present": 0.5,
+        "recorded/absent": 0,
+        "recorded/present": 0
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": -0.5,
+        "uncertainty_effect/original": -0.5,
+        "uncertainty_effect/recorded": 0,
+        "question_effect/absent": 1,
+        "question_effect/present": 0.5,
+        "average_uncertainty_effect": -0.25,
+        "average_question_effect": 0.75
+      }
+    },
+    {
+      "world_id": "fx-list-001",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 0.5,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 1,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 0.5,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 0.5,
+        "original/present": 0,
+        "recorded/absent": 0,
+        "recorded/present": 0.5
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": -1.0,
+        "uncertainty_effect/original": -0.5,
+        "uncertainty_effect/recorded": 0.5,
+        "question_effect/absent": 0.5,
+        "question_effect/present": -0.5,
+        "average_uncertainty_effect": 0.0,
+        "average_question_effect": 0.0
+      }
+    },
+    {
+      "world_id": "fx-list-002",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 1,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 0.5,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 1,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 0,
+        "original/present": 0.5,
+        "recorded/absent": 0,
+        "recorded/present": 0
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": 0.5,
+        "uncertainty_effect/original": 0.5,
+        "uncertainty_effect/recorded": 0,
+        "question_effect/absent": 0,
+        "question_effect/present": 0.5,
+        "average_uncertainty_effect": 0.25,
+        "average_question_effect": 0.25
+      }
+    },
+    {
+      "world_id": "fx-list-003",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 1,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 0.5,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 1,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 0,
+        "original/present": 0.5,
+        "recorded/absent": 0,
+        "recorded/present": 0
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": 0.5,
+        "uncertainty_effect/original": 0.5,
+        "uncertainty_effect/recorded": 0,
+        "question_effect/absent": 0,
+        "question_effect/present": 0.5,
+        "average_uncertainty_effect": 0.25,
+        "average_question_effect": 0.25
+      }
+    },
+    {
+      "world_id": "fx-list-004",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 0.5,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 0,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 1,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 0.5,
+        "original/present": 1,
+        "recorded/absent": 0,
+        "recorded/present": 0
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": 0.5,
+        "uncertainty_effect/original": 0.5,
+        "uncertainty_effect/recorded": 0,
+        "question_effect/absent": 0.5,
+        "question_effect/present": 1,
+        "average_uncertainty_effect": 0.25,
+        "average_question_effect": 0.75
+      }
+    },
+    {
+      "world_id": "fx-list-005",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 0,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 0,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 1,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 1,
+        "original/present": 1,
+        "recorded/absent": 0,
+        "recorded/present": 0
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": 0,
+        "uncertainty_effect/original": 0,
+        "uncertainty_effect/recorded": 0,
+        "question_effect/absent": 1,
+        "question_effect/present": 1,
+        "average_uncertainty_effect": 0.0,
+        "average_question_effect": 1.0
+      }
+    },
+    {
+      "world_id": "fx-list-006",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 1,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 1,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 1,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 0,
+        "original/present": 0,
+        "recorded/absent": 0,
+        "recorded/present": 0
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": 0,
+        "uncertainty_effect/original": 0,
+        "uncertainty_effect/recorded": 0,
+        "question_effect/absent": 0,
+        "question_effect/present": 0,
+        "average_uncertainty_effect": 0.0,
+        "average_question_effect": 0.0
+      }
+    },
+    {
+      "world_id": "fx-list-007",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 0.5,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 0.5,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 1,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 0.5,
+        "original/present": 0.5,
+        "recorded/absent": 0,
+        "recorded/present": 0
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": 0.0,
+        "uncertainty_effect/original": 0.0,
+        "uncertainty_effect/recorded": 0,
+        "question_effect/absent": 0.5,
+        "question_effect/present": 0.5,
+        "average_uncertainty_effect": 0.0,
+        "average_question_effect": 0.5
+      }
+    },
+    {
+      "world_id": "fx-list-008",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 0.5,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 1,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 1,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 0.5,
+        "original/present": 0,
+        "recorded/absent": 0,
+        "recorded/present": 0
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": -0.5,
+        "uncertainty_effect/original": -0.5,
+        "uncertainty_effect/recorded": 0,
+        "question_effect/absent": 0.5,
+        "question_effect/present": 0,
+        "average_uncertainty_effect": -0.25,
+        "average_question_effect": 0.25
+      }
+    },
+    {
+      "world_id": "fx-list-009",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 0.5,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 0.5,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 0.5,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 0.5,
+        "original/present": 0.5,
+        "recorded/absent": 0,
+        "recorded/present": 0.5
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": -0.5,
+        "uncertainty_effect/original": 0.0,
+        "uncertainty_effect/recorded": 0.5,
+        "question_effect/absent": 0.5,
+        "question_effect/present": 0.0,
+        "average_uncertainty_effect": 0.25,
+        "average_question_effect": 0.25
+      }
+    },
+    {
+      "world_id": "fx-list-010",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 1,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 0.5,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 1,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 0,
+        "original/present": 0.5,
+        "recorded/absent": 0,
+        "recorded/present": 0
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": 0.5,
+        "uncertainty_effect/original": 0.5,
+        "uncertainty_effect/recorded": 0,
+        "question_effect/absent": 0,
+        "question_effect/present": 0.5,
+        "average_uncertainty_effect": 0.25,
+        "average_question_effect": 0.25
+      }
+    },
+    {
+      "world_id": "fx-list-011",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 1,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 1,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 1,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 0,
+        "original/present": 0,
+        "recorded/absent": 0,
+        "recorded/present": 0
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": 0,
+        "uncertainty_effect/original": 0,
+        "uncertainty_effect/recorded": 0,
+        "question_effect/absent": 0,
+        "question_effect/present": 0,
+        "average_uncertainty_effect": 0.0,
+        "average_question_effect": 0.0
+      }
+    },
+    {
+      "world_id": "fx-list-012",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 0,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 0,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 0.5,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 1,
+        "original/present": 1,
+        "recorded/absent": 0,
+        "recorded/present": 0.5
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": -0.5,
+        "uncertainty_effect/original": 0,
+        "uncertainty_effect/recorded": 0.5,
+        "question_effect/absent": 1,
+        "question_effect/present": 0.5,
+        "average_uncertainty_effect": 0.25,
+        "average_question_effect": 0.75
+      }
+    },
+    {
+      "world_id": "fx-list-013",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 0.5,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 0.5,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 0.5,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 0.5,
+        "original/present": 0.5,
+        "recorded/absent": 0,
+        "recorded/present": 0.5
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": -0.5,
+        "uncertainty_effect/original": 0.0,
+        "uncertainty_effect/recorded": 0.5,
+        "question_effect/absent": 0.5,
+        "question_effect/present": 0.0,
+        "average_uncertainty_effect": 0.25,
+        "average_question_effect": 0.25
+      }
+    },
+    {
+      "world_id": "fx-list-014",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 0.5,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 0,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 0.5,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 0.5,
+        "original/present": 1,
+        "recorded/absent": 0,
+        "recorded/present": 0.5
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": 0.0,
+        "uncertainty_effect/original": 0.5,
+        "uncertainty_effect/recorded": 0.5,
+        "question_effect/absent": 0.5,
+        "question_effect/present": 0.5,
+        "average_uncertainty_effect": 0.5,
+        "average_question_effect": 0.5
+      }
+    },
+    {
+      "world_id": "fx-list-015",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 0.5,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 1,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 0.5,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 0.5,
+        "original/present": 0,
+        "recorded/absent": 0,
+        "recorded/present": 0.5
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": -1.0,
+        "uncertainty_effect/original": -0.5,
+        "uncertainty_effect/recorded": 0.5,
+        "question_effect/absent": 0.5,
+        "question_effect/present": -0.5,
+        "average_uncertainty_effect": 0.0,
+        "average_question_effect": 0.0
+      }
+    },
+    {
+      "world_id": "fx-list-016",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 0,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 0,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 1,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 1,
+        "original/present": 1,
+        "recorded/absent": 0,
+        "recorded/present": 0
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": 0,
+        "uncertainty_effect/original": 0,
+        "uncertainty_effect/recorded": 0,
+        "question_effect/absent": 1,
+        "question_effect/present": 1,
+        "average_uncertainty_effect": 0.0,
+        "average_question_effect": 1.0
+      }
+    },
+    {
+      "world_id": "fx-list-017",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 0,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 0.5,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 0.5,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 1,
+        "original/present": 0.5,
+        "recorded/absent": 0,
+        "recorded/present": 0.5
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": -1.0,
+        "uncertainty_effect/original": -0.5,
+        "uncertainty_effect/recorded": 0.5,
+        "question_effect/absent": 1,
+        "question_effect/present": 0.0,
+        "average_uncertainty_effect": 0.0,
+        "average_question_effect": 0.5
+      }
+    },
+    {
+      "world_id": "fx-list-019",
+      "accuracy": {
+        "original/absent/direct/conflict": 1,
+        "original/absent/direct/support": 1,
+        "original/absent/cot_neutral/conflict": 0,
+        "original/absent/cot_neutral/support": 1,
+        "original/present/direct/conflict": 1,
+        "original/present/direct/support": 1,
+        "original/present/cot_neutral/conflict": 0.5,
+        "original/present/cot_neutral/support": 1,
+        "recorded/absent/direct/conflict": 1,
+        "recorded/absent/direct/support": 1,
+        "recorded/absent/cot_neutral/conflict": 1,
+        "recorded/absent/cot_neutral/support": 1,
+        "recorded/present/direct/conflict": 1,
+        "recorded/present/direct/support": 1,
+        "recorded/present/cot_neutral/conflict": 1,
+        "recorded/present/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/absent": 1,
+        "original/present": 0.5,
+        "recorded/absent": 0,
+        "recorded/present": 0
+      },
+      "factorial_contrasts": {
+        "question_by_uncertainty_interaction": -0.5,
+        "uncertainty_effect/original": -0.5,
+        "uncertainty_effect/recorded": 0,
+        "question_effect/absent": 1,
+        "question_effect/present": 0.5,
+        "average_uncertainty_effect": -0.25,
+        "average_question_effect": 0.75
+      }
+    }
+  ],
+  "accuracy_tables": [
+    {
+      "question_wording": "original",
+      "uncertainty_clause": "absent",
+      "condition": "direct",
+      "background": "conflict",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "original",
+      "uncertainty_clause": "absent",
+      "condition": "direct",
+      "background": "support",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "original",
+      "uncertainty_clause": "absent",
+      "condition": "cot_neutral",
+      "background": "conflict",
+      "n_correct": 18,
+      "n_valid": 39,
+      "n_planned": 40,
+      "accuracy_valid_only": 0.46153846153846156
+    },
+    {
+      "question_wording": "original",
+      "uncertainty_clause": "absent",
+      "condition": "cot_neutral",
+      "background": "support",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "original",
+      "uncertainty_clause": "present",
+      "condition": "direct",
+      "background": "conflict",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "original",
+      "uncertainty_clause": "present",
+      "condition": "direct",
+      "background": "support",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "original",
+      "uncertainty_clause": "present",
+      "condition": "cot_neutral",
+      "background": "conflict",
+      "n_correct": 20,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 0.5
+    },
+    {
+      "question_wording": "original",
+      "uncertainty_clause": "present",
+      "condition": "cot_neutral",
+      "background": "support",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "recorded",
+      "uncertainty_clause": "absent",
+      "condition": "direct",
+      "background": "conflict",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "recorded",
+      "uncertainty_clause": "absent",
+      "condition": "direct",
+      "background": "support",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "recorded",
+      "uncertainty_clause": "absent",
+      "condition": "cot_neutral",
+      "background": "conflict",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "recorded",
+      "uncertainty_clause": "absent",
+      "condition": "cot_neutral",
+      "background": "support",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "recorded",
+      "uncertainty_clause": "present",
+      "condition": "direct",
+      "background": "conflict",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "recorded",
+      "uncertainty_clause": "present",
+      "condition": "direct",
+      "background": "support",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "recorded",
+      "uncertainty_clause": "present",
+      "condition": "cot_neutral",
+      "background": "conflict",
+      "n_correct": 32,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 0.8
+    },
+    {
+      "question_wording": "recorded",
+      "uncertainty_clause": "present",
+      "condition": "cot_neutral",
+      "background": "support",
+      "n_correct": 39,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 0.975
+    }
+  ],
+  "paired_accuracy": {
+    "original/absent/direct/conflict": 1,
+    "original/absent/direct/support": 1,
+    "original/absent/cot_neutral/conflict": 0.47368421052631576,
+    "original/absent/cot_neutral/support": 1,
+    "original/present/direct/conflict": 1,
+    "original/present/direct/support": 1,
+    "original/present/cot_neutral/conflict": 0.5,
+    "original/present/cot_neutral/support": 1,
+    "recorded/absent/direct/conflict": 1,
+    "recorded/absent/direct/support": 1,
+    "recorded/absent/cot_neutral/conflict": 1,
+    "recorded/absent/cot_neutral/support": 1,
+    "recorded/present/direct/conflict": 1,
+    "recorded/present/direct/support": 1,
+    "recorded/present/cot_neutral/conflict": 0.8157894736842105,
+    "recorded/present/cot_neutral/support": 1
+  },
+  "comparisons": {
+    "original/absent": {
+      "question_wording": "original",
+      "uncertainty_clause": "absent",
+      "paired_accuracy": {
+        "direct_conflict": 1,
+        "direct_support": 1,
+        "cot_neutral_conflict": 0.47368421052631576,
+        "cot_neutral_support": 1
+      },
+      "direct_conflict_penalty": 0,
+      "reasoning_conflict_penalty": 0.5263157894736843,
+      "direct_minus_reasoning_conflict_accuracy": 0.5263157894736843,
+      "extra_conflict_penalty": {
+        "mean": 0.5263157894736842,
+        "paired_bootstrap_95_ci": [
+          0.3684210526315789,
+          0.6842105263157895
+        ],
+        "positive_lists": 14,
+        "zero_lists": 5,
+        "negative_lists": 0
+      }
+    },
+    "original/present": {
+      "question_wording": "original",
+      "uncertainty_clause": "present",
+      "paired_accuracy": {
+        "direct_conflict": 1,
+        "direct_support": 1,
+        "cot_neutral_conflict": 0.5,
+        "cot_neutral_support": 1
+      },
+      "direct_conflict_penalty": 0,
+      "reasoning_conflict_penalty": 0.5,
+      "direct_minus_reasoning_conflict_accuracy": 0.5,
+      "extra_conflict_penalty": {
+        "mean": 0.5,
+        "paired_bootstrap_95_ci": [
+          0.34210526315789475,
+          0.6578947368421053
+        ],
+        "positive_lists": 14,
+        "zero_lists": 5,
+        "negative_lists": 0
+      }
+    },
+    "recorded/absent": {
+      "question_wording": "recorded",
+      "uncertainty_clause": "absent",
+      "paired_accuracy": {
+        "direct_conflict": 1,
+        "direct_support": 1,
+        "cot_neutral_conflict": 1,
+        "cot_neutral_support": 1
+      },
+      "direct_conflict_penalty": 0,
+      "reasoning_conflict_penalty": 0,
+      "direct_minus_reasoning_conflict_accuracy": 0,
+      "extra_conflict_penalty": {
+        "mean": 0,
+        "paired_bootstrap_95_ci": [
+          0,
+          0
+        ],
+        "positive_lists": 0,
+        "zero_lists": 19,
+        "negative_lists": 0
+      }
+    },
+    "recorded/present": {
+      "question_wording": "recorded",
+      "uncertainty_clause": "present",
+      "paired_accuracy": {
+        "direct_conflict": 1,
+        "direct_support": 1,
+        "cot_neutral_conflict": 0.8157894736842105,
+        "cot_neutral_support": 1
+      },
+      "direct_conflict_penalty": 0,
+      "reasoning_conflict_penalty": 0.1842105263157895,
+      "direct_minus_reasoning_conflict_accuracy": 0.1842105263157895,
+      "extra_conflict_penalty": {
+        "mean": 0.18421052631578946,
+        "paired_bootstrap_95_ci": [
+          0.07894736842105263,
+          0.2894736842105263
+        ],
+        "positive_lists": 7,
+        "zero_lists": 12,
+        "negative_lists": 0
+      }
+    }
+  },
+  "factorial_contrasts": {
+    "question_by_uncertainty_interaction": {
+      "description": "Sentence effect under original minus sentence effect under recorded (primary)",
+      "mean": -0.21052631578947367,
+      "paired_bootstrap_95_ci": [
+        -0.42105263157894735,
+        0.0
+      ],
+      "positive_lists": 4,
+      "zero_lists": 6,
+      "negative_lists": 9
+    },
+    "uncertainty_effect/original": {
+      "description": "Original: sentence present minus absent",
+      "mean": -0.02631578947368421,
+      "paired_bootstrap_95_ci": [
+        -0.18421052631578946,
+        0.13157894736842105
+      ],
+      "positive_lists": 5,
+      "zero_lists": 8,
+      "negative_lists": 6
+    },
+    "uncertainty_effect/recorded": {
+      "description": "Recorded: sentence present minus absent",
+      "mean": 0.18421052631578946,
+      "paired_bootstrap_95_ci": [
+        0.07894736842105263,
+        0.2894736842105263
+      ],
+      "positive_lists": 7,
+      "zero_lists": 12,
+      "negative_lists": 0
+    },
+    "question_effect/absent": {
+      "description": "Sentence absent: original minus recorded",
+      "mean": 0.5263157894736842,
+      "paired_bootstrap_95_ci": [
+        0.3684210526315789,
+        0.6842105263157895
+      ],
+      "positive_lists": 14,
+      "zero_lists": 5,
+      "negative_lists": 0
+    },
+    "question_effect/present": {
+      "description": "Sentence present: original minus recorded",
+      "mean": 0.3157894736842105,
+      "paired_bootstrap_95_ci": [
+        0.13157894736842105,
+        0.5
+      ],
+      "positive_lists": 11,
+      "zero_lists": 6,
+      "negative_lists": 2
+    },
+    "average_uncertainty_effect": {
+      "description": "Average present-minus-absent effect across questions",
+      "mean": 0.07894736842105263,
+      "paired_bootstrap_95_ci": [
+        -0.013157894736842105,
+        0.17105263157894737
+      ],
+      "positive_lists": 8,
+      "zero_lists": 8,
+      "negative_lists": 3
+    },
+    "average_question_effect": {
+      "description": "Average original-minus-recorded effect across sentence levels",
+      "mean": 0.42105263157894735,
+      "paired_bootstrap_95_ci": [
+        0.27631578947368424,
+        0.5657894736842105
+      ],
+      "positive_lists": 15,
+      "zero_lists": 4,
+      "negative_lists": 0
+    }
+  },
+  "analysis_plan": {
+    "purpose": "explanatory_followup_after_wording_boundary",
+    "primary_contrast": "question_by_uncertainty_interaction",
+    "minimum_independent_lists": 20,
+    "calls_per_list": 32,
+    "numerical_pass_threshold": null,
+    "automatic_followup": false,
+    "previous_stop_decision_preserved": "stop_explicit_record_boundary"
+  },
+  "analysis_status": "technical_failure",
+  "bootstrap_unit": "independent_list_pair",
+  "bootstrap_replicates": 10000,
+  "bootstrap_seed": 981723,
+  "usage": {
+    "prompt_tokens": 205440,
+    "completion_tokens": 85092,
+    "total_tokens": 290532
+  },
+  "interpretation": "Explanatory study specified after observing the previous wording boundary. Question text and the uncertainty sentence vary independently. All cells share each list; the independent sample size is complete lists, not calls. Completion is not a pass, mechanism claim, novelty claim, or authorization for another study. The earlier stop_explicit_record_boundary decision is preserved."
+}

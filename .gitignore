@@ -10,3 +10,13 @@ configs/local*.json
 runs/
 dist/
 build/
+
+# Local execution assets; publish reviewed exports under results/archives/.
+/.venv*/
+/runs [0-9]*/
+/models/
+/tokenizers/
+/capability-checks/
+/audits/
+*.safetensors
+*.gguf

@@ -1,0 +1,88 @@
+{
+  "report_version": "selection-readiness-v1",
+  "plan_hash": "ed0dcd3253fa712741a2ffa3edafb049451a414ba9e66b2e99be71bee9373a83",
+  "model_profile": {
+    "repo_id": "Qwen/Qwen3-32B",
+    "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+    "tokenizer_revision": "9216db5781bf21249d130ec9da846c4624c16137"
+  },
+  "mode": "NOT_COLLECTED",
+  "original_response_source": "This run only; no GPT-4o/Mistral historical trajectories",
+  "planned_responses": 48,
+  "returned_responses": 0,
+  "collection_status": "INCOMPLETE",
+  "unresolved_operations": {},
+  "real_model_compatibility": "PENDING",
+  "behavioral_replication": "PENDING",
+  "by_arm": {
+    "direct": {
+      "planned": 24,
+      "returned": 0,
+      "missing": 24,
+      "valid": 0,
+      "invalid": 0,
+      "truncated": 0,
+      "correct": 0,
+      "wrong": 0,
+      "accuracy_valid": null,
+      "accuracy_full_plan_bounds": [
+        0.0,
+        1.0
+      ],
+      "correctness_unknown": 24
+    },
+    "visible": {
+      "planned": 24,
+      "returned": 0,
+      "missing": 24,
+      "valid": 0,
+      "invalid": 0,
+      "truncated": 0,
+      "correct": 0,
+      "wrong": 0,
+      "accuracy_valid": null,
+      "accuracy_full_plan_bounds": [
+        0.0,
+        1.0
+      ],
+      "correctness_unknown": 24
+    }
+  },
+  "matched_reasoning_errors": {
+    "planned_pairs": 24,
+    "returned_pairs": 0,
+    "direct_correct_visible_wrong": 0,
+    "any_error_worlds": 0,
+    "direct_correct_visible_pattern_errors": 0,
+    "pattern_error_worlds": 0
+  },
+  "existing_calibration": {
+    "passed": null,
+    "status": "PENDING_COMPLETE_COLLECTION"
+  },
+  "study_2b_manual_eligibility": {
+    "status": "PENDING_MANUAL_REVIEW",
+    "visible_planned": 24,
+    "reviewed": 0,
+    "reviewed_no_false_missing": 0,
+    "reviewed_false_missing_cases": 0,
+    "reviewed_false_missing_worlds": 0,
+    "eligible_cases_before_branch_validation": null,
+    "eligible_worlds_before_branch_validation": null,
+    "boundary_exclusions": null,
+    "per_case_replay_validation": "PENDING",
+    "sufficiency": "REQUIRES_SEPARATE_REVIEW",
+    "explanation": "The reasoning-error calibration gate does not establish a sufficient 2B cohort."
+  },
+  "checkpoint_measurements": "NOT_LAUNCHED_BY_THIS_REPORT",
+  "confirmation": "NOT_LAUNCHED_BY_THIS_REPORT",
+  "intervention_grid": "NOT_LAUNCHED_BY_THIS_REPORT",
+  "definitions": {
+    "accuracy_valid": "Correct/valid final answers, with coverage and full-plan bounds alongside.",
+    "invalid": "Returned but invalid final answer; correctness remains unknown, not wrong.",
+    "truncated": "finish=length; included within invalid, not an additional disjoint outcome.",
+    "missing": "No returned original response; includes unstarted/error/unresolved operations.",
+    "eligible": "Manual edit plan and exact original boundary rules passed; branch replay and edited-token checks still pending."
+  },
+  "artifact_hash": "465fa540114e0b798101160a1d989a0349fae63e7073182c2d1edfbe15ac9156"
+}

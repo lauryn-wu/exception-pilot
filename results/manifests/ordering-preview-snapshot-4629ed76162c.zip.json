@@ -1,0 +1,21 @@
+{
+  "archive": "results/archives/ordering-preview-snapshot-4629ed76162c.zip",
+  "members": {
+    "runs/ordering-preview/plan.json": {
+      "sha256": "ad55fc24554ddfbba198f79918704eb1a3e4e521198fc079f6726f14c82bd849",
+      "bytes": 19984577
+    },
+    "runs/ordering-preview/position-audit.json": {
+      "sha256": "cda17bc92fc895e17416066dfafc866d62d330fe20fc41eb3b6b8a775c776dc7",
+      "bytes": 4091133
+    },
+    "runs/ordering-preview/preview.json": {
+      "sha256": "8652eb75bd89ca15584c6e36cc2591fab985c95927c02e2eafcdc6fa6f4cd895",
+      "bytes": 13006723
+    },
+    "runs/ordering-preview/preview.md": {
+      "sha256": "8c3a4d8221512ddcb00a3d43ad0f75a8933ca5d9b83d2325b2a66cede20ecb0f",
+      "bytes": 22912
+    }
+  }
+}

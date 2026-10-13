@@ -1,0 +1,37 @@
+{
+  "archive": "results/archives/instruction-interface-gpt4o-001-snapshot-7ba3f65dc7d1.zip",
+  "members": {
+    "runs/instruction-interface-gpt4o-001/manual_review_template.csv": {
+      "sha256": "0ed706b127133819028a53c7df2aca4cd5a9cf3ffc89306ccaa82d6f3fbec2f3",
+      "bytes": 9573
+    },
+    "runs/instruction-interface-gpt4o-001/plan.json": {
+      "sha256": "9e75758dc1cb7f660307560ce163d2b910a8e4358d8d485c2447b2fff7cda986",
+      "bytes": 737126
+    },
+    "runs/instruction-interface-gpt4o-001/preview.json": {
+      "sha256": "7bc3b59526e76a7a5b34aaf51b4bb67f87040c704f071fabdfb6cb803a61e519",
+      "bytes": 576891
+    },
+    "runs/instruction-interface-gpt4o-001/preview.md": {
+      "sha256": "31957b3dc28982b874c6d855033a38b270f53cfe6beeec7e7cdebc9bd15cbfcd",
+      "bytes": 865567
+    },
+    "runs/instruction-interface-gpt4o-001/scored_trials.json": {
+      "sha256": "a22d75cdec748b9128754153d3035a034de929a7d839208ec34ac30a7e96051e",
+      "bytes": 80411
+    },
+    "runs/instruction-interface-gpt4o-001/summary.json": {
+      "sha256": "fbba54cf5e7e8b7002d70637eca48579508440560a88f0fab9400407daed1f21",
+      "bytes": 6157
+    },
+    "runs/instruction-interface-gpt4o-001/summary.md": {
+      "sha256": "a06a2429485b82892f0a1ca06ee088e9127b80300fe9a951c9bfef5c126fbc77",
+      "bytes": 1569
+    },
+    "runs/instruction-interface-gpt4o-001/traces.jsonl": {
+      "sha256": "af26796328a05c873f2db7e84df60069c85647d99029019e375dbbcd484f9fee",
+      "bytes": 491064
+    }
+  }
+}

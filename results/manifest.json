@@ -1,0 +1,4260 @@
+{
+  "version": 1,
+  "inventory_date": "2026-10-13",
+  "scope": "Results and documentation only; no new model requests or recomputed scientific analyses.",
+  "source_note": "Source checkout commits identify the inspected copies, not necessarily the code at collection time; frozen plans and execution files preserve original provenance.",
+  "exclusions": [
+    "credentials and .env files",
+    "model/tokenizer downloads and caches",
+    "OS metadata and empty run.lock files in newly packaged snapshots"
+  ],
+  "archives": [
+    {
+      "path": "results/archives/columns-gpt4o-001-results.zip",
+      "bytes": 1253518,
+      "sha256": "c94a8801f0e81f9152c8f886c8b933aa2371a0f82ada150591c6f7cde17f055a",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/columns-gpt4o-001-results.zip.json",
+      "members": 587,
+      "sources": [
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "columns-gpt4o-001-results.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/constrained-cue-001.zip",
+      "bytes": 202877,
+      "sha256": "74c4740c5acd3d9ca16fca1b8b85ca46b9c106c1e49beab4e7900b27ee7aecf1",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/constrained-cue-001.zip.json",
+      "members": 104,
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "constrained-cue-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "constrained-cue-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "constrained-cue-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "constrained-cue-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "constrained-cue-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "constrained-cue-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "constrained-cue-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "constrained-cue-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "constrained-cue-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "constrained-cue-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "constrained-cue-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "constrained-cue-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/continuation-v3-qwen3-32b-selection-001-snapshot-0e61ddfbee85.zip",
+      "bytes": 12893,
+      "sha256": "c5173b8bca1cac9b7454cf1c802cd8de3f77ccc46196f000aae0d5c87017754f",
+      "kind": "local_snapshot",
+      "members": 6,
+      "member_manifest": "results/manifests/continuation-v3-qwen3-32b-selection-001-snapshot-0e61ddfbee85.zip.json",
+      "sources": [
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "runs/continuation-v3-qwen3-32b-selection-001",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/counterfactual-001.zip",
+      "bytes": 302222,
+      "sha256": "4f0fa2e43065977eb04e4763037e01c4e41eccc02ab962b01b4abeb857db2524",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/counterfactual-001.zip.json",
+      "members": 168,
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "counterfactual-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "results/counterfactual-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "counterfactual-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "results/counterfactual-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "counterfactual-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "results/counterfactual-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "counterfactual-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "results/counterfactual-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "counterfactual-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "results/counterfactual-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "counterfactual-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "results/counterfactual-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "counterfactual-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "results/counterfactual-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "counterfactual-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "results/counterfactual-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "counterfactual-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "results/counterfactual-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "counterfactual-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "results/counterfactual-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "counterfactual-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "results/counterfactual-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "counterfactual-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "results/counterfactual-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/cue-001.zip",
+      "bytes": 325498,
+      "sha256": "c1c678bd88211e819b24345684ec30a4b40fc69b8ec92191139f0e8a933b7742",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/cue-001.zip.json",
+      "members": 152,
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "cue-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "cue-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "cue-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "cue-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "cue-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "cue-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "cue-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "cue-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "cue-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "cue-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "cue-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "cue-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/downstream-gpt4o-001-results.zip",
+      "bytes": 864747,
+      "sha256": "9876b6b2c14984378e746a9df72af06f59fe9352d083f5bea8ed9ecc44d354f5",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/downstream-gpt4o-001-results.zip.json",
+      "members": 353,
+      "sources": [
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "downstream-gpt4o-001-results.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/evidence-role-gpt4o-001-results.zip",
+      "bytes": 1615461,
+      "sha256": "0d13a3649c9661377b62f7303b52b61eb72dec6335f1fd9526dad089113a6226",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/evidence-role-gpt4o-001-results.zip.json",
+      "members": 491,
+      "sources": [
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "evidence-role-gpt4o-001-results.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "evidence-role-gpt4o-001-results.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/explanation-001.zip",
+      "bytes": 815292,
+      "sha256": "27f222e5f544d1020a1acb59709f4017181ce2551dfd8cccf9cff4c56023c077",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/explanation-001.zip.json",
+      "members": 392,
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "explanation-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "results/explanation-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "explanation-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "results/explanation-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "explanation-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "results/explanation-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "explanation-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "results/explanation-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "explanation-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "results/explanation-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "explanation-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "results/explanation-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "explanation-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "results/explanation-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "explanation-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "results/explanation-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "explanation-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "results/explanation-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "explanation-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "results/explanation-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "explanation-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "results/explanation-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "explanation-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "results/explanation-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/factorial-001-recovered.zip",
+      "bytes": 1166178,
+      "sha256": "d14cb780a856a3a72d32ecbeb6555f239d37137b6d4d0258b365598ce9f5e0fc",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/factorial-001-recovered.zip.json",
+      "members": 651,
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "factorial-001-recovered.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "results/factorial-001-recovered.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "factorial-001-recovered.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "results/factorial-001-recovered.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "factorial-001-recovered.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "results/factorial-001-recovered.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "factorial-001-recovered.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "results/factorial-001-recovered.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "factorial-001-recovered.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "results/factorial-001-recovered.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "factorial-001-recovered.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "results/factorial-001-recovered.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "factorial-001-recovered.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "results/factorial-001-recovered.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "factorial-001-recovered.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "results/factorial-001-recovered.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "factorial-001-recovered.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "results/factorial-001-recovered.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "factorial-001-recovered.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "results/factorial-001-recovered.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "factorial-001-recovered.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "results/factorial-001-recovered.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "factorial-001-recovered.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "results/factorial-001-recovered.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/factorial-001.zip",
+      "bytes": 1085518,
+      "sha256": "d112e883a9492d87761b84a8488861e530d52bc42c5d3f5d228ed63b1bc5a5b8",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/factorial-001.zip.json",
+      "members": 604,
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "factorial-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "results/factorial-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "factorial-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "results/factorial-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "factorial-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "results/factorial-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "factorial-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "results/factorial-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "factorial-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "results/factorial-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "factorial-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "results/factorial-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "factorial-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "results/factorial-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "factorial-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "results/factorial-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "factorial-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "results/factorial-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "factorial-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "results/factorial-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "factorial-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "results/factorial-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "factorial-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "results/factorial-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/features-gpt4o-001-results.zip",
+      "bytes": 1774925,
+      "sha256": "6565495665c860cd09cd94947689a6e6185c04b9b133b8f480fdb28fb1ba26fc",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/features-gpt4o-001-results.zip.json",
+      "members": 660,
+      "sources": [
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "features-gpt4o-001-results.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/instruction-interface-gpt4o-001-results.zip",
+      "bytes": 708846,
+      "sha256": "c96635091b14a90a8d87ee2c64291d4c9fa2878659a0ee026fbd120d0a6d06ba",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/instruction-interface-gpt4o-001-results.zip.json",
+      "members": 202,
+      "sources": [
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "instruction-interface-gpt4o-001-results.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/instruction-interface-gpt4o-001-snapshot-7ba3f65dc7d1.zip",
+      "bytes": 99133,
+      "sha256": "46f50066b7207d0491fb36ae42521c6a9dab8377f17f7eb0eff7ef4a34c2a738",
+      "kind": "local_snapshot",
+      "members": 8,
+      "member_manifest": "results/manifests/instruction-interface-gpt4o-001-snapshot-7ba3f65dc7d1.zip.json",
+      "sources": [
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "runs/instruction-interface-gpt4o-001",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/missingness-001.zip",
+      "bytes": 53810,
+      "sha256": "071d7d5e696dc5697d2cec3ed95ef4817d2d4fd15614b9575c2a9b4d798446b6",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/missingness-001.zip.json",
+      "members": 18,
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "missingness-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "results/missingness-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "missingness-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "results/missingness-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "missingness-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "results/missingness-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "missingness-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "results/missingness-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "missingness-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "results/missingness-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "missingness-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "results/missingness-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "missingness-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "results/missingness-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "missingness-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "results/missingness-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "missingness-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "results/missingness-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "missingness-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "results/missingness-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "missingness-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "results/missingness-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "missingness-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "results/missingness-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/mistral-framing-001-results.zip",
+      "bytes": 2236530,
+      "sha256": "6c2c3baee6fa524ef295119484e15f1c1fe6ce0da67d93d588ba7685b82422ce",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/mistral-framing-001-results.zip.json",
+      "members": 683,
+      "sources": [
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "mistral-framing-001-results.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "mistral-framing-001-results.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "mistral-framing-001-results.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "mistral-framing-001-results.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "mistral-framing-001-results.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "mistral-framing-001-results.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "mistral-framing-001-results.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "mistral-framing-001-results.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/mistral-map-001-snapshot-531e516b5676.zip",
+      "bytes": 548269,
+      "sha256": "19c5e7cbe939c55f154ca25cdc7cd008c6006578b2a9d40c3a297b7ace328b89",
+      "kind": "local_snapshot",
+      "members": 89,
+      "member_manifest": "results/manifests/mistral-map-001-snapshot-531e516b5676.zip.json",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/mistral-map-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/mistral-map-v2-001-snapshot-6ec09bd13ed7.zip",
+      "bytes": 609165,
+      "sha256": "d13c54fdb70215effa2936ee5c109c972cc36e040f502f484af606e95b25fd38",
+      "kind": "local_snapshot",
+      "members": 100,
+      "member_manifest": "results/manifests/mistral-map-v2-001-snapshot-6ec09bd13ed7.zip.json",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/mistral-map-v2-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/mistral-map-v3-001.zip",
+      "bytes": 4308484,
+      "sha256": "e252eb66c1ac042a7551e404b76aea2204cd09c3714199df1c85e8e046a1329d",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/mistral-map-v3-001.zip.json",
+      "members": 1181,
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "mistral-map-v3-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "mistral-map-v3-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "mistral-map-v3-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "mistral-map-v3-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "mistral-map-v3-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "mistral-map-v3-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "mistral-map-v3-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "mistral-map-v3-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "mistral-map-v3-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "mistral-map-v3-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "mistral-map-v3-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "mistral-map-v3-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/mistral-prefix-001-snapshot-753eeb8a7925.zip",
+      "bytes": 26609,
+      "sha256": "3678e66abb8ff4959e7300935651e4d9b72d74a20a707cc8bfdc82b22354f2c7",
+      "kind": "local_snapshot",
+      "members": 14,
+      "member_manifest": "results/manifests/mistral-prefix-001-snapshot-753eeb8a7925.zip.json",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/mistral-prefix-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/mistral-prefix-v2-001.zip",
+      "bytes": 198352,
+      "sha256": "df6a6a1cfb5396dce893ea1e675a483b283edbd043db85039320bbbc650dc840",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/mistral-prefix-v2-001.zip.json",
+      "members": 81,
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "mistral-prefix-v2-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "mistral-prefix-v2-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "mistral-prefix-v2-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "mistral-prefix-v2-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "mistral-prefix-v2-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "mistral-prefix-v2-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "mistral-prefix-v2-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "mistral-prefix-v2-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "mistral-prefix-v2-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "mistral-prefix-v2-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "mistral-prefix-v2-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "mistral-prefix-v2-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/mistral-small-2603-20261012-204146-snapshot-404b8ca8ac50.zip",
+      "bytes": 23052,
+      "sha256": "16ff5ec853518058f02d46a86aa4b4c382553f30bb3ee67b44da55b00c3214a8",
+      "kind": "local_snapshot",
+      "members": 35,
+      "member_manifest": "results/manifests/mistral-small-2603-20261012-204146-snapshot-404b8ca8ac50.zip.json",
+      "sources": [
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "capability-checks/mistral-small-2603-20261012-204146",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/order-001.zip",
+      "bytes": 180228,
+      "sha256": "287626a90046f4e03383b94acb5816985d434d5b4a9087ddec8d61cee4186c0c",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/order-001.zip.json",
+      "members": 80,
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "order-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "order-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "order-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "order-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "order-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "order-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "order-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "order-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "order-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "order-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "order-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "order-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/ordering-live-results.zip",
+      "bytes": 16167188,
+      "sha256": "783e33898f176dbddf5f37540af03b6d08fe08c2699b85ca9c613e8e470330ea",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/ordering-live-results.zip.json",
+      "members": 7689,
+      "sources": [
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "ordering-live-results.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/ordering-preview-snapshot-4629ed76162c.zip",
+      "bytes": 1016759,
+      "sha256": "92480f531f577453df3e8e9abb769adac7320e67e20f9611ef987064d21936c5",
+      "kind": "local_snapshot",
+      "members": 4,
+      "member_manifest": "results/manifests/ordering-preview-snapshot-4629ed76162c.zip.json",
+      "sources": [
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "runs/ordering-preview",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/query-form-gpt4o-001-snapshot-ecf5c541e60f.zip",
+      "bytes": 748800,
+      "sha256": "22143548f6db4a1de65f209f05bc7a425efed78bad9c3edb151d4efb45730ab1",
+      "kind": "local_snapshot",
+      "members": 299,
+      "member_manifest": "results/manifests/query-form-gpt4o-001-snapshot-ecf5c541e60f.zip.json",
+      "sources": [
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "runs/query-form-gpt4o-001",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/query-form-mistral-001-snapshot-8fd0a84243a4.zip",
+      "bytes": 700552,
+      "sha256": "945e5886a5da2c1ffe5fa550f678e2ba3030ec8bd6098d342f3bfa3d26b9544b",
+      "kind": "local_snapshot",
+      "members": 299,
+      "member_manifest": "results/manifests/query-form-mistral-001-snapshot-8fd0a84243a4.zip.json",
+      "sources": [
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "runs/query-form-mistral-001",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/query-role-001.zip",
+      "bytes": 268724,
+      "sha256": "836024f4f614b09467baa5eae6f47e49fa4e49079066701cd8331cccc8f66190",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/query-role-001.zip.json",
+      "members": 152,
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "query-role-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "query-role-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "query-role-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "query-role-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "query-role-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "query-role-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "query-role-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "query-role-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "query-role-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "query-role-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "query-role-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "query-role-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/reference-001.zip",
+      "bytes": 3270679,
+      "sha256": "9d3b7d97404cea90dd1b2875c1afbecfec3fa23839bf8a3cfec3e30b0b71868d",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/reference-001.zip.json",
+      "members": 1211,
+      "sources": [
+        {
+          "checkout": "exception-pilot-main",
+          "relative_path": "reference-001.zip",
+          "source_checkout_commit": null
+        }
+      ]
+    },
+    {
+      "path": "results/archives/revision-001.zip",
+      "bytes": 503973,
+      "sha256": "c0de5dc4f8cf974424cba0d8ecab98449476fa3ffeefb72fb6289f6bdc3f83dc",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/revision-001.zip.json",
+      "members": 200,
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "revision-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "revision-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "revision-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "revision-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "revision-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "revision-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "revision-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "revision-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "revision-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "revision-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "revision-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "revision-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/row-position-confirm-mistral-001-results.zip",
+      "bytes": 2021172,
+      "sha256": "6702c3e01c37a607917260d33f979590e761b6b5a5e975c51ef02ae77023528d",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/row-position-confirm-mistral-001-results.zip.json",
+      "members": 972,
+      "sources": [
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "row-position-confirm-mistral-001-results.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/row-position-confirm-mistral-001-snapshot-fee0844b1f94.zip",
+      "bytes": 1964711,
+      "sha256": "79bdea537dbc22974d88bb6fe75a9ecdcee0b23916397b07cdd8947b850dd6ac",
+      "kind": "local_snapshot",
+      "members": 972,
+      "member_manifest": "results/manifests/row-position-confirm-mistral-001-snapshot-fee0844b1f94.zip.json",
+      "sources": [
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "runs/row-position-confirm-mistral-001",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/row-position-mistral-001-results.zip",
+      "bytes": 610981,
+      "sha256": "8bf9c269d4f54e1249c492e75dd025758d6ed590ea8753dbe5c07db6de6dd5b6",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/row-position-mistral-001-results.zip.json",
+      "members": 298,
+      "sources": [
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "row-position-mistral-001-results.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        }
+      ]
+    },
+    {
+      "path": "results/archives/wording-001.zip",
+      "bytes": 883524,
+      "sha256": "59fff8a003b32dbd824715563fd46a9734ff66e71dc69dbb450bb799100f3c16",
+      "kind": "original_export",
+      "member_manifest": "results/manifests/wording-001.zip.json",
+      "members": 488,
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "wording-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "results/wording-001.zip",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "wording-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "results/wording-001.zip",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "wording-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "results/wording-001.zip",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "wording-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "results/wording-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "wording-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "results/wording-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "wording-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "results/wording-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "wording-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "results/wording-001.zip",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "wording-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "results/wording-001.zip",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "wording-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "results/wording-001.zip",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "wording-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "results/wording-001.zip",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "wording-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "results/wording-001.zip",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "wording-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        },
+        {
+          "checkout": "results-cleanup",
+          "relative_path": "results/wording-001.zip",
+          "source_checkout_commit": "bdc921839dc7981da406ee93cf56d0cd75e0e62e"
+        }
+      ]
+    }
+  ],
+  "run_snapshots": [
+    {
+      "id": "constrained-cue-001",
+      "snapshot_id": "26b62bc0c843",
+      "plan_hash": "01de8ca0a107d66b7ce2a1ec52ece4828a44c2fb15593eef35935efe0faea639",
+      "planned": 96,
+      "returned": 96,
+      "attempt_status_counts": {
+        "complete": 96
+      },
+      "analysis_status": "complete_ready_for_interpretation",
+      "decision": null,
+      "execution_created_at": "2026-10-09T01:25:53.896171+00:00",
+      "archive": "results/archives/constrained-cue-001.zip",
+      "archive_prefix": "runs/constrained-cue-001",
+      "report_directory": "results/reports/constrained-cue-001",
+      "report_files": [
+        {
+          "path": "results/reports/constrained-cue-001/answers.csv",
+          "bytes": 9856,
+          "sha256": "db4d96e50bbfa1f3e5e8353a91572c7fedd151698520d01418f2fa3b7415738a"
+        },
+        {
+          "path": "results/reports/constrained-cue-001/summary.json",
+          "bytes": 58312,
+          "sha256": "cd7c6ca92d7d221cae3453f2c86214291cecfc8eb44087ac2b4e951ccef64e06"
+        },
+        {
+          "path": "results/reports/constrained-cue-001/summary.md",
+          "bytes": 3542,
+          "sha256": "0dceebba882d3be91c1302fd226eb43d60502b5c92657b750a55ab37afbf1502"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/constrained-cue-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "counterfactual-001",
+      "snapshot_id": "09e5d0cb2d3e",
+      "plan_hash": "51373062e74892973dd6d8c5b1372acac1e78ca7b202c308129b5e86af92890f",
+      "planned": 160,
+      "returned": 160,
+      "attempt_status_counts": {
+        "complete": 160
+      },
+      "analysis_status": null,
+      "decision": null,
+      "execution_created_at": "2026-10-08T19:45:15.704887+00:00",
+      "archive": "results/archives/counterfactual-001.zip",
+      "archive_prefix": "runs/counterfactual-001",
+      "report_directory": "results/reports/counterfactual-001",
+      "report_files": [
+        {
+          "path": "results/reports/counterfactual-001/scores.csv",
+          "bytes": 14012,
+          "sha256": "d170eb82e28eafe6489c35c6ff6cca94ce6e862d44e83a77ff447a0ec1704584"
+        },
+        {
+          "path": "results/reports/counterfactual-001/summary.json",
+          "bytes": 8188,
+          "sha256": "e121c9e093871eb56cdbe5cfcc4897238824e7a08e302dd6df6707f0fc8fe64f"
+        },
+        {
+          "path": "results/reports/counterfactual-001/summary.md",
+          "bytes": 1972,
+          "sha256": "35243572b845e8562904f65fdb0367965919772fb665dce926bc271dd3c444e7"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/counterfactual-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "cue-001",
+      "snapshot_id": "3d534fbc2b55",
+      "plan_hash": "9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5",
+      "planned": 144,
+      "returned": 144,
+      "attempt_status_counts": {
+        "complete": 144
+      },
+      "analysis_status": "complete_ready_for_interpretation",
+      "decision": null,
+      "execution_created_at": "2026-10-09T00:13:07.980622+00:00",
+      "archive": "results/archives/cue-001.zip",
+      "archive_prefix": "runs/cue-001",
+      "report_directory": "results/reports/cue-001",
+      "report_files": [
+        {
+          "path": "results/reports/cue-001/answers.csv",
+          "bytes": 16458,
+          "sha256": "e6c62ada60eb7af5f28791acc374dde2b692400957635c5f7783bf9da4bc8336"
+        },
+        {
+          "path": "results/reports/cue-001/summary.json",
+          "bytes": 96826,
+          "sha256": "e60ae77604e3b1791af4b0c3b170080bc8b90cce8a02ab02fe610b5fcfca992b"
+        },
+        {
+          "path": "results/reports/cue-001/summary.md",
+          "bytes": 3711,
+          "sha256": "528f617ce243e7241725067c836dd70009ad4e55ebd005bf85e418eb36a4579d"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/cue-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "explanation-001",
+      "snapshot_id": "eeca12a14c19",
+      "plan_hash": "81d29ff260b9b06999bd26f5cbea5611d3b5a9e507af31692b6ce0bff33c2a5a",
+      "planned": 384,
+      "returned": 384,
+      "attempt_status_counts": {
+        "complete": 384
+      },
+      "analysis_status": "complete_ready_for_interpretation",
+      "decision": null,
+      "execution_created_at": "2026-10-08T22:31:00.881399+00:00",
+      "archive": "results/archives/explanation-001.zip",
+      "archive_prefix": "runs/explanation-001",
+      "report_directory": "results/reports/explanation-001",
+      "report_files": [
+        {
+          "path": "results/reports/explanation-001/results.csv",
+          "bytes": 40021,
+          "sha256": "3f6feb14cc27885973c07b7f92b33e6c8058984eee6d9043120a9fb9c8d38155"
+        },
+        {
+          "path": "results/reports/explanation-001/summary.json",
+          "bytes": 28933,
+          "sha256": "909f323de1e8199e79ff9ad0b88abf0bac378f720366e581e23569bc52595b71"
+        },
+        {
+          "path": "results/reports/explanation-001/summary.md",
+          "bytes": 4569,
+          "sha256": "035f0ee60c502686f0ffd627c79f08c747715bd4452f39a3fe175e6bdd1df12b"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/explanation-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "factorial-001",
+      "snapshot_id": "55523e1b4523",
+      "plan_hash": "997d8af356c344da0664f3ffbd374a878ee02daa11fc744b2c26cf90abad0cbd",
+      "planned": 640,
+      "returned": 640,
+      "attempt_status_counts": {
+        "complete": 639,
+        "invalid": 1
+      },
+      "analysis_status": "technical_failure",
+      "decision": null,
+      "execution_created_at": "2026-10-08T21:03:10.551162+00:00",
+      "archive": "results/archives/factorial-001-recovered.zip",
+      "archive_prefix": "runs/factorial-001",
+      "report_directory": "results/reports/factorial-001",
+      "report_files": [
+        {
+          "path": "results/reports/factorial-001/recovery-summary.json",
+          "bytes": 2347,
+          "sha256": "6cbd186bf522c14f2cf736a1fda6b40892b421859fe466a90f2f8819353df9fd"
+        },
+        {
+          "path": "results/reports/factorial-001/recovery-summary.md",
+          "bytes": 1747,
+          "sha256": "3c7890e4ab72c913bbe6f05255c455a6f0a6303a34eca3a27cb7a68e9e5c5772"
+        },
+        {
+          "path": "results/reports/factorial-001/recovery.json",
+          "bytes": 708,
+          "sha256": "2c45db00608652fdcdc2b646cf3b5f1c1aa2e746d84aa37bf4fddce5c141f0db"
+        },
+        {
+          "path": "results/reports/factorial-001/scores.csv",
+          "bytes": 81849,
+          "sha256": "179b27339f57c62e45cb26a97a88b659090cd986f6a0bad40d2e720851c4f82b"
+        },
+        {
+          "path": "results/reports/factorial-001/summary.json",
+          "bytes": 37131,
+          "sha256": "f18290e9a04997a771c60d7447bfab08bba67dc8a93f66413331475f4ff1ff5f"
+        },
+        {
+          "path": "results/reports/factorial-001/summary.md",
+          "bytes": 5159,
+          "sha256": "90233e315daf9fd344f11c17d0bf16891da587f72be576c747b0c9ce35079936"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/factorial-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "missingness-001",
+      "snapshot_id": "6cef4a63e5e8",
+      "plan_hash": "726d54f4c76c9cdf51f201e9f8e1992aba00f982c02efc827f0fff9bd1409bbc",
+      "planned": 40,
+      "returned": 10,
+      "attempt_status_counts": {
+        "complete": 10
+      },
+      "analysis_status": "replay_gate_failed_stop",
+      "decision": null,
+      "execution_created_at": "2026-10-08T23:21:29.739795+00:00",
+      "archive": "results/archives/missingness-001.zip",
+      "archive_prefix": "runs/missingness-001",
+      "report_directory": "results/reports/missingness-001",
+      "report_files": [
+        {
+          "path": "results/reports/missingness-001/answers.csv",
+          "bytes": 4685,
+          "sha256": "ebcd96801691b7dc61704a9eaebc55fd54a9c072021fb3364c0dd8ab58bdaa78"
+        },
+        {
+          "path": "results/reports/missingness-001/summary.json",
+          "bytes": 30794,
+          "sha256": "820b1b791ecee7a9e1508b04d9a4e14efca97ce5bbdee4f0641dcb6b629daf92"
+        },
+        {
+          "path": "results/reports/missingness-001/summary.md",
+          "bytes": 3112,
+          "sha256": "a5fb4f5285eda945737be9ca59a15bd621890d5b1c5599939f1b81dce4cff525"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/missingness-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "PARTIAL_OR_STOPPED"
+    },
+    {
+      "id": "mistral-framing-001",
+      "snapshot_id": "8477d1c34b8b",
+      "plan_hash": "a34939b547f9cf8ee6f04e7c7cdf8ce8c8f1dcb4159cadbafaccbc2e5e6fc393",
+      "planned": 673,
+      "returned": 673,
+      "attempt_status_counts": {
+        "complete": 673
+      },
+      "analysis_status": "exploratory_intervention_complete",
+      "decision": null,
+      "execution_created_at": "2026-10-10T00:04:58.894994+00:00",
+      "archive": "results/archives/mistral-framing-001-results.zip",
+      "archive_prefix": "runs/mistral-framing-001",
+      "report_directory": "results/reports/mistral-framing-001",
+      "report_files": [
+        {
+          "path": "results/reports/mistral-framing-001/report.md",
+          "bytes": 5532,
+          "sha256": "4948551af1c168e9f4e1922fefc85a3fb172b6ba5f3e7fe7be6834186410e60b"
+        },
+        {
+          "path": "results/reports/mistral-framing-001/spontaneous-visible-traces.md",
+          "bytes": 72184,
+          "sha256": "ba0b55c0f4554006e27e74fe9529f93763182eac67bd9f6e4d370bee951357b6"
+        },
+        {
+          "path": "results/reports/mistral-framing-001/summary.json",
+          "bytes": 3283706,
+          "sha256": "d3a791d4ae536b55c9a42282f00b2e8b7ba5f6e08a73d9a451931de3161a2695"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/mistral-framing-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "mistral-map-001",
+      "snapshot_id": "531e516b5676",
+      "plan_hash": "3e9d5a34872bbc1e508ac87cc1404d540e0ed5fa55024803b8da0d3f491a40cd",
+      "planned": 1075,
+      "returned": 6,
+      "attempt_status_counts": {
+        "complete": 5,
+        "invalid": 1
+      },
+      "analysis_status": "sampling_check_failed_stop",
+      "decision": null,
+      "execution_created_at": "2026-10-09T17:39:37.528205+00:00",
+      "archive": "results/archives/mistral-map-001-snapshot-531e516b5676.zip",
+      "archive_prefix": "runs/mistral-map-001",
+      "report_directory": "results/reports/mistral-map-001",
+      "report_files": [
+        {
+          "path": "results/reports/mistral-map-001/answers.csv",
+          "bytes": 148395,
+          "sha256": "35d09ee31221356aa9e1dc716e6724406ffb61ae05f0827e64f6383d6b5ef110"
+        },
+        {
+          "path": "results/reports/mistral-map-001/continuations-to-code.csv",
+          "bytes": 100,
+          "sha256": "65c59a9bf3013cf29af6e08083aa76f97bfefd6085b88025f13cdca38b84f33a"
+        },
+        {
+          "path": "results/reports/mistral-map-001/summary.json",
+          "bytes": 823296,
+          "sha256": "79ce1088cd469f2a620a9a2f22ab274a3195591c96fdae9ae35d8c80e8d88763"
+        },
+        {
+          "path": "results/reports/mistral-map-001/summary.md",
+          "bytes": 19218,
+          "sha256": "061ffce1a538f94e72e5fbcfbc8675ea904b2054f644b702ea5f13b3b9f6186f"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/mistral-map-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "PARTIAL_OR_STOPPED"
+    },
+    {
+      "id": "mistral-map-v2-001",
+      "snapshot_id": "6ec09bd13ed7",
+      "plan_hash": "edaf46a9e269c087b70121c08a1b13e56e408b378919479d3fde5e9f859fffd2",
+      "planned": 1075,
+      "returned": 9,
+      "attempt_status_counts": {
+        "complete": 8,
+        "invalid": 1
+      },
+      "analysis_status": "sampling_check_failed_stop",
+      "decision": null,
+      "execution_created_at": "2026-10-09T18:25:09.293099+00:00",
+      "archive": "results/archives/mistral-map-v2-001-snapshot-6ec09bd13ed7.zip",
+      "archive_prefix": "runs/mistral-map-v2-001",
+      "report_directory": "results/reports/mistral-map-v2-001",
+      "report_files": [
+        {
+          "path": "results/reports/mistral-map-v2-001/answers.csv",
+          "bytes": 165738,
+          "sha256": "822c1ca168d6a264eeb1ad5cd7ada63e70999c377e5b7d1ebc3c8de2b085573e"
+        },
+        {
+          "path": "results/reports/mistral-map-v2-001/continuations-to-code.csv",
+          "bytes": 100,
+          "sha256": "65c59a9bf3013cf29af6e08083aa76f97bfefd6085b88025f13cdca38b84f33a"
+        },
+        {
+          "path": "results/reports/mistral-map-v2-001/summary.json",
+          "bytes": 991593,
+          "sha256": "381fed233f73ab6ae8852d5624f2eb0fd148bde31160e0d5636fa883cb0ebd0c"
+        },
+        {
+          "path": "results/reports/mistral-map-v2-001/summary.md",
+          "bytes": 20085,
+          "sha256": "15bdfb66076bf6ce6039d22e072bf52ad63a52d5b4aa609eb2ff3d0dc55bdd15"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/mistral-map-v2-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "PARTIAL_OR_STOPPED"
+    },
+    {
+      "id": "mistral-map-v3-001",
+      "snapshot_id": "c9b4c566a640",
+      "plan_hash": "779830b7e216c38a9a7ed738a5ec12ca51688ccd00d2346a4f9ceeb9460a5f2b",
+      "planned": 1075,
+      "returned": 1075,
+      "attempt_status_counts": {
+        "complete": 1073,
+        "error": 3,
+        "invalid": 2
+      },
+      "analysis_status": "exploratory_map_complete_with_unscorable",
+      "decision": null,
+      "execution_created_at": "2026-10-09T18:46:36.986246+00:00",
+      "archive": "results/archives/mistral-map-v3-001.zip",
+      "archive_prefix": "runs/mistral-map-v3-001",
+      "report_directory": "results/reports/mistral-map-v3-001",
+      "report_files": [
+        {
+          "path": "results/reports/mistral-map-v3-001/answers.csv",
+          "bytes": 1387411,
+          "sha256": "788b49bc08673547ada3f022db3f25b6df70cecfd70f9e5e99d051e5ed8357c4"
+        },
+        {
+          "path": "results/reports/mistral-map-v3-001/continuations-to-code.csv",
+          "bytes": 1274237,
+          "sha256": "4bba07daa33f196bec3500dd8bf4d51fb78e7fd959a3be823eb87c27997e829e"
+        },
+        {
+          "path": "results/reports/mistral-map-v3-001/summary.json",
+          "bytes": 2373034,
+          "sha256": "4dc85f94ba852e9bc2a2538930d9250d7b34c3a4556762b56bc5edc4704b1b4b"
+        },
+        {
+          "path": "results/reports/mistral-map-v3-001/summary.md",
+          "bytes": 21600,
+          "sha256": "bc45202b68e22c89c4eb8e774168b9e55de7e5219cb3e4c2682560e0dbfecbe8"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/mistral-map-v3-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "mistral-prefix-001",
+      "snapshot_id": "753eeb8a7925",
+      "plan_hash": "6f3084db3fc7f8d0c68770db32915bf85d7d542c0928a3738e14ec07142b597b",
+      "planned": 73,
+      "returned": 1,
+      "attempt_status_counts": {
+        "error": 6,
+        "invalid": 1
+      },
+      "analysis_status": "capability_failed_stop",
+      "decision": null,
+      "execution_created_at": "2026-10-09T03:43:35.330430+00:00",
+      "archive": "results/archives/mistral-prefix-001-snapshot-753eeb8a7925.zip",
+      "archive_prefix": "runs/mistral-prefix-001",
+      "report_directory": "results/reports/mistral-prefix-001",
+      "report_files": [
+        {
+          "path": "results/reports/mistral-prefix-001/answers.csv",
+          "bytes": 10320,
+          "sha256": "f8fa067b34b6be35aadf90cb4a65941b8262998809f3e54482e53080245ca415"
+        },
+        {
+          "path": "results/reports/mistral-prefix-001/summary.json",
+          "bytes": 115527,
+          "sha256": "96b4e837aeb355ce349a8edb5ab52f40eb8ebd5e019c223bab4be88cd5996c43"
+        },
+        {
+          "path": "results/reports/mistral-prefix-001/summary.md",
+          "bytes": 3840,
+          "sha256": "645f1fbdb1ab62fa2c3409e1fc61b3714be5ea3e8d5faebce0013f337460610f"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/mistral-prefix-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "PARTIAL_OR_STOPPED"
+    },
+    {
+      "id": "mistral-prefix-v2-001",
+      "snapshot_id": "342bfccae822",
+      "plan_hash": "1ccb4fb80bdad19da0d6fff3e5e27ccf3d391394451d6ce56e8026c82c82e4e5",
+      "planned": 73,
+      "returned": 73,
+      "attempt_status_counts": {
+        "complete": 73
+      },
+      "analysis_status": "replay_failed_stop",
+      "decision": null,
+      "execution_created_at": "2026-10-09T04:20:14.699866+00:00",
+      "archive": "results/archives/mistral-prefix-v2-001.zip",
+      "archive_prefix": "runs/mistral-prefix-v2-001",
+      "report_directory": "results/reports/mistral-prefix-v2-001",
+      "report_files": [
+        {
+          "path": "results/reports/mistral-prefix-v2-001/answers.csv",
+          "bytes": 16168,
+          "sha256": "a3b943debbac036182e69c44b22d8690a489622630f47617d46ed0076b735fc2"
+        },
+        {
+          "path": "results/reports/mistral-prefix-v2-001/summary.json",
+          "bytes": 140128,
+          "sha256": "152fe406f3b3c9947f1829a1e42e5059f1326dda9cb707fcf3e27045b29b0a95"
+        },
+        {
+          "path": "results/reports/mistral-prefix-v2-001/summary.md",
+          "bytes": 4790,
+          "sha256": "a63722294b4466b10b1acef61b63a842af4c1bf722a41921cefa12f2f0cde08a"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/mistral-prefix-v2-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "order-001",
+      "snapshot_id": "56d049f77676",
+      "plan_hash": "631c0057aa62a54885656e7049c4c40c79826f0d56a9482a1e1fc5da515c83e8",
+      "planned": 72,
+      "returned": 72,
+      "attempt_status_counts": {
+        "complete": 72
+      },
+      "analysis_status": "complete_ready_for_interpretation",
+      "decision": null,
+      "execution_created_at": "2026-10-09T02:20:45.933347+00:00",
+      "archive": "results/archives/order-001.zip",
+      "archive_prefix": "runs/order-001",
+      "report_directory": "results/reports/order-001",
+      "report_files": [
+        {
+          "path": "results/reports/order-001/answers.csv",
+          "bytes": 10047,
+          "sha256": "0928ca3ce4cfe4d2a970d460e030221166857960418eb822dcf43b967cf54617"
+        },
+        {
+          "path": "results/reports/order-001/summary.json",
+          "bytes": 70460,
+          "sha256": "f6518ad3a58a7425f003662a1b64fe08994bcd0565aa0cbca7843b6c23a88593"
+        },
+        {
+          "path": "results/reports/order-001/summary.md",
+          "bytes": 5869,
+          "sha256": "36fe31809194d1e63d52d1805a9b2716452b3f41a14383d9297b9ae62a6833e9"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/order-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "query-role-001",
+      "snapshot_id": "810960dc724f",
+      "plan_hash": "6fbc5eb49043f0d07b2756880023bfa829147df5e1187e8e49272d0c638b758f",
+      "planned": 144,
+      "returned": 144,
+      "attempt_status_counts": {
+        "complete": 144
+      },
+      "analysis_status": "screen_complete",
+      "decision": null,
+      "execution_created_at": "2026-10-10T02:15:08.376817+00:00",
+      "archive": "results/archives/query-role-001.zip",
+      "archive_prefix": "runs/query-role-001",
+      "report_directory": "results/reports/query-role-001",
+      "report_files": [
+        {
+          "path": "results/reports/query-role-001/report.md",
+          "bytes": 5721,
+          "sha256": "51068406bba5f618eb2bc211c1382ac1da8a5af0b62e4bd5a955ef24bbbe7f1f"
+        },
+        {
+          "path": "results/reports/query-role-001/summary.json",
+          "bytes": 117196,
+          "sha256": "3bd99f351195d511aaf4aec65295108f9efddc6f6b82b819f5c5428572c031ba"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/query-role-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "revision-001",
+      "snapshot_id": "5bb1d1ee4e1c",
+      "plan_hash": "3a9e1aea98534672e123c6644c3549eade5e01162859a644191ef543b94bf705",
+      "planned": 192,
+      "returned": 192,
+      "attempt_status_counts": {
+        "complete": 192
+      },
+      "analysis_status": "complete_ready_for_interpretation",
+      "decision": null,
+      "execution_created_at": "2026-10-09T03:11:43.608224+00:00",
+      "archive": "results/archives/revision-001.zip",
+      "archive_prefix": "runs/revision-001",
+      "report_directory": "results/reports/revision-001",
+      "report_files": [
+        {
+          "path": "results/reports/revision-001/answers.csv",
+          "bytes": 29517,
+          "sha256": "5268d7506cdda1487701fe960865a0adc43c4cbf2f4eeb45b5e08bf874d833c7"
+        },
+        {
+          "path": "results/reports/revision-001/summary.json",
+          "bytes": 174917,
+          "sha256": "0e8d202c7ca04ff31736decee3a88f02d9e9b7311acc0aa5e1833bc7b29965cc"
+        },
+        {
+          "path": "results/reports/revision-001/summary.md",
+          "bytes": 7779,
+          "sha256": "0f5427b40d20f91dbe9f49ad1228ab16f089f890ccfc169dbc5ccd6a0cd72b78"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/revision-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "wording-001",
+      "snapshot_id": "de22cbafbce5",
+      "plan_hash": "36d3df56402fcba73e369315eba598a4de13999d8979e505a55fc4094c1a1889",
+      "planned": 480,
+      "returned": 480,
+      "attempt_status_counts": {
+        "complete": 480
+      },
+      "analysis_status": null,
+      "decision": null,
+      "execution_created_at": "2026-10-08T20:15:50.538925+00:00",
+      "archive": "results/archives/wording-001.zip",
+      "archive_prefix": "runs/wording-001",
+      "report_directory": "results/reports/wording-001",
+      "report_files": [
+        {
+          "path": "results/reports/wording-001/scores.csv",
+          "bytes": 57245,
+          "sha256": "9604f6ab22f53394d618fbf5f9761e0156b65512e2bfe4f41832b74d141894d0"
+        },
+        {
+          "path": "results/reports/wording-001/summary.json",
+          "bytes": 24414,
+          "sha256": "b0eaf831dfad5007de9c45aa2385fb419032e1762d3522466b7599c406a47af7"
+        },
+        {
+          "path": "results/reports/wording-001/summary.md",
+          "bytes": 3295,
+          "sha256": "46ca1f6f43d4577d1c58619e44e11a48aa21c05119c39444d6ae11a5a4e5f8fe"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "runs/wording-001",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "continuation-v3-qwen3-32b-selection-001",
+      "snapshot_id": "0e61ddfbee85",
+      "plan_hash": "ed0dcd3253fa712741a2ffa3edafb049451a414ba9e66b2e99be71bee9373a83",
+      "planned": 48,
+      "returned": 0,
+      "attempt_status_counts": {},
+      "analysis_status": null,
+      "decision": null,
+      "execution_created_at": null,
+      "archive": "results/archives/continuation-v3-qwen3-32b-selection-001-snapshot-0e61ddfbee85.zip",
+      "archive_prefix": "runs/continuation-v3-qwen3-32b-selection-001",
+      "report_directory": "results/reports/continuation-v3-qwen3-32b-selection-001",
+      "report_files": [
+        {
+          "path": "results/reports/continuation-v3-qwen3-32b-selection-001/selection-summary.json",
+          "bytes": 2983,
+          "sha256": "753ff0dde320a3c7f87a7ab9ae59e771eae86b5ab3a04fa871616172b42541fa"
+        },
+        {
+          "path": "results/reports/continuation-v3-qwen3-32b-selection-001/selection-summary.md",
+          "bytes": 1069,
+          "sha256": "222c2303f7bd20c1410a3dda1e8855d248cc527479d4ccb38198ec2720da8828"
+        },
+        {
+          "path": "results/reports/continuation-v3-qwen3-32b-selection-001/validation-status.json",
+          "bytes": 259,
+          "sha256": "cacc42bdf64015af0866c702a81533eefaa0df933c3fa6c97a947fe76e33bb1d"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "runs/continuation-v3-qwen3-32b-selection-001",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        }
+      ],
+      "status": "UNSTARTED_OR_PREVIEW"
+    },
+    {
+      "id": "mistral-small-2603-20261012-204146",
+      "snapshot_id": "404b8ca8ac50",
+      "plan_hash": null,
+      "planned": null,
+      "returned": null,
+      "attempt_status_counts": {},
+      "analysis_status": null,
+      "decision": null,
+      "execution_created_at": null,
+      "archive": "results/archives/mistral-small-2603-20261012-204146-snapshot-404b8ca8ac50.zip",
+      "archive_prefix": "capability-checks/mistral-small-2603-20261012-204146",
+      "report_directory": "results/reports/mistral-small-2603-20261012-204146",
+      "report_files": [
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/01_plain_original.metadata.json",
+          "bytes": 1337,
+          "sha256": "d578ae62a67196cf8390ef2a5bf67b736e5d341954aa5ee82535d288c8bac480"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/01_plain_original.request.json",
+          "bytes": 363,
+          "sha256": "fabd95b99ac9ecb971028a8d9348022b7144d455c58bd5e5083f25886f4929c0"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/02_plain_char32.metadata.json",
+          "bytes": 1336,
+          "sha256": "d95368918470127b4ad03f1d109dd4ad98bf3f02074ce4aa3b640925eb4150af"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/02_plain_char32.prefix.json",
+          "bytes": 107,
+          "sha256": "89fdf4d861b6e7924e80d6259048531909086518bb4f1b5d595360eb573b8768"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/02_plain_char32.request.json",
+          "bytes": 477,
+          "sha256": "0d948114d899135953a1cccd0d750c4af993550f87948da63fb052b7b7426103"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/03_plain_char64.metadata.json",
+          "bytes": 1336,
+          "sha256": "40b811b985c77fd22a9965aed0ec60ede15876bffd2b949c47e70e43fb8309e9"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/03_plain_char64.prefix.json",
+          "bytes": 139,
+          "sha256": "fee222dde2c588298b26fb4eb15608c14743b1282b697a2dad6a42becd4ea203"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/03_plain_char64.request.json",
+          "bytes": 509,
+          "sha256": "8d3420369544012b2bfba0e6939cad447988cc06ce07976e6f94954acd971dbb"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/04_logprobs_original.metadata.json",
+          "bytes": 1146,
+          "sha256": "0a37921bd1abe8b763c61f020a7c4a406462a2890a82f33a8f473ff4bb787471"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/04_logprobs_original.request.json",
+          "bytes": 383,
+          "sha256": "4b98077173df92837aebc0c700484d2c2690c7eb050093ea39d83f67ced45bb7"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/07_top_output.metadata.json",
+          "bytes": 1159,
+          "sha256": "a6d0473757c3d1b2d6bb90cbbae9467b5a0aef6fdfa8f4bdb9f7400f69009019"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/07_top_output.request.json",
+          "bytes": 525,
+          "sha256": "335069a74a84febc8e59b2aecd23df3b56aaa27d47f350d60933afc3d328fd6a"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/08_prompt_context.metadata.json",
+          "bytes": 1150,
+          "sha256": "6fb097174b65b89487d73567ac089f2b637a64a17ad4ce8a51a992c453d7f532"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/08_prompt_context.request.json",
+          "bytes": 511,
+          "sha256": "602ae9a152ffed5a29c0b8120943ab7b6e4a3b3392a6788d74f8ad7cff02ad62"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/09_top_prompt.metadata.json",
+          "bytes": 1173,
+          "sha256": "f113bfe127ef541cddee9629aa5937e953178f790b18d942f0a04ef65bf2c20c"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/09_top_prompt.request.json",
+          "bytes": 539,
+          "sha256": "41159b4ef0a4d5410c09e681d7bb1f45a1d5d1dd4c3af36907b38099157070b9"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/10_candidate_A.metadata.json",
+          "bytes": 1147,
+          "sha256": "63553e0a99a922ee3ee50d8990a6c846f23044b67e24d61416fae326be49fe77"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/10_candidate_A.request.json",
+          "bytes": 515,
+          "sha256": "b650dffecf2185596ec8171d3e56349ae064acc530067af6a8d0a19a4ff80e29"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/11_candidate_B.metadata.json",
+          "bytes": 1147,
+          "sha256": "455f636c2057827052d5f7ee4d8e422221d6a7267fd1ecdf6e34c97ada9a6ed2"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/11_candidate_B.request.json",
+          "bytes": 515,
+          "sha256": "aedfb0bac7375b9100fd24047dc2d60d00388ffc39f75df75efdbc78bd868f05"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/12_candidate_C.metadata.json",
+          "bytes": 1147,
+          "sha256": "5bde00ddfa4127446b0921ae21b8b415a5b5508ef6c1eb5c748a4f938f7fb0cb"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/12_candidate_C.request.json",
+          "bytes": 515,
+          "sha256": "45084b67443f9ef77629c82ac49cf48a77ebfdd7eb8dcf6f8a977366dad1c05a"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/report.json",
+          "bytes": 17638,
+          "sha256": "7057f6b839fe86c63325bac8a9aff8abdf6e82d379e1b9a879bc053903ec3299"
+        },
+        {
+          "path": "results/reports/mistral-small-2603-20261012-204146/scoring-context.json",
+          "bytes": 261,
+          "sha256": "168a6f0fe2cb53e643fae2e18238e8ca90419212a590f6a1797aee0ff1fe391e"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "capability-checks/mistral-small-2603-20261012-204146",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        }
+      ],
+      "status": "FAILED_TECHNICAL_CAPABILITY_CHECK"
+    },
+    {
+      "id": "columns-gpt4o-001",
+      "snapshot_id": "70bf282584e2",
+      "plan_hash": "123cb38bc7000b1d78bcb0fc267b546d47f985259615fc547da715d43f043135",
+      "planned": 576,
+      "returned": 576,
+      "attempt_status_counts": {
+        "complete": 576
+      },
+      "analysis_status": "exploratory_complete",
+      "decision": null,
+      "execution_created_at": "2026-10-12T05:04:18.770845+00:00",
+      "archive": "results/archives/columns-gpt4o-001-results.zip",
+      "archive_prefix": "runs/columns-gpt4o-001",
+      "report_directory": "results/reports/columns-gpt4o-001",
+      "report_files": [
+        {
+          "path": "results/reports/columns-gpt4o-001/column-transitions.csv",
+          "bytes": 78519,
+          "sha256": "f8995eebd954a1d67bdfd7f17b2af0951d8f4f3009fc378d06a5a987def8d052"
+        },
+        {
+          "path": "results/reports/columns-gpt4o-001/record-pairs.csv",
+          "bytes": 15699,
+          "sha256": "e473404e1a992bac4011f0cd2d5e9624bd5025dcfd4791c2c0257d1cfaab3b15"
+        },
+        {
+          "path": "results/reports/columns-gpt4o-001/responses.csv",
+          "bytes": 88478,
+          "sha256": "b89a8e9e4a46333b30dba7b3eb010b1adb683d359a0b6cafd78c3f2b2be8b3a6"
+        },
+        {
+          "path": "results/reports/columns-gpt4o-001/summary.json",
+          "bytes": 320691,
+          "sha256": "c0d3d9d46eefed87bbfbfc93998fbd22f000336685e30e495c1522b9da5e2bbf"
+        },
+        {
+          "path": "results/reports/columns-gpt4o-001/summary.md",
+          "bytes": 8922,
+          "sha256": "fcd65bfbb0646962c569788da259123dbb70ef4640b207bd4045e2510ca54064"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "runs/columns-gpt4o-001",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "runs 2/columns-gpt4o-001",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "row-position-confirm-mistral-001",
+      "snapshot_id": "fee0844b1f94",
+      "plan_hash": "534e56c260494450ce31dfb9fd295b565ef5ed1291a5772e1e9503c049efb506",
+      "planned": 960,
+      "returned": 960,
+      "attempt_status_counts": {
+        "complete": 960,
+        "error": 1
+      },
+      "analysis_status": "complete",
+      "decision": "confirm_positive_interaction",
+      "execution_created_at": "2026-10-12T05:23:49.028207+00:00",
+      "archive": "results/archives/row-position-confirm-mistral-001-snapshot-fee0844b1f94.zip",
+      "archive_prefix": "runs/row-position-confirm-mistral-001",
+      "report_directory": "results/reports/row-position-confirm-mistral-001--20261012T052349Z",
+      "report_files": [
+        {
+          "path": "results/reports/row-position-confirm-mistral-001--20261012T052349Z/answers.csv",
+          "bytes": 133995,
+          "sha256": "45b68f56bf90a7468dffba5f0d926bd21670bacb4c1c4bf6c37ab915341d12bf"
+        },
+        {
+          "path": "results/reports/row-position-confirm-mistral-001--20261012T052349Z/row_curve.csv",
+          "bytes": 2491,
+          "sha256": "667d5fc1ad3a55affd5acd3dddc94eebaf9e9adcf19f124c7b1c17162e547f70"
+        },
+        {
+          "path": "results/reports/row-position-confirm-mistral-001--20261012T052349Z/row_curve.svg",
+          "bytes": 8601,
+          "sha256": "fbe22d4e8a927e037419a33d4c55ca3eb27033d8f125a9c3aefeac3f4857c259"
+        },
+        {
+          "path": "results/reports/row-position-confirm-mistral-001--20261012T052349Z/summary.json",
+          "bytes": 391381,
+          "sha256": "44547df56b9d5ac320f9d5b314dc4220b20e678de7892a31bd543d69326b1142"
+        },
+        {
+          "path": "results/reports/row-position-confirm-mistral-001--20261012T052349Z/summary.md",
+          "bytes": 10560,
+          "sha256": "a43615dd45dd176f5de691088dcc2fb01fdbf338666d286d0b2d2a9da86e9e43"
+        },
+        {
+          "path": "results/reports/row-position-confirm-mistral-001--20261012T052349Z/world_contrasts.csv",
+          "bytes": 105944,
+          "sha256": "a987ad393bf90c754128f566d3db931526057d2eece5ba9964099cb920f5ce63"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "runs/row-position-confirm-mistral-001",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "evidence-role-gpt4o-001",
+      "snapshot_id": "15dd90012800",
+      "plan_hash": "798d047a556f3b905fe8b7b8ed9bb12f867dec9ed6fcdb105064d61bf45a87ce",
+      "planned": 480,
+      "returned": 480,
+      "attempt_status_counts": {
+        "complete": 480
+      },
+      "analysis_status": "complete_ready_for_interpretation",
+      "decision": "no_automatic_followup",
+      "execution_created_at": "2026-10-12T13:02:10.581333+00:00",
+      "archive": "results/archives/evidence-role-gpt4o-001-results.zip",
+      "archive_prefix": "runs/evidence-role-gpt4o-001",
+      "report_directory": "results/reports/evidence-role-gpt4o-001",
+      "report_files": [
+        {
+          "path": "results/reports/evidence-role-gpt4o-001/answers.csv",
+          "bytes": 116669,
+          "sha256": "ba41c6dab8769e65678f86c8bbc716ef88c032e3b32cc88909ed3b081a44dade"
+        },
+        {
+          "path": "results/reports/evidence-role-gpt4o-001/rationale_key.csv",
+          "bytes": 52639,
+          "sha256": "a68afa390e750a338f03baed46633c818c2836c06d176a172579aa73e6ed0dbb"
+        },
+        {
+          "path": "results/reports/evidence-role-gpt4o-001/rationale_review.md",
+          "bytes": 1116832,
+          "sha256": "517aac1e0c72cac3c676876bf822afc6844116e48009662b0b8eeffced38db00"
+        },
+        {
+          "path": "results/reports/evidence-role-gpt4o-001/rationales.csv",
+          "bytes": 774981,
+          "sha256": "de63c6231998832a2f98547b0a5922fd437a1c43ab42306833e76785fadd5594"
+        },
+        {
+          "path": "results/reports/evidence-role-gpt4o-001/summary.json",
+          "bytes": 34221,
+          "sha256": "7d774a7bb3c533a18001cdeda59f6c6cdc253de7345288125c33101d80b8a7e7"
+        },
+        {
+          "path": "results/reports/evidence-role-gpt4o-001/summary.md",
+          "bytes": 9060,
+          "sha256": "e212197b999950008ef7b1a6a7381eedebabe05a44b1d90fdd14171a7a42b633"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "runs/evidence-role-gpt4o-001",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "runs 2/evidence-role-gpt4o-001",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "runs 2/evidence-role-gpt4o-001",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "instruction-interface-gpt4o-001",
+      "snapshot_id": "7ba3f65dc7d1",
+      "plan_hash": "1a12f7d1637b82caefb79b488abd1c96a09b0d257af4a8fbaad82fd9c926f5e7",
+      "planned": 192,
+      "returned": 0,
+      "attempt_status_counts": {},
+      "analysis_status": "INCOMPLETE",
+      "decision": null,
+      "execution_created_at": null,
+      "archive": "results/archives/instruction-interface-gpt4o-001-snapshot-7ba3f65dc7d1.zip",
+      "archive_prefix": "runs/instruction-interface-gpt4o-001",
+      "report_directory": "results/reports/instruction-interface-gpt4o-001--unstarted",
+      "report_files": [
+        {
+          "path": "results/reports/instruction-interface-gpt4o-001--unstarted/manual_review_template.csv",
+          "bytes": 9573,
+          "sha256": "0ed706b127133819028a53c7df2aca4cd5a9cf3ffc89306ccaa82d6f3fbec2f3"
+        },
+        {
+          "path": "results/reports/instruction-interface-gpt4o-001--unstarted/summary.json",
+          "bytes": 6157,
+          "sha256": "fbba54cf5e7e8b7002d70637eca48579508440560a88f0fab9400407daed1f21"
+        },
+        {
+          "path": "results/reports/instruction-interface-gpt4o-001--unstarted/summary.md",
+          "bytes": 1569,
+          "sha256": "a06a2429485b82892f0a1ca06ee088e9127b80300fe9a951c9bfef5c126fbc77"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "runs/instruction-interface-gpt4o-001",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        }
+      ],
+      "status": "UNSTARTED_OR_PREVIEW"
+    },
+    {
+      "id": "downstream-gpt4o-001",
+      "snapshot_id": "ce6d88c3b435",
+      "plan_hash": "161bcf61c8c4fec14236cb93a6cd1ba7530e2b166c35e20011f38f1f26ba0df4",
+      "planned": 342,
+      "returned": 342,
+      "attempt_status_counts": {
+        "complete": 342
+      },
+      "analysis_status": "exploratory_complete",
+      "decision": null,
+      "execution_created_at": "2026-10-12T23:28:22.643226+00:00",
+      "archive": "results/archives/downstream-gpt4o-001-results.zip",
+      "archive_prefix": "runs/downstream-gpt4o-001",
+      "report_directory": "results/reports/downstream-gpt4o-001",
+      "report_files": [
+        {
+          "path": "results/reports/downstream-gpt4o-001/paired-transitions.csv",
+          "bytes": 72670,
+          "sha256": "bffcba1eb6e04837a3182a05d374a449bdfa9e419e58099f6619d81314f0ecd3"
+        },
+        {
+          "path": "results/reports/downstream-gpt4o-001/responses.csv",
+          "bytes": 76734,
+          "sha256": "345b28a1a8e39593e0294198309a6c0157b0bf23257a57441efc0a28a98dfb8f"
+        },
+        {
+          "path": "results/reports/downstream-gpt4o-001/summary.json",
+          "bytes": 88520,
+          "sha256": "2f3cf053af334ecef7fd6636934e176df752346a0c0f97c7ae9a5d21aae7bf0e"
+        },
+        {
+          "path": "results/reports/downstream-gpt4o-001/summary.md",
+          "bytes": 2498,
+          "sha256": "207dbf2b256914886f297a80b2b90e3dbf528e4847a593d1ec6fe5d7e71be037"
+        },
+        {
+          "path": "results/reports/downstream-gpt4o-001/world-contrasts.csv",
+          "bytes": 25509,
+          "sha256": "2cc427163f78e78700c912ead0bd7cd2bbc1a9ee4fc71abcaa413a1036a0be45"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "runs/downstream-gpt4o-001",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "features-gpt4o-001",
+      "snapshot_id": "859ee1baca3d",
+      "plan_hash": "3d216b36df2c5ba85cc611a2895cbb887b0e77df293160576c527d010021c567",
+      "planned": 648,
+      "returned": 648,
+      "attempt_status_counts": {
+        "complete": 648
+      },
+      "analysis_status": "exploratory_complete",
+      "decision": null,
+      "execution_created_at": "2026-10-12T23:34:20.126537+00:00",
+      "archive": "results/archives/features-gpt4o-001-results.zip",
+      "archive_prefix": "runs/features-gpt4o-001",
+      "report_directory": "results/reports/features-gpt4o-001",
+      "report_files": [
+        {
+          "path": "results/reports/features-gpt4o-001/paired-transitions.csv",
+          "bytes": 90681,
+          "sha256": "9a6d34779e440270ad062ade7cd5b26994f48d811bb64f0b9b47cae534fbd32a"
+        },
+        {
+          "path": "results/reports/features-gpt4o-001/reasoning-review-key.json",
+          "bytes": 189273,
+          "sha256": "8929be61bc97d030fac389b9ba348581b7d7ad616422e604f55529c973bd2bb3"
+        },
+        {
+          "path": "results/reports/features-gpt4o-001/reasoning-review-template.json",
+          "bytes": 1222989,
+          "sha256": "e6f70f0269d3237c6c646dbe8dc7d1e4b9ee3d237e61c5e5a3d7212f5450942b"
+        },
+        {
+          "path": "results/reports/features-gpt4o-001/responses.csv",
+          "bytes": 100425,
+          "sha256": "64f111fbfee5e71b3822d3d063b38ccb9883cd3671d877b52bc69eaeeeb3193a"
+        },
+        {
+          "path": "results/reports/features-gpt4o-001/summary.json",
+          "bytes": 224328,
+          "sha256": "cd0ec72c7e82e7ef909e0dca2c3aa24e27226e5828e74d2b8e6fdb4a709f791d"
+        },
+        {
+          "path": "results/reports/features-gpt4o-001/summary.md",
+          "bytes": 6427,
+          "sha256": "8e9df6a93b8959ece9289a715dcc5edac410cbcec2190a249865b03eb1d941d3"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "runs/features-gpt4o-001",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "instruction-interface-gpt4o-001",
+      "snapshot_id": "64b7a9e33b37",
+      "plan_hash": "1a12f7d1637b82caefb79b488abd1c96a09b0d257af4a8fbaad82fd9c926f5e7",
+      "planned": 192,
+      "returned": 192,
+      "attempt_status_counts": {
+        "complete": 192
+      },
+      "analysis_status": "COMPLETE",
+      "decision": null,
+      "execution_created_at": "2026-10-13T02:59:22.656211+00:00",
+      "archive": "results/archives/instruction-interface-gpt4o-001-results.zip",
+      "archive_prefix": "runs/instruction-interface-gpt4o-001",
+      "report_directory": "results/reports/instruction-interface-gpt4o-001",
+      "report_files": [
+        {
+          "path": "results/reports/instruction-interface-gpt4o-001/manual_review_template.csv",
+          "bytes": 9381,
+          "sha256": "c3e76b1e814c500e1a6e9e951936c421c2a7b63c30dc9a23473e28ecdb27331a"
+        },
+        {
+          "path": "results/reports/instruction-interface-gpt4o-001/summary.json",
+          "bytes": 12362,
+          "sha256": "aeee5f21830b54e6701504243845161e55f38b2ccad50abdeb234208dbef5095"
+        },
+        {
+          "path": "results/reports/instruction-interface-gpt4o-001/summary.md",
+          "bytes": 1639,
+          "sha256": "0951cc89735a7568f5e51619681f9cad0f1a21e0da65bd3c34782564a7d1497b"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "runs/instruction-interface-gpt4o-001",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "runs 3/instruction-interface-gpt4o-001",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "query-form-gpt4o-001",
+      "snapshot_id": "ecf5c541e60f",
+      "plan_hash": "110bbe5e3f1dd1cc1b5967c3c2cdd8e52a35c6f266fec6d2215107de019cd74a",
+      "planned": 288,
+      "returned": 288,
+      "attempt_status_counts": {
+        "complete": 288
+      },
+      "analysis_status": "complete",
+      "decision": "stop_query_form",
+      "execution_created_at": "2026-10-12T03:11:28.798944+00:00",
+      "archive": "results/archives/query-form-gpt4o-001-snapshot-ecf5c541e60f.zip",
+      "archive_prefix": "runs/query-form-gpt4o-001",
+      "report_directory": "results/reports/query-form-gpt4o-001",
+      "report_files": [
+        {
+          "path": "results/reports/query-form-gpt4o-001/answers.csv",
+          "bytes": 39542,
+          "sha256": "c4bf58167fc709fcbbf0af4fb029bdd70ecec7db0d2971467673b624ff3fa302"
+        },
+        {
+          "path": "results/reports/query-form-gpt4o-001/summary.json",
+          "bytes": 103049,
+          "sha256": "fd2b8aba3a0805b872914a472a80a2f5361596a2f523ddc310ee584e90e8fb47"
+        },
+        {
+          "path": "results/reports/query-form-gpt4o-001/summary.md",
+          "bytes": 6191,
+          "sha256": "a1e4ac2f5177792aae3f92d58232f70a36c145c3183394cb5900264cf6e64cd7"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "runs/query-form-gpt4o-001",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "query-form-mistral-001",
+      "snapshot_id": "8fd0a84243a4",
+      "plan_hash": "110bbe5e3f1dd1cc1b5967c3c2cdd8e52a35c6f266fec6d2215107de019cd74a",
+      "planned": 288,
+      "returned": 288,
+      "attempt_status_counts": {
+        "complete": 288
+      },
+      "analysis_status": "complete",
+      "decision": "output_manipulation_inconclusive",
+      "execution_created_at": "2026-10-12T03:22:38.194882+00:00",
+      "archive": "results/archives/query-form-mistral-001-snapshot-8fd0a84243a4.zip",
+      "archive_prefix": "runs/query-form-mistral-001",
+      "report_directory": "results/reports/query-form-mistral-001",
+      "report_files": [
+        {
+          "path": "results/reports/query-form-mistral-001/answers.csv",
+          "bytes": 39590,
+          "sha256": "b77be465cd52f6ef32a0526d726524ef1fb50cf17f0e25c7721da89b648510c8"
+        },
+        {
+          "path": "results/reports/query-form-mistral-001/summary.json",
+          "bytes": 103112,
+          "sha256": "ca35dc35a59494df1f99773bb20cfda7306f6c48f7b51a51e4f1faa1b21d38f1"
+        },
+        {
+          "path": "results/reports/query-form-mistral-001/summary.md",
+          "bytes": 6254,
+          "sha256": "434248aba3197f6100ec650d93ba99dfdd09f870ee476c6f9f60b8695c501ddb"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "runs/query-form-mistral-001",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "row-position-mistral-001",
+      "snapshot_id": "3e0f59ba287e",
+      "plan_hash": "ae4423a09d6d1652ba829f6fe9b5c3759320f2e942a5733e5c9c1dc271171ea0",
+      "planned": 288,
+      "returned": 288,
+      "attempt_status_counts": {
+        "complete": 288
+      },
+      "analysis_status": "complete",
+      "decision": "review_fresh_world_confirmation",
+      "execution_created_at": "2026-10-12T04:26:26.613757+00:00",
+      "archive": "results/archives/row-position-mistral-001-results.zip",
+      "archive_prefix": "runs/row-position-mistral-001",
+      "report_directory": "results/reports/row-position-mistral-001",
+      "report_files": [
+        {
+          "path": "results/reports/row-position-mistral-001/answers.csv",
+          "bytes": 39907,
+          "sha256": "88e589afd001e484884bd03429ca5c4bee476b4e3976ed95e4f7f7d3666b2fcb"
+        },
+        {
+          "path": "results/reports/row-position-mistral-001/summary.json",
+          "bytes": 142952,
+          "sha256": "8e7c9d6a219c19eb533b74b2c62a7ed6b7f3a188a5e75838a5b7cf26940059f7"
+        },
+        {
+          "path": "results/reports/row-position-mistral-001/summary.md",
+          "bytes": 4995,
+          "sha256": "ed038aa02b7232db850df2995ddb649570abb56d84b4254dde8d8c9f7b755b3a"
+        },
+        {
+          "path": "results/reports/row-position-mistral-001/world_contrasts.csv",
+          "bytes": 38594,
+          "sha256": "468b2095a9475c55cabcfceefcbc751ea5fbf0345dd2997ceb6a9f90bbc19051"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "runs/row-position-mistral-001",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "runs 2/row-position-mistral-001",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "ordering-live",
+      "snapshot_id": "bb9df2dfca9f",
+      "plan_hash": "757e9d6b62420d437b6375ff18e43189191d20760196441002d4d7532aa88a2b",
+      "planned": 7680,
+      "returned": 7680,
+      "attempt_status_counts": {
+        "returned": 7680
+      },
+      "analysis_status": null,
+      "decision": null,
+      "execution_created_at": null,
+      "archive": "results/archives/ordering-live-results.zip",
+      "archive_prefix": "runs/ordering-live",
+      "report_directory": "results/reports/ordering-live",
+      "report_files": [
+        {
+          "path": "results/reports/ordering-live/position-audit.json",
+          "bytes": 7549143,
+          "sha256": "7baf0781f19a31e5429624454a2db1d0a44183745d59be28d98ab61b398394d6"
+        },
+        {
+          "path": "results/reports/ordering-live/responses.csv",
+          "bytes": 5183851,
+          "sha256": "404e57b2ebddb6b35b3d5a12d919eb701dd697a0e714c9f4c4910ad90ca86b8a"
+        },
+        {
+          "path": "results/reports/ordering-live/summary.json",
+          "bytes": 102383,
+          "sha256": "ef892080615dabf1b390762ccb8e31ed3d2e7b2e3111a9312995b638009eb153"
+        },
+        {
+          "path": "results/reports/ordering-live/summary.md",
+          "bytes": 723,
+          "sha256": "8357c02a3df3af3f702191bd86ff2c468e7b4716b46e0a1fb70ec456f360ad56"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "runs/ordering-live",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "runs 2/ordering-live",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "ordering-preview",
+      "snapshot_id": "4629ed76162c",
+      "plan_hash": "2834c611d1d47063a8087df82f359a8cf0c947bfa791368d327c6e51789b3db7",
+      "planned": 7680,
+      "returned": 0,
+      "attempt_status_counts": {},
+      "analysis_status": null,
+      "decision": null,
+      "execution_created_at": null,
+      "archive": "results/archives/ordering-preview-snapshot-4629ed76162c.zip",
+      "archive_prefix": "runs/ordering-preview",
+      "report_directory": "results/reports/ordering-preview",
+      "report_files": [
+        {
+          "path": "results/reports/ordering-preview/position-audit.json",
+          "bytes": 4091133,
+          "sha256": "cda17bc92fc895e17416066dfafc866d62d330fe20fc41eb3b6b8a775c776dc7"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "runs/ordering-preview",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        }
+      ],
+      "status": "UNSTARTED_OR_PREVIEW"
+    },
+    {
+      "id": "row-position-confirm-mistral-001",
+      "snapshot_id": "4ffc311a802d",
+      "plan_hash": "534e56c260494450ce31dfb9fd295b565ef5ed1291a5772e1e9503c049efb506",
+      "planned": 960,
+      "returned": 960,
+      "attempt_status_counts": {
+        "complete": 960
+      },
+      "analysis_status": "complete",
+      "decision": "confirm_positive_interaction",
+      "execution_created_at": "2026-10-12T23:45:28.589658+00:00",
+      "archive": "results/archives/row-position-confirm-mistral-001-results.zip",
+      "archive_prefix": "runs/row-position-confirm-mistral-001",
+      "report_directory": "results/reports/row-position-confirm-mistral-001--20261012T234528Z",
+      "report_files": [
+        {
+          "path": "results/reports/row-position-confirm-mistral-001--20261012T234528Z/answers.csv",
+          "bytes": 133995,
+          "sha256": "77526e85896f6091ff221b9e262f95f68a3830683ad9a6d9086ce6a75a001b31"
+        },
+        {
+          "path": "results/reports/row-position-confirm-mistral-001--20261012T234528Z/row_curve.csv",
+          "bytes": 2239,
+          "sha256": "bdf4045978f551a244c4408f7ce2a20abdee2c06693d0c08d4caf2241859d572"
+        },
+        {
+          "path": "results/reports/row-position-confirm-mistral-001--20261012T234528Z/row_curve.svg",
+          "bytes": 8601,
+          "sha256": "0045e749dca19ddbb255f25efd3909dbeb6ff1635d952388a29580efa2934b38"
+        },
+        {
+          "path": "results/reports/row-position-confirm-mistral-001--20261012T234528Z/summary.json",
+          "bytes": 390718,
+          "sha256": "e48e48c60e718b2461044056c07e8e0fd44d9ad1e7e01d2195472853a4317c88"
+        },
+        {
+          "path": "results/reports/row-position-confirm-mistral-001--20261012T234528Z/summary.md",
+          "bytes": 10555,
+          "sha256": "c46df16fa75d2c34b3d97f4163de9c3dd9006d87bb1ec3436d41d5e729467c29"
+        },
+        {
+          "path": "results/reports/row-position-confirm-mistral-001--20261012T234528Z/world_contrasts.csv",
+          "bytes": 105905,
+          "sha256": "898fb80e816ccae99b8fa5977082c98dfc43e310e36485d9f8190c23680e9f8e"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "runs/row-position-confirm-mistral-001",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    },
+    {
+      "id": "reference-001",
+      "snapshot_id": "13deaf045efe",
+      "plan_hash": "3efb2c8436db30e84ab12a258d8be22bb19701d09f245609d3978c5da5986be9",
+      "planned": 1200,
+      "returned": 1200,
+      "attempt_status_counts": {
+        "complete": 1200,
+        "error": 4
+      },
+      "analysis_status": null,
+      "decision": null,
+      "execution_created_at": "2026-10-08T16:33:53.120058+00:00",
+      "archive": "results/archives/reference-001.zip",
+      "archive_prefix": "runs/reference-001",
+      "report_directory": "results/reports/reference-001",
+      "report_files": [
+        {
+          "path": "results/reports/reference-001/scores.csv",
+          "bytes": 90000,
+          "sha256": "047d8ab5a308ade4614cbb2a9249802f82e46f6332728e06962d5f72a10ca543"
+        },
+        {
+          "path": "results/reports/reference-001/summary.json",
+          "bytes": 7820,
+          "sha256": "55b96e0e10138f0df03ece4099818e0b0e023772654d566fe581c6138e7da7a4"
+        },
+        {
+          "path": "results/reports/reference-001/summary.md",
+          "bytes": 1483,
+          "sha256": "2e9eb3b036f93e831b8a07b7988e1d27a302d68c3912f7ab402459fe115989c6"
+        }
+      ],
+      "sources": [
+        {
+          "checkout": "exception-pilot-main",
+          "relative_path": "runs/reference-001",
+          "source_checkout_commit": null
+        }
+      ],
+      "status": "ALL_PLANNED_RETURNS_PRESENT"
+    }
+  ],
+  "supplemental_files": [
+    {
+      "path": "results/audits/analysis/column-validation.json",
+      "bytes": 903,
+      "sha256": "40164faf2e63b088830f75cc44a21079c59ccd791957153edd09c6832e7097d4",
+      "sources": [
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "analysis/column-validation.json",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "analysis/column-validation.json",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/README.md",
+      "bytes": 3733,
+      "sha256": "f7f68691643b6eb1f69fc1e8093a238ae8597e23d72db2a237bb0cc59d6fe6a3",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/README.md",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/README.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/README.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/README.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/cue-001/audit.json",
+      "bytes": 445,
+      "sha256": "1116e70499f2f2d07425dd25c36b35de58d37a92f989f773cc7beb6e74ac4d6f",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/cue-001/audit.json",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/cue-001/audit.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/cue-001/audit.json",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/cue-001/audit.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/cue-001/rationale_sample.md",
+      "bytes": 58244,
+      "sha256": "557a6b5873fd00758a3fc384685a493cb44ec82f84095878cc112080a7e75098",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/cue-001/rationale_sample.md",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/cue-001/rationale_sample.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/cue-001/rationale_sample.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/cue-001/rationale_sample.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/cue-001/rationales.csv",
+      "bytes": 116031,
+      "sha256": "32bb8524eb37d1377a0aa0276a63462e3d0c8d7865257e1291c67cb6ed3886ab",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/cue-001/rationales.csv",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/cue-001/rationales.csv",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/cue-001/rationales.csv",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/cue-001/rationales.csv",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/cue-001/sample_key.json",
+      "bytes": 3112,
+      "sha256": "0ad65695ff6db001f32751d467982f29806a74523460830563724012e2549273",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/cue-001/sample_key.json",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/cue-001/sample_key.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/cue-001/sample_key.json",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/cue-001/sample_key.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/cue-001/summary.md",
+      "bytes": 2195,
+      "sha256": "bbcdb5a80abfe09e43510b1a8185d4832e0ff2f7d10a99ba84d867832a29d106",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/cue-001/summary.md",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/cue-001/summary.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/cue-001/summary.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/cue-001/summary.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/explanation-001/audit.json",
+      "bytes": 445,
+      "sha256": "89c11cae608122ead1680aca23b4f5a74043af27c294fd8ce050cf7d78681f9a",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/explanation-001/audit.json",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/explanation-001/audit.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/explanation-001/audit.json",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/explanation-001/audit.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/explanation-001/rationale_sample.md",
+      "bytes": 55744,
+      "sha256": "f4e35463d0783568b57b6a5766946432da5fc62a18ab18449a15409202e0c052",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/explanation-001/rationale_sample.md",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/explanation-001/rationale_sample.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/explanation-001/rationale_sample.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/explanation-001/rationale_sample.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/explanation-001/rationales.csv",
+      "bytes": 107639,
+      "sha256": "4408a8019e31877117433dbc8aaebeeef22c28b2512d57b8801df091e9cd457d",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/explanation-001/rationales.csv",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/explanation-001/rationales.csv",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/explanation-001/rationales.csv",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/explanation-001/rationales.csv",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/explanation-001/sample_key.json",
+      "bytes": 3031,
+      "sha256": "6d9523fbef774afa8c1dce0056905fd643a56e0bbf430c7664eb3098c996e7ac",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/explanation-001/sample_key.json",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/explanation-001/sample_key.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/explanation-001/sample_key.json",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/explanation-001/sample_key.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/explanation-001/summary.md",
+      "bytes": 2293,
+      "sha256": "f638e09157bf41ec5256f42a34101fd78b0ca7a79472ffb3b556864c1a7f1067",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/explanation-001/summary.md",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/explanation-001/summary.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/explanation-001/summary.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/explanation-001/summary.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/mistral-prefix-v2-001/audit.json",
+      "bytes": 444,
+      "sha256": "15648944d42294a94e04918f5a8b6ca3bf8b2413176bfac0e4ea2984b27b5013",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/audit.json",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/audit.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/audit.json",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/audit.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/mistral-prefix-v2-001/rationale_sample.md",
+      "bytes": 54587,
+      "sha256": "5cd1ee266c9ff368f79f7fcfad2cfffe0c4e89f475a98fbaf643c9af4b51c414",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/rationale_sample.md",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/rationale_sample.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/rationale_sample.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/rationale_sample.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/mistral-prefix-v2-001/rationales.csv",
+      "bytes": 57101,
+      "sha256": "188aaf43b9969cfde8c21451f9a351d228e3b6ba994c73feaed5dcce4b786003",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/rationales.csv",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/rationales.csv",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/rationales.csv",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/rationales.csv",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/mistral-prefix-v2-001/sample_key.json",
+      "bytes": 3222,
+      "sha256": "e9aec364a3a11f0302dd2f4bef5f06e5a09e9dccbacfff38f681fbb2a6e05c92",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/sample_key.json",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/sample_key.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/sample_key.json",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/sample_key.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/mistral-prefix-v2-001/summary.md",
+      "bytes": 2416,
+      "sha256": "8413562fd2c72043edc16e55de2062d12ea1d32d31d38476579e5a7d6730303f",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/summary.md",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/summary.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/summary.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/mistral-prefix-v2-001/summary.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/order-001/audit.json",
+      "bytes": 445,
+      "sha256": "ef8dbfd0cb89832ce5ff814511cd19bbc42b3a54950ef45c0338ec399a5b5fde",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/order-001/audit.json",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/order-001/audit.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/order-001/audit.json",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/order-001/audit.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/order-001/rationale_sample.md",
+      "bytes": 44853,
+      "sha256": "ead01ecf8e1df62d4d53b0548e3cf6deda3fb8634560efc8e4619744dc8a383b",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/order-001/rationale_sample.md",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/order-001/rationale_sample.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/order-001/rationale_sample.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/order-001/rationale_sample.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/order-001/rationales.csv",
+      "bytes": 40063,
+      "sha256": "71543981b38c42059f771ca73bbc7c13be46193a6f762faad6716c395f0ee443",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/order-001/rationales.csv",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/order-001/rationales.csv",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/order-001/rationales.csv",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/order-001/rationales.csv",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/order-001/sample_key.json",
+      "bytes": 3278,
+      "sha256": "128e45856a65c6f05411af40c1f4c52f0967adfbcc8e625d8603e4fa022c0a54",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/order-001/sample_key.json",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/order-001/sample_key.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/order-001/sample_key.json",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/order-001/sample_key.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/order-001/summary.md",
+      "bytes": 2287,
+      "sha256": "9ac01a91e8e71c4dc09c677abd03508aeafdf6e3751f18454c59f24df8d1a5c4",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/order-001/summary.md",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/order-001/summary.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/order-001/summary.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/order-001/summary.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/revision-001/audit.json",
+      "bytes": 445,
+      "sha256": "96b09a754b15775fd0b717da9f39c8909fb3a19a7275b258981738c6a8d66a71",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/revision-001/audit.json",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/revision-001/audit.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/revision-001/audit.json",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/revision-001/audit.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/revision-001/rationale_sample.md",
+      "bytes": 42034,
+      "sha256": "2a0951fe62c90bf45befc3c88f2649f5e396afa80b50eb7eab0aa44a1f48c190",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/revision-001/rationale_sample.md",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/revision-001/rationale_sample.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/revision-001/rationale_sample.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/revision-001/rationale_sample.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/revision-001/rationales.csv",
+      "bytes": 146162,
+      "sha256": "ca8b5276449135e1bf6852341ac4d27fc5bacd795520bae2ccd55c8dd6b5622d",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/revision-001/rationales.csv",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/revision-001/rationales.csv",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/revision-001/rationales.csv",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/revision-001/rationales.csv",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/revision-001/sample_key.json",
+      "bytes": 3289,
+      "sha256": "6aa497d08d9280500a44a5782fb03be796a8425f9a5f2ff2350922636e5c3d7c",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/revision-001/sample_key.json",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/revision-001/sample_key.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/revision-001/sample_key.json",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/revision-001/sample_key.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/rationales/revision-001/summary.md",
+      "bytes": 2897,
+      "sha256": "439178d70c6bc014e32169fe9b1fcc44b3e89b24b33ccfc671156ef934ac47cc",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "analysis/rationales/revision-001/summary.md",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/rationales/revision-001/summary.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/rationales/revision-001/summary.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/rationales/revision-001/summary.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/row-position-confirm-validation.md",
+      "bytes": 3533,
+      "sha256": "14e375f650bab4fb0c03e1562e991a71d87995a1c582bb727c3447d98996a7fa",
+      "sources": [
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/row-position-confirm-validation.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/row-position-confirm-validation.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/analysis/row-position-validation.md",
+      "bytes": 1887,
+      "sha256": "144fdb57aad5403cae017a8e5db1472079e2a9d07463becf13c10aa308c5cae8",
+      "sources": [
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "analysis/row-position-validation.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "analysis/row-position-validation.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "analysis/row-position-validation.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/audits/qwen3-tokenizer-offline-20261012.json",
+      "bytes": 6506,
+      "sha256": "d2baabdb40b55cec908028d33b16ebe8af5fc3f3911c8ecc0e4b60a6daf7cc56",
+      "sources": [
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "audits/qwen3-tokenizer-offline-20261012.json",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/results/query-form-implementation-check.md",
+      "bytes": 4032,
+      "sha256": "01a588c2e5734e42b0a381022fcd2a6c3d850eb7df2e3808240c31cbc0dace5c",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "results/query-form-implementation-check.md",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "results/query-form-implementation-check.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "results/query-form-implementation-check.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "results/query-form-implementation-check.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/results/query-role-001-report.md",
+      "bytes": 5721,
+      "sha256": "51068406bba5f618eb2bc211c1382ac1da8a5af0b62e4bd5a955ef24bbbe7f1f",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "results/query-role-001-report.md",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "results/query-role-001-report.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "results/query-role-001-report.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "results/query-role-001-report.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/results/summary-counterfactual-001.json",
+      "bytes": 8188,
+      "sha256": "e121c9e093871eb56cdbe5cfcc4897238824e7a08e302dd6df6707f0fc8fe64f",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "results/summary-counterfactual-001.json",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "results/summary-counterfactual-001.json",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "results/summary-counterfactual-001.json",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "results/summary-counterfactual-001.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "results/summary-counterfactual-001.json",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "results/summary-counterfactual-001.json",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "results/summary-counterfactual-001.json",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "results/summary-counterfactual-001.json",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "results/summary-counterfactual-001.json",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "results/summary-counterfactual-001.json",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "results/summary-counterfactual-001.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/results/summary-counterfactual-001.md",
+      "bytes": 1972,
+      "sha256": "35243572b845e8562904f65fdb0367965919772fb665dce926bc271dd3c444e7",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "results/summary-counterfactual-001.md",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "results/summary-counterfactual-001.md",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "results/summary-counterfactual-001.md",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "results/summary-counterfactual-001.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "results/summary-counterfactual-001.md",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "results/summary-counterfactual-001.md",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "results/summary-counterfactual-001.md",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "results/summary-counterfactual-001.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "results/summary-counterfactual-001.md",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "results/summary-counterfactual-001.md",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "results/summary-counterfactual-001.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/results/summary-wording-001.json",
+      "bytes": 24414,
+      "sha256": "b0eaf831dfad5007de9c45aa2385fb419032e1762d3522466b7599c406a47af7",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "results/summary-wording-001.json",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "results/summary-wording-001.json",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "results/summary-wording-001.json",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "results/summary-wording-001.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "results/summary-wording-001.json",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "results/summary-wording-001.json",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "results/summary-wording-001.json",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "results/summary-wording-001.json",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "results/summary-wording-001.json",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "results/summary-wording-001.json",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "results/summary-wording-001.json",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    },
+    {
+      "path": "results/audits/results/summary-wording-001.md",
+      "bytes": 3295,
+      "sha256": "46ca1f6f43d4577d1c58619e44e11a48aa21c05119c39444d6ae11a5a4e5f8fe",
+      "sources": [
+        {
+          "checkout": "exception-pilot",
+          "relative_path": "results/summary-wording-001.md",
+          "source_checkout_commit": "16850c825ab6e698423c31cec8dcc81d37be6aba"
+        },
+        {
+          "checkout": "study1-token-audit",
+          "relative_path": "results/summary-wording-001.md",
+          "source_checkout_commit": "616839fb0ca7edc67bcec8c5c3d13bbf8a8bf685"
+        },
+        {
+          "checkout": "study2-audit-fixes",
+          "relative_path": "results/summary-wording-001.md",
+          "source_checkout_commit": "05a27993f2fcd6e540419dbcbbaebc8213f575f4"
+        },
+        {
+          "checkout": "exception-pilot-columns",
+          "relative_path": "results/summary-wording-001.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        },
+        {
+          "checkout": "exception-pilot-evidence-role",
+          "relative_path": "results/summary-wording-001.md",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-followups",
+          "relative_path": "results/summary-wording-001.md",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-instruction-interface",
+          "relative_path": "results/summary-wording-001.md",
+          "source_checkout_commit": "9d42d91a3c195409bbc30bfa275a1f421601b9df"
+        },
+        {
+          "checkout": "exception-pilot-query-form",
+          "relative_path": "results/summary-wording-001.md",
+          "source_checkout_commit": "106eefba5aa765e86602f07631963a632022719e"
+        },
+        {
+          "checkout": "exception-pilot-run-followups",
+          "relative_path": "results/summary-wording-001.md",
+          "source_checkout_commit": "28b5be0484f83b0d3a518926791ebc3c402089fa"
+        },
+        {
+          "checkout": "exception-pilot-run-order",
+          "relative_path": "results/summary-wording-001.md",
+          "source_checkout_commit": "2536666a72c23e18e739c930b5ecfe81d6185d3d"
+        },
+        {
+          "checkout": "exception-pilot-run-position",
+          "relative_path": "results/summary-wording-001.md",
+          "source_checkout_commit": "e026a97d3dd8033614c5db2d0fa6fe2c29fd6a73"
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "distinct_archives": 33,
+    "local_run_snapshots": 32,
+    "supplemental_files": 36,
+    "unique_source_files_scanned_for_credentials": 18350,
+    "credential_pattern_matches": 0,
+    "archive_bytes": 46568670
+  },
+  "preservation_note": "All pre-existing archives are byte-identical. Local files are never overwritten; distinct executions/snapshots are retained. New archives omit only OS metadata and transient run.lock files. Raw published payloads and copied reports are not edited."
+}

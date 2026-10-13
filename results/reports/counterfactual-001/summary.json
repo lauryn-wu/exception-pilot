@@ -1,0 +1,321 @@
+{
+  "protocol_version": "verified-facts-counterfactual-v1",
+  "plan_hash": "51373062e74892973dd6d8c5b1372acac1e78ca7b202c308129b5e86af92890f",
+  "model": "gpt-4o-2024-08-06",
+  "mode": "live",
+  "is_simulated": false,
+  "planned_calls": 160,
+  "attempts": 160,
+  "complete_answers": 160,
+  "invalid_answers": 0,
+  "pending_tasks": 0,
+  "provider_errors": 0,
+  "unresolved_attempts": 0,
+  "complete": true,
+  "paired_lists": 20,
+  "list_effects": [
+    {
+      "world_id": "cf-list-000",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0.5,
+      "cot_support": 1,
+      "cot_conflict_penalty": 0.5,
+      "extra_conflict_penalty": 0.5
+    },
+    {
+      "world_id": "cf-list-001",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0.5,
+      "cot_support": 1,
+      "cot_conflict_penalty": 0.5,
+      "extra_conflict_penalty": 0.5
+    },
+    {
+      "world_id": "cf-list-002",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0.5,
+      "cot_support": 1,
+      "cot_conflict_penalty": 0.5,
+      "extra_conflict_penalty": 0.5
+    },
+    {
+      "world_id": "cf-list-003",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0,
+      "cot_support": 1,
+      "cot_conflict_penalty": 1,
+      "extra_conflict_penalty": 1
+    },
+    {
+      "world_id": "cf-list-004",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0.5,
+      "cot_support": 1,
+      "cot_conflict_penalty": 0.5,
+      "extra_conflict_penalty": 0.5
+    },
+    {
+      "world_id": "cf-list-005",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0.5,
+      "cot_support": 1,
+      "cot_conflict_penalty": 0.5,
+      "extra_conflict_penalty": 0.5
+    },
+    {
+      "world_id": "cf-list-006",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 1,
+      "cot_support": 1,
+      "cot_conflict_penalty": 0,
+      "extra_conflict_penalty": 0
+    },
+    {
+      "world_id": "cf-list-007",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0.5,
+      "cot_support": 1,
+      "cot_conflict_penalty": 0.5,
+      "extra_conflict_penalty": 0.5
+    },
+    {
+      "world_id": "cf-list-008",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0,
+      "cot_support": 1,
+      "cot_conflict_penalty": 1,
+      "extra_conflict_penalty": 1
+    },
+    {
+      "world_id": "cf-list-009",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0.5,
+      "cot_support": 1,
+      "cot_conflict_penalty": 0.5,
+      "extra_conflict_penalty": 0.5
+    },
+    {
+      "world_id": "cf-list-010",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0,
+      "cot_support": 1,
+      "cot_conflict_penalty": 1,
+      "extra_conflict_penalty": 1
+    },
+    {
+      "world_id": "cf-list-011",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 1,
+      "cot_support": 1,
+      "cot_conflict_penalty": 0,
+      "extra_conflict_penalty": 0
+    },
+    {
+      "world_id": "cf-list-012",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0,
+      "cot_support": 1,
+      "cot_conflict_penalty": 1,
+      "extra_conflict_penalty": 1
+    },
+    {
+      "world_id": "cf-list-013",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0.5,
+      "cot_support": 1,
+      "cot_conflict_penalty": 0.5,
+      "extra_conflict_penalty": 0.5
+    },
+    {
+      "world_id": "cf-list-014",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0.5,
+      "cot_support": 1,
+      "cot_conflict_penalty": 0.5,
+      "extra_conflict_penalty": 0.5
+    },
+    {
+      "world_id": "cf-list-015",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0.5,
+      "cot_support": 1,
+      "cot_conflict_penalty": 0.5,
+      "extra_conflict_penalty": 0.5
+    },
+    {
+      "world_id": "cf-list-016",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0.5,
+      "cot_support": 1,
+      "cot_conflict_penalty": 0.5,
+      "extra_conflict_penalty": 0.5
+    },
+    {
+      "world_id": "cf-list-017",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0,
+      "cot_support": 1,
+      "cot_conflict_penalty": 1,
+      "extra_conflict_penalty": 1
+    },
+    {
+      "world_id": "cf-list-018",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0.5,
+      "cot_support": 1,
+      "cot_conflict_penalty": 0.5,
+      "extra_conflict_penalty": 0.5
+    },
+    {
+      "world_id": "cf-list-019",
+      "direct_conflict": 1,
+      "direct_support": 1,
+      "direct_conflict_penalty": 0,
+      "cot_conflict": 0,
+      "cot_support": 1,
+      "cot_conflict_penalty": 1,
+      "extra_conflict_penalty": 1
+    }
+  ],
+  "accuracy_tables": [
+    {
+      "condition": "direct",
+      "background": "conflict",
+      "n_valid": 40,
+      "n_planned": 40,
+      "n_correct": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "condition": "direct",
+      "background": "support",
+      "n_valid": 40,
+      "n_planned": 40,
+      "n_correct": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "condition": "cot",
+      "background": "conflict",
+      "n_valid": 40,
+      "n_planned": 40,
+      "n_correct": 16,
+      "accuracy_valid_only": 0.4
+    },
+    {
+      "condition": "cot",
+      "background": "support",
+      "n_valid": 40,
+      "n_planned": 40,
+      "n_correct": 40,
+      "accuracy_valid_only": 1
+    }
+  ],
+  "paired_accuracy": {
+    "direct_conflict": 1,
+    "direct_support": 1,
+    "cot_conflict": 0.4,
+    "cot_support": 1
+  },
+  "effects": {
+    "direct_conflict_penalty": {
+      "mean": 0,
+      "paired_bootstrap_95_ci": [
+        0,
+        0
+      ],
+      "positive_lists": 0,
+      "zero_lists": 20,
+      "negative_lists": 0
+    },
+    "cot_conflict_penalty": {
+      "mean": 0.6,
+      "paired_bootstrap_95_ci": [
+        0.475,
+        0.725
+      ],
+      "positive_lists": 18,
+      "zero_lists": 2,
+      "negative_lists": 0
+    },
+    "extra_conflict_penalty": {
+      "mean": 0.6,
+      "paired_bootstrap_95_ci": [
+        0.475,
+        0.725
+      ],
+      "positive_lists": 18,
+      "zero_lists": 2,
+      "negative_lists": 0
+    }
+  },
+  "support_to_conflict_transitions": {
+    "direct": {
+      "correct_to_wrong": 0,
+      "wrong_to_correct": 0,
+      "correct_in_both": 40,
+      "wrong_in_both": 0
+    },
+    "cot": {
+      "correct_to_wrong": 24,
+      "wrong_to_correct": 0,
+      "correct_in_both": 16,
+      "wrong_in_both": 0
+    }
+  },
+  "screen": {
+    "minimum_extra_conflict_penalty": 0.15,
+    "minimum_independent_lists": 20,
+    "requires_positive_cot_conflict_penalty": true,
+    "requires_lower_cot_than_direct_conflict_accuracy": true,
+    "decision": "review_for_confirmation",
+    "numeric_threshold_met": true,
+    "directions_match_hypothesis": true
+  },
+  "bootstrap_unit": "independent_list_pair",
+  "bootstrap_replicates": 10000,
+  "interpretation": "Separate exploratory study designed after the original stage-1 stop decision. The 15 pp rule is an investment screen, not a significance test. A positive interaction alone does not establish an internal mechanism or novelty. A stop decision does not establish the absence of smaller effects.",
+  "usage": {
+    "prompt_tokens": 51792,
+    "completion_tokens": 27205,
+    "total_tokens": 78997
+  }
+}

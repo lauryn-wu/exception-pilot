@@ -1,0 +1,762 @@
+{
+  "protocol_version": "verified-facts-wording-v1",
+  "plan_hash": "36d3df56402fcba73e369315eba598a4de13999d8979e505a55fc4094c1a1889",
+  "model": "gpt-4o-2024-08-06",
+  "mode": "live",
+  "is_simulated": false,
+  "planned_calls": 480,
+  "attempts": 480,
+  "complete_answers": 480,
+  "invalid_answers": 0,
+  "pending_tasks": 0,
+  "provider_errors": 0,
+  "unresolved_attempts": 0,
+  "complete": true,
+  "paired_lists": 20,
+  "list_effects": [
+    {
+      "world_id": "wd-list-000",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0.5,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 0.5,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 0.5,
+        "original/cot_neutral": 0.5,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-001",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0,
+        "original/cot_classification/support": 0.5,
+        "original/cot_neutral/conflict": 0.5,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 0.5,
+        "original/cot_neutral": 0.5,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-002",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0.5,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 0.5,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 0.5,
+        "original/cot_neutral": 0.5,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-003",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 1,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 1,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 0,
+        "original/cot_neutral": 0,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-004",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0.5,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 0.5,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 0.5,
+        "original/cot_neutral": 0.5,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-005",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 1,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 0.5,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 0,
+        "original/cot_neutral": 0.5,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-006",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 0.5,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 1,
+        "original/cot_neutral": 0.5,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-007",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 1,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 0.5,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 0,
+        "original/cot_neutral": 0.5,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-008",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0.5,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 0.5,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 0.5,
+        "original/cot_neutral": 0.5,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-009",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 1,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 1,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 0,
+        "original/cot_neutral": 0,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-010",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 0,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 1,
+        "original/cot_neutral": 1,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-011",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0.5,
+        "original/cot_classification/support": 0.5,
+        "original/cot_neutral/conflict": 0,
+        "original/cot_neutral/support": 0.5,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 0.0,
+        "original/cot_neutral": 0.5,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-012",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 0.5,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 0.5,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 1,
+        "original/cot_neutral": 0.5,
+        "recorded/cot_classification": 0.5,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-013",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0.5,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 0.5,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 0.5,
+        "original/cot_neutral": 0.5,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-014",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0.5,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 1,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 0.5,
+        "original/cot_neutral": 0,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-015",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 0.5,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 0,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 1,
+        "original/cot_neutral": 0.5,
+        "recorded/cot_classification": 1,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-016",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 0,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 1,
+        "original/cot_neutral": 1,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-017",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0.5,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 0,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 0.5,
+        "original/cot_neutral": 1,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-018",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 0.5,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 1,
+        "original/cot_neutral": 0.5,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    },
+    {
+      "world_id": "wd-list-019",
+      "accuracy": {
+        "original/direct/conflict": 1,
+        "original/direct/support": 1,
+        "original/cot_classification/conflict": 0,
+        "original/cot_classification/support": 1,
+        "original/cot_neutral/conflict": 0,
+        "original/cot_neutral/support": 1,
+        "recorded/direct/conflict": 1,
+        "recorded/direct/support": 1,
+        "recorded/cot_classification/conflict": 1,
+        "recorded/cot_classification/support": 1,
+        "recorded/cot_neutral/conflict": 1,
+        "recorded/cot_neutral/support": 1
+      },
+      "extra_conflict_penalty": {
+        "original/cot_classification": 1,
+        "original/cot_neutral": 1,
+        "recorded/cot_classification": 0,
+        "recorded/cot_neutral": 0
+      }
+    }
+  ],
+  "accuracy_tables": [
+    {
+      "question_wording": "original",
+      "condition": "direct",
+      "background": "conflict",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "original",
+      "condition": "direct",
+      "background": "support",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "original",
+      "condition": "cot_classification",
+      "background": "conflict",
+      "n_correct": 16,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 0.4
+    },
+    {
+      "question_wording": "original",
+      "condition": "cot_classification",
+      "background": "support",
+      "n_correct": 38,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 0.95
+    },
+    {
+      "question_wording": "original",
+      "condition": "cot_neutral",
+      "background": "conflict",
+      "n_correct": 18,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 0.45
+    },
+    {
+      "question_wording": "original",
+      "condition": "cot_neutral",
+      "background": "support",
+      "n_correct": 39,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 0.975
+    },
+    {
+      "question_wording": "recorded",
+      "condition": "direct",
+      "background": "conflict",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "recorded",
+      "condition": "direct",
+      "background": "support",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "recorded",
+      "condition": "cot_classification",
+      "background": "conflict",
+      "n_correct": 37,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 0.925
+    },
+    {
+      "question_wording": "recorded",
+      "condition": "cot_classification",
+      "background": "support",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "recorded",
+      "condition": "cot_neutral",
+      "background": "conflict",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "question_wording": "recorded",
+      "condition": "cot_neutral",
+      "background": "support",
+      "n_correct": 40,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    }
+  ],
+  "paired_accuracy": {
+    "original/direct/conflict": 1,
+    "original/direct/support": 1,
+    "original/cot_classification/conflict": 0.4,
+    "original/cot_classification/support": 0.95,
+    "original/cot_neutral/conflict": 0.45,
+    "original/cot_neutral/support": 0.975,
+    "recorded/direct/conflict": 1,
+    "recorded/direct/support": 1,
+    "recorded/cot_classification/conflict": 0.925,
+    "recorded/cot_classification/support": 1,
+    "recorded/cot_neutral/conflict": 1,
+    "recorded/cot_neutral/support": 1
+  },
+  "comparisons": {
+    "original/cot_classification": {
+      "question_wording": "original",
+      "condition": "cot_classification",
+      "paired_accuracy": {
+        "direct_conflict": 1,
+        "direct_support": 1,
+        "cot_classification_conflict": 0.4,
+        "cot_classification_support": 0.95
+      },
+      "direct_conflict_penalty": 0,
+      "reasoning_conflict_penalty": 0.5499999999999999,
+      "extra_conflict_penalty": {
+        "mean": 0.55,
+        "paired_bootstrap_95_ci": [
+          0.375,
+          0.725
+        ],
+        "positive_lists": 15,
+        "zero_lists": 5,
+        "negative_lists": 0
+      },
+      "numeric_threshold_met": true,
+      "directions_match_hypothesis": true,
+      "qualifies_descriptively": true
+    },
+    "original/cot_neutral": {
+      "question_wording": "original",
+      "condition": "cot_neutral",
+      "paired_accuracy": {
+        "direct_conflict": 1,
+        "direct_support": 1,
+        "cot_neutral_conflict": 0.45,
+        "cot_neutral_support": 0.975
+      },
+      "direct_conflict_penalty": 0,
+      "reasoning_conflict_penalty": 0.5249999999999999,
+      "extra_conflict_penalty": {
+        "mean": 0.525,
+        "paired_bootstrap_95_ci": [
+          0.4,
+          0.65
+        ],
+        "positive_lists": 17,
+        "zero_lists": 3,
+        "negative_lists": 0
+      },
+      "numeric_threshold_met": true,
+      "directions_match_hypothesis": true,
+      "qualifies_descriptively": true
+    },
+    "recorded/cot_classification": {
+      "question_wording": "recorded",
+      "condition": "cot_classification",
+      "paired_accuracy": {
+        "direct_conflict": 1,
+        "direct_support": 1,
+        "cot_classification_conflict": 0.925,
+        "cot_classification_support": 1
+      },
+      "direct_conflict_penalty": 0,
+      "reasoning_conflict_penalty": 0.07499999999999996,
+      "extra_conflict_penalty": {
+        "mean": 0.075,
+        "paired_bootstrap_95_ci": [
+          0,
+          0.2
+        ],
+        "positive_lists": 2,
+        "zero_lists": 18,
+        "negative_lists": 0
+      },
+      "numeric_threshold_met": false,
+      "directions_match_hypothesis": true,
+      "qualifies_descriptively": false
+    },
+    "recorded/cot_neutral": {
+      "question_wording": "recorded",
+      "condition": "cot_neutral",
+      "paired_accuracy": {
+        "direct_conflict": 1,
+        "direct_support": 1,
+        "cot_neutral_conflict": 1,
+        "cot_neutral_support": 1
+      },
+      "direct_conflict_penalty": 0,
+      "reasoning_conflict_penalty": 0,
+      "extra_conflict_penalty": {
+        "mean": 0,
+        "paired_bootstrap_95_ci": [
+          0,
+          0
+        ],
+        "positive_lists": 0,
+        "zero_lists": 20,
+        "negative_lists": 0
+      },
+      "numeric_threshold_met": false,
+      "directions_match_hypothesis": false,
+      "qualifies_descriptively": false
+    }
+  },
+  "wording_contrasts": {
+    "original/neutral_minus_classification": {
+      "mean": -0.025,
+      "paired_bootstrap_95_ci": [
+        -0.175,
+        0.125
+      ],
+      "positive_lists": 4,
+      "zero_lists": 11,
+      "negative_lists": 5
+    },
+    "recorded/neutral_minus_classification": {
+      "mean": -0.075,
+      "paired_bootstrap_95_ci": [
+        -0.2,
+        0
+      ],
+      "positive_lists": 0,
+      "zero_lists": 18,
+      "negative_lists": 2
+    },
+    "neutral/original_minus_recorded": {
+      "mean": 0.525,
+      "paired_bootstrap_95_ci": [
+        0.4,
+        0.65
+      ],
+      "positive_lists": 17,
+      "zero_lists": 3,
+      "negative_lists": 0
+    }
+  },
+  "screen": {
+    "minimum_extra_conflict_penalty": 0.15,
+    "minimum_independent_lists": 20,
+    "requires_positive_reasoning_conflict_penalty": true,
+    "requires_lower_reasoning_than_direct_conflict_accuracy": true,
+    "ordered_checks": [
+      "original/cot_classification",
+      "original/cot_neutral",
+      "recorded/cot_neutral"
+    ],
+    "primary_robustness_contrast": "recorded/cot_neutral",
+    "decision": "stop_explicit_record_boundary",
+    "ordered_checks_pass": {
+      "original/cot_classification": true,
+      "original/cot_neutral": true,
+      "recorded/cot_neutral": false
+    }
+  },
+  "bootstrap_unit": "independent_list_pair",
+  "bootstrap_replicates": 10000,
+  "usage": {
+    "prompt_tokens": 155124,
+    "completion_tokens": 77974,
+    "total_tokens": 233098
+  },
+  "interpretation": "Fresh-data wording follow-up specified after a positive exploratory pilot. All six wording cells share each list. The independent sample size is the number of complete lists, not calls. The ordered 15 pp checks are investment rules, not significance tests, mechanistic evidence or novelty claims. No follow-up runs automatically."
+}

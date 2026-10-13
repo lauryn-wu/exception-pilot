@@ -1,0 +1,813 @@
+{
+  "archive": "results/archives/instruction-interface-gpt4o-001-results.zip",
+  "members": {
+    "runs/instruction-interface-gpt4o-001/summary.json": {
+      "sha256": "aeee5f21830b54e6701504243845161e55f38b2ccad50abdeb234208dbef5095",
+      "bytes": 12362
+    },
+    "runs/instruction-interface-gpt4o-001/run.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/instruction-interface-gpt4o-001/scored_trials.json": {
+      "sha256": "1d76451d8cf5a9e1db7ef600b2d095b4d087b743f9f8dd1b824c1195ec3d8777",
+      "bytes": 338318
+    },
+    "runs/instruction-interface-gpt4o-001/plan.json": {
+      "sha256": "9e75758dc1cb7f660307560ce163d2b910a8e4358d8d485c2447b2fff7cda986",
+      "bytes": 737126
+    },
+    "runs/instruction-interface-gpt4o-001/summary.md": {
+      "sha256": "0951cc89735a7568f5e51619681f9cad0f1a21e0da65bd3c34782564a7d1497b",
+      "bytes": 1639
+    },
+    "runs/instruction-interface-gpt4o-001/traces.jsonl": {
+      "sha256": "253107d1735b05b3f5e357a3cd9bb3e31b8e1643e4d59252a34f6b336f5b652c",
+      "bytes": 2158136
+    },
+    "runs/instruction-interface-gpt4o-001/preview.md": {
+      "sha256": "31957b3dc28982b874c6d855033a38b270f53cfe6beeec7e7cdebc9bd15cbfcd",
+      "bytes": 865567
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000145.json": {
+      "sha256": "f8a56760d91c66690872b7f1b708bd8648a4be6fde1fffb5d6b777d1ce7dbaa0",
+      "bytes": 8792
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000112.json": {
+      "sha256": "ff7432b65ce526ac35ef0904573da29cd885f66524031c4e48fc8488a888a785",
+      "bytes": 10085
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000057.json": {
+      "sha256": "b4409523bf99cfffc9ec9598cc88aa142ce3d8adbc5717dbfe282528dc9ddbd0",
+      "bytes": 8637
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000104.json": {
+      "sha256": "b19a40ce0c49e7ca36f5a986e11651d1835ddb347e7fb495aac5508fa8c80e56",
+      "bytes": 8371
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000041.json": {
+      "sha256": "b97f9f31a43cd7da5b6f103af11a12691b0c3058a9f4125b0d95a1c11519801b",
+      "bytes": 6146
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000153.json": {
+      "sha256": "95727e31d13a69c8c61259edddcfb95eda065589ea7aa83d0e70fe7e9da33ea5",
+      "bytes": 10728
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000016.json": {
+      "sha256": "9410b28cbc6799e2da970fff70eb717db071d0ca5a1c5f012c6bb9e8c8b9cd81",
+      "bytes": 7008
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000082.json": {
+      "sha256": "0961c84a4bfa1c73de1f137beec5eaa96c1fed62700279244481c10413b5157a",
+      "bytes": 9150
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000128.json": {
+      "sha256": "2e3fbf1097c538aa50232937b6843d304f1d66c7fd529499a3ec713aeb096190",
+      "bytes": 8991
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000190.json": {
+      "sha256": "9fc014bc8259dec616c4d738001cdcf4389acf146e8c3aa0fd5fed5b03ff0ae1",
+      "bytes": 6439
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000186.json": {
+      "sha256": "51d7a12c85c564a8fe45864520055c47f30c58a13e71849423e275bdeadd946e",
+      "bytes": 6761
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000169.json": {
+      "sha256": "7352b27812ece24e2772b56b34695540937b6db774288fc84b8f02cae59d444d",
+      "bytes": 6956
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000094.json": {
+      "sha256": "f77fe8c2e61361f2a36bef6d33ec321d08bc8a26316b30da788d368e0f2ea92f",
+      "bytes": 7836
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000149.json": {
+      "sha256": "1e84a3eddf6e6f77c03cbe4af8486de237ccb5ea7195d5435641820cb782069f",
+      "bytes": 9134
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000108.json": {
+      "sha256": "812e11910eedb3d085ca524b43cb3abb86f72504a1d25c9c242213e22086285b",
+      "bytes": 9869
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000061.json": {
+      "sha256": "b575ee2cb84f94f2d0969f70e5213f287e6673798a97ee2c089973bbace70545",
+      "bytes": 9587
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000124.json": {
+      "sha256": "7455aa9901cadb913d3e05e32b1e43f46f90c2606e45835cc794471ff863eb75",
+      "bytes": 8756
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000036.json": {
+      "sha256": "06361e7c1419f6900fabd3b6a3d65b0b0a7659235f0e54b6cd401a1ada34e679",
+      "bytes": 6507
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000173.json": {
+      "sha256": "334b0980c2676277674216a4a94e8ebad188c4cc2e78fcd986d9f8be44e6c454",
+      "bytes": 6503
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000020.json": {
+      "sha256": "d737126c6af21f7c50d6675cd00ba642c323165cf8ff24d8038b73c5541d97b7",
+      "bytes": 9965
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000165.json": {
+      "sha256": "264ec69ee2aa16e19d2a4451194993158f369a19d7990d2c06f767239853345e",
+      "bytes": 8860
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000077.json": {
+      "sha256": "54824d4d545171c9ccfd73c9132a92d5d8c762fa4de10cc3e685dafb64b7ee0e",
+      "bytes": 9558
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000098.json": {
+      "sha256": "3d8c364abf160009f2281cf51fa48a005ebfc1f473f9c01b478ee5140b6ddd33",
+      "bytes": 9700
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000132.json": {
+      "sha256": "f1da7ab94e8d2c93925f96953e5ac5fcfb09217a36f7204a6c8f8ecefcab6a5e",
+      "bytes": 9105
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000076.json": {
+      "sha256": "edefe554bf7cf9ee044c4cad5c1f4904c765449828f3af33e6403921b61ea5dc",
+      "bytes": 6975
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000099.json": {
+      "sha256": "ba4b7c1da20ee780582b5362d6bc6a81022bf3f427af05cc6d855d508678f39b",
+      "bytes": 6527
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000133.json": {
+      "sha256": "48d40eef2fe16049eb50c72b4f1a47e35463776c95215749f023feb3a58e80e1",
+      "bytes": 10394
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000021.json": {
+      "sha256": "1e0ee19b57f76d823ce399176bcadf33fce21106dc7d270ab6bbfd08a5059563",
+      "bytes": 7056
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000164.json": {
+      "sha256": "35c2c12df6132c3560475667ba9e302f2e3776ac7e1fb2d0a82189b9f7627c70",
+      "bytes": 7815
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000037.json": {
+      "sha256": "37302e305723593715d25f08335a3bfd8ad6d9d6de9bdbddf36068040970ec38",
+      "bytes": 6916
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000172.json": {
+      "sha256": "8ca0f45dfecdf75f09098a1c7289e6c21f4f62983b593e0fb937e28a688cdb7e",
+      "bytes": 6828
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000060.json": {
+      "sha256": "3723d18faed50e11602b8f25d342e62a571cf2a2b8dfcbf969621f41fdf64fc2",
+      "bytes": 7171
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000125.json": {
+      "sha256": "fe7ffa39214935b00e22fcb416f521a32f5dde010978b76831bde3128100359b",
+      "bytes": 9213
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000109.json": {
+      "sha256": "e320ee1985d8d9c966f99f7cfee1b52ce885423a3d1af7e6a06177699e02a0d8",
+      "bytes": 6762
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000148.json": {
+      "sha256": "7e810847e4b76b03e0ea3238b382e5a5c494d9178aac1c257d7a7158ffb3b584",
+      "bytes": 6666
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000095.json": {
+      "sha256": "cba9668ffb80a2426d96964d6621ef9a1520512270b3c6206c4f834ff9d26001",
+      "bytes": 10635
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000187.json": {
+      "sha256": "e16c58705794514fe044c8abcc1b6b5bc0ef09325267cf1dad25c1aab8809430",
+      "bytes": 10002
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000168.json": {
+      "sha256": "a0b82d3a1181652d19f051c1a05ca8f87db25736d76ac736d133eef27e0bb754",
+      "bytes": 6761
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000191.json": {
+      "sha256": "941f0ae60ec5dfc1c86a5ab814f380a5b2bd2669ef48bded01b0df9ce7e66516",
+      "bytes": 9057
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000083.json": {
+      "sha256": "a576d35dba07da8efe6743fc11216b8d6f2a1c86bdefeb28578c911a579866b0",
+      "bytes": 10161
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000129.json": {
+      "sha256": "35b484da46b24be3526a6bdc26ef739431bba76c0bbc4e50d376f3f3103527ec",
+      "bytes": 10137
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000152.json": {
+      "sha256": "a57506f0f59cdb3bab3bd65e5af12f47a38e3fff0778ddecaa3eaca048a79795",
+      "bytes": 7067
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000017.json": {
+      "sha256": "d1728b411e0d25ed50b806a1fa9f659acf1cff8198caac2b0aa16b854b61d782",
+      "bytes": 6982
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000105.json": {
+      "sha256": "e18c01d30c8ec9f701451ec9186dadc1edd47ebdd5457fbc3592c937fd747a58",
+      "bytes": 7647
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000040.json": {
+      "sha256": "3aca15188932370c1859652f2ab634a3c4200db8256a2ff4e2db94add990b42c",
+      "bytes": 9360
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000113.json": {
+      "sha256": "4063e608295bbeffaea407ea432f2c9af9fd0ef2a1b90e2bfa6fe21c97391b16",
+      "bytes": 9233
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000056.json": {
+      "sha256": "d051c9ac9a1c1b921621049699cd2695ae5ffdb82be6b479cd07aaaadc9601da",
+      "bytes": 9252
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000144.json": {
+      "sha256": "3a1974f724797bf534684e5727e0ef3647859a2ef8eacc85d6ba07e0de8d47ec",
+      "bytes": 6803
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000001.json": {
+      "sha256": "76eb5d49f979472f5d307f246674aac1bd55decde51ddc1bd0d8118fa58e8e5b",
+      "bytes": 7186
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000118.json": {
+      "sha256": "492e0a0e03451587a74d1485f0e7ec795d6a9a4c9b44dee28c5312e87b3671e8",
+      "bytes": 7086
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000159.json": {
+      "sha256": "e290a29e5490b5d52c23dd8480c736946d68e0e58eb74163c13399fcbd86ba50",
+      "bytes": 9192
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000067.json": {
+      "sha256": "e26642e350f57467095b4e7aa5cc5672bd03092b4a506dbb6d709da854401213",
+      "bytes": 7297
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000122.json": {
+      "sha256": "3e4a4a55d90e67320a9213a4cb42636e4b2c289c96904a24e59fdb62ebef7644",
+      "bytes": 9079
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000088.json": {
+      "sha256": "2da248825493a190650fa2074bdfc677115307f792b1f4d503a1cd37212f5681",
+      "bytes": 7064
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000030.json": {
+      "sha256": "407725b2b61e22b2f444469b7a0a6c5e9701d4530b4aa2f75af8e7b9dc62a102",
+      "bytes": 6718
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000175.json": {
+      "sha256": "aab41fef278098a669c91a63f933227fa8081c2bf7a82983f215746aa8ba52af",
+      "bytes": 9083
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000026.json": {
+      "sha256": "bd45e7b02fd206dbb90ced106c50538220257bb2835747ff1c6cfa3e2a1e21c5",
+      "bytes": 7060
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000163.json": {
+      "sha256": "13d9ddffe3f1eba25b3fbcd16b72fc629e0b4246b8aeef6dbf8f8fc47dab7c59",
+      "bytes": 10224
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000071.json": {
+      "sha256": "af1bc470a7023611ef8dda6f2b68365b391023f6855aafb30c0b37f7043c89ad",
+      "bytes": 7069
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000134.json": {
+      "sha256": "d769168b7aa76085802033682376e3b975e24e72c2800bd9ca7e1bf45d2c0bb8",
+      "bytes": 6356
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000143.json": {
+      "sha256": "0e398ee2e6b842f3ac3e7d7f39238ec857018068edafc8831a3a1c6e2d2764a7",
+      "bytes": 10350
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000006.json": {
+      "sha256": "bdb0e3ab117cc44e6cc9ba04baeb286cb27188ede2f7cf280079e49ad3290526",
+      "bytes": 8865
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000114.json": {
+      "sha256": "afc1b33e71981bcdd8ba5295b5e89f1c980c88e9b3da0a0c73b1bb2c25d5f945",
+      "bytes": 7194
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000051.json": {
+      "sha256": "28458281afa9076f7ee9abfb58759d90b7ab40fa33c3fe38abb7aba4f5430f25",
+      "bytes": 8497
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000102.json": {
+      "sha256": "d19e2901ad0a85eee314dad529794452d48f1eeb178592da6d9392cc175c9704",
+      "bytes": 6787
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000047.json": {
+      "sha256": "b5708477d0b39d3544cb25025d28dd73388a5312b7d979f33c6beeb5278eeea1",
+      "bytes": 9024
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000155.json": {
+      "sha256": "bf519b32a4edd00e77fcf6741b024a905df2f969ff2383c8144436a246080c41",
+      "bytes": 6597
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000010.json": {
+      "sha256": "21982b84155747a73a5bb2b222cc815a11e0daff87f0351262f3f3501a5c6024",
+      "bytes": 8961
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000084.json": {
+      "sha256": "383802d6d845e3cd84894acd51f1e9e7c6292bc6b5370103e5a4e6baea81b6bb",
+      "bytes": 8904
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000179.json": {
+      "sha256": "bfe42c90e539b3f64a74db2cab458547dec9ad79f1eee538f86828e85c20b7a2",
+      "bytes": 9598
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000180.json": {
+      "sha256": "c803f3cb5d79d56fbfb7e28ae2cbc46454b165c791b54da38f428e6d68824014",
+      "bytes": 9254
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000138.json": {
+      "sha256": "2f437398e9276744b85bad854a79d1ba1745a78f0c05892a07e5829c3e2487cd",
+      "bytes": 7236
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000092.json": {
+      "sha256": "a1b12f6d02ed0dcf01e16b99daced50c34d03fe16248f7776c8b4362cbde501d",
+      "bytes": 9861
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000139.json": {
+      "sha256": "fdddb88438966aa650951e969b2192fd718868776b2d05c819f4e281d4e7bde3",
+      "bytes": 6100
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000093.json": {
+      "sha256": "8bbc4531fd3e877d06ed3c42662e4659ea66e2730dbad239a3ea49456adc5f0d",
+      "bytes": 9023
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000181.json": {
+      "sha256": "b4abec4ac8efe78c9c26c727b8697a39b2b3517d17862b5bb302b70f2df70c61",
+      "bytes": 6812
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000178.json": {
+      "sha256": "c43b11c96714e287ab01209d5178f3164a79b1da7cd008eda8d283b75b805a84",
+      "bytes": 7740
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000085.json": {
+      "sha256": "01f2f17730c21468a8b4f983ff542c5b4dc379b099aec851257a29fa699b2f7a",
+      "bytes": 7620
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000154.json": {
+      "sha256": "4cfdcb86f3f4b3fc8f95c197b9f5ea499d56b9150364e89c44531e1b8857da6d",
+      "bytes": 6874
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000011.json": {
+      "sha256": "338daf4dbe49fe3901f0e267ad197dc1c9018613a492f7e5d1e4ac35e2e58b0c",
+      "bytes": 7095
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000103.json": {
+      "sha256": "299520d3a8d55a040e5c50af8eb9833c7ac38563f56ee6c027d73581fd1532bb",
+      "bytes": 9177
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000046.json": {
+      "sha256": "f9618ed4d6370c8139523d345f290ea24888af21a3c9e6e39c437ee08b278b06",
+      "bytes": 7513
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000115.json": {
+      "sha256": "c33796dac4fef70752f46cd0282c4f7652155736d401355a271552df85eea77c",
+      "bytes": 8189
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000050.json": {
+      "sha256": "c1c9b07e436b4865867e0f63080c96255563d24bebb7d731022081740d54c743",
+      "bytes": 6883
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000142.json": {
+      "sha256": "7a17cf9b6d2d81c6fd6a2b4afa09f4a739684b62e7054fda4003eed17efa433a",
+      "bytes": 6741
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000007.json": {
+      "sha256": "be6314d8d5a8cedd0b4fca92f918e7fe2bbccb898e6c5b37a76a75de39c0c153",
+      "bytes": 6431
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000070.json": {
+      "sha256": "79382d182708581ba3284771087bfbe90af01185441efa451612e9c08f7b142b",
+      "bytes": 9968
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000135.json": {
+      "sha256": "e57dc904279b825daf70dfd72032ea2d6cae5eba066bdaa07b4ad1f74181409b",
+      "bytes": 7979
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000027.json": {
+      "sha256": "05969af20d6c49d3bd71db4d2ad7985432be3524452fc68da572984275d02538",
+      "bytes": 10265
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000162.json": {
+      "sha256": "157241277ac220332b4235f62a24ec1b3e30d80c1a7144d8a39a845feac999fd",
+      "bytes": 6746
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000031.json": {
+      "sha256": "37d5662bd0d353dfce6228063ac38386f679c6fb4da7025c8228833ae421ec8e",
+      "bytes": 9238
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000174.json": {
+      "sha256": "9eca7ff377e03555c88cc93253e9b568ba30704dcbd254f1f376f9a3ba283b77",
+      "bytes": 8577
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000066.json": {
+      "sha256": "ba9caaffe561ec132ee7fd7aee50f63dcfa96ff07520cdaac3a9c36f1d1ca9fc",
+      "bytes": 8841
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000123.json": {
+      "sha256": "182914b99097f8412dc8121a26edb305dcce934824f539bf542c1ae00b1f5dba",
+      "bytes": 6462
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000089.json": {
+      "sha256": "49197eaa441ae6579f4d828a7c7db95f875d916a488dd3c6674349b367112c2a",
+      "bytes": 9832
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000158.json": {
+      "sha256": "693faa068b3c249a1c3cf4aa540d223e60040232af25a62c0cf3afa178a18cf6",
+      "bytes": 10562
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000119.json": {
+      "sha256": "41b20e25ed0b09f307c9b575f4737e8eb1a91c3d3f5ebd065d18b71d9aa10ee5",
+      "bytes": 8296
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000136.json": {
+      "sha256": "e864317497504476db10b0df52f5eeab1a40aba4e7d5843ff83069e8227ec0a1",
+      "bytes": 6760
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000073.json": {
+      "sha256": "a39fcbd02c6ca162ef644b3cc81e1d140d70d5770ac2a54e3a8525e56e2bf18f",
+      "bytes": 9679
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000161.json": {
+      "sha256": "0b00a4b518929b20ab3ae149f853dbad5b14c4306495d646a8543e44f83b8124",
+      "bytes": 6213
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000024.json": {
+      "sha256": "a9cfe437c9fa79377a32fbefd542e66298cbc882cdf36ef01092e0768f714305",
+      "bytes": 9364
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000177.json": {
+      "sha256": "e18a110eca9194968a28700a4c94d038ee4d3ad1047120abd137024b1366a78f",
+      "bytes": 8688
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000032.json": {
+      "sha256": "8eb9735d36c9fe437c4090f1ee416b9ce1f65730eeb9c7eba5a83007e95e6177",
+      "bytes": 6675
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000120.json": {
+      "sha256": "ae63aa98534cbf22698a8253cd104a6971115575cd03d95a7b6e9e7794fcbcff",
+      "bytes": 7240
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000065.json": {
+      "sha256": "1cf9fd189dfa7ca2da3f6b3f6fad4976cd0ca89623534ecadb15774717c631d8",
+      "bytes": 8246
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000049.json": {
+      "sha256": "6c9b611950b11acee593fdebb0171b3e957b4af200046663483192ea795c8723",
+      "bytes": 8775
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000008.json": {
+      "sha256": "6ed8b1cda324057dafcdd50f757efe15cd8198ef79a8dacc0ddf29aa937daa22",
+      "bytes": 7738
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000090.json": {
+      "sha256": "bdf01d14324d68953c604e650f6bb5fd3526fe470e9d9488fd1ca15d51d82ccf",
+      "bytes": 6684
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000182.json": {
+      "sha256": "7dfc8d71a16cce72b6875e2e73028608125e2650813f790d2e9e124baeab88e0",
+      "bytes": 6564
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000028.json": {
+      "sha256": "012208da3a74ea877650028aef51a4439cb61feb2698d086b10b7b0cdec85e13",
+      "bytes": 6821
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000086.json": {
+      "sha256": "dbf59381d60247f1ca6262530bce4b6d68ce3032d50170f79da3fb96a68ea9df",
+      "bytes": 10773
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000069.json": {
+      "sha256": "42694f3589210422f90b832a177a1625a78cc55bfa7d33980d2312b110cb2038",
+      "bytes": 9188
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000012.json": {
+      "sha256": "18007a01f31de6d8b2e9564820c2de8c0ed2000cdf6f4006cd92dec67b5cf0ca",
+      "bytes": 10188
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000157.json": {
+      "sha256": "afe45fb5fde02d2ec8ee094403fbe347bd9969db22d75aa62ce6a018e2543a30",
+      "bytes": 6273
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000045.json": {
+      "sha256": "e9b086b2ebd6fe862e9d6362a13df7a342af603136c967eaf666f6377e8404d9",
+      "bytes": 6530
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000100.json": {
+      "sha256": "46cdc840487c39499325fe7a964d2f6e74441c538640411b48e35921c01d686c",
+      "bytes": 10241
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000053.json": {
+      "sha256": "4c61b7ee2b298d5c8890c3c33301686e195495cf59303754af2a9fec2e4fc793",
+      "bytes": 6420
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000116.json": {
+      "sha256": "930560dba16e9c2c920c1e2e7febb2518618fa91a0b184089bfc9a43facb2f50",
+      "bytes": 8891
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000004.json": {
+      "sha256": "6f8ec2fbb468e0893b2e272a6062ba757f2383e94aaf29bed1495fd7b1bdc7d8",
+      "bytes": 6836
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000141.json": {
+      "sha256": "f1c6bc044dc4cce7be59ee2148cd3bc7664bea1b2575bc2df8ddb0b680a39edf",
+      "bytes": 8692
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000005.json": {
+      "sha256": "ef46fb16754f339b1d948aa556c639fdf8f9ec4c55ffc70479c0ae7f1c7c3cf1",
+      "bytes": 10215
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000140.json": {
+      "sha256": "48b5c78474ef4c3b53ee0a67b24d4bc8b539fea7d41f3b74dc76ca874168280b",
+      "bytes": 9612
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000052.json": {
+      "sha256": "2c802d1324550a60b04cf4f5b8264f20f92e3c4ebcd0a5a6e91f7bc8a3cfea51",
+      "bytes": 6404
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000117.json": {
+      "sha256": "a684d42330092b0708aed41a153f9459acabf6e7179cabf697b26507bbbd2448",
+      "bytes": 10258
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000044.json": {
+      "sha256": "2dc807f47e11d13aa31c6383e5e459d089c4097d0fcbff52330932a263167189",
+      "bytes": 9396
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000101.json": {
+      "sha256": "59bef6e93f5cc5b5d3470847061877c7d4c57a4bd853450e0face60649a6f37b",
+      "bytes": 6690
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000013.json": {
+      "sha256": "62b9d405bbc01d89596be4260387896010aa3c2a99dd40068ef82b96d4d0f3f8",
+      "bytes": 8999
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000156.json": {
+      "sha256": "bc0d972401cee10f4a514d16a1c0b734edf8a9beb29110503de06cc074625854",
+      "bytes": 9473
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000087.json": {
+      "sha256": "d293c221eb0942511aedfd87b04566332b1fc2d7e2b9f6bd583176f62bec818c",
+      "bytes": 10096
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000068.json": {
+      "sha256": "cf1b4652e83546f679976ea12d1cf64871ad969c5c199016c56f021a1fd53429",
+      "bytes": 7369
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000183.json": {
+      "sha256": "a68fb7964550ea9ba175957445e87d58781cbf4c9473ac1ce31b87a979726f7f",
+      "bytes": 9949
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000029.json": {
+      "sha256": "d009a82331c9df7aa7ef450ac4e744b3816fc9b860a1413690fb4c83b75fb669",
+      "bytes": 8698
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000091.json": {
+      "sha256": "13d66d2edc08bfc18d968e8d5e6fcd987d111f1c65935cb56b34f4b5101027d5",
+      "bytes": 7496
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000009.json": {
+      "sha256": "18be3e87bc31ca5da731d86035cb92f1293cb0e8b1fd47ecd361f2bcf9235a7e",
+      "bytes": 6987
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000048.json": {
+      "sha256": "6c7f1688ac9394862de2034c91168b8d9d8f9e07a4c03ac07f4c0b7a45a93d49",
+      "bytes": 9230
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000121.json": {
+      "sha256": "d305a5b223ddd7df7c7c8080d4995102cb45c81762a095d5d3d0b5a58f0871b5",
+      "bytes": 7883
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000064.json": {
+      "sha256": "3fb485ff6f5cc303733510307de8e69fa9725d323d6a65176bf8785b393beeff",
+      "bytes": 9216
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000176.json": {
+      "sha256": "c5f1b563ba6ef17a94eebaccbb6f8acd0cea13d4178bc2c5f4d845a2e26c5a4e",
+      "bytes": 6999
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000033.json": {
+      "sha256": "dd08696ca1867accc87e4590ae6a81ec36a19a6d7a63d25e27e5112174f45baf",
+      "bytes": 6814
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000160.json": {
+      "sha256": "8f772cd80b8264adf75f96b6006f7dbac5420530b2b37f464f3e9611f30a2d23",
+      "bytes": 7088
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000025.json": {
+      "sha256": "46953d28482dfc0a7a5a0630f322ace27ca64b78b06454ad7e54d3e3c6ba2c01",
+      "bytes": 9185
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000137.json": {
+      "sha256": "c4dbbc016feabd467f97eaf29af5e3f1bb4660625ba34382578e18bb4f4ab17b",
+      "bytes": 8648
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000072.json": {
+      "sha256": "ed45c98256396c878b2b85c763caa61e57d581e4cf87d7df4c4f67d0a4d955a9",
+      "bytes": 6529
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000096.json": {
+      "sha256": "62945ea31356ca694f88e202ec2fe7550d38d794a66fcabf083c5b8ae0bf3c0a",
+      "bytes": 8872
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000079.json": {
+      "sha256": "1bf0891985a58d0d2e5f76de20947a41124d54e8f4152c48d3477c739c345309",
+      "bytes": 9777
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000184.json": {
+      "sha256": "6ab55ae42d7f37b1ca5e8729d58f7204d45feebd0a5e202413053b2d07157bd5",
+      "bytes": 9197
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000038.json": {
+      "sha256": "b55766e27f6415a108191fd743d8bcc9f15c332aa1b08aeb204ca9f547b4029c",
+      "bytes": 9684
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000192.json": {
+      "sha256": "7804e1f27e55333853ed9e72174a1f20f13b4f402d7644450edc412aa4837547",
+      "bytes": 6392
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000080.json": {
+      "sha256": "fc40a69f9cd9d586a8ff2242b44956d7109aa8aeddb2e1f44751dc6e18f3286d",
+      "bytes": 7086
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000014.json": {
+      "sha256": "4160290f68c6aaa363c45ada220733b4b283ce82a5c1d96ab64ec37ffd90b691",
+      "bytes": 8667
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000151.json": {
+      "sha256": "ef9c87f4f18083bc563559c322c5ac9792c062215a2f6d5c90fe1b4c0467b1be",
+      "bytes": 7161
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000043.json": {
+      "sha256": "deddbf3afc4f1815d859f901c72dcaa2fa7cf1c1f5805a7ad4b4cb777fdbc6e2",
+      "bytes": 5975
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000106.json": {
+      "sha256": "b5f872adabd9858fb2d03ccd718ca494e513d5cf373c3406a70c0136a8317b84",
+      "bytes": 7508
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000055.json": {
+      "sha256": "52a9ca70e9682f1e451d0ea07a265a1181e3dc713b2ad80ab14b998fa721e01a",
+      "bytes": 9517
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000110.json": {
+      "sha256": "283fd40fbe1c085d86e24f3804b5e5879d949f8556d115e42a5c1bbf798e81c5",
+      "bytes": 7238
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000002.json": {
+      "sha256": "7d9af7121aaf0b2a15a50770de652297744c72b647c741bfb75a2bceb993f5e1",
+      "bytes": 11012
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000147.json": {
+      "sha256": "d2f5102e77d91e4f5d835321f7fd205c716aec485eb74f06acaf9d4b34982d77",
+      "bytes": 9251
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000130.json": {
+      "sha256": "7bcb46b75cd70bb193b2156efc870283a22c42bf45485352764f90896c9508b2",
+      "bytes": 7562
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000075.json": {
+      "sha256": "ea31f61de6badc26356c6ba490d0cd5e832f28d60fd3f375da3e7a3bbc75f71a",
+      "bytes": 6643
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000167.json": {
+      "sha256": "bd7c4c36cca35dd771662e2c3f99c602f6dd8c92f0904736fae887a75443d9c3",
+      "bytes": 6751
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000022.json": {
+      "sha256": "941b742414d76db84b75aa4ff51b872330fbb0cb559e71131849946a7ba08690",
+      "bytes": 8044
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000188.json": {
+      "sha256": "6cb1a9d0399eb86be3f46073eaaba1e822a7ebd7c67359dc5e597ffaa315399b",
+      "bytes": 9253
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000171.json": {
+      "sha256": "a8667b205a899d585949e2a79cbf75736ffd58068302576f3f3cdea36bf96c3d",
+      "bytes": 9140
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000034.json": {
+      "sha256": "ef2f46a031780072aa92efe71607364c2e56b3b0f003c42d374ffd6eb04950e7",
+      "bytes": 9589
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000126.json": {
+      "sha256": "7778dbd25f7ecaaebbb7f78dabe08415a63f20ea0b139d19c3f2fd40559b2138",
+      "bytes": 7304
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000063.json": {
+      "sha256": "86d25f2385c1222d312fa390b1b317873b58136df95b90f762f1ee612bd4ee4b",
+      "bytes": 6872
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000018.json": {
+      "sha256": "6b3960a8669ff0de4c357cd2d7f9b321124e11e315d77ef5f0da4e06e34be256",
+      "bytes": 7613
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000059.json": {
+      "sha256": "561db653513ce9f50a61607a239af6c22338e865c51130934c6cc14f7262f6d4",
+      "bytes": 7013
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000058.json": {
+      "sha256": "869c35a0f2c6c105501ce26e73e7e499aa14451d500a3504bfa282cf7a3fcabf",
+      "bytes": 9494
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000019.json": {
+      "sha256": "ee178f8176268d513b69fb098298c70f66f2a27dd8f93152c6d54ad0a9d7d791",
+      "bytes": 9144
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000127.json": {
+      "sha256": "138d112a6679cc499a90ba33f410d4e5828405b87b11661ff242517477921e7f",
+      "bytes": 6654
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000062.json": {
+      "sha256": "b9be0a2e39eca18d572cbd999186e91aad7602bf27cb5d1f38a018b5738f1fa3",
+      "bytes": 9751
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000170.json": {
+      "sha256": "461b426fcb30bdf8c4d6da6dd680b4929811bf492fbaebbca1ce29efb4e92ef0",
+      "bytes": 9010
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000035.json": {
+      "sha256": "d0a8fe56b68e0a4edc76d3c138e417ef19ad88c16599b6ad8c25f155b22f3eba",
+      "bytes": 8133
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000166.json": {
+      "sha256": "7a2fe0dd8374c7a2f1c97d769cb4ee284c35918b2b285dd81f85aa51ef36b277",
+      "bytes": 9849
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000023.json": {
+      "sha256": "6dc1626e4fbf2b9297527f4b0b14861069c0469c2bd51de4d4bb7e73580ccc2d",
+      "bytes": 6604
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000189.json": {
+      "sha256": "93772d650e31617165a35df126401f43ff8b98ebcec68f64fcbd687cea865321",
+      "bytes": 9413
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000131.json": {
+      "sha256": "a02c598cecd4056bcd9f97b6fbe8ae8e7c6f5b614f9b7ffc874a440e813c8ff1",
+      "bytes": 6771
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000074.json": {
+      "sha256": "0dcefe29a62e253a7908af995ed21400ed392b941ab21bd3598142d12875d5f0",
+      "bytes": 9348
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000003.json": {
+      "sha256": "24a3e88971133a258436f4f0c59f42f8c08f0cba8e4d87a994fc7a423bfd668f",
+      "bytes": 9554
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000146.json": {
+      "sha256": "e5971a62c769218fa280c30765ca8a37122e8cf7d0e647adb0df15fa8b350824",
+      "bytes": 6805
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000054.json": {
+      "sha256": "824175b5e9d08943cb5749185127985c9e7726fdf2d5e1a8c4b8dd6791026e0f",
+      "bytes": 6043
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000111.json": {
+      "sha256": "b96912a651a3e76c634e0114f0e4737c66596a631454d3b441a6bd7d25d778fd",
+      "bytes": 10345
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000042.json": {
+      "sha256": "8b50d85f33845a73b6c3a9405a71803407795671991e33643fc4fcc19003a8ea",
+      "bytes": 8897
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000107.json": {
+      "sha256": "ac26c6e34af217f488e183eea59738b6181b8c1d0de9d53b6a86345b8d80d7a2",
+      "bytes": 9307
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000015.json": {
+      "sha256": "c065ed51efc02d13a134159d010c99da21687aa7f35fa8688e6706839a2ae567",
+      "bytes": 6823
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000150.json": {
+      "sha256": "2253a8e34561cbd0d58c9028c198a46f060ca6df56ef9bd0b7292ba6c3ec550d",
+      "bytes": 9044
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000081.json": {
+      "sha256": "12c04b38e5427280156fb70ff83d2581cfe4b9ccdedfad62b12bb0f9d2be7e56",
+      "bytes": 7777
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000039.json": {
+      "sha256": "7741a57c1311b26caf1e91802ec56c3cbd5c7f3218497605386d66d154341381",
+      "bytes": 6626
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000185.json": {
+      "sha256": "2b8dcfdfcf1a184e5d14d93f547fffa1a1e10a5ce73fb0f38ef5db605de3e930",
+      "bytes": 6315
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000097.json": {
+      "sha256": "b97d028e32d5feee16262aea39351b3416429ad61ce78e411fd41e1ccfcd71d5",
+      "bytes": 6196
+    },
+    "runs/instruction-interface-gpt4o-001/attempts/000078.json": {
+      "sha256": "9279430b138a7f53eba897f5d6bc4b3cfdc7cfe729a3869bf9192bdf82157bab",
+      "bytes": 9410
+    },
+    "runs/instruction-interface-gpt4o-001/manual_review_template.csv": {
+      "sha256": "c3e76b1e814c500e1a6e9e951936c421c2a7b63c30dc9a23473e28ecdb27331a",
+      "bytes": 9381
+    },
+    "runs/instruction-interface-gpt4o-001/preview.json": {
+      "sha256": "7bc3b59526e76a7a5b34aaf51b4bb67f87040c704f071fabdfb6cb803a61e519",
+      "bytes": 576891
+    },
+    "runs/instruction-interface-gpt4o-001/execution.json": {
+      "sha256": "9e1c039e58850e31a1c06391f9a2ec42d447ae82b630ec6a08f37a3be2b78c6f",
+      "bytes": 306
+    }
+  }
+}

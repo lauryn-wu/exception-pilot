@@ -1,0 +1,10 @@
+{
+  "coder_version": "record-evidence-lexical-v2",
+  "coder_source_digest": "fc8ec798fe4b14e4d590f4c4d1a60c1444f38f87cfdbe8eb4a61d5f89ce79ccf",
+  "plan_hash": "1ccb4fb80bdad19da0d6fff3e5e27ccf3d391394451d6ce56e8026c82c82e4e5",
+  "records_digest": "188def9b53d890f7d913fdb6085dc317ac24548fbb0a0eaa89a6cfddc652062b",
+  "scorable_visible_responses": 24,
+  "legacy_record_flag_disagreements": 7,
+  "sample_seed": 981723,
+  "sample_requested": 20
+}

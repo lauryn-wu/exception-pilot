@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="480" viewBox="0 0 960 480" role="img" aria-labelledby="curve-title curve-desc">
+<title id="curve-title">Accuracy by target row and response instruction</title>
+<desc id="curve-desc">LIVE. row 1 direct: 48 correct, 48 valid, 48 planned; row 1 visible: 45 correct, 48 valid, 48 planned; row 2 direct: 48 correct, 48 valid, 48 planned; row 2 visible: 40 correct, 48 valid, 48 planned; row 3 direct: 48 correct, 48 valid, 48 planned; row 3 visible: 30 correct, 48 valid, 48 planned; row 4 direct: 48 correct, 48 valid, 48 planned; row 4 visible: 41 correct, 48 valid, 48 planned; row 5 direct: 48 correct, 48 valid, 48 planned; row 5 visible: 41 correct, 48 valid, 48 planned; row 6 direct: 48 correct, 48 valid, 48 planned; row 6 visible: 42 correct, 48 valid, 48 planned; row 7 direct: 48 correct, 48 valid, 48 planned; row 7 visible: 28 correct, 48 valid, 48 planned; row 8 direct: 48 correct, 48 valid, 48 planned; row 8 visible: 37 correct, 48 valid, 48 planned; row 9 direct: 48 correct, 48 valid, 48 planned; row 9 visible: 21 correct, 48 valid, 48 planned; row 10 direct: 48 correct, 48 valid, 48 planned; row 10 visible: 22 correct, 48 valid, 48 planned</desc>
+<rect width="960" height="480" fill="#ffffff"/>
+<g font-family="Arial, sans-serif" fill="#17212b">
+<text x="82" y="29" font-size="21" font-weight="bold">Accuracy by target row</text>
+<text x="82" y="51" font-size="12">LIVE · mistral-small-2603</text>
+<line x1="82" y1="73" x2="108" y2="73" stroke="#2463a3" stroke-width="3"/>
+<text x="116" y="77" font-size="13">Direct answer</text>
+<line x1="252" y1="73" x2="278" y2="73" stroke="#c45b19" stroke-width="3"/>
+<text x="286" y="77" font-size="13">Visible reasoning</text>
+<line x1="82" y1="358.00" x2="900" y2="358.00" stroke="#e5e9ed"/>
+<text x="70" y="362.00" text-anchor="end" font-size="12">0%</text>
+<line x1="82" y1="293.50" x2="900" y2="293.50" stroke="#e5e9ed"/>
+<text x="70" y="297.50" text-anchor="end" font-size="12">25%</text>
+<line x1="82" y1="229.00" x2="900" y2="229.00" stroke="#e5e9ed"/>
+<text x="70" y="233.00" text-anchor="end" font-size="12">50%</text>
+<line x1="82" y1="164.50" x2="900" y2="164.50" stroke="#e5e9ed"/>
+<text x="70" y="168.50" text-anchor="end" font-size="12">75%</text>
+<line x1="82" y1="100.00" x2="900" y2="100.00" stroke="#e5e9ed"/>
+<text x="70" y="104.00" text-anchor="end" font-size="12">100%</text>
+<line x1="82.00" y1="358" x2="82.00" y2="363" stroke="#88939d"/>
+<text x="82.00" y="380" text-anchor="middle" font-size="12">1</text>
+<line x1="172.89" y1="358" x2="172.89" y2="363" stroke="#88939d"/>
+<text x="172.89" y="380" text-anchor="middle" font-size="12">2</text>
+<line x1="263.78" y1="358" x2="263.78" y2="363" stroke="#88939d"/>
+<text x="263.78" y="380" text-anchor="middle" font-size="12">3</text>
+<line x1="354.67" y1="358" x2="354.67" y2="363" stroke="#88939d"/>
+<text x="354.67" y="380" text-anchor="middle" font-size="12">4</text>
+<line x1="445.56" y1="358" x2="445.56" y2="363" stroke="#88939d"/>
+<text x="445.56" y="380" text-anchor="middle" font-size="12">5</text>
+<line x1="536.44" y1="358" x2="536.44" y2="363" stroke="#88939d"/>
+<text x="536.44" y="380" text-anchor="middle" font-size="12">6</text>
+<line x1="627.33" y1="358" x2="627.33" y2="363" stroke="#88939d"/>
+<text x="627.33" y="380" text-anchor="middle" font-size="12">7</text>
+<line x1="718.22" y1="358" x2="718.22" y2="363" stroke="#88939d"/>
+<text x="718.22" y="380" text-anchor="middle" font-size="12">8</text>
+<line x1="809.11" y1="358" x2="809.11" y2="363" stroke="#88939d"/>
+<text x="809.11" y="380" text-anchor="middle" font-size="12">9</text>
+<line x1="900.00" y1="358" x2="900.00" y2="363" stroke="#88939d"/>
+<text x="900.00" y="380" text-anchor="middle" font-size="12">10</text>
+<text x="491" y="403" text-anchor="middle" font-size="13">Target row in the 10-record table</text>
+<text x="19" y="230" transform="rotate(-90 19 230)" text-anchor="middle" font-size="13">Correct / valid responses</text>
+<polyline points="82.00,100.00 172.89,100.00 263.78,100.00 354.67,100.00 445.56,100.00 536.44,100.00 627.33,100.00 718.22,100.00 809.11,100.00 900.00,100.00" fill="none" stroke="#2463a3" stroke-width="2.5"/>
+<circle cx="82.00" cy="100.00" r="4" fill="#2463a3" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 1, direct: 48/48 correct; 48 planned</title></circle>
+<circle cx="172.89" cy="100.00" r="4" fill="#2463a3" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 2, direct: 48/48 correct; 48 planned</title></circle>
+<circle cx="263.78" cy="100.00" r="4" fill="#2463a3" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 3, direct: 48/48 correct; 48 planned</title></circle>
+<circle cx="354.67" cy="100.00" r="4" fill="#2463a3" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 4, direct: 48/48 correct; 48 planned</title></circle>
+<circle cx="445.56" cy="100.00" r="4" fill="#2463a3" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 5, direct: 48/48 correct; 48 planned</title></circle>
+<circle cx="536.44" cy="100.00" r="4" fill="#2463a3" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 6, direct: 48/48 correct; 48 planned</title></circle>
+<circle cx="627.33" cy="100.00" r="4" fill="#2463a3" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 7, direct: 48/48 correct; 48 planned</title></circle>
+<circle cx="718.22" cy="100.00" r="4" fill="#2463a3" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 8, direct: 48/48 correct; 48 planned</title></circle>
+<circle cx="809.11" cy="100.00" r="4" fill="#2463a3" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 9, direct: 48/48 correct; 48 planned</title></circle>
+<circle cx="900.00" cy="100.00" r="4" fill="#2463a3" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 10, direct: 48/48 correct; 48 planned</title></circle>
+<polyline points="82.00,116.12 172.89,143.00 263.78,196.75 354.67,137.62 445.56,137.62 536.44,132.25 627.33,207.50 718.22,159.12 809.11,245.12 900.00,239.75" fill="none" stroke="#c45b19" stroke-width="2.5"/>
+<circle cx="82.00" cy="116.12" r="4" fill="#c45b19" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 1, visible: 45/48 correct; 48 planned</title></circle>
+<circle cx="172.89" cy="143.00" r="4" fill="#c45b19" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 2, visible: 40/48 correct; 48 planned</title></circle>
+<circle cx="263.78" cy="196.75" r="4" fill="#c45b19" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 3, visible: 30/48 correct; 48 planned</title></circle>
+<circle cx="354.67" cy="137.62" r="4" fill="#c45b19" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 4, visible: 41/48 correct; 48 planned</title></circle>
+<circle cx="445.56" cy="137.62" r="4" fill="#c45b19" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 5, visible: 41/48 correct; 48 planned</title></circle>
+<circle cx="536.44" cy="132.25" r="4" fill="#c45b19" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 6, visible: 42/48 correct; 48 planned</title></circle>
+<circle cx="627.33" cy="207.50" r="4" fill="#c45b19" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 7, visible: 28/48 correct; 48 planned</title></circle>
+<circle cx="718.22" cy="159.12" r="4" fill="#c45b19" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 8, visible: 37/48 correct; 48 planned</title></circle>
+<circle cx="809.11" cy="245.12" r="4" fill="#c45b19" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 9, visible: 21/48 correct; 48 planned</title></circle>
+<circle cx="900.00" cy="239.75" r="4" fill="#c45b19" stroke="white" stroke-width="1" data-valid="48" data-planned="48"><title>Row 10, visible: 22/48 correct; 48 planned</title></circle>
+<text x="82" y="432" font-size="12">48 planned per row and arm. direct: 480 valid / 480 planned; visible: 480 valid / 480 planned</text>
+<text x="82" y="451" font-size="11" fill="#52606b">Invalid/unreturned answers excluded from plotted rates. Paired estimates, pointwise intervals and bounds: row_curve.csv.</text>
+<text x="82" y="468" font-size="11" fill="#52606b">Descriptive curve; lines connect observed rows. No row selection or multiple-comparison-adjusted claims.</text>
+</g></svg>

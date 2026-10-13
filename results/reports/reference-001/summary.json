@@ -1,0 +1,338 @@
+{
+  "protocol_version": "exception-pilot-v1",
+  "plan_hash": "3efb2c8436db30e84ab12a258d8be22bb19701d09f245609d3978c5da5986be9",
+  "model": "gpt-4o-2024-08-06",
+  "stage": 1,
+  "mode": "live",
+  "is_simulated": false,
+  "planned_calls": 1200,
+  "attempts": 1204,
+  "complete_answers": 1200,
+  "invalid_answers": 0,
+  "pending_tasks": 0,
+  "provider_errors": 4,
+  "unresolved_attempts": 0,
+  "complete": true,
+  "accuracy_tables": [
+    {
+      "condition": "direct",
+      "round": 1,
+      "background": null,
+      "is_exception": false,
+      "n_valid": 160,
+      "n_planned": 160,
+      "accuracy_valid_only": 0.8125
+    },
+    {
+      "condition": "cot",
+      "round": 1,
+      "background": null,
+      "is_exception": false,
+      "n_valid": 160,
+      "n_planned": 160,
+      "accuracy_valid_only": 0.54375
+    },
+    {
+      "condition": "direct",
+      "round": 1,
+      "background": null,
+      "is_exception": true,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 0.125
+    },
+    {
+      "condition": "cot",
+      "round": 1,
+      "background": null,
+      "is_exception": true,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 0.3
+    },
+    {
+      "condition": "direct",
+      "round": 2,
+      "background": null,
+      "is_exception": true,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    },
+    {
+      "condition": "cot",
+      "round": 2,
+      "background": null,
+      "is_exception": true,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 0.425
+    },
+    {
+      "condition": "direct",
+      "round": 2,
+      "background": null,
+      "is_exception": false,
+      "n_valid": 160,
+      "n_planned": 160,
+      "accuracy_valid_only": 1
+    },
+    {
+      "condition": "cot",
+      "round": 2,
+      "background": null,
+      "is_exception": false,
+      "n_valid": 160,
+      "n_planned": 160,
+      "accuracy_valid_only": 0.825
+    },
+    {
+      "condition": "cot",
+      "round": 3,
+      "background": null,
+      "is_exception": false,
+      "n_valid": 160,
+      "n_planned": 160,
+      "accuracy_valid_only": 0.93125
+    },
+    {
+      "condition": "direct",
+      "round": 3,
+      "background": null,
+      "is_exception": false,
+      "n_valid": 160,
+      "n_planned": 160,
+      "accuracy_valid_only": 1
+    },
+    {
+      "condition": "cot",
+      "round": 3,
+      "background": null,
+      "is_exception": true,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 0.825
+    },
+    {
+      "condition": "direct",
+      "round": 3,
+      "background": null,
+      "is_exception": true,
+      "n_valid": 40,
+      "n_planned": 40,
+      "accuracy_valid_only": 1
+    }
+  ],
+  "screen": {
+    "decision": "stop_this_screen",
+    "minimum_exception_gap": 0.15,
+    "maximum_regular_gap": 0.05
+  },
+  "usage": {
+    "prompt_tokens": 4419555,
+    "completion_tokens": 199651,
+    "total_tokens": 4619206
+  },
+  "paired_lists": 20,
+  "list_effects": [
+    {
+      "world_id": "s1-list-000",
+      "exception_direct": 1,
+      "exception_cot": 1,
+      "exception_gap": 0,
+      "regular_direct": 1,
+      "regular_cot": 0.8125,
+      "regular_gap": 0.1875
+    },
+    {
+      "world_id": "s1-list-001",
+      "exception_direct": 1,
+      "exception_cot": 0.75,
+      "exception_gap": 0.25,
+      "regular_direct": 1,
+      "regular_cot": 1,
+      "regular_gap": 0
+    },
+    {
+      "world_id": "s1-list-002",
+      "exception_direct": 1,
+      "exception_cot": 0.75,
+      "exception_gap": 0.25,
+      "regular_direct": 1,
+      "regular_cot": 1,
+      "regular_gap": 0
+    },
+    {
+      "world_id": "s1-list-003",
+      "exception_direct": 1,
+      "exception_cot": 0.75,
+      "exception_gap": 0.25,
+      "regular_direct": 1,
+      "regular_cot": 1,
+      "regular_gap": 0
+    },
+    {
+      "world_id": "s1-list-004",
+      "exception_direct": 1,
+      "exception_cot": 0.25,
+      "exception_gap": 0.75,
+      "regular_direct": 1,
+      "regular_cot": 1,
+      "regular_gap": 0
+    },
+    {
+      "world_id": "s1-list-005",
+      "exception_direct": 1,
+      "exception_cot": 0.5,
+      "exception_gap": 0.5,
+      "regular_direct": 1,
+      "regular_cot": 0.75,
+      "regular_gap": 0.25
+    },
+    {
+      "world_id": "s1-list-006",
+      "exception_direct": 1,
+      "exception_cot": 0.75,
+      "exception_gap": 0.25,
+      "regular_direct": 1,
+      "regular_cot": 0.9375,
+      "regular_gap": 0.0625
+    },
+    {
+      "world_id": "s1-list-007",
+      "exception_direct": 1,
+      "exception_cot": 0.75,
+      "exception_gap": 0.25,
+      "regular_direct": 1,
+      "regular_cot": 0.875,
+      "regular_gap": 0.125
+    },
+    {
+      "world_id": "s1-list-008",
+      "exception_direct": 1,
+      "exception_cot": 0.5,
+      "exception_gap": 0.5,
+      "regular_direct": 1,
+      "regular_cot": 0.875,
+      "regular_gap": 0.125
+    },
+    {
+      "world_id": "s1-list-009",
+      "exception_direct": 1,
+      "exception_cot": 0.75,
+      "exception_gap": 0.25,
+      "regular_direct": 1,
+      "regular_cot": 0.625,
+      "regular_gap": 0.375
+    },
+    {
+      "world_id": "s1-list-010",
+      "exception_direct": 1,
+      "exception_cot": 0,
+      "exception_gap": 1,
+      "regular_direct": 1,
+      "regular_cot": 0.875,
+      "regular_gap": 0.125
+    },
+    {
+      "world_id": "s1-list-011",
+      "exception_direct": 1,
+      "exception_cot": 0.75,
+      "exception_gap": 0.25,
+      "regular_direct": 1,
+      "regular_cot": 0.5,
+      "regular_gap": 0.5
+    },
+    {
+      "world_id": "s1-list-012",
+      "exception_direct": 1,
+      "exception_cot": 0.5,
+      "exception_gap": 0.5,
+      "regular_direct": 1,
+      "regular_cot": 1,
+      "regular_gap": 0
+    },
+    {
+      "world_id": "s1-list-013",
+      "exception_direct": 1,
+      "exception_cot": 0.75,
+      "exception_gap": 0.25,
+      "regular_direct": 1,
+      "regular_cot": 1,
+      "regular_gap": 0
+    },
+    {
+      "world_id": "s1-list-014",
+      "exception_direct": 1,
+      "exception_cot": 0.75,
+      "exception_gap": 0.25,
+      "regular_direct": 1,
+      "regular_cot": 1,
+      "regular_gap": 0
+    },
+    {
+      "world_id": "s1-list-015",
+      "exception_direct": 1,
+      "exception_cot": 0.5,
+      "exception_gap": 0.5,
+      "regular_direct": 1,
+      "regular_cot": 0.6875,
+      "regular_gap": 0.3125
+    },
+    {
+      "world_id": "s1-list-016",
+      "exception_direct": 1,
+      "exception_cot": 0,
+      "exception_gap": 1,
+      "regular_direct": 1,
+      "regular_cot": 0.875,
+      "regular_gap": 0.125
+    },
+    {
+      "world_id": "s1-list-017",
+      "exception_direct": 1,
+      "exception_cot": 1,
+      "exception_gap": 0,
+      "regular_direct": 1,
+      "regular_cot": 0.9375,
+      "regular_gap": 0.0625
+    },
+    {
+      "world_id": "s1-list-018",
+      "exception_direct": 1,
+      "exception_cot": 1,
+      "exception_gap": 0,
+      "regular_direct": 1,
+      "regular_cot": 1,
+      "regular_gap": 0
+    },
+    {
+      "world_id": "s1-list-019",
+      "exception_direct": 1,
+      "exception_cot": 0.5,
+      "exception_gap": 0.5,
+      "regular_direct": 1,
+      "regular_cot": 0.8125,
+      "regular_gap": 0.1875
+    }
+  ],
+  "exception": {
+    "direct_accuracy": 1,
+    "cot_accuracy": 0.625,
+    "direct_minus_cot": 0.375,
+    "paired_bootstrap_95_ci": [
+      0.2625,
+      0.5
+    ]
+  },
+  "regular": {
+    "direct_accuracy": 1,
+    "cot_accuracy": 0.878125,
+    "direct_minus_cot": 0.121875,
+    "paired_bootstrap_95_ci": [
+      0.0625,
+      0.1875
+    ]
+  },
+  "interpretation": "Exploratory screen only. The 15 pp / 5 pp gate is a budget decision, not a significance test. Bootstrap intervals are descriptive and the small pilot can miss modest effects. A stop decision does not establish absence of the phenomenon."
+}

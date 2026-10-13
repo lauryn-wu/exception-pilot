@@ -1,0 +1,1969 @@
+{
+  "archive": "results/archives/evidence-role-gpt4o-001-results.zip",
+  "members": {
+    "runs/evidence-role-gpt4o-001/summary.json": {
+      "sha256": "7d774a7bb3c533a18001cdeda59f6c6cdc253de7345288125c33101d80b8a7e7",
+      "bytes": 34221
+    },
+    "runs/evidence-role-gpt4o-001/run.lock": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "runs/evidence-role-gpt4o-001/answers.csv": {
+      "sha256": "ba41c6dab8769e65678f86c8bbc716ef88c032e3b32cc88909ed3b081a44dade",
+      "bytes": 116669
+    },
+    "runs/evidence-role-gpt4o-001/plan.json": {
+      "sha256": "937df7ea37ceb6206bf472840887a831b82785e93820869d4cbc343ca7a8d45a",
+      "bytes": 248415
+    },
+    "runs/evidence-role-gpt4o-001/summary.md": {
+      "sha256": "e212197b999950008ef7b1a6a7381eedebabe05a44b1d90fdd14171a7a42b633",
+      "bytes": 9060
+    },
+    "runs/evidence-role-gpt4o-001/rationale_key.csv": {
+      "sha256": "a68afa390e750a338f03baed46633c818c2836c06d176a172579aa73e6ed0dbb",
+      "bytes": 52639
+    },
+    "runs/evidence-role-gpt4o-001/preview.md": {
+      "sha256": "4c1441773c2d68ef28fd716c73fa8dbcc3319230044030f1a25fb7211f05b963",
+      "bytes": 95224
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000283.json": {
+      "sha256": "2228358dc2ad86a5e9a90ca04357482c59e9203cbd9cc1deb5a723bc3faa41d1",
+      "bytes": 9689
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000329.json": {
+      "sha256": "ab11be0ab71cea633895aa866570ed478452a32217e7b102048b80b6e9ca975d",
+      "bytes": 9233
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000145.json": {
+      "sha256": "5d85eaa6592a7a03b4ef3556940d62ed40ccaf4f68af97f4d957be338c10d90b",
+      "bytes": 10857
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000450.json": {
+      "sha256": "ceca7b49b4a7fe9afd314dc009d223d8f91e0d3801d322a088677a979915f41b",
+      "bytes": 8517
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000391.json": {
+      "sha256": "7404ce5b768498664d933e5beb67bf0c6b5055e928a18bcedfd608e39bb9fa6d",
+      "bytes": 10739
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000112.json": {
+      "sha256": "23efdbf4254a40807ded817ac1dc6649274db46040ab65ab00e5755b1a9ea78d",
+      "bytes": 9935
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000407.json": {
+      "sha256": "ae36bd7c7a5e4a8af02144382fced31392092892923af969b56998c21edd071a",
+      "bytes": 9593
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000057.json": {
+      "sha256": "4c44ed50c223ee40a374a05a111748f7ac214dc49c0cf176c8f630808a894a2b",
+      "bytes": 8671
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000368.json": {
+      "sha256": "9c06e37a2008e5c9961f6e9e24f678d150ff7789e55b57826f57804b02cf1a99",
+      "bytes": 9385
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000387.json": {
+      "sha256": "3d6cdbcb97f5af32988fa1ae1d365f6bf5b04b7c5ec5fc49f3c79ea134821f63",
+      "bytes": 10224
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000104.json": {
+      "sha256": "172698bf256e78aed5bfdabf24e93972657ab90665bbad618fa7f0b362283e7b",
+      "bytes": 10877
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000041.json": {
+      "sha256": "bdbb09e25523b976254ea8a60257b4fdb980c1c1f103c528924b9e9e0b02d3e6",
+      "bytes": 9665
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000411.json": {
+      "sha256": "e4c8ee0ba7bef8ac52298a410d5fe24e8b78537a48f61db9a75a1fc7390c01ce",
+      "bytes": 10120
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000295.json": {
+      "sha256": "5aee456b201bd295760df98503e972d36d74947f22c253ec75b3222aee3e536c",
+      "bytes": 9136
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000153.json": {
+      "sha256": "d88070a3421366eb9eda60d3897bc3aec034eae9da841ecd7b3b9dfd0ea983bb",
+      "bytes": 10952
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000446.json": {
+      "sha256": "06b723ad0450e3a754075c21861b752c18376a540317dbeef809fcad4a5c658a",
+      "bytes": 11052
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000016.json": {
+      "sha256": "0ebda22c9c2a0f4f483e27eb0b7d219523c2ee053989ee418a40fbd757a60a1a",
+      "bytes": 10739
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000201.json": {
+      "sha256": "f995ccf34d596f2e47414d1470197af607a6abc46e6e8e6ef465cc05a3b227c7",
+      "bytes": 10653
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000344.json": {
+      "sha256": "1bc1fc29463a12e0d413cae5e0abb1e4277649043ef733b382773d4543979d8d",
+      "bytes": 9501
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000082.json": {
+      "sha256": "1c144241c7a06989ae921d4b6e3f8dd0c502e68a53fdf49abaedaf75aee97fe1",
+      "bytes": 8766
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000128.json": {
+      "sha256": "ffb68fe4dcd146a686a2285495c3d3ad9b85e19696d96a099c1a66e723011ce3",
+      "bytes": 8912
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000256.json": {
+      "sha256": "93ab701bb3e8e62e5d6e57169d900c70f56f18d39b41fd442ba055fb84ec4e16",
+      "bytes": 9694
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000313.json": {
+      "sha256": "ac1f590cafc0b59eb381fdea37a398b76d769ef04e01a4b7e2c40982f24d6b1b",
+      "bytes": 8741
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000190.json": {
+      "sha256": "718b958f329582f023cfc6275901a0ba213846b290986988b1e494b960bc7453",
+      "bytes": 9857
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000240.json": {
+      "sha256": "11d16b8872022bfe8ff7f75c88731caf018e43912a2834b5a7e2ce12b68c41c4",
+      "bytes": 10075
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000305.json": {
+      "sha256": "96d9ce9b5d3cb7293c74b903ae315e77ee7bfcd9d854ab320f71852fc3e72819",
+      "bytes": 8573
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000186.json": {
+      "sha256": "4f5d27953fd2acd27a89a372dc87c006a30c16705aa6bb59b5fc212d2c0f5cb3",
+      "bytes": 10459
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000169.json": {
+      "sha256": "148d0c8f9edcc97366e9fe3f5933b3035cbe8e29cef9ee4da4ff4dc928bf92a5",
+      "bytes": 9260
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000217.json": {
+      "sha256": "c438db05d0c0862d3ce61c7acb0a023951ffec5edea8c24c26d88f36f5830cc8",
+      "bytes": 9928
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000352.json": {
+      "sha256": "949780628c9e8c52bae94ff7d8d8a42442e004f8e08323f1723ade452b15a475",
+      "bytes": 10770
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000094.json": {
+      "sha256": "b80aa7ef07a81cde5e24f0a330250f5dc5220ebffa180a9cf14ba9a058556fe0",
+      "bytes": 9185
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000149.json": {
+      "sha256": "80a85f0e83c3ed98d1e38414e10ef5eb380a637fb2bf2b02b3744404b23cd7e5",
+      "bytes": 9792
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000325.json": {
+      "sha256": "d3b7d3e8b455548692c97815c8026bea555bc6cba9e2aed96a0ca7b9ce69843f",
+      "bytes": 9421
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000260.json": {
+      "sha256": "4f0e64b80a5537e1d9e2c5137256232737c28cf7ed6685c71f220e9240e508b5",
+      "bytes": 11360
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000372.json": {
+      "sha256": "f2b63e4fc43494100d29c6bba4791dc1b821f0821606d3c28a278ef780314123",
+      "bytes": 10160
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000237.json": {
+      "sha256": "3200dd429f8569d4c14694435c02724ab3d301cf17ff879775a3da0475820e7d",
+      "bytes": 9829
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000108.json": {
+      "sha256": "c55441f0ef743cecc15bddca8753108c988d2cf49caa55c07cda2b31d7e86148",
+      "bytes": 10202
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000364.json": {
+      "sha256": "d74ddca5d64a73c6a739836046e4e15c0d0b74426af93cc8d756d3f01404a6b7",
+      "bytes": 10843
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000221.json": {
+      "sha256": "5286ba4508de2ff490cc5c92cfae569112267fcb4c20096e3e9c0ce2b941d304",
+      "bytes": 9607
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000299.json": {
+      "sha256": "b1588cf19a3aba9418ff1339293c33cb9a22b36fef291dc38cc7587f4b29f611",
+      "bytes": 9590
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000333.json": {
+      "sha256": "b1c7de07298c88442cffd3ee13d8648cdae0a9c7ec60251a6a788b6fb88aef2c",
+      "bytes": 9299
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000276.json": {
+      "sha256": "e7ca4ec6da85a6b5d858856abdb594e5ea8bf7291261d85e749669b4eb68f202",
+      "bytes": 9847
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000061.json": {
+      "sha256": "5cb4cdb3208cf003c774f547c35d9fe9c5fde9be98521a56ae9092c14525421e",
+      "bytes": 9393
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000431.json": {
+      "sha256": "281f738e1f1c8e1189a6166ce9e62f081aa37d30001f665baeb0c61336103221",
+      "bytes": 9352
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000124.json": {
+      "sha256": "140d4215f623c682a1ae125edc9281fbedbb204913a99f0095f80f6cd0ebdae2",
+      "bytes": 8423
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000348.json": {
+      "sha256": "f0506424b17d63b728ef0a019c78b47e81cdb51a1fa60994e111de7889aca86e",
+      "bytes": 9222
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000466.json": {
+      "sha256": "d247b688fe01658ec8dfbf5b8cd0194a81753554b3368f40c8bafaf397745e89",
+      "bytes": 9577
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000036.json": {
+      "sha256": "835da814ca5e5996f87a550e8c40368a973cd52865c719a110aca35a207ef778",
+      "bytes": 10037
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000173.json": {
+      "sha256": "10b527b2060c01bae7527088e41e7531e4aa62813f810f2ac19157fb357fd7d4",
+      "bytes": 10258
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000020.json": {
+      "sha256": "03f08870cd5fe56e1dc876e02320cc56800ee8e49337b4391794cd18e29d7320",
+      "bytes": 9383
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000470.json": {
+      "sha256": "651dc78c818f775e996bffb34fd8f2fb4329b667e619eaaaebc97cc256fa5f07",
+      "bytes": 9960
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000165.json": {
+      "sha256": "49fe5da8dfc3636f71c1ca826ee4df31f61919a1a808a616d38351cdafee61df",
+      "bytes": 9137
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000309.json": {
+      "sha256": "7dcea09651691879154d6379892a871ce37931fac3e07da34eac5352a47eaa34",
+      "bytes": 9179
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000427.json": {
+      "sha256": "9ccb747dda8c1462cc914f24333edc2a740a849e04b74029feb30b932bf6ede4",
+      "bytes": 8785
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000077.json": {
+      "sha256": "9d04365d049c75574a86d97cfc616c54916ac2bb3583943cb817b63e3beb03db",
+      "bytes": 9033
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000098.json": {
+      "sha256": "2d47a99734306920742f8dff11c975186e3b1c05db836ab4408cce379ab57159",
+      "bytes": 9315
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000132.json": {
+      "sha256": "720de25bcdee7f4c49250bc98fdedb00dce06d07e12640bcc2afd09fb121b34b",
+      "bytes": 9456
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000426.json": {
+      "sha256": "9d177d54ace80fd24b7001539d04db1e76a2bf0bfb6a389715a08b43c13cbd18",
+      "bytes": 9829
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000076.json": {
+      "sha256": "d7d864b21a727d84b63dd1b5a6204ce83f249d352ac3cb2e7b261d243375b656",
+      "bytes": 9117
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000099.json": {
+      "sha256": "e83655b1b572704cd4f45008a34e0fae886ece844e27822dc7fd93c2843a3642",
+      "bytes": 9053
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000133.json": {
+      "sha256": "4ceae3ffdaf2fc6962d6ee53e82d9996a6c5c77046f9758b9c5ed962ed4017cb",
+      "bytes": 10212
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000308.json": {
+      "sha256": "67c1f2a4d345c238263a537bf4c028c7e9cb16d7e3c27e8f4f2ae8435374c2ba",
+      "bytes": 9439
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000021.json": {
+      "sha256": "d6a896e7973d29dd1478db12d629913600e2225c9cd3cf3084623a2a1f7d631b",
+      "bytes": 8993
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000471.json": {
+      "sha256": "98ff160e741b084b851879fa6790c26e3544ef8de33744033bb2bfe946584e7b",
+      "bytes": 9244
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000164.json": {
+      "sha256": "1b986700e720daf61596df9de09e341baa5921a58c8c4f6630f7e16d915dcff5",
+      "bytes": 9328
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000467.json": {
+      "sha256": "81cf67606ad43106674af542c36439cd60d9a8359e29ff68960438358fc91e80",
+      "bytes": 10574
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000037.json": {
+      "sha256": "8ed3d0622077617ebe8c3369a730a62752135af9642ace5ec35d68af363a0637",
+      "bytes": 9446
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000172.json": {
+      "sha256": "07d5e5737f7f64a3a958582ee4634dc65c65db40d1a187f37d8f3fe32ddbd3f9",
+      "bytes": 9547
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000349.json": {
+      "sha256": "c0aa3d01af853d496478225c58a6cf0368f9e6b2f7000e4a9808133ac92aacd3",
+      "bytes": 8870
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000060.json": {
+      "sha256": "3d2e633a73f6b8e359851882d6b2bba73c9a7fee6967974437addd0c234da99f",
+      "bytes": 10602
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000430.json": {
+      "sha256": "3fd4bb1e93eb1fb882fb521b6c8865b4ed0047cc6cf84961e7ec7f870eba79fc",
+      "bytes": 8659
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000125.json": {
+      "sha256": "fa93c39b4ea57c6e14f0f3f6f117ebc4b3ed0e2d287b8a93aa13f56bcb8b71ff",
+      "bytes": 10198
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000298.json": {
+      "sha256": "b204cb7dc6a3d9337c7a267a98daf885721d7ba012c3a7cb8b0abf725cc6b6a7",
+      "bytes": 10300
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000332.json": {
+      "sha256": "b16065b266d78ba4ae08de1393f9dc0f4a197cb6257b583f178cda040e49ee87",
+      "bytes": 8656
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000277.json": {
+      "sha256": "6a1e9d9a0409781384f48b5801cc688e13fec0c09fb781d884211311ae3995d5",
+      "bytes": 8919
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000365.json": {
+      "sha256": "e9c9effb42d0bdf4fe11f19c56362207490086537b375d26f90b00c748d084a4",
+      "bytes": 8602
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000220.json": {
+      "sha256": "ecb2aa7ab8b3df116cadb6e1f17158faf82238f79fef047f0b696e99f329f3ab",
+      "bytes": 8976
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000109.json": {
+      "sha256": "12cbe2412f923fcd54df0ca67c1e44d3283bf745608d788736d0be55a0e13d1a",
+      "bytes": 9406
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000373.json": {
+      "sha256": "581ea499be4343b999e20a9a0217ad9b7e414c5450999d0659ec4fbe8ed803ba",
+      "bytes": 9044
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000236.json": {
+      "sha256": "cf377233215b7f624fb95cdf379edb3fcb19fc6cf6d6e8b4ed205dc1e87d3700",
+      "bytes": 8998
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000324.json": {
+      "sha256": "5da299870dcf638ae942c923172a6d33e5befe87447eae982bbe72934afd234d",
+      "bytes": 9633
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000261.json": {
+      "sha256": "779030b0930afb7c9b410d089cec30ca2e29edea7a9dc0b09a5545c6bb7ef8bd",
+      "bytes": 10513
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000148.json": {
+      "sha256": "724b348608dcf728bf47c57839bcd28c3993467dd565f67061909075888b5cc2",
+      "bytes": 10553
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000095.json": {
+      "sha256": "0f6d9788837b059c70752339bc44ae7acd589e5b09e59787ee123ccc409b7efa",
+      "bytes": 8886
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000216.json": {
+      "sha256": "9a2a899de024580904ec4f31ab3cf995598e8375760eff190badcf5bdb775928",
+      "bytes": 10099
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000353.json": {
+      "sha256": "088f080e4b20d1880005ee496b4dc05aedddf82d2872e1e218d751317310e932",
+      "bytes": 9422
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000187.json": {
+      "sha256": "d885545d44879dc0b20091d51f85931771d8a70067e887665e1a0af14b197381",
+      "bytes": 10077
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000168.json": {
+      "sha256": "802a45c4d856e8e73059b5996e8afebda1a5a01e229c7a409cdacd1e57a0d957",
+      "bytes": 9365
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000241.json": {
+      "sha256": "a99e446db5f221fe348244eb3fff915d161ea8b8cb24606214799723784da8e6",
+      "bytes": 10251
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000304.json": {
+      "sha256": "00ffda6521fe4db412682fd7a85656fcef89fb3ad8d5115dc1d868ccbab09fc4",
+      "bytes": 8344
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000191.json": {
+      "sha256": "8514dbc98453e89b67c7aeb7d6f48858be7b3b4134ad36ac610e0d996b642ea5",
+      "bytes": 9642
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000257.json": {
+      "sha256": "27bf9eb9a361cbe80fa62e613ff67502339976cf5e27365e340c198986ab26b5",
+      "bytes": 10792
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000312.json": {
+      "sha256": "c7c93a9967df2ec7a74ea37433188b71bbb0062ccf364c18e5b335b0451f961f",
+      "bytes": 9096
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000083.json": {
+      "sha256": "cbd10915c053ebe1175a375082dbebf550703297382afa08c0048ee624e0ed67",
+      "bytes": 8874
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000129.json": {
+      "sha256": "acb93be32f9e21288f766dea642637c8dd117dcc58915d97f0c7441b25603213",
+      "bytes": 9469
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000200.json": {
+      "sha256": "82a3898db5ec0254034e860b3c0663a32773988a12e5f73cc04398d7b6567e5b",
+      "bytes": 9047
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000345.json": {
+      "sha256": "b05c46be57b81fdd796b4d344dcb017dee5b1b18d8294ad59d387adb41f091ca",
+      "bytes": 10490
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000152.json": {
+      "sha256": "63e969921aef0a8589414f655ecf1217d59d90415ae2c71955f584315a655bd3",
+      "bytes": 9613
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000447.json": {
+      "sha256": "31ce8ccd8c4076207f6ae35d1a684f6b0236da76eb463b1da044cf83d4a32fbb",
+      "bytes": 8991
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000017.json": {
+      "sha256": "3b5f6acddeed11fcf05908cfba0aa39e9be7a4fb8cdabcdec640f8388199f411",
+      "bytes": 9177
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000294.json": {
+      "sha256": "c4cb1341fa8cd61bb40abc2b7d3c1e9a074166840679d067afeaeaf306cde426",
+      "bytes": 9796
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000105.json": {
+      "sha256": "7d337e8b10bacc89be04182fd207b2a93c00666ee0af0ebb40c8e3232f59aa97",
+      "bytes": 9031
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000040.json": {
+      "sha256": "037a4077eb251e212e4d2b4a01c7167b0b8359f6588ad8b0de667a58d3a5afcf",
+      "bytes": 8973
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000410.json": {
+      "sha256": "0f3a5070f0b4ac8a1b1e0e7d25fb65b9a22e9858407defab5c8d11357e9919b4",
+      "bytes": 9389
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000369.json": {
+      "sha256": "cb1e04a3cb8380162893fd8785f4f2420f8db443abc82942ff407e2b709d3936",
+      "bytes": 9847
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000386.json": {
+      "sha256": "cab3ebc72e4a1c412c9d051d1db0a4c788504074113e7df4487d55004f53d58a",
+      "bytes": 10320
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000113.json": {
+      "sha256": "bd919c228e3c026556acf2ead6e3a886559a8809fa202a5ebcc5b477ab1a2e23",
+      "bytes": 9433
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000406.json": {
+      "sha256": "9b8510a64fb71798f1be3af68396d56fed93e774accc42c714f483e44a4ba5c7",
+      "bytes": 9043
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000056.json": {
+      "sha256": "7c7a895e5a1d383718a7fe4a6c04907fcce562d69f918c1454886bfeeeb390a6",
+      "bytes": 8870
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000390.json": {
+      "sha256": "f2cb9ed02ee1c3d60c5d4f8c28ec29f0890c35aa9b33b6b347b4a38c6c3fe6ff",
+      "bytes": 9292
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000144.json": {
+      "sha256": "be967888dc9e5c7235dcfa2873379814166a460939c9020def379758a41fad74",
+      "bytes": 10251
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000001.json": {
+      "sha256": "bf8b86e253f2e5841ce4228542a05ada2b37f3fb6d216526710557599048b0de",
+      "bytes": 10345
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000451.json": {
+      "sha256": "bdfeca7a45010f615dbf8a00baac1961d21a82d14e7dd324ba08a28abf89bc41",
+      "bytes": 9909
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000282.json": {
+      "sha256": "8885ca3e960d99de87840fede7d8723fdc38ae959c1796a84764f63f0a13da57",
+      "bytes": 9812
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000328.json": {
+      "sha256": "b669b3c26893c043613e8d3ab251764ced624a7539ab88ed32653b2c04b7292c",
+      "bytes": 9178
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000323.json": {
+      "sha256": "79ac3c97151e020f7f7ef1e585bb025e2a51a7327a41c6361e7cd478bec01353",
+      "bytes": 8541
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000289.json": {
+      "sha256": "a195a35493050abd6d87cfe5b21eb25ec716d69635c036e19a75d3eb3d7229a0",
+      "bytes": 10467
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000266.json": {
+      "sha256": "5f9f72fc6ae6950d40fbed759db845fc813e8c78bbbdd8fe10dc29635d01bcc5",
+      "bytes": 9829
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000118.json": {
+      "sha256": "dd54ba93d69818675015588477c895ea3b52842f4ed7663c7c691167fd40ab94",
+      "bytes": 9706
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000374.json": {
+      "sha256": "fccf0b788bcefd4f9ccf7d3ab7d8e566a70e8bba2263cb95f501e57be4f3da38",
+      "bytes": 9065
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000231.json": {
+      "sha256": "f5a27632154ca5601063440451a592b7baabfddebb9fd2375cb8d28fd0a0052a",
+      "bytes": 10455
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000362.json": {
+      "sha256": "395b6a7157d3f41e5bdb5f6f2eebcc7c3b1a0d1103c1ae40332c13a8bce2a723",
+      "bytes": 9306
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000227.json": {
+      "sha256": "eaf3202c4dcaf2275050195d3b27d9119066531f12f7a15aa05321065caebe8b",
+      "bytes": 9108
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000159.json": {
+      "sha256": "a8ba5ba6cb1c2c7bcacc0ad5972ce6d2ffb67fa809102420ed46cf1858fd4493",
+      "bytes": 9790
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000335.json": {
+      "sha256": "86b67f5f801b9e8da93cb9f464b23fd636bee98ede2adbad8854455cdb1e5f75",
+      "bytes": 8705
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000270.json": {
+      "sha256": "538439522cbed13e1e80e8d1fca9d8885d7d31d6d8bad709af42e3fd33be9b54",
+      "bytes": 8176
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000067.json": {
+      "sha256": "cf808b23a21ce1f4f407b79f0e9d79ee8213c89fdbb77d8d4aa893aa7e071b29",
+      "bytes": 9717
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000437.json": {
+      "sha256": "4bb27d3478dba542ab1e481e558ac44189d1c2da2633eec8e057991308d27fb3",
+      "bytes": 8259
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000122.json": {
+      "sha256": "aeab291238e9a60c4025ae7787926c069d921713e2cf7c25e84443207158cfda",
+      "bytes": 11256
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000088.json": {
+      "sha256": "b3bf61bdbc336ff0e889f674d16855cb9b296030082c98cae0a9eaeef5026de9",
+      "bytes": 8606
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000460.json": {
+      "sha256": "01d7d0304610fca2ef3dd91df03b7a35eda986979318ae86ea8285e4bfcf4e4e",
+      "bytes": 10241
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000030.json": {
+      "sha256": "033061f0dfbe85b553dab5cd151f66f7cd432e456fa39e9749ae37c6847ad86a",
+      "bytes": 10300
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000175.json": {
+      "sha256": "5df830447cf8760af235a5944f77e08cb1bc3d4ae540ecaa0ea9daba27bca008",
+      "bytes": 9430
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000319.json": {
+      "sha256": "1c7f330c56f1e67587073b6e1ed07e68e62b0578f4b78201ea6c6eae6873cfca",
+      "bytes": 8917
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000026.json": {
+      "sha256": "c01817909abf0830347e31685b857ec9a740f506cddcc290e257e327f32c3937",
+      "bytes": 9497
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000476.json": {
+      "sha256": "586aff36818e1dfadcc2f96eaf6abb81990e92cb9095507411c41f9bd0b018f0",
+      "bytes": 11266
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000163.json": {
+      "sha256": "80e1a2d0ee72295482550aeeea4f2a26d4d6251304410e26918a9744a6495cb6",
+      "bytes": 10508
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000421.json": {
+      "sha256": "f2ae9b2c7af6de07e135bcd067ec41ee6b353a35876f87e889fd667ddb372d90",
+      "bytes": 8662
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000071.json": {
+      "sha256": "bdeca548d1045a148666f14a3d1d86e4db83ca88ad89c6a8160988a5c3c0cedc",
+      "bytes": 9352
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000134.json": {
+      "sha256": "cd5a43e55021351542b94d0327284e1cdc5da883191aa451b9026c426e020751",
+      "bytes": 9505
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000358.json": {
+      "sha256": "71feaeefd3393b1d1f1c749bbeaa0a13d522211d4bb54adc06b66c677e69a7fe",
+      "bytes": 9610
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000285.json": {
+      "sha256": "16c63faec4b96eb71fc0d86b85b1225c149be6beec36762717b7dcc894f7ec55",
+      "bytes": 8902
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000143.json": {
+      "sha256": "c4860ecad3faccd1d6f5a2ca435d134c1d85a887f2f773c3bd4ec02c1b1c3766",
+      "bytes": 10591
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000006.json": {
+      "sha256": "ba762108b7df7616e2311bf0ab4c3ee5e0c0a5c9db382b0ed5ecd5f562d37c17",
+      "bytes": 9701
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000456.json": {
+      "sha256": "a7cf11ac55cdb7ff0e0bffecb28e75c8d7648bdbfad41ab28f9a75caa16aedb6",
+      "bytes": 9178
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000378.json": {
+      "sha256": "21939f715300f9e71b5eeb376de53056b4f89d4b51b303b421b3edf8bfeec48e",
+      "bytes": 9187
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000397.json": {
+      "sha256": "ca2b747f52c73c9c16847c4759b3af25f68816c440525be7e29393ab048e3705",
+      "bytes": 9941
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000114.json": {
+      "sha256": "2e8d4bfb605d6117ec9e229885f5b354a08f0912cb8b055316998231ea1c26f2",
+      "bytes": 10854
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000401.json": {
+      "sha256": "cfa0e5e0c5312ec08cde4d190eb82296ee903c3a2ffdb019f355cf4b78d806eb",
+      "bytes": 9498
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000051.json": {
+      "sha256": "f2cc21cde41c903e5e6fb0f6984279e505db3a58804b6d712e0801c64b82d18c",
+      "bytes": 10126
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000381.json": {
+      "sha256": "098f787130035d1b90786720bf01a5d0baab21f68836615f13a11909563d1dac",
+      "bytes": 9612
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000102.json": {
+      "sha256": "957082ab935809b843d13dcc671dcab047c635ecca14f960194964d9d8fa6e5d",
+      "bytes": 9651
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000047.json": {
+      "sha256": "17901ffc5e49c037e6f23f4a192f8e74c79bd624489f5f5e6e732c592d2cbdde",
+      "bytes": 9859
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000417.json": {
+      "sha256": "dc8084d2507718e940a47aa0a2f97b49f2b568a49db8ac30febf3cffa0a6d6ee",
+      "bytes": 10231
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000339.json": {
+      "sha256": "4ad47a382e0129668131a5136643328fa254fa04b91bd3889b8457faa673e175",
+      "bytes": 9144
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000293.json": {
+      "sha256": "77e83fe0f5f3906b8596af6667a902cfb9495fd3753661e5fdc1a7235cacf48d",
+      "bytes": 9183
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000155.json": {
+      "sha256": "6c6f045dd5bf0bfead106b24c893ff8d5721c706dfb8f0fcf4d853dc8ac5ec3c",
+      "bytes": 10593
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000440.json": {
+      "sha256": "5479a6664d8ab732e673908a092347657eebe7a004b9278b342eef96fdad13ee",
+      "bytes": 10602
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000010.json": {
+      "sha256": "c8d442f2b911f93f1ed09b1a3fad80f065eeb2e4a321532cdab936e05a63d2a3",
+      "bytes": 9435
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000207.json": {
+      "sha256": "bb77fb7f92bd4b53d2c51b4a6ac387ed2438aa474a3d594022161b0fa266a8c1",
+      "bytes": 11960
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000342.json": {
+      "sha256": "9ac0ef1d61165edc8dbf51255336112e245256f33a742d013e25aabe7853055f",
+      "bytes": 9646
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000084.json": {
+      "sha256": "9383cea7a897e56f7477f895f264aa342afb66d01826566909fda2ed690d3d80",
+      "bytes": 8760
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000250.json": {
+      "sha256": "b7c3efafe0902aca669df486d5444262fe8588f0873504c583fd0fe1791415c1",
+      "bytes": 9305
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000315.json": {
+      "sha256": "4e3a940c684e7fe9f9e64967a4d07b46c6042d2bc02e157432ad694f4ad0dbbb",
+      "bytes": 8524
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000196.json": {
+      "sha256": "2954d0e1f6a1efc34b2fac76514e13d8c76b1a6e944fefac6419d0d6ba8d4027",
+      "bytes": 9447
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000179.json": {
+      "sha256": "61925086c7349834346e5ef52cb059bed4e146fcaacdec162ae1c269276760f8",
+      "bytes": 10111
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000246.json": {
+      "sha256": "d169bdecad8ee7a46aa90660fd3b24d69ca00ca859dcf8a52fa0ab2803d9746e",
+      "bytes": 9910
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000303.json": {
+      "sha256": "bd7db0564bc1632b7af78bd7d6f80f181ba39304e0e428cce117089a1c7502d4",
+      "bytes": 8527
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000180.json": {
+      "sha256": "cdd18d5e4ad3774860b20eb29953beb176e5b91d912c482e72cacde255d45860",
+      "bytes": 8662
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000211.json": {
+      "sha256": "82e7165501b926aaa062d3eb265b20d21d2cb28631fbf10a94eccd74080a8387",
+      "bytes": 9180
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000354.json": {
+      "sha256": "a9781103fb69edf8d0070437937d86033f56d2502e723abfb14ba43d486b616a",
+      "bytes": 8758
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000138.json": {
+      "sha256": "bb031006d610aca7d53b6c51c8c0c6aa10b772347dc57ed242e48386523fb220",
+      "bytes": 9382
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000092.json": {
+      "sha256": "1cc707e8e97761c70d085c82e7872d687f1b2faec1f28a917719aaca8667d091",
+      "bytes": 10348
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000139.json": {
+      "sha256": "8a1739183890d14ff9585e3ce96ccbe97abbd3510d16879f3a0e6291ecd62ff7",
+      "bytes": 9590
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000093.json": {
+      "sha256": "1a911a37db76f5ea5bb27b1d4830e26e3fd3eb622816dafd5b3fbc99c20f5fcb",
+      "bytes": 9055
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000210.json": {
+      "sha256": "03c5b1b2f07095e5d794e1225148ed2493440587d846fed7529abfd55a15e291",
+      "bytes": 8957
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000355.json": {
+      "sha256": "e06d228c833a1fb62403b3f9f370677241a69d64575a8ce54dc83f653c491aa7",
+      "bytes": 10293
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000181.json": {
+      "sha256": "09808a818cad3fff3cd559c994f7557d640ca4febae2fa46bada60bf6766c9dd",
+      "bytes": 10577
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000247.json": {
+      "sha256": "ba3f422883a7b78a62c6163bea0c2d11c17a27f49a3a507a49bdc0ce144bb317",
+      "bytes": 9265
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000302.json": {
+      "sha256": "08484ec037f03e615d588d091289571d9885d7c310368d6824780b28a439cf76",
+      "bytes": 8872
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000197.json": {
+      "sha256": "e264ad73649b0086f438cc7a0487e10fc15b103b7b1326c8aac4bd4b40fb4690",
+      "bytes": 10190
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000178.json": {
+      "sha256": "a43be87968dc28d9ca9e4d7d1376f5f6979b82842746b794958d7e39a4c038f3",
+      "bytes": 9362
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000251.json": {
+      "sha256": "e3c978aa09c2d8d87d49d9766e6f6039a940c0f67cb4fe5fa80920e8e488680a",
+      "bytes": 9035
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000314.json": {
+      "sha256": "e85227df482fb2c820c9587481f149eddcc89f3370c116a1837c6bb37a6c7034",
+      "bytes": 8776
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000085.json": {
+      "sha256": "0bd56326c8f3570abb3e630809b0652dcc165403c7b032d0448f632b04b47d3e",
+      "bytes": 9089
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000206.json": {
+      "sha256": "731de7edce6cdcfdcd34e4cf27cf56fae8b3bfde91de771813d053f461fca888",
+      "bytes": 9639
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000343.json": {
+      "sha256": "461c361cb75a357b96109d27dab8f95ef96484e00c23441fb6be2b7a51b1cdbf",
+      "bytes": 9102
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000154.json": {
+      "sha256": "9761aa864f633f95321bdab41ac57d61652e004e4fb364203f7e049e05c8f613",
+      "bytes": 8460
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000441.json": {
+      "sha256": "7ba27d7d54faa9ad90fb1ef63f1e5bf76bcf1207a76a343fe36a82bac4a3192b",
+      "bytes": 9163
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000011.json": {
+      "sha256": "ebacb79c67882b235e262eb9f307061c153220bc993a9a70a556f27a53012a82",
+      "bytes": 9457
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000338.json": {
+      "sha256": "5d4ef65b2a68c14bf6ed8df4bde349e6b3f0f2f32368d9be37c52c655c76521a",
+      "bytes": 10451
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000292.json": {
+      "sha256": "219551562d2ed8a118da867a5d6857ca20225bea7de171f29e50821261bc74ac",
+      "bytes": 9212
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000103.json": {
+      "sha256": "446d72f677b782bcbe2ca05cf0ffbb12fdb0669c8e2999a45abe42e17c9f3a0a",
+      "bytes": 9438
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000046.json": {
+      "sha256": "9d9a21e0568275a16a8d7e0377d4ee2d47383cbd5ea0d78f9a5cba7f7fe888eb",
+      "bytes": 8763
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000416.json": {
+      "sha256": "9b1e8086de767bbac1701710a40d208df951f55d034fc5988d64b7a8ac5b2ce2",
+      "bytes": 8643
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000380.json": {
+      "sha256": "00af90ff7a80155f9e89b400cef7b322538cee686917db182109cefe10b5ea23",
+      "bytes": 9537
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000115.json": {
+      "sha256": "2efcd107afc68dfd7d4e5bfef26b344c608c3641308ba874a893e8924346b167",
+      "bytes": 9590
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000400.json": {
+      "sha256": "483d4b4ce0cea17ea163d5c3a14f318524646ba25ab32302e14d4ebd19b32802",
+      "bytes": 9945
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000050.json": {
+      "sha256": "6e771abed6f6b3be9e77a2a619ff54822faf41bcfb17f33780c25a9e71f97a52",
+      "bytes": 10035
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000379.json": {
+      "sha256": "6fcd9430ee397a961a98a1fbe0d642ee80b9f7ae59cc3eddd8dff48320bd9554",
+      "bytes": 9355
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000396.json": {
+      "sha256": "97b9753f40b7cefa7d4d30e3c626a0b73e7495a69434794d2b0d092cacecdf92",
+      "bytes": 9482
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000142.json": {
+      "sha256": "4e9e445c6513006d3da6a4bc010b5e78787f7d7b7a229fd4601df00e71f840e9",
+      "bytes": 10158
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000007.json": {
+      "sha256": "5bff0d2182ffe898c0fc58d16275365e9943be89b5537b7e0258ea18a6eeea1b",
+      "bytes": 9224
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000457.json": {
+      "sha256": "4bcd8791e020f1c6df349fc2c9ab8a9d6767337fcb9346d4ac826f8e96ceb287",
+      "bytes": 10800
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000284.json": {
+      "sha256": "5d03ab11a4f928dd0edeffe61929fb3805f13cc0c6c1e78690d9352b043e2646",
+      "bytes": 9366
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000359.json": {
+      "sha256": "4368a7564b2f063e872e226a31c290c483ecfcdd43f6826ee604fb6ef435f35f",
+      "bytes": 9378
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000420.json": {
+      "sha256": "866fbacfcfc869fe051c1fdcb5dc92e3d392adc0cb17f4ea73303dab2819b9ef",
+      "bytes": 10102
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000070.json": {
+      "sha256": "e634a239c7c59bd8524f7faa15d3adfbf2185ec10274c4da73115397530b8e45",
+      "bytes": 9698
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000135.json": {
+      "sha256": "aca96707ccfc72b18d23455313c914492292a74e5340f09cd73a7cb88788d22a",
+      "bytes": 9498
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000027.json": {
+      "sha256": "c5f02e0726d0e5562ca4eb1a05cec5650842e0e1c4c7e2da21f3aef84bf3d304",
+      "bytes": 10391
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000477.json": {
+      "sha256": "76810912a0d9dbf0c84aacf7e38d2ba681838ff50e1e4c651283fd50899b3d8b",
+      "bytes": 9720
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000162.json": {
+      "sha256": "ae94ea451345a096a340a62788c0cc0bd5ab85e9801912f977e22b92e3c4125e",
+      "bytes": 9610
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000318.json": {
+      "sha256": "6b47302ab873ef89de618d82a38c3820047c75f60eda6f2439a4bbb7105c6c23",
+      "bytes": 8838
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000461.json": {
+      "sha256": "1811be39b8b811d734e7ef001782eef83b8432106922a554e8e63c47f7d96484",
+      "bytes": 9673
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000031.json": {
+      "sha256": "c191dad0e84d5b3a4848fdc2c45e7b84e9f50808ae9fc480cc1ca042e4a7b1e6",
+      "bytes": 10126
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000174.json": {
+      "sha256": "ffecb52cd0eeec6363b5eefa969a87fc564e20f22c921395adc842a8bae24460",
+      "bytes": 10136
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000066.json": {
+      "sha256": "9e81a35457efeeb98b002c229c70ea942c6c3121962654c32ce3dc362e4213cf",
+      "bytes": 9652
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000436.json": {
+      "sha256": "0b412d1f75f09cd026402534d1dd70c9cc4e5fb3202cf39e8b6951a465f25b33",
+      "bytes": 10692
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000123.json": {
+      "sha256": "7de9136548089ccb6857fd936899e3f705007ea60fdaa1828ec2c7d3df83f667",
+      "bytes": 10131
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000089.json": {
+      "sha256": "89f6975f50a3434d26a54aa0c5b9f8128a99e3917d52a9ef324e035f17f2f213",
+      "bytes": 8929
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000334.json": {
+      "sha256": "e0000c3571bee364cffcff943422b94db308deec868170333d9c8f1e85485265",
+      "bytes": 9593
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000271.json": {
+      "sha256": "deaad78ccb7d54913d422850d8bd9c67dc6f0670503f35b736260ff99f20fd08",
+      "bytes": 9485
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000158.json": {
+      "sha256": "893e51b2e070902776d93c5ec835703c060e409528f5593e60fa8781ad176726",
+      "bytes": 9939
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000363.json": {
+      "sha256": "61311424185cbf62211ee76c43a9e51bd8494ec7273f58cb55fa455a4dd6a9e0",
+      "bytes": 9435
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000226.json": {
+      "sha256": "808e9e5cdfdc6945a895e70e9d88d9981aee18e32be21189d8788847feed674f",
+      "bytes": 8714
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000375.json": {
+      "sha256": "8018428fc9535247ad22d10e42715ca3fb18604b99c8622cae9cdaa080be0382",
+      "bytes": 9120
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000230.json": {
+      "sha256": "4652e79562e751703c18908a159801d1bf72248a466665b3c132bd5550964ccd",
+      "bytes": 10270
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000119.json": {
+      "sha256": "3c35320c800a00fd859ed4480e1fc931fcde952218c56331ace3f22ceb1d32d0",
+      "bytes": 9762
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000322.json": {
+      "sha256": "c8c40b0cb41537ae93a5e3edab6f45f609f4d5981825d85c8900c56ed85e7344",
+      "bytes": 9435
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000288.json": {
+      "sha256": "4c61dc98e36e0f48a02f9fee83130544d74b635c82e7b858eb8c11c853ef233c",
+      "bytes": 8814
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000267.json": {
+      "sha256": "4795462530c289baefee2b95f09bcb1281eab5b274725a31c51d10abc1e1169a",
+      "bytes": 10339
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000136.json": {
+      "sha256": "5c15865c5360a6da7fc177cc4f9a9a1bd84bc8d48279de1c86d47bd6b076efff",
+      "bytes": 10199
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000423.json": {
+      "sha256": "c0513ce89accff2d18c9e983640837304a32a4add81f10f58a87dee53950240e",
+      "bytes": 9202
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000073.json": {
+      "sha256": "b8676a73a6affc0822dfab1bc48a17e11312af068b140d337e5ea37bad058d79",
+      "bytes": 9743
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000248.json": {
+      "sha256": "91245ce1ce132140de295538fbace36b466aafb464390710e1251ee59b3c5292",
+      "bytes": 9648
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000161.json": {
+      "sha256": "9df306bb6877c5cac773691cf92a90bc6213ddc9c600eee6f6298fbacea89750",
+      "bytes": 10761
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000024.json": {
+      "sha256": "e025075bf6aa1d161fe86fa36205a4b57403535ab9a07ecef0c682d4438bc0b0",
+      "bytes": 10383
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000474.json": {
+      "sha256": "cc9ea677909440e7773d96a6aa7d60806de1cc2cc89a161b7be1f5dd991d96a4",
+      "bytes": 9409
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000177.json": {
+      "sha256": "a5547d8fcd04c2a7eb0b1f1e58ac7117e88133f61d813c205516001bc8f4dff7",
+      "bytes": 9776
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000198.json": {
+      "sha256": "99426ad4ebed4924651d0d78b357ba4b91c8397bfffd348041a06a28058089ba",
+      "bytes": 9630
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000462.json": {
+      "sha256": "b6e08df7da6885dec9c7a8121cbcef626ef4bda4407ce5494f5c402799868826",
+      "bytes": 9613
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000032.json": {
+      "sha256": "a733e318424ca3df2ccd18d70c7aa0f8102fef8a828d74067e86114b080c07d1",
+      "bytes": 9197
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000209.json": {
+      "sha256": "26e9e8607f4a5a2efc0f071c52716067bdf7905f12c16162b0b60a571abd0a21",
+      "bytes": 10177
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000120.json": {
+      "sha256": "24800fe111482066e41048e11797654c2a590c8d1def628e5c8b66f802703d66",
+      "bytes": 9945
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000065.json": {
+      "sha256": "4437d78235db2580d87a998594065987fa0b3caf522a8295097de46e295797c4",
+      "bytes": 9694
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000435.json": {
+      "sha256": "eb24b4133471216c949d05bed76a58292ae93c8a5801b7b0578e090b76cbf8c0",
+      "bytes": 10260
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000272.json": {
+      "sha256": "53ce40781cee0ae7a88d3079980598f005b88b48a90c7d2817fd22a7c2b65067",
+      "bytes": 8790
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000337.json": {
+      "sha256": "62b258afb213cff7be9ba60715de3bc70eefb900a5896a7c39e5263749cdd15b",
+      "bytes": 9003
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000225.json": {
+      "sha256": "dec9645f7901500eee6cace6491ab74b1a391c0b3c3c8f355df501822f9f8172",
+      "bytes": 10547
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000360.json": {
+      "sha256": "70178d5d30a6a16529592d865f04bc8302453a260cce888c9fb507c9a39feed0",
+      "bytes": 9674
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000419.json": {
+      "sha256": "1366540c30cf787dda87bd84474f2805d595c2bc1535d4a2e7be660e156e0c14",
+      "bytes": 9141
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000049.json": {
+      "sha256": "9956a9d0b247d20fcde7ffc6efe92cf2cc93b3c59558bbd79c12356699e747a6",
+      "bytes": 9916
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000399.json": {
+      "sha256": "7e2c5285b6a0b40386261f6eaac0029ed4d0896eb93e4c92596c5dfc3cb29b25",
+      "bytes": 9837
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000233.json": {
+      "sha256": "7b64c0b3ac8983b55015ddb3838b76bc96e41280cebf553b80d3ff2660e2cec2",
+      "bytes": 8904
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000376.json": {
+      "sha256": "41aaac7550c0caf880bff9dc161e6dde243ae408b5b3f562df5d68dedca16b03",
+      "bytes": 10147
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000264.json": {
+      "sha256": "b9b806390d28b9ba987beabb2b5a6d18d3ee510e8d78bea439472e4766585b66",
+      "bytes": 9900
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000321.json": {
+      "sha256": "8e21b12d9262d09a58cdfadef70285d342c98054d9b51aa61b77e5e8e6211d73",
+      "bytes": 9420
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000458.json": {
+      "sha256": "8c859c0d3cc3d81a324b672cfe86f9d6c4a2114769a7107c64e60c085136f9e8",
+      "bytes": 8431
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000008.json": {
+      "sha256": "bd0871e68a7372b7db9096508b9abd3f42392e53d6e6c1d4a43c08a6acee58f5",
+      "bytes": 9830
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000090.json": {
+      "sha256": "0a3abd72287a43b3bef10e3295862c26e7291300cb60bc845f8405b1f9b67b35",
+      "bytes": 8905
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000356.json": {
+      "sha256": "c23f356910ac157ef3b56670bdcccb3d2600abbe9e658694f27847715ee39af9",
+      "bytes": 9410
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000213.json": {
+      "sha256": "bee0cd1d74ce855fd9ad67825bfa4d37fb0e13f06fe0b820ff0909210b6d9308",
+      "bytes": 11458
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000182.json": {
+      "sha256": "fe9e0eea580cbb1993a5ff4ea46e892887d8490c0b920fb55c3ba4d71e4a5ac2",
+      "bytes": 9902
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000478.json": {
+      "sha256": "1c43a88a36de2b693454bce55aeab690b96edd52d7c24bc55d1e0be62e4db0ee",
+      "bytes": 9874
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000028.json": {
+      "sha256": "10a8f8c5928390dded6447a62eda9114962443851ba1e858ce1007188d01a81a",
+      "bytes": 10589
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000301.json": {
+      "sha256": "68a3398000ab8eb2ae63bff9913c69202b5f52c654c24cad841a4ca40248b03f",
+      "bytes": 8870
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000244.json": {
+      "sha256": "a691bea5899ceb69ff9e95f77e5cf80201f56f1102e7f56622a8db5f355b824d",
+      "bytes": 11159
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000194.json": {
+      "sha256": "9f9ac2cd9da7b9a575e0de00094a211b6c882786b2d218976ffb4c0e6881a059",
+      "bytes": 9859
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000317.json": {
+      "sha256": "db7e4de2d1fbafae63a1903e44093cdd7b7934338c45a064202c0e44e0120c16",
+      "bytes": 9238
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000252.json": {
+      "sha256": "9be2f223c5b7177a64947ec8955bc92f1cc86aa7e5cfaf1872d7d9b9425dcbdd",
+      "bytes": 9455
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000086.json": {
+      "sha256": "0457ce1d1b44d2b602a762006eaf54b0faf287f4090e9de3059a60b9cda66c55",
+      "bytes": 10362
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000439.json": {
+      "sha256": "c5f31843eac77ae8d64b2d7bafbb1a011ff77b2e13f7d391851aa2b0c62780c9",
+      "bytes": 8880
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000069.json": {
+      "sha256": "cd138a2024bef44a8fa1d42b1c07332a17c3907465463a36d73b10cf5dbe3e68",
+      "bytes": 10035
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000340.json": {
+      "sha256": "7f179d08b25c11d1b58d77519c9087eb6e7beff1c9e2225cdef7ea440d87eb25",
+      "bytes": 8821
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000205.json": {
+      "sha256": "3d7daec97d3043705ebc048e059f7b9cef3c839330e7dc89e802537649885897",
+      "bytes": 9236
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000442.json": {
+      "sha256": "159013b3d7b101e6cde073945c88bb6c6f033488751e2b0fe6c8469e72ad648c",
+      "bytes": 12085
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000012.json": {
+      "sha256": "f1085e72a0a56b5dc239ee1f80552c736235c91728a51b7c7db626f46a9c1180",
+      "bytes": 9603
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000157.json": {
+      "sha256": "aee1cdd270311707dbcc7e509687c9641a407c74bf96b7ebedc75c08811e1cf3",
+      "bytes": 10576
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000291.json": {
+      "sha256": "718c60e4aaf3c8ffb70c433b2cee5af47ac386b50233f853ed29bf5c65000607",
+      "bytes": 10075
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000045.json": {
+      "sha256": "3cc5f7419b31888b5503bd15c92ecba5958cd26893b83839c5161c81107a7c3f",
+      "bytes": 9364
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000415.json": {
+      "sha256": "1a7f1fc1bb5c60954401c33384bed86a20d53e9b30e7efab39c42a47767f6f15",
+      "bytes": 9872
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000100.json": {
+      "sha256": "b3b9b51bbba896b159465bed5b2a154618c3cded29356c1fcc8f99bb93da506b",
+      "bytes": 9013
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000383.json": {
+      "sha256": "98851a6bc9cebfe57b7bccccb27a3644a3f28eddd766b70a57baaffe95a61307",
+      "bytes": 10482
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000229.json": {
+      "sha256": "a57a2a44d8422ab1e5e4aa47415332fe504fb90b79611dfc2a3353aa5492858c",
+      "bytes": 10156
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000403.json": {
+      "sha256": "89bce2355b64733be8300800ee62310f8e0733bd59985b5ba3155598d867b32b",
+      "bytes": 9840
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000053.json": {
+      "sha256": "47597f8c5ff7e0014cf5caa90596b49b13207b5a2e5d143d70f424a5dff0fa57",
+      "bytes": 9650
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000116.json": {
+      "sha256": "ecf6a91a5c2ae3ca2b04fee2988867f7c16461fa17086b25237ce0c2562b9eea",
+      "bytes": 9381
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000395.json": {
+      "sha256": "80d2ed13a8389c265f3ce825d77ca8d9b5e5f5084f08e79fd0993372ba0c2103",
+      "bytes": 8995
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000004.json": {
+      "sha256": "ba152b64f48704ffc82341d8c41f707b80b14412b56d7992e9e4e19756f9ffbf",
+      "bytes": 9441
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000454.json": {
+      "sha256": "50b92f7dbf94d413756b4bf6d31d8f3d8abcd578f90c27766156a6f14cdc38e0",
+      "bytes": 9106
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000141.json": {
+      "sha256": "c90dbc22224b5b945cf441da5fe446e7133a2f4c77f1957af3f5bd8c098f83b6",
+      "bytes": 9885
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000268.json": {
+      "sha256": "4ecac769d0a8f645c57fb1822a2e1e8052b8dd7b64c2efe6a13b3f1e5085d7ea",
+      "bytes": 9492
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000287.json": {
+      "sha256": "5c8a2a1a22d06036b8d85e2d63eca94c9dc58ef8aa1c7d785f6340102897098f",
+      "bytes": 9183
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000269.json": {
+      "sha256": "b48e2b38bfa3ac178565051ca5bd03b9878e8c849436b36201c977313f7019f8",
+      "bytes": 9014
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000286.json": {
+      "sha256": "bd4a7b0e2e7c97e0f5ce87fac8d9dafd8fba419e319afedea85fde2cc93f0e37",
+      "bytes": 8700
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000005.json": {
+      "sha256": "1b48b25e318558eafbf53161fcff49a7c72c1306635f260105f6f80aa828a877",
+      "bytes": 9669
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000455.json": {
+      "sha256": "7462c4cfa14bb83d57ef1aabba32ccf3824679c579064196840e62a5efbc02e6",
+      "bytes": 9255
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000140.json": {
+      "sha256": "d634f1fb10af6fe5d8fd76b8a62188888f2718e34469ca0b9df9713edeccf380",
+      "bytes": 9630
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000394.json": {
+      "sha256": "569c489b4ec30da6167c9ff1b935a4f6569be2421bf07d1d68516e1c78a3aeae",
+      "bytes": 8903
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000402.json": {
+      "sha256": "bdebab868eef452981d90d96c189d6402e97e9ba63258d2543dc2704072042b6",
+      "bytes": 9120
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000052.json": {
+      "sha256": "85f87766883c537b685a33852d0db0845ee1493779c2a78987c830e476591957",
+      "bytes": 9827
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000117.json": {
+      "sha256": "d86c23f71e1a14824b1442f64b710791161f5d73de033084f10690c8bfd7139e",
+      "bytes": 11186
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000382.json": {
+      "sha256": "1d30b0c0f48ddce3fe657bc5c7c925db5ac7f3cd1fc7e4a3e61071ddf087eec9",
+      "bytes": 10153
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000228.json": {
+      "sha256": "abfd5bb63da87d8a2b8dcb71599775c701bc26892d6f3476c708c57b035f09da",
+      "bytes": 9626
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000044.json": {
+      "sha256": "6740007e41c3a6a4cf6414240b6478152e220a1d02909d6486256ad6647c42f3",
+      "bytes": 9376
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000414.json": {
+      "sha256": "07d509c0aceaf3a624cc0b313e32a3c10775c5a10720b1d52a8cc6d5fc3ef99a",
+      "bytes": 9784
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000101.json": {
+      "sha256": "a116cabdf0c705d24ba6d4907587f0400c66677aadef040c392c693a78936f84",
+      "bytes": 9535
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000290.json": {
+      "sha256": "db1ef504e6085f2906123a64652d7311405039d849f45300374b47f309e104ab",
+      "bytes": 9721
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000443.json": {
+      "sha256": "9fe0ccdae596102da0ea25bcfad1b0c0031aa00ee58c7d6eff5819d66f73eb46",
+      "bytes": 9058
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000013.json": {
+      "sha256": "d0f92b46425fd216dfaa9451afb8ec57b23ac639f2c4cbc07af2addace3d6034",
+      "bytes": 9859
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000156.json": {
+      "sha256": "bf3202ef3b6932431854c0d8aa0504d55340c149dd01c114232fc8b80ca3854e",
+      "bytes": 9880
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000341.json": {
+      "sha256": "3b74737ac51ca55a9cf9a3f6c316efa0b648823c0ea418bf44d0165d0b4a30f9",
+      "bytes": 9581
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000204.json": {
+      "sha256": "96b919f15e13708f841f46e04661d18ca51d412c2fb70689ef382dbec8d7a84d",
+      "bytes": 10348
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000087.json": {
+      "sha256": "37cccc7d26365c1fbc8253a86399ebd64a074f8e6a1a6e5504b86a7befed54ee",
+      "bytes": 9209
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000438.json": {
+      "sha256": "3e68b7ebe455f77babfa917fc030dc50e86b48a12f9efcc612018d1d366ce3a3",
+      "bytes": 10762
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000068.json": {
+      "sha256": "1e81dc7bb5580427bf92511e696d86a8ef9c2a08171889ac480bd4406d34647e",
+      "bytes": 9600
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000316.json": {
+      "sha256": "95a0bb34f7ad0bbdd7accde93a9bb7e851459c5090fc0e69aba340bc9cb2b7ba",
+      "bytes": 8711
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000253.json": {
+      "sha256": "51ac487ff656ccceb4923daea78702db0e9e7de8819e663e219944f39a1092e8",
+      "bytes": 10338
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000480.json": {
+      "sha256": "6745d04257486888ab9a65fd32280ca2e21191e70d2273aed4f62447426e5010",
+      "bytes": 8416
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000195.json": {
+      "sha256": "f5acceed58d81cd06821ee5f4079248f1969ad7bc9f113f76875763ca87eb8e9",
+      "bytes": 9710
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000300.json": {
+      "sha256": "fcd6e0d561ebfb0f1324c009b3421b60f4ee1f69e5a1d189346495ed74f194f7",
+      "bytes": 8754
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000245.json": {
+      "sha256": "ea9b2b670847f2f1460dfe7746fc7559c35e4d3fe907395e92a7787c6121051b",
+      "bytes": 7564
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000183.json": {
+      "sha256": "f76bd5650a61d67955c1ad59a9382516d3b6953935db955d12fde8c5e290ee8a",
+      "bytes": 9725
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000479.json": {
+      "sha256": "6fd75f3be9cb7c3f3676b8fe4229dce1440279adcd3cd2f8f7322b345b062525",
+      "bytes": 9234
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000029.json": {
+      "sha256": "50ea672a8a93957894d37d05b8eb02e46c6e57eba94d92a8d9cd11637c3e8e3a",
+      "bytes": 10283
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000357.json": {
+      "sha256": "ff11d20d39d937d838b8e3133bcf015cde025e2f231925d6bb853988d531f7b5",
+      "bytes": 9640
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000212.json": {
+      "sha256": "2da0b5efffee3b8ca205c3a8047c185d8957f8e6c528d47c458d2d027c481870",
+      "bytes": 9604
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000091.json": {
+      "sha256": "6318072c208471e5abead8d6c9f396fa47f7f5d83f9e9269994d7312f05cf7f7",
+      "bytes": 9882
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000459.json": {
+      "sha256": "4ff540f0ab2df8c79623a81904cd2d9118ce11ea3da2fd25c2163ed29830d929",
+      "bytes": 10080
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000009.json": {
+      "sha256": "24c9fd11b81e65484da3f2369944c887f7995904ddf845fc953f0f104c926120",
+      "bytes": 9306
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000265.json": {
+      "sha256": "d3135a4a9b0089f4254fc85129cd4e06ea5d78ec99666934a30bc55cfb05be9d",
+      "bytes": 9848
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000320.json": {
+      "sha256": "63292d3ab587243adeb25fa0cd4ae7d94884696e3e82b8dd632b6e976a526769",
+      "bytes": 8867
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000398.json": {
+      "sha256": "830f21407e794bd97fa907d124fb7c076bc2f5f0850eec5f427d79e83c8444f8",
+      "bytes": 9488
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000232.json": {
+      "sha256": "8967dc4c094f79a33f8292e425190bbe10c5cc0a54f29f9de0b22ee59226fa19",
+      "bytes": 10207
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000377.json": {
+      "sha256": "900a955ca70eab06efa709450eb9074db1ba8f5ddda5649330c7440cdb483014",
+      "bytes": 9512
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000418.json": {
+      "sha256": "e49b0075895116f8745904e5377c11e45f3229b08213974a3370702bb454931d",
+      "bytes": 10431
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000048.json": {
+      "sha256": "a882f52c06d2727d228b4a640dd88c654b937322d6a500bc7b1f1051d8b64d9d",
+      "bytes": 10232
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000224.json": {
+      "sha256": "f02255edbfcc93769c98b2346f2bf9eb9523b3b2d8491aaa24746995937ffa9f",
+      "bytes": 10256
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000361.json": {
+      "sha256": "007b220476d40388a140a11fe51e8c75d6268d6997f845bf92c45587b7645b28",
+      "bytes": 11387
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000273.json": {
+      "sha256": "d75f6992acdc4f32101052d66a24905fada5718566aa326b94e39d2bd94f8481",
+      "bytes": 9629
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000336.json": {
+      "sha256": "018cd0206576076dc7167d24f58333ff6a173dd376bc2beb252bf0a3a6e63fe7",
+      "bytes": 9702
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000121.json": {
+      "sha256": "f6a1d50beba1f444da98c587140d26f3893a178cdd56c6dd81fe5ca8a33fb401",
+      "bytes": 9364
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000064.json": {
+      "sha256": "1165b9e2a5a3b21b1784e791141c3f74baf6752f9cf5fcbfc8e3ef5b593e71db",
+      "bytes": 9221
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000434.json": {
+      "sha256": "f2db0dc1a3d1ef9153352257fb0964f2586e907db4ad9c3ddfe1614f84322ae7",
+      "bytes": 8603
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000208.json": {
+      "sha256": "7bf23d221ba69834e8bf16077b85041c7a96350fb4abf7506e2c8154509f3bf5",
+      "bytes": 9517
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000176.json": {
+      "sha256": "883cd13565c1707cb0fd533b951b3bf3309a89696aae680e1ce8b314b14d3efc",
+      "bytes": 9230
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000199.json": {
+      "sha256": "21a6ea99a98f4197a3b334ebc9cd398efc9598ed57e0fe16069048fbfa257be8",
+      "bytes": 11244
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000463.json": {
+      "sha256": "15753bc999f888993b5363143434fcd6bd967d0aac7bc2fdf24868b40a00bcbd",
+      "bytes": 9749
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000033.json": {
+      "sha256": "6f84bb0373b63cb85ee1b722e503f52f484d3ce6b8d695c75851d7688cfc8592",
+      "bytes": 9650
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000160.json": {
+      "sha256": "99007f992b71acf4db1d15a58677f4ca95837775aafdde6848454f901165cc19",
+      "bytes": 10005
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000025.json": {
+      "sha256": "deebb1c3e669a1f37f6238e3d2b4e9ce71dd3c6efd7aab6934cf684b20adec76",
+      "bytes": 9269
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000475.json": {
+      "sha256": "25130b391998e3a502523eeb3c2fe3487e6ebb69c367bc51ffaf2bd67d7c6b4c",
+      "bytes": 9605
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000249.json": {
+      "sha256": "a6f4f47b953878619869172d63644aaac719764bd6d03c5692660ab2f31b72f7",
+      "bytes": 9922
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000137.json": {
+      "sha256": "4f267b67bab37f665d29dc8f49ad439b6383dc01389182cbd17653422c424b7d",
+      "bytes": 9283
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000422.json": {
+      "sha256": "8f8006e9141e8bd6e2a03be7f8aa203e9496287ee879afb1f85f095a78580247",
+      "bytes": 8086
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000072.json": {
+      "sha256": "1afac5c31e4415cdbd666dab8a84ad0c6ee461e44ef4428312efbdccebf311d8",
+      "bytes": 9327
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000096.json": {
+      "sha256": "34263a296363aab60341047a894990c34ded9be4bc4c4af055b8bc941b28acc1",
+      "bytes": 9462
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000079.json": {
+      "sha256": "ff7050b0dfdc12ff099e4ce0bb8ac95b0951e185c1fc68049799afaad49eb306",
+      "bytes": 9027
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000429.json": {
+      "sha256": "8e3d61bc9b85e2242af918845bac571728a03497cc3062fe44483e5a0adcedc1",
+      "bytes": 10192
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000350.json": {
+      "sha256": "f5da0628b4a22836e32386382ca8b700b9061844e33a3b9495d9936e31098b35",
+      "bytes": 8898
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000215.json": {
+      "sha256": "3f8d84bacc90da037b0091272b24ec5f9a66de9db43d6309eeb8ed2aec1deebe",
+      "bytes": 9442
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000184.json": {
+      "sha256": "af3880db4706fb8c123c90d226e40d9419cd60c5a2035c54a8f245a313bac344",
+      "bytes": 10292
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000307.json": {
+      "sha256": "b1b2e73b2e5b167c7b13dc8171a40da2aee0e24c4fb0e7165e6a179007ccc8b1",
+      "bytes": 9361
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000242.json": {
+      "sha256": "a556829cbd2ad712c14d10149d697ee9971ba2addc40926ed7c37443ceb02785",
+      "bytes": 8588
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000038.json": {
+      "sha256": "5b5ca56e5a02f222b823b65e32a1ed0ccaa77d893058752a2a71956b2262eac7",
+      "bytes": 10599
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000192.json": {
+      "sha256": "c1028997912fea58eea4cff03fde5c5270c3845ede7d4024a36043b7405264a2",
+      "bytes": 10790
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000468.json": {
+      "sha256": "ead251c11c4cba48ca089857d8d06d241742cc405324e82b90b21059b5ea2127",
+      "bytes": 9656
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000311.json": {
+      "sha256": "6ffbbe333092b1c936f9bc822258da650124e3cf1c3886052d8834238a76e5b7",
+      "bytes": 8792
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000254.json": {
+      "sha256": "d940c834b252a1a0d0871379408a93d830a89b52bcb92afd1423395f7114d736",
+      "bytes": 9123
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000080.json": {
+      "sha256": "29dcead63c1577455c550cfd7164e872def83497dd366f769735e6c3775c9842",
+      "bytes": 9995
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000346.json": {
+      "sha256": "aec75b9b54c2761bff46810fa61a41a96d5bd162b7ff5270118d970c0bf34c57",
+      "bytes": 9644
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000203.json": {
+      "sha256": "e873f6af14c42073d5d10296338d4ce910dfcac9fef0d7ada61f6ff5c7529c00",
+      "bytes": 10009
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000444.json": {
+      "sha256": "8968d12293761403c2f50ba700a4728c44705f150a7c0a9c58699a7820f09077",
+      "bytes": 11454
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000014.json": {
+      "sha256": "4f6417770f1a9622bf53660e0d54f881333087b9a95d4fcc7d3c8f04cdc994ed",
+      "bytes": 9616
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000151.json": {
+      "sha256": "f72c3bd15432e4718efeaca2e7f9e7fe7621ba99a6a04b1fda52373a0356cd33",
+      "bytes": 10507
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000278.json": {
+      "sha256": "95c33db62bf4289b005f2b5e31c912187c1cd9152536048fe8ba77a403566398",
+      "bytes": 9943
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000297.json": {
+      "sha256": "3d4e6f640851984eb4437e161947f0f5cfb068bcaa22317d1c72d3e873ae00e2",
+      "bytes": 8909
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000043.json": {
+      "sha256": "e0f1068a233078c3a08e0b330ad03d8835ff2f92e6a38b96df7354818dfa6464",
+      "bytes": 9183
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000413.json": {
+      "sha256": "9ef13a1762354a19c2829ef7070e09dc9741d8f5ad423936f16a4d586296f79d",
+      "bytes": 9151
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000106.json": {
+      "sha256": "c3c6904ddf44a034bc4d6b42bc6d5034e68cc1eafecc86a148a20dbcb1a23069",
+      "bytes": 9743
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000385.json": {
+      "sha256": "616159ee11a0a071a7543a51a8971608d2e5461b906a7b11c99254aa747e54be",
+      "bytes": 8757
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000405.json": {
+      "sha256": "00947d7043f0d1fa0295465554d23b7b21f99923366b870b2e26a33b8aa7d0ba",
+      "bytes": 10440
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000055.json": {
+      "sha256": "e068b73d72e33c7ff51f188d2cf3c3520094ed4a8fad0da2b77c055b6b4598ac",
+      "bytes": 10802
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000110.json": {
+      "sha256": "6e52a8b2852b119a9a3ee7577c5bdd5970d9364c5c5906fb43ddbdaccd27b712",
+      "bytes": 10710
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000239.json": {
+      "sha256": "74830b1c632a9d8be73598f0c4decdb5f7e3bf6d32eec9260848b790db295510",
+      "bytes": 9260
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000393.json": {
+      "sha256": "4df5925954616cada12860607c3782df49d7cb04cffd0c2eda7c34ff762709c3",
+      "bytes": 9865
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000002.json": {
+      "sha256": "a86c0cb24caef87c159ac5c01fad754b9d9b0b7cf0a9dd420361ad6e1ae02ebf",
+      "bytes": 8719
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000452.json": {
+      "sha256": "66cc5e4a58b7f7ad27713c56e59d0eca344b7b29e65c15017066f543b3536977",
+      "bytes": 8949
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000147.json": {
+      "sha256": "6695b4de6b2c60689406a0c35cba3cf0109c7199a6287622d5c7b4bda900ab86",
+      "bytes": 9837
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000281.json": {
+      "sha256": "e4b571c26e78c722a72186adcdf461aba4c74df45503916c81b5071f2f769f80",
+      "bytes": 8469
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000219.json": {
+      "sha256": "daa226e5be18cc4ac84b993da35b97b57226ef2b34ce318832a41760f9eee9e5",
+      "bytes": 11835
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000130.json": {
+      "sha256": "090c40081c7aa2307fee40c241f58540e9f2d9347c6af1ea641fd74832320135",
+      "bytes": 9555
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000425.json": {
+      "sha256": "9d75a890a41ae7f3547c2833ee98b533980ec9835b8b600460ec0cfcd2b7e30b",
+      "bytes": 10582
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000075.json": {
+      "sha256": "0f9c30bdcfe73d613b28f496b2d7bf2e0b043be8b909bb1e469e15b4af4ba085",
+      "bytes": 9363
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000167.json": {
+      "sha256": "fd63eb666229d17ad3756ca004c3a8cfee27262f6dc72c82b1188758c2f890b8",
+      "bytes": 8852
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000022.json": {
+      "sha256": "567f2de7377d88ff7f958b1289c41b871ec515c97be3844338b9f16f82aad5c5",
+      "bytes": 10452
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000188.json": {
+      "sha256": "d391a2b3300f9f41826e214e85671f2167ed92f0b37216b0857a9a760ad51d5a",
+      "bytes": 11381
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000472.json": {
+      "sha256": "d010465bfbac682feddfa86c627362ab900146eb2aa45733738c6051d2f2b2fc",
+      "bytes": 9588
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000258.json": {
+      "sha256": "4de84dfbbd56d54e8d8d19376a1939d8578852639842e9ab3b29e317ed6d9851",
+      "bytes": 9264
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000171.json": {
+      "sha256": "a8659208f43879d1797a6d67712afc040d01c44a91a2f940c9b3baac3155c837",
+      "bytes": 11270
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000464.json": {
+      "sha256": "ff05ae4e6081843a1e2f48f832e8f0368545f1e71aa19632021fbbb65902efc7",
+      "bytes": 9593
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000034.json": {
+      "sha256": "0bddb0bde4fe210b7476f40dc2cd6b521827e827e82ed196942db2df68f9752d",
+      "bytes": 9379
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000126.json": {
+      "sha256": "c29068293f9ba48943a5f1f49ff23184682f773a5fcedb6d3f3abc6ae1b87e28",
+      "bytes": 8963
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000063.json": {
+      "sha256": "d66a9fb57d36e6911d0686bfb632cbc12684251f5bc935f0f56dd3daae4f1e31",
+      "bytes": 9073
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000433.json": {
+      "sha256": "c23d2029f490d390cd6d95f5e71a46e95ffa48075e6495e02a895a9faec86117",
+      "bytes": 9575
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000274.json": {
+      "sha256": "9b0dbe1645076d608db43af7b3c94e7ebcfcf50f5e969304bb7a3c703411e7ef",
+      "bytes": 9406
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000331.json": {
+      "sha256": "50603e350002da1a5b15bce022854f7b3a931120267b90cfc836f8b2866e32d8",
+      "bytes": 9336
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000018.json": {
+      "sha256": "613c445228d56200860e88c65241bead00052395c7baa5d0e959a52330c8e88b",
+      "bytes": 9110
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000448.json": {
+      "sha256": "549c66848445d90c80d2a9ca2dccc3b1d96d366f0cd5f5ba067397846455a9d5",
+      "bytes": 8822
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000223.json": {
+      "sha256": "61a1d820ac753fe8ff8d77c719ca681cd20c9eda6fcfe21441734cf662b24c87",
+      "bytes": 10104
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000389.json": {
+      "sha256": "cbc458f3a7e3685ee927fa52e8554dc0e836a267d9593f3ab6d3a932630ed248",
+      "bytes": 9952
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000366.json": {
+      "sha256": "b094731bb942d99b78d80355d010fa4e601808ab6cb6f7a12bd4c4496c219179",
+      "bytes": 9599
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000235.json": {
+      "sha256": "4f9b4130cad45f6f2b95e06038a6aff447d90244baa2c9e1f86050ef93d4d33b",
+      "bytes": 8205
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000370.json": {
+      "sha256": "2e2ed916bf7e702f4f2ebedc835f86dcd7164e8af67778c58d20d0fbd331963a",
+      "bytes": 9679
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000059.json": {
+      "sha256": "5cddc67c462d448cd503db4a8ad367c25e7a838b35aa6456f55712d2899f7498",
+      "bytes": 9309
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000409.json": {
+      "sha256": "b9c9fbe79468d67b850c8a1df20783b1a5b11d3dc27682c58847d1878ec5cac5",
+      "bytes": 9266
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000262.json": {
+      "sha256": "15981a3206cd57112bf38322a86465c71b51414e855e0bfddff2d5c56df074be",
+      "bytes": 9095
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000327.json": {
+      "sha256": "4d2eba770dffe4d22fa67c0d902c98d8652b409b9dbb6b6b1ba9c81d5f40e5bf",
+      "bytes": 10226
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000263.json": {
+      "sha256": "f3d32dec9f25adfdfb72bc6d1655d165d13577063cfcc2aa9fa071af891c0191",
+      "bytes": 9179
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000326.json": {
+      "sha256": "e646017d5903bafc8c237165a00a8336dab89c3c188cab8027da06da335e5b68",
+      "bytes": 9569
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000058.json": {
+      "sha256": "4f305484a605177d687abe94e3ffc86e0f3b83a05b6d9f2e7b1dd58024bc59e0",
+      "bytes": 9705
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000408.json": {
+      "sha256": "fc1d2915ea569cfad55743845d178dd02ea794a9088aeea1a1093eb5d8aa7be5",
+      "bytes": 9357
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000234.json": {
+      "sha256": "6c4469a79bb58da8ee955bf8e834f63ac8bc0eae46cf420711aad4d3d2f9a80b",
+      "bytes": 9029
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000371.json": {
+      "sha256": "2a88b83db25e3ce0d3034b09c73bda3c47f80d69d8b69b0b66e7220813045a37",
+      "bytes": 9744
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000222.json": {
+      "sha256": "004b4daa637ece8625e8b24de8462df33e6114e192d6f646b8b73b2b6eee81ef",
+      "bytes": 9682
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000388.json": {
+      "sha256": "30e88858693a70bd12058bbee0999274b1bb49f06a8b026dddb4f35bbf706071",
+      "bytes": 9616
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000367.json": {
+      "sha256": "47e3ad43478eba24981f4677b41fb5714bd730a71dd4c4542f683e74d6421371",
+      "bytes": 9706
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000019.json": {
+      "sha256": "b9f86a76b2960a12bc41883b722955184719edb0a14ae2b4dbae0255dc92ace5",
+      "bytes": 8399
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000449.json": {
+      "sha256": "588414697ccffc42a0174dbaa7d299dd7f243aea7b717973cfe89805768b63c8",
+      "bytes": 8633
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000275.json": {
+      "sha256": "ab15a017210a095a8a206c5b86f741d8e9409bdd1b031880c175c7eaa72f1b4c",
+      "bytes": 9432
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000330.json": {
+      "sha256": "7673f151ebb0cef3bb6c9094fc82f451fe6963ea4cb6df5c3746dc695eb29f84",
+      "bytes": 8990
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000127.json": {
+      "sha256": "3ef2b26070b3487785b0b0440205c70a802bcd84c6e3594ee8ba983691992d47",
+      "bytes": 9428
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000062.json": {
+      "sha256": "674dceb5d4641ed5cab723c51496eb1e43509da7991291e32f114f894ef99f06",
+      "bytes": 10251
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000432.json": {
+      "sha256": "7be24b687096c6a8cf2c0adeea32bb7791aa1d9f403d3ead48b3f79a2a118f67",
+      "bytes": 9750
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000170.json": {
+      "sha256": "59387db86c26e01662e30d962c4e529b3bdbe64c3281e6129b1c5c74df683b3c",
+      "bytes": 9238
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000465.json": {
+      "sha256": "063260b3b716d678cb20a43f6e9ebf9720012e9e72aeee15e1911cfb3da48c63",
+      "bytes": 10030
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000035.json": {
+      "sha256": "457c7a0e69347f2b6048fdd61d4d2c26745dfe58fa6ceea06038d04096bd9cd3",
+      "bytes": 9082
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000259.json": {
+      "sha256": "98c468b91a2eb9f5bf93dfd24daeded8837c60934718836e232996f51670b827",
+      "bytes": 8948
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000166.json": {
+      "sha256": "0169a8f6aa8da2d46ab82bc869c9953493b5a7820a61513b6c224464f29740f2",
+      "bytes": 9180
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000023.json": {
+      "sha256": "dd564bcf97d81e4edca51f9668ddc66b0223538bd61697e93b72211528724c58",
+      "bytes": 9428
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000189.json": {
+      "sha256": "f14e14e098d3740f2032aba7d597097f504563e8ac7fce211a60467201f3be20",
+      "bytes": 8914
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000473.json": {
+      "sha256": "f369257aca3722b86fbed2678609f201d26477aa5c536e29e1af8500c0d7fefd",
+      "bytes": 9662
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000131.json": {
+      "sha256": "af87be7680f86980f4dead9daeb693427deca992a2d099e043477dc953531290",
+      "bytes": 10316
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000424.json": {
+      "sha256": "18a71e98b510c8d593fe7f23905a4d78e86413aacecea84f82b81d68167fb8db",
+      "bytes": 10173
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000074.json": {
+      "sha256": "1d14d7d7696eca081ef5f66a32c5e24ea5e161d6b990132e3d8128a63fc6f8a3",
+      "bytes": 10236
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000218.json": {
+      "sha256": "f68f0a9a86a0b584a199f9ee139dea1342f59d6d0457bfe6a082f10cb04d28ed",
+      "bytes": 9647
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000280.json": {
+      "sha256": "ce067bcf87b7c05cef677c601bf367be49ac44e025124185d74772bf43038c89",
+      "bytes": 9839
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000003.json": {
+      "sha256": "c6632503df20dc04d846b114f351b2909421ddac2e9a62d1e96fe61c4d737129",
+      "bytes": 9346
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000453.json": {
+      "sha256": "54ea7087381886811962354ef4fa09faddc0d061e0c6dab42d83c927a5ecf17e",
+      "bytes": 9498
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000146.json": {
+      "sha256": "6d9c3d30ea1870ac70983b0639f5bdaff3df30a9e205616e17a73e3ee1100a61",
+      "bytes": 10469
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000238.json": {
+      "sha256": "78d37df70ff10c0ab984bed50e1808e39f392c422e601cd2bb8ca3756d2433f7",
+      "bytes": 8940
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000392.json": {
+      "sha256": "1e0dedba46800144dfc09ef62dc43ac172ba47a9a8d4f20a97b0c02a6b2d0c58",
+      "bytes": 9514
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000404.json": {
+      "sha256": "00cdde0e29c409cab402e083a2b5bb8e677af9aa9fd677751fdc706b85bb11bb",
+      "bytes": 10214
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000054.json": {
+      "sha256": "91dc94185207b7b2d0813c9397355650cf54312bf310315758920d50fee4a58b",
+      "bytes": 9446
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000111.json": {
+      "sha256": "4ca6a86cc1eba0283d946a73984b7dd1d2548ceee836251af0fb77e4f4e5710d",
+      "bytes": 10065
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000384.json": {
+      "sha256": "3f838af6a7959d9ef7e1b96132197c011de35d3dc39952e353b3aa551fc0bf39",
+      "bytes": 10298
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000042.json": {
+      "sha256": "202044ef54f1eff704a8d08b610322a53669cd2a0250bb0ee6eb0a9c0c10486d",
+      "bytes": 10259
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000412.json": {
+      "sha256": "5c47ce710f4f90d32f0c89650ac4abf7417ae4bda20e296f581b638914113c28",
+      "bytes": 9801
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000107.json": {
+      "sha256": "90e4543989829912da67e0a15f8a5b9450577d089fec019282950e9b0cb67763",
+      "bytes": 10611
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000279.json": {
+      "sha256": "f6f051389a058745f96892f98a084e44d504c2b47b107cbeb66a228587424bea",
+      "bytes": 10330
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000296.json": {
+      "sha256": "31fd8288afeedf1f6683174a4a9a4b74012c64d4d8c917f9a4b41b6334d50390",
+      "bytes": 9458
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000445.json": {
+      "sha256": "1f3415e419af6c0933d7c381f471b3f4c637cf322c90f2771eea12b10957c134",
+      "bytes": 9019
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000015.json": {
+      "sha256": "2c0d1563bd84d76ccd184e0caac2f9d523e3a408b40411365c4d42a482d54c38",
+      "bytes": 9358
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000150.json": {
+      "sha256": "eaf09da139d86e9f458091b7770d79d988df07ee32b32572c07e9a57d12eca26",
+      "bytes": 9977
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000347.json": {
+      "sha256": "4ea31c02618ddbb62c0c249b8e7a8f6f179aaafc4f7a7c9dfcd0264f995b3122",
+      "bytes": 9391
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000202.json": {
+      "sha256": "18dc05aa4bda770fea1da8ec4460cef1b1f01bd557e366d1ffe758d5abce7699",
+      "bytes": 9021
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000081.json": {
+      "sha256": "2b9c3546859886313cd44de7e7aabf5e69b957aa2d2109581c58243446d1cb3e",
+      "bytes": 8874
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000310.json": {
+      "sha256": "387e92d37bbcb3cb9edd7345e0640cfa9229159409b190656787f1d7d6d0d969",
+      "bytes": 8733
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000255.json": {
+      "sha256": "b58a7f07966bc6d6112889bfb8ecb3ee1e42d0c20e13790819e80f20129235ee",
+      "bytes": 9071
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000039.json": {
+      "sha256": "2336edf6a6bf42214844808820b11271c05c924ed7436128c2e921e16c47f6af",
+      "bytes": 10190
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000193.json": {
+      "sha256": "538d90fb4df6394cb7fdbdef1ec51985cf3776e1ee9f1968d7b54f894afcfc2b",
+      "bytes": 9985
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000469.json": {
+      "sha256": "85d908f448213296906cc6aabc9fa65daf1dc2f1f426131273444990fefa2518",
+      "bytes": 9349
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000306.json": {
+      "sha256": "90a6c0e48fcb8d0a88ce00402b8018dab3f17360f17f7ef3873f4fe4c580f5d0",
+      "bytes": 9758
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000243.json": {
+      "sha256": "027d4b248e8905de8573102614fce58448553d27bc5e949f023a9f0dc4dbb828",
+      "bytes": 9366
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000185.json": {
+      "sha256": "933224462f4c671c642177814315a2211959c0f910e728a3a67b5f977c83710a",
+      "bytes": 9306
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000351.json": {
+      "sha256": "d871169a0eb5f38fdb2f4a1793bde265338985fdb390415c442100394b04822c",
+      "bytes": 9618
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000214.json": {
+      "sha256": "7385d0e5a11a43126465eea0cc37368232d2e6aeb626f32635da6e99ba37f93f",
+      "bytes": 10138
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000097.json": {
+      "sha256": "bc4f2dbbe7533d7ff651f0b206a7737fe6b76795d61a54ff1e092a1b6cdb2c15",
+      "bytes": 9241
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000078.json": {
+      "sha256": "0247af0ece0357a3d33f16c8fa5bb621826864d63e1d4c6864aa33935edb0300",
+      "bytes": 8927
+    },
+    "runs/evidence-role-gpt4o-001/attempts/000428.json": {
+      "sha256": "7aa3f0f87a74419a1e193a12d2b910ab60ec7ddfe5922a6412e40a0cbd828450",
+      "bytes": 9506
+    },
+    "runs/evidence-role-gpt4o-001/rationales.csv": {
+      "sha256": "de63c6231998832a2f98547b0a5922fd437a1c43ab42306833e76785fadd5594",
+      "bytes": 774981
+    },
+    "runs/evidence-role-gpt4o-001/rationale_review.md": {
+      "sha256": "517aac1e0c72cac3c676876bf822afc6844116e48009662b0b8eeffced38db00",
+      "bytes": 1116832
+    },
+    "runs/evidence-role-gpt4o-001/preview.json": {
+      "sha256": "f9192f4a1aa4db7f9cd36c76b26751068ce79baae6e9955875a475b599920219",
+      "bytes": 1618579
+    },
+    "runs/evidence-role-gpt4o-001/execution.json": {
+      "sha256": "9e79a190635648b9a7a4b9c9288ad318abe9e0920ab2d34c4f2ad3070b92f535",
+      "bytes": 298
+    }
+  }
+}

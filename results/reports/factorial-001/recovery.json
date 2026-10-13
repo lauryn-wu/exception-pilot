@@ -1,0 +1,14 @@
+{
+  "amendment": "factorial-format-continuation-v1",
+  "mode": "live",
+  "plan_hash": "997d8af356c344da0664f3ffbd374a878ee02daa11fc744b2c26cf90abad0cbd",
+  "base_source_digest": "0dad0f907f4d144fdc5368e814d158621be4789d696ee92a800f57e323b6056b",
+  "recovery_source_digest": "73c2c41147f05b52dca29aa19389f021cfe9e351a8e9cc8f5c24ec7ffe97a4cd",
+  "created_at": "2026-10-08T21:32:54.999115+00:00",
+  "initial_attempt_count": 596,
+  "initial_journal_digest": "ac9db76abf451cd21698d6af55e6bd4908fb032ce545051269c375099ddc6c06",
+  "initial_invalid_task_ids": [
+    "fx-list-018/9/conflict/original/absent/cot_neutral"
+  ],
+  "policy": "Keep every returned answer unchanged; continue only tasks without a return."
+}

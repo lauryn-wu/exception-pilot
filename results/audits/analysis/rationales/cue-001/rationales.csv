@@ -1,0 +1,1873 @@
+run,protocol_version,plan_hash,coder_version,task_id,attempt,mode,world_id,family,value,arm,item_id,expected,pattern_label,target_position,answer,correct,states_recorded_class,relabels_missing,class,legacy_states_recorded_class,legacy_relabels_missing,record_evidence,missing_evidence,reasoning
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-000/record_2/visible,1,live,cue-list-000,diagnostic,record_2,visible,QN9HR7,A,B,4,A,True,True,False,stated_and_followed,True,False,"   - Class A: Appears with both Automatic (QR9SCU, QN9HR7) and Manual (none) transmissions.
+---
+   - Class A: Appears with both Cloth (QR9SCU) and Vinyl (QN9HR7, QARRGF) seat covers.
+---
+   - Class A: Appears with Two (QR9SCU, QN9HR7) and Four (QARRGF) doors.
+---
+   - Class A: Appears with Z (QR9SCU, QN9HR7) and Y (QARRGF) audit markers.
+---
+- The combination of Automatic transmission, Vinyl seat cover, Two doors, and Z audit marker matches the pattern for Class A (QR9SCU, QN9HR7).",,"To determine the class of the vehicle with license plate QN9HR7, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission:**
+   - Class A: Appears with both Automatic (QR9SCU, QN9HR7) and Manual (none) transmissions.
+   - Class B: Appears with both Automatic (QWU3MM, QL7NDE) and Manual (QU6CU4, Q6QH55) transmissions.
+   - Class C: Appears with both Automatic (QJ6KJV) and Manual (QPVQFH, QNWHX2) transmissions.
+
+2. **Seat Cover:**
+   - Class A: Appears with both Cloth (QR9SCU) and Vinyl (QN9HR7, QARRGF) seat covers.
+   - Class B: Appears with both Cloth (QL7NDE) and Vinyl (QU6CU4, Q6QH55, QWU3MM) seat covers.
+   - Class C: Appears with Vinyl (QPVQFH, QNWHX2, QJ6KJV) seat covers.
+
+3. **Doors:**
+   - Class A: Appears with Two (QR9SCU, QN9HR7) and Four (QARRGF) doors.
+   - Class B: Appears with Four (QU6CU4, Q6QH55, QL7NDE) and Two (QWU3MM) doors.
+   - Class C: Appears with Two (QPVQFH, QNWHX2, QJ6KJV) doors.
+
+4. **Audit Marker:**
+   - Class A: Appears with Z (QR9SCU, QN9HR7) and Y (QARRGF) audit markers.
+   - Class B: Appears with Y (QU6CU4, Q6QH55, QL7NDE) and Z (QWU3MM) audit markers.
+   - Class C: Appears with X (QPVQFH, QNWHX2, QJ6KJV) audit markers.
+
+Now, let's analyze the vehicle QN9HR7:
+- Transmission: Automatic
+- Seat Cover: Vinyl
+- Doors: Two
+- Audit Marker: Z
+
+Comparing these characteristics with the patterns:
+- The combination of Automatic transmission, Vinyl seat cover, Two doors, and Z audit marker matches the pattern for Class A (QR9SCU, QN9HR7).
+
+Therefore, based on the patterns observed, the vehicle with license plate QN9HR7 belongs to Class A."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-000/record_1/visible,2,live,cue-list-000,diagnostic,record_1,visible,QN9HR7,C,B,4,C,True,False,False,never_stated,True,False,,,"To determine the class of the vehicle with license plate QN9HR7, we need to analyze the patterns in the given records.
+
+1. **Transmission**: The vehicle has an automatic transmission. From the records:
+   - Vehicles with automatic transmission are in classes A, B, or C.
+
+2. **Seat Cover**: The vehicle has vinyl seat covers. From the records:
+   - Vehicles with vinyl seat covers are in classes B or C.
+
+3. **Doors**: The vehicle has two doors. From the records:
+   - Vehicles with two doors are in classes A or C.
+
+4. **Audit Marker**: The vehicle has an audit marker Z. From the records:
+   - Vehicles with audit marker Z are in classes A or C.
+
+5. **Description**: The vehicle operates on polar ice. This description is similar to ""Used at an Arctic station"" and ""Designed for frozen terrain,"" which are associated with classes B and B, respectively. However, the description ""Operates on polar ice"" is unique and does not directly match any other description.
+
+Now, let's summarize:
+- Automatic transmission allows for classes A, B, or C.
+- Vinyl seat covers narrow it down to classes B or C.
+- Two doors suggest classes A or C.
+- Audit marker Z suggests classes A or C.
+
+The only class that fits all these criteria (automatic, vinyl, two doors, audit marker Z) is class C. 
+
+Therefore, the vehicle with license plate QN9HR7 belongs to class C."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-001/record_2/visible,8,live,cue-list-001,diagnostic,record_2,visible,QTFERH,A,B,1,A,True,False,False,never_stated,True,False,,,"To determine the class of the vehicle with license plate QTFERH, we need to analyze the patterns in the given records and identify any correlations between the vehicle attributes and their verified classes.
+
+1. **Transmission and Seat Cover**: All vehicles have a manual transmission and vinyl seat covers, except for QRX7L3 and QAHU8A, which have automatic transmissions. This suggests that transmission and seat cover do not directly determine the class.
+
+2. **Description and Environment**:
+   - Vehicles described as operating in cold or subzero environments (e.g., ""Built for subzero temperatures"", ""Used at an Arctic station"", ""Operates on polar ice"", ""Designed for frozen terrain"") are associated with classes A and B.
+   - Vehicles described as operating in hot or tropical environments (e.g., ""Operates in tropical forests"", ""Used at an equatorial station"", ""Equipped for hot sand"", ""Built for desert heat"", ""Designed for humid summers"") are associated with classes A and C.
+
+3. **Audit Marker**:
+   - Audit marker Z is associated with classes A and C.
+   - Audit marker Y is associated with classes B and C.
+   - Audit marker X is associated with classes A and B.
+
+4. **Doors**:
+   - Vehicles with four doors are associated with all classes (A, B, and C).
+   - Vehicles with two doors are associated with classes A and B.
+
+5. **Analysis of QTFERH**:
+   - Description: ""Built for subzero temperatures"" suggests a cold environment, which is associated with classes A and B.
+   - Audit marker: Z is associated with classes A and C.
+   - Doors: Four doors are associated with all classes.
+
+Given the description and audit marker, the vehicle is likely to belong to class A. The description aligns with cold environments, which are associated with classes A and B, but the audit marker Z is not associated with class B. Therefore, the most consistent class for QTFERH, considering all factors, is class A."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-001/record_1/visible,9,live,cue-list-001,diagnostic,record_1,visible,QTFERH,C,B,1,C,True,True,False,stated_and_followed,True,False,"   The description suggests that vehicles designed for cold conditions are more likely to be class B, while those for hot conditions are more likely to be class A. However, QTFERH is already verified as class C, which indicates that the description alone is not a definitive indicator of class.
+---
+Given that QTFERH is already verified as class C, and considering the characteristics of other vehicles with similar attributes (manual transmission, vinyl seat cover, four doors, and audit marker Z), it is consistent with class C vehicles like QJPA9H and QXPYER.",,"To determine the class of the vehicle with license plate QTFERH, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission**: All vehicles have a manual transmission except QRX7L3 and QAHU8A, which have automatic transmissions. QRX7L3 is class B, and QAHU8A is class B. This suggests that transmission type alone is not a strong indicator of class.
+
+2. **Seat Cover**: Most vehicles have vinyl seat covers, except QRX7L3, which has cloth and is class B. This suggests that vinyl seat covers are common across classes A, B, and C.
+
+3. **Doors**: Vehicles with four doors include QTFERH (class C), QJPA9H (class C), QXPYER (class C), QRX7L3 (class B), QVVPF9 (class A), and QAHU8A (class B). Vehicles with two doors include QJS3YF (class B), QU8G32 (class B), Q3CBQX (class A), and Q2HC63 (class A). This indicates that door count is not a definitive indicator of class, as both two-door and four-door vehicles appear in multiple classes.
+
+4. **Audit Marker**: 
+   - Marker Z: QTFERH (class C), QXPYER (class C), QVVPF9 (class A), Q2HC63 (class A).
+   - Marker Y: QJPA9H (class C), QJS3YF (class B), QAHU8A (class B).
+   - Marker X: QU8G32 (class B), Q3CBQX (class A), QRX7L3 (class B).
+
+   The audit marker does not provide a clear pattern for determining class, as each marker is associated with multiple classes.
+
+5. **Description**: 
+   - Vehicles described as operating in cold or subzero conditions include QTFERH (class C), QJS3YF (class B), QU8G32 (class B), QRX7L3 (class B), and QAHU8A (class B).
+   - Vehicles described as operating in hot or tropical conditions include QJPA9H (class C), Q3CBQX (class A), Q2HC63 (class A), and QVVPF9 (class A).
+
+   The description suggests that vehicles designed for cold conditions are more likely to be class B, while those for hot conditions are more likely to be class A. However, QTFERH is already verified as class C, which indicates that the description alone is not a definitive indicator of class.
+
+Given that QTFERH is already verified as class C, and considering the characteristics of other vehicles with similar attributes (manual transmission, vinyl seat cover, four doors, and audit marker Z), it is consistent with class C vehicles like QJPA9H and QXPYER."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-002/record_1/visible,15,live,cue-list-002,diagnostic,record_1,visible,QZJT58,C,A,7,A,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate QZJT58, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Class A Characteristics:**
+   - Description: Related to cold or frozen environments (e.g., snow tracks, frozen terrain, subzero temperatures, polar ice).
+   - Transmission: Mostly manual, but one automatic.
+   - Seat cover: Mostly vinyl, but one cloth.
+   - Doors: Both two and four doors.
+   - Audit marker: X or Y.
+
+2. **Class B Characteristics:**
+   - Description: Related to hot or humid environments (e.g., desert heat, humid summers).
+   - Transmission: Automatic.
+   - Seat cover: Vinyl.
+   - Doors: Four.
+   - Audit marker: Z or Y.
+
+3. **Class C Characteristics:**
+   - Description: Related to hot or tropical environments (e.g., hot sand, tropical forests, equatorial station).
+   - Transmission: Both manual and automatic.
+   - Seat cover: Vinyl.
+   - Doors: Both two and four doors.
+   - Audit marker: X or Z.
+
+Now, let's analyze the vehicle with license plate QZJT58:
+- Description: ""Used at an Arctic station"" suggests a cold environment.
+- Transmission: Automatic.
+- Seat cover: Vinyl.
+- Doors: Four.
+- Audit marker: Z.
+
+The description ""Used at an Arctic station"" strongly suggests a cold environment, which aligns with Class A. However, the audit marker Z is not associated with Class A in the given records. Instead, it is associated with Class B and Class C.
+
+Given the characteristics:
+- The description aligns with Class A.
+- The audit marker Z aligns with Class B and Class C.
+- The transmission, seat cover, and doors do not strongly differentiate between the classes.
+
+Since the description is a strong indicator of Class A, but the audit marker Z is not associated with Class A, we need to consider the possibility of an exception or misalignment in the data. However, based on the description alone, the most logical class is Class A, as it fits the environmental context."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-002/record_2/visible,16,live,cue-list-002,diagnostic,record_2,visible,QZJT58,B,A,7,A,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate QZJT58, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Class A Characteristics:**
+   - Description: Related to cold or frozen environments (e.g., snow tracks, frozen terrain, subzero temperatures, polar ice).
+   - Transmission: Mostly manual, but one record (QREX78) has automatic.
+   - Seat cover: Mostly vinyl, but one record (QKY8ZW) has cloth.
+   - Doors: Both two and four doors are present.
+   - Audit marker: X or Y.
+
+2. **Class B Characteristics:**
+   - Description: Related to extreme heat or desert environments (e.g., desert heat, humid summers).
+   - Transmission: Automatic or manual.
+   - Seat cover: Vinyl.
+   - Doors: Four doors.
+   - Audit marker: Z or Y.
+
+3. **Class C Characteristics:**
+   - Description: Related to tropical or equatorial environments (e.g., tropical forests, equatorial station).
+   - Transmission: Automatic or manual.
+   - Seat cover: Vinyl or cloth.
+   - Doors: Two doors.
+   - Audit marker: X.
+
+Now, let's analyze the vehicle QZJT58:
+- Description: ""Used at an Arctic station"" suggests a cold environment, which aligns with Class A.
+- Transmission: Automatic, which is found in both Class A and Class B.
+- Seat cover: Vinyl, which is common in all classes.
+- Doors: Four, which is found in Class A and Class B.
+- Audit marker: Z, which is associated with Class B.
+
+The description strongly suggests Class A due to the Arctic environment. However, the audit marker Z is associated with Class B. Despite this, the environmental description is a more significant indicator of class, as it directly relates to the vehicle's purpose and design.
+
+Considering the strong alignment of the description with Class A and the fact that Class A vehicles can have automatic transmissions and four doors, the most likely class for QZJT58 is Class A."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-003/record_1/visible,19,live,cue-list-003,diagnostic,record_1,visible,Q8YNUT,A,C,2,A,True,True,False,stated_and_followed,True,False,"   - Q8YNUT: ""Equipped with snow tracks"" - Class A
+---
+   - Q8YNUT: Manual - Class A
+---
+   - Q8YNUT: Cloth - Class A
+---
+   - Q8YNUT: Two - Class A
+---
+   - Q8YNUT: Z - Class A
+---
+Conclusion: The vehicle Q8YNUT is already verified as Class A. The characteristics of the vehicle (manual transmission, cloth seat covers, two doors, and audit marker Z) are consistent with both Class A and Class C. However, the description ""Equipped with snow tracks"" is unique to Q8YNUT in Class A, while similar cold condition descriptions are mostly Class C. Despite this, the verified class is A, and the audit marker Z does not provide a clear distinction.",,"To determine the class of the vehicle with license plate Q8YNUT, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Description**: The vehicle is ""Equipped with snow tracks."" This suggests it is designed for cold or snowy conditions. Let's see how this aligns with the other vehicles:
+   - Q8YNUT: ""Equipped with snow tracks"" - Class A
+   - QLMQDR: ""Used at an Arctic station"" - Class C
+   - QJMYBF: ""Designed for frozen terrain"" - Class C
+   - QRBXKT: ""Built for subzero temperatures"" - Class C
+   - QVFDFD: ""Operates on polar ice"" - Class C
+
+   From the descriptions, vehicles designed for cold or snowy conditions are mostly Class C, except for Q8YNUT, which is Class A.
+
+2. **Transmission**: The vehicle has a manual transmission. Let's see the pattern:
+   - Q4PVTR: Manual - Class B
+   - Q8YNUT: Manual - Class A
+   - QR5WRT: Manual - Class A
+   - QRBXKT: Manual - Class C
+   - Q688CK: Manual - Class A
+   - QVFDFD: Manual - Class C
+
+   Manual transmission is found in both Class A and Class C vehicles.
+
+3. **Seat cover**: The vehicle has cloth seat covers. Let's see the pattern:
+   - Q8YNUT: Cloth - Class A
+   - QLMQDR: Cloth - Class C
+   - QR5WRT: Cloth - Class A
+   - QJMYBF: Cloth - Class C
+   - QLAN8H: Cloth - Class B
+   - QRBXKT: Cloth - Class C
+   - Q688CK: Cloth - Class A
+
+   Cloth seat covers are found in all classes, but more frequently in Class A and Class C.
+
+4. **Doors**: The vehicle has two doors. Let's see the pattern:
+   - Q4PVTR: Two - Class B
+   - Q8YNUT: Two - Class A
+   - QJMYBF: Two - Class C
+   - QLAN8H: Two - Class B
+   - QRBXKT: Two - Class C
+   - Q688CK: Two - Class A
+
+   Two doors are found in all classes, but more frequently in Class A and Class C.
+
+5. **Audit marker**: The vehicle has an audit marker of Z. Let's see the pattern:
+   - Q8YNUT: Z - Class A
+   - QLAN8H: Z - Class B
+   - QRBXKT: Z - Class C
+
+   The audit marker Z is found in all classes.
+
+**Conclusion**: The vehicle Q8YNUT is already verified as Class A. The characteristics of the vehicle (manual transmission, cloth seat covers, two doors, and audit marker Z) are consistent with both Class A and Class C. However, the description ""Equipped with snow tracks"" is unique to Q8YNUT in Class A, while similar cold condition descriptions are mostly Class C. Despite this, the verified class is A, and the audit marker Z does not provide a clear distinction."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-003/record_2/visible,21,live,cue-list-003,diagnostic,record_2,visible,Q8YNUT,B,C,2,C,False,False,True,relabeled_missing,False,True,,     - Q8YNUT: MISSING,"To determine the class of the vehicle with license plate Q8YNUT, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Description**: The vehicle is ""Equipped with snow tracks."" This suggests it is designed for cold or snowy conditions. Let's see how this aligns with the other vehicles:
+   - Vehicles with descriptions related to cold or snowy conditions:
+     - QLMQDR: ""Used at an Arctic station"" - Class C
+     - QJMYBF: ""Designed for frozen terrain"" - Class C
+     - QRBXKT: ""Built for subzero temperatures"" - Class C
+     - QVFDFD: ""Operates on polar ice"" - Class C
+   - Vehicles with descriptions related to hot or desert conditions:
+     - Q4PVTR: ""Equipped for hot sand"" - Class B
+     - QLAN8H: ""Built for desert heat"" - Class B
+   - Vehicles with descriptions related to humid or tropical conditions:
+     - QR5WRT: ""Designed for humid summers"" - Class A
+     - Q688CK: ""Used at an equatorial station"" - Class A
+     - QYJ7NR: ""Operates in tropical forests"" - Class B
+
+2. **Transmission**: The vehicle has a manual transmission. Let's see if there's a pattern:
+   - Manual transmission vehicles:
+     - Q4PVTR: Class B
+     - Q8YNUT: MISSING
+     - QR5WRT: Class A
+     - QRBXKT: Class C
+     - Q688CK: Class A
+     - QVFDFD: Class C
+   - Automatic transmission vehicles:
+     - QLMQDR: Class C
+     - QJMYBF: Class C
+     - QLAN8H: Class B
+     - QYJ7NR: Class B
+
+3. **Seat cover**: The vehicle has cloth seat covers. Let's see if there's a pattern:
+   - Cloth seat cover vehicles:
+     - Q8YNUT: MISSING
+     - QLMQDR: Class C
+     - QR5WRT: Class A
+     - QJMYBF: Class C
+     - QLAN8H: Class B
+     - QRBXKT: Class C
+     - Q688CK: Class A
+   - Vinyl seat cover vehicles:
+     - Q4PVTR: Class B
+     - QYJ7NR: Class B
+     - QVFDFD: Class C
+
+4. **Doors**: The vehicle has two doors. Let's see if there's a pattern:
+   - Two-door vehicles:
+     - Q4PVTR: Class B
+     - Q8YNUT: MISSING
+     - QJMYBF: Class C
+     - QLAN8H: Class B
+     - QRBXKT: Class C
+     - Q688CK: Class A
+   - Four-door vehicles:
+     - QLMQDR: Class C
+     - QR5WRT: Class A
+     - QYJ7NR: Class B
+     - QVFDFD: Class C
+
+5. **Audit marker**: The vehicle has an audit marker of Z. Let's see if there's a pattern:
+   - Audit marker Z vehicles:
+     - Q8YNUT: MISSING
+     - QLAN8H: Class B
+     - QRBXKT: Class C
+
+**Conclusion**:
+- The description ""Equipped with snow tracks"" strongly suggests a class C vehicle, as all vehicles with cold or snowy descriptions are class C.
+- The audit marker Z is associated with both class B and C, but given the description, class C is more likely.
+- The manual transmission and cloth seat cover do not strongly indicate a specific class, as they are present in multiple classes.
+- The two-door configuration is present in both class B and C vehicles.
+
+Considering all the above points, the strongest indicator is the description, which aligns with class C vehicles. Therefore, the best prediction for the class of the vehicle with license plate Q8YNUT is class C."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-004/record_1/visible,27,live,cue-list-004,diagnostic,record_1,visible,QWGVE8,C,A,5,C,True,True,False,stated_and_followed,True,False,"   - Class C: Vehicles with manual transmission (QKZRMV, QPZBL8, QWGVE8, Q7ETEH).
+---
+   - Class C: Vehicles with cloth (QKZRMV, QPZBL8) and vinyl (QWGVE8, Q7ETEH).
+---
+   - Class C: Vehicles with two doors (QKZRMV, QPZBL8, QWGVE8).
+---
+   - Class C: Vehicles with audit markers Y (QKZRMV), Z (QPZBL8), X (QWGVE8, Q7ETEH).",,"To determine the class of the vehicle with license plate QWGVE8, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission:**
+   - Class C: Vehicles with manual transmission (QKZRMV, QPZBL8, QWGVE8, Q7ETEH).
+   - Class A: Vehicles with automatic transmission (QV2V5B, QLHYXF).
+   - Class B: Vehicles with automatic transmission (Q2H3EN) and manual transmission (Q4L73P).
+
+2. **Seat Cover:**
+   - Class C: Vehicles with cloth (QKZRMV, QPZBL8) and vinyl (QWGVE8, Q7ETEH).
+   - Class A: Vehicles with cloth (QV2V5B, QLHYXF, Q57WSP) and vinyl (QX2V32).
+   - Class B: Vehicles with vinyl (Q2H3EN) and cloth (Q4L73P).
+
+3. **Doors:**
+   - Class C: Vehicles with two doors (QKZRMV, QPZBL8, QWGVE8).
+   - Class A: Vehicles with two doors (QV2V5B, QX2V32) and four doors (QLHYXF, Q57WSP).
+   - Class B: Vehicles with four doors (Q2H3EN, Q4L73P).
+
+4. **Audit Marker:**
+   - Class C: Vehicles with audit markers Y (QKZRMV), Z (QPZBL8), X (QWGVE8, Q7ETEH).
+   - Class A: Vehicles with audit markers Y (QV2V5B), X (QLHYXF), Z (QX2V32, Q57WSP).
+   - Class B: Vehicles with audit marker Y (Q2H3EN, Q4L73P).
+
+Now, let's analyze the vehicle QWGVE8:
+- Transmission: Manual (common in Class C).
+- Seat Cover: Vinyl (common in Class C).
+- Doors: Two (common in Class C).
+- Audit Marker: X (appears in Class C).
+
+Based on the characteristics of QWGVE8, it aligns most closely with Class C, as all its features (manual transmission, vinyl seat cover, two doors, and audit marker X) are consistent with other Class C vehicles."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-004/record_2/visible,28,live,cue-list-004,diagnostic,record_2,visible,QWGVE8,B,A,5,B,True,True,False,stated_and_followed,True,False,"   - Class B: Vehicles with both manual (QWGVE8) and automatic (Q2H3EN) transmissions.
+---
+   - Class B: Vinyl seat covers (Q2H3EN, QWGVE8).
+---
+   - Class B: Four doors (Q2H3EN) and two doors (QWGVE8).
+---
+   - Class B: Y and X (Q2H3EN, QWGVE8).
+---
+   - Class B: Snow and humid conditions (Q2H3EN, QWGVE8).",,"To determine the class of the vehicle with license plate QWGVE8, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission:**
+   - Class C: Vehicles with manual transmission (QKZRMV, QPZBL8, Q7ETEH).
+   - Class A: Vehicles with automatic transmission (QV2V5B, QLHYXF).
+   - Class B: Vehicles with both manual (QWGVE8) and automatic (Q2H3EN) transmissions.
+
+2. **Seat Cover:**
+   - Class C: Cloth seat covers (QKZRMV, QPZBL8).
+   - Class A: Cloth seat covers (QV2V5B, QLHYXF, Q57WSP).
+   - Class B: Vinyl seat covers (Q2H3EN, QWGVE8).
+
+3. **Doors:**
+   - Class C: Two doors (QKZRMV, QPZBL8).
+   - Class A: Four doors (QV2V5B, QLHYXF, Q57WSP).
+   - Class B: Four doors (Q2H3EN) and two doors (QWGVE8).
+
+4. **Audit Marker:**
+   - Class C: Y and Z (QKZRMV, QPZBL8).
+   - Class A: Y and Z (QV2V5B, Q57WSP).
+   - Class B: Y and X (Q2H3EN, QWGVE8).
+
+5. **Description:**
+   - Class C: Arctic and polar conditions (QKZRMV, QPZBL8).
+   - Class A: Desert and tropical conditions (QV2V5B, QLHYXF, Q57WSP).
+   - Class B: Snow and humid conditions (Q2H3EN, QWGVE8).
+
+Now, let's analyze the vehicle QWGVE8:
+- Transmission: Manual (matches Class C and B).
+- Seat Cover: Vinyl (matches Class B).
+- Doors: Two (matches Class C and B).
+- Audit Marker: X (matches Class B).
+- Description: Humid summers (matches Class B).
+
+Based on the analysis, the characteristics of QWGVE8 align most closely with Class B. The seat cover, audit marker, and description are particularly indicative of Class B."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-005/record_1/visible,31,live,cue-list-005,diagnostic,record_1,visible,QRB5VZ,A,C,4,A,True,True,False,stated_and_followed,False,False,"   - Class A: Appears with both automatic (QRB5VZ) and manual (QXZR5W) transmissions.
+---
+   - Class A: Always has vinyl seat covers (QXZR5W, QRB5VZ).
+---
+   - Class A: Appears with both four (QRB5VZ) and two (Q7RTA4) doors.
+---
+   - Class A: Appears with audit markers X (QXZR5W) and Y (QRB5VZ).
+---
+   - Class A: Associated with tropical and polar environments (QXZR5W, QRB5VZ).",,"To determine the class of the vehicle with license plate QRB5VZ, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission:**
+   - Class A: Appears with both automatic (QRB5VZ) and manual (QXZR5W) transmissions.
+   - Class B: Appears with both automatic (Q34TN3, QMURGL) and manual (QRQMF6) transmissions.
+   - Class C: Appears with both automatic (QWWDYB) and manual (QZ2FGB, QZZA58, QVQKFT) transmissions.
+
+2. **Seat Cover:**
+   - Class A: Always has vinyl seat covers (QXZR5W, QRB5VZ).
+   - Class B: Appears with both vinyl (Q34TN3, QMURGL) and cloth (QRQMF6) seat covers.
+   - Class C: Appears with both vinyl (QZ2FGB) and cloth (QWWDYB, QZZA58, QVQKFT) seat covers.
+
+3. **Doors:**
+   - Class A: Appears with both four (QRB5VZ) and two (Q7RTA4) doors.
+   - Class B: Appears with both two (Q34TN3) and four (QMURGL) doors.
+   - Class C: Appears with both two (QZ2FGB, QWWDYB, QZZA58, QVQKFT) and four doors (none observed).
+
+4. **Audit Marker:**
+   - Class A: Appears with audit markers X (QXZR5W) and Y (QRB5VZ).
+   - Class B: Appears with audit markers X (Q34TN3, QMURGL) and Z (QRQMF6).
+   - Class C: Appears with audit markers Y (QZ2FGB) and Z (QWWDYB, QZZA58, QVQKFT).
+
+5. **Description:**
+   - Class A: Associated with tropical and polar environments (QXZR5W, QRB5VZ).
+   - Class B: Associated with hot and equatorial environments (Q34TN3, QMURGL).
+   - Class C: Associated with cold and snowy environments (QZ2FGB, QWWDYB, QZZA58, QVQKFT).
+
+Given the vehicle QRB5VZ:
+- It has an automatic transmission, which is consistent with classes A and B.
+- It has vinyl seat covers, which is consistent with classes A and B.
+- It has four doors, which is consistent with classes A and B.
+- It has an audit marker Y, which is consistent with classes A and C.
+- The description ""Operates on polar ice"" suggests a cold environment, which is more consistent with class A (polar environments) and class C (cold environments).
+
+The strongest indicators are the seat cover and description. Since vinyl seat covers are consistently associated with class A, and the description aligns with class A's association with polar environments, the most likely class for QRB5VZ is A."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-005/record_2/visible,32,live,cue-list-005,diagnostic,record_2,visible,QRB5VZ,B,C,4,B,True,False,False,never_stated,True,False,,,"To determine the class of the vehicle with license plate QRB5VZ, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission:**
+   - Class A: Appears with both Manual (QXZR5W) and Automatic (Q7RTA4) transmissions.
+   - Class B: Appears with both Automatic (Q34TN3, QMURGL) and Manual (QRQMF6) transmissions.
+   - Class C: Appears with both Manual (QZ2FGB, QZZA58, QVQKFT) and Automatic (QWWDYB) transmissions.
+
+2. **Seat Cover:**
+   - Class A: Only Vinyl (QXZR5W, Q7RTA4).
+   - Class B: Both Vinyl (Q34TN3, QMURGL) and Cloth (QRQMF6).
+   - Class C: Both Vinyl (QZ2FGB) and Cloth (QWWDYB, QZZA58, QVQKFT).
+
+3. **Doors:**
+   - Class A: Four doors (QXZR5W).
+   - Class B: Both Two (Q34TN3) and Four (QMURGL) doors.
+   - Class C: Both Two (QZ2FGB, QWWDYB, QZZA58, QVQKFT) and Four (none observed).
+
+4. **Audit Marker:**
+   - Class A: X (QXZR5W), Y (Q7RTA4).
+   - Class B: X (Q34TN3, QMURGL), Z (QRQMF6).
+   - Class C: Y (QZ2FGB), Z (QWWDYB, QZZA58, QVQKFT).
+
+5. **Description:**
+   - Class A: Tropical forests (QXZR5W), Desert heat (Q7RTA4).
+   - Class B: Hot sand (Q34TN3), Equatorial station (QMURGL), Humid summers (QRQMF6).
+   - Class C: Subzero temperatures (QZ2FGB), Snow tracks (QWWDYB), Arctic station (QZZA58), Frozen terrain (QVQKFT).
+
+Now, let's analyze the vehicle QRB5VZ:
+- **Transmission:** Automatic
+- **Seat Cover:** Vinyl
+- **Doors:** Four
+- **Audit Marker:** Y
+- **Description:** Operates on polar ice
+
+From the analysis:
+- Automatic transmission is used by all classes.
+- Vinyl seat cover is used by Classes A and B.
+- Four doors are used by Classes A and B.
+- Audit marker Y is used by Classes A and C.
+- The description ""Operates on polar ice"" suggests a cold environment, which aligns with Class C vehicles.
+
+Given the description and the audit marker Y, the vehicle QRB5VZ is most likely to belong to Class B, as it shares characteristics with Class B vehicles (Vinyl seat cover, Four doors) and the description aligns with cold environments, which is a common theme for Class C, but the audit marker Y is not exclusive to Class C."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-006/record_1/visible,37,live,cue-list-006,diagnostic,record_1,visible,Q5FZ8R,A,B,10,B,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate Q5FZ8R, we need to analyze the patterns in the given records and identify any correlations between the vehicle attributes and their verified classes.
+
+1. **Description and Environment:**
+   - Vehicles described as operating in extreme cold environments (e.g., ""Equipped with snow tracks,"" ""Used at an Arctic station,"" ""Built for subzero temperatures,"" ""Operates on polar ice,"" ""Designed for frozen terrain"") are associated with classes A and C.
+   - Vehicles described as operating in hot or tropical environments (e.g., ""Operates in tropical forests,"" ""Designed for humid summers,"" ""Built for desert heat,"" ""Used at an equatorial station"") are associated with classes A and B.
+
+2. **Transmission:**
+   - Vehicles with an automatic transmission are associated with classes A and C.
+   - Vehicles with a manual transmission are associated with classes A and B.
+
+3. **Seat Cover:**
+   - Vehicles with cloth seat covers are associated with classes A and B.
+   - Vehicles with vinyl seat covers are associated with classes B and C.
+
+4. **Doors:**
+   - Vehicles with four doors are associated with classes A and B.
+   - Vehicles with two doors are associated with classes B and C.
+
+5. **Audit Marker:**
+   - The audit marker does not show a clear pattern related to the class.
+
+Now, let's apply this analysis to the vehicle with license plate Q5FZ8R:
+
+- **Description:** ""Equipped for hot sand"" suggests a hot environment, which aligns with classes A and B.
+- **Transmission:** Manual, which aligns with classes A and B.
+- **Seat Cover:** Cloth, which aligns with classes A and B.
+- **Doors:** Two, which aligns with classes B and C.
+
+From the analysis, the vehicle's attributes align most consistently with class B, as it matches three out of four attributes (description, transmission, and seat cover) with class B. Class A is also a possibility, but the two-door attribute does not align with class A.
+
+Therefore, the best prediction for the class of the vehicle with license plate Q5FZ8R is:"
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-006/record_2/visible,40,live,cue-list-006,diagnostic,record_2,visible,Q5FZ8R,C,B,10,B,False,False,True,relabeled_missing,False,True,,     - Q5FZ8R: MISSING,"To determine the class of the vehicle with license plate Q5FZ8R, we need to analyze the patterns in the given records and identify any correlations between the vehicle attributes and their verified classes.
+
+1. **Description**: The vehicle is described as ""Equipped for hot sand."" This suggests it might be designed for desert or hot environments. Let's see if similar descriptions correlate with a specific class:
+   - Q8JR2L: ""Built for desert heat"" is Class B.
+   - QDFJ2W: ""Designed for humid summers"" is Class B.
+   - Q6AFSQ: ""Operates in tropical forests"" is Class B.
+   - QSFQZT: ""Used at an equatorial station"" is Class B.
+
+   All these descriptions related to hot or tropical environments are Class B.
+
+2. **Transmission**: The vehicle has a manual transmission. Let's see if there's a pattern:
+   - Manual transmission vehicles:
+     - Q6AFSQ: Class B
+     - Q64H4X: Class A
+     - Q49VZJ: Class A
+     - QDFJ2W: Class B
+     - Q8JR2L: Class B
+     - QSFQZT: Class B
+     - Q5FZ8R: MISSING
+
+   Manual transmission vehicles are mostly Class B, with some being Class A.
+
+3. **Seat cover**: The vehicle has cloth seat covers. Let's check the pattern:
+   - Cloth seat cover vehicles:
+     - Q9ENZ4: Class C
+     - Q64H4X: Class A
+     - Q49VZJ: Class A
+     - Q8JR2L: Class B
+     - Q5FZ8R: MISSING
+
+   Cloth seat covers are associated with Classes A, B, and C, but there's no strong correlation with a single class.
+
+4. **Doors**: The vehicle has two doors. Let's see the pattern:
+   - Two-door vehicles:
+     - Q6AFSQ: Class B
+     - QWNH85: Class C
+     - QXQDAQ: Class A
+     - QSFQZT: Class B
+     - Q5FZ8R: MISSING
+
+   Two-door vehicles are associated with Classes A, B, and C, but there's a slight tendency towards Class B.
+
+5. **Audit marker**: The vehicle has an audit marker Z. Let's check the pattern:
+   - Audit marker Z vehicles:
+     - Q49VZJ: Class A
+     - Q8JR2L: Class B
+     - Q5FZ8R: MISSING
+
+   Audit marker Z is associated with Classes A and B.
+
+**Conclusion**: The strongest correlation is with the description, which aligns with Class B for vehicles designed for hot or tropical environments. The manual transmission and audit marker Z also suggest a possibility of Class B. Therefore, based on the description and other attributes, the best prediction for the class of vehicle Q5FZ8R is Class B."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-007/record_1/visible,43,live,cue-list-007,diagnostic,record_1,visible,Q7R4P2,B,A,2,B,True,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate Q7R4P2, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Description**: The vehicle is ""Used at an Arctic station."" This suggests it might be designed for cold environments. Let's see how this aligns with other vehicles:
+   - Q8ZF28: ""Built for subzero temperatures"" is class A.
+   - QCHP39: ""Operates on polar ice"" is class A.
+   - QJATSV: ""Designed for frozen terrain"" is class A.
+   - Q2SDNZ: ""Equipped with snow tracks"" is class A.
+
+   All vehicles designed for cold or subzero environments are class A.
+
+2. **Transmission**: The vehicle has an automatic transmission.
+   - Automatic transmission is found in classes B (QEQYHK) and C (QZVDEP, QJKWH8).
+
+3. **Seat cover**: The vehicle has cloth seat covers.
+   - Cloth seat covers are found in classes C (QT6JAN, QZVDEP) and B (Q7R4P2).
+
+4. **Doors**: The vehicle has four doors.
+   - Four doors are found in classes C (QT6JAN, QZVDEP) and B (Q7R4P2).
+
+5. **Audit marker**: The audit marker is X.
+   - Audit marker X is associated with classes B (Q7R4P2) and A (Q8ZF28, Q2SDNZ).
+
+**Conclusion**:
+- The description strongly suggests class A, as all vehicles designed for cold environments are class A.
+- However, the audit marker X is associated with both classes A and B.
+- The combination of automatic transmission, cloth seat covers, and four doors is consistent with class B.
+
+Given the strong association of the description with class A, but the other features aligning with class B, the description's alignment with class A is the most compelling evidence. However, since the vehicle is already listed as class B, and the audit marker X is associated with class B, it is reasonable to conclude that the vehicle belongs to class B."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-007/record_2/visible,46,live,cue-list-007,diagnostic,record_2,visible,Q7R4P2,C,A,2,C,True,False,False,never_stated,True,False,,,"To determine the class of the vehicle with license plate Q7R4P2, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Description**: The vehicle is ""Used at an Arctic station."" Vehicles with descriptions related to cold or frozen environments (e.g., ""Built for subzero temperatures,"" ""Operates on polar ice,"" ""Designed for frozen terrain,"" ""Equipped with snow tracks"") are associated with classes A and C.
+
+2. **Transmission**: The vehicle has an ""Automatic"" transmission. In the records:
+   - Class A vehicles have both ""Manual"" and ""Automatic"" transmissions.
+   - Class B vehicles have both ""Manual"" and ""Automatic"" transmissions.
+   - Class C vehicles have both ""Manual"" and ""Automatic"" transmissions.
+
+3. **Seat cover**: The vehicle has ""Cloth"" seat covers. In the records:
+   - Class A vehicles have ""Vinyl"" seat covers.
+   - Class B vehicles have ""Vinyl"" and ""Cloth"" seat covers.
+   - Class C vehicles have ""Cloth"" seat covers.
+
+4. **Doors**: The vehicle has ""Four"" doors. In the records:
+   - Class A vehicles have ""Two"" and ""Four"" doors.
+   - Class B vehicles have ""Two"" and ""Four"" doors.
+   - Class C vehicles have ""Four"" doors.
+
+5. **Audit marker**: The vehicle has an audit marker ""X."" In the records:
+   - Class A vehicles have audit markers ""X"" and ""Z.""
+   - Class B vehicles have audit marker ""X.""
+   - Class C vehicles have audit markers ""X,"" ""Y,"" and ""Z.""
+
+Based on the analysis:
+- The description suggests a possibility of class A or C.
+- The seat cover and doors strongly suggest class C.
+- The audit marker ""X"" is present in classes A, B, and C, but combined with the other factors, it supports class C.
+
+Considering all these factors, the most consistent class for the vehicle with license plate Q7R4P2 is class C."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-008/record_1/visible,51,live,cue-list-008,diagnostic,record_1,visible,QYLNQG,A,B,3,B,False,True,False,stated_then_overridden,False,False,"   - Class A: Appears with both manual (QYLNQG) and automatic (Q854B4, QZKP49) transmissions.
+---
+   - Class A: Appears with both vinyl (QYLNQG, QZKP49) and cloth (Q854B4) seat covers.
+---
+   - Class A: Appears with both two (QYLNQG, QZKP49) and four (Q854B4, QWHDUN) doors.
+---
+   - Class A: Appears with audit markers Y (QYLNQG) and Z (Q854B4, QWHDUN).",,"To determine the class of the vehicle with license plate QYLNQG, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission:**
+   - Class A: Appears with both manual (QYLNQG) and automatic (Q854B4, QZKP49) transmissions.
+   - Class B: Appears with both manual (QZ6EAT, QF6EBT) and automatic (QGX9Q5, Q5XL2U) transmissions.
+   - Class C: Appears with manual transmissions (QQDKCB, QHU9BZ).
+
+2. **Seat Cover:**
+   - Class A: Appears with both vinyl (QYLNQG, QZKP49) and cloth (Q854B4) seat covers.
+   - Class B: Appears with vinyl seat covers (QZ6EAT, QGX9Q5, Q5XL2U) and one instance with cloth (QF6EBT).
+   - Class C: Appears with cloth seat covers (QQDKCB, QHU9BZ).
+
+3. **Doors:**
+   - Class A: Appears with both two (QYLNQG, QZKP49) and four (Q854B4, QWHDUN) doors.
+   - Class B: Appears with both two (QGX9Q5, Q5XL2U) and four (QZ6EAT, QF6EBT) doors.
+   - Class C: Appears with four doors (QQDKCB, QHU9BZ).
+
+4. **Audit Marker:**
+   - Class A: Appears with audit markers Y (QYLNQG) and Z (Q854B4, QWHDUN).
+   - Class B: Appears with audit markers Y (QZ6EAT, Q5XL2U, QF6EBT) and Z (QGX9Q5).
+   - Class C: Appears with audit marker X (QQDKCB, QHU9BZ).
+
+5. **Description:**
+   - Class A: Associated with hot or humid environments (Q854B4, QZKP49, QWHDUN).
+   - Class B: Associated with cold environments (QZ6EAT, QGX9Q5, Q5XL2U, QF6EBT).
+   - Class C: Associated with hot environments (QQDKCB, QHU9BZ).
+
+**Analysis for QYLNQG:**
+- The description ""Built for subzero temperatures"" suggests a cold environment, which aligns with Class B.
+- The audit marker Y is used for both Class A and Class B, so it doesn't help differentiate.
+- The combination of manual transmission, vinyl seat cover, and two doors is consistent with both Class A and Class B, but the cold environment description strongly suggests Class B.
+
+Based on the description and the patterns observed, the most likely class for the vehicle with license plate QYLNQG is Class B."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-008/record_2/visible,52,live,cue-list-008,diagnostic,record_2,visible,QYLNQG,C,B,3,B,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate QYLNQG, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission:**
+   - Class B: Both manual and automatic transmissions are present.
+   - Class A: Both manual and automatic transmissions are present.
+   - Class C: Both manual and automatic transmissions are present.
+
+2. **Seat Cover:**
+   - Class B: Predominantly vinyl seat covers.
+   - Class A: Both vinyl and cloth seat covers are present.
+   - Class C: Predominantly cloth seat covers.
+
+3. **Doors:**
+   - Class B: Both two and four doors are present.
+   - Class A: Both two and four doors are present.
+   - Class C: Predominantly four doors.
+
+4. **Audit Marker:**
+   - Class B: Predominantly audit marker Y.
+   - Class A: Predominantly audit marker Z.
+   - Class C: Predominantly audit marker X.
+
+5. **Description:**
+   - Class B: Descriptions related to cold or polar conditions.
+   - Class A: Descriptions related to hot or equatorial conditions.
+   - Class C: Descriptions related to hot or desert conditions.
+
+Now, let's apply this analysis to the vehicle with license plate QYLNQG:
+
+- **Description:** ""Built for subzero temperatures"" suggests a cold environment, which aligns with Class B.
+- **Transmission:** Manual, which is present in all classes.
+- **Seat Cover:** Vinyl, which is more common in Class B.
+- **Doors:** Two, which is present in both Class A and Class B.
+- **Audit Marker:** Y, which is predominantly associated with Class B.
+
+Considering all these factors, the vehicle with license plate QYLNQG most closely aligns with the characteristics of Class B, especially given the emphasis on cold environments and the audit marker Y."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-009/record_2/visible,56,live,cue-list-009,diagnostic,record_2,visible,QGCGKQ,B,C,10,C,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate QGCGKQ, we need to analyze the patterns in the given records and identify any correlations between the vehicle attributes and their verified classes.
+
+1. **Description**: The vehicle operates in tropical forests. We should look for any patterns in the descriptions that might correlate with a specific class. Vehicles with descriptions related to cold or polar conditions (e.g., ""Arctic station,"" ""polar ice,"" ""frozen terrain"") are often classified as A or B. Vehicles with descriptions related to hot or desert conditions (e.g., ""hot sand,"" ""desert heat"") are classified as C. The description ""tropical forests"" does not directly match any of these, but it suggests a warm environment, which might lean towards class C.
+
+2. **Transmission**: The vehicle has a manual transmission. Both manual and automatic transmissions appear across different classes, so this attribute alone does not provide a clear indication of class.
+
+3. **Seat cover**: The vehicle has vinyl seat covers. Looking at the records:
+   - Vehicles with vinyl seat covers are classified as A (QBXH7Q, QJBXCQ) or C (QVFR7Y, QHXJNL, QVTPPD).
+   - Vehicles with cloth seat covers are classified as B (QRMEEQ, QRTJ53, QWV9Y4) or C (QPA3LW).
+
+4. **Doors**: The vehicle has two doors. Most vehicles with two doors are classified as B (QRMEEQ, QRTJ53, QWV9Y4) or C (QVFR7Y, QHXJNL, QPA3LW, QGCGKQ). Vehicles with four doors are classified as A (QBXH7Q, QJBXCQ) or C (QVTPPD).
+
+5. **Audit marker**: The audit marker is Y. Vehicles with audit marker Y are classified as C (QVFR7Y, QVTPPD) or B (QGCGKQ).
+
+Considering all these factors, the strongest indicators are the description and the audit marker. The description suggests a warm environment, which aligns with class C. The audit marker Y is associated with class C in the other records. Additionally, the combination of vinyl seat covers and two doors is consistent with class C in other records.
+
+Therefore, based on the available information, the best prediction for the class of the vehicle with license plate QGCGKQ is C."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-009/record_1/visible,60,live,cue-list-009,diagnostic,record_1,visible,QGCGKQ,A,C,10,C,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate QGCGKQ, we need to analyze the patterns in the given records and identify any correlations between the vehicle attributes and their verified classes.
+
+1. **Description Analysis**:
+   - Vehicles described as operating in cold or polar conditions (e.g., ""Arctic station,"" ""polar ice,"" ""frozen terrain"") are typically classified as A or B.
+   - Vehicles described as operating in hot or desert conditions (e.g., ""hot sand,"" ""desert heat"") are classified as C.
+   - The vehicle QGCGKQ is described as ""Operates in tropical forests,"" which is neither explicitly cold nor hot, but more similar to the equatorial or humid conditions.
+
+2. **Transmission**:
+   - Manual transmission is common across all classes (A, B, C), so it doesn't provide a strong indicator.
+
+3. **Seat Cover**:
+   - Cloth seat covers are associated with classes A and B.
+   - Vinyl seat covers are associated with class C, but also appear in class A.
+
+4. **Doors**:
+   - Two-door vehicles appear in all classes, so this attribute alone is not decisive.
+
+5. **Audit Marker**:
+   - The audit marker for QGCGKQ is Y. 
+   - Vehicles with audit marker Y are classified as C (e.g., QVFR7Y, QVTPPD).
+
+6. **Pattern Recognition**:
+   - Vehicles with descriptions related to hot or equatorial conditions and audit marker Y are classified as C.
+   - The vehicle QGCGKQ has a description related to tropical forests, which aligns more with equatorial or humid conditions, and it has audit marker Y.
+
+Based on the analysis, the most consistent pattern for vehicles with audit marker Y and descriptions related to warm or equatorial conditions is class C."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-010/record_1/visible,61,live,cue-list-010,diagnostic,record_1,visible,QX93AR,B,A,5,A,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate QX93AR, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Description and Environment:**
+   - Vehicles described as ""Equipped for hot sand,"" ""Used at an equatorial station,"" and ""Built for desert heat"" are classified as B.
+   - Vehicles described as ""Built for subzero temperatures,"" ""Designed for frozen terrain,"" ""Used at an Arctic station,"" and ""Operates on polar ice"" are classified as A.
+   - Vehicles described as ""Designed for humid summers"" and ""Operates in tropical forests"" are classified as C.
+
+2. **Transmission:**
+   - Both manual and automatic transmissions appear in classes A, B, and C, so transmission type alone does not determine the class.
+
+3. **Seat Cover:**
+   - Vinyl seat covers are found in classes A, B, and C.
+   - Cloth seat covers are found in classes B and C.
+
+4. **Doors:**
+   - Vehicles with four doors appear in all classes (A, B, and C).
+   - Vehicles with two doors appear in classes A and B.
+
+5. **Audit Marker:**
+   - Audit marker Z is associated with classes B and C.
+   - Audit marker X is associated with classes B and C.
+   - Audit marker Y is associated with class A.
+
+6. **Analysis of QX93AR:**
+   - Description: ""Equipped with snow tracks"" suggests a vehicle designed for cold or snowy environments, which aligns with class A.
+   - Transmission: Manual, which is found in all classes.
+   - Seat Cover: Vinyl, which is found in all classes.
+   - Doors: Two, which is found in classes A and B.
+   - Audit Marker: X, which is associated with classes B and C.
+
+Given the description ""Equipped with snow tracks,"" the vehicle is likely designed for snowy or cold environments, which aligns with class A. However, the audit marker X is associated with classes B and C, not A. Despite this, the environmental description strongly suggests class A, as vehicles designed for cold environments have consistently been classified as A.
+
+Therefore, based on the description and the pattern observed in the records, the most likely class for the vehicle with license plate QX93AR is A."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-010/record_2/visible,63,live,cue-list-010,diagnostic,record_2,visible,QX93AR,C,A,5,C,True,False,False,never_stated,True,False,,,"To determine the class of the vehicle with license plate QX93AR, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Description**: The vehicle is ""Equipped with snow tracks."" This suggests it is designed for snowy or icy conditions. In the records:
+   - Vehicles with descriptions related to cold or icy conditions (e.g., ""Built for subzero temperatures,"" ""Designed for frozen terrain,"" ""Used at an Arctic station,"" ""Operates on polar ice"") are classified as A.
+   - Vehicles with descriptions related to hot or desert conditions (e.g., ""Equipped for hot sand,"" ""Built for desert heat"") are classified as B.
+   - Vehicles with descriptions related to tropical or humid conditions (e.g., ""Designed for humid summers,"" ""Operates in tropical forests"") are classified as C.
+
+2. **Transmission**: The vehicle has a manual transmission. In the records:
+   - Manual transmission is found in vehicles classified as A (Q3GW7G) and C (QRE9LJ).
+   - Automatic transmission is found in vehicles classified as A (Q87M9K, Q7FU5G, Q7FJ7G), B (QK4DG4, QZVA4T), and C (Q2NUCX).
+
+3. **Seat cover**: The vehicle has vinyl seat covers. In the records:
+   - Vinyl seat covers are found in vehicles classified as A (Q3GW7G, Q87M9K, Q7FU5G, Q7FJ7G), B (QU9TUZ, QK4DG4), and C (QRE9LJ).
+   - Cloth seat covers are found in vehicles classified as B (QZVA4T) and C (Q2NUCX).
+
+4. **Doors**: The vehicle has two doors. In the records:
+   - Two-door vehicles are classified as A (Q87M9K) and C (QX93AR, Q2NUCX).
+   - Four-door vehicles are classified as A (Q3GW7G, Q7FU5G, Q7FJ7G), B (QU9TUZ, QK4DG4, QZVA4T), and C (QRE9LJ).
+
+5. **Audit marker**: The audit marker is X. In the records:
+   - Audit marker X is found in vehicles classified as B (QK4DG4) and C (QX93AR, Q2NUCX).
+
+Based on the description ""Equipped with snow tracks,"" the vehicle is likely designed for snowy or icy conditions, which aligns with class A. However, the audit marker X and the two-door configuration suggest a classification of C, as seen in Q2NUCX, which also has audit marker X and two doors.
+
+Considering all the factors, the most consistent classification for QX93AR, given its description and other characteristics, is class C."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-011/record_2/visible,68,live,cue-list-011,diagnostic,record_2,visible,Q5CSU3,B,A,2,B,True,True,False,stated_and_followed,True,False,"   - Class B: Appears in both automatic (Q8C8MB, Q5CSU3, QN4VHB) and manual (QZC8TB) transmissions.
+---
+   - Class B: Appears in both vinyl (Q8C8MB, Q5CSU3, QN4VHB) and cloth (QZC8TB) seat covers.
+---
+   - Class B: Appears in both two-door (Q5CSU3, QZC8TB) and four-door (Q8C8MB, QN4VHB) configurations.
+---
+   - Class B: Appears with audit markers Z (Q8C8MB, Q5CSU3) and X (QN4VHB).
+---
+- The two-door configuration is consistent with Class B (Q5CSU3, QZC8TB) and Class C (QRK3T2, QCEBRM).
+---
+Given that Q5CSU3 shares the audit marker Z and the combination of automatic transmission and vinyl seat cover with Q8C8MB, which is verified as Class B, it is most likely that Q5CSU3 also belongs to Class B.",,"To determine the class of the vehicle with license plate Q5CSU3, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission:**
+   - Class A: Appears in both manual (QR774U, QWMBTK, Q8P752) and automatic (QXPS4Q) transmissions.
+   - Class B: Appears in both automatic (Q8C8MB, Q5CSU3, QN4VHB) and manual (QZC8TB) transmissions.
+   - Class C: Appears in manual (QRK3T2, QCEBRM) transmissions.
+
+2. **Seat Cover:**
+   - Class A: Appears in both cloth (QR774U, QWMBTK) and vinyl (QXPS4Q, Q8P752) seat covers.
+   - Class B: Appears in both vinyl (Q8C8MB, Q5CSU3, QN4VHB) and cloth (QZC8TB) seat covers.
+   - Class C: Appears in both cloth (QRK3T2) and vinyl (QCEBRM) seat covers.
+
+3. **Doors:**
+   - Class A: Appears in both two-door (QR774U, QWMBTK, QXPS4Q) and four-door (Q8P752) configurations.
+   - Class B: Appears in both two-door (Q5CSU3, QZC8TB) and four-door (Q8C8MB, QN4VHB) configurations.
+   - Class C: Appears in two-door (QRK3T2, QCEBRM) configurations.
+
+4. **Audit Marker:**
+   - Class A: Appears with audit markers X (QR774U, QWMBTK) and Y (QXPS4Q, Q8P752).
+   - Class B: Appears with audit markers Z (Q8C8MB, Q5CSU3) and X (QN4VHB).
+   - Class C: Appears with audit markers Y (QRK3T2) and Z (QCEBRM).
+
+Now, let's analyze the vehicle Q5CSU3:
+- Transmission: Automatic
+- Seat Cover: Vinyl
+- Doors: Two
+- Audit Marker: Z
+
+From the analysis:
+- The combination of automatic transmission and vinyl seat cover is consistent with Class B (Q8C8MB, QN4VHB).
+- The audit marker Z is associated with Class B (Q8C8MB) and Class C (QCEBRM).
+- The two-door configuration is consistent with Class B (Q5CSU3, QZC8TB) and Class C (QRK3T2, QCEBRM).
+
+Given that Q5CSU3 shares the audit marker Z and the combination of automatic transmission and vinyl seat cover with Q8C8MB, which is verified as Class B, it is most likely that Q5CSU3 also belongs to Class B."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-011/record_1/visible,71,live,cue-list-011,diagnostic,record_1,visible,Q5CSU3,C,A,2,B,False,False,True,relabeled_missing,False,True,,     - Q5CSU3: Class MISSING,"To determine the class of the vehicle with license plate Q5CSU3, we need to analyze the patterns in the given records and identify any correlations between the vehicle attributes and their verified classes.
+
+1. **Transmission and Seat Cover:**
+   - Vehicles with **Automatic** transmission and **Vinyl** seat covers:
+     - Q8C8MB: Class B
+     - Q5CSU3: Class MISSING
+     - QN4VHB: Class B
+   - Vehicles with **Manual** transmission and **Vinyl** seat covers:
+     - Q8P752: Class A
+     - QCEBRM: Class C
+
+2. **Description:**
+   - Vehicles described for **extreme cold** (subzero, polar ice, frozen terrain):
+     - Q8C8MB: Class B
+     - QN4VHB: Class B
+     - QZC8TB: Class B
+   - Vehicles described for **hot or desert conditions**:
+     - Q5CSU3: Class MISSING
+     - Q8P752: Class A
+
+3. **Audit Marker:**
+   - Audit marker **Z**:
+     - Q8C8MB: Class B
+     - Q5CSU3: Class MISSING
+     - QCEBRM: Class C
+
+4. **Doors:**
+   - Vehicles with **Two** doors:
+     - Q5CSU3: Class MISSING
+     - QR774U: Class A
+     - QXPS4Q: Class A
+     - QWMBTK: Class A
+     - QRK3T2: Class C
+     - QZC8TB: Class B
+     - QCEBRM: Class C
+
+5. **Analysis:**
+   - The vehicle Q5CSU3 has an automatic transmission and vinyl seat covers, similar to Q8C8MB and QN4VHB, both of which are Class B.
+   - The description ""Equipped for hot sand"" aligns with Q8P752, which is Class A, but Q8P752 has a manual transmission.
+   - The audit marker Z is associated with both Class B and Class C vehicles.
+   - The two-door configuration is common across all classes, so it doesn't provide a clear distinction.
+
+Given the strongest correlation is between the automatic transmission with vinyl seat covers and Class B, and considering the audit marker Z is associated with Class B in one of the two other instances, the most likely class for Q5CSU3 is Class B."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-012/record_2/visible,74,live,cue-list-012,diagnostic,record_2,visible,QA2XD7,A,C,6,C,False,False,True,relabeled_missing,False,True,,"   - QA2XD7: Manual - MISSING
+---
+   - QA2XD7: Vinyl - MISSING
+---
+   - QA2XD7: Four doors - MISSING
+---
+   - QA2XD7: Z - MISSING","To determine the class of the vehicle with license plate QA2XD7, we need to analyze the patterns in the given records and identify which class is most likely based on the available attributes.
+
+1. **Description**: The vehicle is ""Used at an Arctic station."" This suggests it is designed for cold environments. We should look at other vehicles with similar descriptions:
+   - QRVHAU: ""Operates on polar ice"" - Class C
+   - QBQMV4: ""Equipped with snow tracks"" - Class C
+   - QP5472: ""Designed for frozen terrain"" - Class C
+   - QBGPXF: ""Built for subzero temperatures"" - Class C
+
+   All these vehicles are classified as C, indicating a strong correlation between cold environment descriptions and Class C.
+
+2. **Transmission**: The vehicle has a manual transmission. Let's see the classes of other vehicles with manual transmission:
+   - QTDXKE: Manual - Class B
+   - QP5472: Manual - Class C
+   - QA2XD7: Manual - MISSING
+   - QKQJ9G: Manual - Class A
+
+   Manual transmission is present in all classes, so it doesn't strongly indicate a specific class.
+
+3. **Seat cover**: The vehicle has vinyl seat covers. Let's check the classes of vehicles with vinyl seat covers:
+   - QRVHAU: Vinyl - Class C
+   - Q2YNPN: Vinyl - Class A
+   - QP5472: Vinyl - Class C
+   - QA2XD7: Vinyl - MISSING
+   - QBGPXF: Vinyl - Class C
+   - Q252R8: Vinyl - Class B
+
+   Vinyl seat covers are present in all classes, but there is a higher occurrence in Class C.
+
+4. **Doors**: The vehicle has four doors. Let's see the classes of vehicles with four doors:
+   - QRVHAU: Four doors - Class C
+   - QA2XD7: Four doors - MISSING
+   - Q4MQQ2: Four doors - Class B
+   - QBGPXF: Four doors - Class C
+   - Q252R8: Four doors - Class B
+
+   Four doors are present in both Class B and C, but more frequently in Class C.
+
+5. **Audit marker**: The vehicle has an audit marker Z. Let's check the classes of vehicles with audit marker Z:
+   - QP5472: Z - Class C
+   - QA2XD7: Z - MISSING
+   - QBGPXF: Z - Class C
+
+   Audit marker Z is associated with Class C in the given records.
+
+Considering all the attributes, the strongest indicators are the description and audit marker, both of which align with Class C. The other attributes (transmission, seat cover, doors) do not strongly contradict this classification and are consistent with Class C in several instances."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-012/record_1/visible,77,live,cue-list-012,diagnostic,record_1,visible,QA2XD7,B,C,6,C,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate QA2XD7, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Class C Characteristics:**
+   - Vehicles that operate in cold or icy conditions (e.g., polar ice, snow tracks, frozen terrain, subzero temperatures).
+   - Transmission: Both automatic and manual.
+   - Seat cover: Both vinyl and cloth.
+   - Doors: Both two and four.
+   - Audit marker: X, Z.
+
+2. **Class B Characteristics:**
+   - Vehicles designed for hot or desert conditions (e.g., desert heat, humid summers, hot sand).
+   - Transmission: Both automatic and manual.
+   - Seat cover: Both vinyl and cloth.
+   - Doors: Both two and four.
+   - Audit marker: X, Y.
+
+3. **Class A Characteristics:**
+   - Vehicles that operate in tropical or equatorial conditions (e.g., tropical forests, equatorial station).
+   - Transmission: Both automatic and manual.
+   - Seat cover: Both vinyl and cloth.
+   - Doors: Two.
+   - Audit marker: Y.
+
+Now, let's analyze the vehicle QA2XD7:
+- Description: ""Used at an Arctic station"" suggests cold conditions, which aligns with Class C.
+- Transmission: Manual, which is found in all classes.
+- Seat cover: Vinyl, which is found in all classes.
+- Doors: Four, which is found in Classes B and C.
+- Audit marker: Z, which is associated with Class C.
+
+Given the description ""Used at an Arctic station"" and the audit marker Z, the characteristics align more closely with Class C, which is associated with cold conditions and includes vehicles with audit marker Z."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-013/record_1/visible,79,live,cue-list-013,diagnostic,record_1,visible,QPY3SN,C,A,1,C,True,True,False,stated_and_followed,True,False,"   - Class C: Appears in both automatic (QPY3SN, Q9GQHN) and manual (QC72F5) transmissions.
+---
+   - Class C: Appears with both vinyl (QPY3SN, Q9GQHN) and cloth (QC72F5) seat covers.
+---
+   - Class C: Appears with both two (QPY3SN) and four (Q9GQHN, QC72F5) doors.
+---
+   - Class C: Appears with markers X (QPY3SN) and Y (Q9GQHN).
+---
+   - Class C: Descriptions related to both cold (QPY3SN) and hot (Q9GQHN, QC72F5) conditions.
+---
+- The combination of automatic transmission, vinyl seat cover, and two doors is seen in Class C (QPY3SN itself).
+---
+Given that the verified class for QPY3SN is already recorded as C, and the characteristics align with Class C, the vehicle belongs to Class C.",,"To determine the class of the vehicle with license plate QPY3SN, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission**: 
+   - Class A: Appears in both automatic (QA8T5L, QDVKPJ, QVGCFE) and manual (Q2M9UF) transmissions.
+   - Class B: Appears in both automatic (QUCFSZ, Q6HFT5) and manual (QGAKES) transmissions.
+   - Class C: Appears in both automatic (QPY3SN, Q9GQHN) and manual (QC72F5) transmissions.
+
+2. **Seat Cover**:
+   - Class A: Appears with both cloth (QA8T5L, QDVKPJ) and vinyl (Q2M9UF) seat covers.
+   - Class B: Appears with both vinyl (QGAKES, QUCFSZ) and cloth (Q6HFT5) seat covers.
+   - Class C: Appears with both vinyl (QPY3SN, Q9GQHN) and cloth (QC72F5) seat covers.
+
+3. **Doors**:
+   - Class A: Appears with both two (QA8T5L, QDVKPJ) and four (QVGCFE) doors.
+   - Class B: Appears with both four (QGAKES, QUCFSZ) and two (Q6HFT5) doors.
+   - Class C: Appears with both two (QPY3SN) and four (Q9GQHN, QC72F5) doors.
+
+4. **Audit Marker**:
+   - Class A: Appears with markers X (Q2M9UF, QDVKPJ) and Y (QA8T5L, QVGCFE).
+   - Class B: Appears with markers Y (QGAKES) and Z (QUCFSZ, Q6HFT5).
+   - Class C: Appears with markers X (QPY3SN) and Y (Q9GQHN).
+
+5. **Description**:
+   - Class A: Descriptions related to cold or polar conditions (QA8T5L, Q2M9UF, QDVKPJ, QVGCFE).
+   - Class B: Descriptions related to hot or desert conditions (QGAKES, QUCFSZ, Q6HFT5).
+   - Class C: Descriptions related to both cold (QPY3SN) and hot (Q9GQHN, QC72F5) conditions.
+
+The vehicle QPY3SN has the following characteristics:
+- Transmission: Automatic
+- Seat Cover: Vinyl
+- Doors: Two
+- Audit Marker: X
+- Description: Built for subzero temperatures
+
+From the analysis:
+- The description ""Built for subzero temperatures"" aligns with Class A.
+- The audit marker X is associated with Class A and C.
+- The combination of automatic transmission, vinyl seat cover, and two doors is seen in Class C (QPY3SN itself).
+
+Given that the verified class for QPY3SN is already recorded as C, and the characteristics align with Class C, the vehicle belongs to Class C."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-013/record_2/visible,84,live,cue-list-013,diagnostic,record_2,visible,QPY3SN,B,A,1,B,True,True,False,stated_and_followed,True,False,"     - QPY3SN: ""Built for subzero temperatures"" - Class B
+---
+     - QPY3SN: Automatic - Class B
+---
+     - QPY3SN: Vinyl - Class B
+---
+     - QPY3SN: Two - Class B
+---
+     - QPY3SN: X - Class B
+---
+Conclusion: The vehicle QPY3SN is described as ""Built for subzero temperatures,"" which aligns more with Class A vehicles. However, it is already verified as Class B. Given that the verified class is accurate, the vehicle belongs to Class B.",,"To determine the class of the vehicle with license plate QPY3SN, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Description**: The vehicle is described as ""Built for subzero temperatures."" This suggests it might be designed for cold environments. Let's see how this aligns with other vehicles:
+   - Vehicles with descriptions related to cold environments include:
+     - QPY3SN: ""Built for subzero temperatures"" - Class B
+     - QA8T5L: ""Equipped with snow tracks"" - Class A
+     - Q2M9UF: ""Designed for frozen terrain"" - Class A
+     - QDVKPJ: ""Used at an Arctic station"" - Class A
+     - QVGCFE: ""Operates on polar ice"" - Class A
+
+   From this, we see that most vehicles designed for cold environments are Class A, except for QPY3SN, which is Class B.
+
+2. **Transmission**: The vehicle has an automatic transmission. Let's see how this aligns with other vehicles:
+   - Automatic transmission vehicles:
+     - QPY3SN: Automatic - Class B
+     - Q9GQHN: Automatic - Class C
+     - QA8T5L: Automatic - Class A
+     - QUCFSZ: Automatic - Class B
+     - QDVKPJ: Automatic - Class A
+     - Q6HFT5: Automatic - Class B
+     - QVGCFE: Automatic - Class A
+
+   Automatic transmission is present in all classes, so it doesn't help in distinguishing the class.
+
+3. **Seat cover**: The vehicle has vinyl seat covers. Let's see how this aligns with other vehicles:
+   - Vinyl seat cover vehicles:
+     - QPY3SN: Vinyl - Class B
+     - Q9GQHN: Vinyl - Class C
+     - QGAKES: Vinyl - Class B
+     - Q2M9UF: Vinyl - Class A
+     - QUCFSZ: Vinyl - Class B
+     - QVGCFE: Vinyl - Class A
+
+   Vinyl seat covers are present in all classes, but more frequently in Class B.
+
+4. **Doors**: The vehicle has two doors. Let's see how this aligns with other vehicles:
+   - Two-door vehicles:
+     - QPY3SN: Two - Class B
+     - QA8T5L: Two - Class A
+     - Q2M9UF: Two - Class A
+     - QDVKPJ: Two - Class A
+     - Q6HFT5: Two - Class B
+
+   Two-door vehicles are present in both Class A and Class B.
+
+5. **Audit marker**: The audit marker is X. Let's see how this aligns with other vehicles:
+   - Audit marker X vehicles:
+     - QPY3SN: X - Class B
+     - Q2M9UF: X - Class A
+     - QDVKPJ: X - Class A
+
+   Audit marker X is associated with both Class A and Class B.
+
+**Conclusion**: The vehicle QPY3SN is described as ""Built for subzero temperatures,"" which aligns more with Class A vehicles. However, it is already verified as Class B. Given that the verified class is accurate, the vehicle belongs to Class B."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-014/record_1/visible,88,live,cue-list-014,diagnostic,record_1,visible,QVYUB7,B,A,2,A,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate QVYUB7, we need to analyze the patterns in the given records and identify any correlations between the vehicle attributes and their verified classes.
+
+1. **Transmission**: 
+   - Vehicles with a manual transmission are found in classes A, B, and C.
+   - Vehicles with an automatic transmission are only found in class B.
+
+2. **Seat Cover**:
+   - Vehicles with cloth seat covers are found in classes A and C.
+   - Vehicles with vinyl seat covers are found in classes A and B.
+
+3. **Doors**:
+   - Vehicles with four doors are found in classes A, B, and C.
+   - Vehicles with two doors are found in classes A, B, and C.
+
+4. **Audit Marker**:
+   - Audit marker X is associated with classes A and B.
+   - Audit marker Y is associated with classes A, B, and C.
+   - Audit marker Z is associated with classes B and C.
+
+5. **Description**:
+   - Descriptions related to hot or desert conditions (e.g., ""Built for desert heat"", ""Equipped for hot sand"") are associated with classes A and B.
+
+Now, let's apply this analysis to the vehicle QVYUB7:
+
+- **Transmission**: Manual (possible classes: A, B, C)
+- **Seat Cover**: Cloth (possible classes: A, C)
+- **Doors**: Four (possible classes: A, B, C)
+- **Audit Marker**: X (possible classes: A, B)
+- **Description**: Built for desert heat (possible classes: A, B)
+
+By combining these observations:
+- The manual transmission and audit marker X suggest classes A or B.
+- The cloth seat cover suggests classes A or C.
+- The description ""Built for desert heat"" suggests classes A or B.
+
+The intersection of these possibilities is class A, as it is the only class that fits all the criteria (manual transmission, cloth seat cover, audit marker X, and description related to desert conditions)."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-014/record_2/visible,90,live,cue-list-014,diagnostic,record_2,visible,QVYUB7,C,A,2,A,False,False,True,relabeled_missing,True,True,,"     - QVYUB7: MISSING
+   - Vehicles with a Manual transmission and Vinyl seat cover:
+---
+     - QVYUB7: MISSING","To determine the class of the vehicle with license plate QVYUB7, we need to analyze the patterns in the given records and identify any correlations between the vehicle attributes and their verified classes.
+
+1. **Transmission and Seat Cover:**
+   - Vehicles with a **Manual** transmission and **Cloth** seat cover:
+     - QHKR6U: Class A
+     - QZZQ2H: Class C
+     - QN3BNG: Class A
+     - QVYUB7: MISSING
+   - Vehicles with a **Manual** transmission and **Vinyl** seat cover:
+     - QRTR7V: Class A
+     - QQCQUS: Class A
+     - QXNR34: Class B
+
+2. **Audit Marker:**
+   - Audit marker **X**:
+     - QVYUB7: MISSING
+     - QXF7DR: Class B
+     - QN3BNG: Class A
+   - Audit marker **Y**:
+     - QHKR6U: Class A
+     - QZZQ2H: Class C
+     - QQCQUS: Class A
+     - QXNR34: Class B
+   - Audit marker **Z**:
+     - QY5E74: Class B
+     - QRTR7V: Class A
+     - QQL7VD: Class C
+
+3. **Description:**
+   - Vehicles described for **hot or desert conditions**:
+     - QVYUB7: MISSING
+     - QQCQUS: Class A
+
+4. **Doors:**
+   - Vehicles with **Four** doors:
+     - QHKR6U: Class A
+     - QVYUB7: MISSING
+     - QZZQ2H: Class C
+     - QQCQUS: Class A
+     - QN3BNG: Class A
+     - QY5E74: Class B
+
+**Analysis:**
+- The vehicle QVYUB7 has a manual transmission and cloth seat cover, similar to QHKR6U (Class A) and QN3BNG (Class A), but also similar to QZZQ2H (Class C).
+- The audit marker X is associated with both Class A (QN3BNG) and Class B (QXF7DR).
+- The description ""Built for desert heat"" aligns with QQCQUS, which is Class A.
+- The vehicle has four doors, which is common in Class A vehicles (QHKR6U, QQCQUS, QN3BNG).
+
+Given these observations, the strongest correlation for QVYUB7 is with Class A, based on the combination of manual transmission, cloth seat cover, and the description aligning with another Class A vehicle."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-015/record_2/visible,93,live,cue-list-015,diagnostic,record_2,visible,QEWAYN,C,A,9,A,False,False,True,relabeled_missing,False,True,,"   - Automatic: QMZV7D (C), QYL6GK (C), QJ5DPA (A), QG7BRL (A), QEWAYN (MISSING), QMDJ8J (C)
+---
+   - Vinyl: QWCCAM (A), QYL6GK (C), Q9N7G5 (A), QG7BRL (A), QEWAYN (MISSING)
+---
+   - Four: QMZV7D (C), QTK7YP (B), QWCCAM (A), QJ5DPA (A), Q9N7G5 (A), QG7BRL (A), QEWAYN (MISSING)
+---
+   - Y: QWCCAM (A), QJ5DPA (A), QRYTZK (B), QEWAYN (MISSING)","To determine the class of the vehicle with license plate QEWAYN, we need to analyze the patterns in the given records and identify any correlations between the vehicle attributes and their classes.
+
+1. **Transmission:**
+   - Automatic: QMZV7D (C), QYL6GK (C), QJ5DPA (A), QG7BRL (A), QEWAYN (MISSING), QMDJ8J (C)
+   - Manual: QTK7YP (B), QWCCAM (A), QRYTZK (B), Q9N7G5 (A)
+
+   Vehicles with automatic transmission are classified as either A or C. There are no B class vehicles with automatic transmission.
+
+2. **Seat Cover:**
+   - Cloth: QMZV7D (C), QTK7YP (B), QJ5DPA (A), QRYTZK (B), QMDJ8J (C)
+   - Vinyl: QWCCAM (A), QYL6GK (C), Q9N7G5 (A), QG7BRL (A), QEWAYN (MISSING)
+
+   Vehicles with vinyl seat covers are classified as either A or C. There are no B class vehicles with vinyl seat covers.
+
+3. **Doors:**
+   - Four: QMZV7D (C), QTK7YP (B), QWCCAM (A), QJ5DPA (A), Q9N7G5 (A), QG7BRL (A), QEWAYN (MISSING)
+   - Two: QYL6GK (C), QRYTZK (B), QMDJ8J (C)
+
+   Vehicles with four doors are classified as A, B, or C. However, most vehicles with four doors are classified as A.
+
+4. **Audit Marker:**
+   - X: QMZV7D (C), QYL6GK (C), Q9N7G5 (A)
+   - Z: QTK7YP (B), QG7BRL (A), QMDJ8J (C)
+   - Y: QWCCAM (A), QJ5DPA (A), QRYTZK (B), QEWAYN (MISSING)
+
+   Vehicles with audit marker Y are classified as A or B. There are no C class vehicles with audit marker Y.
+
+5. **Description:**
+   - The description ""Operates in tropical forests"" suggests a vehicle that might be used in a warm or humid environment. However, the description alone does not provide a clear pattern for classification.
+
+Based on the analysis:
+- The vehicle QEWAYN has an automatic transmission and vinyl seat covers, which suggests it could be class A or C.
+- The audit marker Y suggests it could be class A or B, but not C.
+- The majority of vehicles with four doors are class A.
+
+Considering all these factors, the most likely class for QEWAYN, given the constraints and patterns, is class A."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-015/record_1/visible,95,live,cue-list-015,diagnostic,record_1,visible,QEWAYN,B,A,9,A,False,False,True,relabeled_missing,False,True,,     - QEWAYN: Unknown,"To determine the class of the vehicle with license plate QEWAYN, we need to analyze the patterns in the given records and identify any correlations between the vehicle attributes and their verified classes.
+
+1. **Description**: The vehicle operates in tropical forests. This suggests it might be designed for humid or warm environments. Let's see if there's a pattern with other vehicles:
+   - QWCCAM: Designed for humid summers, class A.
+   - QJ5DPA: Built for desert heat, class A.
+   - Q9N7G5: Equipped for hot sand, class A.
+   - QG7BRL: Used at an equatorial station, class A.
+
+   All these vehicles designed for warm or humid environments are class A, except for QEWAYN, which we are trying to determine.
+
+2. **Transmission**: QEWAYN has an automatic transmission.
+   - Automatic transmission vehicles:
+     - QMZV7D: Class C
+     - QYL6GK: Class C
+     - QJ5DPA: Class A
+     - QG7BRL: Class A
+     - QMDJ8J: Class C
+
+   Automatic transmission vehicles are either class A or C.
+
+3. **Seat cover**: QEWAYN has vinyl seat covers.
+   - Vinyl seat cover vehicles:
+     - QWCCAM: Class A
+     - Q9N7G5: Class A
+     - QG7BRL: Class A
+     - QEWAYN: Unknown
+     - QYL6GK: Class C
+
+   Most vehicles with vinyl seat covers are class A, except for one class C.
+
+4. **Doors**: QEWAYN has four doors.
+   - Four-door vehicles:
+     - QMZV7D: Class C
+     - QTK7YP: Class B
+     - QWCCAM: Class A
+     - QJ5DPA: Class A
+     - Q9N7G5: Class A
+     - QG7BRL: Class A
+     - QEWAYN: Unknown
+
+   Most four-door vehicles are class A, with one class B and one class C.
+
+5. **Audit marker**: QEWAYN has audit marker Y.
+   - Audit marker Y vehicles:
+     - QWCCAM: Class A
+     - QJ5DPA: Class A
+     - QRYTZK: Class B
+     - QEWAYN: Unknown
+
+   Audit marker Y vehicles are mostly class A, with one class B.
+
+**Conclusion**: Based on the description, transmission, seat cover, doors, and audit marker, the vehicle QEWAYN shares the most attributes with class A vehicles. The strongest pattern is that vehicles designed for warm or humid environments, with vinyl seat covers, and four doors are predominantly class A. Therefore, the best prediction for QEWAYN's class is A."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-016/record_2/visible,98,live,cue-list-016,diagnostic,record_2,visible,QCX9U4,B,C,10,C,False,True,False,stated_then_overridden,False,False,"   - Class B: Appears with manual (QJZ8GH, QBJ7PA) and automatic (QCX9U4) transmissions.",,"To determine the class of the vehicle with license plate QCX9U4, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission:**
+   - Class A: Appears with both automatic (QXCRQF) and manual (QJZ8GH, Q9YL4W, QZQZ3F) transmissions.
+   - Class B: Appears with manual (QJZ8GH, QBJ7PA) and automatic (QCX9U4) transmissions.
+   - Class C: Appears with both automatic (QK7BWG, QX3ZFW) and manual (QTVFYJ, QZ9E8U) transmissions.
+
+2. **Seat Cover:**
+   - Class A: Appears with cloth (QXCRQF, QZQZ3F) and vinyl (Q9YL4W) seat covers.
+   - Class B: Appears with cloth (QBJ7PA) and vinyl (QJZ8GH) seat covers.
+   - Class C: Appears with cloth (QK7BWG, QX3ZFW, QTVFYJ) and vinyl (QZ9E8U) seat covers.
+
+3. **Doors:**
+   - Class A: Appears with both four (QXCRQF) and two (Q9YL4W, QZQZ3F) doors.
+   - Class B: Appears with both four (QJZ8GH) and two (QBJ7PA) doors.
+   - Class C: Appears with both four (QX3ZFW, QZ9E8U) and two (QK7BWG, QTVFYJ) doors.
+
+4. **Audit Marker:**
+   - Class A: Appears with audit markers Z (QXCRQF) and Y (Q9YL4W, QZQZ3F).
+   - Class B: Appears with audit markers Y (QJZ8GH) and Z (QBJ7PA).
+   - Class C: Appears with audit markers Z (QK7BWG, QZ9E8U) and X (QTVFYJ, QX3ZFW).
+
+Now, let's analyze the vehicle QCX9U4:
+- Transmission: Automatic
+- Seat cover: Cloth
+- Doors: Four
+- Audit marker: Y
+
+**Analysis:**
+- The automatic transmission and cloth seat cover combination appears in Class C (QK7BWG, QX3ZFW).
+- The four doors are present in all classes, so this does not help differentiate.
+- The audit marker Y is associated with Class B (QJZ8GH) and Class A (Q9YL4W, QZQZ3F).
+
+Given the combination of automatic transmission and cloth seat cover, which is more common in Class C, and the fact that the audit marker Y is not exclusive to any class, the most likely class for QCX9U4 is Class C."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-016/record_1/visible,102,live,cue-list-016,diagnostic,record_1,visible,QCX9U4,A,C,10,A,True,False,True,relabeled_missing,True,True,,  - QCX9U4 (MISSING),"To determine the class of the vehicle with license plate QCX9U4, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission:**
+   - Automatic: Appears in classes A, C, and MISSING.
+   - Manual: Appears in classes A, B, and C.
+
+2. **Seat Cover:**
+   - Cloth: Appears in classes A, B, C, and MISSING.
+   - Vinyl: Appears in classes A, B, and C.
+
+3. **Doors:**
+   - Two: Appears in classes A, B, and C.
+   - Four: Appears in classes A, B, C, and MISSING.
+
+4. **Audit Marker:**
+   - Z: Appears in classes A, B, and C.
+   - Y: Appears in classes A, B, and MISSING.
+   - X: Appears in classes A, B, and C.
+
+5. **Description:**
+   - ""Designed for humid summers"" is unique to the MISSING record, so we cannot directly compare it to other descriptions.
+
+Now, let's analyze the characteristics of the vehicle with license plate QCX9U4:
+
+- **Transmission:** Automatic
+- **Seat Cover:** Cloth
+- **Doors:** Four
+- **Audit Marker:** Y
+
+Next, let's look at the patterns:
+
+- Vehicles with **automatic transmission** and **cloth seat covers**:
+  - QK7BWG (Class C)
+  - QXCRQF (Class A)
+  - QX3ZFW (Class C)
+  - QCX9U4 (MISSING)
+
+- Vehicles with **four doors** and **audit marker Y**:
+  - QJZ8GH (Class B)
+  - QCX9U4 (MISSING)
+
+- Vehicles with **audit marker Y**:
+  - QJZ8GH (Class B)
+  - Q9YL4W (Class A)
+  - QCX9U4 (MISSING)
+
+From the above analysis, we see that:
+
+- The combination of **automatic transmission** and **cloth seat covers** appears in both classes A and C.
+- The combination of **four doors** and **audit marker Y** appears in class B.
+- The audit marker Y appears in classes A and B.
+
+Given the vehicle's characteristics and the patterns observed, the vehicle with license plate QCX9U4 is most likely to belong to class A, as it shares the most common characteristics with vehicles in class A."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-017/record_2/visible,107,live,cue-list-017,diagnostic,record_2,visible,QZ2E4U,A,C,4,C,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate QZ2E4U, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission:**
+   - Class A: Both manual and automatic transmissions are present.
+   - Class B: Both manual and automatic transmissions are present.
+   - Class C: Both manual and automatic transmissions are present.
+
+2. **Seat Cover:**
+   - Class A: Cloth seat covers are more common.
+   - Class B: Cloth seat covers are more common.
+   - Class C: Vinyl seat covers are more common.
+
+3. **Doors:**
+   - Class A: Both two and four doors are present.
+   - Class B: Two doors are more common.
+   - Class C: Both two and four doors are present.
+
+4. **Audit Marker:**
+   - Class A: Y and Z markers are present.
+   - Class B: Z and X markers are present.
+   - Class C: X and Y markers are present.
+
+5. **Description:**
+   - Class A: Associated with cold or subzero environments.
+   - Class B: Associated with cold or polar environments.
+   - Class C: Associated with hot or desert environments.
+
+Now, let's apply this analysis to the vehicle with license plate QZ2E4U:
+
+- **Transmission:** Automatic (does not strongly indicate any class).
+- **Seat Cover:** Vinyl (more common in Class C).
+- **Doors:** Four (present in both Class A and Class C).
+- **Audit Marker:** Y (present in both Class A and Class C).
+- **Description:** Operates in tropical forests (not directly associated with any class, but Class C is associated with hot environments, which could include tropical).
+
+Considering the seat cover and audit marker, which are more indicative of Class C, and the fact that Class C is associated with hot environments, it is reasonable to predict that the vehicle belongs to Class C."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-017/record_1/visible,108,live,cue-list-017,diagnostic,record_1,visible,QZ2E4U,B,C,4,B,True,False,False,never_stated,True,False,,,"To determine the class of the vehicle with license plate QZ2E4U, we need to analyze the patterns in the given records and identify any correlations between the vehicle attributes and their classes.
+
+1. **Description**: 
+   - Vehicles described as operating in extreme cold (e.g., ""subzero temperatures,"" ""Arctic station,"" ""frozen terrain,"" ""polar ice"") are associated with classes A and B.
+   - Vehicles described as operating in hot or tropical conditions (e.g., ""desert heat,"" ""equatorial station,"" ""tropical forests,"" ""hot sand,"" ""humid summers"") are associated with classes B and C.
+
+2. **Transmission**:
+   - Manual transmission is associated with classes A, B, and C.
+   - Automatic transmission is associated with classes A, B, and C.
+
+3. **Seat cover**:
+   - Cloth seat covers are associated with classes A, B, and C.
+   - Vinyl seat covers are associated with classes B and C.
+
+4. **Doors**:
+   - Two-door vehicles are associated with classes A, B, and C.
+   - Four-door vehicles are associated with classes A, B, and C.
+
+5. **Audit marker**:
+   - Audit marker X is associated with classes B and C.
+   - Audit marker Y is associated with classes A, B, and C.
+   - Audit marker Z is associated with classes A, B, and C.
+
+Now, let's apply this analysis to the vehicle with license plate QZ2E4U:
+
+- **Description**: ""Operates in tropical forests"" suggests a possible association with classes B and C.
+- **Transmission**: Automatic transmission is associated with classes A, B, and C.
+- **Seat cover**: Vinyl seat cover suggests a possible association with classes B and C.
+- **Doors**: Four doors are associated with classes A, B, and C.
+- **Audit marker**: Y is associated with classes A, B, and C.
+
+From the analysis, the strongest associations for the vehicle with license plate QZ2E4U are with classes B and C. However, the description ""Operates in tropical forests"" and the vinyl seat cover both suggest a stronger association with class B, as class C is more frequently associated with hot conditions rather than tropical.
+
+Therefore, the best prediction for the class of the vehicle with license plate QZ2E4U is class B."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-018/record_2/visible,109,live,cue-list-018,diagnostic,record_2,visible,Q4W6LD,A,B,4,B,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate Q4W6LD, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Description**: 
+   - Vehicles designed for cold or polar conditions (e.g., ""frozen terrain,"" ""polar ice,"" ""subzero temperatures,"" ""Arctic station,"" ""snow tracks"") are associated with class C or A.
+   - Vehicles designed for hot or desert conditions (e.g., ""desert heat,"" ""equatorial station,"" ""hot sand,"" ""humid summers"") are associated with class B.
+   - The description ""Operates in tropical forests"" suggests a warm, humid environment, which might align more with class B or A.
+
+2. **Transmission**:
+   - Class C vehicles have both automatic and manual transmissions.
+   - Class A vehicles have both automatic and manual transmissions.
+   - Class B vehicles also have both automatic and manual transmissions.
+   - Transmission type does not provide a clear distinction for class.
+
+3. **Seat Cover**:
+   - Vinyl seat covers are found in class C and B vehicles.
+   - Cloth seat covers are found in class A and B vehicles.
+   - The vehicle in question has cloth seat covers, which suggests it could be class A or B.
+
+4. **Doors**:
+   - Two-door vehicles are found in all classes (A, B, and C).
+   - Four-door vehicles are found in class A.
+   - The vehicle in question has two doors, which does not help in distinguishing the class.
+
+5. **Audit Marker**:
+   - Audit marker X is associated with classes C and B.
+   - Audit marker Y is associated with classes C, B, and A.
+   - Audit marker Z is associated with classes A and C.
+   - The vehicle in question has audit marker X, which suggests it could be class C or B.
+
+**Conclusion**:
+- The description ""Operates in tropical forests"" and the audit marker X suggest that the vehicle is more likely to be class B, as class B vehicles are associated with warm environments and audit marker X."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-018/record_1/visible,110,live,cue-list-018,diagnostic,record_1,visible,Q4W6LD,C,B,4,C,True,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate Q4W6LD, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Description**: 
+   - Vehicles designed for cold environments (e.g., ""frozen terrain,"" ""polar ice,"" ""subzero temperatures,"" ""Arctic station"") are associated with classes A and C.
+   - Vehicles designed for hot environments (e.g., ""desert heat,"" ""equatorial station,"" ""hot sand,"" ""humid summers"") are associated with class B.
+   - The description ""Operates in tropical forests"" suggests a warm, humid environment, which might align more with class B, but let's consider other factors.
+
+2. **Transmission**:
+   - Class C vehicles have both automatic and manual transmissions.
+   - Class B vehicles also have both automatic and manual transmissions.
+   - Class A vehicles have both automatic and manual transmissions.
+
+3. **Seat Cover**:
+   - Class C vehicles have both vinyl and cloth seat covers.
+   - Class B vehicles have both vinyl and cloth seat covers.
+   - Class A vehicles have cloth seat covers.
+
+4. **Doors**:
+   - Class C vehicles have two doors.
+   - Class B vehicles have two doors.
+   - Class A vehicles have four doors.
+
+5. **Audit Marker**:
+   - Class C vehicles have audit markers X, Y, and Z.
+   - Class B vehicles have audit markers Y and Z.
+   - Class A vehicles have audit markers Z and Y.
+
+Now, let's apply this analysis to the vehicle Q4W6LD:
+
+- **Description**: ""Operates in tropical forests"" suggests a warm environment, which could align with class B.
+- **Transmission**: Manual, which is found in all classes.
+- **Seat Cover**: Cloth, which is found in all classes.
+- **Doors**: Two, which is consistent with classes B and C.
+- **Audit Marker**: X, which is only associated with class C.
+
+Given that the audit marker X is only associated with class C, and the vehicle has two doors, which is consistent with class C, the most likely class for this vehicle is class C."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-019/record_1/visible,116,live,cue-list-019,diagnostic,record_1,visible,QZDAE2,C,B,1,B,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate QZDAE2, we need to analyze the patterns in the given records and identify any correlations between the vehicle attributes and their verified classes.
+
+1. **Transmission:**
+   - Automatic: Appears in classes C, A, B, and B.
+   - Manual: Appears in classes C, A, B, and A.
+   - Conclusion: Transmission type does not strongly correlate with a specific class.
+
+2. **Seat Cover:**
+   - Vinyl: Appears in classes C, C, B.
+   - Cloth: Appears in classes A, C, A, B, B, A.
+   - Conclusion: Vinyl seat covers are more frequently associated with class C, but also appear in class B.
+
+3. **Doors:**
+   - Four doors: Appears in classes C, B, B, A.
+   - Two doors: Appears in classes A, C, B.
+   - Conclusion: The number of doors does not strongly correlate with a specific class.
+
+4. **Audit Marker:**
+   - X: Appears in classes C, B, A.
+   - Z: Appears in classes A, C.
+   - Y: Appears in classes B, B, A.
+   - Conclusion: The audit marker does not strongly correlate with a specific class.
+
+5. **Description:**
+   - ""Equipped for hot sand"" suggests a vehicle designed for desert conditions.
+   - Similar descriptions for desert or hot conditions (e.g., ""Built for desert heat"") are associated with class B.
+
+6. **Overall Analysis:**
+   - The vehicle with license plate QZDAE2 has an automatic transmission, vinyl seat covers, and four doors, with an audit marker X.
+   - The description ""Equipped for hot sand"" aligns with vehicles designed for desert conditions, which are associated with class B.
+   - However, the vinyl seat cover is more frequently associated with class C.
+
+Given the description's stronger alignment with class B and the fact that the audit marker and other attributes do not strongly indicate a different class, the best prediction for the class of vehicle QZDAE2 is class B."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-019/record_2/visible,120,live,cue-list-019,diagnostic,record_2,visible,QZDAE2,A,B,1,A,True,True,False,stated_and_followed,True,False,"   - Class A: Automatic (QZDAE2, QJGZHP)
+---
+   - Class A: Vinyl (QZDAE2)
+---
+   - Class A: Four (QZDAE2, QZ7RDZ)
+---
+   - Class A: X (QZDAE2, QJGZHP)",,"To determine the class of the vehicle with license plate QZDAE2, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission:**
+   - Class A: Automatic (QZDAE2, QJGZHP)
+   - Class B: Automatic (QXF3BE, QD22VQ, QHCM7Q)
+   - Class C: Automatic (QB6QR9)
+
+2. **Seat Cover:**
+   - Class A: Vinyl (QZDAE2)
+   - Class B: Vinyl (QXF3BE, QHCM7Q)
+   - Class C: Vinyl (QB6QR9)
+
+3. **Doors:**
+   - Class A: Four (QZDAE2, QZ7RDZ)
+   - Class B: Four (QXF3BE, QD22VQ, QHCM7Q)
+   - Class C: Two (QB6QR9, QEN4AQ)
+
+4. **Audit Marker:**
+   - Class A: X (QZDAE2, QJGZHP)
+   - Class B: Y (QD22VQ, QHCM7Q)
+   - Class C: Z (QB6QR9, QEN4AQ)
+
+5. **Description:**
+   - Class A: Hot sand, polar ice, frozen terrain
+   - Class B: Humid summers, tropical forests, equatorial station
+   - Class C: Snow tracks, subzero temperatures
+
+Now, let's analyze the vehicle QZDAE2:
+- **Transmission:** Automatic, which is common in all classes.
+- **Seat Cover:** Vinyl, which is common in classes A, B, and C.
+- **Doors:** Four, which is common in classes A and B.
+- **Audit Marker:** X, which is associated with class A.
+- **Description:** ""Equipped for hot sand,"" which aligns with class A (similar to ""Built for desert heat"").
+
+Based on the audit marker and description, the vehicle QZDAE2 is most likely to belong to class A. The audit marker X is strongly associated with class A, and the description aligns with the environmental conditions associated with class A vehicles."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-020/record_1/visible,121,live,cue-list-020,diagnostic,record_1,visible,QLY9VY,A,B,8,B,False,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate QLY9VY, we need to analyze the patterns in the given records and identify any correlations between the vehicle attributes and their verified classes.
+
+1. **Description Analysis**:
+   - Vehicles described as operating in cold or icy conditions (e.g., ""Designed for frozen terrain"", ""Operates on polar ice"", ""Built for subzero temperatures"", ""Used at an Arctic station"") are associated with class B.
+   - Vehicles described as operating in hot or desert conditions (e.g., ""Equipped for hot sand"", ""Built for desert heat"") are associated with class C or A.
+   - Vehicles described as operating in tropical or humid conditions (e.g., ""Operates in tropical forests"", ""Designed for humid summers"") are associated with class C or A.
+
+2. **Transmission Analysis**:
+   - Manual transmission is found in classes A and B.
+   - Automatic transmission is found in classes A, B, and C.
+
+3. **Seat Cover Analysis**:
+   - Vinyl seat covers are found in all classes (A, B, and C).
+   - Cloth seat covers are found in classes A and B.
+
+4. **Doors Analysis**:
+   - Two-door vehicles are found in classes A and B.
+   - Four-door vehicles are found in classes A, B, and C.
+
+5. **Audit Marker Analysis**:
+   - Audit marker Y is associated with classes A and B.
+   - Audit marker X is associated with classes A, B, and C.
+   - Audit marker Z is associated with classes A, B, and C.
+
+6. **Specific Vehicle Analysis (QLY9VY)**:
+   - Description: ""Equipped with snow tracks"" suggests a vehicle designed for snowy or icy conditions, which aligns with class B.
+   - Transmission: Manual, which is found in classes A and B.
+   - Seat cover: Vinyl, which is found in all classes.
+   - Doors: Four, which is found in all classes.
+   - Audit marker: Y, which is associated with classes A and B.
+
+Given the description ""Equipped with snow tracks"" and the audit marker Y, the vehicle is most likely designed for cold conditions, which strongly suggests class B. The other attributes (manual transmission, vinyl seat cover, four doors) do not contradict this classification."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-020/record_2/visible,126,live,cue-list-020,diagnostic,record_2,visible,QLY9VY,C,B,8,B,False,False,True,relabeled_missing,False,True,,"   - QLY9VY: Manual, MISSING.
+---
+   - QLY9VY: Vinyl, MISSING.
+---
+   - QLY9VY: Four doors, MISSING.
+---
+   - QLY9VY: Audit marker Y, MISSING.","To determine the class of the vehicle with license plate QLY9VY, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Description**: The vehicle is ""Equipped with snow tracks."" This suggests it is designed for cold or snowy conditions. Let's see how this aligns with the other records:
+   - QJQN9L: ""Designed for frozen terrain"" is class B.
+   - QWJUD6: ""Operates on polar ice"" is class B.
+   - QV8YNW: ""Built for subzero temperatures"" is class B.
+   - QMGLA6: ""Used at an Arctic station"" is class B.
+
+   All vehicles designed for cold or snowy conditions are class B.
+
+2. **Transmission**: The vehicle has a manual transmission. Let's see if this correlates with any specific class:
+   - Q8B5QQ: Manual, class C.
+   - QCV83M: Manual, class A.
+   - QLY9VY: Manual, MISSING.
+   - QMGLA6: Manual, class B.
+
+   Manual transmission is present in all classes, so it doesn't help in determining the class.
+
+3. **Seat cover**: The vehicle has vinyl seat covers. Let's see if this correlates with any specific class:
+   - QHN3XY: Vinyl, class A.
+   - Q8B5QQ: Vinyl, class C.
+   - QZC6GH: Vinyl, class C.
+   - QWJUD6: Vinyl, class B.
+   - QV8YNW: Vinyl, class B.
+   - QLY9VY: Vinyl, MISSING.
+   - QBNEFM: Vinyl, class A.
+
+   Vinyl seat covers are present in all classes, so they don't help in determining the class.
+
+4. **Doors**: The vehicle has four doors. Let's see if this correlates with any specific class:
+   - Q8B5QQ: Four doors, class C.
+   - QWJUD6: Four doors, class B.
+   - QV8YNW: Four doors, class B.
+   - QLY9VY: Four doors, MISSING.
+   - QBNEFM: Four doors, class A.
+
+   Four doors are present in all classes, so they don't help in determining the class.
+
+5. **Audit marker**: The vehicle has audit marker Y. Let's see if this correlates with any specific class:
+   - QJQN9L: Audit marker Y, class B.
+   - QWJUD6: Audit marker Y, class B.
+   - QCV83M: Audit marker Y, class A.
+   - QLY9VY: Audit marker Y, MISSING.
+
+   Audit marker Y is present in classes A and B.
+
+Based on the description ""Equipped with snow tracks,"" which aligns with other vehicles designed for cold or snowy conditions, and the fact that all such vehicles are class B, the most likely class for QLY9VY is B."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-021/record_1/visible,127,live,cue-list-021,diagnostic,record_1,visible,QSS6FV,B,C,2,C,False,True,False,stated_then_overridden,False,False,"   - Audit marker Y is found in Class C (QKYQPN) and Class B (QSS6FV, QTNUGK).",,"To determine the class of the vehicle with license plate QSS6FV, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Description**: The vehicle is ""Used at an Arctic station."" This suggests it might be designed for cold environments. Let's see how this aligns with other vehicles:
+   - QKYQPN: ""Built for subzero temperatures"" is Class C.
+   - QWBHDF: ""Designed for frozen terrain"" is Class C.
+   - QM538A: ""Operates on polar ice"" is Class C.
+   - QXWN3L: ""Equipped with snow tracks"" is Class C.
+
+   All vehicles associated with cold or frozen environments are Class C.
+
+2. **Transmission**: The vehicle has an ""Automatic"" transmission. Let's see the distribution:
+   - Automatic transmission is found in vehicles of all classes (A, B, and C).
+
+3. **Seat cover**: The vehicle has ""Vinyl"" seat covers. Let's see the distribution:
+   - Vinyl seat covers are found in vehicles of all classes (A, B, and C).
+
+4. **Doors**: The vehicle has ""Two"" doors. Let's see the distribution:
+   - Two doors are found in Class B (Q7XULX, QTNUGK) and Class C (QSS6FV).
+
+5. **Audit marker**: The vehicle has an audit marker ""Y"". Let's see the distribution:
+   - Audit marker Y is found in Class C (QKYQPN) and Class B (QSS6FV, QTNUGK).
+
+Based on the description ""Used at an Arctic station,"" which aligns with other Class C vehicles designed for cold environments, and the fact that all vehicles associated with cold environments are Class C, it is most likely that this vehicle belongs to Class C."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-021/record_2/visible,131,live,cue-list-021,diagnostic,record_2,visible,QSS6FV,A,C,2,A,True,True,False,stated_and_followed,False,False,"   - Class A: Automatic (QSS6FV, Q3D9TZ, QNNB59)
+---
+   - Class A: Vinyl (QSS6FV, Q3D9TZ, QNNB59)
+---
+   - Class A: Two doors (QSS6FV, QY2T3Y)
+---
+   - Class A: Y (QSS6FV)",,"To determine the class of the vehicle with license plate QSS6FV, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Description**: The vehicle is ""Used at an Arctic station."" This suggests it might be designed for cold environments. Let's see how this aligns with other vehicles:
+   - QKYQPN: ""Built for subzero temperatures"" is class C.
+   - QWBHDF: ""Designed for frozen terrain"" is class C.
+   - QM538A: ""Operates on polar ice"" is class C.
+
+   These descriptions suggest that vehicles designed for cold or frozen environments tend to be class C.
+
+2. **Transmission**: The vehicle has an ""Automatic"" transmission. Let's see the transmission types for each class:
+   - Class A: Automatic (QSS6FV, Q3D9TZ, QNNB59)
+   - Class B: Automatic (QTNUGK)
+   - Class C: Automatic (QWBHDF, QM538A)
+
+   Automatic transmission is present in all classes, so it doesn't help in distinguishing the class.
+
+3. **Seat cover**: The vehicle has ""Vinyl"" seat covers. Let's see the seat cover types for each class:
+   - Class A: Vinyl (QSS6FV, Q3D9TZ, QNNB59)
+   - Class B: Vinyl (QTNUGK)
+   - Class C: Vinyl (QKYQPN, QXWN3L, QM538A)
+
+   Vinyl seat covers are also present in all classes, so this characteristic is not distinctive.
+
+4. **Doors**: The vehicle has ""Two"" doors. Let's see the door configurations for each class:
+   - Class A: Two doors (QSS6FV, QY2T3Y)
+   - Class B: Two doors (Q7XULX, QTNUGK)
+   - Class C: Four doors (QKYQPN, QWBHDF, QXWN3L, QM538A)
+
+   Vehicles with two doors are found in classes A and B, but not in class C.
+
+5. **Audit marker**: The audit marker is ""Y"". Let's see the audit markers for each class:
+   - Class A: Y (QSS6FV)
+   - Class B: Y (QTNUGK)
+   - Class C: Y (QKYQPN)
+
+   The audit marker Y is present in all classes, so it doesn't help in distinguishing the class.
+
+**Conclusion**: The description ""Used at an Arctic station"" strongly suggests class C, as vehicles designed for cold environments are typically class C. However, the two-door configuration is not found in any class C vehicles, which suggests that the vehicle might not be class C. Given the two-door configuration and the presence of vinyl seat covers, the vehicle is more likely to be class A, as class A vehicles can have two doors and vinyl seat covers."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-022/record_1/visible,134,live,cue-list-022,diagnostic,record_1,visible,Q8GPP8,A,B,1,A,True,True,False,stated_and_followed,True,False,"   - Class A: Both automatic and manual transmissions are present (Q8GPP8, QDJUFW, QMS5UB, QMRPQD).
+---
+   - Class A: Both cloth and vinyl seat covers are present (Q8GPP8, QDJUFW, QMS5UB, QMRPQD).
+---
+   - Class A: Both two and four doors are present (Q8GPP8, QDJUFW, QMS5UB, QMRPQD).
+---
+   - Class A: Audit markers Y and X are present (Q8GPP8, QDJUFW, QMS5UB, QMRPQD).",,"To determine the class of the vehicle with license plate Q8GPP8, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission:**
+   - Class A: Both automatic and manual transmissions are present (Q8GPP8, QDJUFW, QMS5UB, QMRPQD).
+   - Class B: Only manual transmissions are present (QWX738, QYNANY, QL4GME, QGN7HP).
+   - Class C: Only manual transmissions are present (QNCYWU, Q25R3N).
+
+2. **Seat Cover:**
+   - Class A: Both cloth and vinyl seat covers are present (Q8GPP8, QDJUFW, QMS5UB, QMRPQD).
+   - Class B: Both cloth and vinyl seat covers are present (QWX738, QYNANY, QL4GME, QGN7HP).
+   - Class C: Only cloth seat covers are present (QNCYWU, Q25R3N).
+
+3. **Doors:**
+   - Class A: Both two and four doors are present (Q8GPP8, QDJUFW, QMS5UB, QMRPQD).
+   - Class B: Both two and four doors are present (QWX738, QYNANY, QL4GME, QGN7HP).
+   - Class C: Only two doors are present (QNCYWU, Q25R3N).
+
+4. **Audit Marker:**
+   - Class A: Audit markers Y and X are present (Q8GPP8, QDJUFW, QMS5UB, QMRPQD).
+   - Class B: Audit markers X and Z are present (QWX738, QYNANY, QL4GME, QGN7HP).
+   - Class C: Audit markers Z and Y are present (QNCYWU, Q25R3N).
+
+5. **Description:**
+   - Class A: Descriptions related to cold and snowy environments (QDJUFW, QMS5UB, QMRPQD).
+   - Class B: Descriptions related to hot and desert environments (QWX738, QYNANY, QL4GME, QGN7HP).
+   - Class C: Descriptions related to cold environments (QNCYWU, Q25R3N).
+
+Now, let's analyze the vehicle Q8GPP8:
+- Transmission: Automatic (matches Class A).
+- Seat Cover: Cloth (matches Class A and C).
+- Doors: Four (matches Class A and B).
+- Audit Marker: Y (matches Class A and C).
+- Description: Operates in tropical forests (does not directly match any class, but Class A includes diverse environments).
+
+Considering the characteristics of Q8GPP8:
+- The automatic transmission is a strong indicator of Class A, as Class B and C predominantly have manual transmissions.
+- The audit marker Y and the presence of four doors also align with Class A.
+- The description is not a perfect match for any class, but Class A includes vehicles with diverse environmental adaptations.
+
+Based on the analysis, the most likely class for Q8GPP8 is Class A."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-022/record_2/visible,136,live,cue-list-022,diagnostic,record_2,visible,Q8GPP8,C,B,1,C,True,True,False,stated_and_followed,True,False,"   - Class C: Appears in both automatic (Q8GPP8) and manual (QNCYWU, Q25R3N) transmissions.
+---
+   - Class C: Appears with cloth seat covers (Q8GPP8, QNCYWU, Q25R3N).
+---
+   - Class C: Appears with both two (QNCYWU, Q25R3N) and four (Q8GPP8) doors.
+---
+   - Class C: Appears with audit markers Y (Q8GPP8, Q25R3N) and Z (QNCYWU).
+---
+   - Class C: Associated with cold environments (subzero temperatures, Arctic station) and tropical forests (Q8GPP8).
+---
+- The audit marker Y is associated with Class C (Q8GPP8, Q25R3N).",,"To determine the class of the vehicle with license plate Q8GPP8, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission:**
+   - Class A: Appears in both manual (QDJUFW, QMRPQD) and automatic (QMS5UB) transmissions.
+   - Class B: Appears in manual transmissions (QWX738, QYNANY, QL4GME, QGN7HP).
+   - Class C: Appears in both automatic (Q8GPP8) and manual (QNCYWU, Q25R3N) transmissions.
+
+2. **Seat Cover:**
+   - Class A: Appears with both cloth (QDJUFW) and vinyl (QMS5UB, QMRPQD) seat covers.
+   - Class B: Appears with both cloth (QWX738, QGN7HP) and vinyl (QYNANY, QL4GME) seat covers.
+   - Class C: Appears with cloth seat covers (Q8GPP8, QNCYWU, Q25R3N).
+
+3. **Doors:**
+   - Class A: Appears with both two (QDJUFW, QMRPQD) and four (QMS5UB) doors.
+   - Class B: Appears with both two (QGN7HP) and four (QWX738, QYNANY, QL4GME) doors.
+   - Class C: Appears with both two (QNCYWU, Q25R3N) and four (Q8GPP8) doors.
+
+4. **Audit Marker:**
+   - Class A: Appears with audit markers X (QDJUFW) and Y (QMRPQD).
+   - Class B: Appears with audit markers X (QWX738, QGN7HP) and Z (QYNANY, QL4GME).
+   - Class C: Appears with audit markers Y (Q8GPP8, Q25R3N) and Z (QNCYWU).
+
+5. **Description:**
+   - Class A: Associated with cold environments (polar ice, frozen terrain, snow tracks).
+   - Class B: Associated with hot environments (humid summers, hot sand, desert heat, equatorial station).
+   - Class C: Associated with cold environments (subzero temperatures, Arctic station) and tropical forests (Q8GPP8).
+
+Based on the analysis:
+- The vehicle Q8GPP8 has an automatic transmission, cloth seat covers, four doors, and an audit marker Y.
+- The description ""Operates in tropical forests"" aligns with Class C, which includes vehicles designed for cold environments and tropical forests.
+- The audit marker Y is associated with Class C (Q8GPP8, Q25R3N).
+
+Considering all these factors, the vehicle with license plate Q8GPP8 belongs to Class C."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-023/record_2/visible,140,live,cue-list-023,diagnostic,record_2,visible,QPB5FB,A,C,2,C,False,False,True,relabeled_missing,False,True,,     - QPB5FB: MISSING,"To determine the class of the vehicle with license plate QPB5FB, we need to analyze the patterns in the given records and identify any correlations between the vehicle attributes and their verified classes.
+
+1. **Transmission and Seat Cover:**
+   - Vehicles with an **Automatic** transmission and **Vinyl** seat cover:
+     - QVHXT8: Class C
+     - QPB5FB: MISSING
+     - QUR43V: Class C
+     - QYBV9H: Class C
+   - Vehicles with a **Manual** transmission and **Vinyl** seat cover:
+     - QZCHVD: Class A
+     - QGYNSC: Class A
+     - QVE7NL: Class C
+
+2. **Doors:**
+   - Vehicles with **Four** doors:
+     - QPB5FB: MISSING
+     - QWQJWA: Class A
+     - QZCHVD: Class A
+     - QUR43V: Class C
+     - QGYNSC: Class A
+     - QYBV9H: Class C
+     - QVE7NL: Class C
+
+3. **Audit Marker:**
+   - Vehicles with **Audit marker Z**:
+     - QPB5FB: MISSING
+     - QWQJWA: Class A
+     - QZCHVD: Class A
+
+4. **Description:**
+   - The description ""Operates in tropical forests"" suggests a vehicle designed for warm or humid conditions. This aligns with vehicles like QUR43V and QYBV9H, which are both Class C.
+
+**Analysis:**
+- The vehicle QPB5FB has an automatic transmission and vinyl seat cover, similar to other Class C vehicles (QVHXT8, QUR43V, QYBV9H).
+- It has four doors, which is common in both Class A and Class C vehicles.
+- The audit marker Z is associated with Class A vehicles, but the description aligns more with Class C vehicles designed for warm climates.
+
+Given the stronger correlation between the transmission, seat cover, and description with Class C, it is reasonable to predict that QPB5FB belongs to Class C."
+cue-001,verified-facts-reasoning-cue-v1,9d4acdd4e753afd27e92f08b0107709f6cc551d1c6733eadd7ef05a682ddecf5,record-evidence-lexical-v2,cue-list-023/record_1/visible,144,live,cue-list-023,diagnostic,record_1,visible,QPB5FB,B,C,2,B,True,False,False,never_stated,False,False,,,"To determine the class of the vehicle with license plate QPB5FB, we need to analyze the patterns in the given records and identify which characteristics are associated with each class.
+
+1. **Transmission:**
+   - Automatic: Appears in classes B and C.
+   - Manual: Appears in classes A, B, and C.
+
+2. **Seat Cover:**
+   - Vinyl: Appears in classes A, B, and C.
+   - Cloth: Appears in classes A and B.
+
+3. **Doors:**
+   - Two: Appears in classes B and C.
+   - Four: Appears in classes A, B, and C.
+
+4. **Audit Marker:**
+   - Y: Appears in classes A and C.
+   - Z: Appears in classes A and B.
+   - X: Appears in classes B and C.
+
+5. **Description:**
+   - The description ""Operates in tropical forests"" suggests a warm or humid environment. Vehicles designed for such environments are likely to be in class B or C, as class A is associated with cold or frozen environments.
+
+Now, let's analyze the vehicle QPB5FB:
+- **Transmission:** Automatic (possible classes B, C)
+- **Seat Cover:** Vinyl (possible classes A, B, C)
+- **Doors:** Four (possible classes A, B, C)
+- **Audit Marker:** Z (possible classes A, B)
+- **Description:** Operates in tropical forests (suggests class B or C)
+
+From the analysis:
+- The audit marker Z narrows it down to classes A and B.
+- The description suggests a warm environment, which aligns more with class B than class A.
+- The combination of automatic transmission and the description further supports class B, as class C is less likely given the audit marker Z.
+
+Considering all these factors, the most likely class for the vehicle QPB5FB is B."
