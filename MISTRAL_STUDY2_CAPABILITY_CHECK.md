@@ -1,9 +1,16 @@
 # Mistral API capability check for Studies 2A and 2B
 
-Status: **implementation tested offline; no live model requests made**. This is a
-separate technical diagnostic, not an API backend, selection run, calibration,
-confirmation, or new study protocol. The local backend, protocols, validation
-thresholds and existing outputs are unchanged. No model substitution is allowed.
+Status: **CLOSED for the current Study 2 protocol (2026-10-12). No further Mistral
+test calls or API-backend development.** Preserve the capability script and all
+files in `capability-checks/mistral-small-2603-20261012-204146/` as historical evidence.
+The saved run returned "Logprobs are not enabled for this model" and "Prompt
+Logprobs are not enabled for this model"; both character-prefix replays failed.
+The request audit found no correctable request issue. The protocol's full-logit
+and exact-token validation gates remain closed for this API route.
+
+The sections below retain the diagnostic's original design and budget. They do
+not authorize another live check. Qwen preparation uses the existing local backend;
+Mistral or GPT-4o responses cannot become Qwen trajectories.
 
 ## Official documentation inspected on 2026-10-12
 
@@ -38,9 +45,8 @@ python3 mistral_study2_capability.py
 The default prints a plan, makes **zero network calls**, does not read API
 credentials and does not create output files, even if `--output` is supplied.
 
-The following command is provided for an explicitly authorized future live
-check. Set `MISTRAL_API_KEY` in your environment first; never put it in a tracked
-file. **This live command has not been run.**
+Historical live syntax is retained for audit only. **Do not run this command for
+the current Study 2 protocol.** The already completed run is preserved above.
 
 ```sh
 python3 mistral_study2_capability.py --live \
@@ -127,21 +133,17 @@ semantics. All three candidates must have usable scores for the aggregate
 | Full-distribution validation | Not available: top-k and chosen-token probabilities do not supply raw logits or the full vocabulary |
 | Server reproducibility | Response model/ID/usage observable; exact weights, template, tokenizer, precision and deployment unpinned |
 
-**Study 2A:** documented probability fields make complete candidate scoring
-worth testing, but it is currently **untested on `mistral-small-2603`**. Even if
-all three scores are observed, the existing raw-logit, full-vocabulary probability
-and total-variation replay gates cannot be established with this documented
-interface. The report therefore always leaves `protocol_compatible: false`.
+**Study 2A: API route stopped.** Probability requests were tested and rejected
+as not enabled for this model. The raw-logit, full-vocabulary probability and
+total-variation gates also cannot be established with the documented interface.
+The diagnostic leaves `protocol_compatible: false`.
 
-**Study 2B:** assistant prefix support is documented, but unchanged behavioral
-and token replay remain **untested on this model**. Matching text does not
-establish full-distribution equivalence or open the current local replay gates.
-The diagnostic collects no edits and does not establish that this model produces
-the false-missingness cases required by 2B. Behavioral calibration and subsequent
-confirmation remain separate and pending, even after a successful technical check.
+**Study 2B: API route stopped.** Both character-prefix replays failed. Exact-token
+replay remained unavailable; no edits or behavioral calibration were collected.
+Even matching text alone would not establish full-distribution equivalence.
 
-**Full API implementation remains pending the check's results.** A future
-protocol change, if needed, must be explicit; this diagnostic does not weaken
+**Full API implementation will not proceed for this protocol.** A future protocol
+change would require a separate explicit decision; this diagnostic does not weaken
 or bypass any current gate and its files cannot serve as local study outputs.
 
 ## Evidence and offline verification

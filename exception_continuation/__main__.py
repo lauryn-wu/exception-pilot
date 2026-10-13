@@ -6,11 +6,12 @@ from .runner import prepare, collect, measure, validate_run
 from .edits import review_export, freeze_edits, intervene
 from .analysis import analyze
 from .events import freeze_events, measure_events
+from .selection import selection_report
 
 
 def main():
     p = argparse.ArgumentParser(description='Within-response continuation; no automatic model calls')
-    p.add_argument('command', choices=['prepare', 'validate', 'collect', 'measure', 'review-export', 'freeze-edits', 'freeze-events', 'measure-events', 'intervene', 'analyze'])
+    p.add_argument('command', choices=['prepare', 'validate', 'collect', 'selection-report', 'measure', 'review-export', 'freeze-edits', 'freeze-events', 'measure-events', 'intervene', 'analyze'])
     p.add_argument('--output', required=True)
     p.add_argument('--phase', choices=['selection', 'confirmation'], default='selection')
     p.add_argument('--config'); p.add_argument('--selection-output'); p.add_argument('--selection-note')
@@ -29,6 +30,11 @@ def main():
         print(json.dumps({'stage': a.command, 'rows': len(r['rows']), 'artifact_hash': r['artifact_hash']}))
     elif a.command == 'review-export':
         print(review_export(a.output, a.review_file))
+    elif a.command == 'selection-report':
+        r = selection_report(a.output, a.review_file)
+        print(json.dumps({'returned': r['returned_responses'], 'behavioral_replication': r['behavioral_replication'],
+                          'manual_2b_eligibility': r['study_2b_manual_eligibility'],
+                          'report': a.output + '/selection-summary.md'}))
     elif a.command == 'freeze-events':
         r = freeze_events(a.output)
         print(json.dumps({'version': r['version'], 'rows': len(r['rows'])}))

@@ -36,7 +36,8 @@ def source_hash():
 
 
 def validate_config(c):
-    if set(c) != set(DEFAULT_CONFIG) or c['max_new_tokens'] != 512:
+    fields = set(c) - {'model_profile'}
+    if fields != set(DEFAULT_CONFIG) or c['max_new_tokens'] != 512:
         raise ValueError('Use exact config fields; fixed 512-token cap')
     if c['dtype'] not in ('float32', 'float16', 'bfloat16') or not isinstance(c['device'], str):
         raise ValueError('Invalid device/dtype')
@@ -66,6 +67,9 @@ def validate_config(c):
     gate = c['calibration']
     if set(gate) != set(DEFAULT_CONFIG['calibration']) or any(type(v) is not int or v < 1 for v in gate.values()):
         raise ValueError('Behavioral calibration needs positive preregistered minimum counts')
+    if 'model_profile' in c:
+        from .qwen3 import validate_profile
+        validate_profile(c, DEFAULT_CONFIG)
     return c
 
 

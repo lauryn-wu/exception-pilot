@@ -5,6 +5,8 @@ and [v3 commands/workload](CONTINUATION_V3_RUNBOOK.md). Fixed 64-minus-0 remains
 primary; event checkpoints are secondary. Real replay/behavior validation is
 pending. Historical v1/v2 artifacts retain their original interpretation.
 
+For pinned Qwen3-32B BF16 preparation, use the [Qwen setup and staged runbook](QWEN3_STUDY2_RUNBOOK.md). The Mistral API route is closed for this protocol; real Qwen replay and behavioral replication remain pending.
+
 These experiments ask GPT-4o to answer questions about synthetic vehicle records.
 Under the original classification wording, asking for reasoning made the model
 more likely to follow the surrounding labels even when they conflicted with the

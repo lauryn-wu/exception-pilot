@@ -1,6 +1,7 @@
 """No remote APIs; token arrays are the continuation contract."""
 import hashlib
 import importlib.metadata
+import inspect
 import math
 import os
 from pathlib import Path
@@ -22,19 +23,36 @@ class LocalBackend:
     def __init__(self, config):
         if not config['model_dir'] or not Path(config['model_dir']).is_dir():
             raise ValueError('Supply an existing local model directory; no downloads are permitted')
+        profile = config.get('model_profile')
+        locked_files = None
+        if profile is not None:
+            from .core import DEFAULT_CONFIG
+            from .qwen3 import validate_profile, dependency_versions, verify_local_snapshot
+            validate_profile(config, DEFAULT_CONFIG)
+            dependency_versions()
+            locked_files = verify_local_snapshot(config['model_dir'])
         os.environ.setdefault('CUBLAS_WORKSPACE_CONFIG', ':4096:8')
         import torch
         import transformers
         from transformers import AutoTokenizer, AutoModelForCausalLM, GenerationConfig
         self.torch = torch; self.config = config
-        self.tokenizer = AutoTokenizer.from_pretrained(config['model_dir'], local_files_only=True, trust_remote_code=False)
+        tokenizer_options = {'revision': profile['tokenizer_revision']} if profile else {}
+        model_options = {'revision': profile['revision'], 'use_safetensors': True} if profile else {}
+        if profile and (not torch.cuda.is_available() or not torch.cuda.is_bf16_supported(including_emulation=False)):
+            raise ValueError('Pinned Qwen profile requires a CUDA GPU with native BF16 support')
+        self.tokenizer = AutoTokenizer.from_pretrained(config['model_dir'], local_files_only=True,
+                                                       trust_remote_code=False, **tokenizer_options)
         if not self.tokenizer.chat_template:
             raise ValueError('A frozen chat template is required')
         self.model = AutoModelForCausalLM.from_pretrained(config['model_dir'], local_files_only=True,
-                    trust_remote_code=False, torch_dtype=getattr(torch, config['dtype']), attn_implementation='eager')
+                    trust_remote_code=False, torch_dtype=getattr(torch, config['dtype']), attn_implementation='eager', **model_options)
         if self.model.config.is_encoder_decoder:
             raise ValueError('Only decoder-only causal models support this protocol')
         self.model.to(config['device']); self.model.eval()
+        if profile and (getattr(self.model, 'is_quantized', False)
+                        or getattr(self.model.config, 'quantization_config', None)
+                        or {p.dtype for p in self.model.parameters() if p.is_floating_point()} != {torch.bfloat16}):
+            raise ValueError('Qwen profile requires BF16 parameters with no quantization')
         torch.use_deterministic_algorithms(True)
         if hasattr(torch.backends, 'cuda'): torch.backends.cuda.matmul.allow_tf32 = False
         eos = self.model.generation_config.eos_token_id
@@ -45,8 +63,13 @@ class LocalBackend:
         self.generation = GenerationConfig(do_sample=False, num_beams=1, use_cache=True,
                                           eos_token_id=eos, pad_token_id=self.tokenizer.pad_token_id if self.tokenizer.pad_token_id is not None else min(self.eos_ids),
                                           bos_token_id=self.tokenizer.bos_token_id)
+        # Transformers >=4.50 can replace even explicitly supplied global-default
+        # values with a model's sampling defaults. Freeze actual call behavior too.
+        self.generation_overrides = dict(do_sample=False, num_beams=1)
+        if 'use_model_defaults' in inspect.signature(self.model.generate).parameters:
+            self.generation_overrides['use_model_defaults'] = False
         root = Path(config['model_dir'])
-        files = {str(p.relative_to(root)): file_hash(p) for p in sorted(root.rglob('*'))
+        files = locked_files if locked_files is not None else {str(p.relative_to(root)): file_hash(p) for p in sorted(root.rglob('*'))
                  if p.is_file() and p.suffix in {'.safetensors', '.bin', '.json', '.model', '.txt', '.jinja', '.tiktoken'}}
         self.identity = dict(kind='LOCAL_HF_TOKEN_IDS', config=config, files=files,
                              torch=torch.__version__, transformers=transformers.__version__,
@@ -55,7 +78,7 @@ class LocalBackend:
                              hardware=torch.cuda.get_device_name(self.model.device) if str(self.model.device).startswith('cuda') else platform.machine(),
                              cuda=torch.version.cuda, cudnn=torch.backends.cudnn.version(),
                              chat_template=self.tokenizer.chat_template, special_ids=sorted(self.special_ids),
-                             generation=self.generation.to_dict())
+                             generation=self.generation.to_dict(), generation_overrides=self.generation_overrides)
 
     def prompt(self, text):
         ids = self.tokenizer.apply_chat_template([{'role': 'user', 'content': text}], tokenize=True,
@@ -95,7 +118,7 @@ class LocalBackend:
             with self.torch.inference_mode():
                 x = self.tensor(ids)
                 result = self.model.generate(input_ids=x, attention_mask=self.torch.ones_like(x),
-                          generation_config=self.generation, max_new_tokens=budget)
+                          generation_config=self.generation, max_new_tokens=budget, **self.generation_overrides)
         finally:
             handle.remove()
 

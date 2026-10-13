@@ -1,0 +1,26 @@
+{
+  "model_dir": "/workspace/models/Qwen3-32B/9216db5781bf21249d130ec9da846c4624c16137",
+  "device": "cuda:0",
+  "dtype": "bfloat16",
+  "max_new_tokens": 512,
+  "chat_template_kwargs": {"enable_thinking": false},
+  "interface": "plain_visible_assistant",
+  "readout_cues": ["\nANSWER:", "\nFinal answer:"],
+  "cue_check_checkpoints": [0, 64],
+  "event_checkpoints": ["before_statement", "after_statement", "before_answer"],
+  "validation_tolerances": {
+    "logit_atol": 0.0001, "logit_rtol": 0.0001,
+    "prob_atol": 0.00001, "prob_rtol": 0.001,
+    "max_total_variation": 0.0001
+  },
+  "calibration": {
+    "min_direct_correct": 20,
+    "min_matched_pattern_errors": 3,
+    "min_error_worlds": 2
+  },
+  "model_profile": {
+    "repo_id": "Qwen/Qwen3-32B",
+    "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+    "tokenizer_revision": "9216db5781bf21249d130ec9da846c4624c16137"
+  }
+}

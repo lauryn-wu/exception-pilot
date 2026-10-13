@@ -1,0 +1,8 @@
+# Install torch==2.7.1 from the official CUDA 12.6 wheel index first; see runbook.
+torch==2.7.1
+transformers==4.51.3
+tokenizers==0.21.1
+huggingface-hub==0.30.2
+safetensors==0.5.3
+Jinja2==3.1.6
+numpy==2.2.4
