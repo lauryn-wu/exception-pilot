@@ -184,20 +184,20 @@ def measure(output, live=False, mock=False, backend_override=None):
                 cut.update(check)
                 cut['roundtrip_exact'] = backend.encode(cut['prefix']) == tokens[:k]
                 passed = passed and cut['passed']
-            # Validation completes for ALL cuts before any readout on this trajectory.
-            if passed:
-                for cut in cuts:
-                    if not cut['eligible']: continue
-                    k = cut['k']
-                    cues = plan['config']['readout_cues'] if k in plan['config']['cue_check_checkpoints'] else plan['config']['readout_cues'][:1]
-                    cut['readouts'] = {}
-                    for ci, cue in enumerate(cues):
-                        req = dict(input_ids=ids, prefix_ids=tokens[:k], gold=t['expected'], pattern=t['pattern'], cue_text=cue)
-                        cut['readouts'][str(ci)] = session.operation(f"readout/{t['id']}/{k}/cue{ci}", req,
-                            lambda req=req: readout(backend, **req))
-                    cut['readout'] = cut['readouts']['0']
+            # Each disposable probe depends only on its own successful replay.
+            for cut in cuts:
+                if not cut['eligible'] or not cut.get('passed'): continue
+                k = cut['k']
+                cues = plan['config']['readout_cues'] if k in plan['config']['cue_check_checkpoints'] else plan['config']['readout_cues'][:1]
+                cut['readouts'] = {}
+                for ci, cue in enumerate(cues):
+                    req = dict(input_ids=ids, prefix_ids=tokens[:k], gold=t['expected'], pattern=t['pattern'], cue_text=cue)
+                    cut['readouts'][str(ci)] = session.operation(f"readout/{t['id']}/{k}/cue{ci}", req,
+                        lambda req=req: readout(backend, **req))
+                cut['readout'] = cut['readouts']['0']
 
-            rows.append(dict(task_id=t['id'], trajectory_hash=digest(row), replay_passed=passed, cuts=cuts))
+            rows.append(dict(task_id=t['id'], trajectory_hash=digest(row), replay_passed=passed,
+                             any_checkpoint_failed=not passed, cuts=cuts))
         return sealed_write(out/'measurements.json', dict(plan_hash=plan['plan_hash'],
              collection_hash=collection['artifact_hash'], backend_hash=session.backend_hash, rows=rows))
 

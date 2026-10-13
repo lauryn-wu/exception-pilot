@@ -1,5 +1,10 @@
 # Reasoning prompts and exception records
 
+New Study 2A/2B runs use the [v3 protocol](REASONING_CONTINUATION_V3_PROTOCOL.md)
+and [v3 commands/workload](CONTINUATION_V3_RUNBOOK.md). Fixed 64-minus-0 remains
+primary; event checkpoints are secondary. Real replay/behavior validation is
+pending. Historical v1/v2 artifacts retain their original interpretation.
+
 These experiments ask GPT-4o to answer questions about synthetic vehicle records.
 Under the original classification wording, asking for reasoning made the model
 more likely to follow the surrounding labels even when they conflicted with the

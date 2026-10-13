@@ -5,11 +5,12 @@ from .core import DEFAULT_CONFIG
 from .runner import prepare, collect, measure, validate_run
 from .edits import review_export, freeze_edits, intervene
 from .analysis import analyze
+from .events import freeze_events, measure_events
 
 
 def main():
     p = argparse.ArgumentParser(description='Within-response continuation; no automatic model calls')
-    p.add_argument('command', choices=['prepare', 'validate', 'collect', 'measure', 'review-export', 'freeze-edits', 'intervene', 'analyze'])
+    p.add_argument('command', choices=['prepare', 'validate', 'collect', 'measure', 'review-export', 'freeze-edits', 'freeze-events', 'measure-events', 'intervene', 'analyze'])
     p.add_argument('--output', required=True)
     p.add_argument('--phase', choices=['selection', 'confirmation'], default='selection')
     p.add_argument('--config'); p.add_argument('--selection-output'); p.add_argument('--selection-note')
@@ -23,11 +24,14 @@ def main():
     elif a.command == 'validate':
         r = validate_run(a.output, live=a.live, mock=a.mock)
         print(json.dumps({'passed': r['passed'], 'mode': r['mode'], 'real_model_status': 'PENDING' if a.mock else ('TECHNICAL_PASSED' if r['passed'] else 'FAILED')}))
-    elif a.command in ('collect', 'measure', 'intervene'):
-        r = {'collect': collect, 'measure': measure, 'intervene': intervene}[a.command](a.output, live=a.live, mock=a.mock)
+    elif a.command in ('collect', 'measure', 'measure-events', 'intervene'):
+        r = {'collect': collect, 'measure': measure, 'measure-events': measure_events, 'intervene': intervene}[a.command](a.output, live=a.live, mock=a.mock)
         print(json.dumps({'stage': a.command, 'rows': len(r['rows']), 'artifact_hash': r['artifact_hash']}))
     elif a.command == 'review-export':
         print(review_export(a.output, a.review_file))
+    elif a.command == 'freeze-events':
+        r = freeze_events(a.output)
+        print(json.dumps({'version': r['version'], 'rows': len(r['rows'])}))
     elif a.command == 'freeze-edits':
         if not a.review_file: p.error('--review-file is required')
         r = freeze_edits(a.output, a.review_file)

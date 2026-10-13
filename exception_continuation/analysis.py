@@ -6,6 +6,11 @@ from exception_pilot.core import rng_for
 from .core import read_plan
 from .runner import sealed_read, sealed_write, collection_summary, validate_collection
 from .validation import calibration_result
+from .reporting import intervention_coverage
+
+
+def measured(cut):
+    return cut.get('eligible') is True and cut.get('passed') is True and 'readout' in cut
 
 
 def clustered(values):
@@ -43,24 +48,24 @@ def analyze(output):
         ms = sealed_read(out/'measurements.json')
         if ms['collection_hash'] != collection['artifact_hash']: raise ValueError('Stale measurements')
         deltas = defaultdict(list); coverage = defaultdict(lambda: dict(planned=0, eligible=0, replay_valid=0, measured=0))
-        paired = defaultdict(list)
+        paired = defaultdict(dict)
         for row in ms['rows']:
             t = tasks[row['task_id']]
             cuts = {c['k']: c for c in row['cuts']}
             for k, c in cuts.items():
                 coverage[k]['planned'] += 1; coverage[k]['eligible'] += c['eligible']
                 coverage[k]['replay_valid'] += bool(c.get('passed'))
-                coverage[k]['measured'] += 'readout' in c
-            if all('readout' in cuts[k] for k in (0, 64)):
-                paired[t['world']].append(cuts[64]['readout']['gold_pattern_log_odds']-cuts[0]['readout']['gold_pattern_log_odds'])
+                coverage[k]['measured'] += measured(c)
+            if all(measured(cuts.get(k, {})) for k in (0, 64)):
+                paired[t['world']][t['variant']] = cuts[64]['readout']['gold_pattern_log_odds']-cuts[0]['readout']['gold_pattern_log_odds']
         # Require BOTH target variants for a world in the prespecified longitudinal estimate.
-        deltas = {w: ds for w, ds in paired.items() if len(ds) == 2}
+        deltas = {w: list(ds.values()) for w, ds in paired.items() if set(ds) == {0, 1}}
         result['longitudinal_primary_64_minus_0'] = clustered(deltas)
         result['readout_coverage'] = dict(coverage)
         by_cut = defaultdict(lambda: defaultdict(list))
         for row in ms['rows']:
             for c in row['cuts']:
-                if 'readout' in c:
+                if measured(c):
                     by_cut[c['k']][tasks[row['task_id']]['world']].append(c['readout']['gold_pattern_log_odds'])
         result['readout_by_checkpoint'] = {k: clustered({w: vs for w, vs in worlds.items() if len(vs) == 2})
                                            for k, worlds in by_cut.items()}
@@ -72,20 +77,37 @@ def analyze(output):
             outcome = 'correct' if saved['score']['correct'] is True else 'wrong' if saved['score']['valid'] else 'invalid'
             wid = saved['task']['world']
             for c in row['cuts']:
-                if 'readout' not in c: continue
+                if not measured(c): continue
                 base = c['readout']['gold_pattern_log_odds']
                 strata[f"{outcome}/k{c['k']}" ][wid].append(base)
                 for ci, probe in c.get('readouts', {}).items():
                     if ci != '0': sensitivity[f"cue{ci}/k{c['k']}" ][wid].append(probe['gold_pattern_log_odds']-base)
-        result['study_2a'] = dict(primary=result['longitudinal_primary_64_minus_0'],
+        result['study_2a'] = dict(analysis_version='fixed-checkpoints-v3', primary=result['longitudinal_primary_64_minus_0'],
+            trajectories_with_any_failed_checkpoint=result['replay_failures'],
+            trajectory_denominator=len(ms['rows']),
+            checkpoint_replay_failures={k: c['eligible']-c['replay_valid'] for k, c in coverage.items()},
             coverage=result['readout_coverage'], checkpoint_means=result['readout_by_checkpoint'],
             by_final_outcome_descriptive={name: clustered(values) for name, values in strata.items()},
             cue_sensitivity={name: clustered(values) for name, values in sensitivity.items()},
             cues=plan['config']['readout_cues'], interpretation='Answer preferences under a checkpoint readout')
         sealed_write(out/'study-2a-summary.json', result['study_2a'])
 
-    if (out/'interventions.json').exists():
-        es = sealed_read(out/'edit-plan.json'); data = sealed_read(out/'interventions.json')
+    if (out/'event-measurements.json').exists():
+        from .events import summarize_events
+        event_plan = sealed_read(out/'event-plan.json'); events = sealed_read(out/'event-measurements.json')
+        if (events['event_plan_hash'] != event_plan['artifact_hash']
+                or events['collection_hash'] != collection['artifact_hash']
+                or events['backend_hash'] != execution['backend_hash']
+                or event_plan['edit_plan_hash'] != sealed_read(out/'edit-plan.json')['artifact_hash']):
+            raise ValueError('Stale event measurements')
+        result['study_2a_events_secondary'] = summarize_events(plan, events)
+        sealed_write(out/'study-2a-events-summary.json', result['study_2a_events_secondary'])
+
+    if (out/'edit-plan.json').exists():
+        es = sealed_read(out/'edit-plan.json')
+        data = sealed_read(out/'interventions.json') if (out/'interventions.json').exists() else dict(
+            edit_plan_hash=es['artifact_hash'], collection_hash=collection['artifact_hash'],
+            backend_hash=execution['backend_hash'], rows=[], real_model_status='PENDING')
         if (data['edit_plan_hash'] != es['artifact_hash'] or
                 data['collection_hash'] != collection['artifact_hash'] or
                 es['collection_hash'] != collection['artifact_hash'] or
@@ -116,6 +138,8 @@ def analyze(output):
                 if len(ps) == len(tids): readouts[wid] = ps
                 bounds.append([mean(lows), mean(highs)])
             comparisons[name] = dict(accuracy=clustered(values), readout=clustered(readouts),
+                planned_cases=len(es['cases']), complete_accuracy_cases=sum(len(v) for v in values.values()),
+                bounds_denominator='All cases in the frozen edit plan, averaged within world then across eligible worlds.',
                 eligible_worlds=len(eligible_worlds), full_plan_accuracy_bounds=[mean(b[i] for b in bounds) for i in (0,1)] if bounds else None)
         result['interventions'] = dict(real_model_status=data['real_model_status'],
             validated_same_response_interventions=bool(execution['mode'] == 'LIVE_LOCAL' and technical['passed']
@@ -124,7 +148,9 @@ def analyze(output):
                 and all(r.get('same_response_validated') and r.get('validation', {}).get('passed')
                         and r.get('control_validation', {}).get('passed') for r in data['rows'])),
             planned_cases=len(es['cases']), reviewed=es['reviewed'], excluded=es['excluded'],
-            returned_cases=len(data['rows']), invalid_or_replay_failed=sum(not r.get('unchanged_replay_passed', False) for r in data['rows']), comparisons=comparisons)
+            returned_cases=len(data['rows']), coverage=intervention_coverage(out, es, data),
+            deprecated_fields={'invalid_or_replay_failed': 'Removed: conflated replay failures with final-answer validity. Use coverage.replay_failures and coverage.per_arm.'},
+            comparisons=comparisons)
     if 'interventions' in result:
         result['study_2b'] = result['interventions']
         sealed_write(out/'study-2b-summary.json', result['study_2b'])

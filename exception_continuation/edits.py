@@ -76,7 +76,7 @@ def freeze_edits(output, review_file):
                               suffix_budget=plan['config']['max_new_tokens']-cut['k']))
         value = dict(plan_hash=plan['plan_hash'], collection_hash=collection['artifact_hash'],
                      selection_basis=review['selection_basis'], no_2a_selection_attested=review['no_2a_selection_attested'], review_hash=digest(review),
-                     reviewed=len(rows), cases=cases, excluded=excluded)
+                  reviewed=len(rows), review_rows=review['rows'], cases=cases, excluded=excluded)
         path = out/'edit-plan.json'
         if path.exists():
             old = sealed_read(path); old.pop('artifact_hash')

@@ -8,11 +8,14 @@ from exception_cue.core import INSTRUCTIONS
 from exception_explanation.core import INTRO, QUESTION
 from exception_pilot.core import digest, rng_for, check_plan
 
-PROTOCOL = 'within-reasoning-continuation-v2'
+PROTOCOL = 'within-reasoning-continuation-v3'
+EVENT_VERSION = 'event-checkpoints-v1'
+EVENTS = ('before_statement', 'after_statement', 'before_answer')
 CHECKPOINTS = (0, 32, 64, 128)
 DEFAULT_CONFIG = dict(model_dir=None, device='cpu', dtype='float32', max_new_tokens=512,
                       chat_template_kwargs={}, interface='plain_visible_assistant',
                       readout_cues=['\nANSWER:', '\nFinal answer:'], cue_check_checkpoints=[0, 64],
+                      event_checkpoints=list(EVENTS),
                       validation_tolerances=dict(logit_atol=1e-4, logit_rtol=1e-4,
                           prob_atol=1e-5, prob_rtol=1e-3, max_total_variation=1e-4),
                       calibration=dict(min_direct_correct=20, min_matched_pattern_errors=3,
@@ -28,7 +31,7 @@ def source_hash():
     packages = ['exception_continuation', 'exception_pilot', 'exception_counterfactual',
                 'exception_explanation', 'exception_cue', 'exception_factorial', 'exception_wording']
     files = [p for package in packages for p in sorted((root/package).glob('*.py'))]
-    files += [root/'REASONING_CONTINUATION_V2_PROTOCOL.md']
+    files += [root/'REASONING_CONTINUATION_V3_PROTOCOL.md']
     return digest({str(p.relative_to(root)): p.read_text() for p in files})
 
 
@@ -53,6 +56,9 @@ def validate_config(c):
         raise ValueError('Use primary cue plus at most two distinct newline-prefixed colon-terminated sensitivity cues')
     if not isinstance(c['cue_check_checkpoints'], list) or any(type(k) is not int or k not in CHECKPOINTS for k in c['cue_check_checkpoints']):
         raise ValueError('Cue sensitivity cuts must be a subset of predefined checkpoints')
+    events = c['event_checkpoints']
+    if not isinstance(events, list) or any(x not in EVENTS for x in events) or len(set(events)) != len(events):
+        raise ValueError('Event checkpoints must be a unique subset of the predefined events')
     import math
     tol = c['validation_tolerances']
     if set(tol) != set(DEFAULT_CONFIG['validation_tolerances']) or any(type(v) not in (float, int) or not math.isfinite(v) or v < 0 for v in tol.values()):
@@ -69,14 +75,14 @@ def make_plan(phase, config=None, selection_lock=None):
     c = validate_config(dict(DEFAULT_CONFIG if config is None else config))
     if phase == 'confirmation' and not selection_lock:
         raise ValueError('Confirmation requires a completed selection lock')
-    seed, reps, prefix = (2026101321, 1, 'G') if phase == 'selection' else (2026101322, 2, 'H')
+    seed, reps, prefix = (2026101421, 1, 'I') if phase == 'selection' else (2026101422, 2, 'J')
     assignments = [(roles, climate, rep) for roles in itertools.permutations('ABC')
                    for climate in ('cold', 'warm') for rep in range(reps)]
     rng_for(PROTOCOL, phase).shuffle(assignments)
     worlds, tasks, used = [], [], set()
     for index, (roles, climate, rep) in enumerate(assignments):
         w = make_world({'seed': seed}, index, used)
-        w['id'] = f'{phase}-continuation-v2-{index:03d}'
+        w['id'] = f'{phase}-continuation-v3-{index:03d}'
         for item in w['items']:
             item['id'] = prefix + item['id'][1:]
         target = next(i for i in w['target_indices'] if w['items'][i]['climate'] == climate)
@@ -101,7 +107,7 @@ def make_plan(phase, config=None, selection_lock=None):
                               target_plate=w['items'][target]['id'], target_row=rows[-1]))
         rng.shuffle(cells); tasks.extend(cells)
         worlds.append(dict(id=w['id'], items=w['items'], target=target, order=order, roles=list(roles)))
-    plan = dict(protocol=PROTOCOL, phase=phase, config=c, seed=seed, worlds=worlds,
+    plan = dict(protocol=PROTOCOL, event_version=EVENT_VERSION, phase=phase, config=c, seed=seed, worlds=worlds,
                 tasks=tasks, checkpoints=list(CHECKPOINTS), source_hash=source_hash(), selection_lock=selection_lock)
     plan['plan_hash'] = digest(plan)
     return plan
@@ -110,7 +116,7 @@ def make_plan(phase, config=None, selection_lock=None):
 def read_plan(out):
     p = json.loads((Path(out)/'plan.json').read_text()); check_plan(p)
     if p.get('protocol') != PROTOCOL:
-        raise ValueError('Legacy protocol: preserve this directory; use commit 1be7551 for v1 analysis. V2 needs a new output directory.')
+        raise ValueError('Legacy protocol: preserve this directory; use 1be7551 for v1 or 4baf414 for v2. V3 needs a new output directory.')
     if p['source_hash'] != source_hash(): raise ValueError('Source/protocol changed')
     if p != make_plan(p['phase'], p['config'], p['selection_lock']):
         raise ValueError('Frozen inputs changed')

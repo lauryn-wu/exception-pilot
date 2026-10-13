@@ -69,14 +69,15 @@ class ContinuationTests(unittest.TestCase):
             self.assertFalse((Path(tmp)/'collection.json').exists())
             self.assertFalse(runner.sealed_read(Path(tmp)/'validation.json')['passed'])
 
-    def test_scientific_replay_failure_blocks_readouts(self):
+    def test_scientific_replay_failure_blocks_only_affected_readouts(self):
         with tempfile.TemporaryDirectory() as tmp:
             runner.prepare(tmp, 'selection')
             backend = ScientificBadReplay()
             runner.collect(tmp, mock=True, backend_override=backend)
             r = runner.measure(tmp, mock=True, backend_override=backend)
             self.assertTrue(all(not row['replay_passed'] for row in r['rows']))
-            self.assertFalse(any('readout' in c for row in r['rows'] for c in row['cuts']))
+            self.assertTrue(all('readout' in row['cuts'][0] for row in r['rows']))
+            self.assertFalse(any('readout' in c for row in r['rows'] for c in row['cuts'][1:]))
 
     def test_predefined_cuts_before_answer_and_no_new_turn(self):
         b = MockBackend()
