@@ -28,6 +28,10 @@ exception-mistral-map-v2 = "exception_mistral_map_v2.__main__:main"
 exception-mistral-map-v3 = "exception_mistral_map_v3.__main__:main"
 exception-mistral-framing = "exception_mistral_framing.__main__:main"
 exception-query-role = "exception_query_role.__main__:main"
+exception-downstream-history = "exception_downstream_history.__main__:main"
 
 [tool.setuptools.packages.find]
-include = ["exception_pilot*", "exception_counterfactual*", "exception_wording*", "exception_factorial*", "exception_explanation*", "exception_missingness*", "exception_cue*", "exception_constrained_cue*", "exception_order*", "exception_revision*", "exception_prefix*", "exception_mistral_prefix*", "exception_mistral_map*", "exception_mistral_framing*", "exception_query_role*"]
+include = ["exception_pilot*", "exception_counterfactual*", "exception_wording*", "exception_factorial*", "exception_explanation*", "exception_missingness*", "exception_cue*", "exception_constrained_cue*", "exception_order*", "exception_revision*", "exception_prefix*", "exception_mistral_prefix*", "exception_mistral_map*", "exception_mistral_framing*", "exception_query_role*", "exception_downstream*", "exception_study_support*", "exception_columns*"]
+
+[tool.setuptools.package-data]
+exception_downstream = ["source_snapshot.json"]

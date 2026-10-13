@@ -83,10 +83,22 @@ Two further studies are implemented in this branch:
   edits and removal, with separate availability controls and a failure example.
   The fixed plan contains 342 calls.
 
-Neither follow-up has live results yet. The first tests controlled feature
+This branch does not bundle live result archives for these two follow-ups. The first tests controlled feature
 patterns; the second tests whether the saved explanation affects a later answer.
 They do not infer a hidden belief from a copied label or an explanation.
 See [running both studies](FOLLOWUP_STUDIES.md) for a separate-worktree setup.
+
+### Matched history control for the factual follow-up
+
+The [downstream history control](DOWNSTREAM_HISTORY_PROTOCOL.md) compares the
+same factual question after a saved classification exchange and with just the
+original intro/table. Its wording and A/B/C/MISSING options are identical in
+both conditions. It reuses all 36 frozen source cases in separate cohorts and
+collects 216 new calls, including a contemporaneous history-present reference.
+This tests the entire preceding exchange; it does not isolate a particular
+sentence or the answer-option list. The protocol contains exact setup, offline
+preview, live-run, resume and analysis commands. This addition contains no live
+results and leaves the prior experiments unchanged.
 
 ## Interpretation
 

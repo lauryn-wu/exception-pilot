@@ -1,0 +1,11 @@
+{
+  "protocol": "verified-facts-downstream-history-v1",
+  "model": "gpt-4o-2024-08-06",
+  "api_key_env": "OPENAI_API_KEY",
+  "temperature": 0,
+  "max_completion_tokens": 64,
+  "max_total_attempts": 240,
+  "timeout_seconds": 120,
+  "repetitions": 3,
+  "schedule_seed": 728140
+}
