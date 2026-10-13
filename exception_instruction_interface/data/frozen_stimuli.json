@@ -1,0 +1,1118 @@
+{
+  "provenance": {
+    "source_run": "evidence-role-gpt4o-001",
+    "archive_name": "evidence-role-gpt4o-001-results.zip",
+    "archive_sha256": "0d13a3649c9661377b62f7303b52b61eb72dec6335f1fd9526dad089113a6226",
+    "plan_member": "runs/evidence-role-gpt4o-001/plan.json",
+    "plan_file_sha256": "937df7ea37ceb6206bf472840887a831b82785e93820869d4cbc343ca7a8d45a",
+    "plan_hash": "798d047a556f3b905fe8b7b8ed9bb12f867dec9ed6fcdb105064d61bf45a87ce",
+    "preview_member": "runs/evidence-role-gpt4o-001/preview.json",
+    "preview_file_sha256": "f9192f4a1aa4db7f9cd36c76b26751068ce79baae6e9955875a475b599920219",
+    "extraction": "Exact prompt prefix before the preliminary instruction; copy_record and initial_answer reasoning-first requests verified identical. No world generation or historical responses."
+  },
+  "settings": {
+    "model": "gpt-4o-2024-08-06",
+    "temperature": 0,
+    "max_completion_tokens": 1000,
+    "n": 1,
+    "store": false
+  },
+  "json_instruction": "Output only a JSON object with the fields \"first_value\", \"reasoning\", and \"final_answer\". Write your reasoning in \"reasoning\". Set \"final_answer\" to A, B, or C. Your final answer may match or differ from the preliminary entry.",
+  "entry_instructions": {
+    "copy_record": "Copy the target vehicle's Verified class cell exactly into first_value. Treat this entry as the recorded class.",
+    "initial_answer": "Give your initial answer to the class question in first_value."
+  },
+  "json_response_format": {
+    "type": "json_schema",
+    "json_schema": {
+      "name": "class_response",
+      "strict": true,
+      "schema": {
+        "type": "object",
+        "properties": {
+          "first_value": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "reasoning": {
+            "type": "string"
+          },
+          "final_answer": {
+            "type": "string",
+            "enum": [
+              "A",
+              "B",
+              "C"
+            ]
+          }
+        },
+        "required": [
+          "first_value",
+          "reasoning",
+          "final_answer"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "stimuli": [
+    {
+      "world_id": "er-list-000",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JFQM3S | Built for desert heat | Automatic | Cloth | Two | Z | C |\n| JT5L8P | Built for subzero temperatures | Manual | Vinyl | Two | Y | B |\n| JWZBSR | Operates in tropical forests | Automatic | Vinyl | Four | X | C |\n| JKD6S6 | Operates on polar ice | Manual | Cloth | Four | Y | A |\n| J229YS | Designed for humid summers | Automatic | Cloth | Two | X | C |\n| J8APJN | Used at an Arctic station | Manual | Cloth | Four | X | B |\n| JFK5G8 | Designed for frozen terrain | Manual | Vinyl | Four | Z | A |\n| J2S3K6 | Equipped with snow tracks | Automatic | Vinyl | Two | Y | B |\n| JZQPNY | Used at an equatorial station | Manual | Vinyl | Four | Z | C |\n| J4CS8B | Equipped for hot sand | Manual | Vinyl | Two | X | B |\n\nLicense plate: J4CS8B\nDescription: Equipped for hot sand\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-000",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "J4CS8B",
+        "expected": "B",
+        "other_record_label": "A",
+        "pattern_label": "C",
+        "copy_expected": "B",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-000/record_1/copy_record/reason_then_answer": "7ee5cf7aaade9b9da405039402f0d2467e1eec9ae1b425d6fa7a53aca15e2d19",
+        "er-list-000/record_1/initial_answer/reason_then_answer": "1b5d2f8c751ff5b89b1ded798cd29fdb10d6ff2348c23d87a10400f5b6368eaa"
+      }
+    },
+    {
+      "world_id": "er-list-000",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JFQM3S | Built for desert heat | Automatic | Cloth | Two | Z | C |\n| JT5L8P | Built for subzero temperatures | Manual | Vinyl | Two | Y | B |\n| JWZBSR | Operates in tropical forests | Automatic | Vinyl | Four | X | C |\n| JKD6S6 | Operates on polar ice | Manual | Cloth | Four | Y | A |\n| J229YS | Designed for humid summers | Automatic | Cloth | Two | X | C |\n| J8APJN | Used at an Arctic station | Manual | Cloth | Four | X | B |\n| JFK5G8 | Designed for frozen terrain | Manual | Vinyl | Four | Z | A |\n| J2S3K6 | Equipped with snow tracks | Automatic | Vinyl | Two | Y | B |\n| JZQPNY | Used at an equatorial station | Manual | Vinyl | Four | Z | C |\n| J4CS8B | Equipped for hot sand | Manual | Vinyl | Two | X | A |\n\nLicense plate: J4CS8B\nDescription: Equipped for hot sand\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-000",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "J4CS8B",
+        "expected": "A",
+        "other_record_label": "B",
+        "pattern_label": "C",
+        "copy_expected": "A",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-000/record_2/copy_record/reason_then_answer": "bed3bf26ea7bc78093e5b1bd28d8cc9feb363d988bc6f6bf8d417e83417ca580",
+        "er-list-000/record_2/initial_answer/reason_then_answer": "b93bcf1871fe046311df85e4bf89723c3c23c9c73961928ed5297ed68bb4d9ca"
+      }
+    },
+    {
+      "world_id": "er-list-001",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| J7A6ME | Designed for humid summers | Manual | Cloth | Four | Z | C |\n| JM6Z2C | Equipped for hot sand | Manual | Cloth | Four | X | C |\n| J2ZME2 | Built for subzero temperatures | Automatic | Vinyl | Four | X | A |\n| JXGDKW | Used at an Arctic station | Automatic | Vinyl | Two | Y | A |\n| J8RLZQ | Equipped with snow tracks | Automatic | Cloth | Four | Y | B |\n| JNBMJQ | Operates on polar ice | Automatic | Vinyl | Four | X | B |\n| J32NXN | Operates in tropical forests | Manual | Vinyl | Two | Y | C |\n| JJUFXK | Designed for frozen terrain | Automatic | Vinyl | Two | Y | A |\n| J9NE5F | Built for desert heat | Manual | Vinyl | Four | Z | C |\n| J83RFV | Used at an equatorial station | Manual | Vinyl | Four | Z | B |\n\nLicense plate: J83RFV\nDescription: Used at an equatorial station\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-001",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "J83RFV",
+        "expected": "B",
+        "other_record_label": "A",
+        "pattern_label": "C",
+        "copy_expected": "B",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-001/record_1/copy_record/reason_then_answer": "8b3957954c5b0400cd9e6e2349ccea800969648d9a4ac2bc8c4774e359faac57",
+        "er-list-001/record_1/initial_answer/reason_then_answer": "d430baf732210c9db4edd0cc3965b0aba7615057aa180569045e7eaed99dce63"
+      }
+    },
+    {
+      "world_id": "er-list-001",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| J7A6ME | Designed for humid summers | Manual | Cloth | Four | Z | C |\n| JM6Z2C | Equipped for hot sand | Manual | Cloth | Four | X | C |\n| J2ZME2 | Built for subzero temperatures | Automatic | Vinyl | Four | X | A |\n| JXGDKW | Used at an Arctic station | Automatic | Vinyl | Two | Y | A |\n| J8RLZQ | Equipped with snow tracks | Automatic | Cloth | Four | Y | B |\n| JNBMJQ | Operates on polar ice | Automatic | Vinyl | Four | X | B |\n| J32NXN | Operates in tropical forests | Manual | Vinyl | Two | Y | C |\n| JJUFXK | Designed for frozen terrain | Automatic | Vinyl | Two | Y | A |\n| J9NE5F | Built for desert heat | Manual | Vinyl | Four | Z | C |\n| J83RFV | Used at an equatorial station | Manual | Vinyl | Four | Z | A |\n\nLicense plate: J83RFV\nDescription: Used at an equatorial station\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-001",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "J83RFV",
+        "expected": "A",
+        "other_record_label": "B",
+        "pattern_label": "C",
+        "copy_expected": "A",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-001/record_2/copy_record/reason_then_answer": "80901aeaafaf4499f2e36cab79a8a550468c1099a92dfcacaf5fa31fe7d8b994",
+        "er-list-001/record_2/initial_answer/reason_then_answer": "93681697a6cb1df85ae321aa9cdad31859b2f46c95aca08cc1f7c745e7f570d2"
+      }
+    },
+    {
+      "world_id": "er-list-002",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| J88N6E | Built for desert heat | Manual | Cloth | Two | Z | B |\n| JHM2XX | Built for subzero temperatures | Automatic | Cloth | Two | Y | C |\n| JDACFA | Equipped for hot sand | Manual | Vinyl | Two | X | B |\n| JP3UVL | Operates in tropical forests | Automatic | Cloth | Two | X | A |\n| J9YHK8 | Used at an equatorial station | Automatic | Vinyl | Two | X | B |\n| J45H45 | Operates on polar ice | Manual | Cloth | Four | Y | C |\n| JWG9E5 | Designed for frozen terrain | Manual | Cloth | Four | Z | C |\n| J7GDZ9 | Designed for humid summers | Automatic | Vinyl | Two | Y | A |\n| JQWVF2 | Equipped with snow tracks | Automatic | Cloth | Four | Y | C |\n| JHRKCE | Used at an Arctic station | Manual | Vinyl | Two | Z | B |\n\nLicense plate: JHRKCE\nDescription: Used at an Arctic station\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-002",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JHRKCE",
+        "expected": "B",
+        "other_record_label": "A",
+        "pattern_label": "C",
+        "copy_expected": "B",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-002/record_1/copy_record/reason_then_answer": "cdc6a0af7c5f3528e71bda21194055be2fae707768e5a05f5084fc19b7650d73",
+        "er-list-002/record_1/initial_answer/reason_then_answer": "e92d21c61ee2059fc34c7a700b990d5cab92996cc69e65b0d43b4ed5adf75441"
+      }
+    },
+    {
+      "world_id": "er-list-002",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| J88N6E | Built for desert heat | Manual | Cloth | Two | Z | B |\n| JHM2XX | Built for subzero temperatures | Automatic | Cloth | Two | Y | C |\n| JDACFA | Equipped for hot sand | Manual | Vinyl | Two | X | B |\n| JP3UVL | Operates in tropical forests | Automatic | Cloth | Two | X | A |\n| J9YHK8 | Used at an equatorial station | Automatic | Vinyl | Two | X | B |\n| J45H45 | Operates on polar ice | Manual | Cloth | Four | Y | C |\n| JWG9E5 | Designed for frozen terrain | Manual | Cloth | Four | Z | C |\n| J7GDZ9 | Designed for humid summers | Automatic | Vinyl | Two | Y | A |\n| JQWVF2 | Equipped with snow tracks | Automatic | Cloth | Four | Y | C |\n| JHRKCE | Used at an Arctic station | Manual | Vinyl | Two | Z | A |\n\nLicense plate: JHRKCE\nDescription: Used at an Arctic station\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-002",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JHRKCE",
+        "expected": "A",
+        "other_record_label": "B",
+        "pattern_label": "C",
+        "copy_expected": "A",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-002/record_2/copy_record/reason_then_answer": "9beffc8f32e9e988ee56c0ddaca38b1a878856c1bf329cf044f4c1aad770280f",
+        "er-list-002/record_2/initial_answer/reason_then_answer": "80844f2a9515df08a35e28c9216696953a193b85dcd0d7f146fa723e84fca1ef"
+      }
+    },
+    {
+      "world_id": "er-list-003",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JQN3MD | Equipped for hot sand | Manual | Cloth | Four | X | C |\n| JC54NH | Designed for humid summers | Manual | Cloth | Four | Y | C |\n| JL9JZM | Used at an Arctic station | Automatic | Vinyl | Two | Z | B |\n| JWNQYR | Built for subzero temperatures | Manual | Vinyl | Four | Y | B |\n| JBKVTB | Operates on polar ice | Automatic | Vinyl | Two | X | A |\n| JXR9WW | Used at an equatorial station | Manual | Cloth | Four | Z | C |\n| JTTQNA | Equipped with snow tracks | Manual | Cloth | Two | Y | B |\n| JMDMAU | Designed for frozen terrain | Manual | Vinyl | Two | X | A |\n| JPGDUF | Operates in tropical forests | Manual | Cloth | Two | Y | C |\n| JG7ENJ | Built for desert heat | Manual | Vinyl | Two | Z | A |\n\nLicense plate: JG7ENJ\nDescription: Built for desert heat\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-003",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JG7ENJ",
+        "expected": "A",
+        "other_record_label": "B",
+        "pattern_label": "C",
+        "copy_expected": "A",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-003/record_1/copy_record/reason_then_answer": "bb900a3016d48017304debe2d7d982deb79cfbb81356b054c7ce468def804727",
+        "er-list-003/record_1/initial_answer/reason_then_answer": "728e1ee3fb48cd2f6a1bf1eeee8434bd01f6c11255b32abdce3200a9998154eb"
+      }
+    },
+    {
+      "world_id": "er-list-003",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JQN3MD | Equipped for hot sand | Manual | Cloth | Four | X | C |\n| JC54NH | Designed for humid summers | Manual | Cloth | Four | Y | C |\n| JL9JZM | Used at an Arctic station | Automatic | Vinyl | Two | Z | B |\n| JWNQYR | Built for subzero temperatures | Manual | Vinyl | Four | Y | B |\n| JBKVTB | Operates on polar ice | Automatic | Vinyl | Two | X | A |\n| JXR9WW | Used at an equatorial station | Manual | Cloth | Four | Z | C |\n| JTTQNA | Equipped with snow tracks | Manual | Cloth | Two | Y | B |\n| JMDMAU | Designed for frozen terrain | Manual | Vinyl | Two | X | A |\n| JPGDUF | Operates in tropical forests | Manual | Cloth | Two | Y | C |\n| JG7ENJ | Built for desert heat | Manual | Vinyl | Two | Z | B |\n\nLicense plate: JG7ENJ\nDescription: Built for desert heat\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-003",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JG7ENJ",
+        "expected": "B",
+        "other_record_label": "A",
+        "pattern_label": "C",
+        "copy_expected": "B",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-003/record_2/copy_record/reason_then_answer": "5aeee962be275fd67674137d40230a07e0e99965dd29e1030fe739fddf36d3cf",
+        "er-list-003/record_2/initial_answer/reason_then_answer": "3c2ebcaae9557cbe90070e7a84517f5485eb5c84b27f559c609472492133d674"
+      }
+    },
+    {
+      "world_id": "er-list-004",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JQQRT6 | Designed for frozen terrain | Automatic | Vinyl | Two | Y | C |\n| J5NWXZ | Designed for humid summers | Automatic | Cloth | Four | X | B |\n| JHZSSF | Built for desert heat | Automatic | Cloth | Two | Z | B |\n| JL7B4Z | Equipped with snow tracks | Manual | Cloth | Four | Y | A |\n| JNRHMA | Operates in tropical forests | Automatic | Cloth | Four | Z | B |\n| JY2NAC | Used at an Arctic station | Automatic | Cloth | Two | X | A |\n| J3DPD7 | Used at an equatorial station | Automatic | Cloth | Two | Z | B |\n| JWFW39 | Built for subzero temperatures | Automatic | Vinyl | Two | Y | C |\n| J9ZXCW | Operates on polar ice | Manual | Cloth | Two | Y | C |\n| JMRX74 | Equipped for hot sand | Manual | Vinyl | Two | X | C |\n\nLicense plate: JMRX74\nDescription: Equipped for hot sand\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-004",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JMRX74",
+        "expected": "C",
+        "other_record_label": "A",
+        "pattern_label": "B",
+        "copy_expected": "C",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-004/record_1/copy_record/reason_then_answer": "99214f1f4b2d7e6294c4b4ce8ce3cb1fffcb1b571add5b5c7b4e18c957fb021c",
+        "er-list-004/record_1/initial_answer/reason_then_answer": "b1cea4c92ea8480eac030affa00b4340731ac44ac9676d896e09d40302c0a626"
+      }
+    },
+    {
+      "world_id": "er-list-004",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JQQRT6 | Designed for frozen terrain | Automatic | Vinyl | Two | Y | C |\n| J5NWXZ | Designed for humid summers | Automatic | Cloth | Four | X | B |\n| JHZSSF | Built for desert heat | Automatic | Cloth | Two | Z | B |\n| JL7B4Z | Equipped with snow tracks | Manual | Cloth | Four | Y | A |\n| JNRHMA | Operates in tropical forests | Automatic | Cloth | Four | Z | B |\n| JY2NAC | Used at an Arctic station | Automatic | Cloth | Two | X | A |\n| J3DPD7 | Used at an equatorial station | Automatic | Cloth | Two | Z | B |\n| JWFW39 | Built for subzero temperatures | Automatic | Vinyl | Two | Y | C |\n| J9ZXCW | Operates on polar ice | Manual | Cloth | Two | Y | C |\n| JMRX74 | Equipped for hot sand | Manual | Vinyl | Two | X | A |\n\nLicense plate: JMRX74\nDescription: Equipped for hot sand\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-004",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JMRX74",
+        "expected": "A",
+        "other_record_label": "C",
+        "pattern_label": "B",
+        "copy_expected": "A",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-004/record_2/copy_record/reason_then_answer": "f8fb2bd2e8037c139306c546aa3671ddbe74539c5223d7e8df26ab65d0ba8c8d",
+        "er-list-004/record_2/initial_answer/reason_then_answer": "a660b299a0b62dfa2f7775606171de52ba559e38bc775a883f4a045e36b71477"
+      }
+    },
+    {
+      "world_id": "er-list-005",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| J8S6RM | Built for desert heat | Automatic | Cloth | Four | X | B |\n| JW9ULV | Used at an equatorial station | Automatic | Vinyl | Four | Z | A |\n| JVZ4XA | Designed for frozen terrain | Manual | Cloth | Four | Y | C |\n| J5NQRL | Used at an Arctic station | Automatic | Vinyl | Two | Y | C |\n| JTQEVS | Designed for humid summers | Manual | Cloth | Two | Y | B |\n| JQXJ95 | Equipped for hot sand | Automatic | Vinyl | Four | X | A |\n| JDWHQZ | Operates in tropical forests | Manual | Vinyl | Two | Z | B |\n| JRK7V8 | Built for subzero temperatures | Automatic | Vinyl | Four | Y | C |\n| JU6KEL | Operates on polar ice | Automatic | Vinyl | Two | Z | C |\n| JQCE9W | Equipped with snow tracks | Manual | Cloth | Two | X | A |\n\nLicense plate: JQCE9W\nDescription: Equipped with snow tracks\nTransmission: Manual\nSeat cover: Cloth\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-005",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JQCE9W",
+        "expected": "A",
+        "other_record_label": "B",
+        "pattern_label": "C",
+        "copy_expected": "A",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-005/record_1/copy_record/reason_then_answer": "9d2f451f84949efff7126d9e411310ac63febedf35d6c1e9678650a3da342023",
+        "er-list-005/record_1/initial_answer/reason_then_answer": "266b29b0175de38b47ce935b55a34bd07168e2b10a1fe9ed3a81aa677859aa8a"
+      }
+    },
+    {
+      "world_id": "er-list-005",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| J8S6RM | Built for desert heat | Automatic | Cloth | Four | X | B |\n| JW9ULV | Used at an equatorial station | Automatic | Vinyl | Four | Z | A |\n| JVZ4XA | Designed for frozen terrain | Manual | Cloth | Four | Y | C |\n| J5NQRL | Used at an Arctic station | Automatic | Vinyl | Two | Y | C |\n| JTQEVS | Designed for humid summers | Manual | Cloth | Two | Y | B |\n| JQXJ95 | Equipped for hot sand | Automatic | Vinyl | Four | X | A |\n| JDWHQZ | Operates in tropical forests | Manual | Vinyl | Two | Z | B |\n| JRK7V8 | Built for subzero temperatures | Automatic | Vinyl | Four | Y | C |\n| JU6KEL | Operates on polar ice | Automatic | Vinyl | Two | Z | C |\n| JQCE9W | Equipped with snow tracks | Manual | Cloth | Two | X | B |\n\nLicense plate: JQCE9W\nDescription: Equipped with snow tracks\nTransmission: Manual\nSeat cover: Cloth\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-005",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JQCE9W",
+        "expected": "B",
+        "other_record_label": "A",
+        "pattern_label": "C",
+        "copy_expected": "B",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-005/record_2/copy_record/reason_then_answer": "ec630805b21b9a6efc28285e0dfee51bbb4c7cad280f37d1dc5f3532ebe4fd19",
+        "er-list-005/record_2/initial_answer/reason_then_answer": "d0c9ca483d1e234e7c6e1adb68e246f7d79adf456ba79f15c8a0dedec921f2d7"
+      }
+    },
+    {
+      "world_id": "er-list-006",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| J5BJHP | Built for subzero temperatures | Manual | Vinyl | Two | Y | C |\n| JKXFUC | Used at an equatorial station | Automatic | Vinyl | Four | X | B |\n| J4PQ8B | Used at an Arctic station | Automatic | Vinyl | Four | X | C |\n| JY78RF | Equipped for hot sand | Automatic | Vinyl | Four | Z | B |\n| JGYRFS | Designed for frozen terrain | Automatic | Cloth | Two | X | C |\n| JHHJWB | Built for desert heat | Manual | Cloth | Four | Z | A |\n| JDGSWY | Operates in tropical forests | Automatic | Cloth | Two | Y | A |\n| JTKA8U | Equipped with snow tracks | Automatic | Vinyl | Four | Y | C |\n| JRHSRB | Designed for humid summers | Manual | Cloth | Four | Z | B |\n| J5UFYY | Operates on polar ice | Automatic | Cloth | Four | Y | B |\n\nLicense plate: J5UFYY\nDescription: Operates on polar ice\nTransmission: Automatic\nSeat cover: Cloth\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-006",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "J5UFYY",
+        "expected": "B",
+        "other_record_label": "A",
+        "pattern_label": "C",
+        "copy_expected": "B",
+        "target_marker": "Y",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-006/record_1/copy_record/reason_then_answer": "391b94f308abbeffc1163aa750a380ce41e52cbb800eaf6d106d693d8d1d17ed",
+        "er-list-006/record_1/initial_answer/reason_then_answer": "26d622bbb1184d3442c3e6f3fa9c1abe9238aa03a34bc02d8b123fba59f510c8"
+      }
+    },
+    {
+      "world_id": "er-list-006",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| J5BJHP | Built for subzero temperatures | Manual | Vinyl | Two | Y | C |\n| JKXFUC | Used at an equatorial station | Automatic | Vinyl | Four | X | B |\n| J4PQ8B | Used at an Arctic station | Automatic | Vinyl | Four | X | C |\n| JY78RF | Equipped for hot sand | Automatic | Vinyl | Four | Z | B |\n| JGYRFS | Designed for frozen terrain | Automatic | Cloth | Two | X | C |\n| JHHJWB | Built for desert heat | Manual | Cloth | Four | Z | A |\n| JDGSWY | Operates in tropical forests | Automatic | Cloth | Two | Y | A |\n| JTKA8U | Equipped with snow tracks | Automatic | Vinyl | Four | Y | C |\n| JRHSRB | Designed for humid summers | Manual | Cloth | Four | Z | B |\n| J5UFYY | Operates on polar ice | Automatic | Cloth | Four | Y | A |\n\nLicense plate: J5UFYY\nDescription: Operates on polar ice\nTransmission: Automatic\nSeat cover: Cloth\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-006",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "J5UFYY",
+        "expected": "A",
+        "other_record_label": "B",
+        "pattern_label": "C",
+        "copy_expected": "A",
+        "target_marker": "Y",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-006/record_2/copy_record/reason_then_answer": "857b605732e386ecb8f6c448383ce6f29b48b53362f9c98d0325a21ce36bbb50",
+        "er-list-006/record_2/initial_answer/reason_then_answer": "28832ad359387bd73e4f3515698322024805586cebd6868b92d0c1d7f35fffd1"
+      }
+    },
+    {
+      "world_id": "er-list-007",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JPY3ZK | Designed for frozen terrain | Manual | Cloth | Four | Z | B |\n| JJRNNG | Built for desert heat | Manual | Cloth | Two | Y | C |\n| J93ND2 | Equipped for hot sand | Automatic | Cloth | Two | X | A |\n| JGXWZN | Used at an Arctic station | Automatic | Vinyl | Two | Z | B |\n| J8C433 | Operates in tropical forests | Manual | Cloth | Four | Z | C |\n| JUYCY2 | Designed for humid summers | Manual | Cloth | Four | Y | A |\n| JJHFJ6 | Used at an equatorial station | Manual | Cloth | Two | X | C |\n| JRTLPA | Equipped with snow tracks | Manual | Cloth | Two | X | B |\n| J3LA2Q | Built for subzero temperatures | Automatic | Cloth | Four | X | B |\n| JZN6ZR | Operates on polar ice | Automatic | Cloth | Two | Y | A |\n\nLicense plate: JZN6ZR\nDescription: Operates on polar ice\nTransmission: Automatic\nSeat cover: Cloth\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-007",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JZN6ZR",
+        "expected": "A",
+        "other_record_label": "C",
+        "pattern_label": "B",
+        "copy_expected": "A",
+        "target_marker": "Y",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-007/record_1/copy_record/reason_then_answer": "a5c87566c259a108f80b77512a4b80758015ede6a214f68455f970119b3e5afb",
+        "er-list-007/record_1/initial_answer/reason_then_answer": "acd50549585175554ce0dedad990f11c314ad57ce7199e91caf9632bc4ef0845"
+      }
+    },
+    {
+      "world_id": "er-list-007",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JPY3ZK | Designed for frozen terrain | Manual | Cloth | Four | Z | B |\n| JJRNNG | Built for desert heat | Manual | Cloth | Two | Y | C |\n| J93ND2 | Equipped for hot sand | Automatic | Cloth | Two | X | A |\n| JGXWZN | Used at an Arctic station | Automatic | Vinyl | Two | Z | B |\n| J8C433 | Operates in tropical forests | Manual | Cloth | Four | Z | C |\n| JUYCY2 | Designed for humid summers | Manual | Cloth | Four | Y | A |\n| JJHFJ6 | Used at an equatorial station | Manual | Cloth | Two | X | C |\n| JRTLPA | Equipped with snow tracks | Manual | Cloth | Two | X | B |\n| J3LA2Q | Built for subzero temperatures | Automatic | Cloth | Four | X | B |\n| JZN6ZR | Operates on polar ice | Automatic | Cloth | Two | Y | C |\n\nLicense plate: JZN6ZR\nDescription: Operates on polar ice\nTransmission: Automatic\nSeat cover: Cloth\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-007",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JZN6ZR",
+        "expected": "C",
+        "other_record_label": "A",
+        "pattern_label": "B",
+        "copy_expected": "C",
+        "target_marker": "Y",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-007/record_2/copy_record/reason_then_answer": "1fee621eb978167333564c310b830db18e6eebf5e13e3543be1817b73711a7f6",
+        "er-list-007/record_2/initial_answer/reason_then_answer": "06786fa1dd54bfa40a1e505f2bd6b7510f25fe9ff27e3d494309982c363f1421"
+      }
+    },
+    {
+      "world_id": "er-list-008",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JBTNHA | Used at an Arctic station | Manual | Cloth | Four | X | B |\n| JEBDWX | Operates in tropical forests | Manual | Vinyl | Four | X | A |\n| JYBQ34 | Equipped for hot sand | Automatic | Vinyl | Two | Y | A |\n| JSDJ4L | Designed for humid summers | Manual | Cloth | Four | Y | A |\n| JFL8UV | Designed for frozen terrain | Manual | Vinyl | Two | Y | C |\n| JE3YUA | Equipped with snow tracks | Manual | Cloth | Four | Z | C |\n| JUFLP2 | Built for subzero temperatures | Automatic | Vinyl | Four | Z | B |\n| JAWLPW | Operates on polar ice | Manual | Vinyl | Two | Z | B |\n| J7J6LV | Built for desert heat | Manual | Vinyl | Two | Z | A |\n| JRHHSN | Used at an equatorial station | Automatic | Cloth | Two | X | B |\n\nLicense plate: JRHHSN\nDescription: Used at an equatorial station\nTransmission: Automatic\nSeat cover: Cloth\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-008",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JRHHSN",
+        "expected": "B",
+        "other_record_label": "C",
+        "pattern_label": "A",
+        "copy_expected": "B",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-008/record_1/copy_record/reason_then_answer": "b216feb7f7a6c7ffd6b21e0a7dd2fb5ba9122e79a68edb9a5425fcd309443404",
+        "er-list-008/record_1/initial_answer/reason_then_answer": "f017a5575a43cce410e75d8bcdf4eb9c651255df86b698a6eb8e3f4caaa44eba"
+      }
+    },
+    {
+      "world_id": "er-list-008",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JBTNHA | Used at an Arctic station | Manual | Cloth | Four | X | B |\n| JEBDWX | Operates in tropical forests | Manual | Vinyl | Four | X | A |\n| JYBQ34 | Equipped for hot sand | Automatic | Vinyl | Two | Y | A |\n| JSDJ4L | Designed for humid summers | Manual | Cloth | Four | Y | A |\n| JFL8UV | Designed for frozen terrain | Manual | Vinyl | Two | Y | C |\n| JE3YUA | Equipped with snow tracks | Manual | Cloth | Four | Z | C |\n| JUFLP2 | Built for subzero temperatures | Automatic | Vinyl | Four | Z | B |\n| JAWLPW | Operates on polar ice | Manual | Vinyl | Two | Z | B |\n| J7J6LV | Built for desert heat | Manual | Vinyl | Two | Z | A |\n| JRHHSN | Used at an equatorial station | Automatic | Cloth | Two | X | C |\n\nLicense plate: JRHHSN\nDescription: Used at an equatorial station\nTransmission: Automatic\nSeat cover: Cloth\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-008",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JRHHSN",
+        "expected": "C",
+        "other_record_label": "B",
+        "pattern_label": "A",
+        "copy_expected": "C",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-008/record_2/copy_record/reason_then_answer": "b9b82302bccd16fa20ab489d544a4cc5557948ff5a060d134629651f55447f87",
+        "er-list-008/record_2/initial_answer/reason_then_answer": "b44cfccf77e3d06da899c9fd8c5f240e85531d88e697405fee87a2f6d5d46203"
+      }
+    },
+    {
+      "world_id": "er-list-009",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JKAD6A | Operates on polar ice | Manual | Cloth | Two | Z | A |\n| JMS4ZG | Equipped with snow tracks | Manual | Vinyl | Four | X | A |\n| JUTECN | Operates in tropical forests | Manual | Vinyl | Two | Y | B |\n| JKFT2U | Equipped for hot sand | Automatic | Cloth | Two | Z | C |\n| JZ6X2Z | Designed for frozen terrain | Manual | Vinyl | Two | X | A |\n| JLLAZU | Built for desert heat | Manual | Vinyl | Two | X | B |\n| JFBM5J | Used at an equatorial station | Automatic | Cloth | Four | Y | B |\n| JT24MZ | Designed for humid summers | Automatic | Vinyl | Four | Y | C |\n| JFHDWC | Built for subzero temperatures | Automatic | Cloth | Four | Y | A |\n| JUEQJ4 | Used at an Arctic station | Automatic | Cloth | Four | Z | C |\n\nLicense plate: JUEQJ4\nDescription: Used at an Arctic station\nTransmission: Automatic\nSeat cover: Cloth\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-009",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JUEQJ4",
+        "expected": "C",
+        "other_record_label": "B",
+        "pattern_label": "A",
+        "copy_expected": "C",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-009/record_1/copy_record/reason_then_answer": "5d04e015f505a0e7890fbe5bbdf22d78a408435ab11d3e007fb274f2d419f981",
+        "er-list-009/record_1/initial_answer/reason_then_answer": "7df2fe64d308e558f5c3ef6477f7574c599a7da737c59d788f14d83a2d3c7c95"
+      }
+    },
+    {
+      "world_id": "er-list-009",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JKAD6A | Operates on polar ice | Manual | Cloth | Two | Z | A |\n| JMS4ZG | Equipped with snow tracks | Manual | Vinyl | Four | X | A |\n| JUTECN | Operates in tropical forests | Manual | Vinyl | Two | Y | B |\n| JKFT2U | Equipped for hot sand | Automatic | Cloth | Two | Z | C |\n| JZ6X2Z | Designed for frozen terrain | Manual | Vinyl | Two | X | A |\n| JLLAZU | Built for desert heat | Manual | Vinyl | Two | X | B |\n| JFBM5J | Used at an equatorial station | Automatic | Cloth | Four | Y | B |\n| JT24MZ | Designed for humid summers | Automatic | Vinyl | Four | Y | C |\n| JFHDWC | Built for subzero temperatures | Automatic | Cloth | Four | Y | A |\n| JUEQJ4 | Used at an Arctic station | Automatic | Cloth | Four | Z | B |\n\nLicense plate: JUEQJ4\nDescription: Used at an Arctic station\nTransmission: Automatic\nSeat cover: Cloth\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-009",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JUEQJ4",
+        "expected": "B",
+        "other_record_label": "C",
+        "pattern_label": "A",
+        "copy_expected": "B",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-009/record_2/copy_record/reason_then_answer": "ae20c934e7e245ddad083bf11aeccf4a7d71c6c984599e02f4bbaaefe31e17be",
+        "er-list-009/record_2/initial_answer/reason_then_answer": "c88a28b4629b5087e65394e00eb81e11df35ea839d0edefff7f46acf864c04d9"
+      }
+    },
+    {
+      "world_id": "er-list-010",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JVA3Z4 | Designed for frozen terrain | Automatic | Cloth | Four | Z | B |\n| JCA7BF | Designed for humid summers | Automatic | Cloth | Four | Y | C |\n| JG6BVB | Operates on polar ice | Manual | Vinyl | Four | Z | B |\n| JFZWD2 | Operates in tropical forests | Automatic | Vinyl | Two | X | A |\n| JWV22G | Equipped for hot sand | Automatic | Vinyl | Four | Y | A |\n| J86BJJ | Used at an Arctic station | Automatic | Vinyl | Four | Y | B |\n| JHW2BT | Used at an equatorial station | Automatic | Vinyl | Two | Z | A |\n| JJD6AP | Equipped with snow tracks | Automatic | Vinyl | Four | X | B |\n| JB93NP | Built for desert heat | Manual | Vinyl | Four | Y | C |\n| JPNC35 | Built for subzero temperatures | Manual | Cloth | Four | X | A |\n\nLicense plate: JPNC35\nDescription: Built for subzero temperatures\nTransmission: Manual\nSeat cover: Cloth\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-010",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JPNC35",
+        "expected": "A",
+        "other_record_label": "C",
+        "pattern_label": "B",
+        "copy_expected": "A",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-010/record_1/copy_record/reason_then_answer": "136c6ae95d5f625c1831b628496f937a2b15d0e361c95fc9be7c329ed8198a53",
+        "er-list-010/record_1/initial_answer/reason_then_answer": "0e98ce254389fa2e8cb95cf3197677dcc8d9450a4c19f1d211b12c359bdf3e6b"
+      }
+    },
+    {
+      "world_id": "er-list-010",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JVA3Z4 | Designed for frozen terrain | Automatic | Cloth | Four | Z | B |\n| JCA7BF | Designed for humid summers | Automatic | Cloth | Four | Y | C |\n| JG6BVB | Operates on polar ice | Manual | Vinyl | Four | Z | B |\n| JFZWD2 | Operates in tropical forests | Automatic | Vinyl | Two | X | A |\n| JWV22G | Equipped for hot sand | Automatic | Vinyl | Four | Y | A |\n| J86BJJ | Used at an Arctic station | Automatic | Vinyl | Four | Y | B |\n| JHW2BT | Used at an equatorial station | Automatic | Vinyl | Two | Z | A |\n| JJD6AP | Equipped with snow tracks | Automatic | Vinyl | Four | X | B |\n| JB93NP | Built for desert heat | Manual | Vinyl | Four | Y | C |\n| JPNC35 | Built for subzero temperatures | Manual | Cloth | Four | X | C |\n\nLicense plate: JPNC35\nDescription: Built for subzero temperatures\nTransmission: Manual\nSeat cover: Cloth\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-010",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JPNC35",
+        "expected": "C",
+        "other_record_label": "A",
+        "pattern_label": "B",
+        "copy_expected": "C",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-010/record_2/copy_record/reason_then_answer": "94517f0629f55a8c090b63b935b34ca5eaa3eee0c5d8afcaccd90b503685154d",
+        "er-list-010/record_2/initial_answer/reason_then_answer": "f24be39b919201ab5f226cb57f074ca7b83c22b05fd6dabd454c86bd596ccf3d"
+      }
+    },
+    {
+      "world_id": "er-list-011",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JUTV7S | Used at an Arctic station | Automatic | Vinyl | Four | Z | B |\n| JAQEC7 | Built for subzero temperatures | Manual | Vinyl | Four | X | B |\n| J3RUQQ | Operates on polar ice | Manual | Vinyl | Two | X | B |\n| JCHLFA | Used at an equatorial station | Manual | Vinyl | Two | Y | A |\n| J9C9WF | Built for desert heat | Manual | Cloth | Two | Y | C |\n| J8K2L4 | Operates in tropical forests | Manual | Cloth | Two | X | C |\n| JRQZW9 | Equipped for hot sand | Automatic | Vinyl | Four | Y | A |\n| JM83YJ | Designed for humid summers | Automatic | Vinyl | Four | Z | A |\n| JSEQ9N | Equipped with snow tracks | Automatic | Cloth | Two | Z | B |\n| JVA5NW | Designed for frozen terrain | Automatic | Cloth | Four | Z | C |\n\nLicense plate: JVA5NW\nDescription: Designed for frozen terrain\nTransmission: Automatic\nSeat cover: Cloth\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-011",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JVA5NW",
+        "expected": "C",
+        "other_record_label": "A",
+        "pattern_label": "B",
+        "copy_expected": "C",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-011/record_1/copy_record/reason_then_answer": "450ea5a23db11fbee0e84bfd6fddda7547928a5e004588008ea01f95de4605e5",
+        "er-list-011/record_1/initial_answer/reason_then_answer": "0aa8b1d8f21882525164052e6bd534b2d3e9a881d564a5aca58927cdb2b6327f"
+      }
+    },
+    {
+      "world_id": "er-list-011",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JUTV7S | Used at an Arctic station | Automatic | Vinyl | Four | Z | B |\n| JAQEC7 | Built for subzero temperatures | Manual | Vinyl | Four | X | B |\n| J3RUQQ | Operates on polar ice | Manual | Vinyl | Two | X | B |\n| JCHLFA | Used at an equatorial station | Manual | Vinyl | Two | Y | A |\n| J9C9WF | Built for desert heat | Manual | Cloth | Two | Y | C |\n| J8K2L4 | Operates in tropical forests | Manual | Cloth | Two | X | C |\n| JRQZW9 | Equipped for hot sand | Automatic | Vinyl | Four | Y | A |\n| JM83YJ | Designed for humid summers | Automatic | Vinyl | Four | Z | A |\n| JSEQ9N | Equipped with snow tracks | Automatic | Cloth | Two | Z | B |\n| JVA5NW | Designed for frozen terrain | Automatic | Cloth | Four | Z | A |\n\nLicense plate: JVA5NW\nDescription: Designed for frozen terrain\nTransmission: Automatic\nSeat cover: Cloth\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-011",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JVA5NW",
+        "expected": "A",
+        "other_record_label": "C",
+        "pattern_label": "B",
+        "copy_expected": "A",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-011/record_2/copy_record/reason_then_answer": "6a83305755d5e413785522172fa3a965a3271e10fd733dc106f2f6573783b3ad",
+        "er-list-011/record_2/initial_answer/reason_then_answer": "26ddf1a01894d9dad22eba2c2c4ac9033d78da9b889cc2ef2f2818870c45daea"
+      }
+    },
+    {
+      "world_id": "er-list-012",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JP39MB | Equipped for hot sand | Automatic | Cloth | Four | Y | B |\n| JX9ZFU | Operates in tropical forests | Automatic | Cloth | Four | Y | B |\n| JW6CRU | Used at an Arctic station | Automatic | Vinyl | Two | X | C |\n| J6ZQJ6 | Operates on polar ice | Automatic | Cloth | Four | X | C |\n| JENQGS | Equipped with snow tracks | Automatic | Vinyl | Two | Z | A |\n| JV7S55 | Built for desert heat | Manual | Cloth | Two | X | B |\n| JXRUNZ | Built for subzero temperatures | Manual | Cloth | Two | Z | A |\n| JYBC85 | Designed for humid summers | Manual | Cloth | Four | Y | B |\n| J54CUA | Designed for frozen terrain | Manual | Cloth | Two | Z | A |\n| JRBKY4 | Used at an equatorial station | Automatic | Vinyl | Four | Z | A |\n\nLicense plate: JRBKY4\nDescription: Used at an equatorial station\nTransmission: Automatic\nSeat cover: Vinyl\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-012",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JRBKY4",
+        "expected": "A",
+        "other_record_label": "C",
+        "pattern_label": "B",
+        "copy_expected": "A",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-012/record_1/copy_record/reason_then_answer": "37cfc7034c4ba2e87bbd85be29e0489cdff4f4098de4738135c0b34d1fdf0868",
+        "er-list-012/record_1/initial_answer/reason_then_answer": "0c218cd7521cc6522a07c847b963b573e21b2bfff5709e80f5369c8e717c5608"
+      }
+    },
+    {
+      "world_id": "er-list-012",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JP39MB | Equipped for hot sand | Automatic | Cloth | Four | Y | B |\n| JX9ZFU | Operates in tropical forests | Automatic | Cloth | Four | Y | B |\n| JW6CRU | Used at an Arctic station | Automatic | Vinyl | Two | X | C |\n| J6ZQJ6 | Operates on polar ice | Automatic | Cloth | Four | X | C |\n| JENQGS | Equipped with snow tracks | Automatic | Vinyl | Two | Z | A |\n| JV7S55 | Built for desert heat | Manual | Cloth | Two | X | B |\n| JXRUNZ | Built for subzero temperatures | Manual | Cloth | Two | Z | A |\n| JYBC85 | Designed for humid summers | Manual | Cloth | Four | Y | B |\n| J54CUA | Designed for frozen terrain | Manual | Cloth | Two | Z | A |\n| JRBKY4 | Used at an equatorial station | Automatic | Vinyl | Four | Z | C |\n\nLicense plate: JRBKY4\nDescription: Used at an equatorial station\nTransmission: Automatic\nSeat cover: Vinyl\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-012",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JRBKY4",
+        "expected": "C",
+        "other_record_label": "A",
+        "pattern_label": "B",
+        "copy_expected": "C",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-012/record_2/copy_record/reason_then_answer": "25040bc23c248c2fc588a2eb00909c7c6163acfaf940696f463e4860e8b148d0",
+        "er-list-012/record_2/initial_answer/reason_then_answer": "9d766d05efc397318b443bb3f0f51d45b2fb829f7fe270a4aea0e29811a4069a"
+      }
+    },
+    {
+      "world_id": "er-list-013",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| J3SZAR | Designed for frozen terrain | Manual | Vinyl | Four | X | A |\n| JBVNLY | Built for desert heat | Automatic | Cloth | Two | Y | C |\n| J8ASH2 | Operates in tropical forests | Automatic | Vinyl | Two | Y | B |\n| JVVFKB | Built for subzero temperatures | Manual | Cloth | Two | X | A |\n| JV26PR | Used at an Arctic station | Automatic | Cloth | Two | X | A |\n| JBDVDF | Designed for humid summers | Automatic | Vinyl | Two | Z | C |\n| J9SGV8 | Equipped for hot sand | Automatic | Cloth | Four | Z | C |\n| JPJZRG | Used at an equatorial station | Manual | Cloth | Four | Z | B |\n| J8NUUT | Equipped with snow tracks | Automatic | Vinyl | Two | Y | A |\n| JLEUAF | Operates on polar ice | Automatic | Vinyl | Two | Z | B |\n\nLicense plate: JLEUAF\nDescription: Operates on polar ice\nTransmission: Automatic\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-013",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JLEUAF",
+        "expected": "B",
+        "other_record_label": "C",
+        "pattern_label": "A",
+        "copy_expected": "B",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-013/record_1/copy_record/reason_then_answer": "7d3d722a2bca9de0c46ea3c59fcc274e3405a1024426a0050baee08004fb71f7",
+        "er-list-013/record_1/initial_answer/reason_then_answer": "a56ae6070267fe4c8be8d1f854bfcae327a559d30f90ba7b49c0a26b9186a331"
+      }
+    },
+    {
+      "world_id": "er-list-013",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| J3SZAR | Designed for frozen terrain | Manual | Vinyl | Four | X | A |\n| JBVNLY | Built for desert heat | Automatic | Cloth | Two | Y | C |\n| J8ASH2 | Operates in tropical forests | Automatic | Vinyl | Two | Y | B |\n| JVVFKB | Built for subzero temperatures | Manual | Cloth | Two | X | A |\n| JV26PR | Used at an Arctic station | Automatic | Cloth | Two | X | A |\n| JBDVDF | Designed for humid summers | Automatic | Vinyl | Two | Z | C |\n| J9SGV8 | Equipped for hot sand | Automatic | Cloth | Four | Z | C |\n| JPJZRG | Used at an equatorial station | Manual | Cloth | Four | Z | B |\n| J8NUUT | Equipped with snow tracks | Automatic | Vinyl | Two | Y | A |\n| JLEUAF | Operates on polar ice | Automatic | Vinyl | Two | Z | C |\n\nLicense plate: JLEUAF\nDescription: Operates on polar ice\nTransmission: Automatic\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-013",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JLEUAF",
+        "expected": "C",
+        "other_record_label": "B",
+        "pattern_label": "A",
+        "copy_expected": "C",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-013/record_2/copy_record/reason_then_answer": "ffa56de55a56994b98d058735c133b21b2d9dbcc8bb4c1b80c421089bb5d95a9",
+        "er-list-013/record_2/initial_answer/reason_then_answer": "696d85d01b536a6188dc2c3d1a0ca845f36f5205e039130e3c1432136ecb87de"
+      }
+    },
+    {
+      "world_id": "er-list-014",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JAZLE7 | Equipped for hot sand | Automatic | Cloth | Two | Y | C |\n| JCEFEF | Used at an equatorial station | Automatic | Vinyl | Two | X | A |\n| J7BQVC | Built for desert heat | Manual | Vinyl | Four | Z | C |\n| JNHNYX | Operates in tropical forests | Automatic | Vinyl | Two | Y | A |\n| JEZ9YW | Designed for frozen terrain | Automatic | Vinyl | Four | Y | B |\n| JY4TWG | Designed for humid summers | Automatic | Vinyl | Two | X | C |\n| JEQ6EG | Equipped with snow tracks | Automatic | Cloth | Four | X | B |\n| J64DKQ | Operates on polar ice | Manual | Cloth | Four | Y | B |\n| JJEWYM | Built for subzero temperatures | Automatic | Vinyl | Four | Z | B |\n| JSKERL | Used at an Arctic station | Automatic | Vinyl | Two | Z | C |\n\nLicense plate: JSKERL\nDescription: Used at an Arctic station\nTransmission: Automatic\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-014",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JSKERL",
+        "expected": "C",
+        "other_record_label": "A",
+        "pattern_label": "B",
+        "copy_expected": "C",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-014/record_1/copy_record/reason_then_answer": "76058fca70f6e470054e585da93d078088ea8b275171fbdc402314deaa7fc3a0",
+        "er-list-014/record_1/initial_answer/reason_then_answer": "df7740fb6ab6d75c87a6d57f8d75da4a4efc9fffd4f5721d4c4cbbdcb2577764"
+      }
+    },
+    {
+      "world_id": "er-list-014",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JAZLE7 | Equipped for hot sand | Automatic | Cloth | Two | Y | C |\n| JCEFEF | Used at an equatorial station | Automatic | Vinyl | Two | X | A |\n| J7BQVC | Built for desert heat | Manual | Vinyl | Four | Z | C |\n| JNHNYX | Operates in tropical forests | Automatic | Vinyl | Two | Y | A |\n| JEZ9YW | Designed for frozen terrain | Automatic | Vinyl | Four | Y | B |\n| JY4TWG | Designed for humid summers | Automatic | Vinyl | Two | X | C |\n| JEQ6EG | Equipped with snow tracks | Automatic | Cloth | Four | X | B |\n| J64DKQ | Operates on polar ice | Manual | Cloth | Four | Y | B |\n| JJEWYM | Built for subzero temperatures | Automatic | Vinyl | Four | Z | B |\n| JSKERL | Used at an Arctic station | Automatic | Vinyl | Two | Z | A |\n\nLicense plate: JSKERL\nDescription: Used at an Arctic station\nTransmission: Automatic\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-014",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JSKERL",
+        "expected": "A",
+        "other_record_label": "C",
+        "pattern_label": "B",
+        "copy_expected": "A",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-014/record_2/copy_record/reason_then_answer": "cb7edf6d02ec7dea87a04889bd6fdcba4e91b82391e1fb8fde315cc4725ce651",
+        "er-list-014/record_2/initial_answer/reason_then_answer": "334bd66c82c885d9e204d57c7abe3f46dc7c5e3e1c13aeea465c0cc7b4a4eea3"
+      }
+    },
+    {
+      "world_id": "er-list-015",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JZRDSA | Built for subzero temperatures | Automatic | Cloth | Two | Y | B |\n| JHZWYY | Equipped for hot sand | Manual | Vinyl | Two | Y | A |\n| JYDW3N | Operates in tropical forests | Manual | Vinyl | Two | X | A |\n| JA8PGF | Built for desert heat | Manual | Cloth | Two | X | A |\n| JRKLHK | Equipped with snow tracks | Automatic | Vinyl | Four | Y | B |\n| JXWZGX | Designed for frozen terrain | Automatic | Cloth | Two | Z | C |\n| JE8AF2 | Operates on polar ice | Manual | Cloth | Two | Z | B |\n| JTFTTB | Designed for humid summers | Manual | Cloth | Four | X | A |\n| J5UGE6 | Used at an Arctic station | Manual | Vinyl | Two | Y | C |\n| JYZ5N8 | Used at an equatorial station | Manual | Vinyl | Four | Z | C |\n\nLicense plate: JYZ5N8\nDescription: Used at an equatorial station\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-015",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JYZ5N8",
+        "expected": "C",
+        "other_record_label": "B",
+        "pattern_label": "A",
+        "copy_expected": "C",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-015/record_1/copy_record/reason_then_answer": "92409deffe3706982d243fade3eaddbbe20bca06a28397dbd810fa4e2eadca56",
+        "er-list-015/record_1/initial_answer/reason_then_answer": "ad72f9f9717b99cff92f565175833565f2bfbe58e25d2f2de59cefc286e6dcad"
+      }
+    },
+    {
+      "world_id": "er-list-015",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JZRDSA | Built for subzero temperatures | Automatic | Cloth | Two | Y | B |\n| JHZWYY | Equipped for hot sand | Manual | Vinyl | Two | Y | A |\n| JYDW3N | Operates in tropical forests | Manual | Vinyl | Two | X | A |\n| JA8PGF | Built for desert heat | Manual | Cloth | Two | X | A |\n| JRKLHK | Equipped with snow tracks | Automatic | Vinyl | Four | Y | B |\n| JXWZGX | Designed for frozen terrain | Automatic | Cloth | Two | Z | C |\n| JE8AF2 | Operates on polar ice | Manual | Cloth | Two | Z | B |\n| JTFTTB | Designed for humid summers | Manual | Cloth | Four | X | A |\n| J5UGE6 | Used at an Arctic station | Manual | Vinyl | Two | Y | C |\n| JYZ5N8 | Used at an equatorial station | Manual | Vinyl | Four | Z | B |\n\nLicense plate: JYZ5N8\nDescription: Used at an equatorial station\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-015",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JYZ5N8",
+        "expected": "B",
+        "other_record_label": "C",
+        "pattern_label": "A",
+        "copy_expected": "B",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-015/record_2/copy_record/reason_then_answer": "dbcefc07c3f2b5db9fcd8d0332366d5e666896c84ff771508b7adfea4e1d7f23",
+        "er-list-015/record_2/initial_answer/reason_then_answer": "247f1cc369013bd61bdf1dbb8d72e25d59944ae3b38f16f9046af2117b6dc934"
+      }
+    },
+    {
+      "world_id": "er-list-016",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JAHK3D | Equipped with snow tracks | Automatic | Vinyl | Four | X | B |\n| JVGA5X | Used at an Arctic station | Manual | Cloth | Four | X | B |\n| JD2ZKX | Operates on polar ice | Automatic | Cloth | Two | Z | C |\n| JWNKGH | Built for desert heat | Automatic | Vinyl | Two | Y | A |\n| J7N46Z | Designed for humid summers | Automatic | Cloth | Four | X | A |\n| JQRV8W | Used at an equatorial station | Manual | Vinyl | Four | Y | A |\n| JG9MQB | Built for subzero temperatures | Automatic | Cloth | Two | Z | B |\n| J9F7A4 | Operates in tropical forests | Manual | Vinyl | Two | X | A |\n| JEJX48 | Designed for frozen terrain | Automatic | Cloth | Two | Y | C |\n| J2X335 | Equipped for hot sand | Automatic | Vinyl | Four | Z | B |\n\nLicense plate: J2X335\nDescription: Equipped for hot sand\nTransmission: Automatic\nSeat cover: Vinyl\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-016",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "J2X335",
+        "expected": "B",
+        "other_record_label": "C",
+        "pattern_label": "A",
+        "copy_expected": "B",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-016/record_1/copy_record/reason_then_answer": "c60540548d2d4ffc3b8bf80160066724bac78d88b7ca554afa75e71905413cc1",
+        "er-list-016/record_1/initial_answer/reason_then_answer": "9863fa3869214182daf07043350e5d1fdba266091330ff090e0bf8ff01919022"
+      }
+    },
+    {
+      "world_id": "er-list-016",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JAHK3D | Equipped with snow tracks | Automatic | Vinyl | Four | X | B |\n| JVGA5X | Used at an Arctic station | Manual | Cloth | Four | X | B |\n| JD2ZKX | Operates on polar ice | Automatic | Cloth | Two | Z | C |\n| JWNKGH | Built for desert heat | Automatic | Vinyl | Two | Y | A |\n| J7N46Z | Designed for humid summers | Automatic | Cloth | Four | X | A |\n| JQRV8W | Used at an equatorial station | Manual | Vinyl | Four | Y | A |\n| JG9MQB | Built for subzero temperatures | Automatic | Cloth | Two | Z | B |\n| J9F7A4 | Operates in tropical forests | Manual | Vinyl | Two | X | A |\n| JEJX48 | Designed for frozen terrain | Automatic | Cloth | Two | Y | C |\n| J2X335 | Equipped for hot sand | Automatic | Vinyl | Four | Z | C |\n\nLicense plate: J2X335\nDescription: Equipped for hot sand\nTransmission: Automatic\nSeat cover: Vinyl\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-016",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "J2X335",
+        "expected": "C",
+        "other_record_label": "B",
+        "pattern_label": "A",
+        "copy_expected": "C",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-016/record_2/copy_record/reason_then_answer": "e4a86722bfcfc2e4560c1eca78e15bde55528ff3bb8621a1d26d562a1c3ad6ed",
+        "er-list-016/record_2/initial_answer/reason_then_answer": "222c92a904561db8923af688c0e6934b73ba71d614d7690930f466d8e64f39b3"
+      }
+    },
+    {
+      "world_id": "er-list-017",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JXPB98 | Built for desert heat | Manual | Cloth | Four | Y | B |\n| J59K2Y | Built for subzero temperatures | Automatic | Cloth | Two | Z | A |\n| J9R7ZC | Equipped with snow tracks | Manual | Vinyl | Four | Z | A |\n| JVZ8U3 | Used at an Arctic station | Automatic | Vinyl | Four | Y | C |\n| JG5NHY | Designed for frozen terrain | Manual | Vinyl | Two | X | C |\n| J8PFLP | Operates on polar ice | Automatic | Vinyl | Two | X | C |\n| JM3TGA | Operates in tropical forests | Automatic | Vinyl | Two | Y | B |\n| JSWF28 | Equipped for hot sand | Manual | Cloth | Four | Z | B |\n| JTDRK5 | Designed for humid summers | Manual | Vinyl | Two | X | B |\n| JM2DSM | Used at an equatorial station | Manual | Cloth | Four | X | A |\n\nLicense plate: JM2DSM\nDescription: Used at an equatorial station\nTransmission: Manual\nSeat cover: Cloth\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-017",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JM2DSM",
+        "expected": "A",
+        "other_record_label": "C",
+        "pattern_label": "B",
+        "copy_expected": "A",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-017/record_1/copy_record/reason_then_answer": "0f06fffba64c851b68d17bd18381f6283e10fabdefffe900d252e7a29a6ae737",
+        "er-list-017/record_1/initial_answer/reason_then_answer": "173cec1bbc5b9aa0279a5714ed7e14d3153ae7d32c11c4a073d2c183837859d7"
+      }
+    },
+    {
+      "world_id": "er-list-017",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JXPB98 | Built for desert heat | Manual | Cloth | Four | Y | B |\n| J59K2Y | Built for subzero temperatures | Automatic | Cloth | Two | Z | A |\n| J9R7ZC | Equipped with snow tracks | Manual | Vinyl | Four | Z | A |\n| JVZ8U3 | Used at an Arctic station | Automatic | Vinyl | Four | Y | C |\n| JG5NHY | Designed for frozen terrain | Manual | Vinyl | Two | X | C |\n| J8PFLP | Operates on polar ice | Automatic | Vinyl | Two | X | C |\n| JM3TGA | Operates in tropical forests | Automatic | Vinyl | Two | Y | B |\n| JSWF28 | Equipped for hot sand | Manual | Cloth | Four | Z | B |\n| JTDRK5 | Designed for humid summers | Manual | Vinyl | Two | X | B |\n| JM2DSM | Used at an equatorial station | Manual | Cloth | Four | X | C |\n\nLicense plate: JM2DSM\nDescription: Used at an equatorial station\nTransmission: Manual\nSeat cover: Cloth\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-017",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JM2DSM",
+        "expected": "C",
+        "other_record_label": "A",
+        "pattern_label": "B",
+        "copy_expected": "C",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-017/record_2/copy_record/reason_then_answer": "5daea6d734aa68c6d11ea6073a1a1eb79c127f8d43b35ed7851c668f979c697d",
+        "er-list-017/record_2/initial_answer/reason_then_answer": "cc5698b129ad3a54748eb2dd8dfc29eadb730e00fd2be76f9b191debe7a842fc"
+      }
+    },
+    {
+      "world_id": "er-list-018",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| J4Y6GW | Built for desert heat | Automatic | Cloth | Two | Y | B |\n| J5UAN4 | Operates on polar ice | Manual | Vinyl | Two | Y | C |\n| JS4AU8 | Used at an Arctic station | Manual | Vinyl | Two | Z | C |\n| J8U7UQ | Designed for humid summers | Automatic | Vinyl | Four | Z | A |\n| JFR88V | Used at an equatorial station | Manual | Cloth | Two | Z | B |\n| JB78KG | Equipped for hot sand | Manual | Cloth | Four | Z | A |\n| J4PRDZ | Equipped with snow tracks | Automatic | Vinyl | Four | X | C |\n| JLBCHC | Built for subzero temperatures | Automatic | Cloth | Four | Y | C |\n| JN9NK9 | Operates in tropical forests | Automatic | Cloth | Four | X | A |\n| JEWWCD | Designed for frozen terrain | Automatic | Vinyl | Two | X | A |\n\nLicense plate: JEWWCD\nDescription: Designed for frozen terrain\nTransmission: Automatic\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-018",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JEWWCD",
+        "expected": "A",
+        "other_record_label": "B",
+        "pattern_label": "C",
+        "copy_expected": "A",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-018/record_1/copy_record/reason_then_answer": "0cc4df7f8dd283280a9062cb9e61de552175d0ecfc1fcc0ff60a6ca587a65ef3",
+        "er-list-018/record_1/initial_answer/reason_then_answer": "a121c50f6d7ac23067196e27d4d7a3f5c7aed37969e6c422f9e40677f719df14"
+      }
+    },
+    {
+      "world_id": "er-list-018",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| J4Y6GW | Built for desert heat | Automatic | Cloth | Two | Y | B |\n| J5UAN4 | Operates on polar ice | Manual | Vinyl | Two | Y | C |\n| JS4AU8 | Used at an Arctic station | Manual | Vinyl | Two | Z | C |\n| J8U7UQ | Designed for humid summers | Automatic | Vinyl | Four | Z | A |\n| JFR88V | Used at an equatorial station | Manual | Cloth | Two | Z | B |\n| JB78KG | Equipped for hot sand | Manual | Cloth | Four | Z | A |\n| J4PRDZ | Equipped with snow tracks | Automatic | Vinyl | Four | X | C |\n| JLBCHC | Built for subzero temperatures | Automatic | Cloth | Four | Y | C |\n| JN9NK9 | Operates in tropical forests | Automatic | Cloth | Four | X | A |\n| JEWWCD | Designed for frozen terrain | Automatic | Vinyl | Two | X | B |\n\nLicense plate: JEWWCD\nDescription: Designed for frozen terrain\nTransmission: Automatic\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-018",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JEWWCD",
+        "expected": "B",
+        "other_record_label": "A",
+        "pattern_label": "C",
+        "copy_expected": "B",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-018/record_2/copy_record/reason_then_answer": "1f75dca075af83eb75944569df5356e25029b0e8085b9841930d392ef38ccb05",
+        "er-list-018/record_2/initial_answer/reason_then_answer": "10e6e19532413c1269e7af6a8a208652720ea0c955df584bb287d39f7299f156"
+      }
+    },
+    {
+      "world_id": "er-list-019",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JU6E6V | Equipped for hot sand | Manual | Vinyl | Four | X | A |\n| JJC98W | Designed for frozen terrain | Manual | Vinyl | Two | Z | B |\n| JCWCR3 | Designed for humid summers | Manual | Vinyl | Two | Z | A |\n| JQ8HEZ | Equipped with snow tracks | Manual | Cloth | Four | Y | B |\n| J55HKC | Used at an Arctic station | Automatic | Cloth | Two | Z | B |\n| JR7DEP | Used at an equatorial station | Automatic | Vinyl | Two | X | A |\n| JQRTKG | Built for subzero temperatures | Manual | Cloth | Two | X | C |\n| JMJ926 | Operates on polar ice | Automatic | Cloth | Four | Y | C |\n| J827W3 | Built for desert heat | Manual | Cloth | Two | Z | A |\n| JADGVY | Operates in tropical forests | Automatic | Cloth | Four | Y | C |\n\nLicense plate: JADGVY\nDescription: Operates in tropical forests\nTransmission: Automatic\nSeat cover: Cloth\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-019",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JADGVY",
+        "expected": "C",
+        "other_record_label": "B",
+        "pattern_label": "A",
+        "copy_expected": "C",
+        "target_marker": "Y",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-019/record_1/copy_record/reason_then_answer": "b6a845c979626d28811f8660e32d1eb66ae43c3ea35e5f8719e6f7928110dba7",
+        "er-list-019/record_1/initial_answer/reason_then_answer": "08876005a0ca863b878d56aca369af7c324912b8b599378feeaad8dc7aa7d35d"
+      }
+    },
+    {
+      "world_id": "er-list-019",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JU6E6V | Equipped for hot sand | Manual | Vinyl | Four | X | A |\n| JJC98W | Designed for frozen terrain | Manual | Vinyl | Two | Z | B |\n| JCWCR3 | Designed for humid summers | Manual | Vinyl | Two | Z | A |\n| JQ8HEZ | Equipped with snow tracks | Manual | Cloth | Four | Y | B |\n| J55HKC | Used at an Arctic station | Automatic | Cloth | Two | Z | B |\n| JR7DEP | Used at an equatorial station | Automatic | Vinyl | Two | X | A |\n| JQRTKG | Built for subzero temperatures | Manual | Cloth | Two | X | C |\n| JMJ926 | Operates on polar ice | Automatic | Cloth | Four | Y | C |\n| J827W3 | Built for desert heat | Manual | Cloth | Two | Z | A |\n| JADGVY | Operates in tropical forests | Automatic | Cloth | Four | Y | B |\n\nLicense plate: JADGVY\nDescription: Operates in tropical forests\nTransmission: Automatic\nSeat cover: Cloth\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-019",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JADGVY",
+        "expected": "B",
+        "other_record_label": "C",
+        "pattern_label": "A",
+        "copy_expected": "B",
+        "target_marker": "Y",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-019/record_2/copy_record/reason_then_answer": "83f2ddb62fbbe34d35317e7e5531d333a15dd0a7c3d9d2554e942d5e31ed6236",
+        "er-list-019/record_2/initial_answer/reason_then_answer": "204e64d6e57475e92e430e249ef05bf2a4e2ad28cfe3439b9936874a88afdaca"
+      }
+    },
+    {
+      "world_id": "er-list-020",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JT4LQG | Used at an equatorial station | Manual | Cloth | Four | X | C |\n| JYEJGW | Designed for frozen terrain | Manual | Cloth | Four | Z | A |\n| J3VVA4 | Designed for humid summers | Manual | Vinyl | Two | X | C |\n| JB9DFF | Built for subzero temperatures | Manual | Vinyl | Two | Z | B |\n| J4M748 | Operates in tropical forests | Automatic | Cloth | Four | Z | C |\n| JDSADY | Equipped with snow tracks | Manual | Cloth | Two | X | A |\n| JJETL6 | Operates on polar ice | Automatic | Vinyl | Four | Y | B |\n| JL2X72 | Built for desert heat | Automatic | Vinyl | Two | Y | C |\n| JG2BH8 | Used at an Arctic station | Automatic | Vinyl | Four | Z | A |\n| JG8VY5 | Equipped for hot sand | Automatic | Vinyl | Four | Y | A |\n\nLicense plate: JG8VY5\nDescription: Equipped for hot sand\nTransmission: Automatic\nSeat cover: Vinyl\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-020",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JG8VY5",
+        "expected": "A",
+        "other_record_label": "B",
+        "pattern_label": "C",
+        "copy_expected": "A",
+        "target_marker": "Y",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-020/record_1/copy_record/reason_then_answer": "74d5388780f036accd49d3e63db135fa78006e78510ea78d87ab8ccb76323374",
+        "er-list-020/record_1/initial_answer/reason_then_answer": "e55bd0b84c6ce03d86366ee158a55c29f6163ff6bfd8af9821cad49f5f76d5ef"
+      }
+    },
+    {
+      "world_id": "er-list-020",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JT4LQG | Used at an equatorial station | Manual | Cloth | Four | X | C |\n| JYEJGW | Designed for frozen terrain | Manual | Cloth | Four | Z | A |\n| J3VVA4 | Designed for humid summers | Manual | Vinyl | Two | X | C |\n| JB9DFF | Built for subzero temperatures | Manual | Vinyl | Two | Z | B |\n| J4M748 | Operates in tropical forests | Automatic | Cloth | Four | Z | C |\n| JDSADY | Equipped with snow tracks | Manual | Cloth | Two | X | A |\n| JJETL6 | Operates on polar ice | Automatic | Vinyl | Four | Y | B |\n| JL2X72 | Built for desert heat | Automatic | Vinyl | Two | Y | C |\n| JG2BH8 | Used at an Arctic station | Automatic | Vinyl | Four | Z | A |\n| JG8VY5 | Equipped for hot sand | Automatic | Vinyl | Four | Y | B |\n\nLicense plate: JG8VY5\nDescription: Equipped for hot sand\nTransmission: Automatic\nSeat cover: Vinyl\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-020",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JG8VY5",
+        "expected": "B",
+        "other_record_label": "A",
+        "pattern_label": "C",
+        "copy_expected": "B",
+        "target_marker": "Y",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-020/record_2/copy_record/reason_then_answer": "3fc972d2ee94207998a07bdf4c268326caab51ce51d205df4f3211f36984a590",
+        "er-list-020/record_2/initial_answer/reason_then_answer": "02fd0bc0222f02b8ac0d1d1cf075a93b1a2a26176a85736a5c4568dbff837cc2"
+      }
+    },
+    {
+      "world_id": "er-list-021",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JBUVH4 | Operates in tropical forests | Automatic | Vinyl | Four | Z | B |\n| JQEAXJ | Used at an Arctic station | Manual | Vinyl | Two | X | A |\n| JGBS3E | Built for desert heat | Manual | Cloth | Four | Y | C |\n| JR8CLH | Designed for humid summers | Automatic | Vinyl | Two | Z | B |\n| JZ3NZH | Operates on polar ice | Manual | Vinyl | Two | X | A |\n| JMTH4U | Built for subzero temperatures | Automatic | Vinyl | Two | Z | A |\n| JCDLBH | Equipped with snow tracks | Manual | Vinyl | Two | X | A |\n| J2TXJG | Used at an equatorial station | Automatic | Cloth | Four | Y | C |\n| JAJR22 | Equipped for hot sand | Automatic | Cloth | Two | Y | B |\n| JST9PP | Designed for frozen terrain | Automatic | Vinyl | Two | Z | C |\n\nLicense plate: JST9PP\nDescription: Designed for frozen terrain\nTransmission: Automatic\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-021",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JST9PP",
+        "expected": "C",
+        "other_record_label": "B",
+        "pattern_label": "A",
+        "copy_expected": "C",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-021/record_1/copy_record/reason_then_answer": "53a15a609f3545bf4ea28f57278623c29c4c5ef40a1a77767c6f78f66dd572c6",
+        "er-list-021/record_1/initial_answer/reason_then_answer": "8b4570e829b4eb44a202eb65ac12e19f215a89d6efdd84f790e86bebb8a96fc9"
+      }
+    },
+    {
+      "world_id": "er-list-021",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JBUVH4 | Operates in tropical forests | Automatic | Vinyl | Four | Z | B |\n| JQEAXJ | Used at an Arctic station | Manual | Vinyl | Two | X | A |\n| JGBS3E | Built for desert heat | Manual | Cloth | Four | Y | C |\n| JR8CLH | Designed for humid summers | Automatic | Vinyl | Two | Z | B |\n| JZ3NZH | Operates on polar ice | Manual | Vinyl | Two | X | A |\n| JMTH4U | Built for subzero temperatures | Automatic | Vinyl | Two | Z | A |\n| JCDLBH | Equipped with snow tracks | Manual | Vinyl | Two | X | A |\n| J2TXJG | Used at an equatorial station | Automatic | Cloth | Four | Y | C |\n| JAJR22 | Equipped for hot sand | Automatic | Cloth | Two | Y | B |\n| JST9PP | Designed for frozen terrain | Automatic | Vinyl | Two | Z | B |\n\nLicense plate: JST9PP\nDescription: Designed for frozen terrain\nTransmission: Automatic\nSeat cover: Vinyl\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-021",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JST9PP",
+        "expected": "B",
+        "other_record_label": "C",
+        "pattern_label": "A",
+        "copy_expected": "B",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-021/record_2/copy_record/reason_then_answer": "6fe5ded2e53591b1695f5e0f173719f1180d84ece5f36712765fde6d68fa1579",
+        "er-list-021/record_2/initial_answer/reason_then_answer": "15a82933742f11b7b270f8038d1553b10476fca9f4f78348b3902f86742f2ce4"
+      }
+    },
+    {
+      "world_id": "er-list-022",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JMTVYD | Used at an Arctic station | Automatic | Vinyl | Two | X | A |\n| JQLEWY | Used at an equatorial station | Automatic | Cloth | Two | Y | C |\n| JMY3YB | Operates in tropical forests | Automatic | Vinyl | Two | X | B |\n| J2YJ7D | Designed for frozen terrain | Manual | Cloth | Two | X | A |\n| JVTDZZ | Designed for humid summers | Manual | Cloth | Four | Y | C |\n| JMVQ9K | Equipped for hot sand | Manual | Vinyl | Four | Y | B |\n| JJ3QNY | Built for desert heat | Automatic | Cloth | Two | Z | B |\n| JU77J5 | Operates on polar ice | Automatic | Vinyl | Two | Z | A |\n| JKZ8H3 | Built for subzero temperatures | Manual | Vinyl | Two | Y | A |\n| JGEBJM | Equipped with snow tracks | Manual | Cloth | Two | Z | B |\n\nLicense plate: JGEBJM\nDescription: Equipped with snow tracks\nTransmission: Manual\nSeat cover: Cloth\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-022",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JGEBJM",
+        "expected": "B",
+        "other_record_label": "C",
+        "pattern_label": "A",
+        "copy_expected": "B",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-022/record_1/copy_record/reason_then_answer": "d08aeb0f787eb4078539c5c849003784b25ebc919fddced849d323ff0e7c1649",
+        "er-list-022/record_1/initial_answer/reason_then_answer": "d19ca0124d3cd1191e892fe912ffa3268628f7e4c3185bc1a6bec546315f7b9a"
+      }
+    },
+    {
+      "world_id": "er-list-022",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| JMTVYD | Used at an Arctic station | Automatic | Vinyl | Two | X | A |\n| JQLEWY | Used at an equatorial station | Automatic | Cloth | Two | Y | C |\n| JMY3YB | Operates in tropical forests | Automatic | Vinyl | Two | X | B |\n| J2YJ7D | Designed for frozen terrain | Manual | Cloth | Two | X | A |\n| JVTDZZ | Designed for humid summers | Manual | Cloth | Four | Y | C |\n| JMVQ9K | Equipped for hot sand | Manual | Vinyl | Four | Y | B |\n| JJ3QNY | Built for desert heat | Automatic | Cloth | Two | Z | B |\n| JU77J5 | Operates on polar ice | Automatic | Vinyl | Two | Z | A |\n| JKZ8H3 | Built for subzero temperatures | Manual | Vinyl | Two | Y | A |\n| JGEBJM | Equipped with snow tracks | Manual | Cloth | Two | Z | C |\n\nLicense plate: JGEBJM\nDescription: Equipped with snow tracks\nTransmission: Manual\nSeat cover: Cloth\nDoors: Two\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-022",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JGEBJM",
+        "expected": "C",
+        "other_record_label": "B",
+        "pattern_label": "A",
+        "copy_expected": "C",
+        "target_marker": "Z",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-022/record_2/copy_record/reason_then_answer": "ed46ca4ac5c281d55e8c6f6451acd2a83f71e86ce16695abbb6030d87a95f5f9",
+        "er-list-022/record_2/initial_answer/reason_then_answer": "df82592e3cc06d518632223454e9047fc0f6013933da6d59d096d1043664b897"
+      }
+    },
+    {
+      "world_id": "er-list-023",
+      "value": "record_1",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| J3LAAJ | Built for desert heat | Automatic | Vinyl | Four | Y | B |\n| J5GHDL | Operates on polar ice | Automatic | Cloth | Four | X | C |\n| JF8JUL | Used at an Arctic station | Automatic | Vinyl | Two | Z | A |\n| J6KH42 | Designed for humid summers | Automatic | Cloth | Two | Y | B |\n| JK7L58 | Operates in tropical forests | Automatic | Vinyl | Four | Z | B |\n| JEXJ2S | Equipped with snow tracks | Manual | Cloth | Two | Z | C |\n| JMXT4U | Equipped for hot sand | Manual | Vinyl | Four | Y | B |\n| JFFRLK | Designed for frozen terrain | Manual | Cloth | Four | X | A |\n| JKHCJL | Built for subzero temperatures | Manual | Vinyl | Two | X | A |\n| JPL8VD | Used at an equatorial station | Manual | Vinyl | Four | X | C |\n\nLicense plate: JPL8VD\nDescription: Used at an equatorial station\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-023",
+        "value": "record_1",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JPL8VD",
+        "expected": "C",
+        "other_record_label": "A",
+        "pattern_label": "B",
+        "copy_expected": "C",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-023/record_1/copy_record/reason_then_answer": "df1ee93f8d03a12c5bd49122d84b0586fb9b90904f277cc0faabe72b60016c2c",
+        "er-list-023/record_1/initial_answer/reason_then_answer": "dd9eab8b8034615ab083a51438866e8070aac72319abb2c753b1f161ccd7e047"
+      }
+    },
+    {
+      "world_id": "er-list-023",
+      "value": "record_2",
+      "prompt_stem": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| J3LAAJ | Built for desert heat | Automatic | Vinyl | Four | Y | B |\n| J5GHDL | Operates on polar ice | Automatic | Cloth | Four | X | C |\n| JF8JUL | Used at an Arctic station | Automatic | Vinyl | Two | Z | A |\n| J6KH42 | Designed for humid summers | Automatic | Cloth | Two | Y | B |\n| JK7L58 | Operates in tropical forests | Automatic | Vinyl | Four | Z | B |\n| JEXJ2S | Equipped with snow tracks | Manual | Cloth | Two | Z | C |\n| JMXT4U | Equipped for hot sand | Manual | Vinyl | Four | Y | B |\n| JFFRLK | Designed for frozen terrain | Manual | Cloth | Four | X | A |\n| JKHCJL | Built for subzero temperatures | Manual | Vinyl | Two | X | A |\n| JPL8VD | Used at an equatorial station | Manual | Vinyl | Four | X | A |\n\nLicense plate: JPL8VD\nDescription: Used at an equatorial station\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Four\nWhich class, A, B, or C, does this vehicle belong to?\n",
+      "meta": {
+        "world_id": "er-list-023",
+        "value": "record_2",
+        "condition": "copy_record",
+        "order": "reason_then_answer",
+        "item_id": "JPL8VD",
+        "expected": "A",
+        "other_record_label": "C",
+        "pattern_label": "B",
+        "copy_expected": "A",
+        "target_marker": "X",
+        "target_position": 10
+      },
+      "source_request_hashes": {
+        "er-list-023/record_2/copy_record/reason_then_answer": "a09f80951b439b902b6f987eedc81f7d45cce709633cb12ce7472eb8653a29be",
+        "er-list-023/record_2/initial_answer/reason_then_answer": "0b34684c42d84b0f6b308e5f9c5ce76f7f7f93212d29de055cf22df0cd45a6ff"
+      }
+    }
+  ]
+}

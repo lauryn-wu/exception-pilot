@@ -1,0 +1,1276 @@
+{
+  "protocol_version": "verified-facts-evidence-role-v1",
+  "plan_hash": "798d047a556f3b905fe8b7b8ed9bb12f867dec9ed6fcdb105064d61bf45a87ce",
+  "mode": "live",
+  "analysis_status": "complete_ready_for_interpretation",
+  "is_simulated": false,
+  "interpretation_allowed": true,
+  "planned_calls": 480,
+  "attempts": 480,
+  "returned_answers": 480,
+  "valid_answers": 480,
+  "invalid_answers": 0,
+  "pending_answers": 0,
+  "primary_effect": "accuracy/initial_minus_record_reasoning_harm",
+  "analysis_plan": {
+    "primary": "accuracy/initial_minus_record_reasoning_harm",
+    "harm": "accuracy(answer_then_reason) minus accuracy(reason_then_answer)",
+    "primary_definition": "harm(initial_answer) minus harm(copy_record)",
+    "bridge": "harm(copy_initial) minus harm(copy_record); secondary",
+    "metrics": [
+      "accuracy",
+      "record_sensitivity",
+      "first_entry_correctness",
+      "transitions",
+      "pattern_choices",
+      "rationale_text_flags",
+      "output_compliance"
+    ],
+    "record_sensitivity": "+1 correct target class, -1 other target-record class, 0 pattern class",
+    "unit": "whole world, averaging its two record variants before any contrast",
+    "bootstrap": "10000 whole-world resamples, seed 981723; descriptive 95% percentile intervals",
+    "sign_test": "exact two-sided sign test on nonzero world-level contrasts; tests sign balance, not mean magnitude",
+    "selection": "all assigned cases; never condition primary effects on first-entry correctness",
+    "missing": "retain invalid responses without resampling; complete-world estimates and full-plan bounds",
+    "decision": "fixed 480 planned calls; no scientific pass gate, extension, or automatic next study",
+    "scope": "fresh GPT-4o worlds with the target at row 10; no position-general or mechanistic claim"
+  },
+  "cells": {
+    "copy_record/reason_then_answer": {
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 38,
+      "pattern_choices": 10,
+      "other_wrong": 0,
+      "invalid": 0,
+      "pending": 0,
+      "entry_format_met": 33,
+      "copy_correct": 33,
+      "first_class_correct": 33,
+      "reasoning_median_words": 199.0,
+      "accuracy": {
+        "mean": 0.7916666666666666,
+        "ci95": [
+          0.6666666666666666,
+          0.9166666666666666
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 22,
+        "negative_worlds": 0,
+        "ties": 2,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.7916666666666666,
+          0.7916666666666666
+        ]
+      },
+      "record_sensitivity": {
+        "mean": 0.7916666666666666,
+        "ci95": [
+          0.6666666666666666,
+          0.9166666666666666
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 22,
+        "negative_worlds": 0,
+        "ties": 2,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.7916666666666666,
+          0.7916666666666666
+        ]
+      },
+      "complete_worlds": 24,
+      "both_records_correct": 16,
+      "final_answer_unchanged": 2,
+      "copy_final_joint_counts": {
+        "copy_wrong__final_wrong": 9,
+        "copy_wrong__final_correct": 6,
+        "copy_correct__final_correct": 32,
+        "copy_correct__final_wrong": 1
+      }
+    },
+    "copy_record/answer_then_reason": {
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 44,
+      "pattern_choices": 3,
+      "other_wrong": 1,
+      "invalid": 0,
+      "pending": 0,
+      "entry_format_met": 28,
+      "copy_correct": 28,
+      "first_class_correct": 28,
+      "reasoning_median_words": 220.5,
+      "accuracy": {
+        "mean": 0.9166666666666666,
+        "ci95": [
+          0.8333333333333334,
+          0.9791666666666666
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 24,
+        "negative_worlds": 0,
+        "ties": 0,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.9166666666666666,
+          0.9166666666666666
+        ]
+      },
+      "record_sensitivity": {
+        "mean": 0.8958333333333334,
+        "ci95": [
+          0.7916666666666666,
+          0.9791666666666666
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 23,
+        "negative_worlds": 0,
+        "ties": 1,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.8958333333333334,
+          0.8958333333333334
+        ]
+      },
+      "complete_worlds": 24,
+      "both_records_correct": 20,
+      "final_answer_unchanged": 1,
+      "copy_final_joint_counts": {
+        "copy_wrong__final_correct": 17,
+        "copy_correct__final_correct": 27,
+        "copy_correct__final_wrong": 1,
+        "copy_wrong__final_wrong": 3
+      }
+    },
+    "copy_initial/reason_then_answer": {
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 32,
+      "pattern_choices": 14,
+      "other_wrong": 2,
+      "invalid": 0,
+      "pending": 0,
+      "entry_format_met": 27,
+      "copy_correct": 27,
+      "first_class_correct": 27,
+      "reasoning_median_words": 217.5,
+      "accuracy": {
+        "mean": 0.6666666666666666,
+        "ci95": [
+          0.5208333333333334,
+          0.8125
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 21,
+        "negative_worlds": 0,
+        "ties": 3,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      },
+      "record_sensitivity": {
+        "mean": 0.625,
+        "ci95": [
+          0.4583333333333333,
+          0.7708333333333334
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 19,
+        "negative_worlds": 0,
+        "ties": 5,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.625,
+          0.625
+        ]
+      },
+      "complete_worlds": 24,
+      "both_records_correct": 11,
+      "final_answer_unchanged": 5,
+      "copy_final_joint_counts": {
+        "copy_wrong__final_wrong": 15,
+        "copy_correct__final_correct": 26,
+        "copy_wrong__final_correct": 6,
+        "copy_correct__final_wrong": 1
+      }
+    },
+    "copy_initial/answer_then_reason": {
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 45,
+      "pattern_choices": 3,
+      "other_wrong": 0,
+      "invalid": 0,
+      "pending": 0,
+      "entry_format_met": 24,
+      "copy_correct": 24,
+      "first_class_correct": 24,
+      "reasoning_median_words": 218.0,
+      "accuracy": {
+        "mean": 0.9375,
+        "ci95": [
+          0.875,
+          1.0
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 24,
+        "negative_worlds": 0,
+        "ties": 0,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.9375,
+          0.9375
+        ]
+      },
+      "record_sensitivity": {
+        "mean": 0.9375,
+        "ci95": [
+          0.875,
+          1.0
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 24,
+        "negative_worlds": 0,
+        "ties": 0,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.9375,
+          0.9375
+        ]
+      },
+      "complete_worlds": 24,
+      "both_records_correct": 21,
+      "final_answer_unchanged": 0,
+      "copy_final_joint_counts": {
+        "copy_wrong__final_correct": 22,
+        "copy_correct__final_wrong": 1,
+        "copy_correct__final_correct": 23,
+        "copy_wrong__final_wrong": 2
+      }
+    },
+    "initial_answer/reason_then_answer": {
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 40,
+      "pattern_choices": 8,
+      "other_wrong": 0,
+      "invalid": 0,
+      "pending": 0,
+      "entry_format_met": 48,
+      "copy_correct": null,
+      "first_class_correct": 48,
+      "reasoning_median_words": 221.0,
+      "accuracy": {
+        "mean": 0.8333333333333334,
+        "ci95": [
+          0.7083333333333334,
+          0.9375
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 23,
+        "negative_worlds": 0,
+        "ties": 1,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.8333333333333334,
+          0.8333333333333334
+        ]
+      },
+      "record_sensitivity": {
+        "mean": 0.8333333333333334,
+        "ci95": [
+          0.7083333333333334,
+          0.9375
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 23,
+        "negative_worlds": 0,
+        "ties": 1,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.8333333333333334,
+          0.8333333333333334
+        ]
+      },
+      "complete_worlds": 24,
+      "both_records_correct": 17,
+      "final_answer_unchanged": 1,
+      "copy_final_joint_counts": null
+    },
+    "initial_answer/answer_then_reason": {
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 47,
+      "pattern_choices": 1,
+      "other_wrong": 0,
+      "invalid": 0,
+      "pending": 0,
+      "entry_format_met": 48,
+      "copy_correct": null,
+      "first_class_correct": 48,
+      "reasoning_median_words": 235.5,
+      "accuracy": {
+        "mean": 0.9791666666666666,
+        "ci95": [
+          0.9375,
+          1.0
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 24,
+        "negative_worlds": 0,
+        "ties": 0,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.9791666666666666,
+          0.9791666666666666
+        ]
+      },
+      "record_sensitivity": {
+        "mean": 0.9791666666666666,
+        "ci95": [
+          0.9375,
+          1.0
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 24,
+        "negative_worlds": 0,
+        "ties": 0,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.9791666666666666,
+          0.9791666666666666
+        ]
+      },
+      "complete_worlds": 24,
+      "both_records_correct": 23,
+      "final_answer_unchanged": 0,
+      "copy_final_joint_counts": null
+    },
+    "copy_marker/reason_then_answer": {
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 23,
+      "pattern_choices": 22,
+      "other_wrong": 3,
+      "invalid": 0,
+      "pending": 0,
+      "entry_format_met": 46,
+      "copy_correct": 46,
+      "first_class_correct": null,
+      "reasoning_median_words": 208.5,
+      "accuracy": {
+        "mean": 0.4791666666666667,
+        "ci95": [
+          0.3125,
+          0.6458333333333334
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 15,
+        "negative_worlds": 0,
+        "ties": 9,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.4791666666666667,
+          0.4791666666666667
+        ]
+      },
+      "record_sensitivity": {
+        "mean": 0.4166666666666667,
+        "ci95": [
+          0.25,
+          0.6041666666666666
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 12,
+        "negative_worlds": 0,
+        "ties": 12,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.4166666666666667,
+          0.4166666666666667
+        ]
+      },
+      "complete_worlds": 24,
+      "both_records_correct": 8,
+      "final_answer_unchanged": 12,
+      "copy_final_joint_counts": {
+        "copy_correct__final_wrong": 23,
+        "copy_correct__final_correct": 23,
+        "copy_wrong__final_wrong": 2
+      }
+    },
+    "copy_marker/answer_then_reason": {
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 47,
+      "pattern_choices": 1,
+      "other_wrong": 0,
+      "invalid": 0,
+      "pending": 0,
+      "entry_format_met": 48,
+      "copy_correct": 48,
+      "first_class_correct": null,
+      "reasoning_median_words": 225.5,
+      "accuracy": {
+        "mean": 0.9791666666666666,
+        "ci95": [
+          0.9375,
+          1.0
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 24,
+        "negative_worlds": 0,
+        "ties": 0,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.9791666666666666,
+          0.9791666666666666
+        ]
+      },
+      "record_sensitivity": {
+        "mean": 0.9791666666666666,
+        "ci95": [
+          0.9375,
+          1.0
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 24,
+        "negative_worlds": 0,
+        "ties": 0,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.9791666666666666,
+          0.9791666666666666
+        ]
+      },
+      "complete_worlds": 24,
+      "both_records_correct": 23,
+      "final_answer_unchanged": 0,
+      "copy_final_joint_counts": {
+        "copy_correct__final_correct": 47,
+        "copy_correct__final_wrong": 1
+      }
+    },
+    "no_entry/reason_then_answer": {
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 24,
+      "pattern_choices": 24,
+      "other_wrong": 0,
+      "invalid": 0,
+      "pending": 0,
+      "entry_format_met": 48,
+      "copy_correct": null,
+      "first_class_correct": null,
+      "reasoning_median_words": 220.0,
+      "accuracy": {
+        "mean": 0.5,
+        "ci95": [
+          0.3125,
+          0.6875
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 14,
+        "negative_worlds": 0,
+        "ties": 10,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      "record_sensitivity": {
+        "mean": 0.5,
+        "ci95": [
+          0.3125,
+          0.6875
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 14,
+        "negative_worlds": 0,
+        "ties": 10,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      "complete_worlds": 24,
+      "both_records_correct": 10,
+      "final_answer_unchanged": 10,
+      "copy_final_joint_counts": null
+    },
+    "no_entry/answer_then_reason": {
+      "planned": 48,
+      "returned": 48,
+      "valid": 48,
+      "correct": 46,
+      "pattern_choices": 2,
+      "other_wrong": 0,
+      "invalid": 0,
+      "pending": 0,
+      "entry_format_met": 48,
+      "copy_correct": null,
+      "first_class_correct": null,
+      "reasoning_median_words": 232.0,
+      "accuracy": {
+        "mean": 0.9583333333333334,
+        "ci95": [
+          0.8958333333333334,
+          1.0
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 24,
+        "negative_worlds": 0,
+        "ties": 0,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.9583333333333334,
+          0.9583333333333334
+        ]
+      },
+      "record_sensitivity": {
+        "mean": 0.9583333333333334,
+        "ci95": [
+          0.8958333333333334,
+          1.0
+        ],
+        "n_worlds": 24,
+        "positive_worlds": 24,
+        "negative_worlds": 0,
+        "ties": 0,
+        "sign_p": null,
+        "excluded_worlds": [],
+        "full_plan_bounds": [
+          0.9583333333333334,
+          0.9583333333333334
+        ]
+      },
+      "complete_worlds": 24,
+      "both_records_correct": 22,
+      "final_answer_unchanged": 0,
+      "copy_final_joint_counts": null
+    }
+  },
+  "effects": {
+    "accuracy/copy_record_reasoning_harm": {
+      "mean": 0.125,
+      "ci95": [
+        0.020833333333333332,
+        0.25
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 6,
+      "negative_worlds": 1,
+      "ties": 17,
+      "sign_p": 0.125,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.125,
+        0.125
+      ]
+    },
+    "accuracy/copy_initial_reasoning_harm": {
+      "mean": 0.2708333333333333,
+      "ci95": [
+        0.16666666666666666,
+        0.3958333333333333
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 12,
+      "negative_worlds": 0,
+      "ties": 12,
+      "sign_p": 0.00048828125,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.2708333333333333,
+        0.2708333333333333
+      ]
+    },
+    "accuracy/initial_answer_reasoning_harm": {
+      "mean": 0.14583333333333334,
+      "ci95": [
+        0.0625,
+        0.25
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 7,
+      "negative_worlds": 0,
+      "ties": 17,
+      "sign_p": 0.015625,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.14583333333333334,
+        0.14583333333333334
+      ]
+    },
+    "accuracy/copy_marker_reasoning_harm": {
+      "mean": 0.5,
+      "ci95": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 16,
+      "negative_worlds": 0,
+      "ties": 8,
+      "sign_p": 3.0517578125e-05,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.5,
+        0.5
+      ]
+    },
+    "accuracy/no_entry_reasoning_harm": {
+      "mean": 0.4583333333333333,
+      "ci95": [
+        0.2916666666666667,
+        0.625
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 14,
+      "negative_worlds": 0,
+      "ties": 10,
+      "sign_p": 0.0001220703125,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.4583333333333333,
+        0.4583333333333333
+      ]
+    },
+    "accuracy/initial_minus_record_reasoning_harm": {
+      "mean": 0.020833333333333332,
+      "ci95": [
+        -0.125,
+        0.14583333333333334
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 5,
+      "negative_worlds": 3,
+      "ties": 16,
+      "sign_p": 0.7265625,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.020833333333333332,
+        0.020833333333333332
+      ]
+    },
+    "accuracy/copied_initial_minus_record_reasoning_harm": {
+      "mean": 0.14583333333333334,
+      "ci95": [
+        0.020833333333333332,
+        0.2708333333333333
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 7,
+      "negative_worlds": 1,
+      "ties": 16,
+      "sign_p": 0.0703125,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.14583333333333334,
+        0.14583333333333334
+      ]
+    },
+    "accuracy/marker_minus_record_reasoning_harm": {
+      "mean": 0.375,
+      "ci95": [
+        0.25,
+        0.5
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 15,
+      "negative_worlds": 0,
+      "ties": 9,
+      "sign_p": 6.103515625e-05,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.375,
+        0.375
+      ]
+    },
+    "accuracy/no_entry_minus_record_reasoning_harm": {
+      "mean": 0.3333333333333333,
+      "ci95": [
+        0.1875,
+        0.4791666666666667
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 12,
+      "negative_worlds": 0,
+      "ties": 12,
+      "sign_p": 0.00048828125,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.3333333333333333,
+        0.3333333333333333
+      ]
+    },
+    "accuracy/record_minus_copy_initial_before_final": {
+      "mean": 0.125,
+      "ci95": [
+        0.041666666666666664,
+        0.20833333333333334
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 6,
+      "negative_worlds": 0,
+      "ties": 18,
+      "sign_p": 0.03125,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.125,
+        0.125
+      ]
+    },
+    "accuracy/record_minus_initial_answer_before_final": {
+      "mean": -0.041666666666666664,
+      "ci95": [
+        -0.16666666666666666,
+        0.08333333333333333
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 3,
+      "negative_worlds": 4,
+      "ties": 17,
+      "sign_p": 1.0,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        -0.041666666666666664,
+        -0.041666666666666664
+      ]
+    },
+    "accuracy/record_minus_copy_marker_before_final": {
+      "mean": 0.3125,
+      "ci95": [
+        0.1875,
+        0.4375
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 13,
+      "negative_worlds": 0,
+      "ties": 11,
+      "sign_p": 0.000244140625,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.3125,
+        0.3125
+      ]
+    },
+    "accuracy/record_minus_no_entry_before_final": {
+      "mean": 0.2916666666666667,
+      "ci95": [
+        0.16666666666666666,
+        0.4375
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 11,
+      "negative_worlds": 0,
+      "ties": 13,
+      "sign_p": 0.0009765625,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.2916666666666667,
+        0.2916666666666667
+      ]
+    },
+    "record_sensitivity/copy_record_reasoning_harm": {
+      "mean": 0.10416666666666667,
+      "ci95": [
+        -0.041666666666666664,
+        0.25
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 6,
+      "negative_worlds": 1,
+      "ties": 17,
+      "sign_p": 0.125,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.10416666666666667,
+        0.10416666666666667
+      ]
+    },
+    "record_sensitivity/copy_initial_reasoning_harm": {
+      "mean": 0.3125,
+      "ci95": [
+        0.1875,
+        0.4583333333333333
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 12,
+      "negative_worlds": 0,
+      "ties": 12,
+      "sign_p": 0.00048828125,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.3125,
+        0.3125
+      ]
+    },
+    "record_sensitivity/initial_answer_reasoning_harm": {
+      "mean": 0.14583333333333334,
+      "ci95": [
+        0.0625,
+        0.25
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 7,
+      "negative_worlds": 0,
+      "ties": 17,
+      "sign_p": 0.015625,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.14583333333333334,
+        0.14583333333333334
+      ]
+    },
+    "record_sensitivity/copy_marker_reasoning_harm": {
+      "mean": 0.5625,
+      "ci95": [
+        0.3958333333333333,
+        0.7291666666666666
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 16,
+      "negative_worlds": 0,
+      "ties": 8,
+      "sign_p": 3.0517578125e-05,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.5625,
+        0.5625
+      ]
+    },
+    "record_sensitivity/no_entry_reasoning_harm": {
+      "mean": 0.4583333333333333,
+      "ci95": [
+        0.2916666666666667,
+        0.625
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 14,
+      "negative_worlds": 0,
+      "ties": 10,
+      "sign_p": 0.0001220703125,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.4583333333333333,
+        0.4583333333333333
+      ]
+    },
+    "record_sensitivity/initial_minus_record_reasoning_harm": {
+      "mean": 0.041666666666666664,
+      "ci95": [
+        -0.10416666666666667,
+        0.1875
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 5,
+      "negative_worlds": 3,
+      "ties": 16,
+      "sign_p": 0.7265625,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.041666666666666664,
+        0.041666666666666664
+      ]
+    },
+    "record_sensitivity/copied_initial_minus_record_reasoning_harm": {
+      "mean": 0.20833333333333334,
+      "ci95": [
+        0.041666666666666664,
+        0.4166666666666667
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 7,
+      "negative_worlds": 1,
+      "ties": 16,
+      "sign_p": 0.0703125,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.20833333333333334,
+        0.20833333333333334
+      ]
+    },
+    "record_sensitivity/marker_minus_record_reasoning_harm": {
+      "mean": 0.4583333333333333,
+      "ci95": [
+        0.3125,
+        0.6041666666666666
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 16,
+      "negative_worlds": 0,
+      "ties": 8,
+      "sign_p": 3.0517578125e-05,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.4583333333333333,
+        0.4583333333333333
+      ]
+    },
+    "record_sensitivity/no_entry_minus_record_reasoning_harm": {
+      "mean": 0.3541666666666667,
+      "ci95": [
+        0.20833333333333334,
+        0.5208333333333334
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 12,
+      "negative_worlds": 0,
+      "ties": 12,
+      "sign_p": 0.00048828125,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.3541666666666667,
+        0.3541666666666667
+      ]
+    },
+    "record_sensitivity/record_minus_copy_initial_before_final": {
+      "mean": 0.16666666666666666,
+      "ci95": [
+        0.0625,
+        0.2916666666666667
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 6,
+      "negative_worlds": 0,
+      "ties": 18,
+      "sign_p": 0.03125,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.16666666666666666,
+        0.16666666666666666
+      ]
+    },
+    "record_sensitivity/record_minus_initial_answer_before_final": {
+      "mean": -0.041666666666666664,
+      "ci95": [
+        -0.16666666666666666,
+        0.08333333333333333
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 3,
+      "negative_worlds": 4,
+      "ties": 17,
+      "sign_p": 1.0,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        -0.041666666666666664,
+        -0.041666666666666664
+      ]
+    },
+    "record_sensitivity/record_minus_copy_marker_before_final": {
+      "mean": 0.375,
+      "ci95": [
+        0.22916666666666666,
+        0.5208333333333334
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 14,
+      "negative_worlds": 0,
+      "ties": 10,
+      "sign_p": 0.0001220703125,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.375,
+        0.375
+      ]
+    },
+    "record_sensitivity/record_minus_no_entry_before_final": {
+      "mean": 0.2916666666666667,
+      "ci95": [
+        0.16666666666666666,
+        0.4375
+      ],
+      "n_worlds": 24,
+      "positive_worlds": 11,
+      "negative_worlds": 0,
+      "ties": 13,
+      "sign_p": 0.0009765625,
+      "excluded_worlds": [],
+      "full_plan_bounds": [
+        0.2916666666666667,
+        0.2916666666666667
+      ]
+    }
+  },
+  "transitions": {
+    "copy_record/reason_then_answer": {
+      "valid_final_cases": 48,
+      "non_label_to_wrong": 9,
+      "non_label_to_correct": 6,
+      "correct_to_correct": 32,
+      "correct_to_wrong": 1
+    },
+    "copy_record/answer_then_reason": {
+      "valid_final_cases": 48,
+      "non_label_to_correct": 17,
+      "correct_to_correct": 27,
+      "correct_to_wrong": 1,
+      "non_label_to_wrong": 3
+    },
+    "copy_initial/reason_then_answer": {
+      "valid_final_cases": 48,
+      "non_label_to_wrong": 15,
+      "correct_to_correct": 26,
+      "non_label_to_correct": 6,
+      "correct_to_wrong": 1
+    },
+    "copy_initial/answer_then_reason": {
+      "valid_final_cases": 48,
+      "non_label_to_correct": 22,
+      "correct_to_wrong": 1,
+      "correct_to_correct": 23,
+      "non_label_to_wrong": 2
+    },
+    "initial_answer/reason_then_answer": {
+      "valid_final_cases": 48,
+      "correct_to_correct": 40,
+      "correct_to_wrong": 8
+    },
+    "initial_answer/answer_then_reason": {
+      "valid_final_cases": 48,
+      "correct_to_correct": 47,
+      "correct_to_wrong": 1
+    }
+  },
+  "rationale_counts": {
+    "copy_record/reason_then_answer": {
+      "valid_reasoning_fields": 48,
+      "class_counts": {
+        "never_stated": 22,
+        "stated_and_followed": 21,
+        "relabeled_missing": 5
+      },
+      "class_shares": {
+        "never_stated": 0.4583333333333333,
+        "stated_and_followed": 0.4375,
+        "relabeled_missing": 0.10416666666666667
+      },
+      "missing_candidates": 5,
+      "missing_and_correct": 3,
+      "marker_mentions": 47,
+      "wrong_response_classes": {
+        "never_stated": 8,
+        "relabeled_missing": 2
+      }
+    },
+    "copy_record/answer_then_reason": {
+      "valid_reasoning_fields": 48,
+      "class_counts": {
+        "relabeled_missing": 8,
+        "stated_and_followed": 31,
+        "never_stated": 9
+      },
+      "class_shares": {
+        "relabeled_missing": 0.16666666666666666,
+        "stated_and_followed": 0.6458333333333334,
+        "never_stated": 0.1875
+      },
+      "missing_candidates": 8,
+      "missing_and_correct": 6,
+      "marker_mentions": 48,
+      "wrong_response_classes": {
+        "never_stated": 2,
+        "relabeled_missing": 2
+      }
+    },
+    "copy_initial/reason_then_answer": {
+      "valid_reasoning_fields": 48,
+      "class_counts": {
+        "never_stated": 21,
+        "relabeled_missing": 10,
+        "stated_and_followed": 17
+      },
+      "class_shares": {
+        "never_stated": 0.4375,
+        "relabeled_missing": 0.20833333333333334,
+        "stated_and_followed": 0.3541666666666667
+      },
+      "missing_candidates": 10,
+      "missing_and_correct": 5,
+      "marker_mentions": 48,
+      "wrong_response_classes": {
+        "never_stated": 11,
+        "relabeled_missing": 5
+      }
+    },
+    "copy_initial/answer_then_reason": {
+      "valid_reasoning_fields": 48,
+      "class_counts": {
+        "relabeled_missing": 6,
+        "never_stated": 11,
+        "stated_and_followed": 31
+      },
+      "class_shares": {
+        "relabeled_missing": 0.125,
+        "never_stated": 0.22916666666666666,
+        "stated_and_followed": 0.6458333333333334
+      },
+      "missing_candidates": 6,
+      "missing_and_correct": 6,
+      "marker_mentions": 48,
+      "wrong_response_classes": {
+        "never_stated": 3
+      }
+    },
+    "initial_answer/reason_then_answer": {
+      "valid_reasoning_fields": 48,
+      "class_counts": {
+        "never_stated": 23,
+        "stated_and_followed": 16,
+        "relabeled_missing": 9
+      },
+      "class_shares": {
+        "never_stated": 0.4791666666666667,
+        "stated_and_followed": 0.3333333333333333,
+        "relabeled_missing": 0.1875
+      },
+      "missing_candidates": 9,
+      "missing_and_correct": 6,
+      "marker_mentions": 48,
+      "wrong_response_classes": {
+        "never_stated": 5,
+        "relabeled_missing": 3
+      }
+    },
+    "initial_answer/answer_then_reason": {
+      "valid_reasoning_fields": 48,
+      "class_counts": {
+        "stated_and_followed": 30,
+        "relabeled_missing": 10,
+        "never_stated": 8
+      },
+      "class_shares": {
+        "stated_and_followed": 0.625,
+        "relabeled_missing": 0.20833333333333334,
+        "never_stated": 0.16666666666666666
+      },
+      "missing_candidates": 10,
+      "missing_and_correct": 10,
+      "marker_mentions": 48,
+      "wrong_response_classes": {
+        "never_stated": 1
+      }
+    },
+    "copy_marker/reason_then_answer": {
+      "valid_reasoning_fields": 48,
+      "class_counts": {
+        "relabeled_missing": 12,
+        "never_stated": 25,
+        "stated_and_followed": 11
+      },
+      "class_shares": {
+        "relabeled_missing": 0.25,
+        "never_stated": 0.5208333333333334,
+        "stated_and_followed": 0.22916666666666666
+      },
+      "missing_candidates": 12,
+      "missing_and_correct": 7,
+      "marker_mentions": 48,
+      "wrong_response_classes": {
+        "relabeled_missing": 5,
+        "never_stated": 20
+      }
+    },
+    "copy_marker/answer_then_reason": {
+      "valid_reasoning_fields": 48,
+      "class_counts": {
+        "stated_and_followed": 24,
+        "relabeled_missing": 17,
+        "never_stated": 7
+      },
+      "class_shares": {
+        "stated_and_followed": 0.5,
+        "relabeled_missing": 0.3541666666666667,
+        "never_stated": 0.14583333333333334
+      },
+      "missing_candidates": 17,
+      "missing_and_correct": 16,
+      "marker_mentions": 48,
+      "wrong_response_classes": {
+        "relabeled_missing": 1
+      }
+    },
+    "no_entry/reason_then_answer": {
+      "valid_reasoning_fields": 48,
+      "class_counts": {
+        "never_stated": 26,
+        "stated_then_overridden": 3,
+        "stated_and_followed": 15,
+        "relabeled_missing": 4
+      },
+      "class_shares": {
+        "never_stated": 0.5416666666666666,
+        "stated_then_overridden": 0.0625,
+        "stated_and_followed": 0.3125,
+        "relabeled_missing": 0.08333333333333333
+      },
+      "missing_candidates": 4,
+      "missing_and_correct": 1,
+      "marker_mentions": 48,
+      "wrong_response_classes": {
+        "never_stated": 18,
+        "stated_then_overridden": 3,
+        "relabeled_missing": 3
+      }
+    },
+    "no_entry/answer_then_reason": {
+      "valid_reasoning_fields": 48,
+      "class_counts": {
+        "stated_and_followed": 28,
+        "relabeled_missing": 8,
+        "never_stated": 12
+      },
+      "class_shares": {
+        "stated_and_followed": 0.5833333333333334,
+        "relabeled_missing": 0.16666666666666666,
+        "never_stated": 0.25
+      },
+      "missing_candidates": 8,
+      "missing_and_correct": 8,
+      "marker_mentions": 48,
+      "wrong_response_classes": {
+        "never_stated": 2
+      }
+    }
+  },
+  "uncertainty": "10,000 whole-world bootstrap resamples, seed 981723, descriptive unadjusted 95% percentile intervals. Each world first averages its two record variants. The exact two-sided sign test omits ties and tests sign balance, not mean magnitude. Only the declared primary is primary; all other contrasts are secondary/descriptive. Complete-world estimates exclude a world if any required answer is invalid or pending. Full-plan bounds range those answers over all three labels and are not confidence intervals. Degenerate intervals do not establish certainty or equivalence.",
+  "interpretation": "All conditions use the same fixed row-10 tables, schema fields and permission to differ. Only entry instructions and schema property order vary. These are effects of instructions and output interfaces; they do not identify hidden beliefs, mediation by reasoning text, or effects across row positions. The whole schema is visible before the first entry, so order may affect that entry too. Wrong copies and first-entry format failures remain in final-answer estimates. Correct-to-wrong transitions are descriptive, never a selection rule. The no-entry control still writes null; it is not a format-identical replication of earlier plain-text direct/CoT arms. Audit-marker copying is an active instruction, not a proven neutral attention control. No outcome authorizes more calls automatically.",
+  "decision": "no_automatic_followup",
+  "target_position": 10
+}
