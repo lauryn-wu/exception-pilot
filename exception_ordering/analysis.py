@@ -88,6 +88,10 @@ def analyze(output):
                 variability.append(dict(world=w['id'], placement=placement, arm=arm,
                                         rotation_accuracies=vals, range=max(known)-min(known) if known else None))
     result = dict(mode=json.loads((out/'execution.json').read_text())['mode'] if (out/'execution.json').exists() else 'NOT_RUN',
+                  report_version='ordering-summary-v2', planned_responses=plan['planned_responses'],
+                  collection_execution='Sequential, batch size one',
+                  primary_control=audit['primary_control'], token_audit_status=audit['status'],
+                  token_matched_coverage=audit['coverage'], token_coverage_assessment=audit['coverage_assessment'],
                   cells=cells, contrasts=contrasts, rotation_variability=variability,
                   token_comparisons=len(audit['comparisons']), token_measured=audit['measured'],
                   token_matched=audit['matched_before_after'],
@@ -100,6 +104,10 @@ def analyze(output):
             writer.writerow([t['id'], t['world'], t['placement'], t['arm'], e.get('score', {}).get('answer'),
                              e.get('score', {}).get('correct'), e.get('response', {}).get('text'), e.get('status', 'missing')])
     (out/'summary.md').write_text('# ' + result['mode'] + '\n\n' +
+        f"Planned responses: {plan['planned_responses']:,}, sequential. Primary fixes target row 5, not necessarily its token position.\n\n" +
+        f"Token audit: {audit['status']}. {audit['coverage_assessment']}\n\n" +
+        f"Matched blocks {audit['coverage']['matched_blocks']}/{audit['coverage']['measured_blocks']} measured; " +
+        f"{audit['coverage']['unmeasured_blocks']} unmeasured. Worlds with a match: {audit['coverage']['worlds_with_any_match']}/{audit['coverage']['planned_worlds']}.\n\n" +
         '\n'.join(f"- {name}: {c['estimate']}; complete worlds {c['complete_worlds']}/{c['eligible_worlds']}; bounds {c['full_plan_bounds']}"
                   for name, c in contrasts.items()) + '\n\nIntervals are descriptive. SIMULATED values are software tests, not evidence.\n')
     return result

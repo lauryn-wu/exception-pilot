@@ -48,11 +48,63 @@ def position_report(plan):
         measured = all(t['position']['status'] != 'UNMEASURED' for t in g.values())
         def pos(t):
             return tuple(t['position']['token_spans'][s][0] for s in ('plate', 'class'))
+        details = {}
+        for name, task in g.items():
+            p = dict(task['position'])
+            p['target_to_query_tokens'] = None
+            if p['status'] != 'UNMEASURED':
+                spans = p['token_spans']; query = spans['query_plate'][0]
+                p['target_to_query_tokens'] = dict(
+                    plate_start_to_query_start=query-spans['plate'][0],
+                    class_start_to_query_start=query-spans['class'][0],
+                    row_end_to_query_start=query-spans['row'][1])
+            details[name] = p
+        deltas = {}
+        for arm in ('direct', 'visible'):
+            before, after = details['before/'+arm], details['after/'+arm]
+            deltas[arm] = None if not measured else dict(
+                plate_start=after['token_spans']['plate'][0]-before['token_spans']['plate'][0],
+                class_start=after['token_spans']['class'][0]-before['token_spans']['class'][0],
+                user_message_tokens=after['tokens']-before['tokens'],
+                target_to_query_tokens={k: after['target_to_query_tokens'][k]-v
+                                        for k,v in before['target_to_query_tokens'].items()})
         entries.append(dict(world=key[0], variant=key[1], rotation=key[2],
                             before_after_match=len({pos(g[p + '/' + a]) for p in ('before', 'after') for a in ('direct', 'visible')}) == 1 if measured else None,
                             quartet_match=len({pos(t) for t in g.values()}) == 1 if measured else None,
-                            positions={o: t['position'] for o, t in g.items()}))
-    return dict(tokenizer=plan['tokenizer'], comparisons=entries,
+                            positions=details, after_minus_before=deltas))
+    worlds = {}
+    for e in entries:
+        w = worlds.setdefault(e['world'], dict(planned_blocks=0, measured_blocks=0, matched_blocks=0,
+                                              matched_rotations_by_variant={'0': [], '1': []}))
+        w['planned_blocks'] += 1
+        w['measured_blocks'] += e['before_after_match'] is not None
+        if e['before_after_match']:
+            w['matched_blocks'] += 1
+            w['matched_rotations_by_variant'][str(e['variant'])].append(e['rotation'])
+    for w in worlds.values():
+        rotations = w['matched_rotations_by_variant']
+        w['matched_rotations_with_both_variants'] = sorted(set(rotations['0']) & set(rotations['1']))
+    measured_count = sum(e['before_after_match'] is not None for e in entries)
+    matched_count = sum(e['before_after_match'] is True for e in entries)
+    coverage = dict(planned_blocks=len(entries), measured_blocks=measured_count,
+        matched_blocks=matched_count, unmatched_blocks=measured_count-matched_count,
+        unmeasured_blocks=len(entries)-measured_count, planned_worlds=len(worlds),
+        worlds_with_any_match=sum(w['matched_blocks'] > 0 for w in worlds.values()),
+        worlds_with_both_variants_at_a_matched_rotation=sum(bool(w['matched_rotations_with_both_variants']) for w in worlds.values()),
+        worlds_with_all_blocks_matched=sum(w['matched_blocks'] == w['planned_blocks'] for w in worlds.values()),
+        matched_fraction_of_measured=matched_count/measured_count if measured_count else None,
+        by_world=worlds)
+    status = 'PENDING' if not measured_count else 'INPUT_ONLY_USER_ATTESTED'
+    assessment = ('Cannot assess useful matched coverage: model-matched tokenizer unavailable; zero measured blocks is not evidence of zero matches.'
+                  if not measured_count else 'No matched before/after blocks; token-matched secondary analysis unavailable.'
+                  if not matched_count else 'Input-matched subset available; inspect block/world and both-variant coverage. No sufficiency threshold or primary-design change is implied.')
+    return dict(report_version='ordering-input-audit-v2', status=status,
+                scope='Complete user message only; provider chat serialization is NOT verified.',
+                primary_control='Fixed target row 5; target token position is not guaranteed.',
+                matched_subset_role='Secondary diagnostic only; full planned sample remains primary.',
+                planned_responses=len(plan['tasks']), execution='Sequential, one response at a time; no automatic sample reduction or extension.',
+                coverage=coverage, coverage_assessment=assessment,
+                tokenizer=plan['tokenizer'], comparisons=entries,
                 matched_before_after=sum(e['before_after_match'] is True for e in entries),
                 measured=sum(e['before_after_match'] is not None for e in entries))
 

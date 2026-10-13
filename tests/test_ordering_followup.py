@@ -113,6 +113,48 @@ class OrderingTests(unittest.TestCase):
         self.assertEqual(report['matched_before_after'], 0)
         self.assertTrue(all(e['before_after_match'] is None and e['quartet_match'] is None for e in report['comparisons']))
         self.assertTrue(all(t['position']['tokens'] is None for t in self.plan['tasks']))
+        self.assertEqual(report['status'], 'PENDING')
+        self.assertEqual(report['planned_responses'], 7680)
+        c = report['coverage']
+        self.assertEqual((c['planned_blocks'], c['unmeasured_blocks'], c['planned_worlds']), (960,960,24))
+        self.assertIsNone(c['matched_fraction_of_measured'])
+        self.assertIn('not evidence of zero matches', report['coverage_assessment'])
+        self.assertTrue(all(p['target_to_query_tokens'] is None for e in report['comparisons'] for p in e['positions'].values()))
+
+    def test_audit_distances_deltas_and_world_coverage_without_selecting_primary(self):
+        # Synthetic offsets solely exercise arithmetic; never model evidence.
+        tasks = copy.deepcopy(self.plan['tasks'])
+        for t in tasks:
+            match = t['world'] == self.plan['worlds'][0]['id'] and t['rotation'] == 0
+            shift = 0 if match or t['placement'] != 'after' else 1
+            t['position'].update(status='SOFTWARE_FIXTURE_ONLY', tokens=1000+shift,
+                token_spans={'plate':[100+shift,104+shift], 'class':[120+shift,121+shift],
+                             'row':[98+shift,123+shift], 'query_plate':[900,904]})
+        report=runner.position_report(dict(tasks=tasks,tokenizer={'SOFTWARE_FIXTURE':True}))
+        c=report['coverage']
+        self.assertEqual((c['matched_blocks'],c['unmatched_blocks'],c['measured_blocks']), (2,958,960))
+        self.assertEqual(c['worlds_with_any_match'],1)
+        self.assertEqual(c['worlds_with_both_variants_at_a_matched_rotation'],1)
+        self.assertEqual(c['worlds_with_all_blocks_matched'],0)
+        e=next(e for e in report['comparisons'] if not e['before_after_match'])
+        self.assertEqual(e['positions']['before/direct']['target_to_query_tokens'],
+            dict(plate_start_to_query_start=800,class_start_to_query_start=780,row_end_to_query_start=777))
+        self.assertEqual(e['after_minus_before']['direct']['target_to_query_tokens']['class_start_to_query_start'],-1)
+        self.assertEqual(e['after_minus_before']['direct']['user_message_tokens'],1)
+        primary=analysis.contrast(self.plan,{},analysis.COEFFICIENTS['primary_harm_after_minus_before'])
+        self.assertEqual(primary['eligible_worlds'],24)
+        self.assertEqual(sum(w['paired_blocks'] for w in primary['worlds']),960)
+        self.assertIn('NOT verified',report['scope'])
+
+    def test_input_only_audit_command_never_invokes_transport(self):
+        from exception_ordering.__main__ import main
+        with tempfile.TemporaryDirectory() as tmp:
+            with patch('sys.argv',['ordering','audit-inputs','--output',tmp]), patch('builtins.print'), \
+                    patch('exception_ordering.runner.complete',side_effect=AssertionError('network')):
+                main()
+            report=json.loads((Path(tmp)/'position-audit.json').read_text())
+            self.assertEqual(report['status'],'PENDING')
+            self.assertFalse((Path(tmp)/'attempts').exists())
 
     def test_scoring_retains_invalid_and_truncation(self):
         task = self.plan['tasks'][0]

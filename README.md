@@ -1,5 +1,9 @@
 # Reasoning prompts and exception records
 
+For the pending Study 1 follow-up, see the [input-audit reporting update](ORDERING_INPUT_AUDIT_V2.md).
+The primary fixes target row 5, not necessarily token position. The unchanged
+plan has 7,680 sequential responses; model-matched token auditing is pending.
+
 These experiments ask GPT-4o to answer questions about synthetic vehicle records.
 Under the original classification wording, asking for reasoning made the model
 more likely to follow the surrounding labels even when they conflicted with the
