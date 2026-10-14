@@ -1,0 +1,108 @@
+{
+  "source_hash": "f431534d41436c666392d0122ff3a2502f3b4a21792bfe046998f1deba4a1377",
+  "status": "SEE_PER_OPERATION_GATES",
+  "kind": "interventions",
+  "frozen_plan_cases": 5,
+  "planned_operation_ceiling": 50,
+  "observations": {
+    "candidate_sequence_scoring/MOCK": {
+      "observations": 60,
+      "mean_seconds": 4.936116666657645e-06,
+      "median_seconds": 4.8329999999818796e-06,
+      "range_seconds": [
+        4.499999999962867e-06,
+        8.459000000016204e-06
+      ],
+      "status": "MEASURED"
+    },
+    "edited_continuation/MOCK": {
+      "observations": 20,
+      "mean_seconds": 2.4145699999988946e-05,
+      "median_seconds": 2.2228999999929222e-05,
+      "range_seconds": [
+        2.145799999997422e-05,
+        3.1957999999887576e-05
+      ],
+      "status": "MEASURED"
+    },
+    "intervention_reference/MOCK": {
+      "observations": 5,
+      "mean_seconds": 3.3325000000061776e-05,
+      "median_seconds": 3.258300000008596e-05,
+      "range_seconds": [
+        3.187500000012555e-05,
+        3.64170000000108e-05
+      ],
+      "status": "MEASURED"
+    },
+    "unchanged_replay/MOCK": {
+      "observations": 5,
+      "mean_seconds": 3.0749800000018365e-05,
+      "median_seconds": 3.0291000000071122e-05,
+      "range_seconds": [
+        3.0041000000036178e-05,
+        3.283299999989886e-05
+      ],
+      "status": "MEASURED"
+    }
+  },
+  "remaining_work": {
+    "intervention_reference": {
+      "planned_maximum": 5,
+      "remaining_count_scenario": [
+        0,
+        0
+      ],
+      "seconds_scenario": null,
+      "status": "NOT_YET_MEASURED"
+    },
+    "unchanged_replay": {
+      "planned_maximum": 5,
+      "remaining_count_scenario": [
+        0,
+        0
+      ],
+      "seconds_scenario": null,
+      "status": "NOT_YET_MEASURED"
+    },
+    "edited_continuation": {
+      "planned_maximum": 20,
+      "remaining_count_scenario": [
+        0,
+        0
+      ],
+      "seconds_scenario": null,
+      "status": "NOT_YET_MEASURED"
+    },
+    "candidate_sequence_scoring": {
+      "planned_maximum": 60,
+      "remaining_count_scenario": [
+        0,
+        0
+      ],
+      "seconds_scenario": null,
+      "status": "NOT_YET_MEASURED"
+    }
+  },
+  "this_invocation": {
+    "version": "study2-timing-sidecar-v1",
+    "source_hash": "f431534d41436c666392d0122ff3a2502f3b4a21792bfe046998f1deba4a1377",
+    "invocation": "1f90aaf93f4b43399b42f3e2d67f0178",
+    "started_utc": "2026-10-14T00:45:48.166059+00:00",
+    "finished_utc": "2026-10-14T00:45:48.274102+00:00",
+    "elapsed_seconds": 0.1080468750000001,
+    "status": "COMPLETE",
+    "python": "3.8.2",
+    "platform": "macOS-15.2-arm64-arm-64bit",
+    "artifact_hash": "f5543b2481dde92fe58afbca3e42083a8ab84e5510f519a3a66830457518f72f"
+  },
+  "attempted": 50,
+  "returned": 50,
+  "terminal_unavailable": 0,
+  "cache_hits": 0,
+  "input_tokens": 130776,
+  "output_tokens": 2925,
+  "hardware_software_precision": [],
+  "full_study_total": null,
+  "note": "Frozen-plan conditional ceilings: replay failures can prevent downstream operations permanently. No terminal request is retried. Candidate counts are three complete sequences per readout, not generated answer frequencies. Completed per-sequence timings may include work from a later failed aggregate readout. Mock time is not live time."
+}

@@ -1,0 +1,20 @@
+{
+  "source_hash": "f431534d41436c666392d0122ff3a2502f3b4a21792bfe046998f1deba4a1377",
+  "policy_hash": "63b3fd8809856c42c1f81fa3bd563e33d38951585aaa7b1a3cce76583bcf8373",
+  "code_hash": "06edf36a1c82e310891b6af092ca2dedd64ae88c390e6f0b51b45b0a02724e25",
+  "scope": "pilot",
+  "case_ids": [
+    "selection-continuation-v3-000/v0/visible",
+    "selection-continuation-v3-000/v1/visible",
+    "selection-continuation-v3-001/v1/visible",
+    "selection-continuation-v3-001/v0/visible",
+    "selection-continuation-v3-002/v0/visible",
+    "selection-continuation-v3-002/v1/visible"
+  ],
+  "source_case_count": 24,
+  "maximum_logical_calls": 42,
+  "concurrency": 1,
+  "limitation": null,
+  "synthetic": true,
+  "artifact_hash": "7b86e2170c8b0e4f1bfa966539deb4faa81e339c2fc8276267dc7770785a24b1"
+}

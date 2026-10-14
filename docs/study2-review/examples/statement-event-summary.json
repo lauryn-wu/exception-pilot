@@ -1,0 +1,80 @@
+{
+  "source_hash": "f431534d41436c666392d0122ff3a2502f3b4a21792bfe046998f1deba4a1377",
+  "event_plan_hash": "f583a7eac67fe67c9da4ca592554a4764f247667ebfbffc6e121306b2f32242b",
+  "measurements_hash": "2a6ad2da34318335958d6d4c1f2ffbd91079a05d22ceab1faecaf7be013a636a",
+  "summary": {
+    "version": "event-checkpoints-v1",
+    "secondary": true,
+    "real_model_status": "PENDING",
+    "coverage": {
+      "before_statement": {
+        "planned": 6,
+        "eligible": 6,
+        "replay_valid": 6,
+        "measured": 6,
+        "unavailable_reasons": {}
+      },
+      "after_statement": {
+        "planned": 6,
+        "eligible": 6,
+        "replay_valid": 6,
+        "measured": 6,
+        "unavailable_reasons": {}
+      },
+      "before_answer": {
+        "planned": 0,
+        "eligible": 0,
+        "replay_valid": 0,
+        "measured": 0,
+        "unavailable_reasons": {}
+      }
+    },
+    "checkpoint_means": {
+      "before_statement": {
+        "estimate": 0.1499999999999997,
+        "worlds": 3,
+        "bootstrap_95": [
+          -0.44999999999999996,
+          0.4499999999999995
+        ],
+        "world_values": {
+          "selection-continuation-v3-000": -0.44999999999999996,
+          "selection-continuation-v3-001": 0.4499999999999995,
+          "selection-continuation-v3-002": 0.4499999999999995
+        },
+        "degenerate_interval": false
+      },
+      "after_statement": {
+        "estimate": 0.1499999999999997,
+        "worlds": 3,
+        "bootstrap_95": [
+          -0.44999999999999996,
+          0.4499999999999995
+        ],
+        "world_values": {
+          "selection-continuation-v3-000": -0.44999999999999996,
+          "selection-continuation-v3-001": 0.4499999999999995,
+          "selection-continuation-v3-002": 0.4499999999999995
+        },
+        "degenerate_interval": false
+      }
+    },
+    "after_minus_before_statement": {
+      "estimate": 0.0,
+      "worlds": 3,
+      "bootstrap_95": [
+        0.0,
+        0.0
+      ],
+      "world_values": {
+        "selection-continuation-v3-000": 0.0,
+        "selection-continuation-v3-001": 0.0,
+        "selection-continuation-v3-002": 0.0
+      },
+      "degenerate_interval": true
+    },
+    "trajectories_with_any_failed_checkpoint": 0,
+    "interpretation": "Secondary event-conditioned answer preferences; fixed 64-minus-0 remains primary."
+  },
+  "artifact_hash": "34aac1d16324a26591a57afa2c0be4d4f46b9db4f90c05f565357cab3a3d2e5f"
+}
