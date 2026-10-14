@@ -1,0 +1,75 @@
+{
+  "check": "mistral-study2-capability-v1",
+  "mode": "live_requested",
+  "live_tested": false,
+  "model": "mistral-small-2603",
+  "endpoint": "https://api.mistral.ai/v1/chat/completions",
+  "settings": {
+    "model": "mistral-small-2603",
+    "temperature": 0,
+    "top_p": 1,
+    "random_seed": 20261012,
+    "reasoning_effort": "none",
+    "stream": false,
+    "n": 1,
+    "safe_prompt": false
+  },
+  "prompt": "Write a paragraph of at least 80 words describing the steps for organizing a bookshelf.",
+  "candidates": {
+    "A": " A\n",
+    "B": " B\n",
+    "C": " C\n"
+  },
+  "cue": "\nANSWER:",
+  "max_requests": 12,
+  "max_requested_output_tokens": 1062,
+  "retries": 0,
+  "redirects": false,
+  "docs_checked": "2026-10-12",
+  "sources": [
+    "https://docs.mistral.ai/models/mistral-small-4-0-26-03",
+    "https://docs.mistral.ai/studio/conversations/chat-completion",
+    "https://docs.mistral.ai/studio/conversations/reasoning",
+    "https://docs.mistral.ai/api/endpoint/chat",
+    "https://docs.mistral.ai/openapi.yaml"
+  ],
+  "openapi_sha256": "6c349f3bdef67bbbe43b49973f15825c92e7fcc1ff4fadbcc2d87564ef277a03",
+  "slots": [
+    "01_plain_original: 192 tokens",
+    "02_plain_char32: unchanged 32-character prefix; 192 tokens",
+    "03_plain_char64: unchanged 64-character prefix; 192 tokens",
+    "04_logprobs_original: logprobs=true; 192 tokens",
+    "05_token32: unchanged 32-token prefix; logprobs + prompt_logprobs; 160 tokens",
+    "06_token64: unchanged 64-token prefix; logprobs + prompt_logprobs; 128 tokens",
+    "07_top_output: checkpoint + cue; logprobs + top_logprobs=5; 1 token",
+    "08_prompt_context: checkpoint + cue; prompt_logprobs; 1 token",
+    "09_top_prompt: same context; prompt_logprobs + top_prompt_logprobs=5; 1 token",
+    "10_candidate_A: context + complete candidate; prompt_logprobs; 1 token",
+    "11_candidate_B: context + complete candidate; prompt_logprobs; 1 token",
+    "12_candidate_C: context + complete candidate; prompt_logprobs; 1 token"
+  ],
+  "limits": {
+    "documented": "Assistant prefix; output/prompt logprobs with token_id, bytes, token and optional top_logprobs.",
+    "testable": "Returned text/finish equality; observable suffix IDs; returned prompt tail IDs; aligned complete candidate logprobs.",
+    "full_vocabulary_logits": "not_exposed_by_documented_chat_schema",
+    "full_distribution_equivalence": "not_established; top-k and sampled-token logprobs cannot establish it",
+    "local_protocol_gates": "unchanged; raw-logit allclose, full-vocabulary probability allclose and TV remain untestable",
+    "server_identity": "Returned model name is observable; exact weights, tokenizer, template, precision and deployment are not pinned.",
+    "token_identity": "Bytes are not IDs. Server prefix-tail IDs can be compared if returned; arbitrary token-ID input is not documented.",
+    "full_serialized_generation_input": "Not verified: original input token serialization is not captured by the output-only reference.",
+    "probability_semantics": "Schema does not specify whether reported logprobs precede decoding transforms; temperature=0 is not proof.",
+    "calibration": "No selection/confirmation cases, false-missingness screening or edited intervention arms are collected.",
+    "implementation": "Full API backend pending; this report never opens local study gates."
+  },
+  "study_2a": {
+    "status": "not_live_tested",
+    "protocol_compatible": false,
+    "reason": "Complete candidate likelihoods and replay gates remain unverified."
+  },
+  "study_2b": {
+    "status": "not_live_tested",
+    "protocol_compatible": false,
+    "reason": "Prefix replay untested; token/distribution gates and behavioral calibration pending."
+  },
+  "script_sha256": "9d35fbba0de6af7c0ee400ced1bdfdaf985784f4d3242a5d56c87666e37c22bb"
+}

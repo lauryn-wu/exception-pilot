@@ -1,0 +1,546 @@
+{
+  "check": "mistral-study2-capability-v1",
+  "mode": "live",
+  "requests_attempted": 10,
+  "records": [
+    {
+      "slot": "01_plain_original",
+      "status": "observed",
+      "requested_fields": [
+        "max_tokens",
+        "messages",
+        "model",
+        "n",
+        "random_seed",
+        "reasoning_effort",
+        "safe_prompt",
+        "stream",
+        "temperature",
+        "top_p"
+      ],
+      "http_status": 200,
+      "response_bytes": 1095,
+      "response_sha256": "d6a99b48c30e7c18fc6fe9c44bf8a98ec979190eaa94e129da788d802c2de794",
+      "headers": {
+        "Date": "Tue, 13 Oct 2026 01:41:48 GMT",
+        "Content-Type": "application/json"
+      },
+      "returned_model": "mistral-small-2603",
+      "response_id": "d0750fb6297445f0a9625ffc862084b4",
+      "usage": {
+        "prompt_tokens": 34,
+        "total_tokens": 167,
+        "completion_tokens": 133,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        },
+        "service_tier": "standard"
+      },
+      "probability_fields": {
+        "logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        },
+        "prompt_logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        }
+      }
+    },
+    {
+      "slot": "02_plain_char32",
+      "status": "observed",
+      "requested_fields": [
+        "max_tokens",
+        "messages",
+        "model",
+        "n",
+        "random_seed",
+        "reasoning_effort",
+        "safe_prompt",
+        "stream",
+        "temperature",
+        "top_p"
+      ],
+      "http_status": 200,
+      "response_bytes": 1145,
+      "response_sha256": "02b4dd7b78583fa1654e68e0642d76a46a645c9fd1e38245240fdea2c8ea756e",
+      "headers": {
+        "Date": "Tue, 13 Oct 2026 01:41:50 GMT",
+        "Content-Type": "application/json"
+      },
+      "returned_model": "mistral-small-2603",
+      "response_id": "a138eaa9defc460ba08b69f376ba0865",
+      "usage": {
+        "prompt_tokens": 41,
+        "total_tokens": 183,
+        "completion_tokens": 142,
+        "prompt_tokens_details": {
+          "cached_tokens": 16
+        },
+        "service_tier": "standard"
+      },
+      "probability_fields": {
+        "logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        },
+        "prompt_logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        }
+      }
+    },
+    {
+      "slot": "03_plain_char64",
+      "status": "observed",
+      "requested_fields": [
+        "max_tokens",
+        "messages",
+        "model",
+        "n",
+        "random_seed",
+        "reasoning_effort",
+        "safe_prompt",
+        "stream",
+        "temperature",
+        "top_p"
+      ],
+      "http_status": 200,
+      "response_bytes": 1046,
+      "response_sha256": "d7ed1232553c45f41d01ead5aca8747123ced6d51d06286be838351cf6e7371e",
+      "headers": {
+        "Date": "Tue, 13 Oct 2026 01:41:52 GMT",
+        "Content-Type": "application/json"
+      },
+      "returned_model": "mistral-small-2603",
+      "response_id": "41e06b3d1c6546f4ad8a3aaded2a26b0",
+      "usage": {
+        "prompt_tokens": 46,
+        "total_tokens": 172,
+        "completion_tokens": 126,
+        "prompt_tokens_details": {
+          "cached_tokens": 16
+        },
+        "service_tier": "standard"
+      },
+      "probability_fields": {
+        "logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        },
+        "prompt_logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        }
+      }
+    },
+    {
+      "slot": "04_logprobs_original",
+      "status": "rejected_or_unusable",
+      "requested_fields": [
+        "logprobs",
+        "max_tokens",
+        "messages",
+        "model",
+        "n",
+        "random_seed",
+        "reasoning_effort",
+        "safe_prompt",
+        "stream",
+        "temperature",
+        "top_p"
+      ],
+      "http_status": 400,
+      "response_bytes": 157,
+      "response_sha256": "a6ec9c936dbe7492f2ffbfb1fde3a5b18194708305c68a4e96b798beef1f1b85",
+      "headers": {
+        "Date": "Tue, 13 Oct 2026 01:41:52 GMT",
+        "Content-Type": "application/json"
+      },
+      "returned_model": null,
+      "response_id": null,
+      "usage": null,
+      "probability_fields": {
+        "logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        },
+        "prompt_logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        }
+      }
+    },
+    {
+      "slot": "05_token32",
+      "status": "skipped",
+      "reason": "no_exact_observed_token_boundary; no tokenizer substitution"
+    },
+    {
+      "slot": "06_token64",
+      "status": "skipped",
+      "reason": "no_exact_observed_token_boundary; no tokenizer substitution"
+    },
+    {
+      "slot": "07_top_output",
+      "status": "rejected_or_unusable",
+      "requested_fields": [
+        "logprobs",
+        "max_tokens",
+        "messages",
+        "model",
+        "n",
+        "random_seed",
+        "reasoning_effort",
+        "safe_prompt",
+        "stream",
+        "temperature",
+        "top_logprobs",
+        "top_p"
+      ],
+      "http_status": 400,
+      "response_bytes": 157,
+      "response_sha256": "a6ec9c936dbe7492f2ffbfb1fde3a5b18194708305c68a4e96b798beef1f1b85",
+      "headers": {
+        "Date": "Tue, 13 Oct 2026 01:41:52 GMT",
+        "Content-Type": "application/json"
+      },
+      "returned_model": null,
+      "response_id": null,
+      "usage": null,
+      "probability_fields": {
+        "logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        },
+        "prompt_logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        }
+      }
+    },
+    {
+      "slot": "08_prompt_context",
+      "status": "rejected_or_unusable",
+      "requested_fields": [
+        "max_tokens",
+        "messages",
+        "model",
+        "n",
+        "prompt_logprobs",
+        "random_seed",
+        "reasoning_effort",
+        "safe_prompt",
+        "stream",
+        "temperature",
+        "top_p"
+      ],
+      "http_status": 400,
+      "response_bytes": 164,
+      "response_sha256": "1830cac6acc2d869e6cb8a1b3eb8e3708886b02222ba7d84f512589b772a6f44",
+      "headers": {
+        "Date": "Tue, 13 Oct 2026 01:41:53 GMT",
+        "Content-Type": "application/json"
+      },
+      "returned_model": null,
+      "response_id": null,
+      "usage": null,
+      "probability_fields": {
+        "logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        },
+        "prompt_logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        }
+      }
+    },
+    {
+      "slot": "09_top_prompt",
+      "status": "rejected_or_unusable",
+      "requested_fields": [
+        "max_tokens",
+        "messages",
+        "model",
+        "n",
+        "prompt_logprobs",
+        "random_seed",
+        "reasoning_effort",
+        "safe_prompt",
+        "stream",
+        "temperature",
+        "top_p",
+        "top_prompt_logprobs"
+      ],
+      "http_status": 400,
+      "response_bytes": 164,
+      "response_sha256": "1830cac6acc2d869e6cb8a1b3eb8e3708886b02222ba7d84f512589b772a6f44",
+      "headers": {
+        "Date": "Tue, 13 Oct 2026 01:41:53 GMT",
+        "Content-Type": "application/json"
+      },
+      "returned_model": null,
+      "response_id": null,
+      "usage": null,
+      "probability_fields": {
+        "logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        },
+        "prompt_logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        }
+      }
+    },
+    {
+      "slot": "10_candidate_A",
+      "status": "rejected_or_unusable",
+      "requested_fields": [
+        "max_tokens",
+        "messages",
+        "model",
+        "n",
+        "prompt_logprobs",
+        "random_seed",
+        "reasoning_effort",
+        "safe_prompt",
+        "stream",
+        "temperature",
+        "top_p"
+      ],
+      "http_status": 400,
+      "response_bytes": 164,
+      "response_sha256": "1830cac6acc2d869e6cb8a1b3eb8e3708886b02222ba7d84f512589b772a6f44",
+      "headers": {
+        "Date": "Tue, 13 Oct 2026 01:41:53 GMT",
+        "Content-Type": "application/json"
+      },
+      "returned_model": null,
+      "response_id": null,
+      "usage": null,
+      "probability_fields": {
+        "logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        },
+        "prompt_logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        }
+      }
+    },
+    {
+      "slot": "11_candidate_B",
+      "status": "rejected_or_unusable",
+      "requested_fields": [
+        "max_tokens",
+        "messages",
+        "model",
+        "n",
+        "prompt_logprobs",
+        "random_seed",
+        "reasoning_effort",
+        "safe_prompt",
+        "stream",
+        "temperature",
+        "top_p"
+      ],
+      "http_status": 400,
+      "response_bytes": 164,
+      "response_sha256": "1830cac6acc2d869e6cb8a1b3eb8e3708886b02222ba7d84f512589b772a6f44",
+      "headers": {
+        "Date": "Tue, 13 Oct 2026 01:41:53 GMT",
+        "Content-Type": "application/json"
+      },
+      "returned_model": null,
+      "response_id": null,
+      "usage": null,
+      "probability_fields": {
+        "logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        },
+        "prompt_logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        }
+      }
+    },
+    {
+      "slot": "12_candidate_C",
+      "status": "rejected_or_unusable",
+      "requested_fields": [
+        "max_tokens",
+        "messages",
+        "model",
+        "n",
+        "prompt_logprobs",
+        "random_seed",
+        "reasoning_effort",
+        "safe_prompt",
+        "stream",
+        "temperature",
+        "top_p"
+      ],
+      "http_status": 400,
+      "response_bytes": 164,
+      "response_sha256": "1830cac6acc2d869e6cb8a1b3eb8e3708886b02222ba7d84f512589b772a6f44",
+      "headers": {
+        "Date": "Tue, 13 Oct 2026 01:41:54 GMT",
+        "Content-Type": "application/json"
+      },
+      "returned_model": null,
+      "response_id": null,
+      "usage": null,
+      "probability_fields": {
+        "logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        },
+        "prompt_logprobs": {
+          "status": "not_returned",
+          "valid_token_rows": 0,
+          "scored_rows": 0,
+          "rows_with_top_k": 0,
+          "top_k_interpretation": "Presence only; raw entries saved. Not complete candidate or full-vocabulary probabilities."
+        }
+      }
+    }
+  ],
+  "replays": [
+    {
+      "slot": "02_plain_char32",
+      "unit": "characters",
+      "cut": 32,
+      "behavioral_replay": false,
+      "suffix_token_ids_equal": null,
+      "server_prefix_tail_ids_equal": null,
+      "full_distribution_equivalence": false,
+      "returned_full_text_equal": false,
+      "returned_suffix_text_equal": false,
+      "finish_equal": true,
+      "original_finish": "stop",
+      "replay_finish": "stop"
+    },
+    {
+      "slot": "03_plain_char64",
+      "unit": "characters",
+      "cut": 64,
+      "behavioral_replay": false,
+      "suffix_token_ids_equal": null,
+      "server_prefix_tail_ids_equal": null,
+      "full_distribution_equivalence": false,
+      "returned_full_text_equal": false,
+      "returned_suffix_text_equal": false,
+      "finish_equal": true,
+      "original_finish": "stop",
+      "replay_finish": "stop"
+    }
+  ],
+  "candidates": {
+    "A": {
+      "status": "unavailable",
+      "logprob": null,
+      "token_ids": null,
+      "reason": "missing_or_malformed_prompt_token_telemetry"
+    },
+    "B": {
+      "status": "unavailable",
+      "logprob": null,
+      "token_ids": null,
+      "reason": "missing_or_malformed_prompt_token_telemetry"
+    },
+    "C": {
+      "status": "unavailable",
+      "logprob": null,
+      "token_ids": null,
+      "reason": "missing_or_malformed_prompt_token_telemetry"
+    }
+  },
+  "limits": {
+    "documented": "Assistant prefix; output/prompt logprobs with token_id, bytes, token and optional top_logprobs.",
+    "testable": "Returned text/finish equality; observable suffix IDs; returned prompt tail IDs; aligned complete candidate logprobs.",
+    "full_vocabulary_logits": "not_exposed_by_documented_chat_schema",
+    "full_distribution_equivalence": "not_established; top-k and sampled-token logprobs cannot establish it",
+    "local_protocol_gates": "unchanged; raw-logit allclose, full-vocabulary probability allclose and TV remain untestable",
+    "server_identity": "Returned model name is observable; exact weights, tokenizer, template, precision and deployment are not pinned.",
+    "token_identity": "Bytes are not IDs. Server prefix-tail IDs can be compared if returned; arbitrary token-ID input is not documented.",
+    "full_serialized_generation_input": "Not verified: original input token serialization is not captured by the output-only reference.",
+    "probability_semantics": "Schema does not specify whether reported logprobs precede decoding transforms; temperature=0 is not proof.",
+    "calibration": "No selection/confirmation cases, false-missingness screening or edited intervention arms are collected.",
+    "implementation": "Full API backend pending; this report never opens local study gates."
+  },
+  "plain_and_instrumented_text_equal": null,
+  "study_2a": {
+    "status": "candidate_scoring_not_established",
+    "complete_candidate_scores_observed": false,
+    "protocol_compatible": false,
+    "reason": "Full-vocabulary raw-logit/probability replay gates remain unmet; server scoring semantics unverified."
+  },
+  "study_2b": {
+    "status": "behavioral_replay_not_established",
+    "protocol_compatible": false,
+    "false_missingness_calibration": "not_tested",
+    "reason": "Behavioral equality does not establish token/full-distribution equivalence; no interventions or calibration performed."
+  }
+}
