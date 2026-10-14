@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "commands": [
+    [],
+    [
+      "configure",
+      "--model-dir",
+      "/tmp/study2-qwen3-tokenizer",
+      "--config",
+      "/var/folders/s0/78q2dz057qd_6kq87f0jyfhm0000gn/T/study2-v4-final-cli-3nth8lfo/config.json"
+    ],
+    [
+      "prepare",
+      "--config",
+      "/var/folders/s0/78q2dz057qd_6kq87f0jyfhm0000gn/T/study2-v4-final-cli-3nth8lfo/config.json",
+      "--output",
+      "/var/folders/s0/78q2dz057qd_6kq87f0jyfhm0000gn/T/study2-v4-final-cli-3nth8lfo/cli"
+    ],
+    [
+      "validate",
+      "--output",
+      "/var/folders/s0/78q2dz057qd_6kq87f0jyfhm0000gn/T/study2-v4-final-cli-3nth8lfo/cli",
+      "--mock"
+    ],
+    [
+      "collect",
+      "--output",
+      "/var/folders/s0/78q2dz057qd_6kq87f0jyfhm0000gn/T/study2-v4-final-cli-3nth8lfo/cli",
+      "--mock"
+    ],
+    [
+      "selection-report",
+      "--output",
+      "/var/folders/s0/78q2dz057qd_6kq87f0jyfhm0000gn/T/study2-v4-final-cli-3nth8lfo/cli"
+    ],
+    [
+      "timing-report",
+      "--output",
+      "/var/folders/s0/78q2dz057qd_6kq87f0jyfhm0000gn/T/study2-v4-final-cli-3nth8lfo/cli"
+    ]
+  ],
+  "review_help": true,
+  "network_forbidden": true,
+  "model_loader_forbidden": true
+}

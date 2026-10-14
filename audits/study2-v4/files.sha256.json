@@ -1,0 +1,117 @@
+{
+  "QWEN3_STUDY2_V4_RUNBOOK.md": {
+    "sha256": "867c72d9aef1b78ad4828f4a66b7e40d2672b24880e58ec18ee9f29bf6504cf2",
+    "bytes": 15687,
+    "lines": 294
+  },
+  "REASONING_CONTINUATION_V4_PROTOCOL.md": {
+    "sha256": "91baa8d0412228845a7e00b7b26e1684586d170c71c117c2c4ba06aedad2bbbd",
+    "bytes": 6775,
+    "lines": 107
+  },
+  "STUDY2_V4_COMPATIBILITY.md": {
+    "sha256": "49a62e16a90425d1a0dfddb6928840f7ddb3ad4aa94ea444a48a9711c6d50906",
+    "bytes": 7895,
+    "lines": 54
+  },
+  "configs/continuation_v4_qwen3_32b.json": {
+    "sha256": "9f02da6584bd08947d1a182d7c559c0d9809ee451704c5f1cf8b5829cca34093",
+    "bytes": 1141,
+    "lines": 44
+  },
+  "exception_study2_v4/__init__.py": {
+    "sha256": "df7a0095af0a76c2329118469fb41edff4065223a0d1593024f3dc6d179a80d3",
+    "bytes": 329,
+    "lines": 5
+  },
+  "exception_study2_v4/__main__.py": {
+    "sha256": "c72d9fa8186f08224b155221832cbf096657a27d6c83aac2537662a55f73dc5c",
+    "bytes": 2414,
+    "lines": 41
+  },
+  "exception_study2_v4/core.py": {
+    "sha256": "8999b4864f8188b41152c18f76942a0d1777c0413c1dc3be4f78cb746e91cb7a",
+    "bytes": 5853,
+    "lines": 100
+  },
+  "exception_study2_v4/demo.py": {
+    "sha256": "f903738313b2023948a6e953d6c8c6f7fcf4a5b5a86ff8b9187d21d839abd39d",
+    "bytes": 4604,
+    "lines": 63
+  },
+  "exception_study2_v4/journal.py": {
+    "sha256": "c527e544e9e23ca69abca4ecbc385d288e78dfd8261ed7be0cbf773c2c4289b9",
+    "bytes": 4617,
+    "lines": 73
+  },
+  "exception_study2_v4/readouts.py": {
+    "sha256": "772e063e785da8c073cd5fac430575063ea826f5ee27aabad2083d2bf94832de",
+    "bytes": 5861,
+    "lines": 83
+  },
+  "exception_study2_v4/reporting.py": {
+    "sha256": "d10f31544fd7d04494b25261edb4b6e56c50c2c206d4a10c06af422c8b63d1b1",
+    "bytes": 8703,
+    "lines": 107
+  },
+  "exception_study2_v4/review/__init__.py": {
+    "sha256": "5315e44a66c907ecf1f4adf1da6f4b15c157036ebc214807f129c24a0d73b5f0",
+    "bytes": 553,
+    "lines": 11
+  },
+  "exception_study2_v4/review/__main__.py": {
+    "sha256": "80f317f5ae2badf0b3e6d0af8e59414b4dff0489f8a8c7b6d338f82cb33b5972",
+    "bytes": 5078,
+    "lines": 65
+  },
+  "exception_study2_v4/review/artifacts.py": {
+    "sha256": "4540d5f02140000d586d714aef7e3c9f792f5771ee7b87775f1d11f39c54e322",
+    "bytes": 3473,
+    "lines": 49
+  },
+  "exception_study2_v4/review/coverage.py": {
+    "sha256": "6cea9f5f17426c2efcffe41ae8accb6293dfc90dfd29411feb17352d2c5fe517",
+    "bytes": 2990,
+    "lines": 33
+  },
+  "exception_study2_v4/review/integration.py": {
+    "sha256": "00afb368d8316b31e6f6bcf84995f0dc3defd69649f87eff89206ac42bbbddb7",
+    "bytes": 16760,
+    "lines": 215
+  },
+  "exception_study2_v4/review/policy.py": {
+    "sha256": "c9ed566c70e1a82cb6b6311b7dd76c47aa9b1e021679622da71d4eb1cd97234d",
+    "bytes": 624,
+    "lines": 14
+  },
+  "exception_study2_v4/review/reporting.py": {
+    "sha256": "7c473876451f8b1d6cd462b101d582d9511605d7299ef05c4c2a54c449d16e60",
+    "bytes": 8403,
+    "lines": 98
+  },
+  "exception_study2_v4/runner.py": {
+    "sha256": "c5fb65929b3a4008dad7325378f213a0b186ee42c3b3fd79bb170d7c83ffe990",
+    "bytes": 3727,
+    "lines": 57
+  },
+  "exception_study2_v4/source.py": {
+    "sha256": "04a07771a2120043a2b1657769792195a1d6910a7ff623ad47ae9cebaf15312c",
+    "bytes": 3128,
+    "lines": 43
+  },
+  "exception_study2_v4/validation.py": {
+    "sha256": "922f472ad2366548ea0a0cfa89be56fb60e96bf6ea7748cecd4d335968583fb5",
+    "bytes": 8169,
+    "lines": 112
+  },
+  "exception_study2_v4/workloads.py": {
+    "sha256": "ca2a84d1f8da189e33580c1ae5a3d657450ab8c9b22dcd733ddb326522a1480b",
+    "bytes": 6417,
+    "lines": 95
+  },
+  "tests/test_study2_v4.py": {
+    "sha256": "994e1439455ed5e1819b36eaa541fa3680313ec8ac80381efdc4daa4f2002114",
+    "bytes": 28134,
+    "lines": 377
+  }
+}
