@@ -100,6 +100,16 @@ sentence or the answer-option list. The protocol contains exact setup, offline
 preview, live-run, resume and analysis commands. This addition contains no live
 results and leaves the prior experiments unchanged.
 
+The next [history × prediction-rule control](DOWNSTREAM_RULE_PROTOCOL.md)
+crosses those two history conditions with the original introductory prediction
+sentence present or removed. It keeps all 36 cases, the factual question and
+answer options, and the saved assistant responses fixed, for 432 fresh calls.
+The primary diagnostic tests whether removing the sentence repairs standalone
+answers on genuinely MISSING cells; recorded-cell false missingness and the
+history-by-rule interaction are reported separately. The protocol includes
+setup, preview, live-run, resume, analysis, and result-packaging commands.
+This addition is implementation only and contains no live results.
+
 ## Interpretation
 
 The model sometimes answered from the background pattern despite having the
