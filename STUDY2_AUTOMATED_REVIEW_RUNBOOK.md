@@ -10,6 +10,8 @@ Read [the acceptance evidence](docs/study2-review/ACCEPTANCE.md) and [provider c
 
 Use **separate sibling directories** for the source collection, automated review, and each event plan. Preparation verifies the original plan through its original hash gate and binds the collection, trajectory, backend and technical-validation hashes. It requires a complete source collection, including invalid/truncated outputs. It never modifies those sources. Every new frozen artifact binds the new code and policy. Changing code, prompts, schemas, models, settings or policy requires a new review directory/policy; incompatible resume fails. Reports are regenerable views; manifests, decisions, edit attempts and operation history are immutable.
 
+The focused-corrections acceptance addendum is in [FOCUSED_FIXES.md](docs/study2-review/FOCUSED_FIXES.md). This update changes the review code hash: preserve old frozen policies/results as historical artifacts and prepare fresh review/event/semantic-evaluation directories. Do not edit hashes to resume an incompatible frozen review. Legacy source plans/collections remain unchanged and compatible.
+
 All 24 visible originals in selection are reviewed, regardless of answer correctness. Detection uses the text before the first literal case-sensitive `ANSWER:`; without that marker it uses the whole response. This is a formal-marker boundary, not the first answer expressed in prose. The original evidence table contains the true class: the judges are not perfectly outcome-blind. Edits see only the original prefix through the accepted statement cut, never the future suffix.
 
 Two independent initial judges must agree on **the exact whitespace-trimmed character span on the same trajectory** or both vote negative. Otherwise a third independent judge is requested once. Equivalent but differently punctuated/overlapping quotes can remain unresolved. Failures never vote negative. Offset alignment does not establish semantic correctness: omission of a negation can still be an exactly aligned but wrong annotation. That is part of the unmeasured judge-quality evaluation.
@@ -43,17 +45,23 @@ Credentials are read only from `OPENAI_API_KEY` and `ANTHROPIC_API_KEY`. Set the
 
 ## Optional semantic evaluation — live command, NOT executed
 
-These rubric-authored fixtures include negation, hypothetical absence, wrong entity/column, quotations, first-claim selection, later corrections and truncated originals. The separate edit fixture list includes indirect answer hints and false controls. Canned test replies demonstrate workflow correctness only.
+Detection uses 16 rubric-authored fixtures. The separate opt-in `edits` stage uses 10 complete verifier fixtures: two valid bundles and isolated indirect hints, false meaning-control, wrong entity, wrong column, wrong explicit value, grammar, reference, and outside-span defects. Every request has the original evidence, accepted statement/prefix, shared edit span, and all three replacements, using the production verifier rubric/schema. Expected criteria are fixed independently of judge agreement and are never sent to the judge. Canned test replies demonstrate software behavior only.
 
 ```bash
 # Explicitly paid if --live is supplied. 16 detection fixtures × 3 judges = 48 maximum calls.
 python -m exception_review semantic-eval \
   --output /absolute/path/to/new-semantic-eval \
   --policy /absolute/path/to/local-review-policy.json \
-  --max-calls 48 --live
+  --stage detection --max-calls 48 --wall-seconds 600 --live
+
+# Separately authorized, distinct NEW output directory. 10 edit fixtures × 3 judges = 30 calls.
+python -m exception_review semantic-eval \
+  --stage edits --output /absolute/path/to/new-edit-semantic-eval \
+  --policy /absolute/path/to/local-review-policy.json \
+  --max-calls 30 --wall-seconds 600 --live
 ```
 
-Inspect `semantic-evaluation-report.json` and `.md`. This fixture report is separate from natural-trajectory timing. No scientific prompts, thresholds or outcomes are tuned by this command. It does not establish natural-trajectory precision/recall.
+Inspect `semantic-evaluation-report.json` and `.md`. Per-model/per-criterion tables report coverage, false approvals/rejections, uncertainty, malformed/refused/unusable responses, usage and timing. Pending and failed attempts remain visible; completion is not semantic correctness. `--wall-seconds` stops scheduling new requests at the boundary, without promising cancellation of a request already in flight. Request and estimated-spend budgets remain independent. Resume an unchanged stage/policy/output to reuse terminal responses without resending; use a fresh directory for the other stage. Omitting `--live` makes no network calls. This fixture report is separate from natural-trajectory timing. No scientific prompts, thresholds or outcomes are tuned by this command. It does not establish natural-trajectory precision/recall.
 
 ## Six-response judge timing pilot — live command, NOT executed
 
@@ -107,7 +115,7 @@ python -m exception_review freeze-edits --output "$STUDY2_REVIEW" --scope full
 python -m exception_review report --output "$STUDY2_REVIEW" --scope full
 ```
 
-Inspect `manifests/full-statements.json`, `manifests/full-edits.json`, and `reports/full-report.md`. Pre-freeze semantic/boundary/edit/token exclusions are separate from the frozen 2B cohort. Within that cohort, missing/invalid outcomes and failed replays remain unknown. Estimates average paired case differences within each world, then across contrast-complete worlds. Bounds include every frozen case/world. The initially agreed-only sensitivity uses the fixed J1+J2-positive subset. A missing secondary arm does not erase a valid primary comparison. Zero accepted cases produce `NO_ELIGIBLE_CASES` and a null effect, without loading a model.
+Inspect `manifests/full-statements.json`, `manifests/full-edits.json`, and `reports/full-report.md`. Pre-freeze semantic/boundary/edit/token exclusions are separate from the frozen 2B cohort. Within that cohort, missing/invalid outcomes and failed replays remain unknown. Estimates average paired case differences within each world, then across contrast-complete worlds. Bounds include every frozen case/world. The initially agreed-only sensitivity uses the fixed J1+J2-positive subset. A missing secondary arm does not erase a valid primary comparison. The report now includes explicit per-arm planned, attempted, returned, syntactically valid/invalid, truncated, missing, unassessed, and replay-excluded counts from the frozen edit manifest and model journal. Truncation is a subset of assessed invalid answers; returned but unscored outputs remain unassessed (including a separate unassessed-truncation diagnostic). Candidate-likelihood scoring returns are tracked separately. Replay exclusions overlap the syntax/missing counts. Count identities and per-case details are in JSON; partial returns are never counted as wrong. Zero accepted cases produce `NO_ELIGIBLE_CASES` and a null effect, without loading a model.
 
 A later confirmation run additionally requires the policy lock from the selected discovery collection:
 
@@ -145,7 +153,26 @@ python -m exception_review model-timing-report \
 # The same model-timing-report command accepts an event output directory.
 ```
 
-No original future suffix is pasted after an edit. Every natural continuation starts from original input IDs plus that arm's prefix IDs, with **512−original k** new tokens, identical across arms. Answer cues are supplied only to disposable candidate readouts. New model-operation journals live outside the source and outside judge journals. They record terminal failures without resampling. Per-branch reference equality and the unchanged full-distribution replay checks gate readouts/interventions. Source-only fixed 2A remains available through the unchanged `exception_continuation measure` route; its primary stays 64-minus-0 and retains its both-variant rule.
+No original future suffix is pasted after an edit. Every natural continuation starts from original input IDs plus that arm's prefix IDs, with **512−original k** new tokens, identical across arms. Answer cues are supplied only to disposable candidate readouts. New model-operation journals live outside the source and outside judge journals. They record terminal failures without resampling. Per-branch reference equality and the unchanged full-distribution replay checks gate readouts/interventions. Source-only fixed 2A remains available through the unchanged `exception_continuation measure` route; its primary stays 64-minus-0 and retains its both-variant rule. The separately authorized timed route below delegates that exact algorithm and operation journal, adds no originals/checkpoints/cues, and preserves the scientific artifacts. It is not part of the selection sequence:
+
+```bash
+# Execute ONLY when fixed-2A measurements are separately authorized; not executed for this patch.
+python -m exception_review measure-fixed --output "$STUDY2_SOURCE" --live-qwen
+# Read-only scientific accounting / regenerable reports, no inference:
+python -m exception_review qwen-timing-report --output "$STUDY2_SOURCE"
+```
+
+Inspect `timing-sidecar/fixed-2a-report.json` and `.md`; raw timing events/invocations live under `timing-sidecar/fixed-2a/`. It records unchanged-prefix replay, each complete candidate sequence, actual call counts, cache hits/failures, source/backend identity and hardware/software metadata. A report is written on interruption. **STOP on failure or a started/unresolved legacy operation; do not delete the journal or retry it automatically.** Completed cached work has zero remaining calls even if no historical timings exist; those durations stay unmeasured.
+
+After requesting/freezing event directories, include precisely those directories in aggregate workload accounting:
+
+```bash
+python -m exception_review qwen-timing-report --output "$STUDY2_SOURCE" \
+  --event-output /absolute/path/to/new-before-answer-events \
+  --event-output /absolute/path/to/new-statement-events
+```
+
+Supply one flag for one plan or both for both plans. Repeating the same directory is deduplicated; two distinct directories retain separate uninterrupted references even for overlapping cuts. Without these flags, reports explicitly show conditional before-answer-only, statement-only and combined scenarios. For 24 visible selection originals, the combined reference ceiling is 48 (not 24); replay/scoring counts still deduplicate identical cuts within each plan. This does not double the whole experiment's runtime. Frozen eligibility and completed/failed operation journals determine remaining counts when directories are supplied. Mock or absent timings do not yield live runtime estimates.
 
 ## Initial Qwen timing: full validation, eight originals, then stop
 
@@ -171,4 +198,4 @@ python -m exception_review qwen-timing-report --output "$STUDY2_RUN"
 # STOP for calibration/eligibility review. No confirmation/checkpoints/interventions.
 ```
 
-Timing is a separate versioned sidecar; timestamps are not added to scientific results. Generation/scoring timers synchronize the selected CUDA device before and after the existing operation, so they measure completed wall time. Loader wrappers call the original functions once with unchanged arguments and restore their bindings; they do not touch random state or generation. File verification, tokenizer initialization, CPU model load and device transfer are separate components of initialization total (do not double-count). Downloads/setup are UNMEASURED unless actually observed; this implementation never downloads anything. Hardware/software/precision and token counts are recorded. Mock timings are labeled MOCK and excluded from live estimates. Untimed replays, three-candidate scoring, event references and four-arm interventions remain NOT YET MEASURED. These timings do not establish cross-hardware numerical compatibility.
+Timing is a separate versioned sidecar; timestamps are not added to scientific results. Generation/scoring timers synchronize the selected CUDA device before and after the existing operation, so they measure completed wall time. Loader wrappers call the original functions once with unchanged arguments and restore their bindings; they do not touch random state or generation. File verification, tokenizer initialization, CPU model load and device transfer are separate components of initialization total (do not double-count). Downloads/setup are UNMEASURED unless actually observed; this implementation never downloads anything. Hardware/software/precision and token counts are recorded. Mock timings are labeled MOCK and excluded from live estimates. Unobserved replays, three-candidate scoring, event references and four-arm interventions remain NOT YET MEASURED. Timed fixed-2A and explicitly requested event directories supply their own measurements; their elapsed time is separate from collection-only totals. These timings do not establish cross-hardware numerical compatibility.

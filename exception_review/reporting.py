@@ -122,6 +122,12 @@ def write_report(path,value,title):
         lines += ['## Coverage','','| Disjoint case state | Count |','|---|---:|']
         lines += ['| '+k+' | '+str(v)+' |' for k,v in value['terminal_state_partition'].items()]
         lines += ['',f"Accepted intervention cases: {value['accepted_intervention_cases']}; worlds: {value['accepted_worlds']}. Full source cases: {value['full_source_cases']}; declared scope: {value['planned_scope_cases']}.",'','Judge quality: **UNVALIDATED**. Diagnostic reasons can overlap.','']
+    coverage=value.get('intervention_coverage')
+    if coverage:
+        fields=('planned','attempted','returned','valid','invalid','truncated','missing','unassessed','replay_excluded')
+        lines += ['## Intervention arm coverage','','Validity is answer syntax. Replay exclusions overlap these counts; unknown outcomes are not wrong answers.','', '| Arm | '+' | '.join(fields)+' |', '|---|'+'---:|'*len(fields)]
+        for arm,counts in coverage['per_arm'].items(): lines.append('| '+arm+' | '+' | '.join(str(counts[k]) for k in fields)+' |')
+        lines.append('')
     timing=value.get('timing',value)
     observations=timing.get('by_operation_model_measurement',timing.get('observations',{}))
     lines += ['## Completed timing observations','','| Operation / model / measurement | N | Mean seconds | Median | Range |','|---|---:|---:|---:|---|']
@@ -180,28 +186,73 @@ def report(output,scope='full'):
         for row in data['rows']:
             diagnostics['replay_failure']+=not row.get('unchanged_replay_passed',False)
             diagnostics['invalid_qwen_answer']+=sum(o.get('score',{}).get('valid') is False for o in row.get('arms',{}).values())
+    from .coverage import intervention_coverage
+    coverage=intervention_coverage(cases,data['rows'],review.root/'interventions'/scope,review.source.hash,frozen['artifact_hash']) if edit_path.exists() else None
     for d in details: d['state']=states[d['task_id']]
     pending=sum(s.startswith('PENDING') or s=='READY_TO_FREEZE' for s in states.values())
-    result=dict(source_hash=review.source.hash,policy_hash=review.policy['policy_hash'],scope=scope,status='INCOMPLETE' if pending else 'COMPLETE',synthetic=plan['synthetic'],planned_scope_cases=len(states),full_source_cases=len(review.source.rows),unreviewed_outside_scope=len(review.source.rows)-len(states),terminal_state_partition=dict(Counter(states.values())),diagnostic_counts_may_overlap=dict(diagnostics),cases=details,accepted_intervention_cases=len(cases),accepted_worlds=len({c['world'] for c in cases}),cohort_status='FROZEN' if edit_path.exists() else 'NOT_FROZEN',primary_and_secondary=comparisons(cases,data['rows']) if edit_path.exists() else None,initially_agreed_only=comparisons(cases,data['rows'],True) if edit_path.exists() else None,judge_annotation_quality='UNVALIDATED',qwen_replay_behavior='PENDING' if plan['synthetic'] else 'See original technical and per-case validations; automated-review implementation does not establish behavior',interpretation='Conditional frozen accepted cohort only; no all-error prevalence or effect claim',timing=timing(review,plan,states))
+    result=dict(source_hash=review.source.hash,policy_hash=review.policy['policy_hash'],scope=scope,status='INCOMPLETE' if pending else 'COMPLETE',synthetic=plan['synthetic'],planned_scope_cases=len(states),full_source_cases=len(review.source.rows),unreviewed_outside_scope=len(review.source.rows)-len(states),terminal_state_partition=dict(Counter(states.values())),diagnostic_counts_may_overlap=dict(diagnostics),cases=details,intervention_coverage=coverage,accepted_intervention_cases=len(cases),accepted_worlds=len({c['world'] for c in cases}),cohort_status='FROZEN' if edit_path.exists() else 'NOT_FROZEN',primary_and_secondary=comparisons(cases,data['rows']) if edit_path.exists() else None,initially_agreed_only=comparisons(cases,data['rows'],True) if edit_path.exists() else None,judge_annotation_quality='UNVALIDATED',qwen_replay_behavior='PENDING' if plan['synthetic'] else 'See original technical and per-case validations; automated-review implementation does not establish behavior',interpretation='Conditional frozen accepted cohort only; no all-error prevalence or effect claim',timing=timing(review,plan,states))
     return write_report(review.root/'reports'/(scope+'-report'),result,'Study 2 automated review and timing')
 
 
-def qwen_timing_report(output):
-    out=Path(output); plan=read_plan(out); records=[sealed_read(p) for p in (out/'timing-sidecar/events').glob('*.json')]; groups=defaultdict(list)
+def fixed_timing_report(output):
+    from .workloads import fixed_workload
+    out=Path(output); work=fixed_workload(out)
+    records=[sealed_read(p) for p in (out/'timing-sidecar/fixed-2a/events').glob('*.json')]
+    groups=defaultdict(list)
+    for entry in records:
+        if entry.get('status')=='returned': groups[entry['stage']+'/'+entry['measurement']].append(entry['elapsed_seconds'])
+    remaining={}
+    for stage,counts in work['counts'].items():
+        lookup='candidate_sequence_scoring' if stage.startswith('candidate_') else stage
+        values=groups.get(lookup+'/LIVE',[])
+        remaining[stage]=dict(counts,status='PROVISIONAL_SERIAL' if values else 'NOT_YET_MEASURED',
+                             seconds_scenario=[n*mean(values) for n in counts['remaining_count_scenario']] if values else None)
+    invocations=sorted([sealed_read(p) for p in (out/'timing-sidecar/fixed-2a/invocations').glob('*.json')],key=lambda i:i['finished_utc'])
+    return write_report(out/'timing-sidecar/fixed-2a-report',dict(status='COMPLETE' if work.get('completed') else 'INCOMPLETE',
+        workload=work,remaining_work=remaining,observations={k:stats(v) for k,v in groups.items()},
+        actual_timed_calls={stage:dict(attempted=sum(e.get('stage')==stage and e.get('status') in ('returned','failed') for e in records),
+                                      returned=sum(e.get('stage')==stage and e.get('status')=='returned' for e in records),
+                                      failed=sum(e.get('stage')==stage and e.get('status')=='failed' for e in records))
+                            for stage in ('unchanged_replay','candidate_sequence_scoring')},
+        cache_hits=sum(e.get('status')=='cache_hit' for e in records),
+        failures=sum(e.get('status')=='failed' for e in records),
+        input_tokens=sum(e.get('input_tokens') or 0 for e in records if e.get('status')=='returned'),
+        output_tokens=sum(e.get('output_tokens') or 0 for e in records if e.get('status')=='returned'),
+        this_invocation=invocations[-1] if invocations else None,invocations=invocations,
+        hardware_software_precision=[e['identity'] for e in records if e.get('stage')=='backend_identity'],
+        full_study_total=None,note='Delegates the unchanged fixed-2A algorithm. Legacy caches reduce remaining work even without measured durations; unmeasured time is not zero.'),
+        'Fixed-2A replay and candidate-sequence timing')
+
+
+def qwen_timing_report(output,event_outputs=None):
+    from .workloads import aggregate_events,records_at
+    out=Path(output); plan=read_plan(out); records=records_at(out); groups=defaultdict(list)
     for e in records:
         if e.get('status')=='returned': groups[e['stage']+'/'+e['measurement']].append(e['elapsed_seconds'])
-    ops=[sealed_read(p) for p in (out/'operations').glob('*.json')]; original=[o for o in ops if o['id'].startswith('trajectory/') and o['status']=='returned']
-    n=len(plan['tasks']); visible=sum(t['arm']=='visible' for t in plan['tasks']); cue_count=sum(len(plan['config']['readout_cues']) if k in plan['config']['cue_check_checkpoints'] else 1 for k in plan['checkpoints'])
-    scenarios={'original_generation':[n-len(original),n-len(original)],'unchanged_replay':[0,visible*len(plan['checkpoints'])],'candidate_sequence_scoring_fixed_2a':[0,3*visible*cue_count],'event_reference':[0,visible],'event_validation':[0,visible*len(plan['config']['event_checkpoints'])],'candidate_sequence_scoring_events':[0,3*visible*len(plan['config']['event_checkpoints'])],'intervention_reference':[0,visible],'intervention_replay':[0,visible],'edited_continuation':[0,4*visible],'candidate_sequence_scoring_interventions':[0,12*visible]}
+    ops=[sealed_read(p) for p in (out/'operations').glob('*.json')]
+    original=[o for o in ops if o['id'].startswith('trajectory/') and o['status']=='returned']
+    n=len(plan['tasks']); visible=sum(t['arm']=='visible' for t in plan['tasks'])
+    fixed=fixed_timing_report(out); events=aggregate_events(out,event_outputs)
+    event_groups=defaultdict(list)
+    for requested in events['plans']:
+        for e in records_at(requested['output']):
+            if e.get('status')=='returned': event_groups[e['stage']+'/'+e['measurement']].append(e['elapsed_seconds'])
+    scenarios={'original_generation':[n-len(original),n-len(original)],
+               'intervention_reference':[0,visible],'intervention_replay':[0,visible],
+               'edited_continuation':[0,4*visible],'candidate_sequence_scoring_interventions':[0,12*visible]}
     remaining={}
     for stage,counts in scenarios.items():
-        lookup='candidate_sequence_scoring' if stage.startswith('candidate_sequence_scoring') else 'unchanged_replay' if stage=='intervention_replay' else stage
+        lookup='candidate_sequence_scoring' if stage.startswith('candidate_') else 'unchanged_replay' if stage=='intervention_replay' else stage
         samples=groups.get(lookup+'/LIVE',[])
         remaining[stage]=dict(remaining_count_scenario=counts,status='PROVISIONAL_SERIAL' if samples else 'NOT_YET_MEASURED',seconds_scenario=[c*mean(samples) for c in counts] if samples else None)
+    remaining.update(fixed['remaining_work'])
+    for stage,counts in events['counts'].items():
+        lookup='candidate_sequence_scoring' if stage.startswith('candidate_') else stage
+        samples=event_groups.get(lookup+'/LIVE',[])
+        remaining[stage]=dict(counts,status='PROVISIONAL_SERIAL' if samples else 'NOT_YET_MEASURED',seconds_scenario=[c*mean(samples) for c in counts['remaining_count_scenario']] if samples else None)
     invocations=sorted([sealed_read(p) for p in (out/'timing-sidecar/invocations').glob('*.json')],key=lambda x:x['finished_utc'])
-    last=invocations[-1] if invocations else None
-    result=dict(status='COMPLETE' if (out/'collection.json').exists() else 'INCOMPLETE',planned_originals=n,returned_originals=len(original),behavioral_calibration_available=(out/'collection.json').exists(),technical_validation=sealed_read(out/'validation.json')['passed'] if (out/'validation.json').exists() else 'PENDING',timing_version='study2-timing-sidecar-v1',observations={k:stats(v) for k,v in groups.items()},this_invocation=last,cumulative_input_tokens=sum(e.get('input_tokens') or 0 for e in records if e.get('status')=='returned'),cumulative_output_tokens=sum(e.get('output_tokens') or 0 for e in records if e.get('status')=='returned'),cache_hits=sum(e.get('status')=='cache_hit' for e in records),failures=sum(e.get('status')=='failed' for e in records),remaining_work=remaining,setup={s:stats(groups.get(s+'/LIVE',[])) for s in ('download_setup','file_verification','tokenizer_initialization','model_loading_cpu','device_transfer','backend_initialization_total')},hardware_software_precision=[e['identity'] for e in records if e.get('stage')=='backend_identity'],full_study_total=None,note='NOT YET MEASURED stages are not zero. Counts are frozen-plan ceilings conditional on eligibility/replay; original timing does not measure 2A/2B. GPU timers synchronize before and after each operation. Initialization total includes its listed components; do not sum it twice. No download is performed or inferred. STOP and inspect before explicit resume.')
-    return write_report(out/'timing-sidecar/report',result,'Qwen selection timing (no automatic next stage)')
+    result=dict(status='COMPLETE' if (out/'collection.json').exists() else 'INCOMPLETE',planned_originals=n,returned_originals=len(original),behavioral_calibration_available=(out/'collection.json').exists(),technical_validation=sealed_read(out/'validation.json')['passed'] if (out/'validation.json').exists() else 'PENDING',timing_version='study2-timing-sidecar-v1',observations={k:stats(v) for k,v in groups.items()},this_invocation=invocations[-1] if invocations else None,cumulative_input_tokens=sum(e.get('input_tokens') or 0 for e in records if e.get('status')=='returned'),cumulative_output_tokens=sum(e.get('output_tokens') or 0 for e in records if e.get('status')=='returned'),cache_hits=sum(e.get('status')=='cache_hit' for e in records),failures=sum(e.get('status')=='failed' for e in records),remaining_work=remaining,fixed_2a=fixed,event_workloads=events,event_observations={k:stats(v) for k,v in event_groups.items()},setup={s:stats(groups.get(s+'/LIVE',[])) for s in ('download_setup','file_verification','tokenizer_initialization','model_loading_cpu','device_transfer','backend_initialization_total')},hardware_software_precision=[e['identity'] for e in records if e.get('stage')=='backend_identity'],full_study_total=None,note='Collection cumulative timing excludes nested fixed-2A and requested event timing, which are reported separately. Unknown stages remain unmeasured. Two event directories require independent references, not twice the whole runtime. Interventions remain conditional scenarios; use their model-timing-report for frozen cohort counts. No stages are automatically launched.')
+    return write_report(out/'timing-sidecar/report',result,'Qwen timing (no automatic next stage)')
 
 
 def model_timing_report(output):

@@ -1,5 +1,7 @@
 # Automated-review contract: implementation and acceptance evidence
 
+> **Current focused audit:** all five corrections are **fixed**, with 493 offline tests passing (20 new regressions), zero failures/errors/skips. See [FOCUSED_FIXES.md](FOCUSED_FIXES.md) for the current requirement map, exact commands and before/after evidence. The implementation history and 473-test results below describe the earlier patch; its semantic-evaluator and timing/coverage claims are superseded by this focused audit. Historical reports/examples have not been rewritten.
+
 Contract: user-supplied `Study2_Codex_Patch_Prompt_With_Runtime_Pilot.md`, sections 1–10.5. This document reports offline implementation separately from public API contract inspection, real annotation quality, Qwen behavior and hardware timing. **No claim of full scientific validation is made.**
 
 ## Inspected starting state and isolation

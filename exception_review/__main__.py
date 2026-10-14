@@ -10,17 +10,18 @@ def main(argv=None):
     judge=sub.add_parser('judge'); judge.add_argument('--output',required=True); judge.add_argument('--scope',choices=['full','pilot'],default='full'); judge.add_argument('--stage',choices=['initial','adjudicate','freeze-statements','draft','verify','all'],default='all')
     pilot=sub.add_parser('judge-pilot'); pilot.add_argument('--source',required=True); pilot.add_argument('--output',required=True); pilot.add_argument('--policy',required=True)
     ev=sub.add_parser('semantic-eval'); ev.add_argument('--output',required=True); ev.add_argument('--policy',required=True)
+    ev.add_argument('--stage',choices=['detection','edits'],default='detection')
     for p in (judge,pilot,ev): p.add_argument('--live',action='store_true'); p.add_argument('--max-calls',type=int,default=None); p.add_argument('--wall-seconds',type=float)
     token=sub.add_parser('tokenize-edits'); token.add_argument('--output',required=True); token.add_argument('--scope',choices=['full','pilot'],default='full'); token.add_argument('--tokenizer-dir'); token.add_argument('--mock',action='store_true')
     for cmd in ('freeze-edits','report'):
         p=sub.add_parser(cmd); p.add_argument('--output',required=True); p.add_argument('--scope',choices=['full','pilot'],default='full')
     lock=sub.add_parser('freeze-policy-lock'); lock.add_argument('--output',required=True)
     events=sub.add_parser('freeze-events'); events.add_argument('--source',required=True); events.add_argument('--output',required=True); events.add_argument('--statements')
-    for cmd in ('measure-events','intervene','qwen-collect'):
+    for cmd in ('measure-events','intervene','qwen-collect','measure-fixed'):
         p=sub.add_parser(cmd); p.add_argument('--output',required=True); p.add_argument('--live-qwen',action='store_true'); p.add_argument('--mock',action='store_true')
         if cmd=='intervene': p.add_argument('--scope',choices=['full','pilot'],default='full')
         if cmd=='qwen-collect': p.add_argument('--limit-originals',type=int,default=8); p.add_argument('--complete',action='store_true')
-    timing=sub.add_parser('qwen-timing-report'); timing.add_argument('--output',required=True)
+    timing=sub.add_parser('qwen-timing-report'); timing.add_argument('--output',required=True); timing.add_argument('--event-output',action='append',help='Include this frozen event directory; repeat for both plans')
     model_timing=sub.add_parser('model-timing-report'); model_timing.add_argument('--output',required=True)
     args=parser.parse_args(argv)
     if not args.command: parser.print_help(); return
@@ -32,7 +33,7 @@ def main(argv=None):
         result=run(args.output,getattr(args,'stage','all'),getattr(args,'scope','pilot'),args.live,max_calls=(42 if args.command=='judge-pilot' and args.max_calls is None else args.max_calls),wall_seconds=args.wall_seconds)
     elif args.command=='semantic-eval':
         from .semantic_eval import evaluate
-        result=evaluate(args.output,json.loads(Path(args.policy).read_text()),args.live,max_calls=args.max_calls)
+        result=evaluate(args.output,json.loads(Path(args.policy).read_text()),args.live,max_calls=args.max_calls,wall_seconds=args.wall_seconds,stage=args.stage)
     elif args.command=='tokenize-edits':
         from .integration import check_tokens
         result=check_tokens(args.output,args.scope,args.tokenizer_dir,args.mock)
@@ -54,6 +55,9 @@ def main(argv=None):
     elif args.command=='report':
         from .reporting import report
         result=report(args.output,args.scope)
+    elif args.command=='measure-fixed':
+        from .qwen_timing import measure_fixed
+        result=measure_fixed(args.output,args.live_qwen,args.mock)
     elif args.command=='qwen-collect':
         from .qwen_timing import collect_selection
         result=collect_selection(args.output,args.limit_originals,args.complete,args.live_qwen,args.mock)
@@ -62,7 +66,7 @@ def main(argv=None):
         result=model_timing_report(args.output)
     elif args.command=='qwen-timing-report':
         from .reporting import qwen_timing_report
-        result=qwen_timing_report(args.output)
+        result=qwen_timing_report(args.output,event_outputs=args.event_output)
     print(json.dumps(result,indent=2,ensure_ascii=False))
 
 if __name__=='__main__': main()

@@ -39,7 +39,7 @@ def operation_stage(op):
     return 'other'
 
 class TimedBackend:
-    def __init__(self,backend,telemetry): self.backend=backend; self.telemetry=telemetry; self.stage='other'
+    def __init__(self,backend,telemetry): self.backend=backend; self.telemetry=telemetry; self.stage='other'; self.operation_id=None
     def __getattr__(self,name): return getattr(self.backend,name)
     def sync(self):
         torch=getattr(self.backend,'torch',None)
@@ -49,8 +49,8 @@ class TimedBackend:
         try:
             result=fn(); self.sync()
         except BaseException:
-            self.telemetry.record(stage=stage,measurement='MOCK' if self.simulated else 'LIVE',status='failed',started_utc=utc,finished_utc=self.telemetry.clock.utc(),elapsed_seconds=self.telemetry.clock.monotonic()-start,input_tokens=inputs,output_tokens=None); raise
-        self.telemetry.record(stage=stage,measurement='MOCK' if self.simulated else 'LIVE',status='returned',started_utc=utc,finished_utc=self.telemetry.clock.utc(),elapsed_seconds=self.telemetry.clock.monotonic()-start,input_tokens=inputs,output_tokens=len(result['tokens']) if outputs is None else outputs)
+            self.telemetry.record(stage=stage,operation_id=self.operation_id,measurement='MOCK' if self.simulated else 'LIVE',status='failed',started_utc=utc,finished_utc=self.telemetry.clock.utc(),elapsed_seconds=self.telemetry.clock.monotonic()-start,input_tokens=inputs,output_tokens=None); raise
+        self.telemetry.record(stage=stage,operation_id=self.operation_id,measurement='MOCK' if self.simulated else 'LIVE',status='returned',started_utc=utc,finished_utc=self.telemetry.clock.utc(),elapsed_seconds=self.telemetry.clock.monotonic()-start,input_tokens=inputs,output_tokens=len(result['tokens']) if outputs is None else outputs)
         return result
     def generate(self,ids,budget,capture_at=()): return self.measured(self.stage,lambda:self.backend.generate(ids,budget,capture_at=capture_at),len(ids))
     def score(self,context,candidate): return self.measured('candidate_sequence_scoring',lambda:self.backend.score(context,candidate),len(context),len(self.backend.encode(candidate)))

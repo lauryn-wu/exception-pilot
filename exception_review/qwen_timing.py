@@ -11,10 +11,11 @@ from .telemetry import Telemetry,TimedBackend,operation_stage,load_backend
 class TimedSession(runner.Session):
     def __init__(self,out,plan,backend,telemetry):
         self.telemetry=telemetry
-        super().__init__(out,plan,TimedBackend(backend,telemetry))
+        super().__init__(out,plan,backend if isinstance(backend,TimedBackend) else TimedBackend(backend,telemetry))
     def operation(self,op_id,request,fn):
         cached=(self.out/'operations'/(digest(op_id)+'.json')).exists()
         self.backend.stage=operation_stage(op_id)
+        self.backend.operation_id=op_id
         result=super().operation(op_id,request,fn)
         if cached: self.telemetry.record(stage=operation_stage(op_id),status='cache_hit',measurement='CACHE',operation_id=op_id)
         return result
@@ -55,3 +56,34 @@ def collect_selection(output,limit_originals=8,complete=False,live_qwen=False,mo
             telemetry.finish(status)
             from .reporting import qwen_timing_report
             qwen_timing_report(output)
+
+
+def measure_fixed(output,live_qwen=False,mock=False,backend_override=None,clock=None):
+    """Explicit fixed-2A telemetry adapter; execute the unchanged legacy algorithm.
+
+    Scoped Session substitution only adds sidecar timing/cache events. In
+    particular runner.measure's scoring uses the same single timed backend.
+    """
+    if backend_override is None and live_qwen==mock:
+        raise ValueError('Separate explicit --live-qwen or --mock required')
+    from unittest.mock import patch
+    from .artifacts import Source
+    from .reporting import fixed_timing_report
+    source=Source(output)  # Read-only validation before any loader/model work.
+    telemetry=Telemetry(Path(output)/'timing-sidecar/fixed-2a',
+                        dict(source_hash=source.hash,plan_hash=source.plan['plan_hash'],
+                             collection_hash=source.collection['artifact_hash'],workflow='fixed_2a'),clock)
+    status='FAILED'
+    try:
+        backend=backend_override or load_backend(source.plan,telemetry,live_qwen,mock)
+        telemetry.binding['backend_hash']=digest(backend.identity)
+        telemetry.record(stage='backend_identity',measurement='MOCK' if backend.simulated else 'LIVE',status='metadata',identity=backend.identity)
+        timed=TimedBackend(backend,telemetry)
+        def session(out,plan,backend): return TimedSession(out,plan,backend,telemetry)
+        with patch.object(runner,'Session',session):
+            result=runner.measure(output,backend_override=timed)
+        status='COMPLETE'
+        return result
+    finally:
+        telemetry.finish(status)
+        fixed_timing_report(output)

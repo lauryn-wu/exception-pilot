@@ -37,3 +37,61 @@ EDIT_FIXTURES=[
     dict(id='wrong_entity_repair',availability_repair='The recorded class for TY4 is available.',expected='fail',criterion='entity_column'),
     dict(id='valid_availability',availability_repair='The recorded class for ZX9 is available.',expected='pass',criterion='semantic_role'),
 ]
+
+
+def edit_fixtures():
+    """Independent, rubric-authored verifier labels; never sent in judge inputs.
+
+    Each mutation isolates the named dimension; the other arms remain valid.
+    These are constructed examples, not selected natural Qwen trajectories.
+    """
+    from .policy import ARMS, CRITERIA
+    import copy
+    prefix = 'I will use the recorded table.\n' + CLAIM
+    replacements = dict(
+        availability_repair='The recorded class for ZX9 is available.',
+        meaning_control='The recorded class for ZX9 is absent.',
+        value_repair='The recorded class for ZX9 is B.')
+    # Expected criteria come directly from the written rubric, before any calls.
+    defects = [
+        ('valid_bundle', None, None, None, 'All roles, references, grammar and unchanged characters satisfy the rubric.'),
+        ('valid_nested_span', None, None, None, 'A nested shared span preserves the surrounding subject and punctuation.'),
+        ('indirect_answer_hint', 'availability_repair', 'no_extra_hints_or_instructions',
+         'The recorded class for ZX9 is available, the second letter of the alphabet.', 'Ordinal wording encodes the answer B.'),
+        ('false_meaning_control', 'meaning_control', 'semantic_role',
+         'The recorded class for ZX9 is difficult to infer.', 'Difficulty is not the required false assertion of absence.'),
+        ('wrong_entity', 'availability_repair', 'entity_column',
+         'The recorded class for TY4 is available.', 'The queried entity is ZX9, not TY4.'),
+        ('wrong_column', 'availability_repair', 'entity_column',
+         'The description for ZX9 is available.', 'Description is not the queried verified-class column.'),
+        ('wrong_explicit_value', 'value_repair', 'semantic_role',
+         'The recorded class for ZX9 is A.', 'The target row records B, so explicit A is false.'),
+        ('grammar_corruption', 'availability_repair', 'grammar',
+         'The recorded class for ZX9 are available.', 'The singular subject requires is, not are.'),
+        ('reference_corruption', 'availability_repair', 'grammar',
+         'The recorded class for ZX9 is available, as the aforementioned diagram shows.', 'No diagram was introduced; the added reference has no antecedent.'),
+        ('outside_span_corruption', 'availability_repair', 'outside_edit_preserved',
+         None, 'The proposed prefix deletes text outside the fixed edit span.'),
+    ]
+    result = []
+    for name, arm, criterion, replacement, basis in defects:
+        quote = CLAIM; reps = copy.deepcopy(replacements)
+        if name == 'valid_nested_span':
+            quote = 'no recorded class'
+            reps = dict(availability_repair='a recorded class available',
+                        meaning_control='no verified class on record', value_repair='recorded class B')
+        if replacement is not None: reps[arm] = replacement
+        start = prefix.index(quote); span = [start, start + len(quote)]
+        texts = dict(unchanged=prefix, **{a:prefix[:span[0]]+r+prefix[span[1]:] for a,r in reps.items()})
+        if name == 'outside_span_corruption': texts[arm] = reps[arm]
+        expected = {a:{c:'pass' for c in CRITERIA} for a in ARMS}
+        if criterion: expected[arm][criterion] = 'fail'
+        view = dict(original_prompt=PROMPT, queried_vehicle_id='ZX9', target_row=ROW,
+                    target_value='B', accepted_statement=CLAIM, original_prefix=prefix,
+                    proposed_bundle=dict(edit_quote=quote, replacements=reps, reason='Constructed rubric example'),
+                    edit_span=span, proposed_prefixes=texts)
+        result.append(dict(id='edit-'+name, input=view, expected_criteria=expected,
+                           expected_source_assertion_concern=False, expected_approval=criterion is None,
+                           label_basis=basis, label_origin='Rubric authored before judge calls; not judge agreement',
+                           trajectory_hash=digest(dict(prefix=prefix,fixture=name))))
+    return result
