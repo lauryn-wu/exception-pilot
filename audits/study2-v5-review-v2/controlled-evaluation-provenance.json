@@ -1,0 +1,9 @@
+{
+  "suite_version": "controlled-v2.0-split1",
+  "suite_hash": "48d1a7b6b4b76375f69f229cc8c0977d930d0ff493b843f29e60d4e739c07fa8",
+  "first_evaluation_retained": true,
+  "heldout_tuning": false,
+  "post_evaluation_change": "Generic negative-verdict consistency guard and bounded cross-phase J3 routing from code audit. No extractor, label, template, split or threshold changes.",
+  "re_evaluation_identical": true,
+  "not_an_independent_new_validation": true
+}

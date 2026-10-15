@@ -1,0 +1,454 @@
+{
+  "version": "controlled-v2.0-split1",
+  "seed": 2026101502,
+  "cases": 192,
+  "template_families": 64,
+  "suite_hash": "48d1a7b6b4b76375f69f229cc8c0977d930d0ff493b843f29e60d4e739c07fa8",
+  "real_semantic_validation": "NOT TESTED: no paid calls",
+  "splits": {
+    "development": {
+      "cases": 96,
+      "structural_extraction": {
+        "A": {
+          "hits": 67,
+          "total": 67,
+          "recall": 1.0
+        },
+        "M": {
+          "hits": 26,
+          "total": 26,
+          "recall": 1.0
+        },
+        "C": {
+          "hits": 11,
+          "total": 11,
+          "recall": 1.0
+        },
+        "P": {
+          "hits": 26,
+          "total": 26,
+          "recall": 1.0
+        },
+        "O": {
+          "hits": 12,
+          "total": 12,
+          "recall": 1.0
+        },
+        "X": {
+          "hits": 12,
+          "total": 12,
+          "recall": 1.0
+        }
+      },
+      "oracle_wired_pipeline": {
+        "A": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion": {
+            "tp": 48,
+            "fp": 0,
+            "fn": 0,
+            "tn": 47
+          },
+          "abstentions": 0,
+          "abstention_rate": 0.0,
+          "invalid_sources": 1,
+          "target_met": true
+        },
+        "M": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion": {
+            "tp": 18,
+            "fp": 0,
+            "fn": 0,
+            "tn": 77
+          },
+          "abstentions": 0,
+          "abstention_rate": 0.0,
+          "invalid_sources": 1,
+          "target_met": true
+        },
+        "C": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion": {
+            "tp": 9,
+            "fp": 0,
+            "fn": 0,
+            "tn": 86
+          },
+          "abstentions": 0,
+          "abstention_rate": 0.0,
+          "invalid_sources": 1,
+          "target_met": true
+        },
+        "P": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion": {
+            "tp": 24,
+            "fp": 0,
+            "fn": 0,
+            "tn": 71
+          },
+          "abstentions": 0,
+          "abstention_rate": 0.0,
+          "invalid_sources": 1,
+          "target_met": true
+        },
+        "O": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion": {
+            "tp": 12,
+            "fp": 0,
+            "fn": 0,
+            "tn": 83
+          },
+          "abstentions": 0,
+          "abstention_rate": 0.0,
+          "invalid_sources": 1,
+          "target_met": true
+        },
+        "X": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion": {
+            "tp": 9,
+            "fp": 0,
+            "fn": 0,
+            "tn": 86
+          },
+          "abstentions": 0,
+          "abstention_rate": 0.0,
+          "invalid_sources": 1,
+          "target_met": true
+        }
+      },
+      "production_without_judges": {
+        "A": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "confusion": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 48,
+            "tn": 0
+          },
+          "abstentions": 95,
+          "abstention_rate": 1.0,
+          "invalid_sources": 1,
+          "target_met": false
+        },
+        "M": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "confusion": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 18,
+            "tn": 0
+          },
+          "abstentions": 95,
+          "abstention_rate": 1.0,
+          "invalid_sources": 1,
+          "target_met": false
+        },
+        "C": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "confusion": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 9,
+            "tn": 0
+          },
+          "abstentions": 95,
+          "abstention_rate": 1.0,
+          "invalid_sources": 1,
+          "target_met": false
+        },
+        "P": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "confusion": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 24,
+            "tn": 0
+          },
+          "abstentions": 95,
+          "abstention_rate": 1.0,
+          "invalid_sources": 1,
+          "target_met": false
+        },
+        "O": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "confusion": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 12,
+            "tn": 0
+          },
+          "abstentions": 95,
+          "abstention_rate": 1.0,
+          "invalid_sources": 1,
+          "target_met": false
+        },
+        "X": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "confusion": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 9,
+            "tn": 0
+          },
+          "abstentions": 95,
+          "abstention_rate": 1.0,
+          "invalid_sources": 1,
+          "target_met": false
+        }
+      },
+      "accepted_spans": 120,
+      "exact_alignment": 1.0,
+      "semantic_precision_recall": "NOT TESTED; oracle metrics test plumbing conditional on supplied correct semantic judgments."
+    },
+    "heldout": {
+      "cases": 96,
+      "structural_extraction": {
+        "A": {
+          "hits": 67,
+          "total": 67,
+          "recall": 1.0
+        },
+        "M": {
+          "hits": 26,
+          "total": 26,
+          "recall": 1.0
+        },
+        "C": {
+          "hits": 11,
+          "total": 14,
+          "recall": 0.7857142857142857
+        },
+        "P": {
+          "hits": 26,
+          "total": 26,
+          "recall": 1.0
+        },
+        "O": {
+          "hits": 9,
+          "total": 12,
+          "recall": 0.75
+        },
+        "X": {
+          "hits": 12,
+          "total": 12,
+          "recall": 1.0
+        }
+      },
+      "oracle_wired_pipeline": {
+        "A": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion": {
+            "tp": 48,
+            "fp": 0,
+            "fn": 0,
+            "tn": 47
+          },
+          "abstentions": 0,
+          "abstention_rate": 0.0,
+          "invalid_sources": 1,
+          "target_met": true
+        },
+        "M": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion": {
+            "tp": 18,
+            "fp": 0,
+            "fn": 0,
+            "tn": 77
+          },
+          "abstentions": 0,
+          "abstention_rate": 0.0,
+          "invalid_sources": 1,
+          "target_met": true
+        },
+        "C": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion": {
+            "tp": 12,
+            "fp": 0,
+            "fn": 0,
+            "tn": 83
+          },
+          "abstentions": 0,
+          "abstention_rate": 0.0,
+          "invalid_sources": 1,
+          "target_met": true
+        },
+        "P": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion": {
+            "tp": 24,
+            "fp": 0,
+            "fn": 0,
+            "tn": 71
+          },
+          "abstentions": 0,
+          "abstention_rate": 0.0,
+          "invalid_sources": 1,
+          "target_met": true
+        },
+        "O": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion": {
+            "tp": 12,
+            "fp": 0,
+            "fn": 0,
+            "tn": 83
+          },
+          "abstentions": 0,
+          "abstention_rate": 0.0,
+          "invalid_sources": 1,
+          "target_met": true
+        },
+        "X": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "confusion": {
+            "tp": 9,
+            "fp": 0,
+            "fn": 0,
+            "tn": 86
+          },
+          "abstentions": 0,
+          "abstention_rate": 0.0,
+          "invalid_sources": 1,
+          "target_met": true
+        }
+      },
+      "production_without_judges": {
+        "A": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "confusion": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 48,
+            "tn": 0
+          },
+          "abstentions": 95,
+          "abstention_rate": 1.0,
+          "invalid_sources": 1,
+          "target_met": false
+        },
+        "M": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "confusion": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 18,
+            "tn": 0
+          },
+          "abstentions": 95,
+          "abstention_rate": 1.0,
+          "invalid_sources": 1,
+          "target_met": false
+        },
+        "C": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "confusion": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 12,
+            "tn": 0
+          },
+          "abstentions": 95,
+          "abstention_rate": 1.0,
+          "invalid_sources": 1,
+          "target_met": false
+        },
+        "P": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "confusion": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 24,
+            "tn": 0
+          },
+          "abstentions": 95,
+          "abstention_rate": 1.0,
+          "invalid_sources": 1,
+          "target_met": false
+        },
+        "O": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "confusion": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 12,
+            "tn": 0
+          },
+          "abstentions": 95,
+          "abstention_rate": 1.0,
+          "invalid_sources": 1,
+          "target_met": false
+        },
+        "X": {
+          "precision": null,
+          "recall": 0.0,
+          "f1": 0.0,
+          "confusion": {
+            "tp": 0,
+            "fp": 0,
+            "fn": 9,
+            "tn": 0
+          },
+          "abstentions": 95,
+          "abstention_rate": 1.0,
+          "invalid_sources": 1,
+          "target_met": false
+        }
+      },
+      "accepted_spans": 123,
+      "exact_alignment": 1.0,
+      "semantic_precision_recall": "NOT TESTED; oracle metrics test plumbing conditional on supplied correct semantic judgments."
+    }
+  }
+}
