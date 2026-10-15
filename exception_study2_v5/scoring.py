@@ -1,5 +1,6 @@
 """Tolerant terminal answers; format, truncation and semantic outcomes stay separate."""
 import re
+from exception_pilot.core import digest
 from exception_continuation.backend import assert_plain_format
 
 # Balanced Markdown only. A marker in prose is never a final answer.
@@ -25,6 +26,7 @@ def final_score(text, stopped, expected, arm='visible'):
                 outcome='unknown' if answer is None else 'correct' if answer == expected else 'wrong')
 
 def validate_raw(raw, backend, budget):
+    if not isinstance(raw,dict):raise ValueError('Invalid generated response shape')
     tokens = raw.get('tokens')
     if (not isinstance(tokens, list) or not tokens or len(tokens)>budget
             or any(type(t) is not int or t<0 for t in tokens)):
@@ -40,7 +42,7 @@ def validate_raw(raw, backend, budget):
 def boundaries(backend, raw):
     text = raw['text']; marker = marker_start(text)
     limit = len(text) if marker is None else marker
-    result = [dict(k=0, char_end=0, prefix='', roundtrip_exact=True)]
+    result = [dict(k=0, char_end=0, text_hash=digest(''), token_hash=digest([]), roundtrip_exact=True)]
     for k in range(1, len(raw['tokens'])+1):
         ids = raw['tokens'][:k]
         if ids[-1] in backend.special_ids:
@@ -49,7 +51,7 @@ def boundaries(backend, raw):
         if len(prefix)>limit:
             break
         if '\ufffd' not in prefix and text.startswith(prefix) and backend.encode(prefix)==ids:
-            result.append(dict(k=k, char_end=len(prefix), prefix=prefix, roundtrip_exact=True))
+            result.append(dict(k=k, char_end=len(prefix), text_hash=digest(prefix), token_hash=digest(ids), roundtrip_exact=True))
     return result
 
 def boundary(row, position, side):
@@ -69,8 +71,9 @@ def checkpoints(row, annotations=None):
     for k in CHECKPOINTS:
         cut = found.get(k)
         ok = cut is not None and k < len(row['raw']['tokens']) and (marker is None or cut['char_end'] < marker)
-        out.append(dict(name=f'fixed/{k}', eligible=ok, k=k if ok else None,
-                        reason=None if ok else 'short_or_at_answer_or_inexact_boundary'))
+        out.append(dict(name=f'fixed/{k}', eligible=ok,
+                        reason=None if ok else 'short_or_at_answer_or_inexact_boundary',
+                        **(cut if ok else dict(k=None))))
     before = dict(eligible=False, k=None, reason='no_answer_marker') if marker is None else boundary(row, marker, 'before')
     out.append(dict(name='pre_answer', **before))
     if annotations:
@@ -82,3 +85,9 @@ def checkpoints(row, annotations=None):
                        if decision['status']=='present' else dict(eligible=False,k=None,reason='annotation_'+decision['status']))
                 out.append(dict(name=f'{event}/{side}', **cut))
     return out
+
+
+def raw_metadata(raw, input_ids):
+    ids=raw.get('tokens') if isinstance(raw,dict) else None
+    return dict(output_hash=digest(ids if isinstance(raw,dict) else raw) if raw is not None else None,
+                lengths=dict(input=len(input_ids),output=len(ids) if isinstance(ids,list) else None))

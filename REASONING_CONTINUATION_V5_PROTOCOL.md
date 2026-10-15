@@ -1,6 +1,6 @@
 # Study 2 v5: evidence erasure, evidence overriding and conditional text interventions
 
-Protocol `study2-evidence-interventions-v5`. All v3/v4 and Qwen length/expanded-screen
+Protocol `study2-evidence-interventions-v5`, design contract `staged-60-v1`. All v3/v4 and Qwen length/expanded-screen
 observations are development evidence, never v5 confirmation. Code, configurations,
 plans and all execution stages are separately versioned. No retrospective prompt or
 threshold tuning after v5 outcomes or interventions. Mock fixtures are not evidence.
@@ -20,15 +20,22 @@ Semantic before/after changes are descriptive, not sentence-level causal effects
 
 ## Frozen originals
 
-12 selection worlds (96 originals) and 48 independent confirmation worlds (384).
+**One prespecified 60-world experiment, 480 originals.** The first four worlds in
+the frozen order form an operational pilot (32 originals, 16 visible); the remaining
+56 worlds add 448 originals only after explicit human approval. They are not
+selection and confirmation samples. Confirm the 60-world sample size before the
+first live execution; a different sample size requires a new reviewed protocol.
 Each world: two target values × original/explicit-lookup question × direct/visible
 instruction. Preserve the original introduction, question and instructions verbatim.
 Lookup changes only the question to “According to the table, what is the value in
 the Verified class column for license plate [TARGET]?” Same tables and targets.
 10 vehicles; target last; four same-climate peers unanimously suggest the third
 class, conflicting with both target variants. Six class-role permutations × two
-climates, once in selection/four times in confirmation. Fresh seeds 20261015051/52,
-V5S/V5C plate namespaces, deterministic shuffled worlds and eight cells per world.
+climates, five replicates of each role/climate combination. Fresh seed 20261015053,
+V5T plate namespace, deterministic shuffled worlds and eight cells per world.
+Before generation, freeze all 60 worlds, tables, target rows, eight matched prompts,
+configuration, source fingerprints, fixed/event analysis policy, collection order
+and M/O arm schedules for every task. Event eligibility never changes those schedules.
 No old worlds or trajectories are imported.
 
 Pinned Qwen3-32B revision `9216db5781bf21249d130ec9da846c4624c16137` for weights
@@ -46,14 +53,11 @@ whole-line, label or marker equivalents for A/B/C; it never infers from prose.
 Truncated/no-terminal-answer correctness is unknown. Strict terminal syntax is
 reported separately; strict direct compliance also requires a one-line response.
 
-Original-framing selection gate: at least 20/24 tolerant direct correct; at least
-3 matched direct-correct/visible-wrong answers equal to the pattern class across
-at least 2 worlds, after the complete 96-original collection. Lookup observations
-cannot satisfy this gate. This is a predeclared analogue, not a guaranteed outcome.
-It does not establish 2B eligibility. Family M needs at least 2 reviewed worlds;
-Family O needs at least 2 clean-override worlds for selection-stage authorization.
-These are minimal coverage rules, not power guarantees. Unsupported families stay
-disabled in confirmation; explicit rationale and protocol lock are required.
+No behavioral-success gate is applied: neither accuracy gaps, reasoning-error counts,
+nor M/O event prevalence determine whether the fixed remaining sample is retained.
+Zero events is a valid result; never replace unfavorable or uninformative worlds.
+The legacy loader's calibration fields are inert and never consulted by v5.
+Two-world reporting flags describe limited coverage, not authorization thresholds.
 
 ## Technical validation and execution
 
@@ -65,12 +69,40 @@ argmax agreement, probability allclose (atol 1e-5, rtol .001), TV ≤ .0001. Raw
 logits and original-versus-fresh suffix differences are diagnostic only. No old
 incremental-KV/fresh exact gate. Frozen new backend identity must match every stage.
 
-Separate commands: prepare, offline preflight, validate, first-four-world pilot
-(32 originals), explicit full selection, summary, review, 2A, family-specific
-2B, and explicitly locked confirmation. No command advances to another stage.
-Request/start/return/fail files are immutable; ambiguous/failed operations never
-resend. Genuine same-input failures block collection. Model/source changes require
-a fresh separately reviewed run, never modified frozen plans.
+Separate commands: prepare all 60; confirm sample size; offline preflight; technical
+validation; collect first four worlds; STOP; inspect/scoring; fixed 2A; independent
+annotation; event 2A; validate/freeze edits; separate M and O pilot execution; STOP
+for human review; approve remaining; explicitly collect the other 56. Every command
+stops after its own stage. Downstream `pilot` snapshots bind exactly the first 32
+attempted originals and remain valid after the remaining batch. `remaining` means
+only its 448 originals; `all` is a separate complete 480-response analysis snapshot.
+No downstream stage starts from collection or approval.
+
+The pilot acceptance checklist covers matched rendering, verified/pattern assignments,
+target lookup, model/template/settings, completion/truncation, both parsers, cut/cue
+behavior, annotation definitions/quality, source spans/boundaries, all four edits,
+no-label-leak semantics, fresh-prefix/unchanged diagnostics, and immutable resume.
+It binds fixed/event 2A, reviewed annotations, M and O results and source hashes.
+Every check requires a named review and evidence. Zero-event edit checks may be
+explicitly not applicable; failed/unreviewed checks cannot authorize the remainder.
+Failures/ambiguous operations consume their planned attempt and are never resent.
+
+Technical repairs address implementation without changing prompts, eligibility,
+edits, sample schedule or analysis; document the defect and regression evidence.
+Scientific changes after pilot inspection require a new version/run, and affected
+pilot observations become exploratory. The current strict code hash intentionally
+refuses in-place migration, even for a technical repair: retain the old revision
+and artifacts and document a compatible migration separately before resuming.
+Under unchanged scientific protocol and completion of the fixed 60-world schedule,
+pilot data may enter the full analysis. If outcomes inform stopping, inclusion,
+world replacement or methods, naive fixed-sample inference is not justified: report
+adaptation, label affected analyses exploratory, and obtain fresh confirmatory data
+or prespecify a valid sequential procedure. If pilot results informed probing method
+design, those four worlds cannot be its held-out test set.
+
+Historical v5 plans from commit `40d548d12ee306fe670128a8516001f4e848e053` are
+unchanged and readable with that revision. This design refuses them with an explicit
+message; it never upgrades/relabels a frozen plan or overwrites its outputs.
 
 ## 2A: disposable preference readouts
 
@@ -185,3 +217,44 @@ confirmation 48 worlds gives 768/1572864. Requires new plan and authorization;
 no collection command implements or starts it. Row-position, new domains and other
 models likewise remain future validation. Strong pattern-specific causal claims
 await these controls.
+
+## Portable data and later probing
+
+Retain the whole research directory with its relative layout on the persistent volume.
+Original rows link task/world/variant/framing/condition, source table and rendered
+prompt, target plate/row position/row values, verified and misleading class, prompt
+hash, exact prompt and all output IDs (including EOS), text, lengths, finish/truncation,
+strict/tolerant scores, generation operation and source/backend/technical hashes.
+The plan and execution manifest retain seeds/schedules, pinned model/tokenizer,
+precision, actual hardware/device/library identity and Git revision. Nothing relies
+on the Pod's previous hostname or ID. Local model paths remain recorded provenance;
+offline reconstruction does not open them or require matching hardware.
+
+Boundaries retain token count k, Unicode code-point offset, exact-roundtrip status,
+text and token fingerprints, and explicit unavailability reasons, without duplicating
+every prefix string. 2A retains candidate sequence/token likelihoods, normalized
+preferences, preferred class, log odds and context identity. Annotations retain all
+independent decisions, disagreements/adjudication, clean/mixed O and source row.
+Edits retain all four texts/IDs, exact source span, three replacements, original k,
+remaining budgets, token deltas, order, full responses and continuation IDs, outcomes,
+and fresh-prefill/unchanged diagnostics. Every descendant carries its parent world.
+
+`prepare-checkpoints` freezes fixed/event cut metadata from original rows.
+`reconstruct` verifies seals, source identity, original operation/token fingerprints,
+checkpoint offsets and annotations, then returns precisely `prompt_ids + output_ids[:k]`.
+No cue, edit, future original tokens, tokenization, weights, CUDA or generation is
+used. Unavailable cuts return no context and an explicit reason. These are **fresh-prefix
+replay contexts**, not original incremental hidden states. Preserve the original
+same-input and cross-path diagnostic metadata; never reinstate the v3 cross-path gate.
+Any future live replay must record its actual backend/hardware. Exact original hidden
+states would require a separately versioned collection experiment; no activations
+or dense per-step vocabulary arrays are collected in scientific stages here.
+
+`split-worlds` assigns the frozen world IDs deterministically using seed 20261015054,
+by default 48 train/12 evaluation worlds, without reading response outcomes. Every
+variant/framing/condition and all derived checkpoints/interventions inherit that
+world assignment. Explicitly record whether the pilot informed method design; if so,
+it is confined to training. Freeze the split before probe selection or evaluation.
+Outcome-based rebalancing is not implemented and would need exploratory labeling.
+No probe architecture, layer, target label, hypothesis or training is selected.
+See `STUDY2_V5_PROBING_SCHEMA.md` for the offline contract and storage budget.

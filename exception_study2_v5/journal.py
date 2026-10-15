@@ -7,6 +7,24 @@ from exception_review.artifacts import freeze
 from exception_review.telemetry import TimedBackend
 from . import PROTOCOL
 
+class V5TimedBackend(TimedBackend):
+    """Record malformed returned payloads without losing them to length telemetry."""
+    def measured(self,stage,fn,inputs,outputs=None):
+        self.sync();start=self.telemetry.clock.monotonic();utc=self.telemetry.clock.utc()
+        metadata=dict(stage=stage,operation_id=self.operation_id,measurement='MOCK' if self.simulated else 'LIVE',
+                      started_utc=utc,input_tokens=inputs)
+        try:
+            result=fn();self.sync()
+        except BaseException:
+            self.telemetry.record(**metadata,status='failed',finished_utc=self.telemetry.clock.utc(),
+                                  elapsed_seconds=self.telemetry.clock.monotonic()-start,output_tokens=None)
+            raise
+        tokens=result.get('tokens') if isinstance(result,dict) else None
+        count=outputs if outputs is not None else len(tokens) if isinstance(tokens,list) else None
+        self.telemetry.record(**metadata,status='returned',finished_utc=self.telemetry.clock.utc(),
+                              elapsed_seconds=self.telemetry.clock.monotonic()-start,output_tokens=count)
+        return result
+
 class OperationUnavailable(RuntimeError): pass
 
 def operations(output):
@@ -39,7 +57,7 @@ class Session:
         revision = subprocess.check_output(['git','rev-parse','HEAD'], cwd=Path(__file__).resolve().parents[1], text=True).strip()
         self.execution = freeze(self.out/'execution-v5.json', dict(**self.identity, mode=mode, backend=backend.identity, code_revision=revision))
         self.telemetry = telemetry
-        self.backend = TimedBackend(backend, telemetry) if telemetry else backend
+        self.backend = V5TimedBackend(backend, telemetry) if telemetry else backend
         for op in operations(output).values():
             if any(op.get(k) != v for k,v in self.identity.items()):
                 raise ValueError('Journal source/backend/manifest changed')

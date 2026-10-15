@@ -1,0 +1,19 @@
+{
+  "tests": 584,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "runtime_seconds": 296.29,
+  "network": "blocked",
+  "qwen_inference": false,
+  "model_downloads": false,
+  "paid_api_calls": false,
+  "activations_collected": false,
+  "v5_tests": 55,
+  "base": "40d548d12ee306fe670128a8516001f4e848e053",
+  "files_checked": 353,
+  "all_preserved": true,
+  "v4_scientific_hash": "913f64efa3f12a1a787575c14c7670e072e250d7e8a3690a9957cfa70bb88e78",
+  "v5_scientific_hash": "e545f0a756934f0d5c953db3a1c102146a1616dc2706913cb3537e8a5a6a2c2b"
+}

@@ -18,22 +18,20 @@ from .review.rubric import EDIT_CHECKS, EDIT_RUBRIC
 
 REPLACEMENTS=set(ARMS)-{'unchanged'}
 
-def prepare_edits(source_path, annotations, output, family):
+def prepare_edits(source_path, annotations, output, family, scope='pilot'):
     if family not in ('M','O'):raise ValueError('Choose M or O independently')
-    source=Source(source_path);ann=read_manifest(annotations,source);cases={}
-    if source.plan['phase']=='confirmation' and not source.plan['selection_lock']['decisions']['families'][family]:
-        raise ValueError('This family was not authorized in the selection lock')
+    source=Source(source_path,scope=scope);ann=read_manifest(annotations,source);cases={}
     for tid,case in ann['cases'].items():
         event=case['events']['erasure' if family=='M' else 'override']
         if event['status']!='present':continue
         row=source.rows[tid];cut=boundary(row,event['span'][1],'after')
-        cases[tid]=dict(event=event,cut=cut,override_stratum=case['override_stratum'],
+        cases[tid]=dict(world=row['task']['world'],source_row_hash=row['artifact_hash'],event=event,cut=cut,override_stratum=case['override_stratum'],
             initial_agreement=case['initial_agreement'],draft=dict(author='',status='unreviewed',reason='',
                 replacements={arm:'' for arm in ARMS if arm!='unchanged'}))
     out=Path(output)
     if out.exists() and any(out.iterdir()) and not (out/'edit-preparation-v5.json').exists():raise ValueError('Fresh edit directory required')
     with run_lock(out):
-        plan=freeze(out/'edit-preparation-v5.json',dict(protocol=PROTOCOL,family=family,source=source.binding,
+        plan=freeze(out/'edit-preparation-v5.json',dict(protocol=PROTOCOL,family=family,source=source.binding_at(out),
                     code_hash=source_hash(),annotations_hash=ann['artifact_hash'],cases=cases,rubric=EDIT_RUBRIC))
         templates={
             'draft-template.json':dict(preparation_hash=plan['artifact_hash'],cases={tid:c['draft'] for tid,c in cases.items()}),
@@ -67,7 +65,7 @@ def build_texts(row,event,cut,draft):
     return texts,'table_cell' if in_table else 'prose'
 
 def freeze_edits(output,drafts,verification,tokenizer_dir=None,backend_override=None):
-    out=Path(output);prep=sealed_read(out/'edit-preparation-v5.json');source=bound_source(prep['source'])
+    out=Path(output);prep=sealed_read(out/'edit-preparation-v5.json');source=bound_source(prep['source'],out)
     if prep['code_hash']!=source_hash():raise ValueError('Edit code changed')
     draft=json.loads(Path(drafts).read_text());verified=json.loads(Path(verification).read_text())
     if (draft['preparation_hash']!=prep['artifact_hash'] or verified['preparation_hash']!=prep['artifact_hash']
@@ -97,7 +95,7 @@ def freeze_edits(output,drafts,verification,tokenizer_dir=None,backend_override=
             if ids['unchanged']!=row['raw']['tokens'][:k]:raise ValueError('Unchanged original token identity failed')
         except (ValueError,KeyError,TypeError) as exc:
             excluded.append(dict(task_id=tid,reason=str(exc),status='token_or_structure_failure'));continue
-        order=list(ARMS);rng_for(PROTOCOL,'arm-order',prep['family'],tid).shuffle(order)
+        order=source.plan['arm_orders'][tid][prep['family']]
         cases.append(dict(task_id=tid,world=row['task']['world'],framing=row['task']['framing'],family=prep['family'],
             source_row_hash=row['artifact_hash'],event=c['event'],original_k=k,budget=BUDGET-k,form=form,
             texts=texts,prefix_ids=ids,order=order,token_length_deltas={a:len(t)-k for a,t in ids.items()},
@@ -105,16 +103,22 @@ def freeze_edits(output,drafts,verification,tokenizer_dir=None,backend_override=
             initial_outcome=row['score']['outcome'],draft=d,verification=v))
     with run_lock(out):
         freeze(out/'edit-drafts-v5.json',draft);freeze(out/'edit-verification-v5.json',verified)
-        return freeze(out/'intervention-manifest-v5.json',dict(protocol=PROTOCOL,source=source.binding,code_hash=source_hash(),
+        return freeze(out/'intervention-manifest-v5.json',dict(protocol=PROTOCOL,source=source.binding_at(out),code_hash=source_hash(),
             family=prep['family'],preparation_hash=prep['artifact_hash'],cases=cases,excluded=excluded,
             primary='value_blind-minus-meaning_control',budget_convention='2048-original_k',
             frozen_worlds=sorted({c['world'] for c in cases})))
 
 def intervene(output, **mode):
     with run_lock(output) as out:
-        manifest=sealed_read(out/'intervention-manifest-v5.json');source=bound_source(manifest['source'])
+        manifest=sealed_read(out/'intervention-manifest-v5.json');source=bound_source(manifest['source'],out)
         if manifest['code_hash']!=source_hash():raise ValueError('Intervention code changed')
         rows=[]
+        if not manifest['cases']:
+            value=freeze(out/'interventions-v5.json',dict(manifest_hash=manifest['artifact_hash'],rows=[],
+                measurement=source.execution['mode'],status='ZERO_ELIGIBLE_CASES',gpu_calls=0))
+            from .reporting import intervention_report
+            freeze(out/'intervention-summary-v5.json',intervention_report(manifest,value))
+            return value
         with model_session(out,source.plan,binding={'manifest_hash':manifest['artifact_hash']},**mode) as session:
             if session.backend_hash!=source.execution['backend_hash']:raise ValueError('Source backend changed')
             for case in manifest['cases']:
@@ -135,6 +139,9 @@ def intervene(output, **mode):
                         raw=session.generate(op+'/continuation',row['input_ids']+prefix,case['budget'],stage='edited_continuation')
                         result.update(raw=raw,status='returned')
                         validate_raw(raw,session.backend,case['budget'])
+                        result.update(full_text=case['texts'][arm]+raw['text'],
+                                      context_hash=digest(row['input_ids']+prefix),fresh_prefill=True,
+                                      input_length=len(row['input_ids'])+len(prefix),output_length=len(raw['tokens']))
                         result['score']=final_score(case['texts'][arm]+raw['text'],raw['stopped'],row['task']['expected'])
                         if arm=='unchanged':
                             result['original_suffix_agreement']=raw['tokens']==row['raw']['tokens'][case['original_k']:]
@@ -142,7 +149,7 @@ def intervene(output, **mode):
                     except OperationUnavailable as exc:result.update(status='unavailable',reason=str(exc))
                     except (ValueError,KeyError,TypeError) as exc:result.update(status='invalid_return',reason=str(exc))
                     arms[arm]=result
-                rows.append(dict(task_id=case['task_id'],arms=arms))
+                rows.append(dict(task_id=case['task_id'],world=case['world'],source_row_hash=row['artifact_hash'],arms=arms))
         value=freeze(out/'interventions-v5.json',dict(manifest_hash=manifest['artifact_hash'],rows=rows,
                       measurement='MOCK' if session.backend.simulated else 'LIVE'))
         from .reporting import intervention_report

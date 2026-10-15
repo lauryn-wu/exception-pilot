@@ -16,7 +16,8 @@ ROOT = Path(__file__).resolve().parents[1]
 CUTS = (0, 1, 8, 16, 32)  # Technical only, identical to v4.
 CHECKPOINTS = (0, 128, 256, 512, 1024)
 V4_HASH = '913f64efa3f12a1a787575c14c7670e072e250d7e8a3690a9957cfa70bb88e78'
-CALIBRATION = dict(min_direct_correct=20, min_matched_pattern_errors=3, min_error_worlds=2)
+DESIGN_VERSION = 'staged-60-v1'
+HISTORICAL_REVISION = '40d548d12ee306fe670128a8516001f4e848e053'
 COHORT_MIN_WORLDS = 2  # Coverage gate, not a power claim.
 LOOKUP = 'According to the table, what is the value in the Verified class column for license plate {plate}?'
 
@@ -41,11 +42,11 @@ def validate_config(cfg):
         raise ValueError('Local path and explicit 2048 scientific budget required')
     return copy.deepcopy(cfg)
 
-def make_plan(phase='selection', configuration=None, selection_lock=None):
+def make_plan(phase='staged', configuration=None):
     cfg = validate_config(configuration or config())
-    if phase not in ('selection', 'confirmation') or (phase == 'confirmation' and not selection_lock):
-        raise ValueError('Confirmation needs a selection protocol lock')
-    seed, reps, plate_prefix = (20261015051, 1, 'V5S') if phase == 'selection' else (20261015052, 4, 'V5C')
+    if phase != 'staged':
+        raise ValueError('Use one staged 60-world experiment; historical plans require their original revision')
+    seed, reps, plate_prefix = 20261015053, 5, 'V5T'
     roles = list(itertools.product(itertools.permutations('ABC'), ('cold','warm'), range(reps)))
     rng_for(PROTOCOL, phase, 'world-order').shuffle(roles)
     worlds, tasks, used = [], [], set()
@@ -77,39 +78,38 @@ def make_plan(phase='selection', configuration=None, selection_lock=None):
             prompt = legacy.INTRO + '\n\n' + '\n'.join(rows) + '\n\nLicense plate: ' + plate + '\n' + question + '\n' + legacy.INSTRUCTIONS[arm]
             cells.append(dict(id=f'{wid}/v{variant}/{framing}/{arm}', world=wid, variant=variant,
                               framing=framing, arm=arm, expected=classes[variant], pattern=classes[2],
-                              prompt=prompt, table='\n'.join(rows), target_plate=plate, target_row=rows[-1]))
+                              prompt=prompt, prompt_hash=digest(prompt), table='\n'.join(rows), target_plate=plate,
+                              target_row=rows[-1], target_row_position=9, target_row_values=rows[-1].strip('| ').split(' | ')))
         rng.shuffle(cells); tasks.extend(cells)
         worlds.append(dict(id=wid, items=w['items'], target=target, order=order, roles=list(classes), climate=climate, replicate=replicate))
-    plan = dict(protocol=PROTOCOL, technical_gate=TECHNICAL, source_hash=source_hash(), v4_source_hash=V4_HASH,
+    arm_orders = {}
+    for task in tasks:
+        arm_orders[task['id']] = {}
+        for family in ('M','O'):
+            order = list(ARMS); rng_for(PROTOCOL, 'arm-order', family, task['id']).shuffle(order)
+            arm_orders[task['id']][family] = order
+    plan = dict(design_version=DESIGN_VERSION, pilot_worlds=4, total_worlds=60, arm_orders=arm_orders, protocol=PROTOCOL, technical_gate=TECHNICAL, source_hash=source_hash(), v4_source_hash=V4_HASH,
                 phase=phase, config=cfg['model'], config_envelope=cfg, scientific_budget=BUDGET,
                 seed=seed, worlds=worlds, tasks=tasks, checkpoints=list(CHECKPOINTS),
-                technical_cuts=list(CUTS), selection_lock=selection_lock, calibration=CALIBRATION,
+                technical_cuts=list(CUTS), selection_lock=None, behavioral_success_gate=None,
                 arms=list(ARMS), cue_policy='both frozen cues at every eligible fixed/event/edited checkpoint')
     plan['plan_hash'] = digest(plan)
     return plan
 
 def read_plan(output):
     p = sealed_read(Path(output)/'plan-v5.json'); p.pop('artifact_hash'); check_plan(p)
-    if p != make_plan(p['phase'], p['config_envelope'], p['selection_lock']):
+    if p.get('design_version') != DESIGN_VERSION:
+        raise ValueError('Historical v5 plan preserved: use original revision '+HISTORICAL_REVISION+'; prepare a fresh staged directory')
+    if p != make_plan(p['phase'], p['config_envelope']):
         raise ValueError('v5 source/config/plan identity changed')
     return p
 
-def prepare(output, phase='selection', configuration=None, selection_output=None, policy_lock=None):
-    cfg = validate_config(configuration or config()); lock = None
-    if phase == 'confirmation':
-        from .runner import Source
-        from .reporting import behavioral_report
-        from .review.workflow import validate_lock
-        source = Source(selection_output)
-        lock = validate_lock(source, policy_lock)
-        if source.plan['phase'] != 'selection' or not behavioral_report(source.root)['calibration']['passed']:
-            raise ValueError('Complete selection calibration required')
-        if cfg != source.plan['config_envelope']:
-            raise ValueError('Confirmation model configuration differs')
+def prepare(output, configuration=None):
+    cfg = validate_config(configuration or config())
     out = Path(output)
     if out.exists() and any(out.iterdir()) and not (out/'plan-v5.json').exists():
         raise ValueError('Use a fresh v5 output directory; preserve historical artifacts')
-    plan = make_plan(phase, cfg, lock)
+    plan = make_plan(configuration=cfg)
     with run_lock(out):
         freeze(out/'plan-v5.json', plan)
     return plan

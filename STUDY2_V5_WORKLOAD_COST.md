@@ -1,127 +1,105 @@
-# V5 workload, memory and cost scenarios
+# Staged v5 workload, storage and runtime assumptions
 
-These are pre-run counts and assumptions, not measured Qwen v5 runtimes. Run
-`python -m exception_study2_v5 workload` for machine-readable ceilings. Earlier
-v4 and synthetic timing are not v5 performance measurements. Actual eligible
-counts are fixed only after complete originals and independent review.
+Run `python -m exception_study2_v5 workload` for machine-readable ceilings. One
+60-world schedule: the first four are an operational pilot, not selected worlds.
+No Qwen runtime, peak VRAM, event prevalence or paid judge performance is measured
+by this offline implementation. Never infer behavioral success from these counts.
 
-| Stage | Selection (12 worlds) | Confirmation (48 worlds) |
-|---|---:|---:|
-| Originals | 96 | 384 |
-| Visible originals reviewed | 48 | 192 |
-| Original generated-token ceiling | 196608 | 786432 |
-| Fresh technical generation calls | ≤33 | ≤33 |
-| Technical generated-token ceiling | 3882 | 3882 |
-| 2A fixed + pre-answer sequence evaluations | ≤1728 | ≤6912 |
-| 2A semantic-event sequence evaluations | ≤2304 | ≤9216 |
-| Combined 2A sequence evaluations before deduplication | ≤4032 | ≤16128 |
-| 2B-M eligible cases | ≤48 | ≤192 |
-| 2B-M fresh continuations (4/case) | ≤192 | ≤768 |
-| 2B-M post-prefix candidate evaluations (24/case) | ≤1152 | ≤4608 |
-| 2B-O eligible cases, continuations and evaluations | Same ceilings, separate cohort | Same ceilings, separate cohort |
-
-The four-world pilot is part of selection: 32 originals/65536 token ceiling;
-completion adds at most 64, not another 96. Confirmation is separately authorized.
-Two cues × three full candidates per distinct cut. Six fixed/pre-answer positions
-and eight event positions per visible response. Identical task/cut/cue computations
-are shared within the combined 2A plan; nonexistent events, short answers, inexact
-boundaries and missing pre-answer markers lower the counts. No 2A answers generated.
-For a frozen family with N cases and original cuts k_i, exact generation ceiling is
-`4 * sum(2048-k_i)`, with 4N generation operations and 24N candidate evaluations.
-Failed/ambiguous operations are consumed, not resent. O's clean/mixed strata do not
-add operations. Both families can include the same response but never extra worlds.
-Manual review has zero paid judge calls. Two initial reviews per visible response,
-third review only on disagreement, plus independently drafted/verified edits.
-
-Across both phases at worst: 480 originals, 1920 intervention continuations,
-66 technical calls = 2466 generation calls; ≤4922964 generated tokens including
-technical calls. This loose ceiling assumes every original and all four arms in
-both families use their entire cap, with intervention k=0 (real events have k>0).
-There are ≤31680 full-candidate evaluations (20160 in 2A + 11520 in 2B).
-These are NOT 31680 generated answers. Each complete candidate has two pinned
-Qwen tokens; candidate teacher-forced tokens ceiling is 63360. Failed attempts may
-consume compute without returning usable telemetry.
-
-## Input token accounting
-
-The pinned local tokenizer was actually checked offline (no model weights or network):
-selection has **38880** rendered original input tokens (388–422 per task), and
-confirmation **155904** (387–424). Preflight rechecks these on the actual Pod.
-At assumed mean direct output 12 and visible output 1024, output totals would be
-49728/198912 respectively, versus hard caps 196608/786432. Output means remain
-assumptions, not replications.
-Each candidate evaluation reprocesses prompt + prefix + cue + the full candidate
-with the unchanged backend (no shared candidate KV cache). With at most 424 prompt tokens,
-original prefixes ≤2048, and four cue tokens and two candidate tokens,
-combined 2A forward tokens are at most about 9.99M/39.97M. The code records exact
-context/candidate token occurrences. Edited-prefix input totals depend on frozen
-replacement lengths; no finite hard bound is claimed for arbitrary proposed edits.
-At ≤2048-token edited prefixes use the same 2478-token forward assumption:
-2B per family ≤2.85M/11.42M candidate-forward tokens, plus generation prefill inputs.
-Use frozen manifests for exact per-stage counts before dispatch.
-
-## Memory and storage
-
-Official pinned safetensors: **65524328560 bytes = 65.52 GB / 61.02 GiB**.
-Approximate weight memory is 61.02 GiB BF16, plus KV cache, eager attention, logits,
-activation/workspace and CUDA allocator overhead. Qwen's 64 layers, 8 KV heads,
-128 head dimension yield ~0.25 MiB KV per token per sequence (~0.75 GiB at 3072
-context tokens). Eager full-sequence scoring materializes attention and full-vocab
-logits: planning peak roughly **68–77 GiB** at these contexts, not measured and not
-a fit guarantee. Large edited prefixes can increase peak substantially. One 80 GB
-A100/H100 is the minimum plausible single-card option; H200 141 GB has more margin.
-Do not silently quantize or change kernels if OOM; retain failure and reassess.
-
-CPU-first loader holds the whole BF16 model before GPU transfer. Plan 128 GB host
-RAM, preferably 192 GB for loading/transient buffers and token data. 150–200 GB
-persistent Network Volume is comfortable for one ~66 GB snapshot, 10–20 GB environment,
-repo, historical audits, and 5–15 GB results/headroom. Keep ≥25 GB free once existing
-assets are present; duplicated snapshots/venvs/history need more. Technical full-
-vocabulary telemetry adds tens to hundreds of MB, including journal/report copies.
-No v5 command downloads weights or fills a new model cache. CUDA scratch/container
-disk 20–30 GB is separate from the persistent volume.
-
-## Rental scenarios
-
-[RunPod's public pricing page](https://www.runpod.io/pricing), checked 2026-10-14
-(page updated October 8), lists A100 80 GB SXM $1.79/h, H100 PCIe 80 GB $2.89/h,
-H100 SXM $3.99/h and H200 141 GB $5.29/h. Availability/region/volume rates differ;
-use the actual Pod quote. No rental was launched. Storage/taxes/manual review time
-are outside compute figures below.
-
-This implementation uses batch=1, serial requests, BF16, Hugging Face Transformers
-4.51.3 / torch 2.7.1 cu126, eager attention, greedy decoding, no quantization, no
-vLLM/FlashAttention/prefix sharing. Planning scenarios only:
-
-| GPU | Decode assumption | Candidate prefill assumption | Assumed setup per invocation |
+| Stage | Pilot: 4 worlds | Remaining: 56 | Full: 60 |
 |---|---:|---:|---:|
-| A100 SXM 80 GB | 15–25 generated tokens/s | 500–1200 input tokens/s | 2–10 min |
-| H100 PCIe 80 GB | 25–45 tokens/s | 800–2000 tokens/s | 2–10 min |
-| H200 141 GB | 35–60 tokens/s | 1000–2500 tokens/s | 2–10 min |
+| Original attempts | 32 | 448 | 480 |
+| Visible originals | 16 | 224 | 240 |
+| Original output-token cap | 65,536 | 917,504 | 983,040 |
+| Technical generation calls | ≤33 | 0 (same run) | ≤33 |
+| Technical output-token cap | 3,882 | 0 | 3,882 |
+| 2A fixed/pre-answer candidate sequences | ≤576 | ≤8,064 | ≤8,640 |
+| 2A event candidate sequences | ≤768 | ≤10,752 | ≤11,520 |
+| Total 2A sequences before deduplication | ≤1,344 | ≤18,816 | ≤20,160 |
+| Eligible cases per M or O family | ≤16 | ≤224 | ≤240 |
+| Fresh continuations per family | ≤64 | ≤896 | ≤960 |
+| Candidate evaluations per family | ≤384 | ≤5,376 | ≤5,760 |
 
-These are broad engineering guesses, not benchmark claims. More VRAM does not
-parallelize this serial code. Actual synchronized pilot timing should replace them.
-For selection originals at the assumed 49728 output tokens, 38880 prompt tokens,
-`time = output/decode + input/prefill + setup` gives approximately:
+Six fixed/pre-answer positions plus eight event positions, two cues and three complete
+candidates. Ineligible cuts/events reduce actual counts. A combined measurement plan
+deduplicates exact task/cut/cue aliases; separate fixed/event plans may repeat aliases
+but remain within the displayed sum. Do not run combined plus separate plans and
+claim the same budget. Downstream `remaining` scope avoids recomputing the pilot.
 
-| GPU | Selection originals only | Rental cost |
-|---|---:|---:|
-| A100 SXM | 36–67 min | $1.07–$2.00 |
-| H100 PCIe | 21–44 min | $1.01–$2.12 |
-| H200 | 16–35 min | $1.41–$3.09 |
+Per family with N frozen cases at original cuts k_i: exactly 4N attempted continuations,
+24N candidate evaluations, output ceiling `4*sum(2048-k_i)`. Frozen edit lengths affect
+input/VRAM but do not change remaining budgets. Failed/ambiguous attempts are consumed.
+No 2A answers are generated. Across the full run, loose maxima are **2,433 generation
+calls** (480 originals + 1,920 M/O arms + 33 technical), **4,919,082 generated tokens**,
+and **31,680 candidate sequences / 63,360 teacher-forced candidate tokens**. This loose
+output bound allows k=0 for every intervention; actual eligible events have k>0.
+Manual independent review uses zero paid API calls. There are 480 initial reviews
+(2×240 visible), plus adjudication only on disagreement and separate edit verification.
 
-The all-originals-hit-2048 cap gives roughly 2.2–3.9 h A100, 1.2–2.4 h H100,
-0.9–1.8 h H200 for selection, plus any setup/host overhead. Confirmation is four
-times the scientific work, not four setups. Combined 2A at the token ceiling is
-~2.4–5.8 h A100, 1.4–3.7 h H100, 1.2–3.0 h H200 for selection; confirmation scales
-fourfold. Actual 2A contexts/eligible cuts often reduce this markedly. 2B is cohort-
-dependent: budget it from `4 sum(2048-k)` generation tokens plus 24N candidate
-forwards and 4N generation prefills, rather than assuming every visible trace qualifies.
-Total stage cost is time-hours × quoted hourly rate. Repeated explicit commands
-reload/hash weights and add setup each time; preserve these measured costs.
+## Storage budget
 
-Recommendation: **H100 PCIe 80 GB** for cost/speed with this serial implementation
-if peak memory fits; **H200 141 GB** when extra memory margin or faster execution
-justifies the premium. A100 is viable but may cost similarly in total while taking
-longer. Start with the explicit technical gate and bounded pilot; no full-study
-runtime or low total cost is promised before their live measurements.
+Plan for approximately **200 GB persistent Network Volume at `/workspace`**, including
+existing history. Weights: **65,524,328,560 bytes = 65.52 GB / 61.02 GiB** for the pinned
+BF16 snapshot. Environment roughly 10–20 GB. Avoid duplicate model snapshots/caches;
+keep at least 25 GB free after actual history and environment are accounted for.
+20–30 GB container/scratch space is separate; persistent outputs belong on the volume.
+
+Conservative uncompressed JSON estimates for the full 60-world run, assuming edited
+prefixes remain near the 2048-token original cap and no extra experimental reruns:
+
+| Data | Planning allowance |
+|---|---:|
+| Plan, 480 originals, request/start/return journals, compact boundary fingerprints | 0.2–0.6 GB |
+| 2A candidate readouts, context IDs, journals and checkpoint manifests | 0.3–1.0 GB |
+| Independent reviews, event annotations, drafts/verifications | 0.02–0.15 GB |
+| Both families' maximum 1,920 continuations plus associated readouts/journals | 0.4–1.5 GB |
+| Separate technical full-vocabulary telemetry | 0.1–0.5 GB |
+| Total practical scientific/technical artifact reserve | 2–5 GB; allow 5–10 GB with exports/backups |
+
+These are engineering allowances, not measurements or hard caps; arbitrary long edits,
+JSON formatting, archive copies and extra runs increase them. Save lossless token IDs
+and compact boundary fingerprints, not repeated prefix text at every token. No dense
+hidden activations or every-step full-vocabulary logits are saved for scientific
+originals, readouts or interventions. Technical telemetry stays separately labeled.
+
+**Future activations are not included in that budget.** BF16 residual vectors at 5,120
+hidden dimensions cost 10,240 bytes/token/layer. At 2,048 generated tokens for 240 visible
+trajectories: about **5.03 GB for one layer**, **322.1 GB for all 64 layers**, excluding
+prompts/metadata. All 480 originals at that cap double those amounts; intervention
+replays can add terabytes. No activation extractor exists here. A later probe study
+must predeclare layers/cuts/storage, stream or selectively retain data, and must not
+assume the 200 GB volume can hold indefinite dense activation caches.
+
+## Input tokens, memory and time
+
+The pinned tokenizer is audited offline over all 480 frozen prompts; exact counts
+are in `audits/study2-v5-staged/tokenizer-audit.json`. Run local preflight on the Pod.
+Output counts are unknown until collected. A planning mean of 12 tokens/direct and
+1,024/visible yields 16,576 pilot output tokens and 248,640 across all 60 worlds,
+compared with hard caps above. For candidate scoring, this backend reprocesses each
+prompt+prefix+cue+candidate independently. With at most 430 prompt tokens, 2,048 prefix,
+4 cue and 2 candidate tokens, full 2A ceiling is ~50.1M forward token occurrences;
+pilot ~3.34M. Actual eligibility/lengths substantially affect this. Arbitrarily long
+edited prefixes have no finite bound until edits freeze; budget from their manifests.
+
+Existing backend: batch one, serial Hugging Face Transformers 4.51.3 / torch 2.7.1 cu126,
+eager attention, native BF16, greedy, no quantization, no vLLM/FlashAttention/prefix
+cache sharing. Approximate weights 61.02 GiB + KV ~0.25 MiB/token/sequence + eager
+attention/full-vocabulary scoring logits/workspace. Planning peak **68–77 GiB** near
+these contexts, not measured or guaranteed. H100/A100 80 GB is plausible; H200 141 GB
+has more headroom. Host 128–192 GB accommodates CPU-first weight loading. OOM is a
+preserved failure, not permission to quantize or change scientific settings.
+
+Existing planning assumptions (not benchmark results): A100 15–25 generated tokens/s,
+500–1,200 prefill tokens/s; H100 PCIe 25–45 and 800–2,000; H200 35–60 and 1,000–2,500.
+Model hashing/loading adds roughly 2–10 minutes per invocation. Using approximately
+13k pilot input tokens and the assumed 16,576 outputs, pilot originals take roughly
+13–29 min A100, 8–22 min H100, 7–18 min H200. At the 65,536 output cap they can take
+46–83, 26–54, or 20–42 minutes respectively. Technical validation, scoring, manual
+review and interventions are additional. Full originals are 15 times the scientific
+token work, not 15 setups. Replace these estimates with the synchronized pilot timings.
+
+The prior pricing audit on 2026-10-14 recorded [RunPod public rates](https://www.runpod.io/pricing)
+of $1.79/h A100 SXM, $2.89/h H100 PCIe and $5.29/h H200. Treat these as dated planning
+quotes; region, availability, storage and taxes vary. GPU cost is actual hours × the
+Pod's quoted rate. Human review while a GPU is running also incurs rental cost.
+No cloud resources or paid calls were launched for this amendment.

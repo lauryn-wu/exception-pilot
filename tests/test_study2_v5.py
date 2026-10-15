@@ -103,16 +103,16 @@ class Offline(unittest.TestCase):
         self.addCleanup(self.network.stop);self.addCleanup(self.connect.stop);self.addCleanup(self.loader.stop)
         self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup);self.root=Path(self.tmp.name)
     def run_source(self,complete=True):
-        out=self.root/'source';core.prepare(out);b=Fake();runner.technical(out,backend_override=b);runner.collect(out,complete=complete,backend_override=b);return out,b
+        out=self.root/'source';core.prepare(out);b=Fake();runner.technical(out,backend_override=b);runner.collect(out,backend_override=b);return out,b
 
 class DesignTests(Offline):
     def test_counts_balance_and_fresh_worlds(self):
         old_plates={i['id'] for phase in ('selection','confirmation') for w in old.make_plan(phase,selection_lock={'fixture':True})['worlds'] for i in w['items']}
         sets=[]
-        for phase,n in [('selection',12),('confirmation',48)]:
-            p=core.make_plan(phase,selection_lock={'fixture':True} if phase=='confirmation' else None)
+        for phase,n in [('staged',60)]:
+            p=core.make_plan(phase)
             self.assertEqual(len(p['worlds']),n);self.assertEqual(len(p['tasks']),n*8)
-            self.assertEqual(p,core.make_plan(phase,selection_lock=p['selection_lock']))
+            self.assertEqual(p,core.make_plan(phase))
             plates={i['id'] for w in p['worlds'] for i in w['items']};self.assertEqual(len(plates),n*10);self.assertFalse(plates & old_plates);sets.append(plates)
             counts={}
             for w in p['worlds']:
@@ -122,7 +122,7 @@ class DesignTests(Offline):
                 cells=[t for t in p['tasks'] if t['world']==w['id']]
                 self.assertEqual({(t['variant'],t['framing'],t['arm']) for t in cells},{(v,f,a) for v in (0,1) for f in ('original','lookup') for a in ('direct','visible')})
             self.assertEqual(set(counts.values()),{n//12})
-        self.assertFalse(sets[0]&sets[1])
+        self.assertEqual(len(sets),1)
     def test_matched_prompts_change_only_question_instruction_or_cell(self):
         p=core.make_plan();cells={(t['variant'],t['framing'],t['arm']):t for t in p['tasks'][:8]}
         for v in (0,1):
@@ -153,9 +153,9 @@ class DesignTests(Offline):
         self.assertFalse(scoring.final_score('prose\nANSWER: A',True,'A','direct')['strict_format'])
         self.assertTrue(scoring.final_score('prose\nANSWER: A',True,'A')['strict_format'])
     def test_workload_exact_ceilings(self):
-        w=workloads.report();self.assertEqual(w['selection']['originals'],96);self.assertEqual(w['confirmation']['originals'],384)
-        self.assertEqual(w['selection']['study_2a']['max_candidate_sequences'],4032)
-        self.assertEqual(w['confirmation']['family_O']['max_edited_continuations'],768)
+        w=workloads.report();self.assertEqual(w['pilot']['originals'],32);self.assertEqual(w['remaining']['originals'],448)
+        self.assertEqual(w['full']['study_2a']['max_candidate_sequences'],20160)
+        self.assertEqual(w['full']['family_O']['max_edited_continuations'],960)
 
 class OperationTests(Offline):
     def test_no_implicit_gate_or_model_load(self):
@@ -179,9 +179,9 @@ class OperationTests(Offline):
         saved=operations(out);orig=[v for k,v in saved.items() if k.startswith('v5/original/')]
         self.assertTrue(all(x['request']['budget']==2048 and not x['request']['capture_at'] for x in orig))
         self.assertEqual(len([x for x in b.calls if x[1]==2048]),32)
-        with self.assertRaises(ValueError):runner.Source(out)
-        runner.collect(out,complete=True,backend_override=b);self.assertEqual(len(runner.Source(out).rows),96)
-        n=len(b.calls);runner.collect(out,complete=True,backend_override=b);self.assertEqual(n,len(b.calls))
+        with self.assertRaises(ValueError):runner.Source(out,scope='all')
+        with self.assertRaises(FileNotFoundError):runner.collect(out,batch='remaining',backend_override=b)
+        n=len(b.calls);runner.collect(out,backend_override=b);self.assertEqual(n,len(b.calls))
     def test_failed_and_ambiguous_operations_never_retry(self):
         out=self.root/'journal';p=core.make_plan();b=Fake();s=Session(out,p,b)
         with self.assertRaises(OperationUnavailable):s.operation('v5/broken',{},lambda:(_ for _ in ()).throw(RuntimeError()),'test')
@@ -232,7 +232,7 @@ class SemanticTests(Offline):
         with self.assertRaises(ValueError):workflow.validate_decisions(dict(pre_answer_text=text,original_available=True),ds)
     def test_outcome_blinding_bold_marker_and_no_marker(self):
         for text in ('visible\nANSWER: A','visible\n**ANSWER: A**'):
-            row=dict(task=dict(id='t',prompt='source table'),raw=dict(text=text),status='returned')
+            row=dict(task=dict(id='t',world='w',prompt='source table'),artifact_hash='fixture',raw=dict(text=text),status='returned')
             view=workflow.blinded_view(row);self.assertEqual(view['pre_answer_text'],'visible\n');self.assertNotIn('score',view)
         row['raw']['text']='unfinished prose';self.assertEqual(workflow.blinded_view(row)['pre_answer_text'],'unfinished prose')
     def test_roundtrip_boundaries_and_no_answer(self):
@@ -261,10 +261,10 @@ class PipelineTests(Offline):
     def test_entire_pipeline_families_measurements_lock_and_preservation(self):
         out,b=self.run_source();before={str(p.relative_to(out)):p.read_bytes() for p in out.rglob('*') if p.is_file()}
         ann=reviewed(out,self.root/'review');source=runner.Source(out);manifest=workflow.read_manifest(ann,source)
-        ar=reporting.annotation_report(source,manifest);self.assertEqual(sum(ar['events']['erasure'].values()),48)
+        ar=reporting.annotation_report(source,manifest);self.assertEqual(sum(ar['events']['erasure'].values()),16)
         self.assertGreater(ar['families']['O']['clean_worlds'],0);self.assertGreater(ar['both_family_cases'],0)
         ms=self.root/'measure';mp=readouts.prepare_measurements(out,ms,ann)
-        self.assertLess(len(mp['computations']),48*28)
+        self.assertLess(len(mp['computations']),16*28)
         n=len(b.calls);values=readouts.measure(ms,backend_override=b);self.assertEqual(n,len(b.calls));self.assertEqual(len(values['results']),len(mp['computations']))
         self.assertEqual(len(b.scores),3*len(mp['computations']))
         for key,c in mp['computations'].items():
@@ -284,9 +284,6 @@ class PipelineTests(Offline):
                     a,e=case['event']['span'];new=case['texts'][arm];prefix=case['texts']['unchanged']
                     if arm!='unchanged':self.assertTrue(new.startswith(prefix[:a]));self.assertTrue(new.endswith(prefix[e:]))
             n=len(b.calls);interventions.intervene(editout,backend_override=b);self.assertEqual(n,len(b.calls))
-        decisions=dump(self.root/'decisions.json',dict(reviewer='selection_reviewer',rationale='Synthetic lock only',criteria_unchanged=True,no_selection_on_2a_or_interventions=True,families={'M':True,'O':True}))
-        lock=self.root/'lock.json';workflow.freeze_lock(out,ann,lock,decisions)
-        p=core.prepare(self.root/'confirmation',phase='confirmation',selection_output=out,policy_lock=lock);self.assertEqual(len(p['tasks']),384)
         for name,data in before.items():self.assertEqual((out/name).read_bytes(),data,name)
     def test_adjudication_preserves_disagreements_and_invalid_statuses(self):
         out,b=self.run_source();r=self.root/'review';plan=workflow.prepare_review(out,r)
@@ -320,8 +317,8 @@ class TokenizerTests(Offline):
         verify_local_snapshot(root,tokenizer_only=True)
         tokenizer=AutoTokenizer.from_pretrained(root,local_files_only=True,trust_remote_code=False)
         backend=LocalBackend.__new__(LocalBackend);backend.tokenizer=tokenizer;backend.config=core.config()['model']
-        for phase in ('selection','confirmation'):
-            p=core.make_plan(phase,selection_lock={'fixture':True} if phase=='confirmation' else None)
+        for phase in ('staged',):
+            p=core.make_plan(phase)
             for t in p['tasks']:
                 ids=backend.prompt(t['prompt']);rendered=tokenizer.decode(ids,skip_special_tokens=False)
                 self.assertTrue(rendered.endswith(ASSISTANT_SUFFIX));self.assertEqual(rendered.count('<think>'),1)
@@ -336,12 +333,12 @@ class ExtraSafetyTests(Offline):
         from contextlib import redirect_stdout
         import io
         with patch('sys.argv',['v5','workload']),redirect_stdout(io.StringIO()) as stream:main()
-        self.assertEqual(json.loads(stream.getvalue())['selection']['originals'],96)
+        self.assertEqual(json.loads(stream.getvalue())['full']['originals'],480)
     def test_no_event_chosen_from_scores_and_no_probability_fields_in_view(self):
-        raw=dict(text='Evidence prose\nANSWER: A');row=dict(task=dict(id='x',prompt='table'),raw=raw,status='returned',score={'correct':True},probability=1)
+        raw=dict(text='Evidence prose\nANSWER: A');row=dict(task=dict(id='x',world='w',prompt='table'),artifact_hash='fixture',raw=raw,status='returned',score={'correct':True},probability=1)
         first=workflow.blinded_view(row);row['score']={'correct':False};row['probability']=0
         self.assertEqual(first,workflow.blinded_view(row))
-        self.assertEqual(set(first),{'task_id','source_prompt','pre_answer_text','original_available','rubric'})
+        self.assertEqual(set(first),{'task_id','world','source_row_hash','source_prompt','pre_answer_text','original_available','rubric'})
     def test_unavailable_original_cannot_be_annotated_absent(self):
         view=dict(pre_answer_text='',original_available=False);ds={e:decision('',None,e) for e in EVENTS}
         with self.assertRaises(ValueError):workflow.validate_decisions(view,ds)
@@ -376,13 +373,12 @@ class ExtraSafetyTests(Offline):
         with self.assertRaises(ValueError):workflow.validate_decisions(dict(pre_answer_text='some text',original_available=True),{e:copy.deepcopy(d) for e in EVENTS})
 
 class ReportStageTests(Offline):
-    def test_confirmation_does_not_reuse_selection_calibration_thresholds(self):
-        from types import SimpleNamespace
-        source=SimpleNamespace(plan=core.make_plan('confirmation',selection_lock={'fixture':True}),rows={},
-                               execution={'mode':'MOCK'},binding={})
-        with patch.object(reporting,'Source',return_value=source):result=reporting.behavioral_report(self.root)
-        self.assertEqual(result['calibration']['status'],'NOT_APPLICABLE_CONFIRMATION')
+    def test_no_behavioral_success_threshold_at_pilot(self):
+        out,b=self.run_source()
+        result=reporting.behavioral_report(out)
+        self.assertEqual(result['calibration']['status'],'NO_BEHAVIORAL_SUCCESS_GATE')
         self.assertIsNone(result['calibration']['passed']);self.assertIsNone(result['calibration']['thresholds'])
+        self.assertEqual(sum(g['planned'] for f in result['by_condition'].values() for g in f.values()),32)
     def test_preflight_refuses_unpinned_numpy_before_tokenizer_loading(self):
         from exception_study2_v5 import preflight
         core.prepare(self.root/'source')

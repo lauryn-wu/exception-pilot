@@ -8,26 +8,26 @@ from exception_continuation.runner import sealed_read
 from exception_review.artifacts import freeze
 from .. import PROTOCOL
 from ..core import source_hash, COHORT_MIN_WORLDS
-from ..runner import Source, bound_source
+from ..runner import Source, bound_source, binding_identity
 from ..scoring import marker_start
 from .rubric import EVENTS, STATUSES, RUBRIC, CERTIFICATES, OVERRIDE_CERTIFICATES
 
 def blinded_view(row):
     text=row['raw']['text'] if row['raw'] and row['status']=='returned' else ''
     marker=marker_start(text)
-    return dict(task_id=row['task']['id'], source_prompt=row['task']['prompt'],
+    return dict(task_id=row['task']['id'], world=row['task']['world'], source_row_hash=row['artifact_hash'], source_prompt=row['task']['prompt'],
                 pre_answer_text=text if marker is None else text[:marker],
                 original_available=row['status']=='returned', rubric=RUBRIC)
 
 def empty_decision():
     return dict(status='unreviewed',span=None,text=None,anchor=None,subtype=None,rationale='',certificates={})
 
-def prepare_review(source_path, output):
-    source=Source(source_path); out=Path(output)
+def prepare_review(source_path, output, scope='pilot'):
+    source=Source(source_path,scope=scope); out=Path(output)
     if out.exists() and any(out.iterdir()) and not (out/'review-plan-v5.json').exists():
         raise ValueError('Fresh review directory required')
     views={tid:blinded_view(row) for tid,row in source.rows.items() if row['task']['arm']=='visible'}
-    plan=dict(protocol=PROTOCOL,source=source.binding,code_hash=source_hash(),rubric=RUBRIC,
+    plan=dict(protocol=PROTOCOL,source=source.binding_at(out),code_hash=source_hash(),rubric=RUBRIC,
               views=views,reviewer_slots=['reviewer_1','reviewer_2'],adjudication='third independent reviewer only on disagreement')
     with run_lock(out):
         sealed=freeze(out/'review-plan-v5.json',plan)
@@ -72,7 +72,7 @@ def decision_key(d):
     return {k:v for k,v in d.items() if k not in ('rationale','certificates')}
 
 def freeze_annotations(output, first, second, adjudication=None):
-    out=Path(output);plan=sealed_read(out/'review-plan-v5.json');source=bound_source(plan['source'])
+    out=Path(output);plan=sealed_read(out/'review-plan-v5.json');source=bound_source(plan['source'],out)
     reviews=[json.loads(Path(p).read_text()) for p in (first,second)]
     ids=[r['reviewer'].strip() for r in reviews]
     if not all(ids) or len(set(ids))!=2:raise ValueError('Two independent named reviewers required')
@@ -95,46 +95,22 @@ def freeze_annotations(output, first, second, adjudication=None):
         m,o=chosen['erasure'],chosen['override']
         stratum=('mixed' if m['status']=='present' and m['span'][0]<o['span'][0] else
                  'clean' if m['status']=='absent' or (m['status']=='present' and m['span'][0]>=o['span'][0]) else 'unknown_erasure_history') if o['status']=='present' else None
-        cases[tid]=dict(events=chosen,initial_agreement=agrees,override_stratum=stratum,
+        cases[tid]=dict(world=source.rows[tid]['task']['world'],events=chosen,initial_agreement=agrees,override_stratum=stratum,
                        source_row_hash=source.rows[tid]['artifact_hash'])
     if adjud and set(adjud['cases'])!=set(disagreements):raise ValueError('Adjudication must cover exactly disputed cases')
     with run_lock(out):
         for i,r in enumerate(reviews):freeze(out/f'independent-review-{i+1}-v5.json',r)
         if adjud:freeze(out/'adjudication-v5.json',adjud)
-        return freeze(out/'annotation-manifest-v5.json',dict(protocol=PROTOCOL,source=source.binding,code_hash=source_hash(),
+        return freeze(out/'annotation-manifest-v5.json',dict(protocol=PROTOCOL,source=source.binding_at(out),code_hash=source_hash(),
             review_plan_hash=plan['artifact_hash'],reviews=reviews,adjudication=adjud,cases=cases,disagreements=disagreements,
             blinding='Original prompt and pre-answer text only; no final outcomes/readouts/intervention results'))
 
 def read_manifest(path,source=None):
-    value=sealed_read(path);source=source or bound_source(value['source'])
-    if value['source']!=source.binding or value['code_hash']!=source_hash():raise ValueError('Annotation source/code changed')
+    value=sealed_read(path);source=source or bound_source(value['source'],Path(path).parent)
+    if binding_identity(value['source'])!=source.binding or value['code_hash']!=source_hash():raise ValueError('Annotation source/code changed')
     expected={tid for tid,r in source.rows.items() if r['task']['arm']=='visible'}
     if set(value['cases'])!=expected:raise ValueError('Every visible response must be reviewed')
     for tid,case in value['cases'].items():
         validate_decisions(blinded_view(source.rows[tid]),case['events'])
         if case['source_row_hash']!=source.rows[tid]['artifact_hash']:raise ValueError('Annotation row changed')
-    return value
-
-def freeze_lock(source_path, annotations, output, decision_file):
-    source=Source(source_path);manifest=read_manifest(annotations,source)
-    from ..reporting import behavioral_report, annotation_report
-    report=behavioral_report(source.root); coverage=annotation_report(source,manifest)
-    if source.plan['phase']!='selection' or not report['calibration']['passed']:raise ValueError('Selection calibration failed or incomplete')
-    decisions=json.loads(Path(decision_file).read_text())
-    if (set(decisions)!={'reviewer','rationale','criteria_unchanged','no_selection_on_2a_or_interventions','families'}
-        or not decisions['reviewer'] or not decisions['rationale'] or decisions['criteria_unchanged'] is not True
-        or decisions['no_selection_on_2a_or_interventions'] is not True or set(decisions['families'])!={'M','O'}):
-        raise ValueError('Explicit selection-stage decisions and unchanged-criteria certification required')
-    for family in ('M','O'):
-        if type(decisions['families'][family]) is not bool:raise ValueError('Explicit boolean family decisions required')
-        n=coverage['families'][family]['clean_worlds' if family=='O' else 'worlds']
-        if decisions['families'][family] and n<COHORT_MIN_WORLDS:raise ValueError('Insufficient independently reviewed worlds for '+family)
-    return freeze(Path(output),dict(protocol=PROTOCOL,source=source.binding,code_hash=source_hash(),
-          annotations_hash=manifest['artifact_hash'],coverage=coverage,decisions=decisions,
-          backend_hash=source.execution['backend_hash'],mode=source.execution['mode']))
-
-def validate_lock(source,path):
-    value=sealed_read(path)
-    if value['protocol']!=PROTOCOL or value['source']!=source.binding or value['code_hash']!=source_hash():
-        raise ValueError('Selection protocol lock differs')
     return value

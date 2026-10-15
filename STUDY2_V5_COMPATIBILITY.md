@@ -19,7 +19,7 @@ V4 scientific source hash remains:
 
 V5 hashes its new package and protocol, plus this immutable v4 dependency hash.
 Frozen plans also bind the full v5 configuration, 2048 scientific cap, random
-schedules, tables/prompts, source hash, phase and selection lock. Execution freezes
+schedules, tables/prompts, source hash and versioned staged contract. Execution freezes
 the actual new Pod model/backend fingerprint and Git revision. Source/identity
 changes fail resume. Original, readout, annotation and intervention artifacts have
 separate namespaces and seals. A failed/ambiguous dispatch is never automatically
@@ -40,7 +40,7 @@ prefix (+ a disposable cue for readout only).
 
 ## New or deliberately adapted
 
-- Fresh balanced 12/48-world design and mandatory lookup framing; 96/384 originals.
+- Fresh balanced 60-world design and mandatory lookup framing; 480 originals, staged 32 then 448.
 - Independent 2048-budget configuration envelope. Legacy config still says 512;
   every scientific `generate` request explicitly uses 2048 or 2048-original_k.
 - Legacy `cue_check_checkpoints` and `event_checkpoints` remain inert loader-profile
@@ -55,13 +55,13 @@ prefix (+ a disposable cue for readout only).
   continuations and per-arm availability.
 - World-grouped behavioral, trajectory and family-specific intervention reports,
   unknown-outcome bounds, clean/mixed O, partial-contrast coverage and multiplicity.
-- Explicit command staging, selection coverage lock, local-only preflight and docs.
+- Explicit four-world stop, evidence-bound human approval, local-only preflight, portable reconstruction and world splits.
 
 ## Limits that remain real, not mock failures
 
 No pretrained Qwen weights, GPU, paid judge calls or cloud resources were used.
 New-Pod preflight/technical success, BF16 peak memory, throughput, scientific
-calibration, event prevalence, semantic edit validity and confirmation effects are
+behavioral replication, event prevalence, semantic edit validity and full-sample effects are
 pending. The real pinned tokenizer/template is tested offline; this is not model
 repeatability. Fake generation/logits are labelled MOCK throughout.
 
@@ -73,9 +73,30 @@ source text. In particular, first-occurrence/absence/hint-free meaning are seman
 judgments, not proven by lexical validators. Class-letter checks are supplemental.
 No new automated paid judge client is part of v5; its necessity was not assumed.
 
-Two eligible worlds is only a minimum coverage gate, not a power calculation.
+Two eligible worlds is only a descriptive coverage flag, never a continuation gate or power calculation.
 Low-prevalence clean overrides may yield insufficient coverage. O's primary cohort
 excludes mixed and uncertain-history trajectories but reports them separately.
 Small/degenerate bootstrap intervals require cautious interpretation. Results under
 lookup framing and future controlled alignment address task interpretation and
 pattern-specific causal attribution; no stronger mechanistic claim is licensed.
+
+## Staged amendment compatibility
+
+The pre-amendment v5 implementation remains in Git at
+`40d548d12ee306fe670128a8516001f4e848e053`; existing v5 artifacts are not migrated.
+New plans explicitly carry `design_version: staged-60-v1` and require a fresh directory.
+Old selection/confirmation plans are rejected with recovery instructions, not changed.
+The v3/v4 353-file preservation baseline still applies unchanged. The current amendment
+adds only v5 code/tests/docs/audits. It removes outcome-based selection locks and leaves
+scientific rubrics, prompts, tolerances, 2048 cap, pinned loader and scoring unchanged.
+
+Scope `pilot` always means the first 32 original tasks, `remaining` the next 448, and
+`all` all 480. Source identities exclude location; relative references are resolved
+from the referring artifact directory and independently checked against source hashes.
+Move the complete research tree together. Offline reconstruction permits a CPU-only
+machine with different hardware and no model directory. Live resumption still requires
+the frozen model path and backend fingerprint; this amendment does not promise cross-GPU
+live compatibility or bypass the existing live identity checks.
+
+No automatic paid judge client or activation extractor was added. Independent structured
+review import, third-review adjudication and manual semantic verification are preserved.

@@ -1,6 +1,7 @@
 """Separate explicit stages, immutable originals, fresh technical evidence per run."""
 from contextlib import contextmanager
 from pathlib import Path
+import os
 from exception_pilot.core import digest
 from exception_pilot.storage import run_lock
 from exception_continuation.runner import sealed_read
@@ -11,7 +12,7 @@ from . import PROTOCOL, BUDGET
 from .core import read_plan
 from .journal import Session, operations, OperationUnavailable
 from .validation import validate, require_technical
-from .scoring import final_score, validate_raw, boundaries
+from .scoring import final_score, validate_raw, boundaries, raw_metadata
 
 class V5MockBackend(MockBackend):
     # The legacy character fixture terminates with token zero. Keep this adapter local.
@@ -38,19 +39,28 @@ def model_session(output, plan, live_qwen=False, mock=False, backend_override=No
 def technical(output, **mode):
     with run_lock(output) as out:
         plan = read_plan(out)
+        if mode.get('live_qwen'):
+            from .staging import require_design_confirmation
+            require_design_confirmation(out)
         with model_session(out, plan, **mode) as session:
             return validate(session)
 
-def collect(output, complete=False, **mode):
+def collect(output, batch='pilot', **mode):
     with run_lock(output) as out:
         plan = read_plan(out)
         execution = sealed_read(out/'execution-v5.json')
         gate = require_technical(out, plan, execution)  # Before model loading; never auto-validate.
-        if plan['phase']=='confirmation' and not complete:
-            raise ValueError('Confirmation requires explicit --complete')
-        count = len(plan['tasks']) if complete else 32  # Four complete worlds, all eight conditions.
+        if batch not in ('pilot','remaining'): raise ValueError('Choose pilot or explicitly approved remaining batch')
+        Source(out, complete=False, scope='all')  # Verify existing originals BEFORE any new call.
+        if mode.get('live_qwen'):
+            from .staging import require_design_confirmation
+            require_design_confirmation(out)
+        if batch == 'remaining':
+            from .staging import require_approval
+            require_approval(out)
+        tasks = plan['tasks'][:32] if batch == 'pilot' else plan['tasks'][32:]
         with model_session(out, plan, **mode) as session:
-            for task in plan['tasks'][:count]:
+            for task in tasks:
                 row_path = out/'originals-v5'/(digest(task['id'])+'.json')
                 if row_path.exists():
                     continue  # Source() verifies the cache against the immutable journal below.
@@ -68,10 +78,11 @@ def collect(output, complete=False, **mode):
                 except (ValueError,KeyError,TypeError) as exc:
                     row.update(status='invalid_return',validation_error=str(exc))
                 saved = operations(out)['v5/original/'+task['id']]
-                row.update(operation_hash=saved['artifact_hash'],plan_hash=plan['plan_hash'],backend_hash=session.backend_hash,
+                row.update(**raw_metadata(row['raw'],ids),
+                           operation_hash=saved['artifact_hash'],plan_hash=plan['plan_hash'],backend_hash=session.backend_hash,
                            technical_hash=gate['artifact_hash'])
                 freeze(row_path,row)
-        source = Source(out, complete=False)
+        source = Source(out, complete=False, scope='all')
         if len(source.rows)==len(plan['tasks']):
             freeze(out/'collection-v5.json',dict(protocol=PROTOCOL,plan_hash=plan['plan_hash'],source_binding=source.hash,
                   row_hashes={tid:r['artifact_hash'] for tid,r in source.rows.items()}))
@@ -82,12 +93,16 @@ def collect(output, complete=False, **mode):
 
 class Source:
     """Read-only source adapter; verifies originals and genuine technical journals."""
-    def __init__(self, output, complete=True):
+    def __init__(self, output, complete=True, scope='pilot'):
         self.root=Path(output).resolve(); self.plan=read_plan(self.root)
+        if scope not in ('pilot','remaining','all'): raise ValueError('Unknown source snapshot scope')
+        self.scope=scope
+        self.tasks=self.plan['tasks'][:32] if scope=='pilot' else self.plan['tasks'][32:] if scope=='remaining' else self.plan['tasks']
+        self.worlds=self.plan['worlds'][:4] if scope=='pilot' else self.plan['worlds'][4:] if scope=='remaining' else self.plan['worlds']
         self.execution=sealed_read(self.root/'execution-v5.json')
         self.technical=require_technical(self.root,self.plan,self.execution)
         saved=operations(self.root); self.rows={}
-        for task in self.plan['tasks']:
+        for task in self.tasks:
             path=self.root/'originals-v5'/(digest(task['id'])+'.json')
             if not path.exists(): continue
             row=sealed_read(path); op=saved.get('v5/original/'+task['id'])
@@ -100,24 +115,33 @@ class Source:
                 raise ValueError('Original source/request/identity mismatch')
             if op['status']=='returned' and row['raw']!=op['result']:
                 raise ValueError('Saved raw original differs from operation')
+            if any(row.get(k)!=v for k,v in raw_metadata(row['raw'],row['input_ids']).items()):
+                raise ValueError('Original token fingerprints/lengths changed')
             if row['status']=='returned':
                 if row['score']!=final_score(row['raw']['text'],row['raw']['stopped'],task['expected'],task['arm']):
                     raise ValueError('Original scoring changed')
-                for cut in row['boundaries']:
-                    if row['raw']['text'][:cut['char_end']]!=cut['prefix'] or not 0<=cut['k']<=len(row['raw']['tokens']):
-                        raise ValueError('Saved boundary changed')
+                from .reconstruction import validate_boundaries
+                validate_boundaries(row)
             self.rows[task['id']]=row
-        if complete and len(self.rows)!=len(self.plan['tasks']):
-            raise ValueError('Full planned collection required for downstream analyses/review')
+        if complete and len(self.rows)!=len(self.tasks):
+            raise ValueError('Complete attempted batch snapshot required for downstream analyses/review')
         self.hash=digest(dict(plan=self.plan['plan_hash'],execution=self.execution['artifact_hash'],technical=self.technical['artifact_hash'],
                               originals={tid:r['artifact_hash'] for tid,r in self.rows.items()}))
-        self.binding=dict(path=str(self.root),source_hash=self.hash,plan_hash=self.plan['plan_hash'],backend_hash=self.execution['backend_hash'])
-        if (self.root/'collection-v5.json').exists():
+        self.binding=dict(scope=scope,source_hash=self.hash,plan_hash=self.plan['plan_hash'],backend_hash=self.execution['backend_hash'])
+        if scope=='all' and (self.root/'collection-v5.json').exists():
             saved_collection=sealed_read(self.root/'collection-v5.json')
             if saved_collection['source_binding']!=self.hash:
                 raise ValueError('Collection source binding changed')
 
-def bound_source(binding):
-    source=Source(binding['path'])
-    if source.binding!=binding: raise ValueError('Frozen source binding changed')
+    def binding_at(self, directory):
+        return dict(self.binding, path=os.path.relpath(self.root, Path(directory).resolve()))
+
+def binding_identity(binding):
+    return {k:v for k,v in binding.items() if k!='path'}
+
+def bound_source(binding, directory):
+    path=Path(binding['path'])
+    if path.is_absolute(): raise ValueError('Staged source bindings must be relative')
+    source=Source(Path(directory)/path,scope=binding['scope'])
+    if source.binding!=binding_identity(binding): raise ValueError('Frozen source binding changed')
     return source

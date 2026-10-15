@@ -16,4 +16,7 @@ def workload(worlds):
                 timing_status='NOT_MEASURED_LIVE')
 
 def report():
-    return {phase:workload(w) for phase,w in [('pilot',4),('selection',12),('confirmation',48)]}
+    result = {phase:workload(w) for phase,w in [('pilot',4),('remaining',56),('full',60)]}
+
+    result['remaining']['technical'] = dict(generation_calls=0,generated_tokens=0,note='reuse the original run technical validation')
+    return result

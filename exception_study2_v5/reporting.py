@@ -6,7 +6,7 @@ from exception_pilot.core import rng_for
 from exception_pilot.storage import write_json
 from exception_continuation.runner import sealed_read
 from . import PROTOCOL, ESTIMAND
-from .core import CALIBRATION, COHORT_MIN_WORLDS
+from .core import COHORT_MIN_WORLDS
 from .runner import Source
 
 
@@ -47,20 +47,20 @@ def outcome_group(planned,rows):
     return dict(planned=planned,returned=sum(r['raw'] is not None for r in rows),valid=valid,
                 correct=correct,wrong=valid-correct,strict_format=strict,
                 pattern_wrong=sum(r["score"]["correct"] is False and r["score"]["answer"]==r["task"]["pattern"] for r in rows if r["status"]=="returned"),
-                truncated=sum(r['raw'] is not None and r['raw'].get('finish')=='length' for r in rows),
+                truncated=sum(isinstance(r['raw'],dict) and r['raw'].get('finish')=='length' for r in rows),
                 missing=planned-len(rows),invalid_or_unavailable=len(rows)-valid,
                 unknown=planned-valid,accuracy_valid=correct/valid if valid else None,
                 accuracy_bounds=[correct/planned,(correct+planned-valid)/planned] if planned else None)
 
-def behavioral_report(output):
-    source=Source(output,complete=False);plan=source.plan;groups={};pairs=defaultdict(dict)
+def behavioral_report(output, scope='pilot'):
+    source=Source(output,complete=False,scope=scope);plan=source.plan;groups={};pairs=defaultdict(dict)
     for framing in ('original','lookup'):
         groups[framing]={}
         for arm in ('direct','visible'):
             rows=[r for r in source.rows.values() if r['task']['framing']==framing and r['task']['arm']==arm]
-            groups[framing][arm]=outcome_group(sum(t['framing']==framing and t['arm']==arm for t in plan['tasks']),rows)
+            groups[framing][arm]=outcome_group(sum(t['framing']==framing and t['arm']==arm for t in source.tasks),rows)
     all_pairs=[]
-    for task in plan['tasks']:
+    for task in source.tasks:
         key=task['world']+'/'+str(task['variant'])+'/'+task['framing']
         row=source.rows.get(task['id']);pairs[key][task['arm']]=row
         if task['arm']=='visible':all_pairs.append(dict(task_id=key,world=task['world'],framing=task['framing']))
@@ -72,7 +72,7 @@ def behavioral_report(output):
             if obs[key]['visible']['answer']==rows['visible']['task']['pattern']:pattern.append(key)
     effects={f:{field:contrasts([c for c in all_pairs if c['framing']==f],obs,'visible','direct',field) for field in ('correct','strict_correct')} for f in ('original','lookup')}
     interaction={}
-    for w in plan['worlds']:
+    for w in source.worlds:
         ds=[]
         for variant in (0,1):
             values=[]
@@ -84,20 +84,16 @@ def behavioral_report(output):
         if len(ds)==2:interaction[w['id']]=ds
     primary_pattern=[p for p in pattern if p.endswith('/original')]
     error_worlds={p.rsplit('/',2)[0] for p in primary_pattern}
-    complete=len(source.rows)==len(plan['tasks'])
-    passed=complete and groups['original']['direct']['correct']>=CALIBRATION['min_direct_correct'] and len(primary_pattern)>=CALIBRATION['min_matched_pattern_errors'] and len(error_worlds)>=CALIBRATION['min_error_worlds']
-    result=dict(protocol=PROTOCOL,phase=plan['phase'],source=source.binding,measurement=source.execution['mode'],
+    complete=len(source.rows)==len(source.tasks)
+    result=dict(protocol=PROTOCOL,phase=plan['phase'],source=source.binding_at(output),scope=scope,measurement=source.execution['mode'],
         status='COMPLETE' if complete else 'INCOMPLETE',by_condition=groups,visible_minus_direct=effects,
         lookup_minus_original_reasoning_effect=clustered(interaction),
         matched_errors=len(matched),matched_pattern_errors=len(pattern),original_matched_pattern_errors=len(primary_pattern),
         original_pattern_error_worlds=len(error_worlds),
-        calibration=dict(passed=passed if plan['phase']=='selection' else None,
-                         thresholds=CALIBRATION if plan['phase']=='selection' else None,
-                         status='NOT_APPLICABLE_CONFIRMATION' if plan['phase']=='confirmation' else
-                         'PENDING_COMPLETE_COLLECTION' if not complete else 'PASSED' if passed else 'FAILED'),
+        calibration=dict(passed=None,thresholds=None,status='NO_BEHAVIORAL_SUCCESS_GATE'),
         behavioral_replication='PENDING_REAL_MODEL' if source.execution['mode']=='MOCK' else 'DESCRIPTIVE_V5_DATA',
         annotation_eligibility='SEPARATE_REVIEW_REQUIRED',next_stage='STOP',interpretation=ESTIMAND)
-    write_json(Path(output)/'behavioral-summary-v5.json',result);return result
+    write_json(Path(output)/f'behavioral-summary-{scope}-v5.json',result);return result
 
 def annotation_report(source,manifest):
     families={};events={};both=[];strata=defaultdict(Counter)
@@ -147,7 +143,7 @@ def trajectory_report(source,plan,data):
     for f in ('original','lookup'):
         d=defaultdict(dict)
         for (w,v),x in primary[f].items():d[w][v]=x
-        longitudinal[f]=dict(estimate=clustered(complete(d)),complete_pairs=len(primary[f]),planned_pairs=len(source.plan['worlds'])*2,
+        longitudinal[f]=dict(estimate=clustered(complete(d)),complete_pairs=len(primary[f]),planned_pairs=len(source.worlds)*2,
                              complete_worlds=len(complete(d)))
     return dict(primary_original_pre_answer_minus_initial=longitudinal['original'],lookup_secondary=longitudinal['lookup'],
         coverage={k:dict(v) for k,v in coverage.items()},secondary={k:clustered(complete(v)) for k,v in secondary.items()},
@@ -162,7 +158,7 @@ def intervention_report(manifest,data):
             score=v.get('score',{}) if v['status']=='returned' else {}
             obs[r['task_id']][arm]={**score,'preference':v.get('readouts',{}).get('0',{}).get('gold_pattern_log_odds')}
             coverage[arm][v['status']]+=1;coverage[arm]['valid']+=score.get('valid',False)
-            coverage[arm]['truncated']+=v.get('raw',{}).get('finish')=='length'
+            coverage[arm]['truncated']+=isinstance(v.get('raw'),dict) and v['raw'].get('finish')=='length'
             coverage[arm]['preference_returned']+='0' in v.get('readouts',{})
     contrasts_list=[('primary','value_blind','meaning_control'),('blind_minus_unchanged','value_blind','unchanged'),
                     ('meaning_minus_unchanged','meaning_control','unchanged'),('explicit_minus_unchanged','explicit_value','unchanged'),
