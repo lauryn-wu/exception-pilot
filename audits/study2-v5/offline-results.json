@@ -1,0 +1,20 @@
+{
+  "tests": 565,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "seconds": 304.88098620809615,
+  "network_blocked": true,
+  "v5_tests": 36,
+  "v5_source_hash": "a389b99f873dbdb822852f868d2b33948fc32b768ac752cf368faeabf004690a",
+  "v4_source_hash": "913f64efa3f12a1a787575c14c7670e072e250d7e8a3690a9957cfa70bb88e78",
+  "base_commit": "bfee376e6369a6266f0d4671761312c2d667b240",
+  "preserved_prior_files": 353,
+  "changed_prior_files": [],
+  "real_qwen_inference_calls": 0,
+  "paid_judge_calls": 0,
+  "model_downloads": 0,
+  "cloud_resources_launched": 0,
+  "real_model_status": "PENDING_FRESH_NEW_POD_GATE",
+  "review_mode": "Independent manual imports and adjudication; semantic validity still requires real review"
+}
