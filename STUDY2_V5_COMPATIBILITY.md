@@ -65,13 +65,14 @@ behavioral replication, event prevalence, semantic edit validity and full-sample
 pending. The real pinned tokenizer/template is tested offline; this is not model
 repeatability. Fake generation/logits are labelled MOCK throughout.
 
-Review is deliberately an auditable **manual two-reviewer/third-adjudicator import
+The original review path is an auditable **manual two-reviewer/third-adjudicator import
 workflow** with new semantic rubrics. It does not claim to automatically determine
 meaning from keyword rules or to have executed the legacy paid judge pipeline.
 Independent semantic certification can be wrong; reviewers must check complete
 source text. In particular, first-occurrence/absence/hint-free meaning are semantic
 judgments, not proven by lexical validators. Class-letter checks are supplemental.
-No new automated paid judge client is part of v5; its necessity was not assumed.
+The additive optional judge module now reuses the existing provider client; see
+[STUDY2_V5_JUDGES.md](STUDY2_V5_JUDGES.md). No paid calls were run while implementing it.
 
 Two eligible worlds is only a descriptive coverage flag, never a continuation gate or power calculation.
 Low-prevalence clean overrides may yield insufficient coverage. O's primary cohort
@@ -98,5 +99,9 @@ machine with different hardware and no model directory. Live resumption still re
 the frozen model path and backend fingerprint; this amendment does not promise cross-GPU
 live compatibility or bypass the existing live identity checks.
 
-No automatic paid judge client or activation extractor was added. Independent structured
-review import, third-review adjudication and manual semantic verification are preserved.
+The staged amendment itself added no paid judge client or activation extractor.
+The later optional detection patch is isolated outside the scientific package; its
+own policy binds its code and the shared provider code. Independent structured
+review import, third-review adjudication and manual semantic verification remain.
+The frozen scientific v5 source hash stays
+`e545f0a756934f0d5c953db3a1c102146a1616dc2706913cb3537e8a5a6a2c2b`.

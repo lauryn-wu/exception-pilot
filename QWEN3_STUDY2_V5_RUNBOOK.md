@@ -125,7 +125,13 @@ STOP. This scores complete A/B/C candidate strings under both cues; no answers a
 generated and no cues enter original trajectories. Keep readout outcomes hidden
 from event annotators and edit drafters/verifiers.
 
-## 5. Independent event review (offline, manual structured imports)
+## 5. Independent event review (manual or optional automated detection)
+
+The manual path below is unchanged. For optional independently journaled J1/J2
+and conditional J3 with separate M/O prompts, use [STUDY2_V5_JUDGES.md](STUDY2_V5_JUDGES.md).
+That add-on preserves frozen scientific source hashes and exports the same annotation
+interface. Both paths retain the separate independent edit-verification step below.
+Choose one review path per source snapshot and preserve all failed/unresolved results.
 
 ```bash
 export REVIEW_V5="$V5_HOME/pilot-review"
@@ -137,8 +143,8 @@ Copy templates to `reviewer-1.json` and `reviewer-2.json`, then independently fi
 reviewer identity and all event statuses, rationale and certificates. Present events
 need exact Unicode code-point `[start,end]`, exact text and unique context anchors.
 Non-present decisions use null span/text/anchor/subtype. No keyword rule substitutes
-for semantic review. This implementation imports judge/human-authored files; it does
-not call a paid judge API. Never auto-fill acceptance certificates.
+for semantic review. This manual command imports judge/human-authored files; it does
+not call a paid judge API. Optional API detection uses the separate judge module. Never auto-fill acceptance certificates.
 
 ```bash
 python -m exception_study2_v5 freeze-annotations --output "$REVIEW_V5" --first "$REVIEW_V5/reviewer-1.json" --second "$REVIEW_V5/reviewer-2.json"
@@ -225,7 +231,8 @@ whether pilot results informed method design, and explicit remaining approval.
 There is no desired accuracy gap or minimum M/O event count. Zero-case exemptions
 are only for unavailable event/edit checks. Any scientific change (prompts, eligibility,
 edits, analysis) means STOP, new version and affected pilot labeled exploratory.
-The current strict source hash does not migrate any frozen runs after code repairs.
+The strict scientific source hash does not migrate frozen runs after scientific code
+repairs. The optional judge module is outside that hash and preserves it unchanged.
 
 Only if the unchanged scientific protocol and checklist are accepted:
 

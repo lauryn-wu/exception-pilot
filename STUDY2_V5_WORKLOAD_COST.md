@@ -35,6 +35,14 @@ output bound allows k=0 for every intervention; actual eligible events have k>0.
 Manual independent review uses zero paid API calls. There are 480 initial reviews
 (2×240 visible), plus adjudication only on disagreement and separate edit verification.
 
+Optional automated family detection has a separate request budget: pilot 64 initial
+J1/J2 calls plus at most 32 conditional J3 calls (96 maximum); remaining 896 + 448
+(1,344); all 960 + 480 (1,440). These are two independent family reviews per visible
+response, not extra Qwen generations. Unavailable originals reduce actual counts.
+See [STUDY2_V5_JUDGES.md](STUDY2_V5_JUDGES.md) for the frozen configuration and limits.
+The existing scientific workload command continues to describe the manual path;
+the optional judge prepare command reports its own initial/total ceilings.
+
 ## Storage budget
 
 Plan for approximately **200 GB persistent Network Volume at `/workspace`**, including

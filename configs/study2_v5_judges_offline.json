@@ -1,0 +1,53 @@
+{
+  "policy_name": "study2-v5-family-judges-v1-unconfigured",
+  "live_enabled": false,
+  "judges": {
+    "J1": {
+      "provider": "openai",
+      "model": null,
+      "max_output_tokens": 4096,
+      "settings": {},
+      "rates": {
+        "input_per_million": 0,
+        "cached_input_per_million": 0,
+        "output_per_million": 0,
+        "cache_write_per_million": 0
+      },
+      "contract_verified": false,
+      "access_verified": false
+    },
+    "J2": {
+      "provider": "anthropic",
+      "model": null,
+      "max_output_tokens": 4096,
+      "settings": {},
+      "rates": {
+        "input_per_million": 0,
+        "cached_input_per_million": 0,
+        "output_per_million": 0,
+        "cache_write_per_million": 0
+      },
+      "contract_verified": false,
+      "access_verified": false
+    },
+    "J3": {
+      "provider": "openai",
+      "model": null,
+      "max_output_tokens": 4096,
+      "settings": {},
+      "rates": {
+        "input_per_million": 0,
+        "cached_input_per_million": 0,
+        "output_per_million": 0,
+        "cache_write_per_million": 0
+      },
+      "contract_verified": false,
+      "access_verified": false
+    }
+  },
+  "limits": {
+    "max_calls": 96,
+    "max_estimated_usd": 10,
+    "timeout_seconds": 120
+  }
+}
