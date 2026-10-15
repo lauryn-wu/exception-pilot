@@ -1,4 +1,4 @@
-# Study 2 v5 automated review v2.0
+# Study 2 v5 automated review v2.1
 
 This is additive CPU-only **annotation**, not a new scientific experiment. It keeps
 v5 originals, prompts, model settings, 2A, 2B, token boundaries, technical gates and
@@ -10,6 +10,13 @@ requires a separate protocol amendment. No command here approves the remaining w
 The four-world pilot has already informed this redesign. It is exploratory development,
 not held-out validation. Exact API model compatibility and semantic accuracy remain
 **not tested** until explicitly authorized live calls have been inspected.
+
+This focused follow-up adds contrastive clause localization and a separately versioned,
+audit-informed balanced evaluation. The v2.0 codebook definitions, frozen v5 validator,
+scientific code and original results are unchanged. Review code/prompt hashes and
+`VERSION` changed: **prepare a fresh v2.1 review directory**. Old v2.0 plans, journals
+and reports remain historical artifacts; this version refuses to resume them under
+changed code. Do not edit or migrate their frozen files.
 
 ## What is frozen
 
@@ -26,7 +33,15 @@ statistical independence: correlated semantic errors remain possible.
 
 Canonical spans are Python Unicode character offsets. Repeated strings have different
 IDs. Statements are presegmented before extraction; judges cannot invent quotations or
-select arbitrary quote boundaries. A generated table cell uses its generated column
+select arbitrary quote boundaries. Contrastive comma/dash clauses (`but`, `yet`,
+`whereas`, `however`) can have separate nonoverlapping IDs. For example, `The recorded
+class is C, but we should prefer inferred A.` yields `The recorded class is C` and
+`but we should prefer inferred A.`. Every clause retains its exact enclosing statement
+and full-text context. A and O still require independent semantic acceptance; a split
+is not evidence of endorsement. This added clause pass leaves recognized quoted,
+conditional, explicitly denied, interrogative, table and field-list statements intact.
+Unsupported or ambiguous constructions can remain uncertain under the unchanged
+A-before-O and unique-anchor checks. A generated table cell uses its generated column
 header and exact target plate; field-list attribution records its preceding plate.
 Facts outside the supported structural grammar remain unknown. Context attribution
 and endorsement still require judges. The original source table never enters the
@@ -62,7 +77,7 @@ export TRANSFORMERS_OFFLINE=1
 export TOKENIZERS_PARALLELISM=false
 
 export SOURCE_V5="$HOME/exception-v5-recovery/study2-v5-staged-huwUCkqs/originals"
-export REVIEW_V2_OFFLINE="$HOME/exception-v5-recovery/study2-v5-review-v2-offline"
+export REVIEW_V2_OFFLINE="$HOME/exception-v5-recovery/study2-v5-review-v2-1-offline"
 
 python3.12 -m exception_study2_v5_review_v2 prepare \
   --source "$SOURCE_V5" --scope pilot \
@@ -72,8 +87,8 @@ python3.12 -m exception_study2_v5_review_v2 prepare \
 python3.12 -m exception_study2_v5_review_v2 inspect \
   --output "$REVIEW_V2_OFFLINE"
 
-python3.12 -m exception_study2_v5_review_v2 evaluate \
-  --output "$HOME/exception-v5-recovery/study2-v5-review-v2-controlled.json"
+python3.12 -m exception_study2_v5_review_v2 evaluate --suite balanced-audit1 \
+  --output "$HOME/exception-v5-recovery/study2-v5-review-v2-1-balanced-audit1.json"
 ```
 
 Set `SOURCE_V5` to the actual recovered directory if different. On RunPod it can
@@ -90,7 +105,7 @@ cannot export. Keep all private inputs/outputs outside the repository.
 ## Offline tests
 
 ```bash
-python3.12 -m unittest discover -s tests -p 'test_study2_v5_review_v2.py' -v
+python3.12 -m unittest discover -s tests -p 'test_study2_v5_review_v2*.py' -v
 ```
 
 For the complete existing suite, use the project's already pinned test environment
@@ -98,25 +113,51 @@ and an already available pinned tokenizer. Do not download a tokenizer automatic
 
 ```bash
 export QWEN3_TOKENIZER_DIR=/absolute/path/to/existing/pinned/tokenizer
-python audits/study2-v5-review-v2/run_full_offline.py
+python audits/study2-v5-review-v2-followup/run_full_offline.py
 ```
 
 The full runner blocks socket connections and writes its machine-readable result to
-`/tmp/study2-v5-review-v2-full-offline-results.json`. Historical CPU random-model tests
+`/tmp/study2-v5-review-v2-followup-full-offline-results.json`. Historical CPU random-model tests
 remain part of the full suite; none run pretrained Qwen inference. New tests also
 block construction of `LocalBackend`.
 
-The seeded suite has 192 cases, 64 authored templates, 96 cases per split. Each
+The preserved historical v2.0 suite has 192 cases, 64 authored templates, 96 cases per split. Each
 three-case template family uses distinct context/layout challenges, not independent
 random samples. Do not interpret 192 as 192 IID observations. Development and held-out
-wording differ. The frozen split/hash and first evaluation are recorded in the audit.
+wording differ. The frozen split/hash and first evaluation are recorded in the original audit.
+`evaluate --suite historical` (the backward-compatible default) replays that original
+sentence representation; it is not an evaluation of the new clause localizer. Its
+hash and complete evaluation output are regression-tested against the prior artifacts.
+
+The separate `controlled-v2.1-balanced-audit1` suite uses the current production
+localizer: **3,600 variants = 20 authored scenarios × 6 ordered recorded/inferred
+pairs × 3 target identifiers × 10 data-row positions**. Each recorded class and
+inferred class appears 1,200 times, each ordered pair 600 times, each target 1,200
+times, and each row position 360 times. Every scenario contains every combination.
+Gold clause spans are authored before localization; misalignment fails instead of
+propagating a parent label to every new fragment. Its seed, hash, results and provenance
+are saved separately in `audits/study2-v5-review-v2-followup/`.
+
+These revised examples explicitly respond to this audit. They are **not independent
+validation, not held-out data, and not 3,600 independent observations**. Counterbalanced
+variants share 20 scenarios. They test all six event types, compound overrides and
+conflict-only/rejected alternatives, negation, hypotheses, quotes, other plates/fields,
+correct predictions, corrections and ordering. Neither suite measures paid-model
+semantic performance.
 
 The report separates structural extraction recall, **oracle-wired** reconciliation
 precision/recall/F1/confusion/abstention, and production behavior with no judges
 (100% abstention on available originals). Oracle correctness does **not** establish
 real semantic judge accuracy. Actual model-based ≥95% precision/recall targets are
-unverified. Held-out structural C/O recall falls below 95%; these observed results
+unverified. Historical held-out structural C/O recall falls below 95%; these observed results
 were retained without tuning the extractor against the held-out wording.
+
+Follow-up acceptance: **685 full offline tests passed** (656 prior + 29 new),
+0 failures/errors/skips, 391.799 seconds. The focused follow-up run passed
+29/29 in 17.492 seconds. The new fixture report has 4,320 exact accepted spans and
+540 ordered A→O pairs with supplied oracle judgments. These counts do not certify
+real semantic accuracy. Exact logs, provenance and preservation hashes are in
+`audits/study2-v5-review-v2-followup/`.
 
 ## Configure a later authorized live run
 
@@ -167,7 +208,7 @@ The fresh live policy must already have been configured as above. These commands
 are intentionally separate from offline inspection and use a fresh output directory:
 
 ```bash
-export REVIEW_V2_LIVE="$HOME/exception-v5-recovery/study2-v5-review-v2-live"
+export REVIEW_V2_LIVE="$HOME/exception-v5-recovery/study2-v5-review-v2-1-live"
 export REVIEW_V2_CONFIG="$HOME/exception-v5-recovery/review-v2-live.json"
 
 python3.12 -m exception_study2_v5_review_v2 prepare \
@@ -175,14 +216,20 @@ python3.12 -m exception_study2_v5_review_v2 prepare \
   --output "$REVIEW_V2_LIVE" --config "$REVIEW_V2_CONFIG"
 
 python3.12 -m exception_study2_v5_review_v2 smoke \
-  --output "$REVIEW_V2_LIVE" --live --max-calls 4 --wall-seconds 600
+  --output "$REVIEW_V2_LIVE" \
+  --case-id staged-v5-001/v1/original/visible \
+  --live --max-calls 4 --wall-seconds 600
 
 python3.12 -m exception_study2_v5_review_v2 inspect \
   --output "$REVIEW_V2_LIVE"
 ```
 
 **Stop here and inspect raw responses and parsed validity** under `judge-operations/`,
-plus `cases/` and `reports/`. The smoke visits only the first available trajectory:
+plus `cases/` and `reports/`. `--case-id` selects exactly that available visible task
+from the frozen plan; unknown, direct or unavailable tasks fail before dispatch.
+Omit it to select the first available trajectory on the first invocation. The choice
+is sealed in `smoke-selection-v2.json`; later invocations with no ID reuse that choice,
+and attempts to change it fail. The smoke visits only this one trajectory:
 extractor, primary J1, primary J2, full-text auditor; it defers J3 and audit-finding
 verification. The limit is **at most four calls**, fewer after a budget stop or if
 there are no candidates. It is not a completed annotation or quality benchmark.
@@ -230,9 +277,10 @@ when audit findings need verification, at most 128 including both conditional J3
 phases. Smoke calls count toward these totals, not in addition. Fewer calls are possible
 with empty candidate sets, unavailable originals or budget stops. No retry allowance.
 
-Read-only preparation of this recovered pilot yielded 368 structural candidates and
+Historical v2.0 read-only preparation of this recovered pilot yielded 368 structural candidates and
 2,138,958 serialized request bytes for the initial 64-call schedule, before semantic
-extractor additions. At an assumed 3 bytes/token that is about 0.71M input tokens.
+extractor additions. Clause localization may change these counts; use fresh `inspect`
+output for v2.1. At an assumed 3 bytes/token that is about 0.71M input tokens.
 Allow roughly **0.7–2.0M input and 0.15–0.8M output tokens** across 64–128 calls;
 actual tokenizer, schema overhead, reasoning tokens, candidate additions and verbosity
 can change this substantially. Assuming **$1–$3/M input and $5–$15/M output**, that

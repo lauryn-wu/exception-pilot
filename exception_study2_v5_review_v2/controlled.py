@@ -114,7 +114,9 @@ def generate():
                     target=dict(plate='T',verified_class='C',target_row_position=position,
                                 target_row_index_base=0,target_row_number_one_based=position+1,row=rows[position]),
                     plates=['T','U']+[f'R{i}' for i in range(1,9)],pre_answer_text=text if available else '',original_available=available)
-                p=packet(view)
+                # Historical suite retains its original statement representation.
+                # Current clause localization is evaluated in controlled_balanced.
+                p=packet(view,clause_level=False)
                 labels={s['id']:[e for g in gold if g['span'][0]<=s['span'][0] and s['span'][1]<=g['span'][1] for e in g['events']]
                         for s in p['statements']}
                 # Truncation does not remove observed assertions; invalid final

@@ -28,6 +28,40 @@ def segment(text):
                                span=[start,end], text=text[start:end]))
     return result
 
+def localize_clauses(text, statements):
+    """Localize contrastive prose without asserting that either clause is true.
+
+    Keep the historical sentence segmenter reproducible. Only explicit comma /
+    dash coordinators are split here; tables, field lists, quoted, conditional,
+    interrogative and explicitly denied statements retain their original scope.
+    Every split clause carries its enclosing statement and the full packet text.
+    Unrecognized constructions remain whole and may fail the unchanged A→O gate.
+    """
+    result=[]
+    boundary=re.compile(r'(?:,|\s+[—–]\s*)\s*(?=(?:but|yet|whereas|however)\b)',re.I)
+    guarded=re.compile(r'(?i)\b(?:if|unless|suppose|imagine|hypothetically)\b|'
+                       r'\b(?:it is (?:false|untrue)|(?:do|does|did) not (?:say|claim)|'
+                       r'(?:deny|denies|denied|reject|rejects|rejected) that)\b')
+    for statement in statements:
+        raw=statement['text']
+        quoted=bool(re.search(r'["“”«»`]|(?<!\w)[‘\']|[’\'](?!\w)',raw))
+        if ('|' in raw or re.search(r'(?i)verified\s+class\s*[*_`]*\s*:',raw)
+            or quoted or guarded.search(raw) or raw.rstrip().endswith('?')):
+            result.append(statement);continue
+        matches=list(boundary.finditer(raw))
+        if not matches:
+            result.append(statement);continue
+        bounds=list(zip([0]+[m.end() for m in matches],[m.start() for m in matches]+[len(raw)]))
+        for index,(a,b) in enumerate(bounds):
+            while a<b and raw[a].isspace():a+=1
+            while b>a and raw[b-1].isspace():b-=1
+            if a==b:continue
+            start,end=statement['span'][0]+a,statement['span'][0]+b
+            result.append(dict(id='s-'+digest([start,end,text[start:end]])[:20],
+                               span=[start,end],text=text[start:end],
+                               enclosing_statement=statement,clause_index=index))
+    return result
+
 def _cell_parts(text, offset):
     pipes=[m.start() for m in re.finditer(r'\|',text)]
     return [(text[a+1:b], [offset+a+1,offset+b]) for a,b in zip(pipes,pipes[1:])]
@@ -83,8 +117,9 @@ def reference_facts(view, statements):
         facts[s['id']]=f
     return facts
 
-def packet(view):
+def packet(view, *, clause_level=True):
     statements=segment(view['pre_answer_text'])
+    if clause_level:statements=localize_clauses(view['pre_answer_text'],statements)
     return dict(view, statements=statements, reference_facts=reference_facts(view,statements))
 
 def structural_candidates(packet):

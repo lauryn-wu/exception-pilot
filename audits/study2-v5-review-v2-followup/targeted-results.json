@@ -1,0 +1,11 @@
+{
+  "tests_run": 29,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "elapsed_seconds": 17.492,
+  "paid_judge_calls": 0,
+  "pretrained_qwen_inference_calls": 0,
+  "synthetic_transport_only": true
+}

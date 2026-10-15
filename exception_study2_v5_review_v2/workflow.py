@@ -169,15 +169,31 @@ def case(review,journal,tid,smoke=False):
                 source_row_hash=p['source_row_hash'])
 
 
-def run(output,live=False,transport=None,max_calls=None,wall_seconds=None,clock=None,stage='all'):
+def run(output,live=False,transport=None,max_calls=None,wall_seconds=None,clock=None,stage='all',case_id=None):
     if stage not in ('all','smoke'):raise ValueError('Choose all or smoke')
+    if case_id is not None and stage!='smoke':raise ValueError('case_id is only supported for smoke')
     if stage=='smoke':max_calls=min(max_calls,4) if max_calls is not None else 4
     with run_lock(Path(output)/'locks'):
-        review=Review(output); journal=journal_for(review,live,transport,max_calls,wall_seconds,clock)
+        review=Review(output)
+        ids=review.plan['case_ids']
+        selection=None
+        if stage=='smoke':
+            selection_path=review.root/'smoke-selection-v2.json'
+            saved=sealed_read(selection_path) if selection_path.exists() else None
+            selected=case_id if case_id is not None else saved['case_id'] if saved else next(
+                (t for t in ids if review.plan['packets'][t]['original_available']),None)
+            if case_id is not None and (not isinstance(case_id,str) or case_id not in ids):
+                raise ValueError('Smoke case_id must identify a visible case in this frozen plan')
+            if selected is not None and (selected not in ids or not review.plan['packets'][selected]['original_available']):
+                raise ValueError('Smoke case original is unavailable')
+            selection=dict(review_plan_hash=review.plan['artifact_hash'],case_id=selected,maximum_calls=4)
+            if saved and saved!={**selection,'artifact_hash':digest(selection)}:
+                raise ValueError('Smoke case selection is immutable; cannot switch cases in this output directory')
+            ids=[selected] if selected is not None else []
+        journal=journal_for(review,live,transport,max_calls,wall_seconds,clock)
+        if selection is not None:freeze(selection_path,selection)
         report=dict(complete=False,cases={})
         try:
-            ids=review.plan['case_ids']
-            if stage=='smoke':ids=next(([t] for t in ids if review.plan['packets'][t]['original_available']),[])
             for tid in ids:
                 r=case(review,journal,tid,smoke=stage=='smoke')
                 if r is None:break

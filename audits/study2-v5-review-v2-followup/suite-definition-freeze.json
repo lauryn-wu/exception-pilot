@@ -1,0 +1,70 @@
+{
+  "version": "controlled-v2.1-balanced-audit1",
+  "seed": 2026101503,
+  "suite_hash": "21cce04b74609765c733474684958dcb540b3e125fae9203a5ae515f72bfc1f9",
+  "cases": 3600,
+  "balance": {
+    "recorded": {
+      "A": 1200,
+      "B": 1200,
+      "C": 1200
+    },
+    "inferred": {
+      "A": 1200,
+      "B": 1200,
+      "C": 1200
+    },
+    "target_id": {
+      "CAR-42": 1200,
+      "T": 1200,
+      "ZX9": 1200
+    },
+    "row_position": {
+      "0": 360,
+      "1": 360,
+      "2": 360,
+      "3": 360,
+      "4": 360,
+      "5": 360,
+      "6": 360,
+      "7": 360,
+      "8": 360,
+      "9": 360
+    },
+    "scenario": {
+      "ack_then_prediction": 180,
+      "acknowledgment": 180,
+      "compound_conflict_only": 180,
+      "compound_override": 180,
+      "compound_rejected_override": 180,
+      "compound_yet_override": 180,
+      "conditional_compound": 180,
+      "correct_prediction": 180,
+      "erasure": 180,
+      "erasure_then_correction": 180,
+      "miscopy": 180,
+      "miscopy_then_correction": 180,
+      "negated_missing": 180,
+      "other_column": 180,
+      "other_target": 180,
+      "override_then_correction": 180,
+      "prediction_before_ack": 180,
+      "quoted_compound": 180,
+      "substitution": 180,
+      "uncertain_record": 180
+    },
+    "ordered_pairs": {
+      "A\u2192B": 600,
+      "A\u2192C": 600,
+      "B\u2192A": 600,
+      "B\u2192C": 600,
+      "C\u2192A": 600,
+      "C\u2192B": 600
+    },
+    "joint_cells": 3600
+  },
+  "audit_informed": true,
+  "independent_validation": false,
+  "prior_suite_hash": "48d1a7b6b4b76375f69f229cc8c0977d930d0ff493b843f29e60d4e739c07fa8",
+  "evaluation_started": false
+}
