@@ -1,0 +1,55 @@
+{
+  "base_revision": "40aa1f7c5b61e8862a9c9d0f3768e9880323bbc1",
+  "baseline_sha256": "a2bfc17d052801d462f71c268035d0bf09344a47818f2e33274e25badef5aab5",
+  "preexisting_tracked_files": 492,
+  "changed_preexisting_files": [],
+  "historical_archives": [
+    {
+      "path": "/Users/laurynwu/exception-v5-recovery/study2-v5-staged-huwUCkqs",
+      "files_before": 786,
+      "files_after": 786,
+      "changed_files": [],
+      "byte_identical": true
+    },
+    {
+      "path": "/Users/laurynwu/exception-v5-recovery/study2-v5-review-v2-1-live",
+      "files_before": 639,
+      "files_after": 639,
+      "changed_files": [],
+      "byte_identical": true
+    },
+    {
+      "path": "/Users/laurynwu/exception-v5-recovery/study2-v5-review-v2-1-salvage-v2-2",
+      "files_before": 5,
+      "files_after": 5,
+      "changed_files": [],
+      "byte_identical": true
+    },
+    {
+      "path": "/Users/laurynwu/exception-v5-recovery/study2-residual-v1-offline",
+      "files_before": 5,
+      "files_after": 5,
+      "changed_files": [],
+      "byte_identical": true
+    },
+    {
+      "path": "/Users/laurynwu/exception-v5-recovery/study2-residual-v1-1-offline",
+      "files_before": 5,
+      "files_after": 5,
+      "changed_files": [],
+      "byte_identical": true
+    },
+    {
+      "path": "/Users/laurynwu/exception-v5-recovery/study2-v5-pilot-fixed",
+      "files_before": 2,
+      "files_after": 2,
+      "changed_files": [],
+      "byte_identical": true
+    }
+  ],
+  "historical_file_count": 1442,
+  "passed": true,
+  "inference_calls": 0,
+  "paid_calls": 0,
+  "original_artifacts_modified": false
+}

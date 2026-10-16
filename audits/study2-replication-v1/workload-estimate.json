@@ -1,0 +1,103 @@
+{
+  "status": "Offline planning scenario; not a new benchmark",
+  "hardware": "NVIDIA H100 80GB HBM3",
+  "backend": {
+    "batch_size": 1,
+    "precision": "BF16",
+    "quantization": null,
+    "engine": "Hugging Face Transformers 4.51.3 / torch 2.7.1+cu126, eager attention",
+    "decoding": "greedy; enable_thinking=False; original frozen chat formatting"
+  },
+  "remaining_worlds": 56,
+  "generation_calls": 448,
+  "direct_calls": 224,
+  "visible_calls": 224,
+  "original_prompt_tokens": 181276,
+  "generated_output_token_ceiling": 917504,
+  "pilot_scaled_generated_output_tokens": 99204,
+  "readout_cap": 2688,
+  "candidate_sequence_cap": 8064,
+  "teacher_forced_candidate_token_cap": 16128,
+  "edited_continuations": 0,
+  "generated_measurement_answers": 0,
+  "paid_judge_calls": 0,
+  "tokenizer_audit": {
+    "cue_token_lengths": {
+      "\nANSWER:": 4,
+      "\nFinal answer:": 4
+    },
+    "candidate_token_lengths": {
+      "A": 2,
+      "B": 2,
+      "C": 2
+    },
+    "pilot_scoring_forward_token_occurrences": 231072,
+    "remaining_pilot_scaled": 3235008,
+    "conservative_fixed_position_upper": 8800512,
+    "pilot_readouts": 112,
+    "remaining_pilot_scaled_readouts": 1568,
+    "remaining_original_prompt_tokens": 181276,
+    "tokenizer_only": true,
+    "inference_calls": 0
+  },
+  "scoring_forward_tokens_per_second_assumed": [
+    800,
+    2000
+  ],
+  "pilot_scaled_scoring_seconds_scenario": [
+    1617.504,
+    4043.76
+  ],
+  "measured_scoring_seconds": null,
+  "originals_generation_seconds_extrapolated": 5473.868157743011,
+  "mean_model_initialization_seconds": 236.68369556614198,
+  "collection_seconds_with_one_load": 5710.551853309153,
+  "two_stage_compute_hours_scenario": [
+    2.1013165413542483,
+    2.7752765413542484
+  ],
+  "historical_hourly_rate_assumption": 3.99,
+  "historical_rate_source": "User-provided RunPod H100 SXM screenshot; not a current quote",
+  "two_stage_compute_cost_scenario": [
+    8.38425300000345,
+    11.073353400003452
+  ],
+  "collection_cost_one_load_scenario": 6.329194970750978,
+  "estimated_peak_vram_gib": [
+    68,
+    77
+  ],
+  "peak_vram_measured": false,
+  "weights_gib": 61.02,
+  "workspace_volume_gb_recommendation": 200,
+  "limitations": [
+    "Only four examined worlds inform generation length and timing.",
+    "No completed pilot readout journals/telemetry in local recovery; 112-slot plan verified only.",
+    "800\u20132000 scoring forward tokens/s is an unmeasured planning assumption.",
+    "Ranges are scenarios, not runtime bounds.",
+    "Token-boundary extraction, journal/hash verification, CPU reporting, storage, and idle time are additional.",
+    "Exact original hardware/backend identity required; alternatives are not silently substituted.",
+    "Collection overhead is extrapolated from the complete pilot invocation. New wrapper integrity checks, readout bookkeeping, and reporting may add time beyond this scenario."
+  ],
+  "pilot_collection_invocation": {
+    "path": "/Users/laurynwu/exception-v5-recovery/study2-v5-staged-huwUCkqs/originals/timing-v5/invocations/7ee6b0b376704513a8f148858958e9fb.json",
+    "sha256": "53bf41230183a1d65fc57c299026dbebf1b7ce894e126401f5c478edeab706ba",
+    "artifact_hash": "325d76e0577d00277476c4e3960b96da3ce17c60711104af786ec7db28e14b31",
+    "elapsed_seconds": 695.4039059751667,
+    "load_seconds": 202.41476851911284,
+    "generation_seconds": 390.99058269592933,
+    "other_collection_seconds": 101.99855476012453,
+    "returned_originals": 32
+  },
+  "remaining_collection_overhead_seconds_extrapolated": 1427.9797666417435,
+  "collection_wall_seconds_scenario": 7138.531619950896,
+  "collection_wall_cost_scenario": 7.9118725454455765,
+  "two_stage_with_collection_overhead_hours_scenario": [
+    2.4979775876436214,
+    3.1719375876436215
+  ],
+  "two_stage_with_collection_overhead_cost_scenario": [
+    9.96693057469805,
+    12.656030974698051
+  ]
+}
