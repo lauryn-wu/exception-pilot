@@ -4,7 +4,7 @@ import json
 import math
 from exception_pilot.core import digest
 from exception_study2_v5_review_v22.batches import filter_candidates,partition
-from .evidence import historical_evidence,resolve
+from .evidence import historical_evidence,source_resolution
 from .providers import payload
 from .policy import RUBRICS,SCHEMAS
 
@@ -38,13 +38,16 @@ def build(history,policy):
         packet=history.packets[tid];kept,excluded=filter_candidates(c['candidates']);evidence={};resolutions={}
         for cand in kept:
             key=cand['id'];evidence[key]=historical_evidence(packet,c,cand,old_judges)
-            resolutions[key]=resolve(evidence[key]);prior=c['result']['candidate_status'][key]
+            resolutions[key]=source_resolution(packet,cand,evidence[key]);prior=c['result']['candidate_status'][key]
             current=resolutions[key]['status'];counts['retained_'+current]+=1
             if prior!=current:changes.append(dict(task_id=tid,candidate_id=key,previous=prior,current=current,reason=resolutions[key]['reason']))
             if resolutions[key]['genuine_disagreement']:counts['deferred_genuine_disagreement']+=1
-            if resolutions[key]['required_providers']:counts['candidates_needing_new_judgments']+=1
-            counts['provider_decisions_needed']+=len(resolutions[key]['required_providers'])
-            for provider in resolutions[key]['required_providers']:
+            if resolutions[key]['deferred_source_witness']:
+                counts['deferred_source_witness']+=1
+                counts['source_witness_provider_decisions_avoided']+=len(resolutions[key]['required_providers'])
+            if resolutions[key]['dispatch_providers']:counts['candidates_needing_new_judgments']+=1
+            counts['provider_decisions_needed']+=len(resolutions[key]['dispatch_providers'])
+            for provider in resolutions[key]['dispatch_providers']:
                 # Sorting coordinates only; actual source span stays in candidate.
                 needed[provider].append(dict(id=tid+'::'+key,span=[index,cand['span'][0]],task_id=tid,candidate=cand))
         for excluded_row in excluded:counts['excluded_'+c['result']['candidate_status'][excluded_row['candidate']['id']]]+=1

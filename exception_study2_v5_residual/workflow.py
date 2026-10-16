@@ -18,7 +18,7 @@ from . import VERSION
 from .history import History
 from .policy import freeze_policy,RUBRICS,SCHEMAS
 from .planning import build
-from .evidence import resolve,new_vote
+from .evidence import source_resolution,new_vote
 from .journal import Journal
 from .providers import payload,parse_response
 
@@ -167,7 +167,7 @@ def results(r):
                     local['value']=dict(value,decisions=mapped)
                 votes=new_vote(local,packet,cs);audits[tid]=votes
                 for key,d in votes['decisions'].items():
-                    c['prior_evidence'][key].append(dict(epoch='residual-v1',judge=req['judge'],provider=req['provider'],
+                    c['prior_evidence'][key].append(dict(epoch=VERSION,judge=req['judge'],provider=req['provider'],
                         model=r.policy['config']['judges'][req['judge']]['model'],request_id=req['id'],
                         operation_key=entry['key'],operation_hash=entry['artifact_hash'],decision=d))
             new_audits[req['id']]=dict(cases=audits,unknown_ids=unknown_ids,
@@ -195,7 +195,7 @@ def results(r):
             c[field]=effective
     final={}
     for tid,c in cases.items():
-        resolutions={key:resolve(es) for key,es in c['prior_evidence'].items()}
+        resolutions={cand['id']:source_resolution(c['packet'],cand,c['prior_evidence'][cand['id']]) for cand in c['candidates']}
         phase=dict(candidates={key:dict(status=d['status'],prior_ack_ids=d['prior_ack_ids'],initial_agreement=d['status']!='uncertain',adjudicated=False)
                               for key,d in resolutions.items()},initial_agreement=all(d['status']!='uncertain' for d in resolutions.values()),adjudicated=False)
         outcome=old_decisions.finalize(c['packet'],c['candidates'],[phase],c['extractor'],c['auditor'])

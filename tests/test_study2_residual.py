@@ -13,7 +13,7 @@ from exception_continuation.runner import sealed_read
 from exception_study2_v5.review.workflow import read_manifest,validate_decisions
 from exception_study2_v5_review_v2 import candidates as canonical,controlled,workflow as historical
 from exception_study2_v5_review_v22 import salvage,decisions as v22
-from exception_study2_v5_residual import evidence,planning,policy,workflow
+from exception_study2_v5_residual import VERSION,evidence,planning,policy,workflow
 from exception_study2_v5_residual.history import History
 from test_study2_v5 import Offline
 from test_study2_v5_review_v2 import cfg as old_cfg,small,cs_for,snapshot,Transport as OldTransport,synthetic_case,wire_response
@@ -90,7 +90,7 @@ class EvidenceTests(unittest.TestCase):
         r=evidence.resolve([ev('uncertain'),ev('absent','anthropic','J2')])
         self.assertFalse(r['genuine_disagreement']);self.assertEqual(r['required_providers'],['openai'])
     def test_new_opposing_vote_cannot_overrule_reused_provider(self):
-        r=evidence.resolve([ev('present','anthropic','J2'),ev('absent',epoch='residual-v1')])
+        r=evidence.resolve([ev('present','anthropic','J2'),ev('absent',epoch=VERSION)])
         self.assertTrue(r['genuine_disagreement']);self.assertEqual(r['status'],'uncertain')
     def test_recorded_witness_requires_actual_class_and_whole_assertion(self):
         for text,ok in [("T's recorded Verified class is C.",True),('According to the table, the Verified class for T is C.',True),('According to the table, the Verified class for T is A.',False),('If T\'s recorded Verified class is C, predict A.',False),('I predict C for T.',False),('T: Manual, Cloth, Four doors.',False)]:
@@ -135,7 +135,7 @@ class WorkflowTests(Offline):
         plan=workflow.prepare(old,sal,out,cfg());return source,old,sal,out,plan,t
     def test_exact_unresolved_population_and_only_needed_provider_requests(self):
         source,old,sal,out,plan,t=self.setup_review()
-        expected={(tid,key,p) for tid,c in plan['cases'].items() for key,d in c['resolutions'].items() for p in d['required_providers']}
+        expected={(tid,key,p) for tid,c in plan['cases'].items() for key,d in c['resolutions'].items() for p in d['dispatch_providers']}
         actual={(ref['task_id'],ref['candidate_id'],req['provider']) for req in plan['requests'] if req['kind']=='detect' for ref in req['binding']['candidate_refs'].values()}
         self.assertEqual(actual,expected);self.assertEqual(len(actual),plan['accounting']['provider_decisions_needed'])
         self.assertTrue(all(plan['cases'][tid]['resolutions'][key]['status']=='uncertain' for tid,key,p in actual))

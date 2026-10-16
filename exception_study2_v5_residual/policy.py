@@ -39,7 +39,9 @@ def freeze_policy(config):
             observational_sidecar=['P'], automatic_judges=['J1','J2'], automatic_adjudication=False,
             historical_provider_rule='J1 primary/audit positions; J3 only if J1 has no conclusive revalidated vote. Never majority-count same-provider repetitions.',
             agreement='One consistent conclusive position per provider; cross-provider disagreement remains uncertain.',
-            requests='Only missing/invalid provider evidence for unresolved retained candidates, plus failed coverage obligations.',
+            requests='Only missing/invalid provider evidence for unresolved dispatch-eligible candidates, plus failed coverage obligations.',
+            acknowledgment='Historical and new positive A require the identical recorded_witness source gate AND independent semantic passes. No witness means uncertain, never automatic absence.',
+            source_deferral='Unresolved A without the frozen recorded_witness is retained uncertain but excluded from paid verification. Preserve required_providers as evidence gaps; dispatch_providers is empty. No source edits or new protocol implicit.',
             coverage='Fresh separate evidence; never rewrite historical flags. New candidate discoveries require another plan.',
             retries=0, smoke_lifetime_max_calls=4, smoke_requires_separate_authorization=True,
             full_review_requires_separate_authorization=True, batch_target=config['batch_size']))

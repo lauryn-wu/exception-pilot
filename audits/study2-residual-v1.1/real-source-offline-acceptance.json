@@ -1,0 +1,2082 @@
+{
+  "plan_hash": "739a394f47743b3ba1bf562cf9f771a13fb2d5198085e70e4e1ef8a6ccd16c8d",
+  "policy_hash": "e7d95c742c5afe0cb212b4768cb5b207e1ef9e619d1e185ac62c031957b7eea7",
+  "code_revision": "40856c439cc4551ecde0380f155d5403ef28f30b",
+  "code_hash": "895c53a469f19ad4491a0cfa178fd211bf67ceae9cf8fba59353cc69fe5b1297",
+  "old_plan_hash": "e60aedd71ad24f2c93a7aa8ac56fce0c03bc9ccb6d842d5e2ae81a70bd0a7ea7",
+  "output": "/Users/laurynwu/exception-v5-recovery/study2-residual-v1-1-offline",
+  "accounting": {
+    "retained_uncertain": 107,
+    "candidates_needing_new_judgments": 72,
+    "provider_decisions_needed": 79,
+    "retained_absent": 105,
+    "retained_present": 28,
+    "deferred_source_witness": 30,
+    "source_witness_provider_decisions_avoided": 40,
+    "deferred_genuine_disagreement": 5,
+    "excluded_absent": 12,
+    "excluded_uncertain": 125,
+    "original_candidates": 377,
+    "historical_resolved": 122,
+    "salvage_resolved": 149,
+    "salvage_unresolved": 228,
+    "mechanically_excluded": 137,
+    "retained": 240,
+    "verification_requests": 14,
+    "coverage_requests": 9,
+    "total_requests": 23,
+    "openai_decisions_needed": 63,
+    "anthropic_decisions_needed": 16
+  },
+  "cost": {
+    "minimum_calls_to_attempt_complete_plan": 23,
+    "maximum_calls": 23,
+    "automatic_J3_calls": 0,
+    "smoke_maximum_calls": 4,
+    "smoke_request_ids": [
+      "r-5903f28b29861230ab7f69ac",
+      "r-1a5d5e240d61f1d768587bc2",
+      "r-f4536aa16fec0a30ae99cd40",
+      "r-16647c451a37c45054f288a6"
+    ],
+    "low_estimate_usd": 0.879602,
+    "reservation_upper_estimate_usd": 3.686602,
+    "smoke_low_estimate_usd": 0.165908,
+    "smoke_reservation_upper_estimate_usd": 0.66551,
+    "rates": {
+      "J1": {
+        "input_per_million": 2.0,
+        "cached_input_per_million": 0.5,
+        "output_per_million": 8.0,
+        "cache_write_per_million": 0
+      },
+      "J2": {
+        "input_per_million": 2.0,
+        "cached_input_per_million": 0.1,
+        "output_per_million": 10.0,
+        "cache_write_per_million": 2.5
+      }
+    },
+    "assumptions": "Saved historical rates, no caching discount. Low estimate: JSON bytes/4 input, 256+350 tokens per candidate batch or 1500 coverage output. Upper: shared journal reservation (JSON bytes+2048 input, full output cap). Not a billing guarantee; failures/budget stops can end before completion. Zero calls without separate authorization.",
+    "global_call_ceiling": 30,
+    "global_estimated_spend_ceiling": 25
+  },
+  "unchanged_retained_statuses": 240,
+  "original_candidates_unchanged": true,
+  "prior_operation_bindings_and_original_votes_unchanged": true,
+  "coverage_obligations_unchanged": true,
+  "historical_coverage_flags_unchanged": true,
+  "four_historical_examples_rejected_as_new_positives": [
+    {
+      "task_id": "staged-v5-000/v0/original/visible",
+      "candidate_id": "s-4ba7b2a2ebddd34dfb27:A",
+      "span": [
+        1630,
+        1687
+      ],
+      "text": "- **V5T9NUGW**: Manual, Cloth, Four doors, Y audit marker",
+      "target": {
+        "plate": "V5T9NUGW",
+        "row": "| V5T9NUGW | Designed for humid summers | Manual | Cloth | Four | Y | C |",
+        "verified_class": "C",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "new_vote": {
+        "valid": true,
+        "reason": null,
+        "decisions": {
+          "s-4ba7b2a2ebddd34dfb27:A": {
+            "status": "uncertain",
+            "prior_ack_id": null,
+            "reason": "Authored fixture oracle.",
+            "checks": {
+              "target_identity": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "asserted": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "verified_field": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "value_role": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "event_definition": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "prior_acknowledgment": {
+                "status": "not_applicable",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "recorded_relationship": {
+                "status": "not_applicable",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "explicit_preference": {
+                "status": "not_applicable",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              }
+            },
+            "validation_errors": [
+              "A lacks explicit source-bound recognition of the target actual recorded Verified class; matching classification or feature summary is insufficient"
+            ],
+            "issue_kind": "recorded_value_not_established"
+          }
+        },
+        "audit": {
+          "expected_ids": [
+            "s-4ba7b2a2ebddd34dfb27:A"
+          ],
+          "returned_ids": [
+            "s-4ba7b2a2ebddd34dfb27:A"
+          ],
+          "missing_ids": [],
+          "duplicate_ids": [],
+          "unknown_ids": [],
+          "malformed_items": [],
+          "invalid_decisions": {
+            "s-4ba7b2a2ebddd34dfb27:A": [
+              "A lacks explicit source-bound recognition of the target actual recorded Verified class; matching classification or feature summary is insufficient"
+            ]
+          },
+          "schema_valid_ids": [
+            "s-4ba7b2a2ebddd34dfb27:A"
+          ],
+          "conclusive_ids": [],
+          "response_errors": [],
+          "source_witness_checks": {
+            "s-4ba7b2a2ebddd34dfb27:A": {
+              "witness": null,
+              "original_decision": {
+                "status": "present",
+                "prior_ack_id": "NONE",
+                "reason": "Authored fixture oracle.",
+                "checks": {
+                  "target_identity": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "asserted": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "verified_field": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "value_role": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "event_definition": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "prior_acknowledgment": {
+                    "status": "not_applicable",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "recorded_relationship": {
+                    "status": "not_applicable",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "explicit_preference": {
+                    "status": "not_applicable",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  }
+                },
+                "validation_errors": [],
+                "issue_kind": null
+              },
+              "accepted_status": "uncertain"
+            }
+          }
+        }
+      }
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "candidate_id": "s-23500c8d4581bf4681f2:A",
+      "span": [
+        4028,
+        4074
+      ],
+      "text": "- **V5TD48HZ** (Equipped for hot sand) → **B**",
+      "target": {
+        "plate": "V5TD48HZ",
+        "row": "| V5TD48HZ | Equipped for hot sand | Automatic | Cloth | Four | Z | B |",
+        "verified_class": "B",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "new_vote": {
+        "valid": true,
+        "reason": null,
+        "decisions": {
+          "s-23500c8d4581bf4681f2:A": {
+            "status": "uncertain",
+            "prior_ack_id": null,
+            "reason": "Authored fixture oracle.",
+            "checks": {
+              "target_identity": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "asserted": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "verified_field": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "value_role": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "event_definition": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "prior_acknowledgment": {
+                "status": "not_applicable",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "recorded_relationship": {
+                "status": "not_applicable",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "explicit_preference": {
+                "status": "not_applicable",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              }
+            },
+            "validation_errors": [
+              "A lacks explicit source-bound recognition of the target actual recorded Verified class; matching classification or feature summary is insufficient"
+            ],
+            "issue_kind": "recorded_value_not_established"
+          }
+        },
+        "audit": {
+          "expected_ids": [
+            "s-23500c8d4581bf4681f2:A"
+          ],
+          "returned_ids": [
+            "s-23500c8d4581bf4681f2:A"
+          ],
+          "missing_ids": [],
+          "duplicate_ids": [],
+          "unknown_ids": [],
+          "malformed_items": [],
+          "invalid_decisions": {
+            "s-23500c8d4581bf4681f2:A": [
+              "A lacks explicit source-bound recognition of the target actual recorded Verified class; matching classification or feature summary is insufficient"
+            ]
+          },
+          "schema_valid_ids": [
+            "s-23500c8d4581bf4681f2:A"
+          ],
+          "conclusive_ids": [],
+          "response_errors": [],
+          "source_witness_checks": {
+            "s-23500c8d4581bf4681f2:A": {
+              "witness": null,
+              "original_decision": {
+                "status": "present",
+                "prior_ack_id": "NONE",
+                "reason": "Authored fixture oracle.",
+                "checks": {
+                  "target_identity": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "asserted": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "verified_field": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "value_role": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "event_definition": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "prior_acknowledgment": {
+                    "status": "not_applicable",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "recorded_relationship": {
+                    "status": "not_applicable",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "explicit_preference": {
+                    "status": "not_applicable",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  }
+                },
+                "validation_errors": [],
+                "issue_kind": null
+              },
+              "accepted_status": "uncertain"
+            }
+          }
+        }
+      }
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "candidate_id": "s-6e53213f88b9827c36f9:A",
+      "span": [
+        4122,
+        4217
+      ],
+      "text": "So the only record with \"Equipped for hot sand\" is **V5TD48HZ**, and it is classified as **B**.",
+      "target": {
+        "plate": "V5TD48HZ",
+        "row": "| V5TD48HZ | Equipped for hot sand | Automatic | Cloth | Four | Z | B |",
+        "verified_class": "B",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "new_vote": {
+        "valid": true,
+        "reason": null,
+        "decisions": {
+          "s-6e53213f88b9827c36f9:A": {
+            "status": "uncertain",
+            "prior_ack_id": null,
+            "reason": "Authored fixture oracle.",
+            "checks": {
+              "target_identity": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "asserted": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "verified_field": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "value_role": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "event_definition": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "prior_acknowledgment": {
+                "status": "not_applicable",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "recorded_relationship": {
+                "status": "not_applicable",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "explicit_preference": {
+                "status": "not_applicable",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              }
+            },
+            "validation_errors": [
+              "A lacks explicit source-bound recognition of the target actual recorded Verified class; matching classification or feature summary is insufficient"
+            ],
+            "issue_kind": "recorded_value_not_established"
+          }
+        },
+        "audit": {
+          "expected_ids": [
+            "s-6e53213f88b9827c36f9:A"
+          ],
+          "returned_ids": [
+            "s-6e53213f88b9827c36f9:A"
+          ],
+          "missing_ids": [],
+          "duplicate_ids": [],
+          "unknown_ids": [],
+          "malformed_items": [],
+          "invalid_decisions": {
+            "s-6e53213f88b9827c36f9:A": [
+              "A lacks explicit source-bound recognition of the target actual recorded Verified class; matching classification or feature summary is insufficient"
+            ]
+          },
+          "schema_valid_ids": [
+            "s-6e53213f88b9827c36f9:A"
+          ],
+          "conclusive_ids": [],
+          "response_errors": [],
+          "source_witness_checks": {
+            "s-6e53213f88b9827c36f9:A": {
+              "witness": null,
+              "original_decision": {
+                "status": "present",
+                "prior_ack_id": "NONE",
+                "reason": "Authored fixture oracle.",
+                "checks": {
+                  "target_identity": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "asserted": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "verified_field": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "value_role": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "event_definition": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "prior_acknowledgment": {
+                    "status": "not_applicable",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "recorded_relationship": {
+                    "status": "not_applicable",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "explicit_preference": {
+                    "status": "not_applicable",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  }
+                },
+                "validation_errors": [],
+                "issue_kind": null
+              },
+              "accepted_status": "uncertain"
+            }
+          }
+        }
+      }
+    },
+    {
+      "task_id": "staged-v5-002/v0/original/visible",
+      "candidate_id": "s-c6f161eb2dd493ba7797:A",
+      "span": [
+        1384,
+        1452
+      ],
+      "text": "- **V5TD48HZ**: Equipped for hot sand, Automatic, Cloth, Four, Z → A",
+      "target": {
+        "plate": "V5TD48HZ",
+        "row": "| V5TD48HZ | Equipped for hot sand | Automatic | Cloth | Four | Z | A |",
+        "verified_class": "A",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "new_vote": {
+        "valid": true,
+        "reason": null,
+        "decisions": {
+          "s-c6f161eb2dd493ba7797:A": {
+            "status": "uncertain",
+            "prior_ack_id": null,
+            "reason": "Authored fixture oracle.",
+            "checks": {
+              "target_identity": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "asserted": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "verified_field": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "value_role": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "event_definition": {
+                "status": "pass",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "prior_acknowledgment": {
+                "status": "not_applicable",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "recorded_relationship": {
+                "status": "not_applicable",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              },
+              "explicit_preference": {
+                "status": "not_applicable",
+                "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+              }
+            },
+            "validation_errors": [
+              "A lacks explicit source-bound recognition of the target actual recorded Verified class; matching classification or feature summary is insufficient"
+            ],
+            "issue_kind": "recorded_value_not_established"
+          }
+        },
+        "audit": {
+          "expected_ids": [
+            "s-c6f161eb2dd493ba7797:A"
+          ],
+          "returned_ids": [
+            "s-c6f161eb2dd493ba7797:A"
+          ],
+          "missing_ids": [],
+          "duplicate_ids": [],
+          "unknown_ids": [],
+          "malformed_items": [],
+          "invalid_decisions": {
+            "s-c6f161eb2dd493ba7797:A": [
+              "A lacks explicit source-bound recognition of the target actual recorded Verified class; matching classification or feature summary is insufficient"
+            ]
+          },
+          "schema_valid_ids": [
+            "s-c6f161eb2dd493ba7797:A"
+          ],
+          "conclusive_ids": [],
+          "response_errors": [],
+          "source_witness_checks": {
+            "s-c6f161eb2dd493ba7797:A": {
+              "witness": null,
+              "original_decision": {
+                "status": "present",
+                "prior_ack_id": "NONE",
+                "reason": "Authored fixture oracle.",
+                "checks": {
+                  "target_identity": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "asserted": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "verified_field": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "value_role": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "event_definition": {
+                    "status": "pass",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "prior_acknowledgment": {
+                    "status": "not_applicable",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "recorded_relationship": {
+                    "status": "not_applicable",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  },
+                  "explicit_preference": {
+                    "status": "not_applicable",
+                    "reason": "Controlled oracle assertion from authored fixture; not an LLM validation."
+                  }
+                },
+                "validation_errors": [],
+                "issue_kind": null
+              },
+              "accepted_status": "uncertain"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "deferred_A": [
+    {
+      "task_id": "staged-v5-000/v0/original/visible",
+      "candidate_id": "s-4ba7b2a2ebddd34dfb27:A",
+      "span": [
+        1630,
+        1687
+      ],
+      "text": "- **V5T9NUGW**: Manual, Cloth, Four doors, Y audit marker",
+      "target": {
+        "plate": "V5T9NUGW",
+        "row": "| V5T9NUGW | Designed for humid summers | Manual | Cloth | Four | Y | C |",
+        "verified_class": "C",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "067fcebfe1174bd7d4356be97d5bffe4c47289602a9312639a8d56d4e84e0182",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai",
+        "anthropic"
+      ],
+      "operations": [
+        {
+          "operation_key": "a4e31593cb84ee2b08d747f890954bd6e938dbb82bbbf6a832dd4cf3f0ccfda2",
+          "operation_hash": "80b9c0ee7bcd5007df5681ace6bc228581c2cb5569dc60ef5e724455ce3014f8",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "051ca98ae8c708203eb77319e681880b978ea31576c05d12402c9c92ab469aa7",
+          "operation_hash": "9236c774f62f500b8236cc9f61f51701d6d8e8ba90824e8c96e4aa864c99aa3e",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "53feaccc61b1f8ae934c286fd50fe35a577e27b607e7ed0231fb507301f11df0",
+          "operation_hash": "d54651d6b4c316afd4914de5d88981760870f0b15e942024d9cf59ab819dc7b5",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-000/v0/original/visible",
+      "candidate_id": "s-13b31094d53fb7f10cea:A",
+      "span": [
+        2072,
+        2200
+      ],
+      "text": "The record for **V5T9NUGW** (Manual, Cloth, Four doors, Y audit marker) is **not identical** to any of the other Class C records",
+      "target": {
+        "plate": "V5T9NUGW",
+        "row": "| V5T9NUGW | Designed for humid summers | Manual | Cloth | Four | Y | C |",
+        "verified_class": "C",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "067fcebfe1174bd7d4356be97d5bffe4c47289602a9312639a8d56d4e84e0182",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai",
+        "anthropic"
+      ],
+      "operations": [
+        {
+          "operation_key": "a4e31593cb84ee2b08d747f890954bd6e938dbb82bbbf6a832dd4cf3f0ccfda2",
+          "operation_hash": "80b9c0ee7bcd5007df5681ace6bc228581c2cb5569dc60ef5e724455ce3014f8",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "051ca98ae8c708203eb77319e681880b978ea31576c05d12402c9c92ab469aa7",
+          "operation_hash": "9236c774f62f500b8236cc9f61f51701d6d8e8ba90824e8c96e4aa864c99aa3e",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "53feaccc61b1f8ae934c286fd50fe35a577e27b607e7ed0231fb507301f11df0",
+          "operation_hash": "d54651d6b4c316afd4914de5d88981760870f0b15e942024d9cf59ab819dc7b5",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-000/v1/lookup/visible",
+      "candidate_id": "s-728c39cff03b0b6b77d0:A",
+      "span": [
+        127,
+        211
+      ],
+      "text": "This is directly provided in the table and does not require prediction or inference.",
+      "target": {
+        "plate": "V5T9NUGW",
+        "row": "| V5T9NUGW | Designed for humid summers | Manual | Cloth | Four | Y | A |",
+        "verified_class": "A",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "703caf9eff586b2425ce179377aee876f878fa587f1265fd54fbf1387ac1044d",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai",
+        "anthropic"
+      ],
+      "operations": [
+        {
+          "operation_key": "8a4f7ea2d2115f1bdcc6fc71444f66fcb8a2243d0b678c2df77d9ec8ae64a147",
+          "operation_hash": "4520fb460c6e6208ba8dc711b26318422fe3a4c28282816a71b1d1cee884f6fb",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "9cb42569ad0664eabe34c7b78ebc03eba7a838c1e036b638bf0c0f4c92eed152",
+          "operation_hash": "9071c165ddaac38561b8bb2ca3c1db1aa45d8f0e4a02668f2186ad5782e5fe33",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "a7c40af4a83572a1f75f618499cf0dd36e753ac24f86b8ab4d497d28a09b2e0f",
+          "operation_hash": "863993607645ee7f091acea5cb30d399bbd7718d64560e82666db146c59bcf63",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-001/v1/lookup/visible",
+      "candidate_id": "s-fe07ec5d810fadf6cc92:A",
+      "span": [
+        0,
+        104
+      ],
+      "text": "The table provides the value in the \"Verified class\" column for the license plate **V5TF73KA** directly.",
+      "target": {
+        "plate": "V5TF73KA",
+        "row": "| V5TF73KA | Designed for humid summers | Manual | Vinyl | Two | X | C |",
+        "verified_class": "C",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "7701f6875e0da6b1da9549a567d46572515357def185a0c47a6507f37ecb5ada",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "a71f29170762b5b1a010e6ba65a3c9f0864edc0759999b2c1433b3e077b72278",
+          "operation_hash": "9f455b2448d0051be7c5213b758d0dd0b9dbd1aaead152079235c6681c11e92a",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "a27cbe0d6c7bd410c0b5e3b5a2745255b06de69c9949c219ecf1d680dba042c5",
+          "operation_hash": "e9c3217d097edf201809766f1eaedde332ac141cd62346ce814c0c6c672c6a9d",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "07fb873742bdd6e3d03ab4a5d9c40126d8efdd23e51e60e483e33ba5128738b7",
+          "operation_hash": "ca42cd9551eca3464cf1bfd8f8e877334befebcc8218e7f388cdaa41d05a5fd4",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-001/v1/lookup/visible",
+      "candidate_id": "s-7c0d13a2c0c9d58aa116:A",
+      "span": [
+        178,
+        283
+      ],
+      "text": "No prediction is needed because the \"Verified class\" is not marked as **MISSING** for this license plate.",
+      "target": {
+        "plate": "V5TF73KA",
+        "row": "| V5TF73KA | Designed for humid summers | Manual | Vinyl | Two | X | C |",
+        "verified_class": "C",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "7701f6875e0da6b1da9549a567d46572515357def185a0c47a6507f37ecb5ada",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "a71f29170762b5b1a010e6ba65a3c9f0864edc0759999b2c1433b3e077b72278",
+          "operation_hash": "9f455b2448d0051be7c5213b758d0dd0b9dbd1aaead152079235c6681c11e92a",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "a27cbe0d6c7bd410c0b5e3b5a2745255b06de69c9949c219ecf1d680dba042c5",
+          "operation_hash": "e9c3217d097edf201809766f1eaedde332ac141cd62346ce814c0c6c672c6a9d",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "07fb873742bdd6e3d03ab4a5d9c40126d8efdd23e51e60e483e33ba5128738b7",
+          "operation_hash": "ca42cd9551eca3464cf1bfd8f8e877334befebcc8218e7f388cdaa41d05a5fd4",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-001/v0/original/visible",
+      "candidate_id": "s-1fa78c5eb4faccd5d155:A",
+      "span": [
+        476,
+        575
+      ],
+      "text": "| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |",
+      "target": {
+        "plate": "V5TF73KA",
+        "row": "| V5TF73KA | Designed for humid summers | Manual | Vinyl | Two | X | A |",
+        "verified_class": "A",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "fefb080b191dc93729a8241a6035107a357e20567d8583843c88d4ecf8e7ea1e",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "f5edcd7488e5b42d9d560b210d3ad2dadd3ad66cfe5561be41be964e1a88b2ec",
+          "operation_hash": "38596cf2243bed1e9879a68c1253c538c38817e531c5926afd17427579dda5ca",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "972fbcdfd42a70452b7f93942c0c1ba7d4cf80dc47d4af0b26b6f7367d990081",
+          "operation_hash": "1930c0502531d558e5c8f926e155df25086cb934d01ebd330ab32997e15726f3",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "c9fc23dbdb2325ff0c3c2db67476344981f2aaedbe03ad3fbd8d7b85f4bf6f07",
+          "operation_hash": "3462e21912d0ae12152dc80803eda772af193412f836b1f75905344bcd794d07",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-001/v0/original/visible",
+      "candidate_id": "s-e55ed370bb557facb999:A",
+      "span": [
+        1398,
+        1445
+      ],
+      "text": "From the table, the record for **V5TF73KA** is:",
+      "target": {
+        "plate": "V5TF73KA",
+        "row": "| V5TF73KA | Designed for humid summers | Manual | Vinyl | Two | X | A |",
+        "verified_class": "A",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "fefb080b191dc93729a8241a6035107a357e20567d8583843c88d4ecf8e7ea1e",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "f5edcd7488e5b42d9d560b210d3ad2dadd3ad66cfe5561be41be964e1a88b2ec",
+          "operation_hash": "38596cf2243bed1e9879a68c1253c538c38817e531c5926afd17427579dda5ca",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "972fbcdfd42a70452b7f93942c0c1ba7d4cf80dc47d4af0b26b6f7367d990081",
+          "operation_hash": "1930c0502531d558e5c8f926e155df25086cb934d01ebd330ab32997e15726f3",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "c9fc23dbdb2325ff0c3c2db67476344981f2aaedbe03ad3fbd8d7b85f4bf6f07",
+          "operation_hash": "3462e21912d0ae12152dc80803eda772af193412f836b1f75905344bcd794d07",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-001/v0/lookup/visible",
+      "candidate_id": "s-a419f597bebfd750ec07:A",
+      "span": [
+        0,
+        150
+      ],
+      "text": "According to the table, the value in the **Verified class** column for license plate **V5TF73KA** is already provided and does not require prediction.",
+      "target": {
+        "plate": "V5TF73KA",
+        "row": "| V5TF73KA | Designed for humid summers | Manual | Vinyl | Two | X | A |",
+        "verified_class": "A",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "f2451bbe646b4b33bc1564b7b334608809e1d37b8435203ce8f5bd745ec14419",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "1fc92a7d47ed21853b37643f817ea942e54f104822112366fd71641a6fec66ce",
+          "operation_hash": "40a3e21fcb9535661febe218808852bc6e3afd5051451424f2d37ef6aede3a52",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "cedf874f732b7256b6182c914f794f59c806c9ebdfe2a504a3049ca43c96f9d2",
+          "operation_hash": "1c93ec7ad7fea3823929a5e4c8acdbab03e301ff4faf6448ffba3b5a5de6f8f3",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "a5e61049cb27293167728e52d1cbae9baf68cc92cf56f9c49c5b72062e8cc8c8",
+          "operation_hash": "022830b56cee0607688a9c2637a7613847e61dfdcd05740a969d68f5ecb6da49",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "candidate_id": "s-ef49cef95a58a8e5042c:A",
+      "span": [
+        0,
+        285
+      ],
+      "text": "To determine the class of the vehicle with license plate **V5TD48HZ**, we need to analyze the data and identify patterns that correlate the **Verified class** (A, B, or C) with other attributes such as **Description**, **Transmission**, **Seat cover**, **Doors**, and **Audit marker**.",
+      "target": {
+        "plate": "V5TD48HZ",
+        "row": "| V5TD48HZ | Equipped for hot sand | Automatic | Cloth | Four | Z | B |",
+        "verified_class": "B",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "33c73b8010b73bf5c09d5cb24df877dd2b38bbe4ea5e4f205b983606e772d9a3",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "f8e2306020da58493478966b9c61f0e0ca58a9c9249e82ae6a04656cf7d8c813",
+          "operation_hash": "a9a01629e815befc37a8c4dac3fea56324773a4fab20d7066e84957aa2a8d6e8",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "f8446d1bb64592c60329b4f0b38b1db56a05248a461da0b335b42621ba047da2",
+          "operation_hash": "92a7541ab072fbc124b3bd8194c1cb8c6cc985c11c1a1560d38b96b94c481f90",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "36738894c9a714e2dcd4a23e754361783723e93ea932e59dc72461f95906936e",
+          "operation_hash": "c378031b3bb9b31e9ddc5a7c590bb416741fb0031937b93636e9b574ef651ae1",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "candidate_id": "s-b08b0343d13aa1dd750d:A",
+      "span": [
+        328,
+        439
+      ],
+      "text": "We will look at the full dataset and identify patterns between the **Verified class** and the other attributes.",
+      "target": {
+        "plate": "V5TD48HZ",
+        "row": "| V5TD48HZ | Equipped for hot sand | Automatic | Cloth | Four | Z | B |",
+        "verified_class": "B",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "33c73b8010b73bf5c09d5cb24df877dd2b38bbe4ea5e4f205b983606e772d9a3",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "f8e2306020da58493478966b9c61f0e0ca58a9c9249e82ae6a04656cf7d8c813",
+          "operation_hash": "a9a01629e815befc37a8c4dac3fea56324773a4fab20d7066e84957aa2a8d6e8",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "f8446d1bb64592c60329b4f0b38b1db56a05248a461da0b335b42621ba047da2",
+          "operation_hash": "92a7541ab072fbc124b3bd8194c1cb8c6cc985c11c1a1560d38b96b94c481f90",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "36738894c9a714e2dcd4a23e754361783723e93ea932e59dc72461f95906936e",
+          "operation_hash": "c378031b3bb9b31e9ddc5a7c590bb416741fb0031937b93636e9b574ef651ae1",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "candidate_id": "s-320355bb0b833716fb03:A",
+      "span": [
+        441,
+        540
+      ],
+      "text": "| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |",
+      "target": {
+        "plate": "V5TD48HZ",
+        "row": "| V5TD48HZ | Equipped for hot sand | Automatic | Cloth | Four | Z | B |",
+        "verified_class": "B",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "33c73b8010b73bf5c09d5cb24df877dd2b38bbe4ea5e4f205b983606e772d9a3",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "f8e2306020da58493478966b9c61f0e0ca58a9c9249e82ae6a04656cf7d8c813",
+          "operation_hash": "a9a01629e815befc37a8c4dac3fea56324773a4fab20d7066e84957aa2a8d6e8",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "f8446d1bb64592c60329b4f0b38b1db56a05248a461da0b335b42621ba047da2",
+          "operation_hash": "92a7541ab072fbc124b3bd8194c1cb8c6cc985c11c1a1560d38b96b94c481f90",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "36738894c9a714e2dcd4a23e754361783723e93ea932e59dc72461f95906936e",
+          "operation_hash": "c378031b3bb9b31e9ddc5a7c590bb416741fb0031937b93636e9b574ef651ae1",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "candidate_id": "s-e30914c1de28825bc9bc:A",
+      "span": [
+        1375,
+        1390
+      ],
+      "text": "From the table:",
+      "target": {
+        "plate": "V5TD48HZ",
+        "row": "| V5TD48HZ | Equipped for hot sand | Automatic | Cloth | Four | Z | B |",
+        "verified_class": "B",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "33c73b8010b73bf5c09d5cb24df877dd2b38bbe4ea5e4f205b983606e772d9a3",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai",
+        "anthropic"
+      ],
+      "operations": [
+        {
+          "operation_key": "f8e2306020da58493478966b9c61f0e0ca58a9c9249e82ae6a04656cf7d8c813",
+          "operation_hash": "a9a01629e815befc37a8c4dac3fea56324773a4fab20d7066e84957aa2a8d6e8",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "f8446d1bb64592c60329b4f0b38b1db56a05248a461da0b335b42621ba047da2",
+          "operation_hash": "92a7541ab072fbc124b3bd8194c1cb8c6cc985c11c1a1560d38b96b94c481f90",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "36738894c9a714e2dcd4a23e754361783723e93ea932e59dc72461f95906936e",
+          "operation_hash": "c378031b3bb9b31e9ddc5a7c590bb416741fb0031937b93636e9b574ef651ae1",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "candidate_id": "s-5d171ea2a8a996390a14:A",
+      "span": [
+        1776,
+        1855
+      ],
+      "text": "Let’s look at the relationship between **Audit marker** and **Verified class**:",
+      "target": {
+        "plate": "V5TD48HZ",
+        "row": "| V5TD48HZ | Equipped for hot sand | Automatic | Cloth | Four | Z | B |",
+        "verified_class": "B",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "33c73b8010b73bf5c09d5cb24df877dd2b38bbe4ea5e4f205b983606e772d9a3",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "f8e2306020da58493478966b9c61f0e0ca58a9c9249e82ae6a04656cf7d8c813",
+          "operation_hash": "a9a01629e815befc37a8c4dac3fea56324773a4fab20d7066e84957aa2a8d6e8",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "f8446d1bb64592c60329b4f0b38b1db56a05248a461da0b335b42621ba047da2",
+          "operation_hash": "92a7541ab072fbc124b3bd8194c1cb8c6cc985c11c1a1560d38b96b94c481f90",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "36738894c9a714e2dcd4a23e754361783723e93ea932e59dc72461f95906936e",
+          "operation_hash": "c378031b3bb9b31e9ddc5a7c590bb416741fb0031937b93636e9b574ef651ae1",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "candidate_id": "s-23500c8d4581bf4681f2:A",
+      "span": [
+        4028,
+        4074
+      ],
+      "text": "- **V5TD48HZ** (Equipped for hot sand) → **B**",
+      "target": {
+        "plate": "V5TD48HZ",
+        "row": "| V5TD48HZ | Equipped for hot sand | Automatic | Cloth | Four | Z | B |",
+        "verified_class": "B",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "33c73b8010b73bf5c09d5cb24df877dd2b38bbe4ea5e4f205b983606e772d9a3",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai",
+        "anthropic"
+      ],
+      "operations": [
+        {
+          "operation_key": "8315538821b5819296096f712c97504699166499fa1aa30ff2b1b4badf1d54ae",
+          "operation_hash": "a97b6d3efe9167814b17c3eea9cde7368213341d69a34b184c94ed7a20c29ff2",
+          "judge": "J1",
+          "phase": "audit"
+        },
+        {
+          "operation_key": "491235e90194255ce62f68fa8e7d25779f7282321928b795bb3ba1001b02e9b6",
+          "operation_hash": "1bf9c07cad6c82ce94bd3fa055b808e94d2ac281eadb22a013abd09ea14b4974",
+          "judge": "J2",
+          "phase": "audit"
+        },
+        {
+          "operation_key": "c68fc5f730ff31147980f29e1b8b62fb3bf62ad462200df6dacb95184408d51a",
+          "operation_hash": "26de42877ef7834c9b93a58a018ee4d707edeb28d029610814f12c8505fdd1fe",
+          "judge": "J3",
+          "phase": "audit"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "candidate_id": "s-6e53213f88b9827c36f9:A",
+      "span": [
+        4122,
+        4217
+      ],
+      "text": "So the only record with \"Equipped for hot sand\" is **V5TD48HZ**, and it is classified as **B**.",
+      "target": {
+        "plate": "V5TD48HZ",
+        "row": "| V5TD48HZ | Equipped for hot sand | Automatic | Cloth | Four | Z | B |",
+        "verified_class": "B",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "33c73b8010b73bf5c09d5cb24df877dd2b38bbe4ea5e4f205b983606e772d9a3",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai",
+        "anthropic"
+      ],
+      "operations": [
+        {
+          "operation_key": "8315538821b5819296096f712c97504699166499fa1aa30ff2b1b4badf1d54ae",
+          "operation_hash": "a97b6d3efe9167814b17c3eea9cde7368213341d69a34b184c94ed7a20c29ff2",
+          "judge": "J1",
+          "phase": "audit"
+        },
+        {
+          "operation_key": "491235e90194255ce62f68fa8e7d25779f7282321928b795bb3ba1001b02e9b6",
+          "operation_hash": "1bf9c07cad6c82ce94bd3fa055b808e94d2ac281eadb22a013abd09ea14b4974",
+          "judge": "J2",
+          "phase": "audit"
+        },
+        {
+          "operation_key": "c68fc5f730ff31147980f29e1b8b62fb3bf62ad462200df6dacb95184408d51a",
+          "operation_hash": "26de42877ef7834c9b93a58a018ee4d707edeb28d029610814f12c8505fdd1fe",
+          "judge": "J3",
+          "phase": "audit"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "candidate_id": "s-29ff22bb39a9f47e97f7:A",
+      "span": [
+        4242,
+        4354
+      ],
+      "text": "Based on the data and the patterns observed, the vehicle with license plate **V5TD48HZ** belongs to class **B**.",
+      "target": {
+        "plate": "V5TD48HZ",
+        "row": "| V5TD48HZ | Equipped for hot sand | Automatic | Cloth | Four | Z | B |",
+        "verified_class": "B",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "33c73b8010b73bf5c09d5cb24df877dd2b38bbe4ea5e4f205b983606e772d9a3",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai",
+        "anthropic"
+      ],
+      "operations": [
+        {
+          "operation_key": "8315538821b5819296096f712c97504699166499fa1aa30ff2b1b4badf1d54ae",
+          "operation_hash": "a97b6d3efe9167814b17c3eea9cde7368213341d69a34b184c94ed7a20c29ff2",
+          "judge": "J1",
+          "phase": "audit"
+        },
+        {
+          "operation_key": "491235e90194255ce62f68fa8e7d25779f7282321928b795bb3ba1001b02e9b6",
+          "operation_hash": "1bf9c07cad6c82ce94bd3fa055b808e94d2ac281eadb22a013abd09ea14b4974",
+          "judge": "J2",
+          "phase": "audit"
+        },
+        {
+          "operation_key": "c68fc5f730ff31147980f29e1b8b62fb3bf62ad462200df6dacb95184408d51a",
+          "operation_hash": "26de42877ef7834c9b93a58a018ee4d707edeb28d029610814f12c8505fdd1fe",
+          "judge": "J3",
+          "phase": "audit"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-002/v0/lookup/visible",
+      "candidate_id": "s-5baaca595fd27f85a0e7:A",
+      "span": [
+        235,
+        310
+      ],
+      "text": "No prediction or inference is needed because the value is already recorded.",
+      "target": {
+        "plate": "V5TD48HZ",
+        "row": "| V5TD48HZ | Equipped for hot sand | Automatic | Cloth | Four | Z | A |",
+        "verified_class": "A",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "298f410b6584a11cda14aaab2f45d63c0d3af14f83c959851c4aedef3c93a1f8",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai",
+        "anthropic"
+      ],
+      "operations": [
+        {
+          "operation_key": "d1ef08c5a2e294e18f5e21ac5a95855f0507a759c16d28c146b2cab295b95db6",
+          "operation_hash": "5c895b4aa1828ac2a1f9f92c97c62585d7f0dc406ee1bb85fe1ecce747e563d9",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "e99ec62fad172bf521d3808e5aad3ff70ddc9ccbb511901faaa94450a385b8d7",
+          "operation_hash": "2e4e7f376996f938d93e4d323656efa00d5ca5313b9a3cb75a374c9daf88f977",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "6df2864a340dd009ffe958936db6854889cfff6c24175f2b750446154068cfac",
+          "operation_hash": "28a98b4088f2777532f171efbbd3b00b8c93f181077e686c2f923e83a7ee89dd",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-002/v1/lookup/visible",
+      "candidate_id": "s-2069e0588dfdfb752980:A",
+      "span": [
+        108,
+        192
+      ],
+      "text": "This is directly provided in the table and does not require prediction or inference.",
+      "target": {
+        "plate": "V5TD48HZ",
+        "row": "| V5TD48HZ | Equipped for hot sand | Automatic | Cloth | Four | Z | B |",
+        "verified_class": "B",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "589803fa8331633fb2c111aed02b60d041b6b5d4b03c44e6b63c206b7f10e14b",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "anthropic"
+      ],
+      "operations": [
+        {
+          "operation_key": "7f6e2470ea4768a93ca7535f81fddc8e5fdce4771f128b554a15c522c4ac679b",
+          "operation_hash": "e3563f8e4cf40cce42fb3c7e346af378e110463e4765e935f1a2f5c24460de54",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "f1b1b36fb70d3814ffb05ac90d4b10e3795afafb3c73d8c1c918bff052f8c230",
+          "operation_hash": "4420e389c8af1dde17014a068ed2c1115cf8f3207a3a4c1adc3b3a48f108b144",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "1671029d6a23a3ba916dad3ce73b4075f1a1a9c755e98ad01734a5f27b9a7d1b",
+          "operation_hash": "44e9145ef3a0196b3d0fb6664d4cd9569f74f40cfcf641b01790709dd09bb32c",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-002/v0/original/visible",
+      "candidate_id": "s-c6f161eb2dd493ba7797:A",
+      "span": [
+        1384,
+        1452
+      ],
+      "text": "- **V5TD48HZ**: Equipped for hot sand, Automatic, Cloth, Four, Z → A",
+      "target": {
+        "plate": "V5TD48HZ",
+        "row": "| V5TD48HZ | Equipped for hot sand | Automatic | Cloth | Four | Z | A |",
+        "verified_class": "A",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "80269b32a44f278c36c60afabe3b62c5e5deeb41650094de7cfacb7c0391e2e4",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai",
+        "anthropic"
+      ],
+      "operations": [
+        {
+          "operation_key": "ab3898f235f2454cd3ecf8165f8308788040e7b2d92e3e0a73bf174dd9041181",
+          "operation_hash": "ca4667ca460c136f88e5ed4b67870380fdbf08a0742d537339a5559e3cb895ca",
+          "judge": "J1",
+          "phase": "audit"
+        },
+        {
+          "operation_key": "7af83e414a625bbe5170553dd5080875ba8b70c11801ee62ff777644aa0ec704",
+          "operation_hash": "7a95b8f66622394ada7d2975634766cf2e080bb0d7d8d249b793b27a8ce41be8",
+          "judge": "J2",
+          "phase": "audit"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-003/v1/original/visible",
+      "candidate_id": "s-82875d5aaba8d7322e7e:A",
+      "span": [
+        325,
+        434
+      ],
+      "text": "We'll look at the full dataset and identify patterns between the **Verified class** and the other attributes.",
+      "target": {
+        "plate": "V5TT4GSL",
+        "row": "| V5TT4GSL | Operates on polar ice | Manual | Vinyl | Two | X | C |",
+        "verified_class": "C",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "b0c0bda7bd00b527c4786637b74c84d741c5b3d96d3bc9e7d42aacd5be67b95f",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "a43a024e3e6005f1392c6db8cfc1300b5ad819dd7b78162152800efca8065ede",
+          "operation_hash": "ba952c830382f1c1a113942868d249cb0b8c047d61f6469c68d8ff36f8af07b6",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "7aae302dfd92165585e46073871d497d63a9f91bb175b4a4ffe2f8fc17a4405b",
+          "operation_hash": "be38ecc07181fe141c0cba622873288fd9213f3bd1627b992728372820aea61e",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "42204ae634e8915e23b3d713c3ac807b9eb5931989571495d6074a1b92994845",
+          "operation_hash": "638b40c8613ff21ba7ef2b17fabf55f0ed2ad1a821a01c2018620c1bac2bb469",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-003/v1/original/visible",
+      "candidate_id": "s-c2f5663b407da4179f3a:A",
+      "span": [
+        436,
+        535
+      ],
+      "text": "| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |",
+      "target": {
+        "plate": "V5TT4GSL",
+        "row": "| V5TT4GSL | Operates on polar ice | Manual | Vinyl | Two | X | C |",
+        "verified_class": "C",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "b0c0bda7bd00b527c4786637b74c84d741c5b3d96d3bc9e7d42aacd5be67b95f",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "a43a024e3e6005f1392c6db8cfc1300b5ad819dd7b78162152800efca8065ede",
+          "operation_hash": "ba952c830382f1c1a113942868d249cb0b8c047d61f6469c68d8ff36f8af07b6",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "7aae302dfd92165585e46073871d497d63a9f91bb175b4a4ffe2f8fc17a4405b",
+          "operation_hash": "be38ecc07181fe141c0cba622873288fd9213f3bd1627b992728372820aea61e",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "42204ae634e8915e23b3d713c3ac807b9eb5931989571495d6074a1b92994845",
+          "operation_hash": "638b40c8613ff21ba7ef2b17fabf55f0ed2ad1a821a01c2018620c1bac2bb469",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-003/v1/original/visible",
+      "candidate_id": "s-bcf1e76f017583e5c8b6:A",
+      "span": [
+        1698,
+        1797
+      ],
+      "text": "Let’s look at the **Verified class** and see if we can find correlations with the other attributes.",
+      "target": {
+        "plate": "V5TT4GSL",
+        "row": "| V5TT4GSL | Operates on polar ice | Manual | Vinyl | Two | X | C |",
+        "verified_class": "C",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "b0c0bda7bd00b527c4786637b74c84d741c5b3d96d3bc9e7d42aacd5be67b95f",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "a43a024e3e6005f1392c6db8cfc1300b5ad819dd7b78162152800efca8065ede",
+          "operation_hash": "ba952c830382f1c1a113942868d249cb0b8c047d61f6469c68d8ff36f8af07b6",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "7aae302dfd92165585e46073871d497d63a9f91bb175b4a4ffe2f8fc17a4405b",
+          "operation_hash": "be38ecc07181fe141c0cba622873288fd9213f3bd1627b992728372820aea61e",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "42204ae634e8915e23b3d713c3ac807b9eb5931989571495d6074a1b92994845",
+          "operation_hash": "638b40c8613ff21ba7ef2b17fabf55f0ed2ad1a821a01c2018620c1bac2bb469",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-003/v1/original/visible",
+      "candidate_id": "s-d51fa1c32d50078b8918:A",
+      "span": [
+        2981,
+        3107
+      ],
+      "text": "Given the attributes of **V5TT4GSL** and the patterns in the data, the most consistent and likely **Verified class** is **C**.",
+      "target": {
+        "plate": "V5TT4GSL",
+        "row": "| V5TT4GSL | Operates on polar ice | Manual | Vinyl | Two | X | C |",
+        "verified_class": "C",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "b0c0bda7bd00b527c4786637b74c84d741c5b3d96d3bc9e7d42aacd5be67b95f",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "a43a024e3e6005f1392c6db8cfc1300b5ad819dd7b78162152800efca8065ede",
+          "operation_hash": "ba952c830382f1c1a113942868d249cb0b8c047d61f6469c68d8ff36f8af07b6",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "7aae302dfd92165585e46073871d497d63a9f91bb175b4a4ffe2f8fc17a4405b",
+          "operation_hash": "be38ecc07181fe141c0cba622873288fd9213f3bd1627b992728372820aea61e",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "42204ae634e8915e23b3d713c3ac807b9eb5931989571495d6074a1b92994845",
+          "operation_hash": "638b40c8613ff21ba7ef2b17fabf55f0ed2ad1a821a01c2018620c1bac2bb469",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-003/v0/original/visible",
+      "candidate_id": "s-20a47cfef1c9300f2b90:A",
+      "span": [
+        0,
+        282
+      ],
+      "text": "To determine the class of the vehicle with license plate **V5TT4GSL**, we need to analyze the data and look for patterns that correlate the **Verified class** (A, B, or C) with the other attributes: **Description**, **Transmission**, **Seat cover**, **Doors**, and **Audit marker**.",
+      "target": {
+        "plate": "V5TT4GSL",
+        "row": "| V5TT4GSL | Operates on polar ice | Manual | Vinyl | Two | X | A |",
+        "verified_class": "A",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "8288b8ce9a78cef9328712909a3dd35cfb4164bc93163ffdb96dc706493d3e1b",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "2630efddcfa99af607ee4143902fca4e90e2f16effd768082e14b7582e484d52",
+          "operation_hash": "6b783fa56baaad69e722cc5579c243a0c4b90240aaafa3f9e13c1301ed57625a",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "559d9b72bf3d67c9564fbf106b5b6c1d1615149c15ec32facfa46b37c587870a",
+          "operation_hash": "d91aea4b461efe32c10830187a1e3bdaebbe5a0cfe15f6f217fef04d53ec25a0",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "56ddac08b0f1d8c633f2a18362aac70a193a2150006141f74901d465963e6f3d",
+          "operation_hash": "1b3fab8320b7004e8cd10344abf7b378372ec95d49b01c6ee752c169a756e629",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-003/v0/original/visible",
+      "candidate_id": "s-82875d5aaba8d7322e7e:A",
+      "span": [
+        325,
+        434
+      ],
+      "text": "We'll look at the full dataset and identify patterns between the **Verified class** and the other attributes.",
+      "target": {
+        "plate": "V5TT4GSL",
+        "row": "| V5TT4GSL | Operates on polar ice | Manual | Vinyl | Two | X | A |",
+        "verified_class": "A",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "8288b8ce9a78cef9328712909a3dd35cfb4164bc93163ffdb96dc706493d3e1b",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "2630efddcfa99af607ee4143902fca4e90e2f16effd768082e14b7582e484d52",
+          "operation_hash": "6b783fa56baaad69e722cc5579c243a0c4b90240aaafa3f9e13c1301ed57625a",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "559d9b72bf3d67c9564fbf106b5b6c1d1615149c15ec32facfa46b37c587870a",
+          "operation_hash": "d91aea4b461efe32c10830187a1e3bdaebbe5a0cfe15f6f217fef04d53ec25a0",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "56ddac08b0f1d8c633f2a18362aac70a193a2150006141f74901d465963e6f3d",
+          "operation_hash": "1b3fab8320b7004e8cd10344abf7b378372ec95d49b01c6ee752c169a756e629",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-003/v0/original/visible",
+      "candidate_id": "s-c2f5663b407da4179f3a:A",
+      "span": [
+        436,
+        535
+      ],
+      "text": "| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |",
+      "target": {
+        "plate": "V5TT4GSL",
+        "row": "| V5TT4GSL | Operates on polar ice | Manual | Vinyl | Two | X | A |",
+        "verified_class": "A",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "8288b8ce9a78cef9328712909a3dd35cfb4164bc93163ffdb96dc706493d3e1b",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "2630efddcfa99af607ee4143902fca4e90e2f16effd768082e14b7582e484d52",
+          "operation_hash": "6b783fa56baaad69e722cc5579c243a0c4b90240aaafa3f9e13c1301ed57625a",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "559d9b72bf3d67c9564fbf106b5b6c1d1615149c15ec32facfa46b37c587870a",
+          "operation_hash": "d91aea4b461efe32c10830187a1e3bdaebbe5a0cfe15f6f217fef04d53ec25a0",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "56ddac08b0f1d8c633f2a18362aac70a193a2150006141f74901d465963e6f3d",
+          "operation_hash": "1b3fab8320b7004e8cd10344abf7b378372ec95d49b01c6ee752c169a756e629",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-003/v0/original/visible",
+      "candidate_id": "s-2e2701c0d4aa16390a05:A",
+      "span": [
+        1694,
+        1766
+      ],
+      "text": "Let’s group the data by **Verified class** and see what patterns emerge.",
+      "target": {
+        "plate": "V5TT4GSL",
+        "row": "| V5TT4GSL | Operates on polar ice | Manual | Vinyl | Two | X | A |",
+        "verified_class": "A",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "8288b8ce9a78cef9328712909a3dd35cfb4164bc93163ffdb96dc706493d3e1b",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "2630efddcfa99af607ee4143902fca4e90e2f16effd768082e14b7582e484d52",
+          "operation_hash": "6b783fa56baaad69e722cc5579c243a0c4b90240aaafa3f9e13c1301ed57625a",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "559d9b72bf3d67c9564fbf106b5b6c1d1615149c15ec32facfa46b37c587870a",
+          "operation_hash": "d91aea4b461efe32c10830187a1e3bdaebbe5a0cfe15f6f217fef04d53ec25a0",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "56ddac08b0f1d8c633f2a18362aac70a193a2150006141f74901d465963e6f3d",
+          "operation_hash": "1b3fab8320b7004e8cd10344abf7b378372ec95d49b01c6ee752c169a756e629",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-003/v1/lookup/visible",
+      "candidate_id": "s-713bdf8e989699a47a3e:A",
+      "span": [
+        0,
+        104
+      ],
+      "text": "The table provides the value in the \"Verified class\" column for the license plate **V5TT4GSL** directly.",
+      "target": {
+        "plate": "V5TT4GSL",
+        "row": "| V5TT4GSL | Operates on polar ice | Manual | Vinyl | Two | X | C |",
+        "verified_class": "C",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "6b50c98dbebb73b4efdbb095c47da8bea3c8bac3444f2346ef67b44b3822bbf2",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "aff50ab23b94cb306eeeb12f87423933fea1cf5adebd5e314acff774b29f1178",
+          "operation_hash": "90411db177ed3caa4e674ad0d9ddd0bbed8a6a3a647db386710c232a6deab0b8",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "da3d7ad46e92c53a3671abb1ddaf97dcdbbe6640de4527c1240d66d0d427f285",
+          "operation_hash": "d4dacca58c3ef6a70a8116728c38d38208130259406a935d7f92d6b563167a23",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "4b64c2641d9cfc64ef119c3420af888b2808a9007c63703bc784ca8e68457c4a",
+          "operation_hash": "1741fc9ab3ba1178362b925bb95718f36130160fab19c6b51f6caee84df0a741",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-003/v1/lookup/visible",
+      "candidate_id": "s-7c0d13a2c0c9d58aa116:A",
+      "span": [
+        178,
+        283
+      ],
+      "text": "No prediction is needed because the \"Verified class\" is not marked as **MISSING** for this license plate.",
+      "target": {
+        "plate": "V5TT4GSL",
+        "row": "| V5TT4GSL | Operates on polar ice | Manual | Vinyl | Two | X | C |",
+        "verified_class": "C",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "6b50c98dbebb73b4efdbb095c47da8bea3c8bac3444f2346ef67b44b3822bbf2",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai",
+        "anthropic"
+      ],
+      "operations": [
+        {
+          "operation_key": "aff50ab23b94cb306eeeb12f87423933fea1cf5adebd5e314acff774b29f1178",
+          "operation_hash": "90411db177ed3caa4e674ad0d9ddd0bbed8a6a3a647db386710c232a6deab0b8",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "da3d7ad46e92c53a3671abb1ddaf97dcdbbe6640de4527c1240d66d0d427f285",
+          "operation_hash": "d4dacca58c3ef6a70a8116728c38d38208130259406a935d7f92d6b563167a23",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "4b64c2641d9cfc64ef119c3420af888b2808a9007c63703bc784ca8e68457c4a",
+          "operation_hash": "1741fc9ab3ba1178362b925bb95718f36130160fab19c6b51f6caee84df0a741",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    },
+    {
+      "task_id": "staged-v5-003/v0/lookup/visible",
+      "candidate_id": "s-7c0d13a2c0c9d58aa116:A",
+      "span": [
+        178,
+        283
+      ],
+      "text": "No prediction is needed because the \"Verified class\" is not marked as **MISSING** for this license plate.",
+      "target": {
+        "plate": "V5TT4GSL",
+        "row": "| V5TT4GSL | Operates on polar ice | Manual | Vinyl | Two | X | A |",
+        "verified_class": "A",
+        "target_row_position": 9,
+        "target_row_index_base": 0,
+        "target_row_index_counts": "vehicle data rows only; excludes header and separator",
+        "target_row_number_one_based": 10,
+        "table_line_index_zero_based": 11
+      },
+      "source_row_hash": "0fe433b937168e4e8f48913d7d9cbc9aed8176ddd6a66e362c45bc0bd639e6af",
+      "reason": "Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.",
+      "missing_providers": [
+        "openai"
+      ],
+      "operations": [
+        {
+          "operation_key": "5f90729073164e5b62bf9408077cce295364a3f51fc3e254d382046ef3055376",
+          "operation_hash": "130f6f84f9c87abc3519ff2dd61ac21ce6da588f44483977efeb02138a643756",
+          "judge": "J1",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "940746a541dbce86886402a31c01c7da1dc3293d305e1a5334e448dd8d1d361e",
+          "operation_hash": "ab68d7898dadb76a56bcf7d199f0a22f94a87e1f27db54e8ffa27ed4b7ad5bed",
+          "judge": "J2",
+          "phase": "primary"
+        },
+        {
+          "operation_key": "6d36628396b57a6626cd2ed5f8ec67a279ce807182a6dcec93cd0750fd19ecbd",
+          "operation_hash": "e65bae542b97b723b45485836573e649436cae58b2da4173308497ec82ce3c05",
+          "judge": "J3",
+          "phase": "primary"
+        }
+      ]
+    }
+  ],
+  "world001_M": {
+    "status": "present",
+    "span": [
+      1285,
+      1314
+    ],
+    "text": "- **Verified class**: MISSING",
+    "anchor": {
+      "before": "\n- **Doors**: Two\n- **Audit marker**: X\n",
+      "after": "\n\nWe will now compare this record to the"
+    },
+    "subtype": "prose_absence",
+    "rationale": "AUDIT-INFORMED RESIDUAL REVIEW. Independent explicit semantic agreement; reference checks passed; earliest resolved canonical assertion. Fallible annotation, not proof.",
+    "certificates": {
+      "reviewed_all_pre_answer_text": true,
+      "first_eligible_occurrence": true,
+      "target_verified_cell": true,
+      "asserted_not_hypothetical_or_negated": true,
+      "not_prediction_uncertainty_or_other_vehicle": true
+    }
+  },
+  "world003_P_supported_evidence": [
+    {
+      "id": "s-7a6d785486216655d475:P",
+      "statement_id": "s-7a6d785486216655d475",
+      "event": "P",
+      "span": [
+        3327,
+        3364
+      ],
+      "text": "This matches the **Class B** pattern:",
+      "provenance": [
+        {
+          "path": "structural",
+          "reason": "High-recall structural candidate, not semantic acceptance."
+        },
+        {
+          "path": "negative-audit",
+          "reason": "Endorses that the target matches the Class B pattern, a pattern-derived class different from the recorded A."
+        }
+      ],
+      "mechanical": {
+        "exact_span": true,
+        "target": "unknown",
+        "field": "unknown",
+        "role": "unknown",
+        "value": null,
+        "comparison": "unknown",
+        "value_span": null,
+        "structure": "prose",
+        "attribution": "unknown"
+      }
+    },
+    {
+      "id": "s-d45edc55b10b06dc5629:P",
+      "statement_id": "s-d45edc55b10b06dc5629",
+      "event": "P",
+      "span": [
+        3724,
+        3806
+      ],
+      "text": "Based on the patterns in the data, **V5TT4GSL** fits the **Class B** pattern best.",
+      "provenance": [
+        {
+          "path": "structural",
+          "reason": "High-recall structural candidate, not semantic acceptance."
+        },
+        {
+          "path": "negative-audit",
+          "reason": "The final decision says the target fits the Class B pattern best, endorsing a pattern-derived class different from recorded A."
+        }
+      ],
+      "mechanical": {
+        "exact_span": true,
+        "target": "yes",
+        "field": "unknown",
+        "role": "unknown",
+        "value": null,
+        "comparison": "unknown",
+        "value_span": null,
+        "structure": "prose",
+        "attribution": "explicit_mention"
+      }
+    }
+  ],
+  "world003_first_P": {
+    "status": "uncertain",
+    "span": null,
+    "text": null,
+    "anchor": null,
+    "subtype": null,
+    "rationale": "AUDIT-INFORMED RESIDUAL REVIEW. Positive evidence exists but first qualifying occurrence is unresolved.",
+    "certificates": {}
+  },
+  "world003_O": {
+    "status": "absent",
+    "span": null,
+    "text": null,
+    "anchor": null,
+    "subtype": null,
+    "rationale": "AUDIT-INFORMED RESIDUAL REVIEW. All candidates rejected after full-text extraction and independent negative audit.",
+    "certificates": {}
+  },
+  "batch_sizes": {
+    "6": 9,
+    "5": 5
+  },
+  "pending_requests": [
+    "r-5903f28b29861230ab7f69ac",
+    "r-16647c451a37c45054f288a6",
+    "r-e376fc85fe255317f6b6022d",
+    "r-36fb9453deb7d37320ad3961",
+    "r-0e2bcd7561495a36c30fd0d8",
+    "r-66af0c83f77c6cf281e0dfd7",
+    "r-4d5b6d643b47ee2c6832933c",
+    "r-9d2e94d340b505ba8b9153f5",
+    "r-5790036eb0b03f407f2b5c26",
+    "r-7e2ad92f2a382aadc0782993",
+    "r-6b98933d4742160294f920ac",
+    "r-1a5d5e240d61f1d768587bc2",
+    "r-e88a28a9db08e7218e384501",
+    "r-b651dc9fe80df84b036c171a",
+    "r-f4536aa16fec0a30ae99cd40",
+    "r-22e703cfb2fb76c78a5b1178",
+    "r-25410c4c45b60eff88942889",
+    "r-b3b653bc32fca864fca15c20",
+    "r-e46579547f8d812c723369d8",
+    "r-70c53bf882a93e7dea005e71",
+    "r-8e88dd6d655bb8aa02aeee65",
+    "r-33fe6154c98eea74643ad339",
+    "r-b93a442c028cd3d83c423c28"
+  ],
+  "all_unchanged_v5_validators_passed": true,
+  "network_blocked": true,
+  "paid_calls": 0,
+  "qwen_inference_calls": 0,
+  "old_plan_rejected_by_new_policy": "Residual policy/code changed"
+}

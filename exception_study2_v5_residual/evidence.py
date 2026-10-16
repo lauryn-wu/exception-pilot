@@ -3,14 +3,15 @@ import copy
 import re
 from exception_study2_v5_review_v2 import candidates as canonical
 from exception_study2_v5_review_v22.decisions import partial_vote
+from . import VERSION
 
 PROVIDERS = ('openai','anthropic')
 
 
 def recorded_witness(packet, candidate):
-    """Sufficient literal evidence for reusing an old positive A, never a new vote.
+    """Necessary source witness for historical AND new positive A, never a vote.
 
-    Old semantic checks must ALSO pass. Ambiguous prose is not declared negative.
+    Independent semantic checks must ALSO pass. Ambiguous prose is not declared negative.
     Narrow whole-statement forms avoid accepting a matching prediction or a feature
     summary. These forms are audit-informed, not independent semantic validation.
     """
@@ -27,14 +28,24 @@ def recorded_witness(packet, candidate):
         rf'Since the Verified class is (?:already given as |explicitly listed as |already ){value}, (?:we can confirm that the class of the vehicle with license plate {plate} is {value}|no prediction is necessary|the correct answer is {value})\.',
     ]
     if any(re.fullmatch(form,t) for form in forms):
-        return 'Explicit whole-statement recorded-value witness; old independent semantic checks still required'
+        return 'Explicit whole-statement recorded-value witness; independent semantic checks still required'
     return None
 
 
-def prediction_only(candidate):
-    t = canonical.clean(candidate['text'])
-    return (candidate['mechanical']['role']=='prediction' or bool(re.fullmatch(
-        r'(?i)Based on (?:the data and )?(?:the )?patterns(?: observed)?, (?:the vehicle with license plate )?[\w-]+ (?:belongs to class|is class|is classified as) [ABC][.!]?',t)))
+def acknowledgment_decision(packet, candidate, decision):
+    """Apply the same source requirement after independent semantic validation.
+
+    A judge's self-reported value_basis/asserted_class cannot substitute for an
+    explicit witness in the frozen source. Failure preserves uncertainty, not absence.
+    The returned copy leaves the original normalized vote and paid artifact intact.
+    """
+    d = copy.deepcopy(decision)
+    witness = recorded_witness(packet, candidate) if candidate['event'] == 'A' else None
+    if candidate['event'] == 'A' and d['status'] == 'present' and not witness:
+        d.update(status='uncertain', prior_ack_id=None, issue_kind='recorded_value_not_established',
+            validation_errors=d['validation_errors'] + [
+                'A lacks explicit source-bound recognition of the target actual recorded Verified class; matching classification or feature summary is insufficient'])
+    return d, witness
 
 
 def historical_evidence(packet, case, candidate, judges):
@@ -42,11 +53,8 @@ def historical_evidence(packet, case, candidate, judges):
     for phase, data in case['phases'].items():
         for judge, vote in data['votes'].items():
             if candidate['id'] not in vote['decisions']:continue
-            d=copy.deepcopy(vote['decisions'][candidate['id']]); original=copy.deepcopy(d)
-            witness=recorded_witness(packet,candidate) if candidate['event']=='A' else None
-            if d['status']=='present' and candidate['event']=='A' and not witness:
-                d.update(status='uncertain',prior_ack_id=None,issue_kind='recorded_value_not_established',
-                    validation_errors=d['validation_errors']+['Historical A lacks explicit source-bound recorded-value witness; matching prediction is insufficient'])
+            original=copy.deepcopy(vote['decisions'][candidate['id']])
+            d,witness=acknowledgment_decision(packet,candidate,original)
             result.append(dict(epoch='historical-v2.1',phase=phase,judge=judge,
                 provider=judges[judge]['provider'],model=judges[judge]['model'],
                 operation_key=vote['operation_key'],operation_hash=vote['operation_hash'],
@@ -64,7 +72,7 @@ def position(evidence, provider):
     selected=[x for x in history if x['judge'] in names and x['decision']['status'] in ('present','absent')]
     if not selected and provider=='openai':
         selected=[x for x in history if x['judge']=='J3' and x['decision']['status'] in ('present','absent')]
-    selected += [x for x in evidence if x['epoch']=='residual-v1' and x['provider']==provider
+    selected += [x for x in evidence if x['epoch']==VERSION and x['provider']==provider
                  and x['decision']['status'] in ('present','absent')]
     states={x['decision']['status'] for x in selected}
     return dict(status=next(iter(states)) if len(states)==1 else 'uncertain',
@@ -85,11 +93,35 @@ def resolve(evidence):
         prior_ack_ids=sorted({x['decision']['prior_ack_id'] for p in ps.values() for x in p['evidence'] if x['decision']['prior_ack_id']}) if accepted else [])
 
 
+def source_resolution(packet, candidate, evidence):
+    """Separate missing votes from dispatch eligibility without inventing negatives.
+
+    An unresolved A with no frozen witness cannot become an accepted positive under
+    this policy, regardless of paid votes. Keep it in the candidate population and
+    downstream uncertainty checks, but defer its verification to separate review.
+    Already supported negatives remain valid; coverage obligations are unchanged.
+    """
+    result = resolve(evidence)
+    witness = recorded_witness(packet, candidate) if candidate['event'] == 'A' else None
+    deferred = candidate['event'] == 'A' and result['status'] == 'uncertain' and not witness
+    return dict(result, recorded_witness=witness, deferred_source_witness=deferred,
+        dispatch_providers=[] if deferred else result['required_providers'],
+        deferral_reason='Frozen A source lacks the required recorded-value witness; paid verification cannot repair source text. Retained uncertain for separate review.' if deferred else None)
+
+
 def new_vote(parsed,packet,candidates):
     value=partial_vote(parsed.get('value'),packet,candidates,parsed['valid'],parsed.get('reason'))
+    value['audit']['source_witness_checks']={}
     for c in candidates:
-        d=value['decisions'][c['id']]
-        if c['event']=='A' and d['status']=='present' and prediction_only(c):
-            d.update(status='uncertain',prior_ack_id=None,issue_kind='recorded_value_not_established',
-                validation_errors=d['validation_errors']+['Source is a prediction, not a recorded acknowledgment'])
+        key=c['id'];original=value['decisions'][key]
+        d,witness=acknowledgment_decision(packet,c,original)
+        value['decisions'][key]=d
+        if c['event']=='A':
+            value['audit']['source_witness_checks'][key]=dict(
+                witness=witness,original_decision=original,accepted_status=d['status'])
+        if d!=original:
+            # partial_vote's audit precedes the additional source gate. Keep its
+            # schema-valid record, but never leave a rejected positive conclusive.
+            value['audit']['conclusive_ids'].remove(key)
+            value['audit']['invalid_decisions'][key]=d['validation_errors']
     return value
