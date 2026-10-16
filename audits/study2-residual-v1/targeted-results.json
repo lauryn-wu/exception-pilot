@@ -1,0 +1,10 @@
+{
+  "tests_run": 33,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "elapsed_seconds": 202.617,
+  "network_and_model_loader_blocked": true,
+  "paid_calls": 0
+}

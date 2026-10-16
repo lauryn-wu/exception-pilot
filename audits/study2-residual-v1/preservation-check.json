@@ -1,0 +1,44 @@
+{
+  "base_commit": "db53da0e6c811f64646f9e0b1af50772a2a3ccf4",
+  "all_preexisting_files_byte_identical": true,
+  "trees": {
+    "tracked": {
+      "files_before": 461,
+      "files_after": 461,
+      "changed_paths": [],
+      "identical": true,
+      "path_sha256_map_digest": "dc8fcff5738076f82a53ebfa6da145f868cb7f271b6807328447005b84ba2c78"
+    },
+    "paid": {
+      "files_before": 639,
+      "files_after": 639,
+      "changed_paths": [],
+      "identical": true,
+      "path_sha256_map_digest": "86b1889ec8017f5741933d476dd17fbdb83997b78c2dbe59c4cbe23d6e895c05"
+    },
+    "salvage": {
+      "files_before": 5,
+      "files_after": 5,
+      "changed_paths": [],
+      "identical": true,
+      "path_sha256_map_digest": "2acfaba02d954703d4f06a4c64145934a2d1824dc65b05321eed5735b7084b36"
+    },
+    "originals": {
+      "files_before": 786,
+      "files_after": 786,
+      "changed_paths": [],
+      "identical": true,
+      "path_sha256_map_digest": "a493465b2f82b545201b8fa2b6a4834370b67b485a4db0a8264a65481ecdecc4"
+    }
+  },
+  "new_plan_files": {
+    "residual-plan.json": "c627e4a64368d4b00cb465ad3eef31a86117448176f8ef3b1269328066a21ed8",
+    "residual-policy.json": "9f0cff37b7a7039c890d47b8283e898d99d2f73c741938c641bf7b2638698dc5",
+    "request-preview.json": "a705e9c82465e1b4e42402c6a9d3e9543264e2496f3a877c023eb66659659d6c",
+    "prior-evidence.json": "e433fb311293ebec0c77613e449eb18356d5bad57d9ed31ed31dafd52760a72e",
+    "locks/run.lock": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "paid_calls": 0,
+  "pretrained_qwen_inference": 0,
+  "all_30_requests_unattempted": true
+}
