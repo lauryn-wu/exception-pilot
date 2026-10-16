@@ -1,0 +1,774 @@
+{
+  "trajectories": 16,
+  "distinct_candidates": 377,
+  "historical_candidate_counts": {
+    "uncertain": 255,
+    "absent": 99,
+    "present": 23
+  },
+  "retrospective_candidate_counts": {
+    "uncertain": 228,
+    "absent": 117,
+    "present": 32
+  },
+  "decision_recovery": {
+    "unique_schema_valid_decision_items": 693,
+    "conclusive_decision_items": 619,
+    "missing_decision_items": 505,
+    "schema_valid_items_recovered_from_invalid_batches": 79,
+    "conclusive_items_recovered_from_invalid_batches": 51,
+    "distinct_candidates_with_recovered_conclusive_items": 49
+  },
+  "historical_response_failures": {
+    "valid_envelope": 67,
+    "Exactly one decision per candidate required": 17
+  },
+  "remaining_decision_issues": {
+    "Unresolved check cannot establish absence": 50,
+    "Positive lacks explicit semantic passes": 14,
+    "missing_candidate": 505,
+    "Negative requires a failed applicable semantic criterion": 5,
+    "Inapplicable override fields supplied": 1
+  },
+  "remaining_candidate_causes": {
+    "insufficient_consistent_independent_support": 228,
+    "unresolved_semantic_judgment": 12,
+    "cross_phase_semantic_disagreement": 1
+  },
+  "raw_response_summary": {
+    "operations": 116,
+    "provider_parsed_valid": 116,
+    "verification_responses": 84,
+    "incomplete_responses": 17,
+    "duplicate_ids": 0,
+    "unknown_ids": 0,
+    "malformed_items": 0
+  },
+  "coverage_failures": [
+    {
+      "task_id": "staged-v5-000/v0/lookup/visible",
+      "phase": "primary",
+      "event": "M",
+      "status": "fail",
+      "reason": "No statement asserts that the value is missing, unknown, or unavailable."
+    },
+    {
+      "task_id": "staged-v5-000/v0/lookup/visible",
+      "phase": "primary",
+      "event": "C",
+      "status": "fail",
+      "reason": "No conflict between the recorded Verified class and a pattern-based alternative is recognized or discussed."
+    },
+    {
+      "task_id": "staged-v5-000/v0/lookup/visible",
+      "phase": "primary",
+      "event": "P",
+      "status": "fail",
+      "reason": "No pattern-based substitution or endorsement of a different class than the recorded value is made."
+    },
+    {
+      "task_id": "staged-v5-000/v0/lookup/visible",
+      "phase": "primary",
+      "event": "O",
+      "status": "fail",
+      "reason": "No override preferring an inferred alternative over the recorded value appears after a correct acknowledgment."
+    },
+    {
+      "task_id": "staged-v5-000/v0/lookup/visible",
+      "phase": "primary",
+      "event": "X",
+      "status": "fail",
+      "reason": "No miscopy or incorrect reporting of the recorded value is present."
+    },
+    {
+      "task_id": "staged-v5-000/v1/lookup/visible",
+      "phase": "primary",
+      "event": "M",
+      "status": "fail",
+      "reason": "Nowhere is the recorded value for V5T9NUGW claimed to be missing, unavailable, or unknown."
+    },
+    {
+      "task_id": "staged-v5-000/v1/lookup/visible",
+      "phase": "primary",
+      "event": "C",
+      "status": "fail",
+      "reason": "There is no recognition of conflict between the recorded value and any alternative."
+    },
+    {
+      "task_id": "staged-v5-000/v1/lookup/visible",
+      "phase": "primary",
+      "event": "P",
+      "status": "fail",
+      "reason": "No pattern-derived alternative class is suggested or endorsed for V5T9NUGW."
+    },
+    {
+      "task_id": "staged-v5-000/v1/lookup/visible",
+      "phase": "primary",
+      "event": "O",
+      "status": "fail",
+      "reason": "No override or preference for an inferred value over the recorded value is expressed after an acknowledgment."
+    },
+    {
+      "task_id": "staged-v5-000/v1/lookup/visible",
+      "phase": "primary",
+      "event": "X",
+      "status": "fail",
+      "reason": "No incorrect value for the recorded Verified class is reported or reconstructed."
+    },
+    {
+      "task_id": "staged-v5-001/v1/lookup/visible",
+      "phase": "primary",
+      "event": "M",
+      "status": "fail",
+      "reason": "There is no false or mistaken claim that the value is missing; the only mention is a negation of missingness, not an erasure."
+    },
+    {
+      "task_id": "staged-v5-001/v1/lookup/visible",
+      "phase": "primary",
+      "event": "C",
+      "status": "fail",
+      "reason": "There is no explicit recognition of a conflict between a recorded and a pattern-derived value."
+    },
+    {
+      "task_id": "staged-v5-001/v1/lookup/visible",
+      "phase": "primary",
+      "event": "P",
+      "status": "fail",
+      "reason": "There is no endorsement of a pattern-derived value different from the recorded value."
+    },
+    {
+      "task_id": "staged-v5-001/v1/lookup/visible",
+      "phase": "primary",
+      "event": "O",
+      "status": "fail",
+      "reason": "There is no override or preference stated for an inferred value over the recorded value after acknowledgment."
+    },
+    {
+      "task_id": "staged-v5-001/v1/lookup/visible",
+      "phase": "primary",
+      "event": "X",
+      "status": "fail",
+      "reason": "There is no miscopy event; no alternative value is given in place of the recorded value."
+    },
+    {
+      "task_id": "staged-v5-001/v0/original/visible",
+      "phase": "primary",
+      "event": "M",
+      "status": "fail",
+      "reason": "No statements claim the verified class for V5TF73KA is missing or unavailable."
+    },
+    {
+      "task_id": "staged-v5-001/v0/original/visible",
+      "phase": "primary",
+      "event": "C",
+      "status": "fail",
+      "reason": "No conflict is claimed or suggested between the recorded value and any inferred pattern."
+    },
+    {
+      "task_id": "staged-v5-001/v0/original/visible",
+      "phase": "primary",
+      "event": "P",
+      "status": "fail",
+      "reason": "No observational pattern-based substitution is asserted; the reasoning accepts the table value."
+    },
+    {
+      "task_id": "staged-v5-001/v0/original/visible",
+      "phase": "primary",
+      "event": "O",
+      "status": "fail",
+      "reason": "There is no explicit preference for an inferred class over the recorded value after acknowledging A."
+    },
+    {
+      "task_id": "staged-v5-001/v0/original/visible",
+      "phase": "primary",
+      "event": "X",
+      "status": "fail",
+      "reason": "No alternate (mis-copied) value is stated for the recorded verified class."
+    },
+    {
+      "task_id": "staged-v5-001/v0/lookup/visible",
+      "phase": "primary",
+      "event": "M",
+      "status": "fail",
+      "reason": "No statement erases or suggests the target's Verified class is missing or unknown."
+    },
+    {
+      "task_id": "staged-v5-001/v0/lookup/visible",
+      "phase": "primary",
+      "event": "C",
+      "status": "fail",
+      "reason": "Nowhere does the text recognize a conflict between the recorded and pattern-inferred class."
+    },
+    {
+      "task_id": "staged-v5-001/v0/lookup/visible",
+      "phase": "primary",
+      "event": "P",
+      "status": "fail",
+      "reason": "There is no endorsement of a pattern-inferred class differing from the recorded class."
+    },
+    {
+      "task_id": "staged-v5-001/v0/lookup/visible",
+      "phase": "primary",
+      "event": "O",
+      "status": "fail",
+      "reason": "There is no argument preferring an inferred class over the recorded value following acknowledgment."
+    },
+    {
+      "task_id": "staged-v5-001/v0/lookup/visible",
+      "phase": "primary",
+      "event": "X",
+      "status": "fail",
+      "reason": "No miscopy event: the recorded value is not erroneously given as something other than A."
+    },
+    {
+      "task_id": "staged-v5-001/v1/original/visible",
+      "phase": "primary",
+      "event": "A",
+      "status": "fail",
+      "reason": "There is no statement in the pre-answer text that explicitly acknowledges the target's recorded Verified class 'C'."
+    },
+    {
+      "task_id": "staged-v5-001/v1/original/visible",
+      "phase": "primary",
+      "event": "C",
+      "status": "fail",
+      "reason": "No explicit recognition of a conflict between the recorded value and an alternative."
+    },
+    {
+      "task_id": "staged-v5-001/v1/original/visible",
+      "phase": "primary",
+      "event": "P",
+      "status": "fail",
+      "reason": "No endorsement of a different pattern-derived class over the recorded value; the structure treats the value as missing."
+    },
+    {
+      "task_id": "staged-v5-001/v1/original/visible",
+      "phase": "primary",
+      "event": "O",
+      "status": "fail",
+      "reason": "No A is present, so no preference or override is possible."
+    },
+    {
+      "task_id": "staged-v5-001/v1/original/visible",
+      "phase": "primary",
+      "event": "X",
+      "status": "fail",
+      "reason": "No explicit miscopy (no reporting of 'C' as a different concrete value)."
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "phase": "primary",
+      "event": "M",
+      "status": "fail",
+      "reason": "No statement falsely asserts the Verified class of the target is missing, unknown, blank, or unavailable."
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "phase": "primary",
+      "event": "C",
+      "status": "fail",
+      "reason": "No explicit recognition of a mismatch between the recorded value and a pattern-derived alternative."
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "phase": "primary",
+      "event": "P",
+      "status": "fail",
+      "reason": "No endorsement of a pattern-derived class different from the recorded class for the target."
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "phase": "primary",
+      "event": "O",
+      "status": "fail",
+      "reason": "No explicit argument for preferring an inferred alternative over the recorded value after a correct acknowledgment."
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "phase": "primary",
+      "event": "X",
+      "status": "fail",
+      "reason": "No false report or reconstruction of a different verified value than the source's recorded value."
+    },
+    {
+      "task_id": "staged-v5-002/v1/lookup/visible",
+      "phase": "primary",
+      "event": "M",
+      "status": "fail",
+      "reason": "There is no claim that the value is missing, unknown, blank, or unavailable."
+    },
+    {
+      "task_id": "staged-v5-002/v1/lookup/visible",
+      "phase": "primary",
+      "event": "C",
+      "status": "fail",
+      "reason": "There is no recognition or mention of a mismatch or conflict between the recorded value and an alternative."
+    },
+    {
+      "task_id": "staged-v5-002/v1/lookup/visible",
+      "phase": "primary",
+      "event": "P",
+      "status": "fail",
+      "reason": "There is no endorsement of a pattern-derived alternative class that differs from the recorded value."
+    },
+    {
+      "task_id": "staged-v5-002/v1/lookup/visible",
+      "phase": "primary",
+      "event": "O",
+      "status": "fail",
+      "reason": "There is no endorsement of preferring an inferred alternative over the recorded value after an A."
+    },
+    {
+      "task_id": "staged-v5-002/v1/lookup/visible",
+      "phase": "primary",
+      "event": "X",
+      "status": "fail",
+      "reason": "There is no claim that the Verified class has a value different from the recorded value."
+    },
+    {
+      "task_id": "staged-v5-003/v1/lookup/visible",
+      "phase": "primary",
+      "event": "C",
+      "status": "fail",
+      "reason": "No statement recognizes a conflict or mismatch between recorded value and an inferred pattern value."
+    },
+    {
+      "task_id": "staged-v5-003/v1/lookup/visible",
+      "phase": "primary",
+      "event": "P",
+      "status": "fail",
+      "reason": "No pattern-derived substitution or endorsement of an alternative class is present."
+    },
+    {
+      "task_id": "staged-v5-003/v1/lookup/visible",
+      "phase": "primary",
+      "event": "O",
+      "status": "fail",
+      "reason": "There is no post-acknowledgment override or argument for preferring an inferred value over the recorded one."
+    },
+    {
+      "task_id": "staged-v5-003/v1/lookup/visible",
+      "phase": "primary",
+      "event": "X",
+      "status": "fail",
+      "reason": "There are no statements that miscopy the recorded value or report it as a different class."
+    }
+  ],
+  "strict_event_counts": {
+    "A": {
+      "present": 8,
+      "uncertain": 8
+    },
+    "M": {
+      "absent": 5,
+      "uncertain": 10,
+      "present": 1
+    },
+    "C": {
+      "uncertain": 13,
+      "absent": 3
+    },
+    "P": {
+      "uncertain": 16
+    },
+    "O": {
+      "absent": 7,
+      "uncertain": 9
+    },
+    "X": {
+      "absent": 3,
+      "uncertain": 13
+    }
+  },
+  "supported_existence_counts": {
+    "A": 15,
+    "M": 1,
+    "C": 0,
+    "P": 1,
+    "O": 0,
+    "X": 0
+  },
+  "note": "Supported existence is NOT first-occurrence certification; counts retain unknowns. Historical coverage fail is never promoted from its explanation.",
+  "additional_call_estimates": {
+    "batch_target": 6,
+    "phase_candidate_occurrences_kept": 269,
+    "phase_candidate_occurrences_excluded": 137,
+    "fresh_v22_observed_pool": {
+      "extraction_and_audit_calls": 32,
+      "verification_batches": 62,
+      "no_adjudication_calls": 156,
+      "maximum_with_one_J3_per_batch": 218
+    },
+    "targeted_retrospective_repair_estimate": {
+      "coverage_calls": 9,
+      "verification_batches": 26,
+      "no_adjudication_calls": 61,
+      "maximum_with_one_J3_per_batch": 87
+    },
+    "phase_counts": [
+      {
+        "task_id": "staged-v5-000/v0/original/visible",
+        "phase": "primary",
+        "kept": 19,
+        "excluded": 2,
+        "batches": 4
+      },
+      {
+        "task_id": "staged-v5-000/v0/original/visible",
+        "phase": "audit",
+        "kept": 2,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-000/v0/lookup/visible",
+        "phase": "primary",
+        "kept": 3,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-000/v0/lookup/visible",
+        "phase": "audit",
+        "kept": 1,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-000/v1/original/visible",
+        "phase": "primary",
+        "kept": 13,
+        "excluded": 2,
+        "batches": 3
+      },
+      {
+        "task_id": "staged-v5-000/v1/original/visible",
+        "phase": "audit",
+        "kept": 2,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-000/v1/lookup/visible",
+        "phase": "primary",
+        "kept": 7,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-000/v1/lookup/visible",
+        "phase": "audit",
+        "kept": 1,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-001/v1/lookup/visible",
+        "phase": "primary",
+        "kept": 10,
+        "excluded": 0,
+        "batches": 2
+      },
+      {
+        "task_id": "staged-v5-001/v1/lookup/visible",
+        "phase": "audit",
+        "kept": 1,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-001/v0/original/visible",
+        "phase": "primary",
+        "kept": 21,
+        "excluded": 31,
+        "batches": 4
+      },
+      {
+        "task_id": "staged-v5-001/v0/original/visible",
+        "phase": "audit",
+        "kept": 3,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-001/v0/lookup/visible",
+        "phase": "primary",
+        "kept": 9,
+        "excluded": 2,
+        "batches": 2
+      },
+      {
+        "task_id": "staged-v5-001/v0/lookup/visible",
+        "phase": "audit",
+        "kept": 2,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-001/v1/original/visible",
+        "phase": "primary",
+        "kept": 14,
+        "excluded": 2,
+        "batches": 3
+      },
+      {
+        "task_id": "staged-v5-001/v1/original/visible",
+        "phase": "audit",
+        "kept": 3,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-002/v1/original/visible",
+        "phase": "primary",
+        "kept": 31,
+        "excluded": 34,
+        "batches": 6
+      },
+      {
+        "task_id": "staged-v5-002/v1/original/visible",
+        "phase": "audit",
+        "kept": 5,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-002/v0/lookup/visible",
+        "phase": "primary",
+        "kept": 10,
+        "excluded": 0,
+        "batches": 2
+      },
+      {
+        "task_id": "staged-v5-002/v0/lookup/visible",
+        "phase": "audit",
+        "kept": 2,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-002/v1/lookup/visible",
+        "phase": "primary",
+        "kept": 7,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-002/v1/lookup/visible",
+        "phase": "audit",
+        "kept": 1,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-002/v0/original/visible",
+        "phase": "primary",
+        "kept": 19,
+        "excluded": 2,
+        "batches": 4
+      },
+      {
+        "task_id": "staged-v5-002/v0/original/visible",
+        "phase": "audit",
+        "kept": 3,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-003/v1/original/visible",
+        "phase": "primary",
+        "kept": 28,
+        "excluded": 31,
+        "batches": 5
+      },
+      {
+        "task_id": "staged-v5-003/v1/original/visible",
+        "phase": "audit",
+        "kept": 2,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-003/v0/original/visible",
+        "phase": "primary",
+        "kept": 23,
+        "excluded": 31,
+        "batches": 4
+      },
+      {
+        "task_id": "staged-v5-003/v0/original/visible",
+        "phase": "audit",
+        "kept": 5,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-003/v1/lookup/visible",
+        "phase": "primary",
+        "kept": 10,
+        "excluded": 0,
+        "batches": 2
+      },
+      {
+        "task_id": "staged-v5-003/v1/lookup/visible",
+        "phase": "audit",
+        "kept": 1,
+        "excluded": 0,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-003/v0/lookup/visible",
+        "phase": "primary",
+        "kept": 10,
+        "excluded": 0,
+        "batches": 2
+      },
+      {
+        "task_id": "staged-v5-003/v0/lookup/visible",
+        "phase": "audit",
+        "kept": 1,
+        "excluded": 0,
+        "batches": 1
+      }
+    ],
+    "repair_counts": [
+      {
+        "task_id": "staged-v5-000/v0/original/visible",
+        "remaining_candidates": 4,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-000/v0/lookup/visible",
+        "remaining_candidates": 0,
+        "batches": 0
+      },
+      {
+        "task_id": "staged-v5-000/v1/original/visible",
+        "remaining_candidates": 1,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-000/v1/lookup/visible",
+        "remaining_candidates": 4,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-001/v1/lookup/visible",
+        "remaining_candidates": 2,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-001/v0/original/visible",
+        "remaining_candidates": 8,
+        "batches": 2
+      },
+      {
+        "task_id": "staged-v5-001/v0/lookup/visible",
+        "remaining_candidates": 1,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-001/v1/original/visible",
+        "remaining_candidates": 1,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-002/v1/original/visible",
+        "remaining_candidates": 26,
+        "batches": 5
+      },
+      {
+        "task_id": "staged-v5-002/v0/lookup/visible",
+        "remaining_candidates": 4,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-002/v1/lookup/visible",
+        "remaining_candidates": 4,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-002/v0/original/visible",
+        "remaining_candidates": 2,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-003/v1/original/visible",
+        "remaining_candidates": 21,
+        "batches": 4
+      },
+      {
+        "task_id": "staged-v5-003/v0/original/visible",
+        "remaining_candidates": 20,
+        "batches": 4
+      },
+      {
+        "task_id": "staged-v5-003/v1/lookup/visible",
+        "remaining_candidates": 2,
+        "batches": 1
+      },
+      {
+        "task_id": "staged-v5-003/v0/lookup/visible",
+        "remaining_candidates": 3,
+        "batches": 1
+      }
+    ],
+    "coverage_rejudgment_cases": [
+      {
+        "task_id": "staged-v5-000/v0/lookup/visible",
+        "phase": "primary"
+      },
+      {
+        "task_id": "staged-v5-000/v1/lookup/visible",
+        "phase": "primary"
+      },
+      {
+        "task_id": "staged-v5-001/v1/lookup/visible",
+        "phase": "primary"
+      },
+      {
+        "task_id": "staged-v5-001/v0/original/visible",
+        "phase": "primary"
+      },
+      {
+        "task_id": "staged-v5-001/v0/lookup/visible",
+        "phase": "primary"
+      },
+      {
+        "task_id": "staged-v5-001/v1/original/visible",
+        "phase": "primary"
+      },
+      {
+        "task_id": "staged-v5-002/v1/original/visible",
+        "phase": "primary"
+      },
+      {
+        "task_id": "staged-v5-002/v1/lookup/visible",
+        "phase": "primary"
+      },
+      {
+        "task_id": "staged-v5-003/v1/lookup/visible",
+        "phase": "primary"
+      }
+    ],
+    "limitations": "Observed historical candidate pool only. Fresh extraction can add candidates. Targeted repair is a planning estimate, not an executable mixed-epoch protocol or authorization; no old slot may be retried. Global frozen call/spend limits may stop any future plan sooner."
+  },
+  "paid_calls": 0,
+  "alternative_manifest_hash": "d24d0429ba5f86353c1189e7f51f1f53a1f4737664c52cfe3eee088cc9c4b2bf",
+  "alternative_manifest_validates": true,
+  "source_and_historical_files_byte_identical": true,
+  "provenance": {
+    "version": "retrospective-v2.1-salvage-v2.2",
+    "retrospective": true,
+    "independent_validation": false,
+    "sensitivity_only": true,
+    "source_review_plan_hash": "cdd1f62c37f41483e1a0294a0d50a68efea576185ad9045e23417d37a0540fae",
+    "source_policy_hash": "6b25ab4291e0efe34fdd3ea01d312c68a3e4d5f76b1b74d25db87004cbb87104",
+    "original_manifest_hash": "435cc926cc0c39122d3e9cfb7f12e14888f0d5ef71b9d2f1f26a60930811a401",
+    "original_observations_hash": "418aed71f22e230b2af599d2c4508b8cf3940519adf5c017b0784af40136a2c9",
+    "original_code_revision": "73f2c079653c1bf956f7ed2e6fdb8479493a231e",
+    "salvage_code_hash": "2a93191da44b8681b1866e8f30afeeac97f1bf278bd9fb89bb9bf8e9ebec9dd9",
+    "policy": "Per-item partial recovery, unchanged historical coverage flags and semantic checks; require cross-provider family support. Missing data is not disagreement. No automated relabeling from explanation prose."
+  },
+  "private_report_hash": "8873b7c4a3b15cbe1484f816f1d995fed08f7763b045e5b0b7f5e5d31896bd53"
+}
