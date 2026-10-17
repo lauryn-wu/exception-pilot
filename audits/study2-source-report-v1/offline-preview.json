@@ -1,0 +1,454 @@
+{
+  "implementation_revision": "237f3a395f4941fcdfa82edb63688703a3769d36",
+  "implementation_changes": "additive uncommitted working tree; exact code contract frozen below",
+  "plan_hash": "2eb6c64bf5a1d7de2af005d6e115b9ccef603def620bba1710a326dd576e6de2",
+  "code_contract": "3b391ebf5ad478fbd20e0f6bf45cfcc83cf1d820fcf6dc799d8eb7e4c84adb46",
+  "inventory": {
+    "trajectories": 112,
+    "eligible_by_checkpoint": {
+      "0": 112,
+      "256": 112,
+      "512": 108
+    },
+    "main": 332,
+    "legacy_entries": 664,
+    "excluded": 4,
+    "calibration_present": 8,
+    "calibration_missing": 4,
+    "calibration": 12,
+    "maximum_generations": 344,
+    "maximum_output_tokens": 5504
+  },
+  "planned_input_token_occurrences": 236974,
+  "source": {
+    "remaining": {
+      "scope": "remaining",
+      "source_hash": "e35ee9fb0e61276bddf83192c9e204b22918fa84b8575e98cb2ab0b00ea48a90",
+      "plan_hash": "7a7ad23ac63d8c06c1e68fd2a1232f159da7f1201ac1d970a07618394cedfc22",
+      "backend_hash": "a7a7eb1cd399fd4a3a74c0cee48546c6db219840c5ccc960d4c984dc04a3b1c4"
+    },
+    "pilot": {
+      "scope": "pilot",
+      "source_hash": "4a9aff2291c6a99c4e770d841dd98a4812b995d46a47232c88d773d3649b925b",
+      "plan_hash": "7a7ad23ac63d8c06c1e68fd2a1232f159da7f1201ac1d970a07618394cedfc22",
+      "backend_hash": "a7a7eb1cd399fd4a3a74c0cee48546c6db219840c5ccc960d4c984dc04a3b1c4"
+    },
+    "historical_execution_hash": "3401d13fb53a22b06c69f5c97c875a0843cd592c42e943533210bdec7f02b976",
+    "historical_revision": "07e4b6552509f955f62d234c7a9ee8a634cf649b",
+    "technical_hash": "d8c4e297cb894e6106c58447c588ac38a229d3679c2925c94c14b70435b0980f",
+    "legacy": {
+      "legacy_provenance_mode": "exported_summary",
+      "evidence_hash": "b25e1bb6fa66b75e4d2a2a238b0d445e7511f26d2d278d10443a7292b9f30f7c",
+      "historical_plan_hash": "f0ca30685e003d5a4f9eed1aa12bc3761b74eef06c1fb2c8dd3b6ec954ab566e",
+      "reconstructed_plan_hash": "f0ca30685e003d5a4f9eed1aa12bc3761b74eef06c1fb2c8dd3b6ec954ab566e",
+      "plan_hash_independently_reproduced": true,
+      "plan_reference_status": "independently_reproduced",
+      "plan_reference_limit": null,
+      "checks": [
+        "sealed_summary",
+        "reconstructed_computation_ids",
+        "source_row_bindings",
+        "exact_context_ids_and_hashes",
+        "cue_text_and_ids",
+        "pinned_candidate_tokens",
+        "finite_nonpositive_token_logprobs",
+        "sequence_sums",
+        "normalized_probabilities",
+        "verified_pattern_log_odds",
+        "class_token_abc_mass"
+      ],
+      "journal_level_verified": false
+    }
+  },
+  "required_hardware": "NVIDIA H100 80GB HBM3",
+  "generation_settings": {
+    "budget": 16,
+    "capture_at": [],
+    "batch_size": 1,
+    "precision": "bfloat16",
+    "quantization": null,
+    "enable_thinking": false,
+    "attention": "eager",
+    "generation_overrides": {
+      "do_sample": false,
+      "num_beams": 1,
+      "use_model_defaults": false
+    },
+    "fresh_prefill": true
+  },
+  "exclusions": [
+    {
+      "task_id": "staged-v5-011/v1/original/visible",
+      "world": "staged-v5-011",
+      "source_row_hash": "d1ea408f4031b0a56ce940031fdcfc1b55089853bcd5c52c206188bec2908778",
+      "checkpoint": 512,
+      "reason": "short_or_at_answer_or_inexact_boundary",
+      "original_tokens": 433,
+      "natural_final_answer": {
+        "answer": "A",
+        "valid": true,
+        "correct": true,
+        "strict_format": true,
+        "strict_terminal": true,
+        "strict_correct": true,
+        "terminal_candidate": "A",
+        "truncated": false,
+        "outcome": "correct"
+      }
+    },
+    {
+      "task_id": "staged-v5-026/v0/original/visible",
+      "world": "staged-v5-026",
+      "source_row_hash": "5e7542f8cae044b145645331df3cff7d7d5e8be630dfb3c3ea9488db63218804",
+      "checkpoint": 512,
+      "reason": "short_or_at_answer_or_inexact_boundary",
+      "original_tokens": 510,
+      "natural_final_answer": {
+        "answer": "A",
+        "valid": true,
+        "correct": true,
+        "strict_format": true,
+        "strict_terminal": true,
+        "strict_correct": true,
+        "terminal_candidate": "A",
+        "truncated": false,
+        "outcome": "correct"
+      }
+    },
+    {
+      "task_id": "staged-v5-027/v0/original/visible",
+      "world": "staged-v5-027",
+      "source_row_hash": "ef9ef78242177981667667596fed9e440092c877eddffdfb0dcb3614c01189da",
+      "checkpoint": 512,
+      "reason": "short_or_at_answer_or_inexact_boundary",
+      "original_tokens": 371,
+      "natural_final_answer": {
+        "answer": "C",
+        "valid": true,
+        "correct": true,
+        "strict_format": true,
+        "strict_terminal": true,
+        "strict_correct": true,
+        "terminal_candidate": "C",
+        "truncated": false,
+        "outcome": "correct"
+      }
+    },
+    {
+      "task_id": "staged-v5-059/v1/original/visible",
+      "world": "staged-v5-059",
+      "source_row_hash": "d8f68efadab733dc9856da33ae083d64387e5d4c51442e186f42ce81f06978b5",
+      "checkpoint": 512,
+      "reason": "short_or_at_answer_or_inexact_boundary",
+      "original_tokens": 332,
+      "natural_final_answer": {
+        "answer": "C",
+        "valid": true,
+        "correct": true,
+        "strict_format": true,
+        "strict_terminal": true,
+        "strict_correct": true,
+        "terminal_candidate": "C",
+        "truncated": false,
+        "outcome": "correct"
+      }
+    }
+  ],
+  "calibration": [
+    {
+      "id": "v5/source-report/edd7c5b14cd956a4d08c7cf7804532393163e7c5f12a2a6286ffb7058d0bf99d",
+      "task_id": "staged-v5-000/v0/original/visible",
+      "world": "staged-v5-000",
+      "kind": "calibration_present",
+      "expected": "C",
+      "checkpoint": 0,
+      "context_hash": "c8380340b0b8a46d945ab290c771f18d91fc07ad4c32075c96681b1857d164eb",
+      "parent_rows": {
+        "staged-v5-000/v0/original/visible": "067fcebfe1174bd7d4356be97d5bffe4c47289602a9312639a8d56d4e84e0182"
+      },
+      "cell_edit": null
+    },
+    {
+      "id": "v5/source-report/e1b26c5d9a3c3d8f8037d42d326a7d3f0bab28489ac5b789a44c598b4561ddc2",
+      "task_id": "staged-v5-000/v1/original/visible",
+      "world": "staged-v5-000",
+      "kind": "calibration_present",
+      "expected": "A",
+      "checkpoint": 0,
+      "context_hash": "3fc2359200300125beb87cc2354768ec0d5d2c121557f9c01452b7bb49cc76e5",
+      "parent_rows": {
+        "staged-v5-000/v1/original/visible": "1986507dc5579d432f052210ddec062ed353e49fc4bdbd091017abdff338b736"
+      },
+      "cell_edit": null
+    },
+    {
+      "id": "v5/source-report/c6841c641950cc8b3947a0904ecbe064bbc6885c48c2f808b9195ddf71f4ea9e",
+      "task_id": "staged-v5-000/v0/original/visible",
+      "world": "staged-v5-000",
+      "kind": "calibration_missing",
+      "expected": "MISSING",
+      "checkpoint": 0,
+      "context_hash": "4e1412b14dd6e7ad4a182c893f1b455e7f757a81f10c9f6bcba2cbc0ef659f46",
+      "parent_rows": {
+        "staged-v5-000/v0/original/visible": "067fcebfe1174bd7d4356be97d5bffe4c47289602a9312639a8d56d4e84e0182",
+        "staged-v5-000/v1/original/visible": "1986507dc5579d432f052210ddec062ed353e49fc4bdbd091017abdff338b736"
+      },
+      "cell_edit": {
+        "prompt": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| V5TVMQJ4 | Used at an Arctic station | Manual | Cloth | Two | X | A |\n| V5T65EAR | Designed for frozen terrain | Automatic | Vinyl | Two | Y | C |\n| V5TLQJNH | Equipped with snow tracks | Manual | Cloth | Two | Y | A |\n| V5TW77PL | Operates on polar ice | Manual | Cloth | Two | X | C |\n| V5T9C6LW | Built for subzero temperatures | Automatic | Cloth | Four | Z | C |\n| V5TVL854 | Equipped for hot sand | Manual | Cloth | Two | Y | B |\n| V5TQR5SX | Built for desert heat | Manual | Cloth | Four | Z | B |\n| V5TLKEU3 | Used at an equatorial station | Automatic | Vinyl | Four | Y | B |\n| V5T4PXDC | Operates in tropical forests | Automatic | Cloth | Two | X | B |\n| V5T9NUGW | Designed for humid summers | Manual | Cloth | Four | Y | MISSING |\n\nLicense plate: V5T9NUGW\nWhich class, A, B, or C, does this vehicle belong to?\nThink step by step before answering. Write your reasoning, then put ANSWER: followed by A, B, or C alone on the final line.",
+        "variant_edits": [
+          {
+            "source_task_id": "staged-v5-000/v0/original/visible",
+            "old_prompt_hash": "1a510bf52aad547236a10bd1bbfd863f1ae30a46a8889a867d3d722b9633a9cb",
+            "new_prompt_hash": "6a79c915400cfb9c98c3169df38f378392c9d1bc68ce55fda284fcbed8cd135c",
+            "old_span": [
+              1227,
+              1228
+            ],
+            "old_value": "C",
+            "new_value": "MISSING",
+            "target_plate": "V5T9NUGW",
+            "column": "Verified class",
+            "only_target_cell_changed": true
+          },
+          {
+            "source_task_id": "staged-v5-000/v1/original/visible",
+            "old_prompt_hash": "757330b79779ddb066da18c67fcfff7f2cfe32b3f0d214b2836e52180db9c274",
+            "new_prompt_hash": "6a79c915400cfb9c98c3169df38f378392c9d1bc68ce55fda284fcbed8cd135c",
+            "old_span": [
+              1227,
+              1228
+            ],
+            "old_value": "A",
+            "new_value": "MISSING",
+            "target_plate": "V5T9NUGW",
+            "column": "Verified class",
+            "only_target_cell_changed": true
+          }
+        ],
+        "variants_byte_identical": true
+      }
+    },
+    {
+      "id": "v5/source-report/68f8b8af8d6ba657b3cef1d2d2159e3796f7dcc4a3486f3e50b9bc080360cf23",
+      "task_id": "staged-v5-001/v0/original/visible",
+      "world": "staged-v5-001",
+      "kind": "calibration_present",
+      "expected": "A",
+      "checkpoint": 0,
+      "context_hash": "bcbdc642e17007cd7e68ca71da12e0543a4184f7835fddbe03b1025d6c1af66c",
+      "parent_rows": {
+        "staged-v5-001/v0/original/visible": "fefb080b191dc93729a8241a6035107a357e20567d8583843c88d4ecf8e7ea1e"
+      },
+      "cell_edit": null
+    },
+    {
+      "id": "v5/source-report/f1dbed1a88081ef01da4459b06182d115c3fb9a8fb68324b76cfcd7f68578f37",
+      "task_id": "staged-v5-001/v1/original/visible",
+      "world": "staged-v5-001",
+      "kind": "calibration_present",
+      "expected": "C",
+      "checkpoint": 0,
+      "context_hash": "82411da9d64b9e517f91197af874a63898818b3794733c6a07bfb4443402f780",
+      "parent_rows": {
+        "staged-v5-001/v1/original/visible": "dae9abab1c820a1df1826cea7bb6a1dc91fe34500c0a91910d0a6d35278f4ba1"
+      },
+      "cell_edit": null
+    },
+    {
+      "id": "v5/source-report/1605ad2dd46ddd0b89d2b4b655177b26d4664d38ead5ca83661a7c0b1e9b7c34",
+      "task_id": "staged-v5-001/v0/original/visible",
+      "world": "staged-v5-001",
+      "kind": "calibration_missing",
+      "expected": "MISSING",
+      "checkpoint": 0,
+      "context_hash": "47c7745402943d6b46c03b4a3010f0e7d5f055b396bdeb9aaa8e3dc84172a843",
+      "parent_rows": {
+        "staged-v5-001/v0/original/visible": "fefb080b191dc93729a8241a6035107a357e20567d8583843c88d4ecf8e7ea1e",
+        "staged-v5-001/v1/original/visible": "dae9abab1c820a1df1826cea7bb6a1dc91fe34500c0a91910d0a6d35278f4ba1"
+      },
+      "cell_edit": {
+        "prompt": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| V5TEP89Z | Built for subzero temperatures | Manual | Cloth | Two | X | A |\n| V5TLXL4N | Operates in tropical forests | Automatic | Vinyl | Four | Z | B |\n| V5TXPDZ2 | Used at an equatorial station | Manual | Cloth | Four | X | B |\n| V5T9NN7G | Operates on polar ice | Automatic | Vinyl | Four | Y | C |\n| V5TN9Z9U | Used at an Arctic station | Automatic | Vinyl | Four | Z | C |\n| V5TGTQQ5 | Built for desert heat | Manual | Cloth | Two | Y | B |\n| V5TW3U4N | Equipped for hot sand | Manual | Vinyl | Four | Z | B |\n| V5TQ29T5 | Designed for frozen terrain | Automatic | Vinyl | Four | Z | A |\n| V5TDQJDB | Equipped with snow tracks | Manual | Cloth | Two | Y | A |\n| V5TF73KA | Designed for humid summers | Manual | Vinyl | Two | X | MISSING |\n\nLicense plate: V5TF73KA\nWhich class, A, B, or C, does this vehicle belong to?\nThink step by step before answering. Write your reasoning, then put ANSWER: followed by A, B, or C alone on the final line.",
+        "variant_edits": [
+          {
+            "source_task_id": "staged-v5-001/v0/original/visible",
+            "old_prompt_hash": "4e569cad3f8f3a4244ef07322913efc216ca37ec255e82005b1aede2b429f90d",
+            "new_prompt_hash": "9c71ff7fe104d5300288916ef0e123832ef8a9fae9af223bf8e88a3152c1b071",
+            "old_span": [
+              1229,
+              1230
+            ],
+            "old_value": "A",
+            "new_value": "MISSING",
+            "target_plate": "V5TF73KA",
+            "column": "Verified class",
+            "only_target_cell_changed": true
+          },
+          {
+            "source_task_id": "staged-v5-001/v1/original/visible",
+            "old_prompt_hash": "72a5bb6bcaaa18bef57498fd652cc70e6926b23cc89c7920de0222e14f2bd2b9",
+            "new_prompt_hash": "9c71ff7fe104d5300288916ef0e123832ef8a9fae9af223bf8e88a3152c1b071",
+            "old_span": [
+              1229,
+              1230
+            ],
+            "old_value": "C",
+            "new_value": "MISSING",
+            "target_plate": "V5TF73KA",
+            "column": "Verified class",
+            "only_target_cell_changed": true
+          }
+        ],
+        "variants_byte_identical": true
+      }
+    },
+    {
+      "id": "v5/source-report/ee6887c3663f9613805484ca9b3771608cbf803a85c89efc29f8a0843be2f265",
+      "task_id": "staged-v5-002/v0/original/visible",
+      "world": "staged-v5-002",
+      "kind": "calibration_present",
+      "expected": "A",
+      "checkpoint": 0,
+      "context_hash": "460e0a7d0b250cc200e1728995bc1b9b204d9a4095dce667e83f0421c18d1892",
+      "parent_rows": {
+        "staged-v5-002/v0/original/visible": "80269b32a44f278c36c60afabe3b62c5e5deeb41650094de7cfacb7c0391e2e4"
+      },
+      "cell_edit": null
+    },
+    {
+      "id": "v5/source-report/33036044c6e48736cb2f90a9c0afa504d33283394638f8b857e744991775c6c7",
+      "task_id": "staged-v5-002/v1/original/visible",
+      "world": "staged-v5-002",
+      "kind": "calibration_present",
+      "expected": "B",
+      "checkpoint": 0,
+      "context_hash": "8addcfdbd6b6a41b38495a75fb3334b4dddb0286583c7b2be8b84d32ac96e9ad",
+      "parent_rows": {
+        "staged-v5-002/v1/original/visible": "33c73b8010b73bf5c09d5cb24df877dd2b38bbe4ea5e4f205b983606e772d9a3"
+      },
+      "cell_edit": null
+    },
+    {
+      "id": "v5/source-report/f945e268866c403869c2a7dafa1f1608d3dfa5aee17b862742e9d165ee3aec09",
+      "task_id": "staged-v5-002/v0/original/visible",
+      "world": "staged-v5-002",
+      "kind": "calibration_missing",
+      "expected": "MISSING",
+      "checkpoint": 0,
+      "context_hash": "4933aa691cc0fd7059c75628fd3902fc15e584c93f5dfe79ce5b99a19827bb46",
+      "parent_rows": {
+        "staged-v5-002/v0/original/visible": "80269b32a44f278c36c60afabe3b62c5e5deeb41650094de7cfacb7c0391e2e4",
+        "staged-v5-002/v1/original/visible": "33c73b8010b73bf5c09d5cb24df877dd2b38bbe4ea5e4f205b983606e772d9a3"
+      },
+      "cell_edit": {
+        "prompt": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| V5T2HUGH | Built for subzero temperatures | Automatic | Vinyl | Two | Z | B |\n| V5TFXEJ4 | Equipped with snow tracks | Automatic | Cloth | Two | X | A |\n| V5TGH6GE | Operates in tropical forests | Automatic | Cloth | Two | Z | C |\n| V5T66SHZ | Used at an equatorial station | Manual | Cloth | Four | X | C |\n| V5TTKYLB | Built for desert heat | Automatic | Cloth | Four | Y | C |\n| V5THMN42 | Operates on polar ice | Manual | Cloth | Two | Y | A |\n| V5TQCPPX | Used at an Arctic station | Automatic | Vinyl | Two | Z | B |\n| V5TT29QR | Designed for frozen terrain | Manual | Cloth | Four | X | A |\n| V5TCFSG6 | Designed for humid summers | Automatic | Cloth | Two | Y | C |\n| V5TD48HZ | Equipped for hot sand | Automatic | Cloth | Four | Z | MISSING |\n\nLicense plate: V5TD48HZ\nWhich class, A, B, or C, does this vehicle belong to?\nThink step by step before answering. Write your reasoning, then put ANSWER: followed by A, B, or C alone on the final line.",
+        "variant_edits": [
+          {
+            "source_task_id": "staged-v5-002/v0/original/visible",
+            "old_prompt_hash": "f4bf4716c9ed4d3f4d86bb2e08c0122b1dca1a2f35dbc8a6f4c983db985f9b12",
+            "new_prompt_hash": "7bbf0593b67c7fe4b6e9c26f0458a43d0b1a517c55dd90c55a6e728cd17b80ca",
+            "old_span": [
+              1236,
+              1237
+            ],
+            "old_value": "A",
+            "new_value": "MISSING",
+            "target_plate": "V5TD48HZ",
+            "column": "Verified class",
+            "only_target_cell_changed": true
+          },
+          {
+            "source_task_id": "staged-v5-002/v1/original/visible",
+            "old_prompt_hash": "f64eb54665c3bcdaf24545839ddce8ad78dd0d0d6cabffc9611fb12d20a5f039",
+            "new_prompt_hash": "7bbf0593b67c7fe4b6e9c26f0458a43d0b1a517c55dd90c55a6e728cd17b80ca",
+            "old_span": [
+              1236,
+              1237
+            ],
+            "old_value": "B",
+            "new_value": "MISSING",
+            "target_plate": "V5TD48HZ",
+            "column": "Verified class",
+            "only_target_cell_changed": true
+          }
+        ],
+        "variants_byte_identical": true
+      }
+    },
+    {
+      "id": "v5/source-report/2b40ffe20ffa98347b7ce2c5ea871016127817cffb488cad6c895c869f3b8c7f",
+      "task_id": "staged-v5-003/v0/original/visible",
+      "world": "staged-v5-003",
+      "kind": "calibration_present",
+      "expected": "A",
+      "checkpoint": 0,
+      "context_hash": "1e918d434f32474ad2eb68d07c1634d4339886801050f18bf56f65b85acbb943",
+      "parent_rows": {
+        "staged-v5-003/v0/original/visible": "8288b8ce9a78cef9328712909a3dd35cfb4164bc93163ffdb96dc706493d3e1b"
+      },
+      "cell_edit": null
+    },
+    {
+      "id": "v5/source-report/0c715744c177d870ebf8e7952b68baf235f96f49c1511c8cf2c1ed9f7ab97c38",
+      "task_id": "staged-v5-003/v1/original/visible",
+      "world": "staged-v5-003",
+      "kind": "calibration_present",
+      "expected": "C",
+      "checkpoint": 0,
+      "context_hash": "94943e165b2f5183f778248ae78c823aca867014407565d50a7365a781a3bb13",
+      "parent_rows": {
+        "staged-v5-003/v1/original/visible": "b0c0bda7bd00b527c4786637b74c84d741c5b3d96d3bc9e7d42aacd5be67b95f"
+      },
+      "cell_edit": null
+    },
+    {
+      "id": "v5/source-report/688b9edb9a03521508fb49c78c2579ec4bbdb48487e295b45a123dea751d3e01",
+      "task_id": "staged-v5-003/v0/original/visible",
+      "world": "staged-v5-003",
+      "kind": "calibration_missing",
+      "expected": "MISSING",
+      "checkpoint": 0,
+      "context_hash": "43ee7873914ea36d1e9a1fee3e987a0625856dd4edc876af3ec3750fb490e91d",
+      "parent_rows": {
+        "staged-v5-003/v0/original/visible": "8288b8ce9a78cef9328712909a3dd35cfb4164bc93163ffdb96dc706493d3e1b",
+        "staged-v5-003/v1/original/visible": "b0c0bda7bd00b527c4786637b74c84d741c5b3d96d3bc9e7d42aacd5be67b95f"
+      },
+      "cell_edit": {
+        "prompt": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it. The audit marker is an administrative code assigned independently of class. MISSING means the verified class has not been recorded. If that cell is MISSING, make your best prediction from the other records.\n\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker | Verified class |\n|---|---|---|---|---|---|---|\n| V5TZZA2Z | Used at an Arctic station | Manual | Vinyl | Four | Y | B |\n| V5TNV4MS | Built for subzero temperatures | Manual | Vinyl | Four | X | B |\n| V5TUXM3M | Designed for frozen terrain | Manual | Cloth | Two | Y | B |\n| V5TTKWHY | Used at an equatorial station | Manual | Cloth | Two | Y | A |\n| V5T846WB | Equipped for hot sand | Automatic | Cloth | Four | X | C |\n| V5TG2JEJ | Equipped with snow tracks | Manual | Cloth | Two | X | B |\n| V5T5M496 | Operates in tropical forests | Automatic | Cloth | Four | Y | C |\n| V5T28BU5 | Built for desert heat | Manual | Vinyl | Four | Y | A |\n| V5TX36MH | Designed for humid summers | Manual | Cloth | Four | Z | A |\n| V5TT4GSL | Operates on polar ice | Manual | Vinyl | Two | X | MISSING |\n\nLicense plate: V5TT4GSL\nWhich class, A, B, or C, does this vehicle belong to?\nThink step by step before answering. Write your reasoning, then put ANSWER: followed by A, B, or C alone on the final line.",
+        "variant_edits": [
+          {
+            "source_task_id": "staged-v5-003/v0/original/visible",
+            "old_prompt_hash": "8e420399b2faf22d76eee1ef7b195f977e6db3a8617f34282c9fe5d27f3a9f85",
+            "new_prompt_hash": "5033c957db5ba3f6268f89279253311477c650ff1208ee69d20065a49efdad22",
+            "old_span": [
+              1223,
+              1224
+            ],
+            "old_value": "A",
+            "new_value": "MISSING",
+            "target_plate": "V5TT4GSL",
+            "column": "Verified class",
+            "only_target_cell_changed": true
+          },
+          {
+            "source_task_id": "staged-v5-003/v1/original/visible",
+            "old_prompt_hash": "fabd96807f6aaa079bfc959c700de8a2d074c4b247b03279c9c6771089298cac",
+            "new_prompt_hash": "5033c957db5ba3f6268f89279253311477c650ff1208ee69d20065a49efdad22",
+            "old_span": [
+              1223,
+              1224
+            ],
+            "old_value": "C",
+            "new_value": "MISSING",
+            "target_plate": "V5TT4GSL",
+            "column": "Verified class",
+            "only_target_cell_changed": true
+          }
+        ],
+        "variants_byte_identical": true
+      }
+    }
+  ],
+  "model_loads": 0,
+  "inference_calls": 0,
+  "live_results_obtained": false
+}
