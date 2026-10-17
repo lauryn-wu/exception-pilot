@@ -1,0 +1,10 @@
+{
+  "base": "bef2c09d60107ec01f0e0b2bc54a8ff5271b178b",
+  "v1_contract_before": "ab94401c0e43ef435f52ff991a928a4fd95358e943c238ee1b0b0bfe2d47717d",
+  "v1_contract_after": "ab94401c0e43ef435f52ff991a928a4fd95358e943c238ee1b0b0bfe2d47717d",
+  "tracked_files_checked": 535,
+  "changed_tracked_files": [],
+  "v1_archive_sha256": "6e3651468dbf0b8bff0fb2ebe53867a57aeca8ca1081799816f22f15178c3190",
+  "v1_archived_files_unchanged": 76,
+  "original_source_files_unchanged": 2108
+}
