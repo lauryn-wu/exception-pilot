@@ -131,7 +131,13 @@ def run(output,live_qwen=False,calibration_only=False,_backend_factory=None):
             def execute(queries):
                 for q in queries:
                     try:session.short_generation(q)
-                    except OperationUnavailable:pass
+                    except OperationUnavailable as exc:
+                        # The journal has already preserved this failure. Stop
+                        # dispatching so one runtime fault cannot consume the rest
+                        # of the worklist; resume skips this terminal operation.
+                        stats['stopped_after_exception']=dict(operation_id=q['id'],
+                            error_type=type(exc.__cause__).__name__ if exc.__cause__ is not None else type(exc).__name__)
+                        return
                     finally:saved[q['id']]=terminal(context,q['id'])
             # One model load covers calibration and main. Raw returns are durable
             # before parsing. Invalid returned replies never authorize resampling.

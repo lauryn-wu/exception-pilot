@@ -89,10 +89,20 @@ It loads once only if work is executable, runs uncached calibration, and starts
 main queries only if all 12 controls terminate with exactly the correct label.
 **If calibration is FAILED or unresolved, stop.** Keep the directory and raw
 returns; do not change the suffix, budget, model, gate or output to try again.
-Wrong, verbose and truncated returns are cached. Failed/ambiguously started calls
-are never automatically resent. Request-only calls may execute. Other genuinely
-never-started main queries may finish during normal resume. A fully cached or
-blocked invocation exits without model construction, shard hashing or inference.
+Wrong, verbose and truncated returns are cached and do not interrupt the worklist.
+The first newly raised backend exception stops dispatching for that invocation,
+preserves the failed operation, and leaves later operations never-started. After
+resolving the runtime problem, resume with the same output: failed/ambiguously
+started calls are never resent; only genuinely never-started work may execute.
+A failure during calibration still blocks main work. Request-only calls may start.
+A fully cached or blocked invocation exits without model construction, shard
+hashing or inference.
+
+The exception-stop patch changes the extension's code contract. A plan frozen
+under the preceding implementation will fail the existing content check; this
+patch does not migrate it or rewrite its journals. Preserve such a plan and its
+cache rather than editing hashes or preparing another directory to resample.
+Normal resume above applies to plans frozen with the patched implementation.
 
 Optional inspection before any main work uses the same directory and command with
 `--calibration-only` added. It is not required and a later main invocation needs a

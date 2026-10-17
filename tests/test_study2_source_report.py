@@ -101,6 +101,51 @@ class SourceReportTests(unittest.TestCase):
         self.assertEqual(r['counts']['main']['ambiguous'],1)
         r=execution.run(self.out,_backend_factory=lambda *a:(_ for _ in ()).throw(AssertionError('Only ambiguous work remains')))
         self.assertEqual(r['this_invocation']['model_loads'],0)
+    def test_persistent_main_backend_failure_stops_once_and_resume_skips_it(self):
+        generate=self.backend.generate
+        def persistent_failure(ids,budget,capture_at=()):
+            q=self.backend.queries[digest(ids)]
+            if q['kind']=='main':
+                self.backend.calls.append(q['id'])
+                raise RuntimeError('Synthetic persistent backend failure')
+            return generate(ids,budget,capture_at=capture_at)
+        self.backend.generate=persistent_failure
+        r=self.run_fake();failed_id=self.plan['main'][0]['id']
+        self.assertEqual(r['calibration_gate']['status'],'PASSED')
+        self.assertEqual(r['counts']['calibration']['returned'],12)
+        main_ids=[q['id'] for q in self.plan['main']]
+        self.assertEqual([i for i in self.backend.calls if i in main_ids],[failed_id])
+        self.assertEqual(r['this_invocation']['new_generations'],13)
+        self.assertEqual(r['counts']['main'],dict(planned=332,returned=0,never_started=331,failed=1,ambiguous=0))
+        self.assertEqual(r['this_invocation']['stopped_after_exception'],dict(operation_id=failed_id,error_type='RuntimeError'))
+        folder=self.out/'operations-v5'/digest(failed_id)
+        failure=sealed_read(folder/'failed.json')
+        self.assertEqual(failure['error_type'],'RuntimeError');self.assertFalse((folder/'returned.json').exists())
+        self.assertTrue(all(not (self.out/'operations-v5'/digest(i)).exists() for i in main_ids[1:]))
+        finished=list((self.out/'invocations').glob('*/finished.json'))
+        self.assertEqual(len(finished),1);self.assertEqual(sealed_read(finished[0])['status'],'STOPPED')
+        # Every already written operation/provenance record must survive resume byte-for-byte.
+        before={p:p.read_bytes() for name in ('operations-v5','operation-execution') for p in (self.out/name).rglob('*.json')}
+        self.backend.generate=generate;self.backend.calls.clear();r=self.run_fake()
+        self.assertEqual(self.backend.calls,main_ids[1:]);self.assertEqual(r['this_invocation']['new_generations'],331)
+        self.assertEqual(r['this_invocation']['reused_returns'],12)
+        self.assertEqual(r['counts']['main'],dict(planned=332,returned=331,never_started=0,failed=1,ambiguous=0))
+        self.assertNotIn('stopped_after_exception',r['this_invocation'])
+        for path,value in before.items():self.assertEqual(path.read_bytes(),value)
+        with patch.object(execution,'load_backend',side_effect=AssertionError('Only terminal work remains')):
+            r=execution.run(self.out,_backend_factory=lambda *a:(_ for _ in ()).throw(AssertionError('No model construction')))
+        self.assertEqual(r['this_invocation']['model_loads'],0);self.assertEqual(r['this_invocation']['new_generations'],0)
+    def test_new_calibration_backend_exception_leaves_later_work_unstarted(self):
+        def persistent_failure(ids,budget,capture_at=()):
+            self.backend.calls.append(self.backend.queries[digest(ids)]['id'])
+            raise RuntimeError('Synthetic persistent calibration backend failure')
+        self.backend.generate=persistent_failure;r=self.run_fake()
+        self.assertEqual(len(self.backend.calls),1);self.assertEqual(r['this_invocation']['new_generations'],1)
+        self.assertEqual(r['calibration_gate']['status'],'FAILED')
+        self.assertEqual(r['counts']['calibration']['failed'],1);self.assertEqual(r['counts']['calibration']['never_started'],11)
+        self.assertEqual(r['counts']['main']['never_started'],332)
+        r=execution.run(self.out,_backend_factory=lambda *a:(_ for _ in ()).throw(AssertionError('Failed calibration stays blocked')))
+        self.assertEqual(r['this_invocation']['model_loads'],0)
     def test_failed_calibration_operation_stays_unavailable(self):
         self.backend.interrupt_id=self.plan['calibration'][0]['id']
         with self.assertRaises(KeyboardInterrupt):self.run_fake()
@@ -111,12 +156,28 @@ class SourceReportTests(unittest.TestCase):
             with self.assertRaises(KeyboardInterrupt):self.run_fake()
         r=execution.run(self.out,_backend_factory=lambda *a:(_ for _ in ()).throw(AssertionError('Raw returns must be reused')))
         self.assertEqual(r['counts']['all']['returned'],344);self.assertEqual(r['this_invocation']['new_generations'],0)
-    def test_bad_main_return_is_cached_and_in_accuracy_denominator(self):
-        self.backend.bad_id=self.plan['main'][0]['id'];r=self.run_fake()
-        s=r['main_checkpoint_summaries'][str(self.plan['main'][0]['checkpoint'])]['0']
-        self.assertEqual(s['returned'],s['eligible']);self.assertLess(s['source_accuracy']['estimate'],1)
+    def test_wrong_verbose_truncated_main_returns_stay_cached_without_stopping(self):
+        qs=self.plan['main'][:3];generate=self.backend.generate
+        wrong='B' if qs[0]['expected']=='A' else 'A'
+        replies={qs[0]['id']:(wrong,True),qs[1]['id']:('class is A',True),qs[2]['id']:('r'*16,False)}
+        def returned_but_incorrect(ids,budget,capture_at=()):
+            raw=generate(ids,budget,capture_at=capture_at);op_id=self.backend.calls[-1]
+            if op_id in replies:
+                text,eos=replies[op_id]
+                raw.update(text=text,tokens=self.backend.tok.encode(text)+([0] if eos else []),stopped=eos,finish='eos' if eos else 'length')
+            return raw
+        self.backend.generate=returned_but_incorrect;r=self.run_fake()
+        self.assertEqual(len(self.backend.calls),344);self.assertEqual(r['counts']['main']['returned'],332)
+        self.assertEqual(r['counts']['main']['failed'],0);self.assertNotIn('stopped_after_exception',r['this_invocation'])
+        rows={q['operation_id']:q for q in r['main_contexts']}
+        for q,category in zip(qs,(wrong,'verbose','truncated')):
+            a=rows[q['id']]['source_report'];self.assertEqual(a['category'],category);self.assertFalse(a['correct'])
+            s=r['main_checkpoint_summaries'][str(q['checkpoint'])]['0']
+            self.assertEqual(s['returned'],s['eligible']);self.assertLess(s['source_accuracy']['estimate'],1)
+        before={p:p.read_bytes() for p in (self.out/'operations-v5').rglob('*.json')}
         r=execution.run(self.out,_backend_factory=lambda *a:(_ for _ in ()).throw(AssertionError('Bad returns never retry')))
-        self.assertEqual(r['this_invocation']['model_loads'],0)
+        self.assertEqual(r['this_invocation']['model_loads'],0);self.assertEqual(r['this_invocation']['new_generations'],0)
+        for p,value in before.items():self.assertEqual(p.read_bytes(),value)
     def test_mismatched_backend_stops_before_generation(self):
         self.backend.identity['hardware']='wrong GPU'
         with self.assertRaisesRegex(ValueError,'backend differs'):self.run_fake()
