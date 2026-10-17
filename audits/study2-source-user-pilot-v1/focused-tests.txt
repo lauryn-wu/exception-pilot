@@ -1,0 +1,26 @@
+test_exact_labels_missing_and_wrong (test_study2_source_user_pilot.ParserTests.test_exact_labels_missing_and_wrong) ... ok
+test_length_label_incomplete_and_short_length_malformed (test_study2_source_user_pilot.ParserTests.test_length_label_incomplete_and_short_length_malformed) ... ok
+test_metadata_integrity_and_malformed_payload (test_study2_source_user_pilot.ParserTests.test_metadata_integrity_and_malformed_payload) ... ok
+test_quotes_prose_rows_punctuation_case_never_salvaged (test_study2_source_user_pilot.ParserTests.test_quotes_prose_rows_punctuation_case_never_salvaged) ... ok
+test_all_correct_one_load_twelve_calls_completed_resume_zero (test_study2_source_user_pilot.PilotTests.test_all_correct_one_load_twelve_calls_completed_resume_zero) ... ok
+test_all_wrong_or_verbose_collects_all_twelve (test_study2_source_user_pilot.PilotTests.test_all_wrong_or_verbose_collects_all_twelve) ... ok
+test_all_wrong_valid_labels_collect_all (test_study2_source_user_pilot.PilotTests.test_all_wrong_valid_labels_collect_all) ... ok
+test_ambiguous_skipped_request_only_runs (test_study2_source_user_pilot.PilotTests.test_ambiguous_skipped_request_only_runs) ... ok
+test_bridge_rejects_duplicate_sentinel_controls_or_changed_saved_prompt (test_study2_source_user_pilot.PilotTests.test_bridge_rejects_duplicate_sentinel_controls_or_changed_saved_prompt) ... ok
+test_cross_version_and_mock_live_cache_separation (test_study2_source_user_pilot.PilotTests.test_cross_version_and_mock_live_cache_separation) ... ok
+test_default_run_inspect_and_archive_do_not_load (test_study2_source_user_pilot.PilotTests.test_default_run_inspect_and_archive_do_not_load) ... ok
+test_durable_raw_recovery_after_report_interruption (test_study2_source_user_pilot.PilotTests.test_durable_raw_recovery_after_report_interruption) ... ok
+test_exact_inventory_origin_hashes_and_prefixes (test_study2_source_user_pilot.PilotTests.test_exact_inventory_origin_hashes_and_prefixes) ... ok
+test_first_exception_one_failed_eleven_never_started_resume_skips (test_study2_source_user_pilot.PilotTests.test_first_exception_one_failed_eleven_never_started_resume_skips) ... ok
+test_lock_separation_and_prepare_no_resampling (test_study2_source_user_pilot.PilotTests.test_lock_separation_and_prepare_no_resampling) ... ok
+test_malformed_returns_terminal_not_exception (test_study2_source_user_pilot.PilotTests.test_malformed_returns_terminal_not_exception) ... ok
+test_parent_missing_return_or_any_main_request_blocks (test_study2_source_user_pilot.PilotTests.test_parent_missing_return_or_any_main_request_blocks) ... ok
+test_parent_wrong_plan_or_original_verdict_blocks (test_study2_source_user_pilot.PilotTests.test_parent_wrong_plan_or_original_verdict_blocks) ... ok
+test_plan_context_parent_and_backend_mismatch_block (test_study2_source_user_pilot.PilotTests.test_plan_context_parent_and_backend_mismatch_block) ... ok
+test_actual_parent_all_twelve_real_tokenized_bridges_and_preservation (test_study2_source_user_pilot.RealIntegrationTests.test_actual_parent_all_twelve_real_tokenized_bridges_and_preservation) ... skipped 'Pinned tokenizer assets unavailable; real parent/tokenizer integration REQUIRED at RunPod prepare, never replaced by fixtures'
+test_actual_parent_seals_inventory_source_binding_and_original_failed_report (test_study2_source_user_pilot.SavedEvidenceTests.test_actual_parent_seals_inventory_source_binding_and_original_failed_report) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 18.856s
+
+OK (skipped=1)
