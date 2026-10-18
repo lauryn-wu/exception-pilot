@@ -1,0 +1,37 @@
+Independent quantitative audit
+
+480 original records = 60 worlds x 2 target-class variants x 2 framings x 2 output instructions. Pilot worlds 000–003 were examined before the replication amendment. Remaining56 = worlds004–059. All target rows are row10 (one-indexed). Each variant pair differs only in the target verified-class cell, which alternates between the two nonpattern classes. All 480 expected labels match actual prompt target cells; all pair checks pass.
+All original artifact, input token, and output token hashes reproduce. 1,674 saved measurement contexts each exactly equal the referenced original input IDs + an unmodified generated token prefix + frozen cue IDs. Boundary token/text hashes reproduce. All candidate logprob sums, normalized probabilities, winner labels, and gold-minus-pattern arithmetic match. This is structural/provenance validation of saved data; no tokenizer or model replay. The explicit measurement plan and source code are absent from this upload, but IDs independently identify source/prefix/cue.
+
+BEHAVIORAL COUNTS (remaining56)
+original/direct: 112/112 frozen valid, 112/112 semantically known, planned 112, pattern errors 0, output tokens median 5.0 range 5–5.
+original/visible: 75/111 frozen valid, 75/111 semantically known, planned 112, pattern errors 33, output tokens median 903.5 range 332–2048.
+lookup/direct: 112/112 frozen valid, 112/112 semantically known, planned 112, pattern errors 0, output tokens median 5.0 range 5–5.
+lookup/visible: 107/108 frozen valid, 111/112 semantically known, planned 112, pattern errors 0, output tokens median 109.5 range 35–201.
+
+Pilot4: direct8/8 both framings; original visible7/8 (one pattern error); lookup visible8/8. Native thinking disabled. Scientific visible generation budget2048, although common backend config max_new_tokens is512 (do not infer truncation at512).
+Four lookup semantic successes falsely scored unknown: 016/v1,028/v1,047/v1,050/v0. Each ends "### ANSWER: B", correctly reproduces the target row and B. These are a terminal-parser limitation, not unavailable model outputs. Preserve original score field and add a separately named semantic audit result. Actual truncated case: original049/v0 at2048 tokens, no final answer.
+Nonpattern original errors confirmed: 006/v0 goldA patternB answerC; 023/v1 goldB patternC answerA; 044/v1 goldA patternB answerC. Original051/v0 is a PATTERN error: goldA patternB answerB. Lone lookup error006/v1: goldC patternB answerA.
+
+PRIMARY ENDPOINT RECOMPUTATION AND FORMAT SENSITIVITY
+Each endpoint is the per-trajectory preanswer-minus-initial gold/pattern logodds delta. Average the two variants within each complete world, then equally average worlds. Original55 complete worlds use110 endpoints from111 available paired endpoints (exclude incomplete world049 for the complete-world estimate). Lookup52 complete worlds use104 endpoints from108 available paired endpoints (exclude four incomplete worlds because Markdown ANSWER headings were not accepted as preanswer boundaries).
+Whole-sequence score uses log p(" A\n"), log p(" B\n"), log p(" C\n"). Class-only sensitivity uses the saved first token logprob, omitting the trailing newline. No new model calls. These are different estimands, not an arithmetic error; class-only is a useful check of dependence on response formatting. Bootstrap95% CIs use NumPy default_rng(seed=20261016),10000 iid resamples of complete world means. CI endpoints differ slightly from original analysis RNG.
+original/ANSWER:/sequence: -1.460095 [-2.543270,-0.417503], 55 complete worlds.
+original/ANSWER:/class_only: -0.367045 [-2.304574,1.464830], 55 complete worlds.
+original/Final answer:/sequence: -0.148729 [-1.018974,0.715740], 55 complete worlds.
+original/Final answer:/class_only: 0.619318 [-0.271023,1.469901], 55 complete worlds.
+lookup/ANSWER:/sequence: 2.153608 [1.703498,2.569337], 52 complete worlds.
+lookup/ANSWER:/class_only: 6.341346 [5.942308,6.698317], 52 complete worlds.
+lookup/Final answer:/sequence: 2.902464 [2.496406,3.311597], 52 complete worlds.
+lookup/Final answer:/class_only: 5.222356 [4.769216,5.665880], 52 complete worlds.
+
+Whole-sequence-to-class-only changes 82/1674 preferred labels. Median total candidate-sequence probability mass over all readouts0.000295; median A/B/C class-token mass0.914. In original ANSWER preanswer specifically, median class-token mass0.9969 versus candidate-sequence mass8.34e-7. With ANSWER cue, class-only preanswer agrees with actual natural answer111/111; whole sequence106/111. With Final answer cue, class-only106/111; whole105/111. The forced newline explains 5 discrepancies in the primary cue near completion.
+Original ANSWER: all112 initial probes favor gold under both scoring schemes. Whole-sequence end-to-end gold→pattern30 cases; class-only33. Any sampled gold→pattern reversal40 whole/38 class; recovery after such reversal14 whole/7 class. Natural correct trajectories include5 class-only reversals, all recover. Original Final answer: any reversal47 whole/34 class; endpoint gold→pattern27 whole/24 class. Both cues agree on an endpoint gold→pattern reversal in26 whole or24 class-only cases.
+Outcome-conditioned endpoint means remain strongly negative for wrong-answer original trajectories and positive for correct trajectories. Under ANSWER: whole-sequence correct+1.663 versus wrong−8.077; class-only correct+5.859 versus wrong−13.248. This descriptive stratification conditions on the final outcome and must not be presented as an independent causal test.
+
+INTERPRETATION
+Behavioral impairment is secure. The aggregate confidence decline is not robust to either cue wording or whether the newline is scored. Avoid claim that reasoning generally erases belief in the correct record. Class-only sensitivity retains many individual reversals, so the phenomenon is not entirely a formatting artifact. Show final answer failures and trace-grounded changes; report both original prespecified scores and sensitivity.
+Fixed checkpoints sample increasingly selected long trajectories: original only37/112 survive to1024; lookup only25/112 survive to128 and none to256. Cross-sectional checkpoint means are not a single longitudinal curve. Matched deltas or explicitly held fixed cohorts are needed. Preanswer is immediately before an ANSWER marker, usually after substantive conclusions already state the selected class, so endpoint concordance partly reflects visible answer commitment already in the prefix.
+Conditional readouts append artificial answer cues to saved prefixes; they are not direct latent-belief measurements. All readouts here are fixed/preanswer; no raw semantic-event interventions or probing/activation data appear in upload.
+
+MODEL IDENTITY VERIFIED from both plan and execution: Qwen/Qwen3-32B, revision and tokenizer_revision9216db5781bf21249d130ec9da846c4624c16137, dtype bfloat16, enable_thinking=false. Plan scientific_budget2048; raw truncated original049/v0 has2048 generated tokens and finish=length. Common backend config max_new_tokens512 differs from the scientific budget; this upload contains no execution source code to independently verify runtime override logic beyond the raw outputs.

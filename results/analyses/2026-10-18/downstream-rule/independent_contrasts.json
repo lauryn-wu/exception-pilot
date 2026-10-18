@@ -1,0 +1,2682 @@
+{
+  "contradiction/accuracy/rule_effect_without_history": {
+    "complete_worlds": 9,
+    "planned_worlds": 9,
+    "estimate": 0.1574074074074074,
+    "bounds": [
+      0.1574074074074074,
+      0.1574074074074074
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": true,
+        "value": 0.4166666666666667,
+        "bounds": [
+          0.4166666666666667,
+          0.4166666666666667
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "contradiction/accuracy/rule_effect_with_history": {
+    "complete_worlds": 9,
+    "planned_worlds": 9,
+    "estimate": -0.3333333333333333,
+    "bounds": [
+      -0.3333333333333333,
+      -0.3333333333333333
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": -0.33333333333333337,
+        "bounds": [
+          -0.33333333333333337,
+          -0.33333333333333337
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": -0.6666666666666666,
+        "bounds": [
+          -0.6666666666666666,
+          -0.6666666666666666
+        ]
+      }
+    }
+  },
+  "contradiction/accuracy/history_effect_rule_present": {
+    "complete_worlds": 9,
+    "planned_worlds": 9,
+    "estimate": -0.3796296296296296,
+    "bounds": [
+      -0.3796296296296296,
+      -0.3796296296296296
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": true,
+        "value": -0.5,
+        "bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      "ex-list-018": {
+        "complete": true,
+        "value": -0.5833333333333333,
+        "bounds": [
+          -0.5833333333333333,
+          -0.5833333333333333
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": -0.33333333333333337,
+        "bounds": [
+          -0.33333333333333337,
+          -0.33333333333333337
+        ]
+      }
+    }
+  },
+  "contradiction/accuracy/history_effect_rule_absent": {
+    "complete_worlds": 9,
+    "planned_worlds": 9,
+    "estimate": -0.8703703703703703,
+    "bounds": [
+      -0.8703703703703703,
+      -0.8703703703703703
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": true,
+        "value": -0.5,
+        "bounds": [
+          -0.5,
+          -0.5
+        ]
+      },
+      "ex-list-018": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": -0.33333333333333337,
+        "bounds": [
+          -0.33333333333333337,
+          -0.33333333333333337
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      }
+    }
+  },
+  "contradiction/accuracy/history_by_rule_interaction": {
+    "complete_worlds": 9,
+    "planned_worlds": 9,
+    "estimate": 0.49074074074074076,
+    "bounds": [
+      0.49074074074074076,
+      0.49074074074074076
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": true,
+        "value": 0.4166666666666667,
+        "bounds": [
+          0.4166666666666667,
+          0.4166666666666667
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": 0.33333333333333337,
+        "bounds": [
+          0.33333333333333337,
+          0.33333333333333337
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.6666666666666666,
+        "bounds": [
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      }
+    }
+  },
+  "contradiction/false_missing/rule_effect_without_history": {
+    "complete_worlds": 9,
+    "planned_worlds": 9,
+    "estimate": -0.15740740740740738,
+    "bounds": [
+      -0.15740740740740738,
+      -0.15740740740740738
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": true,
+        "value": -0.41666666666666663,
+        "bounds": [
+          -0.41666666666666663,
+          -0.41666666666666663
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "contradiction/false_missing/rule_effect_with_history": {
+    "complete_worlds": 9,
+    "planned_worlds": 9,
+    "estimate": 0.3333333333333333,
+    "bounds": [
+      0.3333333333333333,
+      0.3333333333333333
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": 0.3333333333333333,
+        "bounds": [
+          0.3333333333333333,
+          0.3333333333333333
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.6666666666666667,
+        "bounds": [
+          0.6666666666666667,
+          0.6666666666666667
+        ]
+      }
+    }
+  },
+  "contradiction/false_missing/history_effect_rule_present": {
+    "complete_worlds": 9,
+    "planned_worlds": 9,
+    "estimate": 0.3796296296296296,
+    "bounds": [
+      0.3796296296296296,
+      0.3796296296296296
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": true,
+        "value": 0.5,
+        "bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      "ex-list-018": {
+        "complete": true,
+        "value": 0.5833333333333334,
+        "bounds": [
+          0.5833333333333334,
+          0.5833333333333334
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.3333333333333333,
+        "bounds": [
+          0.3333333333333333,
+          0.3333333333333333
+        ]
+      }
+    }
+  },
+  "contradiction/false_missing/history_effect_rule_absent": {
+    "complete_worlds": 9,
+    "planned_worlds": 9,
+    "estimate": 0.8703703703703703,
+    "bounds": [
+      0.8703703703703703,
+      0.8703703703703703
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": true,
+        "value": 0.5,
+        "bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      "ex-list-018": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": 0.3333333333333333,
+        "bounds": [
+          0.3333333333333333,
+          0.3333333333333333
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "contradiction/false_missing/history_by_rule_interaction": {
+    "complete_worlds": 9,
+    "planned_worlds": 9,
+    "estimate": -0.49074074074074076,
+    "bounds": [
+      -0.49074074074074076,
+      -0.49074074074074076
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": true,
+        "value": -0.41666666666666663,
+        "bounds": [
+          -0.41666666666666663,
+          -0.41666666666666663
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": -0.3333333333333333,
+        "bounds": [
+          -0.3333333333333333,
+          -0.3333333333333333
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": -0.6666666666666667,
+        "bounds": [
+          -0.6666666666666667,
+          -0.6666666666666667
+        ]
+      }
+    }
+  },
+  "availability_control/accuracy/rule_effect_without_history": {
+    "complete_worlds": 7,
+    "planned_worlds": 9,
+    "estimate": 0.14285714285714285,
+    "bounds": [
+      -0.01851851851851852,
+      0.12962962962962965
+    ],
+    "worlds": {
+      "ex-list-004": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-010": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-015": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -1.0,
+          0.0
+        ]
+      },
+      "ex-list-017": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-020": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-021": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -0.16666666666666669,
+          0.16666666666666666
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "availability_control/accuracy/rule_effect_with_history": {
+    "complete_worlds": 8,
+    "planned_worlds": 9,
+    "estimate": 0.1875,
+    "bounds": [
+      0.09259259259259259,
+      0.16666666666666666
+    ],
+    "worlds": {
+      "ex-list-004": {
+        "complete": true,
+        "value": 0.3333333333333333,
+        "bounds": [
+          0.3333333333333333,
+          0.3333333333333333
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-010": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-015": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-017": {
+        "complete": true,
+        "value": 0.16666666666666669,
+        "bounds": [
+          0.16666666666666669,
+          0.16666666666666669
+        ]
+      },
+      "ex-list-019": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -0.6666666666666667,
+          0.0
+        ]
+      },
+      "ex-list-020": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-021": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "availability_control/accuracy/history_effect_rule_present": {
+    "complete_worlds": 8,
+    "planned_worlds": 9,
+    "estimate": -0.22916666666666669,
+    "bounds": [
+      -0.2314814814814815,
+      -0.20370370370370372
+    ],
+    "worlds": {
+      "ex-list-004": {
+        "complete": true,
+        "value": -0.6666666666666667,
+        "bounds": [
+          -0.6666666666666667,
+          -0.6666666666666667
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-010": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-015": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-017": {
+        "complete": true,
+        "value": -0.16666666666666669,
+        "bounds": [
+          -0.16666666666666669,
+          -0.16666666666666669
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-020": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-021": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -0.25,
+          0.0
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "availability_control/accuracy/history_effect_rule_absent": {
+    "complete_worlds": 6,
+    "planned_worlds": 9,
+    "estimate": -0.22222222222222224,
+    "bounds": [
+      -0.24074074074074078,
+      -0.0462962962962963
+    ],
+    "worlds": {
+      "ex-list-004": {
+        "complete": true,
+        "value": -0.33333333333333337,
+        "bounds": [
+          -0.33333333333333337,
+          -0.33333333333333337
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-010": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-015": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          1.0
+        ]
+      },
+      "ex-list-017": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -0.6666666666666667,
+          0.0
+        ]
+      },
+      "ex-list-020": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-021": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -0.16666666666666666,
+          -0.08333333333333333
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "availability_control/accuracy/history_by_rule_interaction": {
+    "complete_worlds": 6,
+    "planned_worlds": 9,
+    "estimate": -0.25000000000000006,
+    "bounds": [
+      -0.18518518518518523,
+      0.037037037037037014
+    ],
+    "worlds": {
+      "ex-list-004": {
+        "complete": true,
+        "value": -0.3333333333333335,
+        "bounds": [
+          -0.3333333333333335,
+          -0.3333333333333335
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-010": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-015": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -1.0,
+          0.0
+        ]
+      },
+      "ex-list-017": {
+        "complete": true,
+        "value": -0.16666666666666674,
+        "bounds": [
+          -0.16666666666666674,
+          -0.16666666666666674
+        ]
+      },
+      "ex-list-019": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          1.0,
+          1.6666666666666667
+        ]
+      },
+      "ex-list-020": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-021": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -0.16666666666666669,
+          0.16666666666666666
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "availability_control/false_missing/rule_effect_without_history": {
+    "complete_worlds": 7,
+    "planned_worlds": 9,
+    "estimate": -0.14285714285714285,
+    "bounds": [
+      -0.12962962962962965,
+      0.018518518518518517
+    ],
+    "worlds": {
+      "ex-list-004": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-010": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-015": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          1.0
+        ]
+      },
+      "ex-list-017": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-020": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-021": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -0.16666666666666669,
+          0.16666666666666666
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "availability_control/false_missing/rule_effect_with_history": {
+    "complete_worlds": 8,
+    "planned_worlds": 9,
+    "estimate": -0.1875,
+    "bounds": [
+      -0.16666666666666666,
+      -0.0925925925925926
+    ],
+    "worlds": {
+      "ex-list-004": {
+        "complete": true,
+        "value": -0.3333333333333333,
+        "bounds": [
+          -0.3333333333333333,
+          -0.3333333333333333
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-010": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-015": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-017": {
+        "complete": true,
+        "value": -0.16666666666666666,
+        "bounds": [
+          -0.16666666666666666,
+          -0.16666666666666666
+        ]
+      },
+      "ex-list-019": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.6666666666666666
+        ]
+      },
+      "ex-list-020": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-021": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "availability_control/false_missing/history_effect_rule_present": {
+    "complete_worlds": 8,
+    "planned_worlds": 9,
+    "estimate": 0.22916666666666666,
+    "bounds": [
+      0.2037037037037037,
+      0.2314814814814815
+    ],
+    "worlds": {
+      "ex-list-004": {
+        "complete": true,
+        "value": 0.6666666666666666,
+        "bounds": [
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-010": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-015": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-017": {
+        "complete": true,
+        "value": 0.16666666666666666,
+        "bounds": [
+          0.16666666666666666,
+          0.16666666666666666
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": -1.0,
+        "bounds": [
+          -1.0,
+          -1.0
+        ]
+      },
+      "ex-list-020": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-021": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.25
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "availability_control/false_missing/history_effect_rule_absent": {
+    "complete_worlds": 6,
+    "planned_worlds": 9,
+    "estimate": 0.2222222222222222,
+    "bounds": [
+      0.046296296296296294,
+      0.24074074074074073
+    ],
+    "worlds": {
+      "ex-list-004": {
+        "complete": true,
+        "value": 0.3333333333333333,
+        "bounds": [
+          0.3333333333333333,
+          0.3333333333333333
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-010": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-015": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -1.0,
+          0.0
+        ]
+      },
+      "ex-list-017": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.6666666666666666
+        ]
+      },
+      "ex-list-020": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-021": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.08333333333333334,
+          0.16666666666666669
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "availability_control/false_missing/history_by_rule_interaction": {
+    "complete_worlds": 6,
+    "planned_worlds": 9,
+    "estimate": 0.25,
+    "bounds": [
+      -0.03703703703703703,
+      0.18518518518518517
+    ],
+    "worlds": {
+      "ex-list-004": {
+        "complete": true,
+        "value": 0.3333333333333333,
+        "bounds": [
+          0.3333333333333333,
+          0.3333333333333333
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-010": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-015": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          1.0
+        ]
+      },
+      "ex-list-017": {
+        "complete": true,
+        "value": 0.16666666666666666,
+        "bounds": [
+          0.16666666666666666,
+          0.16666666666666666
+        ]
+      },
+      "ex-list-019": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -1.6666666666666665,
+          -1.0
+        ]
+      },
+      "ex-list-020": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-021": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -0.16666666666666669,
+          0.16666666666666666
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "genuine_missing_control/accuracy/rule_effect_without_history": {
+    "complete_worlds": 6,
+    "planned_worlds": 9,
+    "estimate": 0.0,
+    "bounds": [
+      -0.037037037037037035,
+      0.18518518518518517
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          1.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -0.3333333333333333,
+          0.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.6666666666666666
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "genuine_missing_control/accuracy/rule_effect_with_history": {
+    "complete_worlds": 8,
+    "planned_worlds": 9,
+    "estimate": 0.0,
+    "bounds": [
+      -0.07407407407407408,
+      0.0
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -0.6666666666666667,
+          0.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "genuine_missing_control/accuracy/history_effect_rule_present": {
+    "complete_worlds": 8,
+    "planned_worlds": 9,
+    "estimate": 1.0,
+    "bounds": [
+      0.9629629629629629,
+      1.0
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.6666666666666667,
+          1.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "genuine_missing_control/accuracy/history_effect_rule_absent": {
+    "complete_worlds": 6,
+    "planned_worlds": 9,
+    "estimate": 1.0,
+    "bounds": [
+      0.7407407407407408,
+      1.0
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          1.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.3333333333333333,
+          1.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.33333333333333337,
+          1.0
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 1.0,
+        "bounds": [
+          1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "genuine_missing_control/accuracy/history_by_rule_interaction": {
+    "complete_worlds": 5,
+    "planned_worlds": 9,
+    "estimate": 0.0,
+    "bounds": [
+      -0.03703703703703703,
+      0.2592592592592593
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          1.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -0.33333333333333326,
+          0.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.6666666666666667
+        ]
+      },
+      "ex-list-019": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.6666666666666666
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "genuine_missing_control/false_missing/rule_effect_without_history": {
+    "complete_worlds": 6,
+    "planned_worlds": 9,
+    "estimate": 0.0,
+    "bounds": [
+      0.0,
+      0.0
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "genuine_missing_control/false_missing/rule_effect_with_history": {
+    "complete_worlds": 8,
+    "planned_worlds": 9,
+    "estimate": 0.0,
+    "bounds": [
+      0.0,
+      0.0
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "genuine_missing_control/false_missing/history_effect_rule_present": {
+    "complete_worlds": 8,
+    "planned_worlds": 9,
+    "estimate": 0.0,
+    "bounds": [
+      0.0,
+      0.0
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "genuine_missing_control/false_missing/history_effect_rule_absent": {
+    "complete_worlds": 6,
+    "planned_worlds": 9,
+    "estimate": 0.0,
+    "bounds": [
+      0.0,
+      0.0
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "genuine_missing_control/false_missing/history_by_rule_interaction": {
+    "complete_worlds": 5,
+    "planned_worlds": 9,
+    "estimate": 0.0,
+    "bounds": [
+      0.0,
+      0.0
+    ],
+    "worlds": {
+      "ex-list-000": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-002": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-004": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-005": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-008": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-014": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-018": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-019": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      },
+      "ex-list-023": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "wrong_final_diagnostic/accuracy/rule_effect_without_history": {
+    "complete_worlds": 1,
+    "planned_worlds": 1,
+    "estimate": 0.6666666666666666,
+    "bounds": [
+      0.6666666666666666,
+      0.6666666666666666
+    ],
+    "worlds": {
+      "ex-list-022": {
+        "complete": true,
+        "value": 0.6666666666666666,
+        "bounds": [
+          0.6666666666666666,
+          0.6666666666666666
+        ]
+      }
+    }
+  },
+  "wrong_final_diagnostic/accuracy/rule_effect_with_history": {
+    "complete_worlds": 0,
+    "planned_worlds": 1,
+    "estimate": null,
+    "bounds": [
+      0.0,
+      0.3333333333333333
+    ],
+    "worlds": {
+      "ex-list-022": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.0,
+          0.3333333333333333
+        ]
+      }
+    }
+  },
+  "wrong_final_diagnostic/accuracy/history_effect_rule_present": {
+    "complete_worlds": 1,
+    "planned_worlds": 1,
+    "estimate": 0.0,
+    "bounds": [
+      0.0,
+      0.0
+    ],
+    "worlds": {
+      "ex-list-022": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "wrong_final_diagnostic/accuracy/history_effect_rule_absent": {
+    "complete_worlds": 0,
+    "planned_worlds": 1,
+    "estimate": null,
+    "bounds": [
+      -0.6666666666666666,
+      -0.3333333333333333
+    ],
+    "worlds": {
+      "ex-list-022": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -0.6666666666666666,
+          -0.3333333333333333
+        ]
+      }
+    }
+  },
+  "wrong_final_diagnostic/accuracy/history_by_rule_interaction": {
+    "complete_worlds": 0,
+    "planned_worlds": 1,
+    "estimate": null,
+    "bounds": [
+      0.3333333333333333,
+      0.6666666666666666
+    ],
+    "worlds": {
+      "ex-list-022": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.3333333333333333,
+          0.6666666666666666
+        ]
+      }
+    }
+  },
+  "wrong_final_diagnostic/false_missing/rule_effect_without_history": {
+    "complete_worlds": 1,
+    "planned_worlds": 1,
+    "estimate": -0.6666666666666667,
+    "bounds": [
+      -0.6666666666666667,
+      -0.6666666666666667
+    ],
+    "worlds": {
+      "ex-list-022": {
+        "complete": true,
+        "value": -0.6666666666666667,
+        "bounds": [
+          -0.6666666666666667,
+          -0.6666666666666667
+        ]
+      }
+    }
+  },
+  "wrong_final_diagnostic/false_missing/rule_effect_with_history": {
+    "complete_worlds": 0,
+    "planned_worlds": 1,
+    "estimate": null,
+    "bounds": [
+      -0.33333333333333337,
+      0.0
+    ],
+    "worlds": {
+      "ex-list-022": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -0.33333333333333337,
+          0.0
+        ]
+      }
+    }
+  },
+  "wrong_final_diagnostic/false_missing/history_effect_rule_present": {
+    "complete_worlds": 1,
+    "planned_worlds": 1,
+    "estimate": 0.0,
+    "bounds": [
+      0.0,
+      0.0
+    ],
+    "worlds": {
+      "ex-list-022": {
+        "complete": true,
+        "value": 0.0,
+        "bounds": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "wrong_final_diagnostic/false_missing/history_effect_rule_absent": {
+    "complete_worlds": 0,
+    "planned_worlds": 1,
+    "estimate": null,
+    "bounds": [
+      0.3333333333333333,
+      0.6666666666666667
+    ],
+    "worlds": {
+      "ex-list-022": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          0.3333333333333333,
+          0.6666666666666667
+        ]
+      }
+    }
+  },
+  "wrong_final_diagnostic/false_missing/history_by_rule_interaction": {
+    "complete_worlds": 0,
+    "planned_worlds": 1,
+    "estimate": null,
+    "bounds": [
+      -0.6666666666666667,
+      -0.3333333333333333
+    ],
+    "worlds": {
+      "ex-list-022": {
+        "complete": false,
+        "value": null,
+        "bounds": [
+          -0.6666666666666667,
+          -0.3333333333333333
+        ]
+      }
+    }
+  }
+}

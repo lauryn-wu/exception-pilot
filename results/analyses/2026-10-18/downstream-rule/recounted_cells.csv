@@ -1,0 +1,17 @@
+cohort,arm,planned,valid,correct,missing_outputs,false_missing,invalid
+contradiction,history_present_rule_present,39,39,14,25,25,0
+contradiction,history_absent_rule_present,39,39,31,8,8,0
+contradiction,history_present_rule_absent,39,39,5,34,34,0
+contradiction,history_absent_rule_absent,39,39,39,0,0,0
+availability_control,history_present_rule_present,39,39,24,15,15,0
+availability_control,history_absent_rule_present,39,36,30,6,6,3
+availability_control,history_present_rule_absent,39,37,27,10,10,2
+availability_control,history_absent_rule_absent,39,35,31,4,4,4
+genuine_missing_control,history_present_rule_present,27,27,27,27,0,0
+genuine_missing_control,history_absent_rule_present,27,26,0,0,0,1
+genuine_missing_control,history_present_rule_absent,27,25,25,25,0,2
+genuine_missing_control,history_absent_rule_absent,27,22,0,0,0,5
+wrong_final_diagnostic,history_present_rule_present,3,3,0,3,3,0
+wrong_final_diagnostic,history_absent_rule_present,3,3,0,3,3,0
+wrong_final_diagnostic,history_present_rule_absent,3,2,0,2,2,1
+wrong_final_diagnostic,history_absent_rule_absent,3,3,2,1,1,0

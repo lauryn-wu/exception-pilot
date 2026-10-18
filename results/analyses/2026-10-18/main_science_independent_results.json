@@ -1,0 +1,589 @@
+{
+  "0": {
+    "N": 112,
+    "categories": {
+      "correct": 111,
+      "wrong_label": 1
+    },
+    "errors": [
+      [
+        "staged-v5-023/v1/original/visible",
+        "B",
+        "A"
+      ]
+    ],
+    "worlds_with_errors": 1,
+    "cues": {
+      "0": {
+        "pref": {
+          "counts": {
+            "verified": 112
+          },
+          "cross": {
+            "verified/correct": 111,
+            "verified/wrong_label": 1
+          }
+        },
+        "sequence": {
+          "counts": {
+            "verified": 112
+          },
+          "cross": {
+            "verified/correct": 111,
+            "verified/wrong_label": 1
+          }
+        },
+        "mass": {
+          "mean": 0.9980264833461269,
+          "median": 0.998301092511206,
+          "min": 0.990441135335258
+        }
+      },
+      "1": {
+        "pref": {
+          "counts": {
+            "verified": 103,
+            "pattern": 7,
+            "other": 2
+          },
+          "cross": {
+            "verified/correct": 102,
+            "pattern/correct": 7,
+            "other/correct": 2,
+            "verified/wrong_label": 1
+          }
+        },
+        "sequence": {
+          "counts": {
+            "verified": 108,
+            "other": 1,
+            "pattern": 3
+          },
+          "cross": {
+            "verified/correct": 107,
+            "other/correct": 1,
+            "pattern/correct": 3,
+            "verified/wrong_label": 1
+          }
+        },
+        "mass": {
+          "mean": 0.5156068616086712,
+          "median": 0.5104504071644602,
+          "min": 0.27244673387887663
+        }
+      }
+    },
+    "natural_cross": {
+      "natural_correct/source_correct": 75,
+      "natural_wrong/source_correct": 35,
+      "natural_wrong/A": 1,
+      "natural_invalid/source_correct": 1
+    },
+    "both_cues_cross": {
+      "verified/verified/source_correct": 102,
+      "verified/pattern/source_correct": 7,
+      "verified/other/source_correct": 2,
+      "verified/verified/A": 1
+    }
+  },
+  "256": {
+    "N": 112,
+    "categories": {
+      "correct": 100,
+      "MISSING": 11,
+      "wrong_label": 1
+    },
+    "errors": [
+      [
+        "staged-v5-012/v0/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-016/v1/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-020/v0/original/visible",
+        "A",
+        "MISSING"
+      ],
+      [
+        "staged-v5-023/v1/original/visible",
+        "B",
+        "A"
+      ],
+      [
+        "staged-v5-024/v0/original/visible",
+        "A",
+        "MISSING"
+      ],
+      [
+        "staged-v5-028/v0/original/visible",
+        "C",
+        "MISSING"
+      ],
+      [
+        "staged-v5-028/v1/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-041/v0/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-050/v0/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-052/v0/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-054/v1/original/visible",
+        "A",
+        "MISSING"
+      ],
+      [
+        "staged-v5-054/v0/original/visible",
+        "C",
+        "MISSING"
+      ]
+    ],
+    "worlds_with_errors": 10,
+    "cues": {
+      "0": {
+        "pref": {
+          "counts": {
+            "verified": 105,
+            "pattern": 6,
+            "other": 1
+          },
+          "cross": {
+            "verified/correct": 95,
+            "verified/MISSING": 10,
+            "pattern/correct": 5,
+            "other/wrong_label": 1,
+            "pattern/MISSING": 1
+          }
+        },
+        "sequence": {
+          "counts": {
+            "verified": 102,
+            "pattern": 8,
+            "other": 2
+          },
+          "cross": {
+            "verified/correct": 93,
+            "pattern/correct": 6,
+            "other/correct": 1,
+            "verified/MISSING": 9,
+            "other/wrong_label": 1,
+            "pattern/MISSING": 2
+          }
+        },
+        "mass": {
+          "mean": 0.9867123560708625,
+          "median": 0.9933565544474685,
+          "min": 0.9138963410195114
+        }
+      },
+      "1": {
+        "pref": {
+          "counts": {
+            "verified": 92,
+            "other": 3,
+            "pattern": 13,
+            "tie": 4
+          },
+          "cross": {
+            "verified/correct": 83,
+            "other/correct": 3,
+            "pattern/correct": 11,
+            "verified/MISSING": 9,
+            "tie/correct": 3,
+            "pattern/MISSING": 2,
+            "tie/wrong_label": 1
+          }
+        },
+        "sequence": {
+          "counts": {
+            "verified": 77,
+            "other": 9,
+            "pattern": 26
+          },
+          "cross": {
+            "verified/correct": 70,
+            "other/correct": 6,
+            "pattern/correct": 24,
+            "verified/MISSING": 6,
+            "other/MISSING": 3,
+            "pattern/MISSING": 2,
+            "verified/wrong_label": 1
+          }
+        },
+        "mass": {
+          "mean": 0.3183032273659871,
+          "median": 0.2939888276245279,
+          "min": 0.013795621461187044
+        }
+      }
+    },
+    "natural_cross": {
+      "natural_correct/source_correct": 72,
+      "natural_wrong/source_correct": 27,
+      "natural_wrong/MISSING": 8,
+      "natural_correct/MISSING": 3,
+      "natural_wrong/A": 1,
+      "natural_invalid/source_correct": 1
+    },
+    "both_cues_cross": {
+      "verified/verified/source_correct": 81,
+      "verified/other/source_correct": 3,
+      "verified/pattern/source_correct": 8,
+      "verified/verified/MISSING": 8,
+      "verified/tie/source_correct": 3,
+      "verified/pattern/MISSING": 2,
+      "pattern/verified/source_correct": 2,
+      "other/tie/A": 1,
+      "pattern/verified/MISSING": 1,
+      "pattern/pattern/source_correct": 3
+    }
+  },
+  "512": {
+    "N": 108,
+    "categories": {
+      "correct": 80,
+      "MISSING": 27,
+      "wrong_label": 1
+    },
+    "errors": [
+      [
+        "staged-v5-004/v0/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-005/v1/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-005/v0/original/visible",
+        "C",
+        "MISSING"
+      ],
+      [
+        "staged-v5-006/v0/original/visible",
+        "A",
+        "MISSING"
+      ],
+      [
+        "staged-v5-012/v0/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-014/v1/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-016/v1/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-020/v0/original/visible",
+        "A",
+        "MISSING"
+      ],
+      [
+        "staged-v5-023/v1/original/visible",
+        "B",
+        "A"
+      ],
+      [
+        "staged-v5-023/v0/original/visible",
+        "A",
+        "MISSING"
+      ],
+      [
+        "staged-v5-024/v0/original/visible",
+        "A",
+        "MISSING"
+      ],
+      [
+        "staged-v5-025/v1/original/visible",
+        "C",
+        "MISSING"
+      ],
+      [
+        "staged-v5-028/v0/original/visible",
+        "C",
+        "MISSING"
+      ],
+      [
+        "staged-v5-028/v1/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-029/v1/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-030/v1/original/visible",
+        "A",
+        "MISSING"
+      ],
+      [
+        "staged-v5-031/v1/original/visible",
+        "A",
+        "MISSING"
+      ],
+      [
+        "staged-v5-033/v1/original/visible",
+        "A",
+        "MISSING"
+      ],
+      [
+        "staged-v5-041/v0/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-048/v1/original/visible",
+        "C",
+        "MISSING"
+      ],
+      [
+        "staged-v5-049/v0/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-049/v1/original/visible",
+        "C",
+        "MISSING"
+      ],
+      [
+        "staged-v5-050/v0/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-052/v0/original/visible",
+        "B",
+        "MISSING"
+      ],
+      [
+        "staged-v5-054/v1/original/visible",
+        "A",
+        "MISSING"
+      ],
+      [
+        "staged-v5-054/v0/original/visible",
+        "C",
+        "MISSING"
+      ],
+      [
+        "staged-v5-055/v1/original/visible",
+        "C",
+        "MISSING"
+      ],
+      [
+        "staged-v5-058/v0/original/visible",
+        "B",
+        "MISSING"
+      ]
+    ],
+    "worlds_with_errors": 23,
+    "cues": {
+      "0": {
+        "pref": {
+          "counts": {
+            "verified": 100,
+            "other": 2,
+            "pattern": 6
+          },
+          "cross": {
+            "verified/correct": 79,
+            "verified/MISSING": 21,
+            "other/MISSING": 1,
+            "pattern/MISSING": 5,
+            "other/wrong_label": 1,
+            "pattern/correct": 1
+          }
+        },
+        "sequence": {
+          "counts": {
+            "verified": 96,
+            "other": 3,
+            "pattern": 9
+          },
+          "cross": {
+            "verified/correct": 77,
+            "verified/MISSING": 19,
+            "other/MISSING": 1,
+            "other/correct": 1,
+            "pattern/MISSING": 7,
+            "other/wrong_label": 1,
+            "pattern/correct": 2
+          }
+        },
+        "mass": {
+          "mean": 0.9704142897278045,
+          "median": 0.9900740226704547,
+          "min": 0.30833951050800235
+        }
+      },
+      "1": {
+        "pref": {
+          "counts": {
+            "verified": 88,
+            "other": 6,
+            "pattern": 13,
+            "tie": 1
+          },
+          "cross": {
+            "verified/correct": 70,
+            "verified/MISSING": 17,
+            "other/MISSING": 3,
+            "pattern/correct": 7,
+            "pattern/MISSING": 6,
+            "other/correct": 3,
+            "verified/wrong_label": 1,
+            "tie/MISSING": 1
+          }
+        },
+        "sequence": {
+          "counts": {
+            "verified": 84,
+            "other": 11,
+            "pattern": 13
+          },
+          "cross": {
+            "verified/correct": 62,
+            "verified/MISSING": 21,
+            "other/MISSING": 3,
+            "pattern/correct": 10,
+            "other/correct": 8,
+            "pattern/MISSING": 3,
+            "verified/wrong_label": 1
+          }
+        },
+        "mass": {
+          "mean": 0.3340878047206298,
+          "median": 0.30526456408965474,
+          "min": 0.008024214958841806
+        }
+      }
+    },
+    "natural_cross": {
+      "natural_correct/source_correct": 62,
+      "natural_wrong/MISSING": 17,
+      "natural_correct/MISSING": 9,
+      "natural_wrong/source_correct": 18,
+      "natural_wrong/A": 1,
+      "natural_invalid/MISSING": 1
+    },
+    "both_cues_cross": {
+      "verified/verified/source_correct": 70,
+      "verified/verified/MISSING": 16,
+      "other/other/MISSING": 1,
+      "verified/pattern/source_correct": 6,
+      "pattern/pattern/MISSING": 4,
+      "verified/other/source_correct": 3,
+      "verified/pattern/MISSING": 2,
+      "other/verified/A": 1,
+      "verified/other/MISSING": 2,
+      "pattern/verified/MISSING": 1,
+      "verified/tie/MISSING": 1,
+      "pattern/pattern/source_correct": 1
+    }
+  },
+  "paired": {
+    "0->256": {
+      "N": 112,
+      "earlier_correct": 111,
+      "later_correct": 100,
+      "change": -0.09821428571428571,
+      "transition": {
+        "1->1": 100,
+        "1->0": 11,
+        "0->0": 1
+      },
+      "ci": [
+        -0.16071428571428573,
+        -0.03571428571428571
+      ],
+      "worlds_decline": 9
+    },
+    "0->512": {
+      "N": 108,
+      "earlier_correct": 107,
+      "later_correct": 80,
+      "change": -0.25,
+      "transition": {
+        "1->1": 80,
+        "1->0": 27,
+        "0->0": 1
+      },
+      "ci": [
+        -0.3333333333333333,
+        -0.16822429906542055
+      ],
+      "worlds_decline": 23
+    },
+    "256->512": {
+      "N": 108,
+      "earlier_correct": 96,
+      "later_correct": 80,
+      "change": -0.14814814814814814,
+      "transition": {
+        "1->1": 80,
+        "1->0": 16,
+        "0->0": 12
+      },
+      "ci": [
+        -0.22018348623853212,
+        -0.08411214953271028
+      ],
+      "worlds_decline": 14
+    }
+  },
+  "common108": {
+    "0": {
+      "correct": 107,
+      "A": 1
+    },
+    "256": {
+      "correct": 96,
+      "MISSING": 11,
+      "A": 1
+    },
+    "512": {
+      "correct": 80,
+      "MISSING": 27,
+      "A": 1
+    }
+  },
+  "three_checkpoint_transitions": {
+    "correct/correct/correct": 80,
+    "correct/correct/MISSING": 16,
+    "correct/MISSING/MISSING": 11,
+    "A/A/A": 1
+  },
+  "natural": {
+    "correct": 75,
+    "wrong": 36,
+    "invalid": 1
+  }
+}

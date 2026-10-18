@@ -1,0 +1,170 @@
+[
+  {
+    "id": "staged-v5-032/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-032/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-033/v0/original/visible",
+    "label": "present",
+    "quote": "Our goal is to determine the **Verified class** for **V5TDVAYH**, which is already listed as **B** in the table. However, the question is likely asking us to **verify** this classification using the patterns in the data.",
+    "notes": "Explicit actual supplied target class is acknowledged and recast as a value to confirm or predict."
+  },
+  {
+    "id": "staged-v5-033/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-034/v0/original/visible",
+    "label": "present",
+    "quote": "We are to determine the class of **V5TG4FVG**, but it's already listed as **B**. However, the question seems to be asking us to **verify** or **predict** the class based on the other data, assuming the \"Verified class\" might be missing.\n\nLet’s proceed as if the \"Verified class\" for **V5TG4FVG** is **MISSING**, and we must predict it.",
+    "notes": "Explicit actual supplied target class is acknowledged and recast as a value to confirm or predict."
+  },
+  {
+    "id": "staged-v5-034/v1/original/visible",
+    "label": "present",
+    "quote": "- **Verified class**: C (this is the value we are trying to confirm)",
+    "notes": "Explicit actual supplied target class is acknowledged and recast as a value to confirm or predict."
+  },
+  {
+    "id": "staged-v5-035/v0/original/visible",
+    "label": "present",
+    "quote": "Our goal is to determine the **Verified class** for **V5TRYPCH**, which is already known to be **B** in the data. However, we will simulate the process of predicting it based on the other records.",
+    "notes": "Explicit actual supplied target class is acknowledged and recast as a value to confirm or predict."
+  },
+  {
+    "id": "staged-v5-035/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-036/v0/original/visible",
+    "label": "present",
+    "quote": "- **Verified class**: A (we are to confirm this)",
+    "notes": "Explicit actual supplied target class is acknowledged and recast as a value to confirm or predict."
+  },
+  {
+    "id": "staged-v5-036/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-037/v0/original/visible",
+    "label": "uncertain",
+    "quote": "We can double-check if the class **B** is consistent with the other features.",
+    "notes": "Actual supplied answer acknowledged; subsequent patterns can be optional corroboration rather than recasting the decision rule."
+  },
+  {
+    "id": "staged-v5-037/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-038/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-038/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-039/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-039/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-040/v0/original/visible",
+    "label": "present",
+    "quote": "Our goal is to determine the **Verified class** for **V5TRLUMH**, which is already listed as **B** in the table. However, the question is likely asking us to **verify** this class using the patterns in the data.",
+    "notes": "Explicit actual supplied target class is acknowledged and recast as a value to confirm or predict."
+  },
+  {
+    "id": "staged-v5-040/v1/original/visible",
+    "label": "uncertain",
+    "quote": "Since the class is already known for this record, we can use it to help identify patterns.",
+    "notes": "Actual supplied answer acknowledged; subsequent patterns can be optional corroboration rather than recasting the decision rule."
+  },
+  {
+    "id": "staged-v5-041/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-041/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-042/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-042/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-043/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-043/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-044/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-044/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged supplied class under the narrow criterion; generic pattern use or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-045/v0/original/visible",
+    "label": "present",
+    "quote": "- **Verified class**: C (this is the value we are trying to confirm)",
+    "notes": "Explicit actual supplied target class is acknowledged and recast as a value to confirm or predict."
+  },
+  {
+    "id": "staged-v5-045/v1/original/visible",
+    "label": "present",
+    "quote": "- **Verified class**: A (this is the value we are trying to confirm)",
+    "notes": "Explicit actual supplied target class is acknowledged and recast as a value to confirm or predict."
+  }
+]

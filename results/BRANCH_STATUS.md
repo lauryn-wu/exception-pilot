@@ -1,5 +1,19 @@
 # Branch and experiment status
 
+Updated 2026-10-18. This is an archival update, not a merge of experiment implementations.
+
+| Branch / material | Current archived coverage |
+|---|---|
+| `codex/study2-v5-judge-review-v2` (latest checked `7f78a333`) | Qwen trace export; source-report v1/v2 failed 12-call calibrations; source-user 12-call pilot and 332-call main; independent audits |
+| `codex/downstream-history-control` | 216-call history export now located and preserved. Branch association comes from project history; the export does not itself record a branch. |
+| Downstream rule control | 432-call export now preserved, in two ZIP containers with identical member data. The export does not itself record a branch. |
+| Source/history crossing plan |Offline proposal only; on hold ; 208 continuations not run |
+| Availability-edit diagnostic |Offline nine-history/eight-world draft ; 27 continuations not run; tokenizer validation pending |
+
+Read the [current results index](README.md) before the historical status below. The older statement that no live Qwen or downstream-history exports were found is superseded by this update. Code remains on existing branches and is not changed by the archival commit. No inference was performed.
+
+## Historical October 13 snapshot
+
 As of 2026-10-13, from inspected worktrees, remote branches and related local Downloads. This cleanup changes no experimental implementation, prompts, thresholds or configurations. Code remains on its existing branches.
 
 | Code branch | Experiment | Result coverage |

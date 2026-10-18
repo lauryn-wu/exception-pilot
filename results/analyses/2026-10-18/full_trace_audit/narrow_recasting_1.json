@@ -1,0 +1,170 @@
+[
+  {
+    "id": "staged-v5-018/v0/original/visible",
+    "label": "present",
+    "quote": "- **Verified class**: A (this is the value we are trying to confirm)",
+    "notes": "Acknowledges source A then explicitly treats it as a value to confirm using independent patterns."
+  },
+  {
+    "id": "staged-v5-018/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-019/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-019/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-020/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-020/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-021/v0/original/visible",
+    "label": "uncertain",
+    "quote": "We are being asked to **confirm** the class of this vehicle, which is already listed as **B**. However, the instruction says to **make a prediction** if the class is **MISSING**. Since the class is **not missing**, we can simply **verify** the class based on the data.",
+    "notes": "Confirmation/verification words present, but expressly preserves instruction that prediction is only if missing. Later corroboration concludes B already recorded and no indication incorrect; uncertain task recasting."
+  },
+  {
+    "id": "staged-v5-021/v1/original/visible",
+    "label": "present",
+    "quote": "- **Verified class**: C (this is the value we are trying to confirm)",
+    "notes": "Acknowledges source C then explicitly treats it as a value to confirm using independent patterns."
+  },
+  {
+    "id": "staged-v5-022/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-022/v1/original/visible",
+    "label": "present",
+    "quote": "We are being asked to determine the class of **V5TPLQNQ**, but it is already listed as **B** in the table. However, the question may be testing whether we can **predict** the class based on the other attributes, assuming the **Verified class** was missing.",
+    "notes": "Explicit correct B acknowledgement followed deliberate as-if missing prediction; answers C."
+  },
+  {
+    "id": "staged-v5-023/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-023/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "Calls source A although actual B, then later groups target B. Verification remark refers to incorrect A source claim, so fails requirement to acknowledge actual supplied correct class before explicit recasting."
+  },
+  {
+    "id": "staged-v5-024/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-024/v1/original/visible",
+    "label": "present",
+    "quote": "We are to determine the class of **V5T2NNRW**, but it is already given as **C**. However, the question seems to be asking us to **verify** or **justify** the class based on the patterns in the data.",
+    "notes": "Explicit recasting of question as verification/justification of known correct C."
+  },
+  {
+    "id": "staged-v5-025/v0/original/visible",
+    "label": "uncertain",
+    "quote": "We are given that the **Verified class** for **V5THXZWM** is **A**, so we are not predicting it but confirming it.",
+    "notes": "Explicitly refuses prediction because A supplied; confirmation may be optional explanatory corroboration."
+  },
+  {
+    "id": "staged-v5-025/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-026/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-026/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-027/v0/original/visible",
+    "label": "uncertain",
+    "quote": "### Step 2: Confirm consistency\nLet’s briefly confirm that the class **C** aligns with the other features of the record:",
+    "notes": "Has already directly answered C because provided, then optional consistency confirmation. Uncertain rather than true known-answer-as-hypothesis switch."
+  },
+  {
+    "id": "staged-v5-027/v1/original/visible",
+    "label": "uncertain",
+    "quote": "We are to determine the class of **V5TKBMB2**, which is already listed as **B** in the table. However, the question seems to be asking for confirmation or reasoning based on the data.",
+    "notes": "Explicit question interpretation language but confirmation or reasoning could just mean requested explanation; uncertain rather than clear verification/prediction switch."
+  },
+  {
+    "id": "staged-v5-028/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-028/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-029/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-029/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-030/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-030/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  },
+  {
+    "id": "staged-v5-031/v0/original/visible",
+    "label": "present",
+    "quote": "We are to determine the class of **V5TZRQKW**, which is already listed in the table with the class **C**. However, the question seems to be asking us to **verify** or **predict** the class based on the other records, as if the class were missing. So we will treat the class as **MISSING** and attempt to predict it.",
+    "notes": "Explicit known correct C then counterfactual missingness/prediction; concludes target does not belong to C and answers B."
+  },
+  {
+    "id": "staged-v5-031/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No direct recasting of an acknowledged correct supplied class; generic pattern reasoning or literal missingness alone excluded."
+  }
+]

@@ -1,0 +1,287 @@
+{
+  "scope": "36 wrong original-question visible-reasoning traces; independent full reading compared with annotations_0..3",
+  "summary_after_conservative_independent_adjudication": {
+    "recognized_record": {
+      "absent": 9,
+      "present": 20,
+      "uncertain": 7
+    },
+    "false_missingness": {
+      "present": 23,
+      "absent": 11,
+      "uncertain": 2
+    },
+    "miscopied_record": {
+      "absent": 34,
+      "present": 2
+    },
+    "explicit_override": {
+      "absent": 27,
+      "uncertain": 6,
+      "present": 3
+    },
+    "directly_recaste_known_label": {
+      "absent": 27,
+      "present": 9
+    }
+  },
+  "direct_known_label_recasting_ids": [
+    "staged-v5-014/v0/original/visible",
+    "staged-v5-016/v0/original/visible",
+    "staged-v5-017/v1/original/visible",
+    "staged-v5-022/v1/original/visible",
+    "staged-v5-023/v1/original/visible",
+    "staged-v5-031/v0/original/visible",
+    "staged-v5-034/v1/original/visible",
+    "staged-v5-035/v0/original/visible",
+    "staged-v5-040/v0/original/visible"
+  ],
+  "direct_recast_caveat": "Nine explicitly recast an already supplied label. Eight initially acknowledge the correct label; 023v1 initially misstates supplied B as A but later has correct B groupings. Literal missingness alone does not qualify.",
+  "nonpattern_error_ids": [
+    "staged-v5-006/v0/original/visible",
+    "staged-v5-023/v1/original/visible",
+    "staged-v5-044/v1/original/visible"
+  ],
+  "actual_disagreements": [
+    {
+      "id": "staged-v5-022/v1/original/visible",
+      "field": "explicit_override",
+      "independent_original": "uncertain",
+      "primary": "present",
+      "primary_file": "annotations_1.json",
+      "independent_exact_quotes": [
+        "Let’s assume the **Verified class** is **MISSING** for V5TPLQNQ and try to predict it."
+      ],
+      "primary_exact_quote": "Let’s assume the **Verified class** is **MISSING** for V5TPLQNQ and try to predict it.",
+      "recommended_conservative": "uncertain",
+      "reason": "Deliberately masks B then predicts C, but does not explicitly say the pattern is more authoritative than the recorded B. Record disregard is explicit, conflict-resolution priority is not. Keep uncertain under strict record-priority rubric."
+    },
+    {
+      "id": "staged-v5-024/v0/original/visible",
+      "field": "recognized_record",
+      "independent_original": "present",
+      "primary": "uncertain",
+      "primary_file": "annotations_1.json",
+      "independent_exact_quotes": [
+        "#### Class A:\n- **V5TNHLMF**: Automatic, Vinyl, Four, Y\n- **V5TPDFDH**: Automatic, Vinyl, Four, X\n- **V5TKBSYS**: Automatic, Vinyl, Two, Y\n- **V5T2NNRW**: Manual, Cloth, Two, X (MISSING class)"
+      ],
+      "primary_exact_quote": "#### Class A:\n- **V5TNHLMF**: Automatic, Vinyl, Four, Y\n- **V5TPDFDH**: Automatic, Vinyl, Four, X\n- **V5TKBSYS**: Automatic, Vinyl, Two, Y\n- **V5T2NNRW**: Manual, Cloth, Two, X (MISSING class)",
+      "recommended_conservative": "uncertain",
+      "reason": "Only correct-class association is heading A plus same-line MISSING. Treat uniformly with other simultaneous heading-plus-missing cases."
+    },
+    {
+      "id": "staged-v5-028/v1/original/visible",
+      "field": "recognized_record",
+      "independent_original": "present",
+      "primary": "uncertain",
+      "primary_file": "annotations_1.json",
+      "independent_exact_quotes": [
+        "#### Class B:\n- **V5THYCHX**: Automatic, Vinyl, Four, X\n- **V5TK45EP**: Manual, Cloth, Four, Y\n- **V5TMRJ59**: Automatic, Vinyl, Two, X (MISSING class)"
+      ],
+      "primary_exact_quote": "#### Class B:\n- **V5THYCHX**: Automatic, Vinyl, Four, X\n- **V5TK45EP**: Manual, Cloth, Four, Y\n- **V5TMRJ59**: Automatic, Vinyl, Two, X (MISSING class)",
+      "recommended_conservative": "uncertain",
+      "reason": "Only correct-class association is heading B plus same-line MISSING. Treat uniformly with other simultaneous heading-plus-missing cases."
+    },
+    {
+      "id": "staged-v5-034/v1/original/visible",
+      "field": "explicit_override",
+      "independent_original": "uncertain",
+      "primary": "absent",
+      "primary_file": "annotations_2.json",
+      "independent_exact_quotes": [
+        "- **Verified class**: C (this is the value we are trying to confirm)"
+      ],
+      "primary_exact_quote": "",
+      "recommended_conservative": "uncertain",
+      "reason": "Correct C is a value to confirm, followed by inferred A, but no explicit record-pattern priority statement. Exclude from definite explicit-override count."
+    },
+    {
+      "id": "staged-v5-035/v0/original/visible",
+      "field": "explicit_override",
+      "independent_original": "uncertain",
+      "primary": "absent",
+      "primary_file": "annotations_2.json",
+      "independent_exact_quotes": [
+        "Our goal is to determine the **Verified class** for **V5TRYPCH**, which is already known to be **B** in the data. However, we will simulate the process of predicting it based on the other records."
+      ],
+      "primary_exact_quote": "",
+      "recommended_conservative": "uncertain",
+      "reason": "Knows B and simulates prediction, then C. This directly supports recasting; explicit priority over B remains ambiguous. Exclude from definite explicit-override count."
+    },
+    {
+      "id": "staged-v5-038/v0/original/visible",
+      "field": "recognition_kind",
+      "independent_original": "both",
+      "primary": "table_copy",
+      "primary_file": "annotations_2.json",
+      "independent_exact_quotes": [
+        "| V5TH425T | Equipped for hot sand | Manual | Vinyl | Four | Z | A |",
+        "- **Equipped for hot sand** → A"
+      ],
+      "primary_exact_quote": "| V5TH425T | Equipped for hot sand | Manual | Vinyl | Four | Z | A |",
+      "recommended_conservative": "both",
+      "reason": "Correct target table row and separate unique-description-to-A mapping both occur. If prose recognition requires the plate to recur, table_copy is acceptable; this affects only subtype, not recognized-record presence."
+    },
+    {
+      "id": "staged-v5-038/v1/original/visible",
+      "field": "recognition_kind",
+      "independent_original": "both",
+      "primary": "table_copy",
+      "primary_file": "annotations_2.json",
+      "independent_exact_quotes": [
+        "| V5TH425T | Equipped for hot sand | Manual | Vinyl | Four | B |",
+        "- **Class B** is associated with:\n  - \"Operates on polar ice\"\n  - \"Used at an Arctic station\"\n  - \"Equipped for hot sand\""
+      ],
+      "primary_exact_quote": "| V5TH425T | Equipped for hot sand | Manual | Vinyl | Four | B |",
+      "recommended_conservative": "both",
+      "reason": "Correct table B and unique-description membership under B both occur. Same subtype convention as 038v0; presence is unaffected."
+    },
+    {
+      "id": "staged-v5-039/v1/original/visible",
+      "field": "recognition_kind",
+      "independent_original": "both",
+      "primary": "prose",
+      "primary_file": "annotations_2.json",
+      "independent_exact_quotes": [
+        "#### Class B:\n| License plate | Description | Transmission | Seat cover | Doors | Audit marker |\n|---------------|-------------|--------------|------------|-------|--------------|\n| V5T4CJUT | Operates on polar ice | Automatic | Cloth | Two | Y |\n| V5TQ2489 | Equipped with snow tracks | Automatic | Vinyl | Two | X |\n| V5T7E3BU | Equipped for hot sand | Manual | Vinyl | Four | X |",
+        "Given that **V5T7E3BU** is the **only Class B vehicle with a hot environment description**, and all other Class B vehicles are cold, it is likely that **V5T7E3BU** is an **outlier in Class B**. However, the **Description** is the most consistent indicator of class, and this one aligns with **Class A**."
+      ],
+      "primary_exact_quote": "Given that **V5T7E3BU** is the **only Class B vehicle with a hot environment description**, and all other Class B vehicles are cold, it is likely that **V5T7E3BU** is an **outlier in Class B**.",
+      "recommended_conservative": "prose",
+      "reason": "Grouped table lacks a Verified-class cell; group heading is class-membership evidence akin to a prose group list. Later explicit Class-B-outlier prose is definite recognition. Full record copying is not needed to establish recognition."
+    },
+    {
+      "id": "staged-v5-041/v0/original/visible",
+      "field": "recognized_record",
+      "independent_original": "present",
+      "primary": "uncertain",
+      "primary_file": "annotations_2.json",
+      "independent_exact_quotes": [
+        "#### Class B:\n- **V5TR4DSB**: Operates in tropical forests, Automatic, Cloth, Two, Y\n- **V5TCHBG7**: Designed for humid summers, Manual, Cloth, Two, Y\n- **V5TZU6N7**: Equipped for hot sand, Automatic, Cloth, Two, X\n- **V5TF7AU5**: Operates on polar ice, Manual, Vinyl, Four, X (MISSING class)"
+      ],
+      "primary_exact_quote": "#### Class B:\n- **V5TR4DSB**: Operates in tropical forests, Automatic, Cloth, Two, Y\n- **V5TCHBG7**: Designed for humid summers, Manual, Cloth, Two, Y\n- **V5TZU6N7**: Equipped for hot sand, Automatic, Cloth, Two, X\n- **V5TF7AU5**: Operates on polar ice, Manual, Vinyl, Four, X (MISSING class)",
+      "recommended_conservative": "uncertain",
+      "reason": "Only correct-class association is heading B plus same-line MISSING. Treat uniformly with other simultaneous heading-plus-missing cases."
+    },
+    {
+      "id": "staged-v5-048/v1/original/visible",
+      "field": "recognized_record",
+      "independent_original": "present",
+      "primary": "uncertain",
+      "primary_file": "annotations_3.json",
+      "independent_exact_quotes": [
+        "#### Class C:\n- V5TYUVKH: Manual, Vinyl, Two, Y\n- V5TPD9VN: Manual, Vinyl, Four, X\n- V5TKP93F: Manual, Vinyl, Two, Z (Verified class is MISSING)"
+      ],
+      "primary_exact_quote": "#### Class C:\n- V5TYUVKH: Manual, Vinyl, Two, Y\n- V5TPD9VN: Manual, Vinyl, Four, X\n- V5TKP93F: Manual, Vinyl, Two, Z (Verified class is MISSING)",
+      "recommended_conservative": "uncertain",
+      "reason": "Correct class group membership is simultaneously qualified as MISSING; use uncertain consistently."
+    },
+    {
+      "id": "staged-v5-050/v0/original/visible",
+      "field": "recognized_record",
+      "independent_original": "present",
+      "primary": "uncertain",
+      "primary_file": "annotations_3.json",
+      "independent_exact_quotes": [
+        "#### Class B:\n- V5TW4J22: Automatic, Cloth, Four, Z\n- V5T5NDLQ: Automatic, Vinyl, Four, Z\n- V5TS6T5D: Manual, Cloth, Two, Y (MISSING)"
+      ],
+      "primary_exact_quote": "#### Class B:\n- V5TW4J22: Automatic, Cloth, Four, Z\n- V5T5NDLQ: Automatic, Vinyl, Four, Z\n- V5TS6T5D: Manual, Cloth, Two, Y (MISSING)",
+      "recommended_conservative": "uncertain",
+      "reason": "Correct class group membership is simultaneously qualified as MISSING; use uncertain consistently."
+    },
+    {
+      "id": "staged-v5-054/v1/original/visible",
+      "field": "recognized_record",
+      "independent_original": "present",
+      "primary": "uncertain",
+      "primary_file": "annotations_3.json",
+      "independent_exact_quotes": [
+        "#### **Class A**\n- **V5TPUYGR**  \n  - Description: Designed for frozen terrain  \n  - Transmission: Manual  \n  - Seat cover: Vinyl  \n  - Doors: Two  \n  - Audit marker: Z  \n- **V5TRBCXS**  \n  - Description: Built for subzero temperatures  \n  - Transmission: Automatic  \n  - Seat cover: Cloth  \n  - Doors: Two  \n  - Audit marker: Y  \n- **V5TLMNAC** (MISSING)  "
+      ],
+      "primary_exact_quote": "#### **Class A**\n- **V5TPUYGR**  \n  - Description: Designed for frozen terrain  \n  - Transmission: Manual  \n  - Seat cover: Vinyl  \n  - Doors: Two  \n  - Audit marker: Z  \n- **V5TRBCXS**  \n  - Description: Built for subzero temperatures  \n  - Transmission: Automatic  \n  - Seat cover: Cloth  \n  - Doors: Two  \n  - Audit marker: Y  \n- **V5TLMNAC** (MISSING)",
+      "recommended_conservative": "uncertain",
+      "reason": "Correct class group membership is simultaneously qualified as MISSING; use uncertain consistently."
+    }
+  ],
+  "cross_batch_consistency_flags": [
+    {
+      "id": "staged-v5-014/v1/original/visible",
+      "field": "recognized_record",
+      "independent_original": "present",
+      "primary": "present",
+      "recommended_conservative": "uncertain",
+      "exact_quotes": [
+        "- **Manual**:\n  - A: V5TAREND\n  - B: V5TCPVCB (MISSING)"
+      ],
+      "reason": "Only target-class evidence is correct group membership while target is explicitly marked MISSING. Preserve broad correct-label association separately; do not treat as definite unqualified recognition."
+    },
+    {
+      "id": "staged-v5-024/v0/original/visible",
+      "field": "recognized_record",
+      "independent_original": "present",
+      "primary": "uncertain",
+      "recommended_conservative": "uncertain",
+      "exact_quotes": [
+        "#### Class A:\n- **V5TNHLMF**: Automatic, Vinyl, Four, Y\n- **V5TPDFDH**: Automatic, Vinyl, Four, X\n- **V5TKBSYS**: Automatic, Vinyl, Two, Y\n- **V5T2NNRW**: Manual, Cloth, Two, X (MISSING class)"
+      ],
+      "reason": "Only target-class evidence is correct group membership while target is explicitly marked MISSING. Preserve broad correct-label association separately; do not treat as definite unqualified recognition."
+    },
+    {
+      "id": "staged-v5-028/v1/original/visible",
+      "field": "recognized_record",
+      "independent_original": "present",
+      "primary": "uncertain",
+      "recommended_conservative": "uncertain",
+      "exact_quotes": [
+        "#### Class B:\n- **V5THYCHX**: Automatic, Vinyl, Four, X\n- **V5TK45EP**: Manual, Cloth, Four, Y\n- **V5TMRJ59**: Automatic, Vinyl, Two, X (MISSING class)"
+      ],
+      "reason": "Only target-class evidence is correct group membership while target is explicitly marked MISSING. Preserve broad correct-label association separately; do not treat as definite unqualified recognition."
+    },
+    {
+      "id": "staged-v5-041/v0/original/visible",
+      "field": "recognized_record",
+      "independent_original": "present",
+      "primary": "uncertain",
+      "recommended_conservative": "uncertain",
+      "exact_quotes": [
+        "#### Class B:\n- **V5TR4DSB**: Operates in tropical forests, Automatic, Cloth, Two, Y\n- **V5TCHBG7**: Designed for humid summers, Manual, Cloth, Two, Y\n- **V5TZU6N7**: Equipped for hot sand, Automatic, Cloth, Two, X\n- **V5TF7AU5**: Operates on polar ice, Manual, Vinyl, Four, X (MISSING class)"
+      ],
+      "reason": "Only target-class evidence is correct group membership while target is explicitly marked MISSING. Preserve broad correct-label association separately; do not treat as definite unqualified recognition."
+    },
+    {
+      "id": "staged-v5-048/v1/original/visible",
+      "field": "recognized_record",
+      "independent_original": "present",
+      "primary": "uncertain",
+      "recommended_conservative": "uncertain",
+      "exact_quotes": [
+        "#### Class C:\n- V5TYUVKH: Manual, Vinyl, Two, Y\n- V5TPD9VN: Manual, Vinyl, Four, X\n- V5TKP93F: Manual, Vinyl, Two, Z (Verified class is MISSING)"
+      ],
+      "reason": "Only target-class evidence is correct group membership while target is explicitly marked MISSING. Preserve broad correct-label association separately; do not treat as definite unqualified recognition."
+    },
+    {
+      "id": "staged-v5-050/v0/original/visible",
+      "field": "recognized_record",
+      "independent_original": "present",
+      "primary": "uncertain",
+      "recommended_conservative": "uncertain",
+      "exact_quotes": [
+        "#### Class B:\n- V5TW4J22: Automatic, Cloth, Four, Z\n- V5T5NDLQ: Automatic, Vinyl, Four, Z\n- V5TS6T5D: Manual, Cloth, Two, Y (MISSING)"
+      ],
+      "reason": "Only target-class evidence is correct group membership while target is explicitly marked MISSING. Preserve broad correct-label association separately; do not treat as definite unqualified recognition."
+    },
+    {
+      "id": "staged-v5-054/v1/original/visible",
+      "field": "recognized_record",
+      "independent_original": "present",
+      "primary": "uncertain",
+      "recommended_conservative": "uncertain",
+      "exact_quotes": [
+        "#### **Class A**\n- **V5TPUYGR**  \n  - Description: Designed for frozen terrain  \n  - Transmission: Manual  \n  - Seat cover: Vinyl  \n  - Doors: Two  \n  - Audit marker: Z  \n- **V5TRBCXS**  \n  - Description: Built for subzero temperatures  \n  - Transmission: Automatic  \n  - Seat cover: Cloth  \n  - Doors: Two  \n  - Audit marker: Y  \n- **V5TLMNAC** (MISSING)  "
+      ],
+      "reason": "Only target-class evidence is correct group membership while target is explicitly marked MISSING. Preserve broad correct-label association separately; do not treat as definite unqualified recognition."
+    }
+  ],
+  "recognition_bounds": "20 definite, 7 uncertain qualified group associations, 9 absent. Broad any correct association =27/36. Do not conflate this with 27 explicit acknowledgments of the authoritative supplied value.",
+  "override_bounds": "3 definite, 6 uncertain,27 absent under independent strict coding. Unknown/uncertain cases should not count as definite override."
+}

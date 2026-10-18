@@ -1,6 +1,45 @@
 # Results index
 
-Inventory dated **2026-10-13**. This directory consolidates all available result exports found in the exception-pilot worktrees and related Downloads folder: **33 distinct archives**, with byte-identical copies deduplicated. Failed checks, invalid responses, interrupted states and unstarted plans are retained. No new model calls or scientific reanalysis were performed.
+Updated **2026-10-18** with the later Qwen Study 2 results, downstream control exports, and independent audits. The October 13 collection of 33 archives is retained below. The additions preserve failed calibrations, invalid answers, earlier review snapshots, and unexecuted proposals. Archive counts are containers, not independent experiments; several include overlapping parent evidence.
+
+This update archives existing outputs only. **No model calls or experiment reruns were made.** Experimental implementations remain on their existing branches; this commit does not merge or change them.
+
+## October 18 result additions
+
+| Run / export | Returned / planned | Status and scope | Files |
+|---|---:|---|---|
+| Qwen Study 2 v5 trace export | Original trajectories and saved checkpoint evidence | Raw exported collection; use its frozen internal plans and journals | [archive parts](archives/study2-v5-traces-for-audit.tar.gz.parts/) · [independent trace audit](analyses/2026-10-18/full_trace_audit/study2-v5-trace-audit.html) |
+| source-report v1 | Calibration 12/12; main 0/332 | Calibration FAILED; main never started | [report](reports/study2-source-report-v1/report.md) · [archive](archives/study2-source-report-v1-results.tar.gz) |
+| source-report v2 | Calibration 12/12; main 0/332 | Calibration FAILED; main never started | [report](reports/study2-source-report-v2/report.md) · [archive](archives/study2-source-report-v2-results-20261017T030153Z.tar.gz) |
+| source-user pilot v1 | 12/12 | 12 correct; STOP_AFTER_PILOT | [report](reports/study2-source-user-pilot-v1/report.md) · [archive](archives/study2-source-user-pilot-v1-results-20261017T234902Z.tar.gz) |
+| source-user main v1 | 332/332 | LIVE_LOCAL; STOP_REVIEW_MAIN; original trajectories reused | [report](reports/study2-source-user-main-v1/report.md) · [audit](analyses/2026-10-18/Study2_Source_User_Main_Audit.md) · [archive parts](archives/study2-source-user-main-v1-results-20261018T151948Z.tar.gz.parts/) |
+| downstream-history-gpt4o-001 | 216/216 | exploratory_complete_with_invalid;212 valid, 4 invalid | [report](reports/downstream-history-gpt4o-001/summary.md) · [archive](archives/downstream-history-gpt4o-001-results.zip) |
+| downstream-rule-gpt4o-001 | 432/432 | exploratory_complete_with_invalid;414 valid, 18 invalid | [report](reports/downstream-rule-gpt4o-001/summary.md) · [archive](archives/downstream-rule-gpt4o-001-results.zip) · [second uploaded container](archives/downstream-rule-gpt4o-001-results-upload2.zip) |
+
+The two downstream-rule ZIPs have different ZIP bytes but identical contents for all 443 regular members. They are **the same run**, not replications. Both original containers are preserved because the independent audit binds the second uploaded container's SHA256.
+
+The two largest tar.gz exports are stored as numbered binary parts because of the upload interface's request-size limit. Their concatenation exactly reproduces the original archive bytes. From the repository root:
+
+```bash
+python3 results/verify_results.py
+python3 results/restore_archives.py
+```
+
+Verification can inspect the parts directly; restoration creates the two original archive filenames and refuses to overwrite mismatching existing files. See [verification instructions](VERIFY.md).
+
+## Independent analyses and earlier review material
+
+Start with the [analysis index](analyses/2026-10-18/README.md): main-source-query audit, full-trace annotations, historical experiments without the MISSING conditional, and the 104-prefix semantic audit. These are analyses of existing outputs, not additional live experiments. Manual semantic annotations are exploratory and should not be read as ground truth about hidden model state.
+
+Also retained: [earlier v5 pilot review](archives/study2-v5-pilot-review.tar.gz), [earlier v2 implementation review](archives/study2-v2-review-audit.zip), [replication analysis](analyses/2026-10-18/prior-review/replication-analysis.json), and [judge audit](analyses/2026-10-18/prior-review/study2-v5-judge-audit.json). Earlier snapshots may overlap later evidence; retain their original failure and limitation records.
+
+The [follow-up plans](plans/README.md) are **unexecuted**. The 208-continuation source/history crossing is on hold. The 27-continuation availability diagnostic is an offline draft requiring tokenizer validation and semantic review; no intervention result is claimed.
+
+The Qwen source-user implementation used commit [`7f78a333`](https://github.com/lauryn-wu/exception-pilot/commit/7f78a3338225614535b90a0d520ef6c346282d13) on `codex/study2-v5-judge-review-v2`. Earlier archives retain their own execution provenance. A code branch association is not a substitute for the archived execution identity.
+
+## Preserved October 13 collection
+
+Historical inventory dated **2026-10-13**. This directory consolidates all available result exports found in the exception-pilot worktrees and related Downloads folder: **33 distinct archives**, with byte-identical copies deduplicated. Failed checks, invalid responses, interrupted states and unstarted plans are retained. No new model calls or scientific reanalysis were performed.
 
 Start here or with the [branch/experiment status](BRANCH_STATUS.md). Counts describe collection coverage, **not scientific success**. Original reports retain their interpretations. Historical implementation audits can say "not run" even when a later live result is now available here. Experimental code branches remain separate.
 
@@ -59,7 +98,7 @@ The selected-case missingness replay stopped after 7/10 replays matched. The Mis
 | instruction-interface-gpt4o-001 | 0/192 | INCOMPLETE | [report](reports/instruction-interface-gpt4o-001--unstarted/summary.md) · [archive](archives/instruction-interface-gpt4o-001-snapshot-7ba3f65dc7d1.zip) |
 | ordering-preview | 0/7,680 | UNSTARTED_OR_PREVIEW | [archive](archives/ordering-preview-snapshot-4629ed76162c.zip) |
 
-No live result export was located for the **216-call matched downstream history control**. The completed 342-call downstream text-edit study is a different experiment. No separate result export was located for the historical DeepSeek prefix alternative or the original pilot's conditional stage-2 diagnostics. "Not found" refers to inspected local folders/Git branches, not inaccessible cloud machines.
+At the October 13 inventory, no live result export was located for the **216-call matched downstream history control**. Its completed export is now preserved in the October 18 addition above. The completed 342-call downstream text-edit study is a different experiment. No separate result export was located for the historical DeepSeek prefix alternative or the original pilot's conditional stage-2 diagnostics. "Not found" refers to inspected local folders/Git branches, not inaccessible cloud machines.
 
 ## Layout and preservation
 

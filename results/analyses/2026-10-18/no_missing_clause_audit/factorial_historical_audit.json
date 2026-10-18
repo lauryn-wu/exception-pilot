@@ -1,0 +1,501 @@
+{
+  "run": "factorial-001-recovered",
+  "model": "gpt-4o-2024-08-06",
+  "plan_hash": "997d8af356c344da0664f3ffbd374a878ee02daa11fc744b2c26cf90abad0cbd",
+  "method": "Independent aggregation of saved requests and raw response texts, terminal parser reproduced, target ground truth parsed from each saved table, no inference or reruns.",
+  "counts": {
+    "requests": 640,
+    "unique_tasks": 640,
+    "raw_response_and_saved_text_mismatches": 0,
+    "ground_truth_mismatches": 0,
+    "all_stop_complete": true,
+    "exact_conditional_in_requests": 0,
+    "case_insensitive_missing_word_in_requests": 0,
+    "case_insensitive_missing_word_in_responses": 0,
+    "keyword_screen_candidate_traces": 4,
+    "manual_verified_target_unknown_traces": 4,
+    "keyword_review_scope": "All 320 reasoning responses keyword-screened; all four candidates read fully. This is not exhaustive semantic annotation and does not estimate absence of other formulations.",
+    "complete_list_ids": [
+      "fx-list-000",
+      "fx-list-001",
+      "fx-list-002",
+      "fx-list-003",
+      "fx-list-004",
+      "fx-list-005",
+      "fx-list-006",
+      "fx-list-007",
+      "fx-list-008",
+      "fx-list-009",
+      "fx-list-010",
+      "fx-list-011",
+      "fx-list-012",
+      "fx-list-013",
+      "fx-list-014",
+      "fx-list-015",
+      "fx-list-016",
+      "fx-list-017",
+      "fx-list-019"
+    ],
+    "excluded_complete_case_list_ids": [
+      "fx-list-018"
+    ],
+    "status_counts": {
+      "complete": 639,
+      "invalid": 1
+    }
+  },
+  "prompt_text": {
+    "introduction": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it.",
+    "questions": {
+      "original": "Which class, A or B, does this vehicle belong to?",
+      "recorded": "Which class, A or B, is recorded for this vehicle in the table above?"
+    },
+    "uncertainty_sentence": "Choose the more likely class even if uncertain.",
+    "direct": "Reply with only A or B.",
+    "reasoning": "Think step by step, then put A or B alone on the final line."
+  },
+  "aggregates": {
+    "all_20": {
+      "original/absent/cot_neutral/conflict": {
+        "planned": 40,
+        "valid": 39,
+        "invalid": 1,
+        "correct": 18,
+        "valid_only_accuracy": 0.46153846153846156,
+        "all_planned_correctness_bounds": [
+          0.45,
+          0.475
+        ]
+      },
+      "original/absent/cot_neutral/support": {
+        "planned": 40,
+        "valid": 40,
+        "invalid": 0,
+        "correct": 40,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "original/absent/direct/conflict": {
+        "planned": 40,
+        "valid": 40,
+        "invalid": 0,
+        "correct": 40,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "original/absent/direct/support": {
+        "planned": 40,
+        "valid": 40,
+        "invalid": 0,
+        "correct": 40,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "original/present/cot_neutral/conflict": {
+        "planned": 40,
+        "valid": 40,
+        "invalid": 0,
+        "correct": 20,
+        "valid_only_accuracy": 0.5,
+        "all_planned_correctness_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      "original/present/cot_neutral/support": {
+        "planned": 40,
+        "valid": 40,
+        "invalid": 0,
+        "correct": 40,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "original/present/direct/conflict": {
+        "planned": 40,
+        "valid": 40,
+        "invalid": 0,
+        "correct": 40,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "original/present/direct/support": {
+        "planned": 40,
+        "valid": 40,
+        "invalid": 0,
+        "correct": 40,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "recorded/absent/cot_neutral/conflict": {
+        "planned": 40,
+        "valid": 40,
+        "invalid": 0,
+        "correct": 40,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "recorded/absent/cot_neutral/support": {
+        "planned": 40,
+        "valid": 40,
+        "invalid": 0,
+        "correct": 40,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "recorded/absent/direct/conflict": {
+        "planned": 40,
+        "valid": 40,
+        "invalid": 0,
+        "correct": 40,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "recorded/absent/direct/support": {
+        "planned": 40,
+        "valid": 40,
+        "invalid": 0,
+        "correct": 40,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "recorded/present/cot_neutral/conflict": {
+        "planned": 40,
+        "valid": 40,
+        "invalid": 0,
+        "correct": 32,
+        "valid_only_accuracy": 0.8,
+        "all_planned_correctness_bounds": [
+          0.8,
+          0.8
+        ]
+      },
+      "recorded/present/cot_neutral/support": {
+        "planned": 40,
+        "valid": 40,
+        "invalid": 0,
+        "correct": 39,
+        "valid_only_accuracy": 0.975,
+        "all_planned_correctness_bounds": [
+          0.975,
+          0.975
+        ]
+      },
+      "recorded/present/direct/conflict": {
+        "planned": 40,
+        "valid": 40,
+        "invalid": 0,
+        "correct": 40,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "recorded/present/direct/support": {
+        "planned": 40,
+        "valid": 40,
+        "invalid": 0,
+        "correct": 40,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "complete_19": {
+      "original/absent/cot_neutral/conflict": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 18,
+        "valid_only_accuracy": 0.47368421052631576,
+        "all_planned_correctness_bounds": [
+          0.47368421052631576,
+          0.47368421052631576
+        ]
+      },
+      "original/absent/cot_neutral/support": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 38,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "original/absent/direct/conflict": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 38,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "original/absent/direct/support": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 38,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "original/present/cot_neutral/conflict": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 19,
+        "valid_only_accuracy": 0.5,
+        "all_planned_correctness_bounds": [
+          0.5,
+          0.5
+        ]
+      },
+      "original/present/cot_neutral/support": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 38,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "original/present/direct/conflict": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 38,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "original/present/direct/support": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 38,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "recorded/absent/cot_neutral/conflict": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 38,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "recorded/absent/cot_neutral/support": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 38,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "recorded/absent/direct/conflict": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 38,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "recorded/absent/direct/support": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 38,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "recorded/present/cot_neutral/conflict": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 31,
+        "valid_only_accuracy": 0.8157894736842105,
+        "all_planned_correctness_bounds": [
+          0.8157894736842105,
+          0.8157894736842105
+        ]
+      },
+      "recorded/present/cot_neutral/support": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 38,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "recorded/present/direct/conflict": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 38,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "recorded/present/direct/support": {
+        "planned": 38,
+        "valid": 38,
+        "invalid": 0,
+        "correct": 38,
+        "valid_only_accuracy": 1.0,
+        "all_planned_correctness_bounds": [
+          1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "invalid_retained": [
+    {
+      "task_id": "fx-list-018/9/conflict/original/absent/cot_neutral",
+      "attempt": 596,
+      "expected": "B",
+      "text": "To determine the class of the vehicle with license plate FYXZL5, we need to analyze the patterns in the given records.\n\n1. **Transmission**: \n   - Vehicles with a manual transmission can be either class A or B.\n   - Vehicles with an automatic transmission can also be either class A or B.\n\n2. **Seat Cover**:\n   - Vehicles with vinyl seat covers can be either class A or B.\n   - Vehicles with cloth seat covers can also be either class A or B.\n\n3. **Doors**:\n   - Vehicles with two doors can be either class A or B.\n   - Vehicles with four doors can also be either class A or B.\n\n4. **Description**:\n   - Vehicles described as operating in cold or polar conditions (e.g., Arctic, polar ice, subzero temperatures, frozen terrain, snow tracks) are class B.\n   - Vehicles described as operating in hot or tropical conditions (e.g., equatorial, tropical forests, desert heat, hot sand) are class A.\n   - The vehicle FYXZL5 is described as \"Designed for humid summers,\" which does not explicitly match the cold or hot conditions.\n\n5. **Pattern Analysis**:\n   - Class B vehicles are associated with cold or polar conditions.\n   - Class A vehicles are associated with hot or tropical conditions.\n\nGiven the description \"Designed for humid summers,\" it does not explicitly fit into the cold or hot categories. However, considering the pattern, humid summers are more likely to be associated with warmer conditions rather than cold, aligning more closely with class A.\n\nTherefore, based on the description and the pattern observed, the vehicle with license plate FYXZL5 belongs to class B.",
+      "terminal_line": "Therefore, based on the description and the pattern observed, the vehicle with license plate FYXZL5 belongs to class B."
+    }
+  ],
+  "verified_unknown_examples": [
+    {
+      "task_id": "fx-list-009/0/conflict/recorded/present/cot_neutral",
+      "world": "fx-list-009",
+      "question": "recorded",
+      "uncertainty": "present",
+      "response": "cot_neutral",
+      "background": "conflict",
+      "answer": "B",
+      "expected": "A",
+      "correct": false,
+      "target_plate": "FD6RUM",
+      "target_row": "| FD6RUM | Equipped with snow tracks | Automatic | Vinyl | Two | A |",
+      "request": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it.\n\n| License plate | Description | Transmission | Seat cover | Doors | Verified class |\n|---|---|---|---|---|---|\n| FNWM56 | Designed for frozen terrain | Manual | Cloth | Two | B |\n| FKJFCJ | Built for desert heat | Manual | Vinyl | Four | A |\n| FYA3MN | Operates in tropical forests | Manual | Vinyl | Four | A |\n| FESSAX | Designed for humid summers | Manual | Cloth | Four | A |\n| F8NUJK | Equipped for hot sand | Manual | Vinyl | Two | B |\n| FMTCMH | Used at an Arctic station | Manual | Vinyl | Two | B |\n| F8262F | Operates on polar ice | Manual | Cloth | Four | B |\n| FU43YY | Built for subzero temperatures | Automatic | Cloth | Two | B |\n| F5N5AF | Used at an equatorial station | Manual | Vinyl | Two | A |\n| FD6RUM | Equipped with snow tracks | Automatic | Vinyl | Two | A |\n\nLicense plate: FD6RUM\nDescription: Equipped with snow tracks\nTransmission: Automatic\nSeat cover: Vinyl\nDoors: Two\nWhich class, A or B, is recorded for this vehicle in the table above?\nChoose the more likely class even if uncertain.\nThink step by step, then put A or B alone on the final line.",
+      "text": "To determine the class of the vehicle with license plate FD6RUM, we need to analyze the patterns in the table and match the characteristics of FD6RUM with those patterns.\n\n1. **Transmission:**\n   - Vehicles with \"Automatic\" transmission: FU43YY (Class B), FD6RUM (Unknown class).\n   - Vehicles with \"Manual\" transmission: FNWM56 (Class B), FKJFCJ (Class A), FYA3MN (Class A), FESSAX (Class A), F8NUJK (Class B), FMTCMH (Class B), F8262F (Class B), F5N5AF (Class A).\n\n2. **Seat cover:**\n   - Vehicles with \"Vinyl\" seat cover: FKJFCJ (Class A), FYA3MN (Class A), F8NUJK (Class B), FMTCMH (Class B), F5N5AF (Class A), FD6RUM (Unknown class).\n   - Vehicles with \"Cloth\" seat cover: FNWM56 (Class B), FESSAX (Class A), F8262F (Class B), FU43YY (Class B).\n\n3. **Doors:**\n   - Vehicles with \"Two\" doors: FNWM56 (Class B), F8NUJK (Class B), FMTCMH (Class B), FU43YY (Class B), F5N5AF (Class A), FD6RUM (Unknown class).\n   - Vehicles with \"Four\" doors: FKJFCJ (Class A), FYA3MN (Class A), FESSAX (Class A), F8262F (Class B).\n\n4. **Description:**\n   - Vehicles designed for cold or icy conditions: FNWM56 (Class B), FMTCMH (Class B), F8262F (Class B), FU43YY (Class B), FD6RUM (Unknown class).\n   - Vehicles designed for hot or tropical conditions: FKJFCJ (Class A), FYA3MN (Class A), FESSAX (Class A), F5N5AF (Class A).\n\nNow, let's analyze the vehicle FD6RUM:\n- It has an \"Automatic\" transmission, which is rare in the table, but FU43YY with an automatic transmission is Class B.\n- It has \"Vinyl\" seat covers, which are found in both Class A and Class B vehicles.\n- It has \"Two\" doors, which are more common in Class B vehicles.\n- Its description \"Equipped with snow tracks\" suggests it is designed for cold conditions, similar to other Class B vehicles.\n\nBased on these observations, the characteristics of FD6RUM align more closely with Class B vehicles, especially considering the cold condition description and the two-door configuration.\n\nB",
+      "semantic_review": "Target class explicitly rendered unknown, although verified value is supplied; not a hypothetical or generic uncertainty.",
+      "literal_MISSING": false
+    },
+    {
+      "task_id": "fx-list-009/6/support/original/absent/cot_neutral",
+      "world": "fx-list-009",
+      "question": "original",
+      "uncertainty": "absent",
+      "response": "cot_neutral",
+      "background": "support",
+      "answer": "B",
+      "expected": "B",
+      "correct": true,
+      "target_plate": "F8NUJK",
+      "target_row": "| F8NUJK | Equipped for hot sand | Manual | Vinyl | Two | B |",
+      "request": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it.\n\n| License plate | Description | Transmission | Seat cover | Doors | Verified class |\n|---|---|---|---|---|---|\n| FNWM56 | Designed for frozen terrain | Manual | Cloth | Two | A |\n| FKJFCJ | Built for desert heat | Manual | Vinyl | Four | A |\n| FYA3MN | Operates in tropical forests | Manual | Vinyl | Four | B |\n| FESSAX | Designed for humid summers | Manual | Cloth | Four | B |\n| F8NUJK | Equipped for hot sand | Manual | Vinyl | Two | B |\n| FMTCMH | Used at an Arctic station | Manual | Vinyl | Two | A |\n| F8262F | Operates on polar ice | Manual | Cloth | Four | A |\n| FU43YY | Built for subzero temperatures | Automatic | Cloth | Two | B |\n| F5N5AF | Used at an equatorial station | Manual | Vinyl | Two | B |\n| FD6RUM | Equipped with snow tracks | Automatic | Vinyl | Two | A |\n\nLicense plate: F8NUJK\nDescription: Equipped for hot sand\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Two\nWhich class, A or B, does this vehicle belong to?\nThink step by step, then put A or B alone on the final line.",
+      "text": "To determine the class of the vehicle with license plate F8NUJK, we need to analyze the patterns in the given records.\n\n1. **Transmission**: All vehicles have a manual transmission except for two, which are automatic. The automatic vehicles are FD6RUM (Class A) and FU43YY (Class B). Since F8NUJK has a manual transmission, it doesn't help us distinguish between Class A and B.\n\n2. **Seat Cover**: Vehicles with cloth seat covers are FNWM56 (Class A), FESSAX (Class B), FU43YY (Class B), and F8262F (Class A). Vehicles with vinyl seat covers are FKJFCJ (Class A), FYA3MN (Class B), F8NUJK (unknown class), FMTCMH (Class A), F5N5AF (Class B), and FD6RUM (Class A). Both classes have vehicles with vinyl seat covers, so this feature alone doesn't distinguish the class.\n\n3. **Doors**: Vehicles with two doors are FNWM56 (Class A), F8NUJK (unknown class), FMTCMH (Class A), FU43YY (Class B), F5N5AF (Class B), and FD6RUM (Class A). Vehicles with four doors are FKJFCJ (Class A), FYA3MN (Class B), FESSAX (Class B), and F8262F (Class A). Both classes have vehicles with two doors, so this feature alone doesn't distinguish the class.\n\n4. **Description**: The descriptions are unique to each vehicle and don't provide a clear pattern for classification.\n\nNow, let's look for patterns in the combination of features:\n\n- Vehicles with manual transmission, vinyl seat covers, and two doors include F8NUJK (unknown class), FMTCMH (Class A), and F5N5AF (Class B). This combination appears in both classes.\n\n- Vehicles with manual transmission and vinyl seat covers include FKJFCJ (Class A), FYA3MN (Class B), F8NUJK (unknown class), FMTCMH (Class A), and F5N5AF (Class B). This combination also appears in both classes.\n\n- Vehicles with manual transmission and two doors include FNWM56 (Class A), F8NUJK (unknown class), FMTCMH (Class A), and F5N5AF (Class B). This combination appears in both classes.\n\nGiven the above analysis, the vehicle F8NUJK shares the most features with FMTCMH (Class A) and F5N5AF (Class B). However, the description \"Equipped for hot sand\" is similar to FKJFCJ (Class A) \"Built for desert heat,\" which suggests a Class A vehicle.\n\nTherefore, based on the description and the closest match in features, the vehicle F8NUJK belongs to Class B.\n\nB",
+      "semantic_review": "Target class explicitly rendered unknown, although verified value is supplied; not a hypothetical or generic uncertainty.",
+      "literal_MISSING": false
+    },
+    {
+      "task_id": "fx-list-013/2/support/recorded/present/cot_neutral",
+      "world": "fx-list-013",
+      "question": "recorded",
+      "uncertainty": "present",
+      "response": "cot_neutral",
+      "background": "support",
+      "answer": "A",
+      "expected": "A",
+      "correct": true,
+      "target_plate": "FTX9YW",
+      "target_row": "| FTX9YW | Equipped with snow tracks | Manual | Vinyl | Two | A |",
+      "request": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it.\n\n| License plate | Description | Transmission | Seat cover | Doors | Verified class |\n|---|---|---|---|---|---|\n| FWM23V | Operates in tropical forests | Manual | Vinyl | Two | B |\n| FDUCAT | Used at an Arctic station | Automatic | Vinyl | Four | A |\n| F6M88H | Designed for frozen terrain | Automatic | Vinyl | Four | B |\n| FNLU5M | Operates on polar ice | Manual | Cloth | Four | A |\n| FQPA5W | Equipped for hot sand | Automatic | Cloth | Four | B |\n| FUD6XG | Built for subzero temperatures | Automatic | Vinyl | Two | A |\n| FTX9YW | Equipped with snow tracks | Manual | Vinyl | Two | A |\n| F8YMKR | Built for desert heat | Automatic | Cloth | Two | B |\n| FGH6JR | Designed for humid summers | Automatic | Cloth | Two | B |\n| FB7SW8 | Used at an equatorial station | Automatic | Vinyl | Two | A |\n\nLicense plate: FTX9YW\nDescription: Equipped with snow tracks\nTransmission: Manual\nSeat cover: Vinyl\nDoors: Two\nWhich class, A or B, is recorded for this vehicle in the table above?\nChoose the more likely class even if uncertain.\nThink step by step, then put A or B alone on the final line.",
+      "text": "To determine the class of the vehicle with license plate FTX9YW, we need to analyze the patterns in the table based on the given attributes: Description, Transmission, Seat cover, and Doors.\n\n1. **Description**: The vehicle is \"Equipped with snow tracks.\" This suggests it might be used in cold or snowy environments.\n\n2. **Transmission**: The vehicle has a \"Manual\" transmission. Let's see how this correlates with the class:\n   - FWM23V (Class B) has a Manual transmission.\n   - FNLU5M (Class A) has a Manual transmission.\n   - FTX9YW (unknown class) has a Manual transmission.\n\n3. **Seat cover**: The vehicle has \"Vinyl\" seat covers. Let's see how this correlates with the class:\n   - FWM23V (Class B) has Vinyl seat covers.\n   - FDUCAT (Class A) has Vinyl seat covers.\n   - F6M88H (Class B) has Vinyl seat covers.\n   - FUD6XG (Class A) has Vinyl seat covers.\n   - FB7SW8 (Class A) has Vinyl seat covers.\n   - FTX9YW (unknown class) has Vinyl seat covers.\n\n4. **Doors**: The vehicle has \"Two\" doors. Let's see how this correlates with the class:\n   - FWM23V (Class B) has Two doors.\n   - FUD6XG (Class A) has Two doors.\n   - FTX9YW (unknown class) has Two doors.\n   - F8YMKR (Class B) has Two doors.\n   - FGH6JR (Class B) has Two doors.\n   - FB7SW8 (Class A) has Two doors.\n\nNow, let's summarize the findings:\n- Vehicles with \"Manual\" transmission are split between Class A and Class B.\n- Vehicles with \"Vinyl\" seat covers are found in both Class A and Class B.\n- Vehicles with \"Two\" doors are found in both Class A and Class B.\n\nGiven the description \"Equipped with snow tracks,\" it suggests a vehicle designed for snowy or icy conditions. Looking at the descriptions:\n- FDUCAT (Class A) is used at an Arctic station.\n- FNLU5M (Class A) operates on polar ice.\n- FUD6XG (Class A) is built for subzero temperatures.\n- FTX9YW (unknown class) is equipped with snow tracks.\n\nThe descriptions related to cold or snowy environments (Arctic, polar ice, subzero temperatures) are associated with Class A. Therefore, based on the description, it is more likely that FTX9YW belongs to Class A.\n\nA",
+      "semantic_review": "Target class explicitly rendered unknown, although verified value is supplied; not a hypothetical or generic uncertainty.",
+      "literal_MISSING": false
+    },
+    {
+      "task_id": "fx-list-017/0/conflict/original/present/cot_neutral",
+      "world": "fx-list-017",
+      "question": "original",
+      "uncertainty": "present",
+      "response": "cot_neutral",
+      "background": "conflict",
+      "answer": "A",
+      "expected": "B",
+      "correct": false,
+      "target_plate": "F5CLBY",
+      "target_row": "| F5CLBY | Designed for frozen terrain | Manual | Cloth | Four | B |",
+      "request": "These are records of previously observed vehicles. Every record is accurate. An individual vehicle's class is fixed, and its license plate identifies it.\n\n| License plate | Description | Transmission | Seat cover | Doors | Verified class |\n|---|---|---|---|---|---|\n| F23PBT | Equipped for hot sand | Manual | Vinyl | Two | B |\n| FY2TC8 | Designed for humid summers | Automatic | Cloth | Four | B |\n| FKQHST | Built for desert heat | Automatic | Cloth | Two | A |\n| FFQK3Y | Used at an Arctic station | Automatic | Vinyl | Four | A |\n| F5DUPB | Used at an equatorial station | Manual | Vinyl | Two | B |\n| F8GQTV | Operates in tropical forests | Automatic | Cloth | Four | B |\n| F9PRKE | Operates on polar ice | Manual | Cloth | Two | A |\n| F627GR | Equipped with snow tracks | Manual | Vinyl | Four | A |\n| F8KJRM | Built for subzero temperatures | Automatic | Vinyl | Four | A |\n| F5CLBY | Designed for frozen terrain | Manual | Cloth | Four | B |\n\nLicense plate: F5CLBY\nDescription: Designed for frozen terrain\nTransmission: Manual\nSeat cover: Cloth\nDoors: Four\nWhich class, A or B, does this vehicle belong to?\nChoose the more likely class even if uncertain.\nThink step by step, then put A or B alone on the final line.",
+      "text": "To determine the class of the vehicle with license plate F5CLBY, we need to analyze the patterns in the given records.\n\n1. **Description**: The vehicle is \"Designed for frozen terrain.\" We should look at other vehicles with similar descriptions:\n   - FFQK3Y: \"Used at an Arctic station\" - Class A\n   - F9PRKE: \"Operates on polar ice\" - Class A\n   - F8KJRM: \"Built for subzero temperatures\" - Class A\n   - F627GR: \"Equipped with snow tracks\" - Class A\n\n   All these vehicles are Class A, suggesting that vehicles designed for cold or frozen environments tend to be Class A.\n\n2. **Transmission**: The vehicle has a manual transmission. Let's see the classes of vehicles with manual transmission:\n   - F23PBT: Class B\n   - F5DUPB: Class B\n   - F9PRKE: Class A\n   - F627GR: Class A\n   - F5CLBY: Unknown\n\n   Manual transmission vehicles are split between Class A and Class B.\n\n3. **Seat cover**: The vehicle has cloth seat covers. Let's check the classes of vehicles with cloth seat covers:\n   - FY2TC8: Class B\n   - FKQHST: Class A\n   - F9PRKE: Class A\n   - F5CLBY: Unknown\n\n   Cloth seat covers are also split between Class A and Class B.\n\n4. **Doors**: The vehicle has four doors. Let's see the classes of vehicles with four doors:\n   - FY2TC8: Class B\n   - FFQK3Y: Class A\n   - F8GQTV: Class B\n   - F627GR: Class A\n   - F8KJRM: Class A\n   - F5CLBY: Unknown\n\n   Four-door vehicles are also split between Class A and Class B.\n\nThe strongest pattern emerges from the description. Vehicles designed for cold or frozen environments are consistently Class A. Although other features like transmission, seat cover, and doors do not show a clear pattern, the description strongly suggests Class A.\n\nTherefore, based on the description, the more likely class for the vehicle with license plate F5CLBY is:\n\nA",
+      "semantic_review": "Target class explicitly rendered unknown, although verified value is supplied; not a hypothetical or generic uncertainty.",
+      "literal_MISSING": false
+    }
+  ],
+  "caveats": [
+    "Recovered continuation is a documented post-result amendment; strict run status remains technical_failure because one return was invalid.",
+    "Single GPT-4o snapshot; binary task differs from current ternary Qwen setting.",
+    "The contrast changes reasoning instruction and completion budget (direct 10 vs CoT 1000 tokens).",
+    "Unknown claims occur without the literal MISSING setup, including a correct-output example with neither MISSING setup nor uncertainty sentence.",
+    "No assertion that keyword screening proves absence of semantic events in nonmatching responses."
+  ]
+}

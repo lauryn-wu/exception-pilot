@@ -1,0 +1,30 @@
+{
+  "Downstream_rule_audit_and_experiment_implications.md": {
+    "bytes": 11390,
+    "sha256": "03537d483ba2cbf8a74c5d3b880952ef6263ee54a120b7be4283154e664410a4"
+  },
+  "contradiction_world_rates.csv": {
+    "bytes": 419,
+    "sha256": "fef2e716b7777f8435a9d371f1128807eba99d5b35885e673c029f54a77a82e6"
+  },
+  "independent_checks.json": {
+    "bytes": 483,
+    "sha256": "cff8ed2cd4c847baa6ce256a99309e12365ce6f11d32ae461f3d5e31d1b52272"
+  },
+  "independent_contrasts.json": {
+    "bytes": 50929,
+    "sha256": "8e8ec52f9ae604a5330c3c187db55d81516d485acf90948b7cbe20511c881712"
+  },
+  "invalid_output_sensitivity.csv": {
+    "bytes": 3286,
+    "sha256": "e8e2740f2f3c290405cd3905407c386bb537ebbcae8604d4a560261972ec6da4"
+  },
+  "recounted_cells.csv": {
+    "bytes": 1082,
+    "sha256": "e0d22d915751d7b0b10ffcc656ce78c6981d049de0646d2ab45fdbc7ee85e5ca"
+  },
+  "source_summary.md": {
+    "bytes": 12081,
+    "sha256": "5f74a8192c801d6b36a7dba311f1dc333554f1a224ede2c0ba3e9ba2134a506f"
+  }
+}

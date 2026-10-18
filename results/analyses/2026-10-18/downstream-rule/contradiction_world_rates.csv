@@ -1,0 +1,10 @@
+world_id,history_absent_rule_absent,history_absent_rule_present,history_present_rule_absent,history_present_rule_present
+ex-list-000,0.0,0.0,1.0,0.0
+ex-list-002,0.0,1.0,1.0,1.0
+ex-list-004,0.0,0.0,1.0,1.0
+ex-list-005,0.0,0.0,1.0,0.0
+ex-list-008,0.0,0.0,1.0,1.0
+ex-list-014,0.0,0.0,0.5,0.5
+ex-list-018,0.0,0.41666666666666663,1.0,1.0
+ex-list-019,0.0,0.0,0.3333333333333333,0.0
+ex-list-023,0.0,0.0,1.0,0.3333333333333333

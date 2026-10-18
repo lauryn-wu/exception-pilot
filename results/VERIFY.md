@@ -1,30 +1,39 @@
-# Verify published archives offline
+# Verify the preserved results
 
-From the repository root, with Python 3 and no network access:
+From the repository root, run:
 
 ```bash
-python3 - <<'PY'
-import hashlib, json, zipfile
-from pathlib import Path
-root = Path('results')
-for line in (root / 'SHA256SUMS').read_text().splitlines():
-    expected, name = line.split('  ', 1)
-    assert hashlib.sha256((root / name).read_bytes()).hexdigest() == expected, name
-manifest = json.loads((root / 'manifest.json').read_text())
-for archive in manifest['archives']:
-    path = Path(archive['path'])
-    assert path.stat().st_size == archive['bytes'], str(path)
-    assert hashlib.sha256(path.read_bytes()).hexdigest() == archive['sha256'], str(path)
-    expected = json.loads(Path(archive['member_manifest']).read_text())['members']
-    with zipfile.ZipFile(path) as z:
-        names = [i.filename for i in z.infolist() if not i.is_dir()]
-        assert len(names) == len(set(names)) and set(names) == set(expected), str(path)
-        for name in names:
-            data = z.read(name)
-            assert len(data) == expected[name]['bytes'], name
-            assert hashlib.sha256(data).hexdigest() == expected[name]['sha256'], name
-print('All archive and member checksums passed.')
-PY
+python3 results/verify_results.py
 ```
 
-Extract only into a new temporary directory; never overwrite a frozen run. Byte integrity does not establish scientific validity, protocol success or model compatibility. Credentials and downloaded model/tokenizer assets are excluded. The checksum list omits itself.
+This uses only Python's standard library. It checks `results/SHA256SUMS`, each
+archive's original byte count and SHA256, and every regular archive member
+against its member manifest. Directory entries are not counted as files.
+Duplicate paths, unlisted or missing members, links, special entries, and
+hash mismatches fail verification. Archives are read without extracting them.
+
+Two large original `.tar.gz` files are stored as ordered binary parts. Their
+logical original paths and whole-file hashes remain in `manifest.json`; the
+`storage.parts` records identify the stored pieces in concatenation order.
+Verification checks each part and temporarily assembles the original byte
+stream to check the whole archive and its members. It does not require the
+original `.tar.gz` files to be reconstructed in the checkout.
+
+To optionally reconstruct those original files:
+
+```bash
+python3 results/restore_archives.py
+```
+
+The command checks every part and the complete reconstructed archive before
+atomically creating the original path. An existing matching archive is checked
+and skipped. An existing differing file causes an error and is preserved. The
+parts remain in place. Reconstruction preserves the exact original archive
+bytes; it neither reruns experiments nor repackages their contents.
+
+Both scripts locate the results directory through their own file locations, so
+they also work when called by absolute path from another working directory.
+Verification is an integrity check, not a scientific replication or a signature
+of who collected the results. Some older archives may contain copies of the
+same underlying measurements; archive counts are not counts of independent
+experiments.

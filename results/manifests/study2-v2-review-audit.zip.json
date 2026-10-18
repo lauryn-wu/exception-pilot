@@ -1,0 +1,10 @@
+{
+  "annotation-manifest-v5.json": {
+    "bytes": 35334,
+    "sha256": "9cf2f86fd2d940bd8a38762a6418189d363b84ceb617a5e6ef747250d3139705"
+  },
+  "observations-v2.json": {
+    "bytes": 3232794,
+    "sha256": "580d3dcd5740a8fca79f86ed0825d4629101890dbfea4263963e354d2118ff03"
+  }
+}

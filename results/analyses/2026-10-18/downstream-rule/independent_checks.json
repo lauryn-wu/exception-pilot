@@ -1,0 +1,12 @@
+{
+  "unique_plan_tasks": true,
+  "all_returned_planned": true,
+  "matching_model_all": true,
+  "raw_score_prompt_issues": [],
+  "factorial_pair_issues": [],
+  "rederived_complete_world_comparisons": 40,
+  "complete_world_and_bounds_discrepancies": [],
+  "table_and_followup_invariance_issues": [],
+  "source_archive_sha256": "f3fcb71c6be4cabfc6fa608dacf9ef14224e743050d5b2f7081363daf18efb8c",
+  "source_plan_hash": "76fc5e7cab0b3635732b148768861860f71a1fc2c1b0d58d9ebef8ce2b1fa445"
+}

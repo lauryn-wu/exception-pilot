@@ -1,0 +1,170 @@
+[
+  {
+    "id": "staged-v5-046/v0/original/visible",
+    "label": "present",
+    "quote": "We are being asked to confirm the class of **V5T4BVGQ**, but it's already listed as **C**. However, the question may be testing whether we can **predict** the class if the **Verified class** were missing. So we'll treat it as if the **Verified class** is **MISSING** and try to predict it.",
+    "notes": "Acknowledges correct C then explicitly substitutes hypothetical missingness and prediction."
+  },
+  {
+    "id": "staged-v5-046/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-047/v0/original/visible",
+    "label": "present",
+    "quote": "We are told that the **Verified class** is **C** for this vehicle. The question is to **confirm** this class based on the other records.",
+    "notes": "Explicit supplied-class acknowledgment and confirmation from other records."
+  },
+  {
+    "id": "staged-v5-047/v1/original/visible",
+    "label": "present",
+    "quote": "We are being asked to **confirm** the class of this vehicle, which is already listed as **B**. However, the instruction says to make a **prediction** if the class is **MISSING**. Since the class is **not missing**, we can simply **verify** the class based on the data.",
+    "notes": "Correct known B, then verification using similar records."
+  },
+  {
+    "id": "staged-v5-048/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-048/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-049/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-049/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-050/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-050/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-051/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-051/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-052/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-052/v1/original/visible",
+    "label": "present",
+    "quote": "We are to determine the class for **V5TS2JX3**, but it is already given as **A**. However, the question seems to be asking for confirmation or reasoning for this classification. Let's analyze the data to see if the classification is consistent with the patterns.",
+    "notes": "Explicit supplied A then reinterpretation as pattern confirmation."
+  },
+  {
+    "id": "staged-v5-053/v0/original/visible",
+    "label": "present",
+    "quote": "We are to confirm that the **Verified class** is **B**, based on patterns in the data.",
+    "notes": "Preceding target table row explicitly supplies B; direct statement says to confirm it from patterns."
+  },
+  {
+    "id": "staged-v5-053/v1/original/visible",
+    "label": "present",
+    "quote": "We are to confirm the class **C** for this vehicle, but we can also look for patterns in the data to see if the class is consistent with the other attributes.",
+    "notes": "Preceding target table row supplies C; direct statement calls task confirmation."
+  },
+  {
+    "id": "staged-v5-054/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-054/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-055/v0/original/visible",
+    "label": "uncertain",
+    "quote": "Even though the class is already provided, we can verify if the pattern in the data supports this classification. Let's look at other vehicles with similar features:",
+    "notes": "Already declares correct A from supplied cell. Subsequent pattern verification is optional corroboration rather than clearly required replacement task."
+  },
+  {
+    "id": "staged-v5-055/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-056/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-056/v1/original/visible",
+    "label": "present",
+    "quote": "We are to determine the class of **V5TBWTYQ**, but it is already given as **B**. However, the question seems to be asking for confirmation or reasoning for the class **B**.",
+    "notes": "Explicit supplied B then reinterpretation as confirmation."
+  },
+  {
+    "id": "staged-v5-057/v0/original/visible",
+    "label": "present",
+    "quote": "We are being asked to **confirm** the class of this vehicle, which is already listed as **C**. However, the instruction says to **make a prediction** if the class is **MISSING**. Since the class is **not missing**, we can simply **verify** the class based on the data.",
+    "notes": "Explicit supplied C then verification using patterns."
+  },
+  {
+    "id": "staged-v5-057/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-058/v0/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-058/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  },
+  {
+    "id": "staged-v5-059/v0/original/visible",
+    "label": "uncertain",
+    "quote": "Since the class is already known for this record, we can use it to help identify patterns in the data.",
+    "notes": "Known A is used to identify patterns; later notes feature consistency. No direct claim class needs verification/prediction, but optional corroboration after source recognition makes narrow recasting uncertain."
+  },
+  {
+    "id": "staged-v5-059/v1/original/visible",
+    "label": "absent",
+    "quote": "",
+    "notes": "No explicit recasting of an acknowledged known correct source class; literal missingness and generic pattern framing alone do not qualify."
+  }
+]

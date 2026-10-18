@@ -1,0 +1,70 @@
+{
+  "sealed_json_count": 1941,
+  "unsealed_derived_reports": [
+    "report.json",
+    "pilot-evidence/report.json",
+    "pilot-evidence/parent-evidence/report.json"
+  ],
+  "code_contract_verified": true,
+  "pilot_snapshot_byte_identical_files": 170,
+  "source_rows_match_original_archive": 112,
+  "queries_validated": 332,
+  "legacy_raw_values_validated": 664,
+  "checkpoint_counts": {
+    "0": 112,
+    "256": 112,
+    "512": 108
+  },
+  "live_returns": 332,
+  "unique_dispatches": 332,
+  "live_generation_events": 332,
+  "model_loads": 1,
+  "elapsed_seconds": 247.5681071355939,
+  "timing_stages": {
+    "tokenizer_initialization": 0.37050675228238106,
+    "device_transfer": 12.439686927944422,
+    "backend_initialization_total": 150.71733797714114,
+    "file_verification": 127.8610358685255,
+    "model_loading_cpu": 9.605442840605974
+  },
+  "generation_seconds": 78.46788695827127,
+  "output_tokens": 702,
+  "response_types": [
+    {
+      "text": "A",
+      "tokens": [
+        32,
+        151645
+      ],
+      "count": 98
+    },
+    {
+      "text": "B",
+      "tokens": [
+        33,
+        151645
+      ],
+      "count": 96
+    },
+    {
+      "text": "C",
+      "tokens": [
+        34,
+        151645
+      ],
+      "count": 100
+    },
+    {
+      "text": "MISSING",
+      "tokens": [
+        79470,
+        1718,
+        151645
+      ],
+      "count": 38
+    }
+  ],
+  "plan_hash": "0bbad97bda79e9c249f7cea110b1f2fd96671470f190faae64181e3267f77379",
+  "code_contract": "254e70cbcf4dfcb9d37c922c9973a3de2c63b7e1fccc54bfd88eeeb513fa588a",
+  "revision": "7f78a3338225614535b90a0d520ef6c346282d13"
+}

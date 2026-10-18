@@ -1,0 +1,329 @@
+{
+  "runs": {
+    "counterfactual-001": {
+      "records_all": 160,
+      "eligible_records": 160,
+      "unique_tasks": 160,
+      "worlds": 20,
+      "bad_worlds": [],
+      "models": [
+        "gpt-4o-2024-08-06"
+      ],
+      "groups": {
+        "- / - / conflict / cot": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 16,
+          "wrong": 24,
+          "paired_n": 40,
+          "paired_correct": 16
+        },
+        "- / - / support / direct": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 40,
+          "paired_correct": 40
+        },
+        "- / - / support / cot": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 40,
+          "paired_correct": 40
+        },
+        "- / - / conflict / direct": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 40,
+          "paired_correct": 40
+        }
+      }
+    },
+    "explanation-001": {
+      "records_all": 384,
+      "eligible_records": 48,
+      "unique_tasks": 48,
+      "worlds": 24,
+      "bad_worlds": [],
+      "models": [
+        "gpt-4o-2024-08-06"
+      ],
+      "groups": {
+        "- / - / - / cot": {
+          "planned": 24,
+          "valid": 24,
+          "correct": 11,
+          "wrong": 13,
+          "paired_n": 24,
+          "paired_correct": 11
+        },
+        "- / - / - / direct": {
+          "planned": 24,
+          "valid": 24,
+          "correct": 24,
+          "wrong": 0,
+          "paired_n": 24,
+          "paired_correct": 24
+        }
+      }
+    },
+    "factorial-001": {
+      "records_all": 640,
+      "eligible_records": 640,
+      "unique_tasks": 640,
+      "worlds": 20,
+      "bad_worlds": [
+        "fx-list-018"
+      ],
+      "models": [
+        "gpt-4o-2024-08-06"
+      ],
+      "groups": {
+        "recorded / absent / conflict / direct": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 38,
+          "paired_correct": 38
+        },
+        "recorded / present / conflict / cot_neutral": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 32,
+          "wrong": 8,
+          "paired_n": 38,
+          "paired_correct": 31
+        },
+        "recorded / present / support / direct": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 38,
+          "paired_correct": 38
+        },
+        "original / absent / conflict / cot_neutral": {
+          "planned": 40,
+          "valid": 39,
+          "correct": 18,
+          "wrong": 21,
+          "paired_n": 38,
+          "paired_correct": 18
+        },
+        "original / absent / conflict / direct": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 38,
+          "paired_correct": 38
+        },
+        "original / present / support / cot_neutral": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 38,
+          "paired_correct": 38
+        },
+        "original / present / conflict / cot_neutral": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 20,
+          "wrong": 20,
+          "paired_n": 38,
+          "paired_correct": 19
+        },
+        "recorded / absent / support / cot_neutral": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 38,
+          "paired_correct": 38
+        },
+        "original / absent / support / direct": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 38,
+          "paired_correct": 38
+        },
+        "original / present / support / direct": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 38,
+          "paired_correct": 38
+        },
+        "recorded / present / support / cot_neutral": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 39,
+          "wrong": 1,
+          "paired_n": 38,
+          "paired_correct": 38
+        },
+        "recorded / absent / conflict / cot_neutral": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 38,
+          "paired_correct": 38
+        },
+        "original / absent / support / cot_neutral": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 38,
+          "paired_correct": 38
+        },
+        "original / present / conflict / direct": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 38,
+          "paired_correct": 38
+        },
+        "recorded / absent / support / direct": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 38,
+          "paired_correct": 38
+        },
+        "recorded / present / conflict / direct": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 38,
+          "paired_correct": 38
+        }
+      }
+    },
+    "wording-001": {
+      "records_all": 480,
+      "eligible_records": 480,
+      "unique_tasks": 480,
+      "worlds": 20,
+      "bad_worlds": [],
+      "models": [
+        "gpt-4o-2024-08-06"
+      ],
+      "groups": {
+        "original / - / support / direct": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 40,
+          "paired_correct": 40
+        },
+        "original / - / support / cot_neutral": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 39,
+          "wrong": 1,
+          "paired_n": 40,
+          "paired_correct": 39
+        },
+        "recorded / - / conflict / cot_classification": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 37,
+          "wrong": 3,
+          "paired_n": 40,
+          "paired_correct": 37
+        },
+        "original / - / conflict / cot_neutral": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 18,
+          "wrong": 22,
+          "paired_n": 40,
+          "paired_correct": 18
+        },
+        "recorded / - / conflict / cot_neutral": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 40,
+          "paired_correct": 40
+        },
+        "original / - / conflict / direct": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 40,
+          "paired_correct": 40
+        },
+        "original / - / support / cot_classification": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 38,
+          "wrong": 2,
+          "paired_n": 40,
+          "paired_correct": 38
+        },
+        "recorded / - / support / direct": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 40,
+          "paired_correct": 40
+        },
+        "original / - / conflict / cot_classification": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 16,
+          "wrong": 24,
+          "paired_n": 40,
+          "paired_correct": 16
+        },
+        "recorded / - / support / cot_classification": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 40,
+          "paired_correct": 40
+        },
+        "recorded / - / conflict / direct": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 40,
+          "paired_correct": 40
+        },
+        "recorded / - / support / cot_neutral": {
+          "planned": 40,
+          "valid": 40,
+          "correct": 40,
+          "wrong": 0,
+          "paired_n": 40,
+          "paired_correct": 40
+        }
+      }
+    }
+  },
+  "prompt_mismatches": [],
+  "answer_mismatches": [],
+  "target_mismatches": []
+}

@@ -1,0 +1,92 @@
+{
+  "model": "gpt-4o-2024-08-06",
+  "n": 480,
+  "unique_tasks": 480,
+  "all_source_truth_and_final_lines_match_saved_scoring": true,
+  "requests_containing_missing": 0,
+  "prompt_suffixes": {
+    "original/direct": "Which class, A or B, does this vehicle belong to?\nChoose the more likely class even if uncertain.\nReply with only A or B.",
+    "original/cot_neutral": "Which class, A or B, does this vehicle belong to?\nChoose the more likely class even if uncertain.\nThink step by step, then put A or B alone on the final line.",
+    "recorded/cot_classification": "Which class, A or B, is recorded for this vehicle in the table above?\nWork through the classification, then put A or B alone on the final line.",
+    "recorded/cot_neutral": "Which class, A or B, is recorded for this vehicle in the table above?\nThink step by step, then put A or B alone on the final line.",
+    "original/cot_classification": "Which class, A or B, does this vehicle belong to?\nChoose the more likely class even if uncertain.\nWork through the classification, then put A or B alone on the final line.",
+    "recorded/direct": "Which class, A or B, is recorded for this vehicle in the table above?\nReply with only A or B."
+  },
+  "counts": {
+    "original/direct/support": {
+      "correct": 40,
+      "n": 40
+    },
+    "original/cot_neutral/support": {
+      "correct": 39,
+      "n": 40
+    },
+    "recorded/cot_classification/conflict": {
+      "correct": 37,
+      "n": 40
+    },
+    "original/cot_neutral/conflict": {
+      "correct": 18,
+      "n": 40
+    },
+    "recorded/cot_neutral/conflict": {
+      "correct": 40,
+      "n": 40
+    },
+    "original/direct/conflict": {
+      "correct": 40,
+      "n": 40
+    },
+    "original/cot_classification/support": {
+      "correct": 38,
+      "n": 40
+    },
+    "recorded/direct/support": {
+      "correct": 40,
+      "n": 40
+    },
+    "original/cot_classification/conflict": {
+      "correct": 16,
+      "n": 40
+    },
+    "recorded/cot_classification/support": {
+      "correct": 40,
+      "n": 40
+    },
+    "recorded/direct/conflict": {
+      "correct": 40,
+      "n": 40
+    },
+    "recorded/cot_neutral/support": {
+      "correct": 40,
+      "n": 40
+    }
+  },
+  "manually_confirmed_unknown_target_examples": [
+    {
+      "attempt": 31,
+      "task_id": "wd-list-001/3/support/original/cot_classification",
+      "target": "WWVNTV",
+      "source_row": "| WWVNTV | Operates on polar ice | Manual | Cloth | Four | A |",
+      "answer": "B",
+      "response": "To determine the class of the vehicle with license plate WWVNTV, we need to analyze the patterns in the given records.\n\n1. **Description**: The vehicle \"Operates on polar ice.\" Vehicles designed for cold or icy conditions (e.g., \"Designed for frozen terrain,\" \"Used at an Arctic station,\" \"Equipped with snow tracks\") are typically classified as A. However, \"Built for subzero temperatures\" is classified as B, so this alone is not definitive.\n\n2. **Transmission**: The vehicle has a manual transmission. In the records:\n   - Vehicles with manual transmission: WCLZNL (B), W9KYSD (B), WWVNTV (unknown), WWVNTV (A).\n   - Vehicles with automatic transmission: WNT2ZE (A), WNQLRK (B), WWJV32 (B), W3H6ZZ (A), WKG7BD (A), WBYDAP (B), WQ64B7 (A).\n\n   It seems that manual transmission is more common in class B, but not exclusively.\n\n3. **Seat cover**: The vehicle has cloth seat covers. In the records:\n   - Vehicles with cloth seat covers: WNQLRK (B), WWJV32 (B), WKG7BD (A), WBYDAP (B), WQ64B7 (A), WWVNTV (unknown).\n   - Vehicles with vinyl seat covers: WNT2ZE (A), WCLZNL (B), W3H6ZZ (A), W9KYSD (B).\n\n   Cloth seat covers appear in both classes, but more frequently in class B.\n\n4. **Doors**: The vehicle has four doors. In the records:\n   - Vehicles with four doors: WNT2ZE (A), WCLZNL (B), WWJV32 (B), W9KYSD (B), WWVNTV (unknown).\n   - Vehicles with two doors: WNQLRK (B), W3H6ZZ (A), WKG7BD (A), WBYDAP (B), WQ64B7 (A).\n\n   Four-door vehicles are more common in class B.\n\nConsidering all the factors:\n- The description suggests class A, but there is an exception.\n- Manual transmission leans towards class B.\n- Cloth seat covers are more common in class B.\n- Four doors are more common in class B.\n\nBased on the analysis, the vehicle with license plate WWVNTV is more likely to belong to class B.\n\nB"
+    },
+    {
+      "attempt": 266,
+      "task_id": "wd-list-011/1/support/original/cot_neutral",
+      "target": "WV3MUU",
+      "source_row": "| WV3MUU | Used at an Arctic station | Manual | Vinyl | Four | A |",
+      "answer": "B",
+      "response": "To determine the class of the vehicle with license plate WV3MUU, we need to analyze the patterns in the given records.\n\n1. **Description**: The vehicle is \"Used at an Arctic station.\" We have two vehicles with similar descriptions:\n   - WV3MUU: \"Used at an Arctic station\" - Class unknown\n   - WYUGSK: \"Built for subzero temperatures\" - Class A\n   - WE6UAM: \"Designed for frozen terrain\" - Class B\n   - W8JA4F: \"Operates on polar ice\" - Class A\n\n   Vehicles associated with cold or Arctic conditions are found in both classes A and B.\n\n2. **Transmission**: The vehicle has a \"Manual\" transmission. Let's see the pattern:\n   - W3NVNA: Manual - Class B\n   - WG8DV9: Manual - Class B\n   - WV3MUU: Manual - Class unknown\n   - WRDZC8: Manual - Class A\n\n   Manual transmission is found in both classes, but more frequently in Class B.\n\n3. **Seat cover**: The vehicle has \"Vinyl\" seat covers. Let's check the pattern:\n   - W3NVNA: Vinyl - Class B\n   - WG8DV9: Vinyl - Class B\n   - WE6UAM: Vinyl - Class B\n   - WV3MUU: Vinyl - Class unknown\n   - W8JA4F: Vinyl - Class A\n\n   Vinyl seat covers are more common in Class B.\n\n4. **Doors**: The vehicle has \"Four\" doors. Let's see the pattern:\n   - W3NVNA: Four doors - Class B\n   - WG8DV9: Four doors - Class B\n   - WV3MUU: Four doors - Class unknown\n   - WYUGSK: Four doors - Class A\n   - WQ2FUL: Four doors - Class B\n\n   Four doors are found in both classes, but more frequently in Class B.\n\nBased on the analysis:\n- The description is associated with both classes.\n- Manual transmission is slightly more common in Class B.\n- Vinyl seat covers are more common in Class B.\n- Four doors are more common in Class B.\n\nConsidering all these factors, the vehicle WV3MUU is more likely to belong to Class B.\n\nB"
+    },
+    {
+      "attempt": 441,
+      "task_id": "wd-list-018/1/conflict/original/cot_classification",
+      "target": "WTP9E2",
+      "source_row": "| WTP9E2 | Operates on polar ice | Automatic | Cloth | Two | B |",
+      "answer": "A",
+      "response": "To determine the class of the vehicle with license plate WTP9E2, we need to analyze the patterns in the given records.\n\nLet's examine the characteristics of vehicles in each class:\n\n**Class A:**\n- WBVD5X: Manual, Cloth, Four doors\n- W6ACW6: Automatic, Cloth, Two doors\n- WRZTCS: Manual, Cloth, Two doors\n- WCJ4G4: Automatic, Cloth, Four doors\n- WV3S7S: Manual, Vinyl, Two doors\n\n**Class B:**\n- W36JAY: Manual, Cloth, Two doors\n- W7T8DY: Automatic, Vinyl, Four doors\n- WL54X9: Manual, Cloth, Two doors\n- WTP9E2: Automatic, Cloth, Two doors (unknown class)\n- WEWN2P: Manual, Vinyl, Four doors\n\nNow, let's identify patterns:\n\n1. **Transmission:**\n   - Class A: 2 Automatic, 3 Manual\n   - Class B: 1 Automatic, 3 Manual\n\n2. **Seat Cover:**\n   - Class A: 4 Cloth, 1 Vinyl\n   - Class B: 2 Cloth, 2 Vinyl\n\n3. **Doors:**\n   - Class A: 2 Two doors, 2 Four doors\n   - Class B: 2 Two doors, 2 Four doors\n\n4. **Description:**\n   - Class A vehicles are often associated with cold or icy conditions (e.g., snow tracks, subzero temperatures, frozen terrain, Arctic station).\n   - Class B vehicles are associated with warmer or tropical conditions (e.g., equatorial station, tropical forests, desert heat).\n\nThe vehicle WTP9E2 has the following characteristics:\n- Automatic transmission\n- Cloth seat cover\n- Two doors\n- Operates on polar ice\n\nThe description \"Operates on polar ice\" suggests a cold environment, which aligns more closely with Class A vehicles, as they are often associated with cold or icy conditions.\n\nConsidering the description and the characteristics, the vehicle WTP9E2 is more likely to belong to Class A.\n\nA"
+    }
+  ],
+  "interpretation": "Explicit conditional MISSING instruction not necessary for these GPT-4o classification errors or target-unknown claims. Not an isolated ablation relative to Qwen Study2: different model, AB task, and original wording has uncertainty instruction. Recorded wording changes question and removes uncertainty clause. Unknown-example count is a verified lower bound from pattern-assisted inspection, not an exhaustive blinded semantic annotation."
+}
