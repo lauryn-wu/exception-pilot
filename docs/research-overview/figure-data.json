@@ -1,0 +1,81 @@
+{
+  "kind": "documentation_figure_from_preserved_aggregate_results",
+  "archive_revision": "7c7a72c354d384654e5bc3b58d2c440c87dfce27",
+  "sources": [
+    {
+      "path": "results/reports/counterfactual-001/summary.json",
+      "sha256": "e121c9e093871eb56cdbe5cfcc4897238824e7a08e302dd6df6707f0fc8fe64f"
+    },
+    {
+      "path": "results/reports/study2-source-user-main-v1/report.json",
+      "sha256": "fe3bbe2424366beb848e94e6b3c3aa06b91292291d1c2a982e67ecacbb92b732"
+    }
+  ],
+  "matplotlib_version": "3.10.7",
+  "gpt": {
+    "model": "gpt-4o-2024-08-06",
+    "correct": {
+      "direct": [
+        40,
+        40
+      ],
+      "cot": [
+        40,
+        16
+      ]
+    },
+    "denominator_per_bar": 40,
+    "worlds": 20,
+    "extra_conflict_penalty": {
+      "mean": 0.6,
+      "paired_bootstrap_95_ci": [
+        0.475,
+        0.725
+      ],
+      "positive_lists": 18,
+      "zero_lists": 2,
+      "negative_lists": 0
+    }
+  },
+  "qwen": {
+    "model": "Qwen/Qwen3-32B",
+    "saved_tokens": [
+      0,
+      256,
+      512
+    ],
+    "correct": [
+      107,
+      96,
+      80
+    ],
+    "matched_denominator": 108,
+    "worlds": 56,
+    "source_queries_in_full_collection": 332,
+    "paired_0_to_512": {
+      "estimate": -0.25,
+      "observations": 108,
+      "observed_worlds": 56,
+      "planned_worlds": 56,
+      "interval_95": [
+        -0.3333333333333333,
+        -0.16822429906542055
+      ],
+      "bootstrap_nonempty_draws": 2000,
+      "unit": "world",
+      "seed": 2026101601,
+      "replicates": 2000,
+      "method": "Ratio of summed outcomes to available observations in resampled world blocks; common draws across cues/checkpoints.",
+      "degenerate_interval": false,
+      "caveat": null
+    },
+    "cohort_note": "Same 108 trajectories at all points; four pre-existing k512 exclusions retained."
+  },
+  "limits": [
+    "Separate experimental populations and interfaces; do not pool or rank models.",
+    "Counts reconstructed from saved aggregate transition tables; no new statistical analysis.",
+    "No pointwise confidence intervals plotted. Saved paired intervals are retained above.",
+    "Qwen source questions use a new user turn with the original table still in context.",
+    "Neither panel establishes internal erasure or a causal role for a specific reasoning statement."
+  ]
+}

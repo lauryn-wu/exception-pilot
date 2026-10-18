@@ -1,99 +1,65 @@
-# Reasoning prompts and exception records
+# Reasoning and evidence use in language models
 
-**Results:** [complete index](results/README.md) · [branch/experiment status](results/BRANCH_STATUS.md) · [archive verification](results/VERIFY.md). Located local exports and branch audit records were consolidated through 2026-10-18, including completed, stopped and unstarted runs; the index identifies incomplete exports and experiments without live results. Experimental code branches remain separate. The findings below summarize earlier GPT-4o comparisons; later GPT-4o, Mistral and Qwen results are in the index.
+**When does generated reasoning help a language model use an explicit record, and when does it lead the model away from that record?**
 
-These experiments ask GPT-4o to answer questions about synthetic vehicle records.
-Under the original classification wording, asking for reasoning made the model
-more likely to follow the surrounding labels even when they conflicted with the
-target's recorded class. That result depended on the question: explicitly asking
-for the recorded class removed the penalty under neutral reasoning in a follow-up.
+This project studies that question with synthetic tables in which a target's recorded class can conflict with a pattern suggested by other rows. The recorded answer is known, and paired table changes separate the target evidence from the surrounding pattern. The aim is to identify conditions under which models follow supplied exceptions, misreport the source, or favor an inferred alternative.
 
-The studies below used `gpt-4o-2024-08-06`. They build on
-[Mind Your Step (ICML 2025)](https://proceedings.mlr.press/v267/liu25t.html), which
-showed that chain-of-thought prompting can reduce performance on some tasks.
-Here, the question is how the response instruction and question wording affect
-the model's use of surrounding records. Keeping the target record fixed makes
-it possible to change the background without changing the answer.
+The motivation is reliability when a supplied fact should take precedence over a plausible generalization. These synthetic tasks do not establish real-world performance. The project builds on [*Mind Your Step (by Step)* (Liu et al., ICML 2025)](https://proceedings.mlr.press/v267/liu25t.html), which investigated tasks on which chain-of-thought prompting can reduce performance.
 
-## Changing the surrounding labels
+**Current status:** preliminary behavioral evidence from completed GPT-4o, Mistral and Qwen experiments. Effects depend on the prompt and answer interface. Their internal mechanism and generalization to native thinking remain open.
 
-The first diagnostic used 20 independent lists and 160 requests. Each list had two backgrounds: one whose majority pattern supported the target labels, and one whose pattern conflicted with them. Target records, attributes, order, class balance, and the overall exception rate stayed fixed.
+[Results and raw data](results/README.md) · [Experiment status](results/BRANCH_STATUS.md) · [Independent analyses](results/analyses/2026-10-18/README.md) · [Verification](results/VERIFY.md)
 
-| Response instruction | Supporting background | Conflicting background |
-| --- | ---: | ---: |
-| Direct answer | 40/40 correct | 40/40 correct |
-| Visible reasoning before the answer | 40/40 correct | 16/40 correct |
+## Preliminary findings
 
-Reasoning added a 60-percentage-point penalty from the conflicting background
-(descriptive 95% bootstrap interval: [47.5, 72.5] points). Eighteen lists had a
-positive interaction and two had zero. The bootstrap resamples whole lists.
-See the [report](results/reports/counterfactual-001/summary.md) and
-[protocol](COUNTERFACTUAL_PROTOCOL.md).
+![Two separate experiments: GPT-4o visible-reasoning accuracy falls from 40/40 to 16/40 when surrounding labels conflict with the record, while direct answers remain 40/40. Qwen source-transcription accuracy on 108 matched trajectories is 107/108, 96/108 and 80/108 after 0, 256 and 512 saved reasoning tokens.](docs/research-overview/evidence-summary.png)
 
-## Changing the question
+*These panels summarize different tasks and interfaces, not a pooled model comparison. Counts are shown directly; uncertainty for the paired contrasts is reported below. [Figure data, provenance and reproduction](docs/research-overview/README.md) · [Vector figure](docs/research-overview/evidence-summary.svg).*
 
-A 480-call follow-up used 20 fresh lists. It compared the original question with a version explicitly asking for the recorded class, and included a neutral "Think step by step" instruction.
+### 1. Surrounding patterns can change the effect of asking for reasoning
 
-| Question / instruction | Supporting background | Conflicting background |
-| --- | ---: | ---: |
-| Original question, direct | 40/40 | 40/40 |
-| Original question, neutral reasoning | 39/40 | 18/40 |
-| Recorded-class question, direct | 40/40 | 40/40 |
-| Recorded-class question, neutral reasoning | 40/40 | 40/40 |
+In a GPT-4o diagnostic with **20 independent worlds and 160 responses**, direct answers were correct on **40/40** cases under both supporting and conflicting backgrounds. Visible-reasoning answers were **40/40** correct under support and **16/40** under conflict. The target records were unchanged. The extra conflict penalty under reasoning was **60 percentage points**, with a descriptive world-bootstrap 95% interval of **47.5–72.5 points**. [Report](results/reports/counterfactual-001/summary.md).
 
-The extra conflict penalty was 52.5 points under the original question and 0
-under the recorded-class wording. The result failed the planned robustness
-check, producing the decision `stop_explicit_record_boundary`.
+**A fresh-data wording follow-up failed the broader robustness criterion.** Across 20 new worlds and 480 responses, neutral reasoning produced a 52.5-point extra conflict penalty under the original question, but zero observed penalty when explicitly asked for the recorded class. That wording also removed an uncertainty clause, so it did not isolate a single phrasing change. The supported finding is conditional on the tested instructions. [Report](results/reports/wording-001/summary.md).
 
-The recorded-class variant also removed an uncertainty sentence, so this
-comparison does not isolate the question text. A later factorial study
-separated these changes but retained one invalid response; its status is in the
-[results index](results/README.md). The
-[wording report](results/reports/wording-001/summary.md) includes all six conditions and
-paired comparisons.
+### 2. Other models show related failures, with important boundaries
 
-## Copying the class or a marker
+A **288-response Mistral query-form experiment across 24 worlds** found direct-answer accuracy of **48/48** for both a descriptive-profile query and a lookup-key query. Visible-reasoning accuracy was **20/48** and **33/48**, respectively. However, filler-control compliance was incomplete, and the prespecified decision was **inconclusive**. This supports further investigation of interface dependence, not a confirmed account of why the errors occur. [Report](results/reports/query-form-mistral-001/summary.md).
 
-In a separate 24-world experiment, final answers on 48 visible-record cases were
-correct in 25/48 cases after neutral reasoning, 48/48 after copying the target
-class, and 29/48 after copying a marker from the same row. Both copying tasks
-succeeded in all 48 cases, but copying the marker often led to a wrong final
-answer.
+### 3. Longer saved reasoning histories can impair explicit source reporting
 
-A subsequent diagnostic attempted to continue responses on selected cases. Only
-7/10 unchanged replays matched their original answers, below the required 8/10,
-so collection stopped before the intervention. The
-[copying experiment](results/archives/explanation-001.zip) and
-[stopped replay run](results/archives/missingness-001.zip) are both archived.
+In the completed **Qwen3-32B source-transcription study**, a new user turn asked for the target table cell after 0, 256 or 512 tokens of the model's saved visible reasoning. The original table remained in context. All **332 planned source queries** returned valid, completed answers.
 
-## Interpretation
+On the **same 108 trajectories** eligible at all three checkpoints, correct responses fell from **107 → 96 → 80**. The paired 0-to-512 change was **−25 percentage points** (descriptive world-bootstrap 95% interval: **−33.3 to −16.8**). All 27 newly incorrect responses said `MISSING`, although the cells contained a class. Four other trajectories were ineligible at 512 tokens and remain excluded under the original rules. [Execution report](results/reports/study2-source-user-main-v1/report.md) · [Independent audit](results/analyses/2026-10-18/Study2_Source_User_Main_Audit.md).
 
-The model sometimes answered from the background pattern despite having the
-target record, but explicit wording changed that behavior. The result is limited
-to one model snapshot and closely related synthetic tasks. The wording follow-up
-used fresh cases, but the studies were designed in sequence after inspecting
-earlier results.
+This is an interface-specific behavioral result. Among those 27 false `MISSING` reports, 21 still favored the correct class under an existing restricted A/B/C `ANSWER:` readout. That readout and the new transcription question are different measurements. Neither establishes whether the fact was continuously retained internally. These Qwen runs used greedy decoding with native thinking disabled; visible reasoning was requested in the response.
 
-Changing background labels also changes local consensus and can introduce
-correlations with other attributes. These comparisons, and the explanations the
-model produced, do not establish an internal mechanism or show that reasoning
-generally harms retrieval. Parser changes, invalid responses, and stopped runs
-are documented in the [results index](results/README.md). The
-[study guide](STUDY_GUIDE.md) retains the longer development history and
-historical instructions for later diagnostics. Current export coverage is listed
-in the results index.
+## What remains unresolved
 
-## Inspect or reanalyze the archived results
+The experiments do **not** establish internal forgetting, deliberate evidence override, or a general disadvantage of reasoning. Longer prefixes also change content, source-to-query distance and where the assistant turn ends. Correct mentions, contradictory statements and final answers are distinct observations; exploratory semantic annotations are not ground truth about hidden state.
 
-Start with the [results index](results/README.md). Per-run reports are available as Markdown and JSON without downloading a ZIP; the archives contain the full requests and responses. Failed checks and duplicate-plan executions are explicitly labeled.
+The studies developed sequentially after inspecting earlier results. Worlds, trajectories and repeated queries are not interchangeable independent samples. Some prompts include explicit instructions about missing values, so false `MISSING` reports cannot be generalized beyond that interface without further controls. Failures, invalid responses, truncation, duplicate exports and incomplete collections remain visible in the [full index](results/README.md).
 
-Python 3.10+ and the standard library are sufficient. From the repository root, these commands reanalyze a working copy of the wording run without model API calls:
+Technical validation is also separate from scientific success. The earlier Qwen v3 replay check failed, the v4 pilot remains incomplete at **8/48 originals**, and two source-report interfaces failed calibration before the successful new-user-turn interface was tested. Those failed runs have not been relabeled as successful replications.
+
+## What additional support would enable
+
+The next phase would fund bounded GPU experiments, independent annotation and reproducible analysis:
+
+- **Test native thinking under matched conditions.** The current Qwen draft compares thinking on/off on new controlled worlds with the same sampling settings. Its 64-response development pilot precedes 896 main responses; the main token budget remains unfrozen until truncation and repetition are reviewed. Offline shortcut checks are complete, but design review and live validation remain pending. Historical greedy responses are not controls for this comparison. [Draft and limitations](results/branch-artifacts/2026-10-18/context/STUDY2_NATIVE_THINKING_DRAFT_PROTOCOL.md).
+- **Test the contribution of specific textual claims.** Independently review candidate evidence-erasure and explicit-override statements before freezing any intervention protocol. Future edited-continuation studies need an unedited comparator and controls for added answer information. Existing intervention proposals remain unexecuted; the whole-history crossing proposal is on hold. [Plans and status](results/plans/README.md).
+- **Strengthen independent evaluation.** Fund reviewed annotations and prospective analyses with frozen populations, prompts, scoring and stopping rules. Deliver auditable datasets that retain null and failed outcomes.
+
+These are proposed next steps, not completed findings or a commitment to a particular outcome. No new inference is required to inspect the existing evidence.
+
+## Inspect the evidence
+
+The [results index](results/README.md) links reports, raw exports and provenance; [branch status](results/BRANCH_STATUS.md) identifies failed, partial and unstarted work. Experimental code remains on its source branches. This overview reflects artifacts inspected through **18 October 2026**; unexported remote activity is not covered.
+
+Verify the preserved archives offline with Python 3.10+:
 
 ```bash
-python3 -m zipfile -e results/archives/wording-001.zip runs/reproduce-wording
-python3 -m exception_wording analyze \
-  --output runs/reproduce-wording/runs/wording-001
+python3 results/verify_results.py
 ```
 
-Use a fresh extraction directory. Protocols and live-run commands are in the
-[study guide](STUDY_GUIDE.md).
+For optional reconstruction of split archives, see [verification instructions](results/VERIFY.md). The [historical study guide](STUDY_GUIDE.md) preserves earlier protocols and run instructions; its live commands may incur charges and are not a recommended execution queue.
