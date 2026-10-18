@@ -51,7 +51,7 @@ Additional support would pay for GPU time and independent annotation for this wo
 
 ## Data and reproduction
 
-The studies were planned in sequence, with earlier results available when later tests were designed. Several responses can come from variants of the same synthetic world, so they should not be counted as independent samples. The text annotations still need independent validation before they can support claims of deliberate overriding. These small studies also cannot settle whether reasoning generally helps or hurts accuracy.
+Earlier results shaped the follow-up studies. Uncertainty estimates group responses by synthetic world, since each world was used more than once. The text annotations still need independent validation before they can support claims of deliberate overriding. These small studies also cannot settle whether reasoning generally helps or hurts accuracy.
 
 The archive includes the failed Qwen v3 replay check, the unfinished v4 pilot (8/48 originals), and two source-report interfaces that failed calibration before the new-user-turn test. The [results index](results/README.md) links these alongside the completed runs, including invalid and truncated responses. It also identifies exports that overlap. [Branch status](results/BRANCH_STATUS.md) lists unfinished work and the code branches needed to reproduce each experiment.
 
