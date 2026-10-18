@@ -32,6 +32,25 @@ The estimates were copied from the saved reports. Resampling whole worlds keeps 
 | A — GPT-4o classification | [Counterfactual summary](../../results/reports/counterfactual-001/summary.json), `accuracy_tables` | 20 worlds, 40 responses per condition. Direct: 40/40 under support and conflict; visible reasoning: 40/40 under support and 16/40 under conflict. |
 | B — Qwen source transcription | [Source-user main report](../../results/reports/study2-source-user-main-v1/report.json), `paired` | The same 108 trajectories eligible at 0, 256 and 512 saved tokens, across 56 worlds. Correct counts: 107, 96, 80. Four original k512 exclusions remain excluded from this panel. |
 
+### Correct-answer counts
+
+GPT-4o:
+
+| Correct answers | Supporting background | Conflicting background |
+|---|---:|---:|
+| Answer only | 40/40 | 40/40 |
+| Reasoning before the answer | 40/40 | 16/40 |
+
+Qwen, using the same 108 eligible histories at every checkpoint:
+
+| Saved reasoning tokens | Correct source reports, same 108 histories |
+|---|---:|
+| 0 | 107/108 |
+| 256 | 96/108 |
+| 512 | 80/108 |
+
+All 332 source queries returned completed, validly formatted answers. The four histories ineligible at 512 tokens remain excluded from this matched comparison under the original rules.
+
 For Qwen, the renderer checks that the `0->512` and `256->512` transition tables contain the same trajectory IDs, then reconstructs the counts for that cohort. This is why the first two plotted counts differ from the full-sample counts of 111/112 and 100/112. All 332 queries remain in the original report.
 
 The axes start at zero, and labels give correct/eligible counts. The table above gives the saved world-cluster bootstrap intervals for paired changes; the figure does not show pointwise intervals. In the Qwen study, the original table remains available when the new user turn asks for its contents. The plotted decline does not isolate the effect of a particular reasoning statement.
