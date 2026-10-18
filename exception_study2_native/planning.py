@@ -52,6 +52,15 @@ def read_design(root):
     return m
 
 
+def shortcut_audit(design_dir,output):
+    from .shortcuts import audit_shortcuts
+    out=separate(output,design_dir)
+    with run_lock(out):
+        fresh(out);m=read_design(design_dir)
+        return freeze(out/'shortcut-audit.json',dict(audit_shortcuts(m['tables']),
+            design_hash=m['artifact_hash'],code_contract=contract(),code_revision=revision()))
+
+
 def requests(manifest,tok,cohort,budget):
     if cohort not in ('pilot','main') or type(budget) is not int or budget<1:
         raise ValueError('Explicit cohort and positive integer budget required')

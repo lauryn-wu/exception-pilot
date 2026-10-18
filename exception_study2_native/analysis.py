@@ -4,6 +4,7 @@ from exception_pilot.storage import write_json
 from exception_study2_source_report_v2.reporting import WorldBootstrap
 from . import STOP
 from .diagnostics import cases as case_diagnostics, summarize
+from .recovery import summary as recovery_summary
 
 
 def boot(b,values):
@@ -13,7 +14,7 @@ def boot(b,values):
     return x
 
 
-def report(c,current,invocation):
+def report(c,current,invocation,write=True):
     cells=[r['cell'] for r in c.plan['requests']];cases=case_diagnostics(c,current)
     parsed={x['cell']['id']:x['score'] for x in cases if x['score'] is not None}
     conditions={};pairs={};gaps={}
@@ -60,8 +61,8 @@ def report(c,current,invocation):
     r=dict(protocol=c.plan['protocol'],plan_hash=c.plan['artifact_hash'],design=c.plan['design']['design'],
         cohort=c.plan['cohort'],budget=c.plan['budget'],budget_policy=c.plan['budget_policy'],
         main_budget_status='AWAITING_PILOT_REVIEW' if c.plan['cohort']=='pilot' else 'FROZEN_AFTER_PILOT_REVIEW',
-        length_repetition=summarize(cases),counts=summary,this_invocation=invocation,conditions=conditions,paired_thinking=pairs,conflict_penalty_change=gaps,cases=cases,
+        length_repetition=summarize(cases),journal_recovery=recovery_summary(c),counts=summary,this_invocation=invocation,conditions=conditions,paired_thinking=pairs,conflict_penalty_change=gaps,cases=cases,
         denominator='All returned outputs, including malformed/truncated, are in accuracy denominators. Failed/interrupted/pending attempts are unavailable, not incorrect. Paired contrasts use common returned cells.',
         interpretation='Draft full-factorial lookup control reported separately. Cluster unit is world; variants/conditions are not independent samples. No absolute accuracy threshold proves harm. Historical visible-explanation results are never reused.',next_stage=STOP)
-    write_json(c.out/'analysis.json',r)
+    if write:write_json(c.out/'analysis.json',r)
     return r

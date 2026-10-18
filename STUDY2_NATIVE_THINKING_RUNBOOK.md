@@ -29,22 +29,30 @@ If those assets are absent, stop and arrange setup separately; these commands do
 export HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 TOKENIZERS_PARALLELISM=false PYTHONDONTWRITEBYTECODE=1
 export STUDY2_MODEL_DIR=/workspace/models/Qwen3-32B/9216db5781bf21249d130ec9da846c4624c16137
 export V5_PLAN=/workspace/study2-v5-replication-v1/originals/plan-v5.json
-export NATIVE_DESIGN=/workspace/study2-native-controlled-design-budget-review-v1
-export NATIVE_RUN=/workspace/study2-native-controlled-pilot-budget-review-v1
-export NATIVE_MAIN=/workspace/study2-native-controlled-main-budget-review-v1
+export NATIVE_DESIGN=/workspace/study2-native-controlled-design-v2
+export NATIVE_RUN=/workspace/study2-native-controlled-pilot-v2
+export NATIVE_MAIN=/workspace/study2-native-controlled-main-v2
 ```
 
-## Offline generator audit and draft manifest
+## Offline revised draft and shortcut audit
 
 ```bash
-python -m exception_study2_native audit --v5-plan "$V5_PLAN" --output /workspace/study2-native-generator-audit-v1
 python -m exception_study2_native design --kind controlled-draft --output "$NATIVE_DESIGN"
+python -m exception_study2_native audit-shortcuts --design-dir "$NATIVE_DESIGN" --output /workspace/study2-native-shortcut-audit-v2
 ```
 
-Review `generator-audit.json`, `design.json`, `constraints.json` and `sample-tables.md`.
-The controlled draft has 960 responses (64 pilot, 896 main), with 13-row final tables and
-exact class-independent distractor profiles. This is a proposed scientific change, not historical v5.
+Review `shortcut-audit.json`, `design.json`, `constraints.json` and `sample-tables.md`.
+The controlled v2 draft keeps 960 responses (64 pilot, 896 main), with 16-row final tables and
+ten count/feature blocks. The old 13-row draft is rejected because of its majority/parity shortcut.
+Distractor independence now holds only after pooling complete label-permutation blocks; it is not
+a per-table property. Review coverage, ties, histogram-only prediction and residual profile signal.
+The historical generator audit is already preserved in the repository; it need not be rerun.
+This is a proposed scientific revision, not an amendment to historical v5.
 The manifest freezes every cell, full prompt, expected class and deterministic schedule/seed.
+Use fresh v2 output paths. V1 plans/results and prior audit packages remain immutable and cannot
+be resumed as v2 by changing their hashes or paths. This patch does not migrate a historical run;
+its recovery interface applies to the new native namespace. No live run is launched by preparing
+a design or by passing the finite shortcut audit.
 
 ## Offline tokenizer preparation and inspection
 
@@ -100,6 +108,34 @@ Then use the same bounded live command. Do not remove journals or retry ordinary
 For an externally killed invocation, the started-only operation remains ambiguous and requires
 this explicit authorization; partial generated tokens not durably returned cannot be recovered.
 
+## Interrupted-write inspection and explicit recovery
+
+`inspect` is read-only: it prints the current state and recognized `journal_recovery` evidence
+without creating/updating `analysis.json`, a lock, or canonical journals. `analyze` writes the
+derived report under the run lock. A valid canonical completed return stays cached even if a
+recognized atomic-write temporary file remains beside it; completed resume loads no model.
+
+For known request/start/return-write debris or an empty known operation folder, first inspect:
+
+```bash
+python -m exception_study2_native inspect --output "$NATIVE_RUN"
+```
+
+Then explicitly quarantine recognized debris, preserving all bytes and canonical files:
+
+```bash
+python -m exception_study2_native recover --output "$NATIVE_RUN" --reason 'Reviewed interrupted atomic write; preserve its evidence without promoting temporary results'
+python -m exception_study2_native inspect --output "$NATIVE_RUN"
+```
+
+This makes no model calls. If interrupted during quarantine, rerun `recover`; it resumes the frozen
+move manifest. Temporary return JSON is never promoted. Ambiguous request/start/return attempts
+remain blocked after recovery and require the explicit `retry` authorization shown above before
+the normal bounded live command can execute a new attempt. Other never-started work can resume;
+returned wrong/verbose/truncated answers are never resampled. Preserve `journal-recovery/` with
+the full run. Stop on unrelated files, malformed canonical records, identity mismatches or unknown
+orphan folders; those need forensic review, not renaming/deleting files to bypass the validator.
+
 ## Stop: review pilot lengths and repetition before freezing main
 
 The main cohort **cannot run from the pilot directory**. Do not select its budget until all pilot
@@ -145,9 +181,9 @@ collected. **STOP_REVIEW_NATIVE_THINKING_DRAFT.**
 ## Optional historical-table replication (a separate experiment/output)
 
 ```bash
-python -m exception_study2_native design --kind historical-v5 --v5-plan "$V5_PLAN" --output /workspace/study2-native-historical-design-v1
-python -m exception_study2_native prepare --design-dir /workspace/study2-native-historical-design-v1 --tokenizer-dir "$STUDY2_MODEL_DIR" --model-dir "$STUDY2_MODEL_DIR" --output /workspace/study2-native-historical-run-v1
-python -m exception_study2_native inspect --output /workspace/study2-native-historical-run-v1
+python -m exception_study2_native design --kind historical-v5 --v5-plan "$V5_PLAN" --output /workspace/study2-native-historical-design-v2
+python -m exception_study2_native prepare --design-dir /workspace/study2-native-historical-design-v2 --tokenizer-dir "$STUDY2_MODEL_DIR" --model-dir "$STUDY2_MODEL_DIR" --output /workspace/study2-native-historical-run-v2
+python -m exception_study2_native inspect --output /workspace/study2-native-historical-run-v2
 ```
 
 This has 480 fresh cells (32 pilot, 448 main), all conflict. Preparation freezes only its 32

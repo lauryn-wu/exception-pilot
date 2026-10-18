@@ -3,6 +3,7 @@ from collections import Counter
 from statistics import mean, median
 from math import ceil
 from .interface import parse_result
+from .recovery import state
 
 REPETITION_N = 16
 DEFINITION = ('Repeated-token-window diagnostics use generated tokens excluding special tokens: '
@@ -30,7 +31,7 @@ def cases(c,current):
     result=[]
     for r in c.plan['requests']:
         entry=current[r['cell']['id']];op=entry['operation']
-        status='never_started' if op is None or op['status']=='planned' else 'ambiguous' if op['status']=='started' else op['status']
+        status=state(op)
         returned=status=='returned';raw=op['result'] if returned else None
         score=parse_result(raw,r['request'],c.tok) if returned else None
         result.append(dict(cell=r['cell'],request_hash=r['request_hash'],operation_status=status,attempt=entry['attempt'],

@@ -68,28 +68,73 @@ class DesignTests(unittest.TestCase):
         self.assertIsNone(m['counts']['maximum_output_tokens']);self.assertIsNone(m['counts']['main_budget'])
         self.assertEqual(m['counts']['pilot_maximum_output_tokens'],64*4096)
         self.assertEqual(len({c['id'] for c in m['cells']}),960)
-        self.assertEqual(m['constraints']['counterbalance']['all']['doubled_marker'],{'X':20,'Y':20,'Z':20})
+        self.assertEqual(m['constraints']['counterbalance']['all']['doubled_marker'],{'X':24,'Y':18,'Z':18})
         for c in m['cells']:self.assertIn(c['table'],c['prompt'])
         for world in {c['world'] for c in m['cells']}:
             for wording in ('original','lookup'):
                 self.assertEqual(len({c['seed'] for c in m['cells'] if c['world']==world and c['wording']==wording}),1)
-    def test_budget_amendment_preserves_frozen_draft_cells_and_seeds(self):
-        import gzip
+    def test_rejects_preserved_v1_majority_and_parity_shortcuts(self):
+        import gzip,hashlib
+        from exception_study2_native.shortcuts import audit_shortcuts,require_no_perfect_shortcut
         path=Path(__file__).resolve().parents[1]/'audits/study2-native-thinking-draft-v1/controlled-design.json.gz'
+        before=hashlib.sha256(path.read_bytes()).hexdigest()
         previous=json.loads(gzip.decompress(path.read_bytes()))
-        for key in ('cells','tables','constraints','seed'):
-            self.assertEqual(self.manifest[key],previous[key])
+        r=audit_shortcuts(previous['tables'],details=False)
+        self.assertEqual(r['groups']['all/all']['full/majority']['correct'],240)
+        self.assertEqual(r['groups']['all/all']['full/mod2-equals-1']['correct'],240)
+        with self.assertRaisesRegex(ValueError,'perfect shortcut'):require_no_perfect_shortcut(r)
+        self.assertEqual(hashlib.sha256(path.read_bytes()).hexdigest(),before)
+        self.assertNotEqual(self.manifest['protocol'],previous['protocol'])
 
-    def test_every_final_table_marginal_and_full_joint_constraints(self):
+    def test_every_table_pairing_counts_and_honest_pooled_balance(self):
         design.validate_controlled(self.manifest['tables'])
+        associated=0
         for t in self.manifest['tables']:
             a=audit_table(t['table'],t['target_plate'],t['expected'],t['pattern'])
-            self.assertEqual(a['background_class_counts'],{'A':4,'B':4,'C':4})
-            self.assertEqual(a['target_row_1based'],13)
+            self.assertEqual(a['background_class_counts'],dict(zip(t['roles'],t['background_role_counts'])))
+            self.assertEqual(sum(a['full_class_counts'].values()),16)
+            self.assertEqual(a['target_row_1based'],16)
             self.assertEqual(a['same_climate_peer_classes'],{t['pattern']:4})
-            for f in DISTRACTORS:self.assertTrue(a['features'][f]['exact_class_independence'])
-            self.assertTrue(all(x['exact_class_independence'] for x in a['joint_distractors'].values()))
-            self.assertEqual(a['absolute_rate_margin_sum'],0)
+            associated+=not a['joint_distractors']['+'.join(DISTRACTORS)]['exact_class_independence']
+        self.assertEqual(associated,240)
+        self.assertFalse(self.manifest['constraints']['per_table_exact_distractor_class_independence'])
+        for block in range(10):
+            cases=[t for t in self.manifest['tables'] if t['block']==block]
+            for full in (False,True):
+                rows=[r for t in cases for r in parse(t['table']) if full or r['plate']!=t['target_plate']]
+                self.assertTrue(association(rows,DISTRACTORS)['exact_class_independence'])
+
+    def test_shortcut_counts_coverage_splits_and_histogram_ambiguity(self):
+        from exception_study2_native.shortcuts import audit_shortcuts,require_no_perfect_shortcut
+        r=audit_shortcuts(self.manifest['tables']);require_no_perfect_shortcut(r)
+        v=r['groups']['all/all']['full/majority']
+        self.assertEqual((v['correct'],v['predicted'],v['ties']),(72,192,48))
+        v=r['groups']['all/all']['full/joint-profile-majority']
+        self.assertEqual((v['correct'],v['predicted'],v['ties']),(114,150,90))
+        self.assertEqual(r['groups']['pilot/all']['full/majority']['tables'],16)
+        self.assertEqual(r['groups']['main/all']['full/majority']['tables'],224)
+        self.assertEqual(r['groups']['all/support']['full/majority']['correct'],36)
+        self.assertEqual(r['groups']['all/conflict']['full/majority']['correct'],36)
+        self.assertEqual(r['histogram_only_upper_bound']['accuracy'],.5)
+        self.assertTrue(all(len(v)>1 for v in r['histogram_only_upper_bound']['label_counts_by_histogram'].values()))
+        self.assertTrue(r['pooled_associations']['all/full']['joint']['exact_class_independence'])
+        self.assertIn('all/conflict/relative-role-background',r['pooled_associations'])
+
+    def test_histogram_holdout_never_splits_world_variants(self):
+        from exception_study2_native.shortcuts import held_out
+        rows=[dict(world=w,variant=v,expected=label,full_class_counts={'A':4,'B':5,'C':7},baselines={})
+              for w,label in (('w1','A'),('w2','B')) for v in (0,1)]
+        held_out(rows,'world')
+        for row in rows:self.assertEqual(row['baselines']['world/histogram-exact']['prediction'],'B' if row['world']=='w1' else 'A')
+
+    def test_exact_final_answer_instruction_preserves_native_thinking(self):
+        from exception_study2_native import FINAL_INSTRUCTION
+        self.assertEqual(FINAL_INSTRUCTION,'Your final answer must be a single uppercase letter: A, B, or C. Do not add any prefix, punctuation, or explanation.')
+        for c in self.manifest['cells']:self.assertTrue(c['prompt'].endswith(FINAL_INSTRUCTION))
+        tok=Tokens();prompt=self.manifest['cells'][0]['prompt']
+        self.assertTrue(tok.decode_all(tok.render(prompt,True)).endswith(ON_SUFFIX))
+        self.assertTrue(tok.decode_all(tok.render(prompt,False)).endswith(ASSISTANT_SUFFIX))
+
     def test_transformation_rejects_distractor_or_target_changes(self):
         for change in ('label','transmission'):
             bad=copy.deepcopy(self.manifest['tables']);rows=parse(bad[0]['table'])
@@ -241,6 +286,9 @@ class ExecutionTests(unittest.TestCase):
         self.assertEqual(len(self.backend.calls),1)
     def test_offline_inspect_locks_and_output_separation(self):
         r=execution.inspect(self.out);self.assertEqual(r['counts']['planned'],16);self.assertEqual(self.loads,0)
+        before={str(p.relative_to(self.out)):p.read_bytes() for p in self.out.rglob('*') if p.is_file()}
+        execution.inspect(self.out)
+        self.assertEqual(before,{str(p.relative_to(self.out)):p.read_bytes() for p in self.out.rglob('*') if p.is_file()})
         with run_lock(self.out):
             with self.assertRaises(ValueError):self.run_fake()
         with self.assertRaises(ValueError):planning.prepare(self.root/'design',self.root/'tokens',self.root/'model',self.root/'model'/'run')
@@ -288,6 +336,126 @@ class ExecutionTests(unittest.TestCase):
                 self.assertEqual(g['truncated'],8);self.assertEqual(g['responses_with_repeated_windows'],8)
                 self.assertEqual(g['token_counts']['token_count']['maximum'],4096)
             self.run_fake();self.assertEqual(call.call_count,16)
+
+    def seed_interrupted_write(self,phase):
+        c=planning.Context(self.out)
+        freeze(self.out/'execution.json',dict(execution.binding(c,'MOCK'),backend=self.backend.identity,backend_hash=digest(self.backend.identity)))
+        r=self.plan['requests'][0];oid=execution.opid(r,1)
+        identity=dict(execution.binding(c,'MOCK'),id=oid,request=r['request'],request_hash=r['request_hash'],stage='native_generation')
+        folder=self.out/'operations-v5'/digest(oid);folder.mkdir(parents=True)
+        if phase not in ('request','empty'):freeze(folder/'request.json',dict(identity,status='planned'))
+        if phase=='returned':freeze(folder/'started.json',dict(identity,status='started'))
+        temporary=None
+        if phase!='empty':
+            fd,name=tempfile.mkstemp(prefix=phase+'.json.',suffix='.tmp',dir=folder);os.close(fd)
+            temporary=Path(name)
+            if phase=='returned':sealed_write(temporary,dict(identity,status='returned',result=raw(self.tok,'A')))
+            else:temporary.write_bytes(b'{"partial":')
+        return r,folder,temporary
+
+    def check_interrupted_phase(self,phase):
+        r,folder,temp=self.seed_interrupted_write(phase)
+        before={str(p.relative_to(self.out)):p.read_bytes() for p in self.out.rglob('*') if p.is_file()}
+        report=execution.inspect(self.out)
+        self.assertEqual(report['counts']['interrupted'],1);self.assertEqual(report['counts']['executable_pending'],15)
+        self.assertEqual(before,{str(p.relative_to(self.out)):p.read_bytes() for p in self.out.rglob('*') if p.is_file()})
+        with self.assertRaisesRegex(ValueError,'recover'):execution.retry(self.out,r['cell']['id'],'Premature retry')
+        with run_lock(self.out):
+            with self.assertRaises(ValueError):execution.recover(self.out,'Interrupted atomic write')
+        result=execution.recover(self.out,'Explicitly quarantine interrupted atomic write; do not promote temporary results')
+        self.assertEqual(result['quarantined_files'],int(temp is not None))
+        self.assertEqual(execution.inspect(self.out)['counts']['interrupted'],1)
+        self.assertFalse((folder/'returned.json').exists())
+        self.assertEqual(execution.recover(self.out,'Idempotent recovery')['quarantined_files'],0)
+        report=self.run_fake();self.assertEqual(report['counts']['completed'],15);self.assertEqual(len(self.backend.calls),15)
+        self.assertEqual(self.run_fake()['this_invocation']['model_loads'],0)
+        execution.retry(self.out,r['cell']['id'],'Explicit retry after recovery; runtime resolved')
+        self.run_fake();self.assertEqual(len(self.backend.calls),16)
+        if temp:
+            archived=list((self.out/'journal-recovery').rglob(temp.name));self.assertEqual(len(archived),1)
+            self.assertEqual(archived[0].read_bytes(),before[str(temp.relative_to(self.out))])
+        if phase in ('request','empty'):self.assertFalse((folder/'request.json').exists())
+
+    def test_interrupted_request_write_orphan_remains_ambiguous(self):self.check_interrupted_phase('request')
+    def test_interrupted_start_write_never_returns_to_never_started(self):self.check_interrupted_phase('started')
+    def test_interrupted_return_write_is_not_promoted(self):self.check_interrupted_phase('returned')
+    def test_empty_known_orphan_requires_explicit_recovery(self):self.check_interrupted_phase('empty')
+
+    def test_real_atomic_writer_leftover_beside_completed_return_reuses_without_load(self):
+        import subprocess,sys
+        from exception_study2_v5_replication.integrity import operation_tree
+        self.run_fake();r=self.plan['requests'][0];folder=self.out/'operations-v5'/digest(execution.opid(r,1))
+        canonical=(folder/'returned.json').read_bytes()
+        # Process exits at replace, so write_json's finally cleanup cannot run.
+        code="import os,sys; from exception_pilot import storage; storage.os.replace=lambda *a:os._exit(91); storage.write_json(sys.argv[1],{'unfinished_copy':True})"
+        child=subprocess.run([sys.executable,'-c',code,str(folder/'returned.json')],capture_output=True)
+        self.assertEqual(child.returncode,91)
+        with self.assertRaisesRegex(ValueError,'Unexpected'):operation_tree(self.out)  # historical contract unchanged
+        before={str(p.relative_to(self.out)):p.read_bytes() for p in self.out.rglob('*') if p.is_file()}
+        report=execution.inspect(self.out);self.assertEqual(report['counts']['completed'],16)
+        self.assertEqual(before,{str(p.relative_to(self.out)):p.read_bytes() for p in self.out.rglob('*') if p.is_file()})
+        report=self.run_fake();self.assertEqual(report['this_invocation']['model_loads'],0)
+        self.assertEqual(report['this_invocation']['new_calls'],0);self.assertEqual(len(self.backend.calls),16)
+        execution.recover(self.out,'Quarantine completed-return debris')
+        self.assertEqual((folder/'returned.json').read_bytes(),canonical)
+        self.assertEqual(self.run_fake()['this_invocation']['model_loads'],0)
+        with self.assertRaises(ValueError):execution.retry(self.out,r['cell']['id'],'Never resample a completed answer')
+
+    def test_recovery_resumes_interrupted_quarantine_with_immutable_evidence(self):
+        from exception_study2_native import recovery
+        r,folder,temp=self.seed_interrupted_write('returned')
+        fd,name=tempfile.mkstemp(prefix='returned.json.',suffix='.tmp',dir=folder);os.close(fd);Path(name).write_bytes(b'partial second file')
+        replace=os.replace;calls=[]
+        def crash(src,dst):
+            if '/files/' in str(dst):
+                calls.append(src)
+                if len(calls)==2:raise KeyboardInterrupt()
+            return replace(src,dst)
+        with patch.object(recovery.os,'replace',side_effect=crash):
+            with self.assertRaises(KeyboardInterrupt):execution.recover(self.out,'Crash during quarantine')
+        report=execution.inspect(self.out);self.assertEqual(report['counts']['interrupted'],1)
+        self.assertEqual(report['journal_recovery']['recoveries'][0]['moves_remaining'],1)
+        with self.assertRaises(ValueError):execution.retry(self.out,r['cell']['id'],'Wait for recovery completion')
+        result=execution.recover(self.out,'Resume prior recovery')
+        self.assertEqual(result['quarantined_files'],1)
+        self.assertEqual(execution.inspect(self.out)['counts']['interrupted'],1)
+
+    def test_unrelated_files_malformed_canonical_and_wrong_identity_still_rejected(self):
+        self.run_fake(max_new=1);r=self.plan['requests'][0];folder=self.out/'operations-v5'/digest(execution.opid(r,1))
+        for name in ('unrelated.txt','returned.json.invalid.tmp','returned.json.ABCDEFGH.tmp'):
+            p=folder/name;p.write_text('unrelated')
+            with self.assertRaises(ValueError):execution.inspect(self.out)
+            with self.assertRaises(ValueError):execution.recover(self.out,'Must not hide unknown files')
+            self.assertTrue(p.exists());p.unlink()
+        p=folder/'returned.json';before=p.read_bytes();p.write_text('{broken')
+        with self.assertRaises((ValueError,KeyError)):execution.inspect(self.out)
+        p.write_bytes(before)
+        wrong=sealed_read(p);wrong['request']['seed']+=1;sealed_write(p,wrong)
+        with self.assertRaises(ValueError):execution.recover(self.out,'Must not normalize a wrong identity')
+        p.write_bytes(before)
+        self.assertEqual(self.run_fake()['counts']['completed'],16)
+
+    def test_incomplete_recovery_intent_is_preserved_not_promoted(self):
+        self.seed_interrupted_write('started')
+        folder=self.out/'journal-recovery'/('a'*64);folder.mkdir(parents=True)
+        fd,name=tempfile.mkstemp(prefix='manifest.json.',suffix='.tmp',dir=folder);os.close(fd)
+        debris=Path(name);debris.write_bytes(b'{"incomplete_manifest":')
+        report=execution.inspect(self.out)
+        self.assertEqual(len(report['journal_recovery']['uncommitted_recovery_intents']),1)
+        execution.recover(self.out,'Fresh canonical recovery intent; retain incomplete attempt')
+        self.assertEqual(debris.read_bytes(),b'{"incomplete_manifest":')
+        self.assertFalse((folder/'manifest.json').exists())
+        self.assertEqual(execution.inspect(self.out)['counts']['interrupted'],1)
+
+    def test_dispatch_without_operation_folder_is_not_resampled(self):
+        c=planning.Context(self.out);r=self.plan['requests'][0];oid=execution.opid(r,1)
+        freeze(self.out/'execution.json',dict(execution.binding(c,'MOCK'),backend=self.backend.identity,backend_hash=digest(self.backend.identity)))
+        freeze(self.out/'invocations'/'dispatch-orphan'/'started.json',dict(plan_hash=c.plan['artifact_hash'],cell_ids=[r['cell']['id']]))
+        freeze(self.out/'dispatches'/(digest(oid)+'.json'),dict(operation_id=oid,request_hash=r['request_hash'],backend_hash=digest(self.backend.identity),invocation='dispatch-orphan'))
+        self.assertEqual(execution.inspect(self.out)['counts']['interrupted'],1)
+        self.run_fake();self.assertEqual(len(self.backend.calls),15)
+        execution.recover(self.out,'Preserve orphan dispatch')
+        self.assertEqual(execution.inspect(self.out)['counts']['interrupted'],1)
 
 
 class FullMockTests(unittest.TestCase):

@@ -7,13 +7,13 @@ from exception_pilot.storage import run_lock, write_json
 from exception_continuation.runner import sealed_read
 from exception_review.artifacts import freeze
 from exception_study2_v5.journal import Session, OperationUnavailable
-from exception_study2_v5_replication.integrity import operation_tree
+from .recovery import scan, state, summary as recovery_summary, needs_recovery, quarantine
 from exception_study2_source_report.integrity import revision
 from . import VERSION, STOP, BUDGET_POLICY
 from .planning import Context
 from .interface import NativeBackend
 
-NAMESPACE='v5/native-thinking-draft-v1/'+BUDGET_POLICY+'/'
+NAMESPACE='v5/native-thinking-draft-v2/'+BUDGET_POLICY+'/'
 
 
 def opid(request,n): return NAMESPACE+request['request_hash']+'/attempt-'+str(n)
@@ -23,14 +23,10 @@ def binding(c,mode):
     return dict(protocol=VERSION,plan_hash=c.plan['artifact_hash'],code_contract=c.plan['code_contract'],measurement_mode=mode)
 
 
-def state(op):
-    return 'never_started' if op is None or op['status']=='planned' else 'ambiguous' if op['status']=='started' else op['status']
-
-
 def journal(c):
-    saved=operation_tree(c.out);path=c.out/'execution.json';ex=sealed_read(path) if path.exists() else None
+    path=c.out/'execution.json';ex=sealed_read(path) if path.exists() else None
     mode=ex['measurement_mode'] if ex else 'UNEXECUTED'
-    if mode not in ('UNEXECUTED','MOCK','LIVE_LOCAL') or (saved and ex is None): raise ValueError('Missing/invalid execution binding')
+    if mode not in ('UNEXECUTED','MOCK','LIVE_LOCAL'): raise ValueError('Missing/invalid execution binding')
     if ex and any(ex.get(k)!=v for k,v in binding(c,mode).items()): raise ValueError('Execution identity mismatch')
     if ex and (ex['backend_hash']!=digest(ex['backend']) or ex['backend']['tokenizer']!=c.plan['tokenizer']):
         raise ValueError('Frozen backend/tokenizer identity differs')
@@ -40,7 +36,18 @@ def journal(c):
         key=(auth['cell_id'],auth['attempt'])
         if key in authorizations or auth['plan_hash']!=c.plan['artifact_hash'] or auth['cell_id'] not in c.by_cell:
             raise ValueError('Invalid retry authorization')
+        if type(auth['attempt']) is not int or auth['attempt']<2:raise ValueError('Invalid retry attempt number')
         authorizations[key]=auth
+    registry={}
+    for cell,r in c.by_cell.items():
+        attempts=[n for name,n in authorizations if name==cell]
+        if attempts and max(attempts)>len(attempts)+1:raise ValueError('Nonconsecutive retry authorization')
+        for n in range(1,len(attempts)+2):
+            oid=opid(r,n)
+            registry[digest(oid)]=dict(id=oid,identity=dict(binding(c,mode),id=oid,request=r['request'],
+                request_hash=r['request_hash'],stage='native_generation'))
+    saved=scan(c,registry,binding(c,mode))
+    if saved and ex is None:raise ValueError('Missing execution binding')
     used=set()
     for cell,r in c.by_cell.items():
         n=1;last=None
@@ -120,6 +127,7 @@ def retry(output,cell_id,reason):
     if not reason.strip(): raise ValueError('Explicit retry reason required')
     with run_lock(output):
         c=Context(output);_,current,_,_=journal(c)
+        if needs_recovery(c):raise ValueError('Run explicit recover before authorizing a retry of interrupted writes')
         if cell_id not in current: raise ValueError('Unknown cell ID')
         x=current[cell_id];op=x['operation']
         if state(op) not in ('failed','ambiguous'): raise ValueError('Only failed/interrupted attempts can be explicitly retried; returned outcomes are final')
@@ -129,7 +137,22 @@ def retry(output,cell_id,reason):
 
 
 def inspect(output):
+    """Read-only: no run.lock creation, analysis write, quarantine, model load or dispatch."""
+    from .analysis import report
+    c=Context(output);_,current,_,_=journal(c)
+    return report(c,current,dict(model_loads=0,new_calls=0,reused=0,scope='inspection'),write=False)
+
+
+def analyze(output):
     from .analysis import report
     with run_lock(output):
         c=Context(output);_,current,_,_=journal(c)
-        return report(c,current,dict(model_loads=0,new_calls=0,reused=0,scope='inspection'))
+        return report(c,current,dict(model_loads=0,new_calls=0,reused=0,scope='analysis'))
+
+
+def recover(output,reason):
+    with run_lock(output):
+        c=Context(output);_,_,mode,_=journal(c)
+        result=quarantine(c,binding(c,mode),reason)
+        journal(c)
+        return dict(result,journal_recovery=recovery_summary(c))

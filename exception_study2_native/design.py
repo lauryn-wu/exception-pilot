@@ -7,7 +7,7 @@ from exception_pilot.core import DESCRIPTORS, digest, rng_for
 from exception_continuation.core import INTRO, QUESTION
 from exception_study2_v5.core import LOOKUP, read_plan as read_v5
 from . import VERSION, SEED, PILOT_BUDGET, PILOT_WORLDS, FINAL_INSTRUCTION
-from .tables import FIELDS, DISTRACTORS, render, parse, audit_table
+from .tables import FIELDS, DISTRACTORS, render, parse, audit_table, association
 
 
 def historical_plan(path):
@@ -16,41 +16,49 @@ def historical_plan(path):
     return read_v5(path.parent)
 
 
+# Six permutations of (4,5,6), three independent feature blocks with (4,4,7), and (5,5,5).
+# Ten fixed blocks, each crossed with all six ABC role assignments = 60 worlds.
+COUNT_BLOCKS = tuple(itertools.permutations((4,5,6))) + ((4,4,7),(4,4,7),(4,4,7),(5,5,5))
+PROFILES = ((0,0,0),(0,1,1),(1,0,1),(1,1,0))
+
+
 def controlled_tables():
-    roles = list(itertools.product(itertools.permutations('ABC'), ('cold','warm'), range(5)))
-    rng_for(VERSION, SEED, 'worlds').shuffle(roles)
-    tables = []
-    profiles = ((0,0,0),(0,1,1),(1,0,1),(1,1,0))
-    for index,(labels,climate,rep) in enumerate(roles):
-        rng = rng_for(VERSION, SEED, index)
-        wid = f'native-draft-{index:03d}'
-        doubled = 'XYZ'[index % 3]
-        others = [x for x in 'XYZ' if x != doubled]
-        marks = [doubled,doubled]+others
-        descriptors = {c:rng.sample(DESCRIPTORS[c],5) for c in ('cold','warm')}
-        rows = []
-        for group in range(3):
-            c = climate if group == 0 else ('warm' if climate == 'cold' else 'cold')
-            for j,bits in enumerate(profiles):
-                # Opaque identifiers are assigned independently of group/class/profile.
-                plate = 'N'+''.join(rng.choices('ABCDEFGHJKLMNPQRSTUVWXYZ23456789',k=7))
-                rows.append(dict(plate=plate,description=descriptors[c][j],
-                    transmission=('Manual','Automatic')[bits[0]],seat_cover=('Cloth','Vinyl')[bits[1]],
-                    doors=('Two','Four')[bits[2]],audit_marker=marks[j],label=labels[group],group=group))
-        rng.shuffle(rows)
-        target_profile = index % 4; bits = profiles[target_profile]
-        target = dict(plate='N'+''.join(rng.choices('ABCDEFGHJKLMNPQRSTUVWXYZ23456789',k=7)),
+    worlds=list(itertools.product(range(10),itertools.permutations('ABC')))
+    rng_for(VERSION,SEED,'worlds').shuffle(worlds)
+    tables=[]
+    for index,(block,labels) in enumerate(worlds):
+        rng=rng_for(VERSION,SEED,index);climate=('cold','warm')[block%2]
+        counts=COUNT_BLOCKS[block];doubled='XYZ'[block%3]
+        marks=[doubled,doubled]+[x for x in 'XYZ' if x!=doubled]
+        descriptors={c:rng.sample(DESCRIPTORS[c],5) for c in ('cold','warm')}
+        # Fixed within a block across label permutations; independent of the label names.
+        profile_ids=[j%4 for j in range(15)]
+        rng_for(VERSION,SEED,'profiles',block).shuffle(profile_ids)
+        specs=[(g,g) for g in range(3) for _ in range(4)]
+        specs += [(3,g) for g in range(3) for _ in range(counts[g]-4)]
+        rows=[]
+        for j,(group,role) in enumerate(specs):
+            c=climate if group==0 else ('warm' if climate=='cold' else 'cold')
+            profile=profile_ids[j];bits=PROFILES[profile]
+            rows.append(dict(plate='N'+''.join(rng.choices('ABCDEFGHJKLMNPQRSTUVWXYZ23456789',k=7)),
+                description=descriptors[c][j%4 if group==0 else j%5],
+                transmission=('Manual','Automatic')[bits[0]],seat_cover=('Cloth','Vinyl')[bits[1]],
+                doors=('Two','Four')[bits[2]],audit_marker=marks[profile],label=labels[role],group=group,role=role))
+        rng.shuffle(rows);target_profile=block%4;bits=PROFILES[target_profile]
+        target=dict(plate='N'+''.join(rng.choices('ABCDEFGHJKLMNPQRSTUVWXYZ23456789',k=7)),
             description=descriptors[climate][4],transmission=('Manual','Automatic')[bits[0]],
-            seat_cover=('Cloth','Vinyl')[bits[1]],doors=('Two','Four')[bits[2]],
-            audit_marker=marks[target_profile],label=labels[0])
+            seat_cover=('Cloth','Vinyl')[bits[1]],doors=('Two','Four')[bits[2]],audit_marker=marks[target_profile])
         for cue_state,variant in itertools.product(range(2),repeat=2):
-            values = copy.deepcopy(rows)
-            for r in values: r['label'] = labels[cue_state] if r['group']==0 else labels[1-cue_state] if r['group']==1 else labels[2]
-            t = dict(target,label=labels[variant]); values.append(t)
-            tables.append(dict(world=wid,cohort='pilot' if index<PILOT_WORLDS else 'main',
-                variant=variant,cue_state=cue_state,relation='support' if cue_state==variant else 'conflict',
-                expected=labels[variant],pattern=labels[cue_state],roles=list(labels),target_plate=t['plate'],
-                climate=climate,replicate=rep,target_profile=target_profile,doubled_marker=doubled,table=render(values)))
+            values=copy.deepcopy(rows)
+            for r in values:
+                role=cue_state if r['group']==0 else 1-cue_state if r['group']==1 else r['role']
+                r['label']=labels[role]
+            t=dict(target,label=labels[variant]);values.append(t)
+            tables.append(dict(world=f'native-draft-v2-{index:03d}',block=block,
+                cohort='pilot' if index<PILOT_WORLDS else 'main',variant=variant,cue_state=cue_state,
+                relation='support' if cue_state==variant else 'conflict',expected=labels[variant],
+                pattern=labels[cue_state],roles=list(labels),background_role_counts=list(counts),target_plate=t['plate'],
+                climate=climate,target_profile=target_profile,doubled_marker=doubled,table=render(values)))
     validate_controlled(tables)
     return tables
 
@@ -60,25 +68,36 @@ def validate_controlled(tables):
     worlds = {}
     for t in tables:
         rows = parse(t['table']); a = audit_table(t['table'],t['target_plate'],t['expected'],t['pattern'])
-        if len(rows)!=13 or a['target_row_1based']!=13 or a['background_class_counts']!={'A':4,'B':4,'C':4}:
+        if (len(rows)!=16 or a['target_row_1based']!=16
+            or t['background_role_counts']!=list(COUNT_BLOCKS[t['block']])
+            or a['background_class_counts']!=dict(zip(t['roles'],COUNT_BLOCKS[t['block']]))):
             raise ValueError('Final rendered class/position constraint failed')
         if a['same_climate_peer_classes']!={t['pattern']:4}: raise ValueError('Four unanimous climate peers required')
         if t['relation']!=('support' if t['expected']==t['pattern'] else 'conflict'):
             raise ValueError('Support/conflict incorrectly labeled')
-        if any(not a['features'][f]['exact_class_independence'] for f in DISTRACTORS) or any(not v['exact_class_independence'] for v in a['joint_distractors'].values()):
-            raise ValueError('Final-table distractors must be exactly class-independent')
         worlds.setdefault(t['world'],{})[(t['cue_state'],t['variant'])]=t
     for cases in worlds.values():
         if set(cases)!={(0,0),(0,1),(1,0),(1,1)}: raise ValueError('Missing factorial table')
         for cue in (0,1):
             a,b=[parse(cases[(cue,v)]['table']) for v in (0,1)]
-            changed=[(i,k) for i in range(13) for k in FIELDS if a[i][k]!=b[i][k]]
-            if changed!=[(12,'label')]: raise ValueError('Record variants must change only the target cell within cue context')
+            changed=[(i,k) for i in range(16) for k in FIELDS if a[i][k]!=b[i][k]]
+            if changed!=[(15,'label')]: raise ValueError('Record variants must change only the target cell within cue context')
         for variant in (0,1):
             a,b=[parse(cases[(c,variant)]['table']) for c in (0,1)]
-            changed=[(i,k) for i in range(13) for k in FIELDS if a[i][k]!=b[i][k]]
-            if len(changed)!=8 or any(i==12 or k!='label' for i,k in changed):
+            changed=[(i,k) for i in range(16) for k in FIELDS if a[i][k]!=b[i][k]]
+            if len(changed)!=8 or any(i==15 or k!='label' for i,k in changed):
                 raise ValueError('Cue context must swap exactly eight background labels, preserving target')
+    # Aggregate feature-label independence is an exact block property, not a per-table claim.
+    for block in range(10):
+        cases=[t for t in tables if t['block']==block]
+        if len(cases)!=24 or len({tuple(t['roles']) for t in cases})!=6:
+            raise ValueError('Six label permutations required per count block')
+        for include_target in (False,True):
+            rows=[r for t in cases for r in parse(t['table']) if include_target or r['plate']!=t['target_plate']]
+            if not association(rows,DISTRACTORS)['exact_class_independence']:
+                raise ValueError('Pooled count-block joint distractor balance failed')
+    from .shortcuts import audit_shortcuts, require_no_perfect_shortcut
+    require_no_perfect_shortcut(audit_shortcuts(tables,details=False))
 
 
 def historical_tables(plan):
@@ -124,14 +143,16 @@ def make_design(kind='controlled-draft', v5=None):
             doubled_marker=dict(Counter(t.get('doubled_marker','historical_random') for t in ws)),
             target_profile=dict(Counter(str(t.get('target_profile','historical_random')) for t in ws)))
     constraints=dict(validated_unique_final_tables=len(tables),final_manifest_cells=len(ordered),
-        per_table_exact_distractor_class_independence=kind=='controlled-draft',
-        full_joint_distractor_class_independence=kind=='controlled-draft',counterbalance=counterbalance,
-        changes=('13 rows, target last at 13, background 4/4/4, four unanimous same-climate peers. '
-                 'Identical four joint distractor profiles under each class. Marker counts 2/1/1 per class, not uniform across values. '
-                 'Two fixed cue contexts: within each context target variants change one cell and swap support/conflict. '
-                 'Within a target variant cue contexts swap eight background labels. Third class remains fixed. '
-                 'Four same-climate peers and two conflicting recorded labels cannot all be supported under the historical 4/3/2 totals. '
-                 'Counterbalancing is documented separately; no claim of exact row-position/identifier balance.') if kind=='controlled-draft' else
+        per_table_exact_distractor_class_independence=False,
+        full_joint_distractor_class_independence=False,pooled_six_world_block_joint_independence=kind=='controlled-draft',
+        full_table_histogram_constant=False,counterbalance=counterbalance,
+        changes=('16 rows, target last at 16; 15 background rows. Ten count blocks: six permutations of 4/5/6, '
+                 'three separate 4/4/7 feature blocks, and 5/5/5; each block crosses all six ABC role assignments. '
+                 'Four unanimous same-climate peers; eight background labels swap across cues with target fixed. '
+                 'Record variants change only target label. Marginal/joint distractor associations remain within tables; '
+                 'raw-class joint independence holds only pooled over each complete six-world label-permutation block. '
+                 'Pilot/main subsets need not be exactly balanced. Counts, parity/remainders, profile-majority and held-out '
+                 'histogram baselines are reported; no exact-chance requirement. Full histograms differ across target flips.') if kind=='controlled-draft' else
                  'Historical final tables unchanged. All conflict; no support gap. New thinking-off/on label-only-final outputs are required.')
     return dict(protocol=VERSION,design=kind,status='DRAFT_FOR_REVIEW',seed=SEED,
         origin_plan_hash=v5['plan_hash'] if v5 else None,tables=tables,cells=ordered,

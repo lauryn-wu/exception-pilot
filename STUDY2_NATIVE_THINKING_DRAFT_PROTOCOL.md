@@ -1,7 +1,7 @@
-# Native-thinking comparison — draft v1
+# Native-thinking comparison — draft v2
 
-Protocol/module: `study2-native-thinking-draft-v1` / `exception_study2_native`.
-Separate operation namespace: `v5/native-thinking-draft-v1/` in a new output directory.
+Protocol/module: `study2-native-thinking-draft-v2` / `exception_study2_native`.
+Separate operation namespace: `v5/native-thinking-draft-v2/pilot-budget-review-v1/` in a new output directory.
 **DRAFT_FOR_REVIEW**, not an amendment to frozen Study 2 v5. No model outcomes informed
 this design. Historical tables, prompts, results and validators remain unchanged.
 
@@ -24,8 +24,9 @@ Original question wording is reused verbatim from `exception_continuation.core.Q
 Lookup wording is reused from `exception_study2_v5.core.LOOKUP`. Both share the original
 introduction and the same new final-format instruction:
 
-> In your final response, return only A, B, or C. Do not include an answer label or explanation in the final response.
+> Your final answer must be a single uppercase letter: A, B, or C. Do not add any prefix, punctuation, or explanation.
 
+This instruction constrains the final answer, not the native thinking trace.
 This output interface differs from historical visible explanations; those responses cannot
 serve as thinking-off controls or exact-cache hits.
 
@@ -38,51 +39,59 @@ rates in classes of sizes 4,3,2, its count fractions must share denominator divi
 only rates zero or one work. Exact half/half balance fails for odd class sizes. A balanced binary
 generator does not guarantee balance after v5's ternary reassignment.
 
-The draft uses the smallest equal background class size that retains four unanimous climate
-peers: **4 A + 4 B + 4 C = 12 background rows**, plus one target = **13 rows**. Target remains last,
-now row 13 (one-based, excluding header/separator). Full-table totals are 5/4/4, with five of the
-recorded target class. All evidence/balance calculations exclude the queried target.
+The reviewed 13-row v1 draft is rejected: a 4/4/4 background plus the queried row produces 5/4/4,
+so the unique full-table majority and unique odd-count class reveal every answer. Equal background
+counts and exact per-table distractor independence are insufficient protections. Preserve that
+frozen draft and its audits; never use it as the v2 execution plan.
 
-Each world assigns ordered distinct labels `(L0,L1,L2)` and a target climate. There are two cue
-contexts. In cue context j, four target-climate peers have label Lj, four opposite-climate rows
-have label L(1-j), and four other opposite-climate rows have L2. The target's descriptor is the fifth
-descriptor of its climate. Opposite-climate descriptors are repeated once under each alternative
-class, retaining the historical climate vocabulary without inventing descriptors.
+V2 uses **16 rows: 15 background rows plus the target last at row 16**. There are ten count/feature
+blocks, each crossed with all six ordered ABC role assignments `(L0,L1,L2)`:
 
-Within a fixed cue context, variant 0/1 changes ONLY the target's recorded class L0/L1. One is
-support and one conflict. Thus these valid one-cell pairs cross support/conflict; two support
-variants are not falsely advertised as a one-cell pair. Within a fixed target variant, switching
-cue contexts swaps exactly eight background labels and preserves the target record. The third
-class is fixed. Both support and conflict have four unanimous same-climate peers. This retains
-v5's 4/4 conflict cue, but strengthens support relative to the earlier binary generator's 3/4
-target-excluded support peers. Class priors and number of opposite-climate rows change explicitly.
+- Six blocks have the six permutations of background role counts `(4,5,6)`.
+- Three separate feature blocks have `(4,4,7)`; the seven-count class is L2, which is not a target
+  record variant. This prevents the deterministic count-eight answers produced when a seven-count
+  background class itself receives the target. Those alternative blocks were rejected offline.
+- One block has `(5,5,5)`.
 
-Distractor profiles are three binary columns with bit patterns 000,011,101,110. The four audit-marker
-values are a permutation of X,X,Y,Z (rotated doubled level across worlds). Each complete four-column
-profile occurs once under EVERY background class. Therefore every distractor value and EVERY
-joint subset has exactly equal P(value|class), and P(class|value)=1/3. Binary columns are 2/2 within
-each class. Marker counts are 2/1/1 within each class: exactly class-independent, not uniform across
-marker levels. The distractors need not be mutually independent; their complete profiles are
-class-independent. The target uses one of these profiles, so its full distractor match is also tied.
+Each block contains six worlds, for 60 total. Block climates alternate cold/warm: five blocks each.
+Within a world, four same-climate peers and four opposite-climate rows exchange L0/L1 across the
+two cue contexts. Four more opposite-climate rows have L2; three extra opposite-climate rows
+supply the remaining counts. Those extra labels stay fixed across cue contexts. Exactly eight
+background label cells change. Target record variants change ONLY the target Verified-class cell
+L0/L1. Thus cue=variant is support; cue!=variant is conflict; the target is preserved across cues.
+Four unanimous same-climate peers remain in every condition. This retains the v5 cue strength,
+including the disclosed strengthening of support relative to the earlier binary generator.
 
-An 11-row alternative with background counts 4/4/2 could use two shared profiles, but would have
-to omit at least one of the three marker levels to maintain exact class independence. With four
-peers for either target class and all three marker levels present, 13 rows is the smallest
-nonconstant exactly class-independent option. We prefer retaining the existing distractor vocabulary
-and four transparent profiles; the row-count change still requires scientific review.
+Full-table totals equal background totals plus one in the recorded class; they necessarily differ
+across target-only flips. They are not claimed constant or balanced within a table. Count blocks
+vary which labels are majorities, including labels agreeing with the recorded class, the climate
+pattern, or neither. In the full 240-table grid, unique full-table majority covers 192 tables,
+agrees with the record on 72 and the pattern on 48 (support overlaps those categories), and ties
+on 48. Support/conflict-specific agreement is reported by the audit, not hidden in a pooled rate.
 
-All final rendered tables are parsed and validated, including the one-cell and eight-cell
-transformations. The cell manifest embeds those exact tables in every prompt. No validation
-silently drops or repairs a condition. License plates are opaque deterministic random identifiers;
-background rows are shuffled. Exact within-table positional/identifier balance is not claimed.
-Position effects are not estimated with a fixed last-row target. Duplicate opposite-climate
-descriptions and repeated distractor profiles may make the structure conspicuous; this is a
-tradeoff of the transparent exact-balance design and is explicitly open for review.
+Distractor profiles retain binary patterns 000,011,101,110 and marker values X,X,Y,Z, with the doubled
+marker rotated by block. The 15 background profiles have multiplicities 4/4/4/3 and a deterministic
+shuffle independent of label names. Profile assignments to row roles are fixed within a block
+across all six label permutations; target profile is block modulo four. Per-table marginal and
+joint associations remain and are measured. Pooling a COMPLETE six-world label-permutation block
+produces exact raw-A/B/C joint independence for both target-excluded and full-table rows. This is
+an aggregate property, not per-table balance or proof of no recorded/pattern-role association.
+The audit reports relative-role associations separately. Pilot/main subsets need not retain exact
+block balance; both are audited separately.
 
-The 60 worlds cross all six label-role assignments, two climates and five replicates. Overall
-roles occur ten times each; climates 30 each; doubled marker levels 20 each; target profiles 15
-each. The first-four/remaining split is not separately exactly counterbalanced: the manifest
-reports actual counts by cohort. Per-table balance and cross-world counterbalancing are distinct.
+All final rendered tables and paired transformations are checked. Opaque identifiers, descriptor
+assignments and background order vary deterministically by world. The target is fixed last, so a
+last-row copying heuristic remains possible. There are eleven opposite-climate background rows,
+with repeated descriptions. Six worlds in a block share a profile/count scaffold; world-held-out
+histogram checks are supplemented by holding out the entire six-world block. Existing world-cluster
+outcome intervals remain descriptive and do not turn these counterbalanced cells into IID samples.
+
+V2 preserves 60 worlds, 240 tables, 960 response cells, the four-world/64-response pilot, and the
+896-response main cohort. All label-role assignments occur ten times and each climate occurs 30
+times. Doubled marker counts are X=24/Y=18/Z=18 worlds; target profiles occur 18/18/12/12 times.
+These are disclosed counts, not claims of exact counterbalance for every factor. The scientific
+question/lookup wording, matched sampler and native-mode handling are unchanged. A new protocol,
+world IDs and frozen prompt/request hashes distinguish v2 from v1; never edit a v1 plan in place.
 
 ## Historical replication option
 
@@ -93,21 +102,36 @@ imputed. It has a separate manifest/output and must not be pooled with controlle
 It preserves the saved table and original question, but uses this new final interface and matched
 sampling settings. It is a table/wording replication, not a rerun of historical visible reasoning.
 
-## Generator audit
+## Generator and shortcut audit
 
-Audit the actual saved final v5 tables after remapping, deduplicating wording/response-arm copies
-to 120 world/variant tables. Reconstruct the relevant earlier `exception_counterfactual.make_world`
-with the saved seed, verifying its feature fields match the saved v5 base items. Audit both queried
-targets and both support/conflict backgrounds (240 queried tables). Label reconstructed earlier
-data as such, not as saved inference outcomes. The earlier generator has no audit-marker column.
+The earlier final-table audit is preserved under `audits/study2-native-thinking-draft-v1/`; the
+budget amendment remains under `audits/study2-native-thinking-budget-review-v1/`. V2 regenerates only
+its affected controlled draft/shortcut evidence in a new output. It does not rerun historical
+model experiments. The offline `audit-shortcuts` command reads the frozen final rendered tables.
 
-For every queried table, exclude that target; report totals, role assignments, target and peer
-positions, value-by-class counts, P(class|value), P(value|class), descriptive mutual information,
-and every 2/3/4-way distractor association. Count votes choose a unique maximum number of matching
-rows (empirical P(class|value)); equal-prior rate votes choose a unique maximum P(value|class).
-Ties abstain. Report signed pattern-minus-recorded rate margins, absolute margins, and full-joint
-matches. Signed margins or net votes can cancel while marginal/joint signal remains. No judge or
-model is used. Descriptive MI is not a significance test; cases within a world are not independent.
+For each of the 240 unique tables, report target-excluded AND full-table class totals; majority and
+minority rules; parity and remainders modulo 2/3/4 (each specified residue and unique-residue class);
+and full-profile matching majorities both including and excluding the target. Also retain feature
+count/rate votes, their signed/absolute margins, P(class|value), P(value|class), and all 2/3/4-way
+joint associations from the existing table audit. Signed votes may cancel despite real association.
+Tied candidate sets abstain; empty sets are separately counted. Report coverage, correct/wrong,
+accuracy among predictions, correct fraction of all tables, and pattern agreement for all,
+pilot/main, and support/conflict intersections. Wording/mode copies do not quadruple table counts.
+
+Histogram-only exact lookup and nearest-L1-histogram voting use no new dependencies. Each fold
+holds out every variant/cue of one world; the block version holds out all six label-permutation
+worlds. Ties abstain and absent exact matches are explicit. There is no parameter search. These
+are descriptive cross-validation diagnostics across the fixed manifest, not a pilot-trained model
+promised to generalize to main. An additional in-sample histogram upper bound groups identical
+(A,B,C) full counts and sums each group's largest answer frequency.
+
+Reject a draft if any audited baseline is perfectly correct on its nonempty covered set over the
+full manifest, or if any observed full-table histogram identifies only one answer. V1 fails these
+gates. V2 passes, with a histogram-only upper bound of 50%; all 12 observed histograms have multiple
+possible recorded answers. This finite audit cannot eliminate richer shortcuts. Subgroup or small
+selective successes are disclosed, not suppressed or forced to chance. In particular, profile
+majority retains substantial predictability, and target position is still a possible shortcut.
+These tradeoffs require review before a live pilot; passing the audit is not behavioral validation.
 
 ## Model interface, decoding and truncation
 
@@ -185,7 +209,8 @@ activation replay. Do not save activations now.
 Offline `design` freezes the scientific manifest; `prepare` requires existing pinned tokenizer
 assets and freezes exact **pilot** requests in a new run directory.
 The budget-policy version is `pilot-budget-review-v1`. `freeze-main` is an offline command requiring
-completed pilot evidence and explicit review; it freezes main requests and their cap separately. `inspect` and `analyze` are offline.
+completed pilot evidence and explicit review; it freezes main requests and their cap separately. `inspect` is read-only, including in the presence of recognized interrupted-write debris.
+`analyze` is offline and writes the derived report under the run lock.
 `run --live-qwen --scope pilot|main --max-new N` is the only live path. An omitted live flag gives
 an offline report. No stage automatically advances. Determine executable never-started work and
 validate all cached requests before loading once. `--scope` must match the frozen plan cohort;
@@ -201,6 +226,34 @@ the immutable previous failure/interruption; it makes no model call. It refuses 
 Normal resume then runs the authorized attempt and never-started work. Preserve all earlier attempts.
 An interrupted invocation is retained with a started record and no fabricated finish record.
 Model-load/call counts and bounded-invocation timing are separate from scientific outcomes.
+
+## Interrupted atomic writes: native-only recovery
+
+Historical `operation_tree`/journal/storage functions are unchanged. The native reader accepts only
+canonical request/start/return/failure files and their exact atomic-writer temporary filename shape:
+`{request,started,returned,failed}.json.[a-z0-9_]{8}.tmp`. Unknown files, symlinks, malformed canonical
+JSON/hashes, wrong request/backend identities and contradictory canonical states still fail closed.
+A temporary file is opaque evidence, even if it contains a complete valid JSON return. Never promote it.
+
+A canonical completed return plus leftover recognized debris remains completed and is reused with
+zero model loads if no work remains. Canonical failures remain failed. A temp-only/empty known
+operation folder, a partially written request/start, or a canonical start with only a temporary
+return is conservatively ambiguous. Even a request-only interruption that likely preceded dispatch
+requires explicit recovery/retry; no potentially dispatched attempt is made never-started. Orphan
+dispatch evidence also creates a hold. Unrecognized orphan folders and orphan canonical terminal
+states without a request require forensic review; the tool does not guess their scientific identity.
+
+`recover --reason ...` is offline and takes the run lock. It first freezes a manifest binding the
+plan, operation IDs, canonical hashes, temporary-byte hashes and ambiguity holds, then moves only
+those temporary files into `journal-recovery/.../files/`. Canonical files are never changed. Empty
+orphan folders retain an explicit hold. Recovery intent exists before any move; interrupted moves
+resume against their manifest with no overwriting. Incomplete manifest writes before any move are
+reported as uncommitted recovery intents and preserved, not promoted.
+
+Inspect performs no mutation. Run may reuse canonical returns and execute other never-started work;
+it skips ambiguous attempts. Explicit retry requires recovery to finish first, retains all prior
+evidence, and creates a separate attempt. Ordinary returned wrong/malformed/truncated responses
+remain cached. Recovery never authorizes inference or automatically retries a call.
 
 ## Primary analysis and signs
 
