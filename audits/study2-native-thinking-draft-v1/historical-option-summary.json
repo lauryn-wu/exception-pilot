@@ -1,0 +1,18 @@
+{
+  "counts": {
+    "worlds": 60,
+    "tables": 120,
+    "responses": 480,
+    "by_cohort": {
+      "pilot": 32,
+      "main": 448
+    },
+    "maximum_output_tokens": 1966080
+  },
+  "origin_plan_hash": "7a7ad23ac63d8c06c1e68fd2a1232f159da7f1201ac1d970a07618394cedfc22",
+  "cell_manifest_hash": "472854533a7102588fdf793db317ad03a70abae4ff2c30f99b1482d44bda5a8e",
+  "relations": [
+    "conflict"
+  ],
+  "output_scope": "Separate fresh label-only-final responses; never reuse historical visible responses."
+}

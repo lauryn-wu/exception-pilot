@@ -1,0 +1,28 @@
+{
+  "baseline": "7f78a3338225614535b90a0d520ef6c346282d13",
+  "tracked_file_count": 583,
+  "changed_tracked_files": [],
+  "prior_audit_files": {
+    "audits/study2-native-thinking-draft-v1/sample-tables.md": "549e79bac30aac259f0ac5fcedfee8e583af646ea8ae2cca00842026daef252d",
+    "audits/study2-native-thinking-draft-v1/preservation.json": "12784fb19a397145e92e417f4e1e02ee04dfe588188dd10ae1f0c72ad814b3b8",
+    "audits/study2-native-thinking-draft-v1/cell-manifest.json": "110b858c0aae831f33b97225b2baaedb3cfb4ae94e55fde0d996996eb9182f5e",
+    "audits/study2-native-thinking-draft-v1/focused-tests.txt": "631e0f0d1dff64f28f36c776553b36ea8b0a2e3b2ae46fe218322ee4a6635cd8",
+    "audits/study2-native-thinking-draft-v1/static-checks.json": "8e37b3f5e2ec7cb847166c6dd59fd9a1406a3af15dabfe88169b48d106ae7827",
+    "audits/study2-native-thinking-draft-v1/generator-summary.json": "a30ee135fe2bba63fa5b111bd5893d7d2935a178a8d6c43e9cbef9da03933e7e",
+    "audits/study2-native-thinking-draft-v1/controlled-design.json.gz": "8b7accc2b0cb9bdc8940a6bc7f8f5ba548c7ab087dea2c07c444eda36404839a",
+    "audits/study2-native-thinking-draft-v1/historical-option-summary.json": "de54a91375e215f5b58ad3dfcb2b508fca7d4fbd50f2c4c54ff5b0a2303bb873",
+    "audits/study2-native-thinking-draft-v1/generator-audit.json.gz": "e9369b31201f4f1ee9f03b48b6d03bf1de0dcb75221554013fa32cfd9b47bd58",
+    "audits/study2-native-thinking-draft-v1/constraints.json": "b74abd09b49a7b2bf83862a49cb983a172ee5536438d14a829d436c1474de278"
+  },
+  "prior_audit_files_changed": [],
+  "saved_v5_plan_sha256": "b74c355f91e6ad24a7e3ff58abbe0d162b64bf9ed422a5600ab7a3752eee9500",
+  "exact_scientific_cells_preserved": true,
+  "exact_tables_prompts_seeds_and_schedule_preserved": true,
+  "previous_design_hash": "32a2fd288b229629f462048c4fbb5f4ba489a26d120d08e8a46e2a89ce8e28aa",
+  "current_design_hash": "23825b8d16c1982abfe8100ca3b69cd58569cf82ced4259e17aa621883fedf7d",
+  "previous_code_contract": "bc2c8e180ac9afc1a3c31248d4f4d79615219ed1c05894aa76f26a0975b3cd73",
+  "current_code_contract": "c2c08c4a942674dd32ce74efccc4f9987ec73c88caa142d81173202636adfa42",
+  "zero_model_calls": true,
+  "zero_weight_downloads_loads_or_hashes": true,
+  "zero_paid_calls": true
+}

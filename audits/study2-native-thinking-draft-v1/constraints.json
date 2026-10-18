@@ -1,0 +1,85 @@
+{
+  "validated_unique_final_tables": 240,
+  "final_manifest_cells": 960,
+  "per_table_exact_distractor_class_independence": true,
+  "full_joint_distractor_class_independence": true,
+  "counterbalance": {
+    "pilot": {
+      "worlds": 4,
+      "label_roles": {
+        "C/A/B": 2,
+        "C/B/A": 1,
+        "B/A/C": 1
+      },
+      "target_climate": {
+        "cold": 2,
+        "warm": 2
+      },
+      "doubled_marker": {
+        "X": 2,
+        "Y": 1,
+        "Z": 1
+      },
+      "target_profile": {
+        "0": 1,
+        "1": 1,
+        "2": 1,
+        "3": 1
+      }
+    },
+    "main": {
+      "worlds": 56,
+      "label_roles": {
+        "B/C/A": 10,
+        "C/B/A": 9,
+        "B/A/C": 9,
+        "C/A/B": 8,
+        "A/B/C": 10,
+        "A/C/B": 10
+      },
+      "target_climate": {
+        "cold": 28,
+        "warm": 28
+      },
+      "doubled_marker": {
+        "Y": 19,
+        "Z": 19,
+        "X": 18
+      },
+      "target_profile": {
+        "0": 14,
+        "1": 14,
+        "2": 14,
+        "3": 14
+      }
+    },
+    "all": {
+      "worlds": 60,
+      "label_roles": {
+        "C/A/B": 10,
+        "C/B/A": 10,
+        "B/A/C": 10,
+        "B/C/A": 10,
+        "A/B/C": 10,
+        "A/C/B": 10
+      },
+      "target_climate": {
+        "cold": 30,
+        "warm": 30
+      },
+      "doubled_marker": {
+        "X": 20,
+        "Y": 20,
+        "Z": 20
+      },
+      "target_profile": {
+        "0": 15,
+        "1": 15,
+        "2": 15,
+        "3": 15
+      }
+    }
+  },
+  "changes": "13 rows, target last at 13, background 4/4/4, four unanimous same-climate peers. Identical four joint distractor profiles under each class. Marker counts 2/1/1 per class, not uniform across values. Two fixed cue contexts: within each context target variants change one cell and swap support/conflict. Within a target variant cue contexts swap eight background labels. Third class remains fixed. Four same-climate peers and two conflicting recorded labels cannot all be supported under the historical 4/3/2 totals. Counterbalancing is documented separately; no claim of exact row-position/identifier balance.",
+  "artifact_hash": "1903043f02c45afa5ff29632ac3645591c6a586adf89198f9367ac6864a9d9b0"
+}
