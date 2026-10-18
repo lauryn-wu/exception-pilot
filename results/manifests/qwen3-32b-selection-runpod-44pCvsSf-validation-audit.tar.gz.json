@@ -1,0 +1,62 @@
+{
+  "validation.json": {
+    "bytes": 87093565,
+    "sha256": "8e5553bf5d905ed2ee345f626cab2e1175a31b55004efabe74dffcc5d1036505",
+    "git_blob_sha": "0879a9e82de75e34051db3ce6e18507a42882aca"
+  },
+  "validation-status.json": {
+    "bytes": 363,
+    "sha256": "dc4ab563caab332b8b2a102f846ffa1d932ae539318f6bcc9890bdb15ec66005",
+    "git_blob_sha": "6f09516f17f993530eb05592fe7598e8badc8f47"
+  },
+  "validation-diagnostic.txt": {
+    "bytes": 8721,
+    "sha256": "e98eb65aac78c013858f05521d4b78fc06d99879833ecdb78ec5cd9acf736d92",
+    "git_blob_sha": "c0fb8435538f631f8bafecbf1c663342138d0398"
+  },
+  "validation-compact-summary.txt": {
+    "bytes": 1113,
+    "sha256": "db135021a50578bc975334f99f0e58734c64d13b69e438ff09826fc4f551de52",
+    "git_blob_sha": "9f8658034198daeac1b8dc48298f470ac12ed307"
+  },
+  "logit-difference-diagnostic.txt": {
+    "bytes": 8852,
+    "sha256": "aae746527f7163f8b5c34f556ab9d634b561b3784cd7ddcc94163b4c057a35ac",
+    "git_blob_sha": "68c3f91bb3581658e8af28f1e67e52c4ccc67fcb"
+  },
+  "execution.json": {
+    "bytes": 11198,
+    "sha256": "21afb7d250b4b0d66182a7d27b4f5b2601ce69c1aa0c04def1155949f1a996f6",
+    "git_blob_sha": "b65d6d24a34d175130d339d955d37a7bee9328ed"
+  },
+  "plan.json": {
+    "bytes": 119434,
+    "sha256": "12c0346a1618349477704139216426b905297453e86e157740b6ce3ab78a4f72",
+    "git_blob_sha": "649cdee8d1001503b6216daea45e029ef3cb8b2c"
+  },
+  "code-commit.txt": {
+    "bytes": 41,
+    "sha256": "905b5aee263b05a46e465385fa81fca2549245d319e5aaae3e209ceccfca4674",
+    "git_blob_sha": "783201f16e2d84acc3e50e8feb23b59f30283b22"
+  },
+  "tokenizer-audit.json": {
+    "bytes": 6506,
+    "sha256": "d2baabdb40b55cec908028d33b16ebe8af5fc3f3911c8ecc0e4b60a6daf7cc56",
+    "git_blob_sha": "31c9dd0b39a6bfe3912bbd390f8c41f1220d718d"
+  },
+  "timing-sidecar/report.json": {
+    "bytes": 20251,
+    "sha256": "dd88188b0ddacd6b969b5fbfd10c3dc9514bb1b80aabc7bb132e82956ca23714",
+    "git_blob_sha": "1ed9f004518a1387ed82cd5d4bb926448bea45c9"
+  },
+  "timing-sidecar/report.md": {
+    "bytes": 22300,
+    "sha256": "834ec76f564896289ea1b1580e7d3e8686f037050dd49a85980963d9b72bb3cc",
+    "git_blob_sha": "668732a4c54146447399fbe1b55559e433044433"
+  },
+  "console-logs/pilot-20261014T035943Z.log": {
+    "bytes": 1475,
+    "sha256": "ba06fb9b18beaaa2ac86ebb0c3ae4d58a293a185d9b8fcecbb86f770a2361151",
+    "git_blob_sha": "08608154687f3e06e693232db998fa3296852f69"
+  }
+}

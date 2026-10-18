@@ -1,0 +1,55 @@
+{
+  "budget_policy": "pilot-budget-review-v1",
+  "code_contract": "c2c08c4a942674dd32ce74efccc4f9987ec73c88caa142d81173202636adfa42",
+  "controlled_design_artifact_hash": "23825b8d16c1982abfe8100ca3b69cd58569cf82ced4259e17aa621883fedf7d",
+  "decoding": {
+    "do_sample": true,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "min_p": 0.0,
+    "num_beams": 1,
+    "num_return_sequences": 1,
+    "repetition_penalty": 1.0,
+    "use_cache": true,
+    "renormalize_logits": false
+  },
+  "pilot_budget": 4096,
+  "main_budget": null,
+  "main_budget_status": "AWAITING_COMPLETE_PILOT_AND_EXPLICIT_REVIEW",
+  "controlled": {
+    "worlds": 60,
+    "tables": 240,
+    "responses": 960,
+    "by_cohort": {
+      "pilot": 64,
+      "main": 896
+    },
+    "pilot_maximum_output_tokens": 262144,
+    "main_budget": null,
+    "maximum_output_tokens": null
+  },
+  "historical": {
+    "worlds": 60,
+    "tables": 120,
+    "responses": 480,
+    "by_cohort": {
+      "pilot": 32,
+      "main": 448
+    },
+    "pilot_maximum_output_tokens": 131072,
+    "main_budget": null,
+    "maximum_output_tokens": null
+  },
+  "seed_policy": "Per request deterministic seed in request hash; matched on/off share world/wording seed. CPU and CUDA RNG seeds set before each generation.",
+  "nonthinking_deployment_recommendation": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "min_p": 0
+  },
+  "recommendation_source": "https://huggingface.co/Qwen/Qwen3-32B",
+  "source_checked": "2026-10-18",
+  "historical_greedy_results": "Separate, preserved, never used as native-thinking comparison cache hits.",
+  "remaining": "Pilot inference, real-tokenizer compatibility, pilot budget assessment and main budget freeze are pending. No live inference authorized/executed by this patch."
+}

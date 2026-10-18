@@ -1,0 +1,15 @@
+{
+  "base": "07e4b6552509f955f62d234c7a9ee8a634cf649b",
+  "existing_tracked_files_changed": [],
+  "private_recovered_files_checked": 786,
+  "private_recovered_bytes_unchanged": true,
+  "private_before_manifest_hash": "9ab1dcc64ea175fa6a91372a0059a3d686757309356dd6be34a56e4f29e1f8b7",
+  "scientific_v4_hash": "913f64efa3f12a1a787575c14c7670e072e250d7e8a3690a9957cfa70bb88e78",
+  "scientific_v5_hash": "e545f0a756934f0d5c953db3a1c102146a1616dc2706913cb3537e8a5a6a2c2b",
+  "existing_v1_judge_code_hash": "9105cb63887a5e255c5df5d86dc8793ee9008d8758047bab2246bbb2141ef24f",
+  "private_artifacts_committed": false,
+  "paid_api_calls": 0,
+  "qwen_inference_calls": 0,
+  "weights_downloaded": false,
+  "pre_existing_tracked_files_unchanged": 410
+}

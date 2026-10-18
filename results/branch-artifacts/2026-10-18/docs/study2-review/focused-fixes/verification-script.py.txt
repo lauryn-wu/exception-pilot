@@ -1,0 +1,23 @@
+import hashlib, json, os, pathlib, socket, subprocess, sys, time, unittest
+sys.path.insert(0, os.getcwd())
+from exception_continuation.core import source_hash
+root=pathlib.Path.cwd(); snapshot=pathlib.Path('/tmp/study2-focused-before.json')
+if not snapshot.exists():
+    names=subprocess.check_output(['git','ls-files'],text=True).splitlines()
+    protected=[n for n in names if not n.startswith(('exception_review/','tests/test_automated_review','tests/test_review_focused','docs/study2-review/')) and n!='STUDY2_AUTOMATED_REVIEW_RUNBOOK.md']
+    for folder in ('capability-checks','audits','runs'):
+        protected.extend(str(p.relative_to(root)) for p in (root/folder).rglob('*') if p.is_file())
+    snapshot.write_text(json.dumps(dict(head=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),source_hash=source_hash(),files={n:hashlib.sha256((root/n).read_bytes()).hexdigest() for n in sorted(set(protected))}),indent=2))
+before=json.loads(snapshot.read_text())
+changed=[n for n,h in before['files'].items() if not (root/n).exists() or hashlib.sha256((root/n).read_bytes()).hexdigest()!=h]
+assert not changed,changed
+assert source_hash()==before['source_hash']
+socket.create_connection=lambda *a,**k: (_ for _ in ()).throw(RuntimeError('Offline test network blocked'))
+socket.socket.connect=socket.create_connection
+class Result(unittest.TextTestResult):
+    def __init__(self,*a,**k): super().__init__(*a,**k); self.ids=[]
+    def startTest(self,test): self.ids.append(test.id()); super().startTest(test)
+start=time.monotonic(); r=unittest.TextTestRunner(verbosity=1,resultclass=Result).run(unittest.defaultTestLoader.discover('tests',pattern=os.environ.get('TEST_PATTERN','test*.py')))
+value=dict(tests=r.testsRun,seconds=time.monotonic()-start,failures=[(str(t),s) for t,s in r.failures],errors=[(str(t),s) for t,s in r.errors],skipped=[(str(t),s) for t,s in r.skipped],ids=r.ids,source_hash_before=before['source_hash'],source_hash_after=source_hash(),preserved_files=len(before['files']),changed_preserved_files=changed)
+pathlib.Path(os.environ['RESULT_PATH']).write_text(json.dumps(value,indent=2))
+raise SystemExit(not r.wasSuccessful())

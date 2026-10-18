@@ -1,0 +1,38 @@
+{
+  "base_commit": "40856c439cc4551ecde0380f155d5403ef28f30b",
+  "prior_tracked_files": 481,
+  "intentional_tracked_changes": [
+    "exception_study2_v5_residual/__init__.py",
+    "exception_study2_v5_residual/evidence.py",
+    "exception_study2_v5_residual/planning.py",
+    "exception_study2_v5_residual/policy.py",
+    "exception_study2_v5_residual/workflow.py",
+    "tests/test_study2_residual.py"
+  ],
+  "preserved_tracked_files": 475,
+  "historical": {
+    "/Users/laurynwu/exception-v5-recovery/study2-v5-staged-huwUCkqs": {
+      "files_before": 786,
+      "files_after": 786,
+      "unchanged": true
+    },
+    "/Users/laurynwu/exception-v5-recovery/study2-v5-review-v2-1-live": {
+      "files_before": 639,
+      "files_after": 639,
+      "unchanged": true
+    },
+    "/Users/laurynwu/exception-v5-recovery/study2-v5-review-v2-1-salvage-v2-2": {
+      "files_before": 5,
+      "files_after": 5,
+      "unchanged": true
+    },
+    "/Users/laurynwu/exception-v5-recovery/study2-residual-v1-offline": {
+      "files_before": 5,
+      "files_after": 5,
+      "unchanged": true
+    }
+  },
+  "all_previous_audits_unchanged": true,
+  "scientific_code_and_configs_unchanged": true,
+  "previous_frozen_plan_unchanged": true
+}

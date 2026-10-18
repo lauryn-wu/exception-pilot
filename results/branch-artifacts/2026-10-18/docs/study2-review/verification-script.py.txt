@@ -1,0 +1,16 @@
+import socket,unittest,json,time,hashlib
+from pathlib import Path
+from exception_continuation.core import source_hash
+before=json.loads(Path('/tmp/study2-review-before.json').read_text())
+assert source_hash()==before['source_hash']
+changed=[p for p,h in before['files'].items() if hashlib.sha256(Path(p).read_bytes()).hexdigest()!=h]
+assert not changed,changed
+socket.create_connection=lambda *a,**k: (_ for _ in ()).throw(RuntimeError('Offline test network blocked'))
+socket.socket.connect=socket.create_connection
+class Result(unittest.TextTestResult):
+    def __init__(self,*a,**k): super().__init__(*a,**k); self.ids=[]
+    def startTest(self,test): self.ids.append(test.id()); super().startTest(test)
+start=time.monotonic(); r=unittest.TextTestRunner(verbosity=1,resultclass=Result).run(unittest.defaultTestLoader.discover('tests'))
+result=dict(tests=r.testsRun,seconds=time.monotonic()-start,failures=[(str(t),s) for t,s in r.failures],errors=[(str(t),s) for t,s in r.errors],skipped=[(str(t),s) for t,s in r.skipped],ids=r.ids,source_hash_before=before['source_hash'],source_hash_after=source_hash(),preserved_files=len(before['files']),changed_preserved_files=changed)
+Path('/tmp/study2-review-final-tests.json').write_text(json.dumps(result,indent=2))
+raise SystemExit(not r.wasSuccessful())

@@ -1,0 +1,50 @@
+test_missing_arm_worlds_and_no_eligible_null (test_automated_review.AnalysisTests) ... ok
+test_world_weighted_minus_quarter_not_zero (test_automated_review.AnalysisTests) ... ok
+test_fixed_edit_span_hallucinations_repeats (test_automated_review.BoundaryAndMechanicsTests) ... ok
+test_independent_before_after_cuts_no_edit_fields (test_automated_review.BoundaryAndMechanicsTests) ... ok
+test_mechanical_rules_equal_legacy_without_fake_certifications (test_automated_review.BoundaryAndMechanicsTests) ... ok
+test_edit_special_tokens_and_whole_prefix_class_checks (test_automated_review.FinalSafetyAcceptanceTests) ... ok
+test_http_adapter_single_attempt_no_resend_or_secret_persistence (test_automated_review.FinalSafetyAcceptanceTests) ... ok
+test_keyboard_interrupt_is_terminal_and_resume_does_not_resend (test_automated_review.FinalSafetyAcceptanceTests) ... ok
+test_changed_revision_span_is_terminal_and_whole_bundle_reverified (test_automated_review.FurtherAcceptanceTests) ... ok
+test_default_semantic_evaluation_is_offline (test_automated_review.FurtherAcceptanceTests) ... ok
+test_live_gates_need_credentials_and_no_model_loading (test_automated_review.FurtherAcceptanceTests) ... ok
+test_missing_marker_invalid_truncated_originals_still_reviewed (test_automated_review.FurtherAcceptanceTests) ... ok
+test_returned_wrong_model_refused_and_http_failure_not_latency_sample (test_automated_review.FurtherAcceptanceTests) ... ok
+test_separate_boundaries_integrate_without_fake_edit_metadata (test_automated_review.FurtherAcceptanceTests) ... ok
+test_wrong_source_citations_and_changed_request_are_rejected (test_automated_review.FurtherAcceptanceTests) ... ok
+test_before_answer_without_any_review_and_source_preserved (test_automated_review.IntegrationTests) ... ok
+test_end_to_end_interruption_resume_adjudication_revision_rejection (test_automated_review.IntegrationTests) ... ok
+test_negative_unresolved_and_boundary_states_are_separate (test_automated_review.IntegrationTests) ... ok
+test_rejected_edits_keep_statement_events_and_zero_interventions (test_automated_review.IntegrationTests) ... ok
+test_secondary_failure_does_not_erase_primary (test_automated_review.IntegrationTests) ... ok
+test_source_no_marker_no_normalization (test_automated_review.IntegrationTests) ... ok
+test_config_live_gates_and_secret_redaction (test_automated_review.ProviderTests) ... ok
+test_documented_requests_no_history_tools_and_strict_response_checks (test_automated_review.ProviderTests) ... ok
+test_usage_reasoning_not_double_counted (test_automated_review.ProviderTests) ... ok
+test_eight_pause_full_gate_resume_equal_normal_legacy (test_automated_review.QwenTimingTests) ... ok
+test_import_judge_cli_does_not_load_torch (test_automated_review.QwenTimingTests) ... ok
+test_technical_failure_stops_originals (test_automated_review.QwenTimingTests) ... ok
+test_alignment_unicode_whitespace_repeats_punctuation (test_automated_review.ResolverTests) ... ok
+test_exhaustive_125_combinations_and_permutations (test_automated_review.ResolverTests) ... ok
+test_required_table_pending_and_source_identity (test_automated_review.ResolverTests) ... ok
+test_semantic_fixtures_rubric_labels_not_canned_quality (test_automated_review.ResolverTests) ... ok
+test_strict_output_invalid_not_negative (test_automated_review.ResolverTests) ... ok
+test_completed_branches_remove_impossible_future_requests (test_automated_review.TimingRefinementTests) ... ok
+test_completed_gpu_timer_synchronizes_without_extra_generation (test_automated_review.TimingRefinementTests) ... ok
+test_event_intervention_timing_counts_from_frozen_plans (test_automated_review.TimingRefinementTests) ... ok
+test_alignment_failure_no_revision_operational_failure_no_resampling (test_automated_review.WorkflowTests) ... ok
+test_all_pair_routing_and_adjudication (test_automated_review.WorkflowTests) ... ok
+test_budget_pause_and_ambiguous_recovery_no_resend (test_automated_review.WorkflowTests) ... ok
+test_changed_policy_prompt_schema_and_source_refuse_resume (test_automated_review.WorkflowTests) ... ok
+test_default_offline_zero_calls_and_pending_not_negative (test_automated_review.WorkflowTests) ... ok
+test_one_revision_complete_fixed_bundle_and_edit_rejection (test_automated_review.WorkflowTests) ... ok
+test_payload_allowlists_and_no_future_suffix (test_automated_review.WorkflowTests) ... ok
+test_six_pilot_frozen_first_worlds_full_reuse_and_no_next_stage (test_automated_review.WorkflowTests) ... ok
+test_spending_and_seven_call_ceilings (test_automated_review.WorkflowTests) ... ok
+test_timing_fake_clocks_cache_and_limits (test_automated_review.WorkflowTests) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 22.273s
+
+OK

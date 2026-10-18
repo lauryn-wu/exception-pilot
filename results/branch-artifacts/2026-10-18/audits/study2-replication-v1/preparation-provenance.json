@@ -1,0 +1,8 @@
+{
+  "amendment_hash": "4277097b9204199b6dd1415b342488a318c36862f8cd97f10ae01f6197cf6b66",
+  "code_revision": "40aa1f7c5b61e8862a9c9d0f3768e9880323bbc1",
+  "implementation_hash": "2cf2d7ff25bcb8f2f2b627aaa3b02079a3274695dd19c12c6cde662063cc667d",
+  "inference_calls": 0,
+  "next_stage": "STOP_EXPLICIT_APPROVAL",
+  "artifact_hash": "8cb135e5b4eee82d2527a161d9543f66b5398a54eb5f343d1d476607d2a3844f"
+}

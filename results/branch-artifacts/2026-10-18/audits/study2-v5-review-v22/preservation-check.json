@@ -1,0 +1,30 @@
+{
+  "base_commit": "73f2c079653c1bf956f7ed2e6fdb8479493a231e",
+  "all_preexisting_files_byte_identical": true,
+  "trees": {
+    "tracked": {
+      "files_before": 442,
+      "files_after": 442,
+      "changed_paths": [],
+      "identical": true,
+      "path_sha256_map_digest": "edcfdb7825c3e831d4f477c082d32d7b61cc96a4acd326e95bc521b2dbc2bd4d"
+    },
+    "paid": {
+      "files_before": 639,
+      "files_after": 639,
+      "changed_paths": [],
+      "identical": true,
+      "path_sha256_map_digest": "86b1889ec8017f5741933d476dd17fbdb83997b78c2dbe59c4cbe23d6e895c05"
+    },
+    "originals": {
+      "files_before": 786,
+      "files_after": 786,
+      "changed_paths": [],
+      "identical": true,
+      "path_sha256_map_digest": "a493465b2f82b545201b8fa2b6a4834370b67b485a4db0a8264a65481ecdecc4"
+    }
+  },
+  "no_paid_calls": true,
+  "no_pretrained_qwen_or_gpu_inference": true,
+  "scope": "All 442 previously tracked files, all 639 paid review files, and all 786 files in the staged recovery tree compared to the pre-patch snapshot. New independent salvage outputs are outside both input trees."
+}

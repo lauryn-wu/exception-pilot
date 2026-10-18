@@ -1,0 +1,12 @@
+{
+  "python_ast_files": 11,
+  "runbook_bash_syntax_blocks": 13,
+  "cli_help": {
+    "root": 0,
+    "prepare": 0,
+    "freeze-main": 0,
+    "run": 0,
+    "analyze": 0
+  },
+  "live_commands_executed": 0
+}

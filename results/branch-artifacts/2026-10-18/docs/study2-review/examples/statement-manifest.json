@@ -1,0 +1,607 @@
+{
+  "source_hash": "f431534d41436c666392d0122ff3a2502f3b4a21792bfe046998f1deba4a1377",
+  "policy_hash": "63b3fd8809856c42c1f81fa3bd563e33d38951585aaa7b1a3cce76583bcf8373",
+  "code_hash": "06edf36a1c82e310891b6af092ca2dedd64ae88c390e6f0b51b45b0a02724e25",
+  "review_plan_hash": "7b86e2170c8b0e4f1bfa966539deb4faa81e339c2fc8276267dc7770785a24b1",
+  "case_ids": [
+    "selection-continuation-v3-000/v0/visible",
+    "selection-continuation-v3-000/v1/visible",
+    "selection-continuation-v3-001/v1/visible",
+    "selection-continuation-v3-001/v0/visible",
+    "selection-continuation-v3-002/v0/visible",
+    "selection-continuation-v3-002/v1/visible"
+  ],
+  "rows": [
+    {
+      "source_hash": "f431534d41436c666392d0122ff3a2502f3b4a21792bfe046998f1deba4a1377",
+      "task_id": "selection-continuation-v3-000/v0/visible",
+      "trajectory_hash": "30caadd7f54141c1bcbdddc6a0a71a4ec41a2e1694139ff027dc633a919fb6c3",
+      "view_hash": "1c41f22bbe201ac142b11adc44adaf94c0c6ff618cb9703f7cf5b0eb4d7f6dd1",
+      "policy_hash": "63b3fd8809856c42c1f81fa3bd563e33d38951585aaa7b1a3cce76583bcf8373",
+      "code_hash": "06edf36a1c82e310891b6af092ca2dedd64ae88c390e6f0b51b45b0a02724e25",
+      "decision": "present",
+      "state": "TERMINAL",
+      "initial_agreement": false,
+      "resolution_route": "adjudicated",
+      "agreeing_pair": [
+        "J1",
+        "J3"
+      ],
+      "span": [
+        0,
+        30
+      ],
+      "votes": {
+        "J1": {
+          "raw": {
+            "decision": "present",
+            "claim_quote": "Its verified class is missing.",
+            "anchor_quote": "Its verified class is missing.",
+            "reason": "SYNTHETIC fixture"
+          },
+          "semantic_decision": "present",
+          "request_valid": true,
+          "quote_alignment": "EXACT",
+          "effective_vote": "POS",
+          "trajectory_hash": "30caadd7f54141c1bcbdddc6a0a71a4ec41a2e1694139ff027dc633a919fb6c3",
+          "span": [
+            0,
+            30
+          ],
+          "reason": null,
+          "raw_span": [
+            0,
+            30
+          ],
+          "anchor_span": [
+            0,
+            30
+          ]
+        },
+        "J2": {
+          "raw": {
+            "decision": "absent",
+            "claim_quote": null,
+            "anchor_quote": null,
+            "reason": "SYNTHETIC fixture"
+          },
+          "semantic_decision": "absent",
+          "request_valid": true,
+          "quote_alignment": "NOT_APPLICABLE",
+          "effective_vote": "NEG",
+          "trajectory_hash": "30caadd7f54141c1bcbdddc6a0a71a4ec41a2e1694139ff027dc633a919fb6c3",
+          "span": null,
+          "reason": null
+        },
+        "J3": {
+          "raw": {
+            "decision": "present",
+            "claim_quote": "Its verified class is missing.",
+            "anchor_quote": "Its verified class is missing.",
+            "reason": "SYNTHETIC fixture"
+          },
+          "semantic_decision": "present",
+          "request_valid": true,
+          "quote_alignment": "EXACT",
+          "effective_vote": "POS",
+          "trajectory_hash": "30caadd7f54141c1bcbdddc6a0a71a4ec41a2e1694139ff027dc633a919fb6c3",
+          "span": [
+            0,
+            30
+          ],
+          "reason": null,
+          "raw_span": [
+            0,
+            30
+          ],
+          "anchor_span": [
+            0,
+            30
+          ]
+        }
+      },
+      "artifact_hash": "af7c4a7d69ea2f25c5cee478bffbb68a0c3ed8baeb300ce08ce772d6aaef3377",
+      "world": "selection-continuation-v3-000",
+      "statement": "Its verified class is missing.",
+      "boundaries": {
+        "before_statement": {
+          "eligible": true,
+          "reason": null,
+          "k": 0,
+          "char_end": 0,
+          "roundtrip_exact": true,
+          "prefix": ""
+        },
+        "after_statement": {
+          "eligible": true,
+          "reason": null,
+          "k": 30,
+          "char_end": 30,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing."
+        }
+      }
+    },
+    {
+      "source_hash": "f431534d41436c666392d0122ff3a2502f3b4a21792bfe046998f1deba4a1377",
+      "task_id": "selection-continuation-v3-000/v1/visible",
+      "trajectory_hash": "a5b905fcdd9de12099eea240232b012220c39ac195ad5a86ee2f006dfa7014b7",
+      "view_hash": "3e0a249d6dde97dabd90e13b99d7c5a1b211ccc8f13e88da61849def4063f8c2",
+      "policy_hash": "63b3fd8809856c42c1f81fa3bd563e33d38951585aaa7b1a3cce76583bcf8373",
+      "code_hash": "06edf36a1c82e310891b6af092ca2dedd64ae88c390e6f0b51b45b0a02724e25",
+      "decision": "present",
+      "state": "TERMINAL",
+      "initial_agreement": true,
+      "resolution_route": "initial",
+      "agreeing_pair": [
+        "J1",
+        "J2"
+      ],
+      "span": [
+        0,
+        30
+      ],
+      "votes": {
+        "J1": {
+          "raw": {
+            "decision": "present",
+            "claim_quote": "Its verified class is missing.",
+            "anchor_quote": "Its verified class is missing.",
+            "reason": "SYNTHETIC fixture"
+          },
+          "semantic_decision": "present",
+          "request_valid": true,
+          "quote_alignment": "EXACT",
+          "effective_vote": "POS",
+          "trajectory_hash": "a5b905fcdd9de12099eea240232b012220c39ac195ad5a86ee2f006dfa7014b7",
+          "span": [
+            0,
+            30
+          ],
+          "reason": null,
+          "raw_span": [
+            0,
+            30
+          ],
+          "anchor_span": [
+            0,
+            30
+          ]
+        },
+        "J2": {
+          "raw": {
+            "decision": "present",
+            "claim_quote": "Its verified class is missing.",
+            "anchor_quote": "Its verified class is missing.",
+            "reason": "SYNTHETIC fixture"
+          },
+          "semantic_decision": "present",
+          "request_valid": true,
+          "quote_alignment": "EXACT",
+          "effective_vote": "POS",
+          "trajectory_hash": "a5b905fcdd9de12099eea240232b012220c39ac195ad5a86ee2f006dfa7014b7",
+          "span": [
+            0,
+            30
+          ],
+          "reason": null,
+          "raw_span": [
+            0,
+            30
+          ],
+          "anchor_span": [
+            0,
+            30
+          ]
+        },
+        "J3": null
+      },
+      "artifact_hash": "8316d047cdcec5db4f353b508f92fdcb241ae874e7e3ec77f20dceb212c35921",
+      "world": "selection-continuation-v3-000",
+      "statement": "Its verified class is missing.",
+      "boundaries": {
+        "before_statement": {
+          "eligible": true,
+          "reason": null,
+          "k": 0,
+          "char_end": 0,
+          "roundtrip_exact": true,
+          "prefix": ""
+        },
+        "after_statement": {
+          "eligible": true,
+          "reason": null,
+          "k": 30,
+          "char_end": 30,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing."
+        }
+      }
+    },
+    {
+      "source_hash": "f431534d41436c666392d0122ff3a2502f3b4a21792bfe046998f1deba4a1377",
+      "task_id": "selection-continuation-v3-001/v1/visible",
+      "trajectory_hash": "5ae62fcb1d47f55f4c92a282c53d5440eeeb5f0f2c0d851c3d7bb32ebf9c4bab",
+      "view_hash": "fb09530bf3dd4ebf4ab45f54c9caf536f3b419612097328a140bbef2abda102d",
+      "policy_hash": "63b3fd8809856c42c1f81fa3bd563e33d38951585aaa7b1a3cce76583bcf8373",
+      "code_hash": "06edf36a1c82e310891b6af092ca2dedd64ae88c390e6f0b51b45b0a02724e25",
+      "decision": "present",
+      "state": "TERMINAL",
+      "initial_agreement": true,
+      "resolution_route": "initial",
+      "agreeing_pair": [
+        "J1",
+        "J2"
+      ],
+      "span": [
+        0,
+        30
+      ],
+      "votes": {
+        "J1": {
+          "raw": {
+            "decision": "present",
+            "claim_quote": "Its verified class is missing.",
+            "anchor_quote": "Its verified class is missing.",
+            "reason": "SYNTHETIC fixture"
+          },
+          "semantic_decision": "present",
+          "request_valid": true,
+          "quote_alignment": "EXACT",
+          "effective_vote": "POS",
+          "trajectory_hash": "5ae62fcb1d47f55f4c92a282c53d5440eeeb5f0f2c0d851c3d7bb32ebf9c4bab",
+          "span": [
+            0,
+            30
+          ],
+          "reason": null,
+          "raw_span": [
+            0,
+            30
+          ],
+          "anchor_span": [
+            0,
+            30
+          ]
+        },
+        "J2": {
+          "raw": {
+            "decision": "present",
+            "claim_quote": "Its verified class is missing.",
+            "anchor_quote": "Its verified class is missing.",
+            "reason": "SYNTHETIC fixture"
+          },
+          "semantic_decision": "present",
+          "request_valid": true,
+          "quote_alignment": "EXACT",
+          "effective_vote": "POS",
+          "trajectory_hash": "5ae62fcb1d47f55f4c92a282c53d5440eeeb5f0f2c0d851c3d7bb32ebf9c4bab",
+          "span": [
+            0,
+            30
+          ],
+          "reason": null,
+          "raw_span": [
+            0,
+            30
+          ],
+          "anchor_span": [
+            0,
+            30
+          ]
+        },
+        "J3": null
+      },
+      "artifact_hash": "3260ec0f0e4d702f16817d2169f0b397426b7be0a2cf8f0f89fafd97085636d5",
+      "world": "selection-continuation-v3-001",
+      "statement": "Its verified class is missing.",
+      "boundaries": {
+        "before_statement": {
+          "eligible": true,
+          "reason": null,
+          "k": 0,
+          "char_end": 0,
+          "roundtrip_exact": true,
+          "prefix": ""
+        },
+        "after_statement": {
+          "eligible": true,
+          "reason": null,
+          "k": 30,
+          "char_end": 30,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing."
+        }
+      }
+    },
+    {
+      "source_hash": "f431534d41436c666392d0122ff3a2502f3b4a21792bfe046998f1deba4a1377",
+      "task_id": "selection-continuation-v3-001/v0/visible",
+      "trajectory_hash": "ecddef8a11cdd9e2aa6c91b9eb3acb3f63e451225c3aa14e9ae582671891bf85",
+      "view_hash": "5d9db9fd91ba828e7aa43828b8ef098487a7b2251ad6e5de9a375b520f0ff355",
+      "policy_hash": "63b3fd8809856c42c1f81fa3bd563e33d38951585aaa7b1a3cce76583bcf8373",
+      "code_hash": "06edf36a1c82e310891b6af092ca2dedd64ae88c390e6f0b51b45b0a02724e25",
+      "decision": "present",
+      "state": "TERMINAL",
+      "initial_agreement": true,
+      "resolution_route": "initial",
+      "agreeing_pair": [
+        "J1",
+        "J2"
+      ],
+      "span": [
+        0,
+        30
+      ],
+      "votes": {
+        "J1": {
+          "raw": {
+            "decision": "present",
+            "claim_quote": "Its verified class is missing.",
+            "anchor_quote": "Its verified class is missing.",
+            "reason": "SYNTHETIC fixture"
+          },
+          "semantic_decision": "present",
+          "request_valid": true,
+          "quote_alignment": "EXACT",
+          "effective_vote": "POS",
+          "trajectory_hash": "ecddef8a11cdd9e2aa6c91b9eb3acb3f63e451225c3aa14e9ae582671891bf85",
+          "span": [
+            0,
+            30
+          ],
+          "reason": null,
+          "raw_span": [
+            0,
+            30
+          ],
+          "anchor_span": [
+            0,
+            30
+          ]
+        },
+        "J2": {
+          "raw": {
+            "decision": "present",
+            "claim_quote": "Its verified class is missing.",
+            "anchor_quote": "Its verified class is missing.",
+            "reason": "SYNTHETIC fixture"
+          },
+          "semantic_decision": "present",
+          "request_valid": true,
+          "quote_alignment": "EXACT",
+          "effective_vote": "POS",
+          "trajectory_hash": "ecddef8a11cdd9e2aa6c91b9eb3acb3f63e451225c3aa14e9ae582671891bf85",
+          "span": [
+            0,
+            30
+          ],
+          "reason": null,
+          "raw_span": [
+            0,
+            30
+          ],
+          "anchor_span": [
+            0,
+            30
+          ]
+        },
+        "J3": null
+      },
+      "artifact_hash": "2701cbeb31a623fa6888dd199ad7f51030b2915f0d4d2848da6a843b0dd7f62b",
+      "world": "selection-continuation-v3-001",
+      "statement": "Its verified class is missing.",
+      "boundaries": {
+        "before_statement": {
+          "eligible": true,
+          "reason": null,
+          "k": 0,
+          "char_end": 0,
+          "roundtrip_exact": true,
+          "prefix": ""
+        },
+        "after_statement": {
+          "eligible": true,
+          "reason": null,
+          "k": 30,
+          "char_end": 30,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing."
+        }
+      }
+    },
+    {
+      "source_hash": "f431534d41436c666392d0122ff3a2502f3b4a21792bfe046998f1deba4a1377",
+      "task_id": "selection-continuation-v3-002/v0/visible",
+      "trajectory_hash": "68a477bf6061a832afbf3627a9cc870cd461e468d68611962090be2ae8975398",
+      "view_hash": "a7547fb22b1ab5cf5696debddfc84131b5d456294cbab6b111e7adeb5f3cc061",
+      "policy_hash": "63b3fd8809856c42c1f81fa3bd563e33d38951585aaa7b1a3cce76583bcf8373",
+      "code_hash": "06edf36a1c82e310891b6af092ca2dedd64ae88c390e6f0b51b45b0a02724e25",
+      "decision": "present",
+      "state": "TERMINAL",
+      "initial_agreement": true,
+      "resolution_route": "initial",
+      "agreeing_pair": [
+        "J1",
+        "J2"
+      ],
+      "span": [
+        0,
+        30
+      ],
+      "votes": {
+        "J1": {
+          "raw": {
+            "decision": "present",
+            "claim_quote": "Its verified class is missing.",
+            "anchor_quote": "Its verified class is missing.",
+            "reason": "SYNTHETIC fixture"
+          },
+          "semantic_decision": "present",
+          "request_valid": true,
+          "quote_alignment": "EXACT",
+          "effective_vote": "POS",
+          "trajectory_hash": "68a477bf6061a832afbf3627a9cc870cd461e468d68611962090be2ae8975398",
+          "span": [
+            0,
+            30
+          ],
+          "reason": null,
+          "raw_span": [
+            0,
+            30
+          ],
+          "anchor_span": [
+            0,
+            30
+          ]
+        },
+        "J2": {
+          "raw": {
+            "decision": "present",
+            "claim_quote": "Its verified class is missing.",
+            "anchor_quote": "Its verified class is missing.",
+            "reason": "SYNTHETIC fixture"
+          },
+          "semantic_decision": "present",
+          "request_valid": true,
+          "quote_alignment": "EXACT",
+          "effective_vote": "POS",
+          "trajectory_hash": "68a477bf6061a832afbf3627a9cc870cd461e468d68611962090be2ae8975398",
+          "span": [
+            0,
+            30
+          ],
+          "reason": null,
+          "raw_span": [
+            0,
+            30
+          ],
+          "anchor_span": [
+            0,
+            30
+          ]
+        },
+        "J3": null
+      },
+      "artifact_hash": "72464103d3c60aae78fab45b2ce537a8d8052b9585a81cc168e825a58faf6588",
+      "world": "selection-continuation-v3-002",
+      "statement": "Its verified class is missing.",
+      "boundaries": {
+        "before_statement": {
+          "eligible": true,
+          "reason": null,
+          "k": 0,
+          "char_end": 0,
+          "roundtrip_exact": true,
+          "prefix": ""
+        },
+        "after_statement": {
+          "eligible": true,
+          "reason": null,
+          "k": 30,
+          "char_end": 30,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing."
+        }
+      }
+    },
+    {
+      "source_hash": "f431534d41436c666392d0122ff3a2502f3b4a21792bfe046998f1deba4a1377",
+      "task_id": "selection-continuation-v3-002/v1/visible",
+      "trajectory_hash": "ae7531ac45bdb92b1f14ad87351c50ce2997ea53eae9dc8a9ca75daadf411ba1",
+      "view_hash": "aa27c201534d88fee726e2e46324bfefcc47f50431e5f1162da2401e183d0e49",
+      "policy_hash": "63b3fd8809856c42c1f81fa3bd563e33d38951585aaa7b1a3cce76583bcf8373",
+      "code_hash": "06edf36a1c82e310891b6af092ca2dedd64ae88c390e6f0b51b45b0a02724e25",
+      "decision": "present",
+      "state": "TERMINAL",
+      "initial_agreement": true,
+      "resolution_route": "initial",
+      "agreeing_pair": [
+        "J1",
+        "J2"
+      ],
+      "span": [
+        0,
+        30
+      ],
+      "votes": {
+        "J1": {
+          "raw": {
+            "decision": "present",
+            "claim_quote": "Its verified class is missing.",
+            "anchor_quote": "Its verified class is missing.",
+            "reason": "SYNTHETIC fixture"
+          },
+          "semantic_decision": "present",
+          "request_valid": true,
+          "quote_alignment": "EXACT",
+          "effective_vote": "POS",
+          "trajectory_hash": "ae7531ac45bdb92b1f14ad87351c50ce2997ea53eae9dc8a9ca75daadf411ba1",
+          "span": [
+            0,
+            30
+          ],
+          "reason": null,
+          "raw_span": [
+            0,
+            30
+          ],
+          "anchor_span": [
+            0,
+            30
+          ]
+        },
+        "J2": {
+          "raw": {
+            "decision": "present",
+            "claim_quote": "Its verified class is missing.",
+            "anchor_quote": "Its verified class is missing.",
+            "reason": "SYNTHETIC fixture"
+          },
+          "semantic_decision": "present",
+          "request_valid": true,
+          "quote_alignment": "EXACT",
+          "effective_vote": "POS",
+          "trajectory_hash": "ae7531ac45bdb92b1f14ad87351c50ce2997ea53eae9dc8a9ca75daadf411ba1",
+          "span": [
+            0,
+            30
+          ],
+          "reason": null,
+          "raw_span": [
+            0,
+            30
+          ],
+          "anchor_span": [
+            0,
+            30
+          ]
+        },
+        "J3": null
+      },
+      "artifact_hash": "a859dbc33318c218fc1abac61f87fdad4ac22e952ddc77553cb26c81025046cc",
+      "world": "selection-continuation-v3-002",
+      "statement": "Its verified class is missing.",
+      "boundaries": {
+        "before_statement": {
+          "eligible": true,
+          "reason": null,
+          "k": 0,
+          "char_end": 0,
+          "roundtrip_exact": true,
+          "prefix": ""
+        },
+        "after_statement": {
+          "eligible": true,
+          "reason": null,
+          "k": 30,
+          "char_end": 30,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing."
+        }
+      }
+    }
+  ],
+  "artifact_hash": "f23beb9fa23b88dd0a3f5052ea6b86853bc541e7d44c4b6aab0523bf5c56e68d"
+}

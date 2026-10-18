@@ -1,0 +1,43 @@
+{
+  "hardware": "NVIDIA H100 80GB HBM3",
+  "mode": "LIVE_LOCAL",
+  "measured_pilot_originals": {
+    "visible": {
+      "calls": 16,
+      "seconds": 385.801190829603,
+      "output_tokens": 7006,
+      "input_tokens": 6618
+    },
+    "direct": {
+      "calls": 16,
+      "seconds": 5.189391866326332,
+      "output_tokens": 80,
+      "input_tokens": 6362
+    }
+  },
+  "measured_loader_seconds": [
+    270.9526226131711,
+    202.41476851911284
+  ],
+  "pilot_readouts": {
+    "planned": 112,
+    "returned": 0,
+    "timed_candidate_sequences": 0,
+    "timed_seconds": 0
+  },
+  "remaining_originals": 448,
+  "visible_trajectories": 224,
+  "output_token_ceiling": 917504,
+  "maximum_readouts": 2688,
+  "maximum_candidate_sequences": 8064,
+  "generated_measurement_answers": 0,
+  "edited_continuations": 0,
+  "pilot_matched_generation_seconds": 5473.868157743011,
+  "pilot_matched_scoring_seconds": null,
+  "mean_loader_seconds": 236.68369556614198,
+  "total_two_invocation_seconds": null,
+  "hourly_rate_assumption": 3.99,
+  "generation_only_cost": 6.066870541498504,
+  "total_cost": null,
+  "limitations": "Four examined worlds are a small timing sample. 14x same-condition pilot work is an extrapolation, not a bound. Missing readout timing stays unknown; no fabricated measurement benchmark. Same exact original backend required, batch one BF16 eager Transformers, no quantization, no new technical inference. Storage and idle time extra."
+}

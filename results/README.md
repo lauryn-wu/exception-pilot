@@ -4,6 +4,23 @@ Updated **2026-10-18** with the later Qwen Study 2 results, downstream control e
 
 This update archives existing outputs only. **No model calls or experiment reruns were made.** Experimental implementations remain on their existing branches; this commit does not merge or change them.
 
+## Branch and local-export gap check
+
+A further October 18 audit checked all **18 published experiment/archive branches** against main, including archived member hashes rather than filenames alone. Earlier branches' tracked raw results were already present. The following previously missing local exports are now preserved:
+
+| Run / export | Saved result | Files |
+|---|---|---|
+| Qwen v3 technical validation | **FAILED**; scientific 48-response selection was blocked | [status](reports/study2-qwen-v3-failed-validation/validation-status.json) · [compact diagnostic](reports/study2-qwen-v3-failed-validation/validation-compact-summary.txt) · [full export](archives/study2-validation-audit.tar.gz) · [subset export](archives/qwen3-32b-selection-runpod-44pCvsSf-validation-audit.tar.gz) |
+| Qwen v4 pilot | Technical same-input check passed; **8/48 originals**, incomplete. Four direct answers correct; all four visible responses truncated at 512 tokens | [selection report](reports/study2-v4-pilot/selection-report-v4.json) · [traces](reports/study2-v4-pilot/pilot-traces.txt) · [archive](archives/study2-v4-pilot-backup.tar.gz) |
+| Qwen length diagnostic | **4/4 fresh generations** at 2048 tokens. Four prefix matches and EOS completions; strict parser: one wrong, three invalid, zero correct | [saved report and complete case text](reports/study2-qwen-length-diagnostic/diagnostic-results.json) |
+| Qwen expanded screen | **16/16** exploratory generations. Direct: 8/8 strict-correct. Visible: 2/8 strict-correct, 5/8 strict-valid; separate tolerant parser: 4/8 correct, 8/8 valid. No truncations | [saved report and complete case text](reports/study2-qwen-expanded-screen/screen-results.json) |
+
+Both v3 archives preserve the **same failed validation**, not two experiments: all 12 regular members of the smaller export match members in the larger export. The v4 pilot remains incomplete; the longer diagnostics do not fill or relabel its missing tasks. The two diagnostic JSON reports include case text, but separate complete operation-journal exports were not located. No missing scientific result has been inferred from a passing technical check.
+
+The [branch-artifact index](branch-artifacts/2026-10-18/README.md) preserves 161 previously unarchived audit/preview/documentation files and five context documents, with byte-level source bindings in its [inventory](branch-artifacts/2026-10-18/inventory.json). These are **offline records**, not additional model generations. In particular, the native-thinking draft has no located live results; its main budget still awaits pilot review. Existing scientific code branches remain separate, consistent with the results-and-documentation-only consolidation.
+
+This covers located results in the inspected Git branches and local exports. It cannot certify unexported results on remote machines. Historical DeepSeek-prefix and original conditional stage-2 exports are still not located.
+
 ## October 18 result additions
 
 | Run / export | Returned / planned | Status and scope | Files |

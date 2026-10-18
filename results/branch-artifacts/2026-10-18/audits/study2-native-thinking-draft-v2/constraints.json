@@ -1,0 +1,86 @@
+{
+  "validated_unique_final_tables": 240,
+  "final_manifest_cells": 960,
+  "per_table_exact_distractor_class_independence": false,
+  "full_joint_distractor_class_independence": false,
+  "pooled_six_world_block_joint_independence": true,
+  "full_table_histogram_constant": false,
+  "counterbalance": {
+    "pilot": {
+      "worlds": 4,
+      "label_roles": {
+        "B/C/A": 1,
+        "C/A/B": 2,
+        "C/B/A": 1
+      },
+      "target_climate": {
+        "warm": 1,
+        "cold": 3
+      },
+      "doubled_marker": {
+        "Z": 1,
+        "X": 2,
+        "Y": 1
+      },
+      "target_profile": {
+        "1": 1,
+        "2": 1,
+        "0": 2
+      }
+    },
+    "main": {
+      "worlds": 56,
+      "label_roles": {
+        "A/C/B": 10,
+        "B/C/A": 9,
+        "A/B/C": 10,
+        "B/A/C": 10,
+        "C/A/B": 8,
+        "C/B/A": 9
+      },
+      "target_climate": {
+        "cold": 27,
+        "warm": 29
+      },
+      "doubled_marker": {
+        "X": 22,
+        "Y": 17,
+        "Z": 17
+      },
+      "target_profile": {
+        "2": 11,
+        "0": 16,
+        "1": 17,
+        "3": 12
+      }
+    },
+    "all": {
+      "worlds": 60,
+      "label_roles": {
+        "B/C/A": 10,
+        "C/A/B": 10,
+        "C/B/A": 10,
+        "A/C/B": 10,
+        "A/B/C": 10,
+        "B/A/C": 10
+      },
+      "target_climate": {
+        "warm": 30,
+        "cold": 30
+      },
+      "doubled_marker": {
+        "Z": 18,
+        "X": 24,
+        "Y": 18
+      },
+      "target_profile": {
+        "1": 18,
+        "2": 12,
+        "0": 18,
+        "3": 12
+      }
+    }
+  },
+  "changes": "16 rows, target last at 16; 15 background rows. Ten count blocks: six permutations of 4/5/6, three separate 4/4/7 feature blocks, and 5/5/5; each block crosses all six ABC role assignments. Four unanimous same-climate peers; eight background labels swap across cues with target fixed. Record variants change only target label. Marginal/joint distractor associations remain within tables; raw-class joint independence holds only pooled over each complete six-world label-permutation block. Pilot/main subsets need not be exactly balanced. Counts, parity/remainders, profile-majority and held-out histogram baselines are reported; no exact-chance requirement. Full histograms differ across target flips.",
+  "artifact_hash": "3f5bf097ffa60c0f7c803c0d81ce7c13ce02e7fe0cd0d16fb9a714d492efe0e6"
+}

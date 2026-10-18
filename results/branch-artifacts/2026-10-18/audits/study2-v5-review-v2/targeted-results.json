@@ -1,0 +1,10 @@
+{
+  "tests_run": 46,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "elapsed_seconds": 54.83,
+  "paid_api_calls": 0,
+  "qwen_inference_calls": 0,
+  "transport": "MOCK only; workflow tests block network and LocalBackend construction"
+}

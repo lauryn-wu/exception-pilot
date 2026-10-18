@@ -1,0 +1,69 @@
+{
+  "status": "SYNTHETIC_SOFTWARE_FIXTURE_NOT_MODEL_OUTPUT",
+  "checkpoint_generated_tokens": 32,
+  "tokenizer": "character fixture; not a model tokenizer",
+  "original_prefix_token_ids": [
+    73,
+    116,
+    115,
+    32,
+    118,
+    101,
+    114,
+    105,
+    102,
+    105,
+    101,
+    100,
+    32,
+    99,
+    108,
+    97,
+    115,
+    115,
+    32,
+    105,
+    115,
+    32,
+    109,
+    105,
+    115,
+    115,
+    105,
+    110,
+    103,
+    46,
+    32,
+    67
+  ],
+  "prefix_texts": {
+    "unchanged": "Its verified class is missing. C",
+    "availability_repair": "Its verified class is recorded. C",
+    "meaning_control": "Its verified class is absent. C",
+    "value_repair": "Its verified class is recorded as B. C"
+  },
+  "readout_cue": "\nANSWER:",
+  "candidates": [
+    " A\n",
+    " B\n",
+    " C\n"
+  ],
+  "continuation_input_contract": "original_input_ids + prefix_ids; no new message boundary",
+  "readout_input_contract": "original_input_ids + prefix_ids + cue_ids; disposable separate branch",
+  "continuation_budget": 480,
+  "annotation_example": {
+    "span": [
+      0,
+      30
+    ],
+    "old": "Its verified class is missing.",
+    "reviewer": "SOFTWARE_FIXTURE",
+    "justification": "Illustrative table has B.",
+    "semantic_certified": true,
+    "replacements": {
+      "availability_repair": "Its verified class is recorded.",
+      "meaning_control": "Its verified class is absent.",
+      "value_repair": "Its verified class is recorded as B."
+    }
+  }
+}

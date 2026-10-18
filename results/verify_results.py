@@ -189,6 +189,16 @@ def archive_name_key(name):
 def verify_members(entry, handle):
     expected = read_json(result_path(entry["member_manifest"]))
     require(isinstance(expected, dict), f"Invalid member manifest: {entry['path']}")
+    # October 13 manifests wrap the member map; later manifests store it directly.
+    # Recognize the wrapper by its structure, not a reserved member filename.
+    if isinstance(expected.get("archive"), str):
+        require(set(expected) == {"archive", "members"},
+                f"Invalid wrapped member manifest: {entry['path']}")
+        require(expected["archive"] == entry["path"],
+                f"Member manifest archive binding mismatch: {entry['path']}")
+        expected = expected["members"]
+        require(isinstance(expected, dict),
+                f"Invalid wrapped members: {entry['path']}")
     for name, metadata in expected.items():
         archive_name_key(name)
         validate_metadata(metadata, name)

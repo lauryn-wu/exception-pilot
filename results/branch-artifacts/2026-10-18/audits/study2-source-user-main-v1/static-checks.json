@@ -1,0 +1,7 @@
+{
+  "ast_modules_checked": 9,
+  "runbook_bash_blocks_syntax_checked": 12,
+  "cli_help_exit": 0,
+  "cli_help": "usage: __main__.py [-h] {prepare,inspect,run,archive} ...\n\nOffline preparation/inspection/archive; explicit live flag for 332 main\nqueries only.\n\npositional arguments:\n  {prepare,inspect,run,archive}\n\noptions:\n  -h, --help            show this help message and exit\n",
+  "zero_commands_from_runbook_executed": true
+}

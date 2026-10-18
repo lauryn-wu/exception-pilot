@@ -1,0 +1,104 @@
+{
+  "artifact_hash": "8db8372f3740acbb6b33b9c47eb0e751428e68ea82a892f9d1c22743ab5202d8",
+  "audit_code_contract": "bc2c8e180ac9afc1a3c31248d4f4d79615219ed1c05894aa76f26a0975b3cd73",
+  "v5_plan_hash": "7a7ad23ac63d8c06c1e68fd2a1232f159da7f1201ac1d970a07618394cedfc22",
+  "v5_file_sha256": "b74c355f91e6ad24a7e3ff58abbe0d162b64bf9ed422a5600ab7a3752eee9500",
+  "facts": {
+    "worlds": 60,
+    "pilot_worlds": 4,
+    "remaining_worlds": 56,
+    "both_variants_conflict": true,
+    "one_target_cell_only": true,
+    "target_row_10": true,
+    "background_4_pattern_3_role0_2_role1": true,
+    "ternary_final_labels": true,
+    "role_assignments": {
+      "C/A/B": 10,
+      "A/C/B": 10,
+      "A/B/C": 10,
+      "B/C/A": 10,
+      "C/B/A": 10,
+      "B/A/C": 10
+    },
+    "random_assignment": "Source inspection: earlier make_world assigns transmission/seat_cover/doors independently with rng.choice; v5 independently assigns audit_marker with rng.choice. This does not imply independence in finite rendered tables."
+  },
+  "v5_summary": {
+    "tables": 120,
+    "target_positions": {
+      "10": 120
+    },
+    "same_climate_peer_positions": {
+      "6": 66,
+      "7": 62,
+      "8": 50,
+      "9": 36,
+      "2": 54,
+      "3": 60,
+      "4": 52,
+      "5": 44,
+      "1": 56
+    },
+    "background_counts": {
+      "2/4/3": 20,
+      "3/4/2": 20,
+      "3/2/4": 20,
+      "4/3/2": 20,
+      "4/2/3": 20,
+      "2/3/4": 20
+    },
+    "nonindependent_distractor_tables": 120,
+    "nonindependent_joint_tables": 120,
+    "zero_signed_margin_nonzero_absolute": 11,
+    "zero_signed_margin_with_joint_signal": 12,
+    "mean_distractor_mi": {
+      "transmission": 0.2070709750425932,
+      "seat_cover": 0.26407047022337954,
+      "doors": 0.2797163361871623,
+      "audit_marker": 0.4630116258811848
+    }
+  },
+  "earlier_summary": {
+    "tables": 240,
+    "target_positions": {
+      "5": 22,
+      "6": 24,
+      "8": 20,
+      "7": 18,
+      "9": 38,
+      "10": 22,
+      "1": 20,
+      "2": 26,
+      "4": 32,
+      "3": 18
+    },
+    "same_climate_peer_positions": {
+      "1": 100,
+      "2": 94,
+      "3": 102,
+      "4": 88,
+      "7": 102,
+      "8": 100,
+      "9": 82,
+      "10": 98,
+      "6": 96,
+      "5": 98
+    },
+    "background_counts": {
+      "5/4/0": 120,
+      "4/5/0": 120
+    },
+    "nonindependent_distractor_tables": 240,
+    "nonindependent_joint_tables": 240,
+    "zero_signed_margin_nonzero_absolute": 1,
+    "zero_signed_margin_with_joint_signal": 121,
+    "mean_distractor_mi": {
+      "transmission": 0.09074257677678407,
+      "seat_cover": 0.10367872384639382,
+      "doors": 0.09872876359858708,
+      "audit_marker": 0.0
+    }
+  },
+  "earlier_scope": "Deterministically reconstructed 60 base worlds using the saved v5 seed; both targets and support/conflict. Not represented as saved historical model outcomes. Earlier marker absent; constant placeholder has zero signal.",
+  "counting": "V5: 120 unique world/variant tables; wording and response instructions do not duplicate tables. Earlier: 240 queried-target/background tables. Counts/rates and joint subsets exclude that queried target only.",
+  "model_calls": 0
+}

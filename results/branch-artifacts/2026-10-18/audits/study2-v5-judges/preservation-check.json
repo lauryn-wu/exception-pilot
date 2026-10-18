@@ -1,0 +1,14 @@
+{
+  "base_commit": "a40b120ae0dbe2aa1d4e121d7a83092d92473beb",
+  "base_tracked_files": 390,
+  "unchanged_files": 387,
+  "changed_existing_files": [
+    "QWEN3_STUDY2_V5_RUNBOOK.md",
+    "STUDY2_V5_COMPATIBILITY.md",
+    "STUDY2_V5_WORKLOAD_COST.md"
+  ],
+  "v4_scientific_source_hash": "913f64efa3f12a1a787575c14c7670e072e250d7e8a3690a9957cfa70bb88e78",
+  "v5_scientific_source_hash": "e545f0a756934f0d5c953db3a1c102146a1616dc2706913cb3537e8a5a6a2c2b",
+  "new_judge_code_hash": "9105cb63887a5e255c5df5d86dc8793ee9008d8758047bab2246bbb2141ef24f",
+  "existing_code_tests_configs_protocols_results_preserved": true
+}

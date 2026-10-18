@@ -1,0 +1,65 @@
+{
+  "protocol": "study2-conditional-text-prefix-v4",
+  "phase": "selection",
+  "plan_hash": "a81321346afae903614af39170e5e004bfb0f651fed8de9512a4e1d810e8b2f7",
+  "status": "INCOMPLETE",
+  "returned_originals": 8,
+  "planned_originals": 48,
+  "by_arm": {
+    "direct": {
+      "planned": 24,
+      "returned": 4,
+      "valid": 4,
+      "invalid": 0,
+      "truncated": 0,
+      "missing": 20,
+      "correct": 4,
+      "wrong": 0,
+      "correctness_unknown": 20,
+      "accuracy_valid": 1.0,
+      "accuracy_full_plan_bounds": [
+        0.16666666666666666,
+        1.0
+      ]
+    },
+    "visible": {
+      "planned": 24,
+      "returned": 4,
+      "valid": 0,
+      "invalid": 4,
+      "truncated": 4,
+      "missing": 20,
+      "correct": 0,
+      "wrong": 0,
+      "correctness_unknown": 24,
+      "accuracy_valid": null,
+      "accuracy_full_plan_bounds": [
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "unresolved_operations": {},
+  "technical_same_input_passed": true,
+  "real_model_status": "V4_SAME_INPUT_PASSED",
+  "measurement": "LIVE",
+  "calibration": {
+    "passed": null,
+    "status": "PENDING_COMPLETE_COLLECTION"
+  },
+  "matched_reasoning_errors": {
+    "planned_pairs": 24,
+    "direct_correct_visible_wrong": 0,
+    "matched_pattern_errors": 0,
+    "distinct_pattern_error_worlds": 0
+  },
+  "behavioral_replication": "PENDING",
+  "study_2b_eligibility": {
+    "status": "PENDING_INDEPENDENT_REVIEW",
+    "false_missingness_cases": null,
+    "distinct_eligible_worlds": null,
+    "interpretation": "Passing calibration does not establish an eligible 2B cohort. See the separate v4 review report."
+  },
+  "next_stage": "STOP",
+  "interpretation": "Conditional textual-prefix effects on subsequent answer choices; no identical latent/KV-state or original-suffix reconstruction claim."
+}

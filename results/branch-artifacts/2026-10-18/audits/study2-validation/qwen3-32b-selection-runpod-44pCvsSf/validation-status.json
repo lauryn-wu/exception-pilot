@@ -1,0 +1,8 @@
+{
+  "plan_hash": "ed0dcd3253fa712741a2ffa3edafb049451a414ba9e66b2e99be71bee9373a83",
+  "validation_hash": "f4c54dd05108b923ebec12d9b1af96108abcd1a0860b682621f5286fe6c50b9f",
+  "real_model_status": "FAILED",
+  "per_intervention_validation": "PENDING",
+  "mode": "LIVE_LOCAL",
+  "artifact_hash": "3a036395ea8f4a912484830c368e9d2e9b2f1250f02f5dc5934907574bc2d09d"
+}

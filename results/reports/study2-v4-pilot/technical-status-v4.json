@@ -1,0 +1,9 @@
+{
+  "protocol": "study2-conditional-text-prefix-v4",
+  "plan_hash": "a81321346afae903614af39170e5e004bfb0f651fed8de9512a4e1d810e8b2f7",
+  "technical_hash": "efb1a4c5a42d702624ebb9abd6cb4dbe5e013c1db4cb38c6f3c5cf1bd8fedcca",
+  "technical_same_input_passed": true,
+  "measurement": "LIVE",
+  "real_model_status": "V4_SAME_INPUT_PASSED",
+  "artifact_hash": "53ab91c8952c757dc049217ed195f015cff74f832bb485ac31340582daac67cd"
+}

@@ -1,0 +1,39 @@
+{
+  "base_commit": "2ffbc4779e5bd3a96c86856324faa4f9c8cd607c",
+  "prior_tracked_files": 431,
+  "unchanged_prior_tracked_files": 424,
+  "modified_prior_files": [
+    "STUDY2_V5_JUDGE_V2_RUNBOOK.md",
+    "exception_study2_v5_review_v2/__init__.py",
+    "exception_study2_v5_review_v2/__main__.py",
+    "exception_study2_v5_review_v2/candidates.py",
+    "exception_study2_v5_review_v2/controlled.py",
+    "exception_study2_v5_review_v2/policy.py",
+    "exception_study2_v5_review_v2/workflow.py"
+  ],
+  "unexpected_changes": [],
+  "original_audit_files_preserved": {
+    "audits/study2-v5-review-v2/AUDIT.md": "43dbb3b01818bb2395862d7ca7b7bcf9fe8d57f21c75c6d016c931cf24d67c38",
+    "audits/study2-v5-review-v2/controlled-evaluation-provenance.json": "ae82000243b94d925153d0a77091b137aede7b49997c5db9d6cd3f242bbd5d32",
+    "audits/study2-v5-review-v2/controlled-results.json": "fd7a85d9f86edbdb95b69884f2cfe533bb18d0730d6c96d008e01d665da1b104",
+    "audits/study2-v5-review-v2/full-offline-tests.txt": "8edfd024dced0fa0da80f8467fd84f196caa9a30564664ca093d167b7c1513d8",
+    "audits/study2-v5-review-v2/offline-results.json": "c50de222dc371ed1820b7841ad79ffd064c574664de21d7625a2b4e0983e323e",
+    "audits/study2-v5-review-v2/preservation-check.json": "2b691dadd644bf256f8eebcd82e58f822df50d5ad8a90e7f8a7dd992c95e3542",
+    "audits/study2-v5-review-v2/run_full_offline.py": "2ff1d8be0814fac44218f3e5c7c8438e3cd9d414f611580c7c1bba7d0b0f307f",
+    "audits/study2-v5-review-v2/targeted-offline-tests.txt": "150b4aed51f897a9513b7c768177a25531bbae896e310d48d94bd5af3b60c4d8",
+    "audits/study2-v5-review-v2/targeted-results.json": "143a58cb1f4b7d3de54204838350004f8347056f30931355e93a39b77641e362"
+  },
+  "private_files_verified": 786,
+  "private_hash_map_digest": "a493465b2f82b545201b8fa2b6a4834370b67b485a4db0a8264a65481ecdecc4",
+  "private_files_byte_identical": true,
+  "frozen_v4_source_hash": "913f64efa3f12a1a787575c14c7670e072e250d7e8a3690a9957cfa70bb88e78",
+  "frozen_v5_source_hash": "e545f0a756934f0d5c953db3a1c102146a1616dc2706913cb3537e8a5a6a2c2b",
+  "unchanged_semantic_and_shared_files": {
+    "exception_study2_v5_review_v2/CODEBOOK.md": "a443166d66775ceed42b8a60b5c852142ca2e19892969da71302b028b0e963a5",
+    "exception_study2_v5_review_v2/decisions.py": "2f0ec00f6a2645ee0d3d8c21fcbe9500c193748bc8d26d1dce27680904df4a44",
+    "exception_study2_v5/review/workflow.py": "b24563a83f4bd690915b1dcebad6e41cee4c364ddfa00b10dd227cdee279c692",
+    "exception_review/journal.py": "16fefcc74e318d3b5e1711753ef69d72cfee0cc06cbdd0227556cce6615e3ab2",
+    "exception_review/providers.py": "0fefa6e484dd6a47cbfac69a6bc05d39babf75abcc3905154b82c592b48e9631",
+    "tests/test_study2_v5_review_v2.py": "c713412670585ea4986fe2c1c1c68658074da06a6a83c9a851166fdddf2ad0a0"
+  }
+}

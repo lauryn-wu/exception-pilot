@@ -1,0 +1,43 @@
+test_actual_tokenizer_empty_block_and_saved_prefix (tests.test_study2_v4.Offline.test_actual_tokenizer_empty_block_and_saved_prefix) ... ok
+test_ambiguous_and_failed_operations_never_resend (tests.test_study2_v4.Offline.test_ambiguous_and_failed_operations_never_resend) ... ok
+test_fixed_readouts_no_generation_future_tokens_and_later_failure (tests.test_study2_v4.Offline.test_fixed_readouts_no_generation_future_tokens_and_later_failure) ... huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+ok
+test_fresh_machine_config_refuses_overwrite_and_preserves_science (tests.test_study2_v4.Offline.test_fresh_machine_config_refuses_overwrite_and_preserves_science) ... ok
+test_full_mock_smoke (tests.test_study2_v4.Offline.test_full_mock_smoke) ... ok
+test_gpu_sync_timing_does_not_change_operations (tests.test_study2_v4.Offline.test_gpu_sync_timing_does_not_change_operations) ... ok
+test_journal_terminal_identity_and_workload_manifest_rejected (tests.test_study2_v4.Offline.test_journal_terminal_identity_and_workload_manifest_rejected) ... ok
+test_model_config_source_segregation_and_no_legacy_spoof (tests.test_study2_v4.Offline.test_model_config_source_segregation_and_no_legacy_spoof) ... ok
+test_negative_statements_keep_before_answer_and_no_cases (tests.test_study2_v4.Offline.test_negative_statements_keep_before_answer_and_no_cases) ... ok
+test_pilot_order_cache_complete_and_timed_parity (tests.test_study2_v4.Offline.test_pilot_order_cache_complete_and_timed_parity) ... ok
+test_real_same_input_failure_blocks_and_preserves (tests.test_study2_v4.Offline.test_real_same_input_failure_blocks_and_preserves) ... ok
+test_review_budget_pause_policy_change_confirmation_lock (tests.test_study2_v4.Offline.test_review_budget_pause_policy_change_confirmation_lock) ... ok
+test_source_rejects_false_gate_flag_even_with_new_seal (tests.test_study2_v4.Offline.test_source_rejects_false_gate_flag_even_with_new_seal) ... ok
+test_technical_same_input_passes_despite_original_divergence (tests.test_study2_v4.Offline.test_technical_same_input_passes_despite_original_divergence) ... ok
+test_v4_judges_edits_events_interventions_and_independent_arm_failure (tests.test_study2_v4.Offline.test_v4_judges_edits_events_interventions_and_independent_arm_failure) ... ok
+test_v4_semantic_evaluation_budget_cache_and_separation (tests.test_study2_v4.Offline.test_v4_semantic_evaluation_budget_cache_and_separation) ... ok
+test_each_same_input_failure_dimension (tests.test_study2_v4.PureTests.test_each_same_input_failure_dimension) ... ok
+test_full_vocabulary_size_required_for_real_profile (tests.test_study2_v4.PureTests.test_full_vocabulary_size_required_for_real_profile) ... ok
+test_same_input_logit_shift_reported_not_gated (tests.test_study2_v4.PureTests.test_same_input_logit_shift_reported_not_gated) ... ok
+test_scientific_design_and_prompts_unchanged (tests.test_study2_v4.PureTests.test_scientific_design_and_prompts_unchanged) ... ok
+test_v3_judge_logic_reused_without_monkeypatch (tests.test_study2_v4.PureTests.test_v3_judge_logic_reused_without_monkeypatch) ... ok
+test_world_weighting_independent_arms_unknown_bounds (tests.test_study2_v4.PureTests.test_world_weighting_independent_arms_unknown_bounds) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 26.265s
+
+OK
+{
+  "tests": 22,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "seconds": 26.33538116607815,
+  "passed": true
+}

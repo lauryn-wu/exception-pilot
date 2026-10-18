@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "base_main": "abf5fd4f834d443f872e2bf7a4c573b4732f86cf",
+  "prior_tracked_files_unchanged_except_catalog_and_verifier": 503,
+  "explicit_updated_files": [
+    "README.md",
+    "results/BRANCH_STATUS.md",
+    "results/README.md",
+    "results/SHA256SUMS",
+    "results/VERIFY.md",
+    "results/manifest.json",
+    "results/verify_results.py"
+  ],
+  "prior_archive_entries_unchanged": 46,
+  "prior_run_snapshot_entries_unchanged": 39,
+  "prior_supplemental_entries_unchanged": 83,
+  "new_branch_files_byte_identical_to_recorded_git_blobs": 161,
+  "source_branch_refs_unchanged": 18,
+  "archive_verification": {
+    "passed": true,
+    "archive_containers": 49,
+    "regular_members": 25387
+  },
+  "verifier_regressions": {
+    "run": 8,
+    "passed": 8,
+    "failed": 0
+  },
+  "live_model_calls": 0,
+  "scientific_reanalysis": false,
+  "implementation_branches_merged": false
+}

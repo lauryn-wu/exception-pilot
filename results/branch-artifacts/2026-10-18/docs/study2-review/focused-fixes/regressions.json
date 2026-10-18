@@ -1,0 +1,33 @@
+{
+  "tests": 20,
+  "seconds": 11.040466333,
+  "failures": [],
+  "errors": [],
+  "skipped": [],
+  "ids": [
+    "test_review_focused.ArmCoverageTests.test_count_identities_partial_syntax_replay_and_missing",
+    "test_review_focused.ArmCoverageTests.test_interrupted_scoring_retains_returned_but_unassessed",
+    "test_review_focused.ArmCoverageTests.test_secondary_arm_failure_preserves_primary_and_zero_case_null",
+    "test_review_focused.EditSemanticTests.test_actual_edit_cli_opt_in_and_separate_frozen_stage",
+    "test_review_focused.EditSemanticTests.test_all_pass_judges_report_false_approvals_not_consensus_quality",
+    "test_review_focused.EditSemanticTests.test_complete_fixtures_and_independent_criterion_labels",
+    "test_review_focused.EditSemanticTests.test_oracle_and_false_rejection_labels_are_independent",
+    "test_review_focused.EditSemanticTests.test_uncertain_malformed_refused_and_partial_coverage",
+    "test_review_focused.EventCountingTests.test_completed_events_cache_reuse_actual_journals_and_cli",
+    "test_review_focused.EventCountingTests.test_event_report_rejects_different_source",
+    "test_review_focused.EventCountingTests.test_no_eligible_statement_cuts_and_empty_request",
+    "test_review_focused.EventCountingTests.test_one_both_and_conditional_reference_counts",
+    "test_review_focused.FixedTimingTests.test_completed_untimed_legacy_is_not_wholly_remaining",
+    "test_review_focused.FixedTimingTests.test_equal_legacy_artifacts_counts_and_calls_cache_reuse",
+    "test_review_focused.FixedTimingTests.test_keyboard_interruption_report_and_explicit_cli",
+    "test_review_focused.FixedTimingTests.test_scoring_failure_partial_actuals_and_no_resend",
+    "test_review_focused.SemanticSchedulingTests.test_actual_cli_wall_boundary_and_cache_resume",
+    "test_review_focused.SemanticSchedulingTests.test_cli_rejects_invalid_wall_limits_before_requests",
+    "test_review_focused.SemanticSchedulingTests.test_semantic_interruption_report_and_no_resend",
+    "test_review_focused.SemanticSchedulingTests.test_wall_request_and_spend_budgets_are_independent"
+  ],
+  "source_hash_before": "31c749811a37fc77cebd6bf6878eaa510306865347b374acc0f3099c5e261149",
+  "source_hash_after": "31c749811a37fc77cebd6bf6878eaa510306865347b374acc0f3099c5e261149",
+  "preserved_files": 272,
+  "changed_preserved_files": []
+}

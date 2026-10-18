@@ -1,0 +1,11 @@
+{
+  "tests_run": 39,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "elapsed_seconds": 62.51,
+  "network_blocked_in_workflow_and_salvage_tests": true,
+  "paid_calls": 0,
+  "pretrained_qwen_inference": 0
+}

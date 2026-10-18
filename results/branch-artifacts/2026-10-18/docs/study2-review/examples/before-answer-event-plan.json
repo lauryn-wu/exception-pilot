@@ -1,0 +1,370 @@
+{
+  "source_path": "/private/tmp/study2-review-demo-final-v3/source",
+  "source_hash": "f431534d41436c666392d0122ff3a2502f3b4a21792bfe046998f1deba4a1377",
+  "code_hash": "06edf36a1c82e310891b6af092ca2dedd64ae88c390e6f0b51b45b0a02724e25",
+  "statement_manifest": null,
+  "kind": "before_answer",
+  "rows": [
+    {
+      "task_id": "selection-continuation-v3-000/v0/visible",
+      "trajectory_hash": "30caadd7f54141c1bcbdddc6a0a71a4ec41a2e1694139ff027dc633a919fb6c3",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-000/v1/visible",
+      "trajectory_hash": "a5b905fcdd9de12099eea240232b012220c39ac195ad5a86ee2f006dfa7014b7",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-001/v1/visible",
+      "trajectory_hash": "5ae62fcb1d47f55f4c92a282c53d5440eeeb5f0f2c0d851c3d7bb32ebf9c4bab",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-001/v0/visible",
+      "trajectory_hash": "ecddef8a11cdd9e2aa6c91b9eb3acb3f63e451225c3aa14e9ae582671891bf85",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-002/v0/visible",
+      "trajectory_hash": "68a477bf6061a832afbf3627a9cc870cd461e468d68611962090be2ae8975398",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-002/v1/visible",
+      "trajectory_hash": "ae7531ac45bdb92b1f14ad87351c50ce2997ea53eae9dc8a9ca75daadf411ba1",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-003/v0/visible",
+      "trajectory_hash": "b181a626eef1a48ab09384d6144ccf3e121cc2a5aacf658846ff83ceb0fa5c52",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-003/v1/visible",
+      "trajectory_hash": "b58fc25c159e32743d9aeb82e6e25dbf7cf1e771d9c9cedd180e116e21825184",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-004/v0/visible",
+      "trajectory_hash": "16ae1b49dfd79eb26428143f5dbec3fb573a1b0611ee9a103facdb9ed1970d3b",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-004/v1/visible",
+      "trajectory_hash": "1543f4c6f9b1ffb38e5f85b0009cae92f5a9caf7e1601c03cd7edbf66779760e",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-005/v0/visible",
+      "trajectory_hash": "062c5ad352cfd71dcf14de189429af5c00ef6b9a1e970cc75f3f5e257ff13cd2",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-005/v1/visible",
+      "trajectory_hash": "0043769ddb57c579f0096f5192db3e3c69a00f7b2857d14b3a578bcbb552ee95",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-006/v1/visible",
+      "trajectory_hash": "f9b04af0df8540b14e082b39ff2689efda2d05156295b9bce497732106120b63",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-006/v0/visible",
+      "trajectory_hash": "31bb86af3cc9ffadf817b41dce7400c886df724a3ff75d7dedf75e9b7a14eed9",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-007/v1/visible",
+      "trajectory_hash": "b111cdb32b58e60929d56884f8b781cddb2321e6f588b0b0950478f480e0ab91",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-007/v0/visible",
+      "trajectory_hash": "dd23a13aedc4f526a364ffed0527b186834e508c2c6e80113ac4d366a6e3811b",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-008/v0/visible",
+      "trajectory_hash": "9ce7e500ea3d6da051a2693f6802a4631ab590f743bca2e852f309df4ed8cc73",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-008/v1/visible",
+      "trajectory_hash": "e1641c118a94bef953281e46789b83dbe5572e8a67e109773f2e469a3f007594",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-009/v1/visible",
+      "trajectory_hash": "14de6431f7ec02f1555d2a8aaf31f4deaacdbca3bbbc95ac7aaab498b26b9113",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-009/v0/visible",
+      "trajectory_hash": "d385b574d3f0039751f72521cbba8f24f1c72e07c8e5bbab99b1bf020878329e",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-010/v0/visible",
+      "trajectory_hash": "306f014cdd4b905320908efcd6e17b1de4c79d99a2eb41a0cb823fa953fcaf86",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-010/v1/visible",
+      "trajectory_hash": "882714b3a38f1d524b951af223148d4e5c91e37d25629d71b72b452b8be1251b",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-011/v1/visible",
+      "trajectory_hash": "2079df295f7adf20ff236b78557a3b6393612daa0376d81900908b98c1f61f8a",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    },
+    {
+      "task_id": "selection-continuation-v3-011/v0/visible",
+      "trajectory_hash": "37ea81b098937d9a87a9296c818ed97dd33c70e706121a020c58559849c413a2",
+      "cuts": [
+        {
+          "event": "before_answer",
+          "eligible": true,
+          "reason": null,
+          "k": 182,
+          "char_end": 182,
+          "roundtrip_exact": true,
+          "prefix": "Its verified class is missing. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. Consider the table carefully. \n"
+        }
+      ]
+    }
+  ],
+  "artifact_hash": "63d04dd2e542ea21a4424c76b4af2cd496b6301a5bd0d9ec8653561a1c8e1f8d"
+}

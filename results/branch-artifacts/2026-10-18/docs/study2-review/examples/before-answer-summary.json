@@ -1,0 +1,66 @@
+{
+  "source_hash": "f431534d41436c666392d0122ff3a2502f3b4a21792bfe046998f1deba4a1377",
+  "event_plan_hash": "63d04dd2e542ea21a4424c76b4af2cd496b6301a5bd0d9ec8653561a1c8e1f8d",
+  "measurements_hash": "11cb831ffc160e416c520338ed3b53260d6e78ba08f915a1a34388a9defb524f",
+  "summary": {
+    "version": "event-checkpoints-v1",
+    "secondary": true,
+    "real_model_status": "PENDING",
+    "coverage": {
+      "before_statement": {
+        "planned": 0,
+        "eligible": 0,
+        "replay_valid": 0,
+        "measured": 0,
+        "unavailable_reasons": {}
+      },
+      "after_statement": {
+        "planned": 0,
+        "eligible": 0,
+        "replay_valid": 0,
+        "measured": 0,
+        "unavailable_reasons": {}
+      },
+      "before_answer": {
+        "planned": 24,
+        "eligible": 24,
+        "replay_valid": 24,
+        "measured": 24,
+        "unavailable_reasons": {}
+      }
+    },
+    "checkpoint_means": {
+      "before_answer": {
+        "estimate": 0.0,
+        "worlds": 12,
+        "bootstrap_95": [
+          -0.18750000000000006,
+          0.22499999999999964
+        ],
+        "world_values": {
+          "selection-continuation-v3-000": -0.44999999999999996,
+          "selection-continuation-v3-001": 0.4499999999999995,
+          "selection-continuation-v3-002": 0.4499999999999995,
+          "selection-continuation-v3-003": 4.440892098500626e-16,
+          "selection-continuation-v3-004": 4.440892098500626e-16,
+          "selection-continuation-v3-005": -0.44999999999999996,
+          "selection-continuation-v3-006": 4.440892098500626e-16,
+          "selection-continuation-v3-007": -0.44999999999999996,
+          "selection-continuation-v3-008": 0.4499999999999995,
+          "selection-continuation-v3-009": 0.4499999999999995,
+          "selection-continuation-v3-010": -0.44999999999999996,
+          "selection-continuation-v3-011": 4.440892098500626e-16
+        },
+        "degenerate_interval": false
+      }
+    },
+    "after_minus_before_statement": {
+      "estimate": null,
+      "worlds": 0,
+      "bootstrap_95": null
+    },
+    "trajectories_with_any_failed_checkpoint": 0,
+    "interpretation": "Secondary event-conditioned answer preferences; fixed 64-minus-0 remains primary."
+  },
+  "artifact_hash": "0979d994acec7593aff6272da5a92e6dd86436f0b88b6d1a1e42278792e7161b"
+}

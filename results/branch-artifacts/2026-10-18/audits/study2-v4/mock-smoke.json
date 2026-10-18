@@ -1,0 +1,36 @@
+{
+  "measurement": "MOCK",
+  "live_model_status": "PENDING",
+  "technical": {
+    "status": "TECHNICAL_COMPLETE",
+    "measurement": "MOCK",
+    "technical_same_input_passed": true,
+    "real_model_status": "PENDING",
+    "next_stage": "STOP"
+  },
+  "pilot": {
+    "status": "PAUSED",
+    "returned_originals": 8,
+    "planned_originals": 48,
+    "next_stage": "STOP",
+    "technical_same_input_passed": true,
+    "measurement": "MOCK"
+  },
+  "collection": {
+    "status": "COMPLETE",
+    "returned_originals": 48,
+    "planned_originals": 48,
+    "next_stage": "STOP",
+    "technical_same_input_passed": true,
+    "measurement": "MOCK"
+  },
+  "generation_calls_at_eight_pause": 41,
+  "originals_not_resampled": true,
+  "fixed_readout_rows": 24,
+  "event_rows": 24,
+  "frozen_cases": 5,
+  "judge_calls": 29,
+  "report_status": "COMPLETE",
+  "divergent_fresh_controls": 5,
+  "v4_source_hash": "913f64efa3f12a1a787575c14c7670e072e250d7e8a3690a9957cfa70bb88e78"
+}

@@ -1,0 +1,638 @@
+{
+  "status": "EVIDENCE_ONLY_PREVIEW_NOT_A_CHILD_PLAN",
+  "baseline": "75d2fd03d8a9bfdf745d313f81d6b7dd504d6f71",
+  "code_contract": "205656521aa4aa5fe30bfec3f54eb1ac365520c33a4599a7b176238ef7c64c38",
+  "inventory": {
+    "present": 8,
+    "missing": 4,
+    "queries": 12,
+    "main_planned": 0,
+    "maximum_calls": 12,
+    "maximum_output_tokens": 192
+  },
+  "parent_plan_hash": "96102449686561c92f3be4581cf97953568c65e48ac0d95e5589ebc88431f1db",
+  "parent_artifacts_hash": "1de950bb54ce7c64243f76cf5a415fdfe6bc4eebc7053d408992fcc714bf65ca",
+  "archive_sha256": "ee1ffa85ca03f44562226637a671e388c753ee61bbae75c057858e0369622d59",
+  "parent_measurement_mode": "LIVE_LOCAL",
+  "parent_gate": {
+    "status": "FAILED",
+    "blocked_main": true,
+    "failed_or_unresolved": [
+      "v5/source-report-v2/cde4f573085efe05f0747e6125882b3eef29943e27d58ca705835bd0f0d192cb",
+      "v5/source-report-v2/2008f6b687027e73f5c643a2b17e2d0fb56eda2891d7eefddd57a9c1d9aa5f01",
+      "v5/source-report-v2/9ecbb0b49b95f5924d248feb60cffb29fcb5a170646ffcb72ab7b62e44b3fbc2",
+      "v5/source-report-v2/707185d144ee00b1c8ad45e950a518fdfd6f188e8d5e2afb302de1bf10f48135"
+    ]
+  },
+  "actual_parent_counts": {
+    "returned": 12,
+    "present_correct": 8,
+    "missing_correct": 0,
+    "failed": 0,
+    "ambiguous": 0,
+    "main_records": 0
+  },
+  "checks": {
+    "container_hash": true,
+    "contained_file_identities": true,
+    "all_sealed_artifacts": true,
+    "request_dispatch_bindings": true,
+    "original_report_gate": true,
+    "source_binding": true
+  },
+  "limitations": [
+    "Pinned tokenizer directory is empty; pinned transformers environment metadata is absent.",
+    "Original v2 scores preserved from its authenticated report; no real-tokenizer score replay this turn.",
+    "New bridge token IDs and real child plan not generated; RunPod prepare must validate the actual pinned tokenizer before loading weights."
+  ],
+  "real_tokenizer_integration": "NOT_TESTED_ASSETS_UNAVAILABLE",
+  "live_pilot": "NOT_RUN",
+  "model_loads": 0,
+  "inference_calls": 0,
+  "cases": [
+    {
+      "parent_query_id": "v5/source-report-v2/4440b3d41ee22855c06cc28878c8055b9df6109316734e6bf9ef9edbdb900f69",
+      "parent_query_hash": "4440b3d41ee22855c06cc28878c8055b9df6109316734e6bf9ef9edbdb900f69",
+      "world": "staged-v5-000",
+      "variant": 0,
+      "task_id": "staged-v5-000/v0/original/visible",
+      "kind": "calibration_present",
+      "target_plate": "V5T9NUGW",
+      "expected": "C",
+      "checkpoint": 0,
+      "parent_rows": {
+        "staged-v5-000/v0/original/visible": "067fcebfe1174bd7d4356be97d5bffe4c47289602a9312639a8d56d4e84e0182"
+      },
+      "input_hash": "3bffc138ba99ddbb501f30fa52146d81effa56749c4794f839c33b69d73951c1",
+      "raw": {
+        "tokens": [
+          34,
+          1,
+          151645
+        ],
+        "stopped": true,
+        "text": "C\"",
+        "next_token_logits": {},
+        "finish": "eos"
+      },
+      "original_frozen_score": {
+        "parser_version": "first-closed-quoted-field-four-labels-v2",
+        "field_complete": true,
+        "field_valid": true,
+        "valid": true,
+        "field_text": "C",
+        "field_value": "C",
+        "closing_quote_offset": 1,
+        "trailing_text": "",
+        "answer": "C",
+        "correct": true,
+        "diagnostic_label": "C",
+        "category": "C",
+        "eos_observed": true,
+        "generation_length_stop": false,
+        "token_count": 3,
+        "metadata_errors": []
+      }
+    },
+    {
+      "parent_query_id": "v5/source-report-v2/9145061c646bd294bdeed6e7703543f46902500ecbd08274c44e3fdb0be38dc6",
+      "parent_query_hash": "9145061c646bd294bdeed6e7703543f46902500ecbd08274c44e3fdb0be38dc6",
+      "world": "staged-v5-000",
+      "variant": 1,
+      "task_id": "staged-v5-000/v1/original/visible",
+      "kind": "calibration_present",
+      "target_plate": "V5T9NUGW",
+      "expected": "A",
+      "checkpoint": 0,
+      "parent_rows": {
+        "staged-v5-000/v1/original/visible": "1986507dc5579d432f052210ddec062ed353e49fc4bdbd091017abdff338b736"
+      },
+      "input_hash": "c079b2be937b98b9c41200c775f0ce7127b4e4079a5d76ded5a7a14cd2146ad7",
+      "raw": {
+        "tokens": [
+          32,
+          1,
+          151645
+        ],
+        "stopped": true,
+        "text": "A\"",
+        "next_token_logits": {},
+        "finish": "eos"
+      },
+      "original_frozen_score": {
+        "parser_version": "first-closed-quoted-field-four-labels-v2",
+        "field_complete": true,
+        "field_valid": true,
+        "valid": true,
+        "field_text": "A",
+        "field_value": "A",
+        "closing_quote_offset": 1,
+        "trailing_text": "",
+        "answer": "A",
+        "correct": true,
+        "diagnostic_label": "A",
+        "category": "A",
+        "eos_observed": true,
+        "generation_length_stop": false,
+        "token_count": 3,
+        "metadata_errors": []
+      }
+    },
+    {
+      "parent_query_id": "v5/source-report-v2/cde4f573085efe05f0747e6125882b3eef29943e27d58ca705835bd0f0d192cb",
+      "parent_query_hash": "cde4f573085efe05f0747e6125882b3eef29943e27d58ca705835bd0f0d192cb",
+      "world": "staged-v5-000",
+      "variant": 0,
+      "task_id": "staged-v5-000/v0/original/visible",
+      "kind": "calibration_missing",
+      "target_plate": "V5T9NUGW",
+      "expected": "MISSING",
+      "checkpoint": 0,
+      "parent_rows": {
+        "staged-v5-000/v0/original/visible": "067fcebfe1174bd7d4356be97d5bffe4c47289602a9312639a8d56d4e84e0182",
+        "staged-v5-000/v1/original/visible": "1986507dc5579d432f052210ddec062ed353e49fc4bdbd091017abdff338b736"
+      },
+      "input_hash": "e44ef479f571f1ab1439ba537fed9fa968853b5c99fd0b370a5ab86a8f7c4882",
+      "raw": {
+        "tokens": [
+          53,
+          20,
+          51,
+          24,
+          45,
+          2941,
+          54,
+          760,
+          47425,
+          369,
+          65938,
+          79669,
+          760,
+          14539,
+          760,
+          83635
+        ],
+        "stopped": false,
+        "text": "V5T9NUGW | Designed for humid summers | Manual | Cloth",
+        "next_token_logits": {},
+        "finish": "length"
+      },
+      "original_frozen_score": {
+        "parser_version": "first-closed-quoted-field-four-labels-v2",
+        "field_complete": false,
+        "field_valid": false,
+        "valid": false,
+        "field_text": "V5T9NUGW | Designed for humid summers | Manual | Cloth",
+        "field_value": "V5T9NUGW | Designed for humid summers | Manual | Cloth",
+        "closing_quote_offset": null,
+        "trailing_text": null,
+        "answer": null,
+        "correct": false,
+        "diagnostic_label": null,
+        "category": "incomplete_field",
+        "eos_observed": false,
+        "generation_length_stop": true,
+        "token_count": 16,
+        "metadata_errors": []
+      }
+    },
+    {
+      "parent_query_id": "v5/source-report-v2/95ac95a5f8a3b225620a47b487fda9bcb1485933e576b276809d036ce73fcc97",
+      "parent_query_hash": "95ac95a5f8a3b225620a47b487fda9bcb1485933e576b276809d036ce73fcc97",
+      "world": "staged-v5-001",
+      "variant": 0,
+      "task_id": "staged-v5-001/v0/original/visible",
+      "kind": "calibration_present",
+      "target_plate": "V5TF73KA",
+      "expected": "A",
+      "checkpoint": 0,
+      "parent_rows": {
+        "staged-v5-001/v0/original/visible": "fefb080b191dc93729a8241a6035107a357e20567d8583843c88d4ecf8e7ea1e"
+      },
+      "input_hash": "4154c5baeee9618831a0e829c963cbae53f5237091449517668eaa4a3283a614",
+      "raw": {
+        "tokens": [
+          32,
+          1,
+          151645
+        ],
+        "stopped": true,
+        "text": "A\"",
+        "next_token_logits": {},
+        "finish": "eos"
+      },
+      "original_frozen_score": {
+        "parser_version": "first-closed-quoted-field-four-labels-v2",
+        "field_complete": true,
+        "field_valid": true,
+        "valid": true,
+        "field_text": "A",
+        "field_value": "A",
+        "closing_quote_offset": 1,
+        "trailing_text": "",
+        "answer": "A",
+        "correct": true,
+        "diagnostic_label": "A",
+        "category": "A",
+        "eos_observed": true,
+        "generation_length_stop": false,
+        "token_count": 3,
+        "metadata_errors": []
+      }
+    },
+    {
+      "parent_query_id": "v5/source-report-v2/6ff183484a922a15ea9a0356a5a6c0e7be010754339ac97d4c43120ababe9da2",
+      "parent_query_hash": "6ff183484a922a15ea9a0356a5a6c0e7be010754339ac97d4c43120ababe9da2",
+      "world": "staged-v5-001",
+      "variant": 1,
+      "task_id": "staged-v5-001/v1/original/visible",
+      "kind": "calibration_present",
+      "target_plate": "V5TF73KA",
+      "expected": "C",
+      "checkpoint": 0,
+      "parent_rows": {
+        "staged-v5-001/v1/original/visible": "dae9abab1c820a1df1826cea7bb6a1dc91fe34500c0a91910d0a6d35278f4ba1"
+      },
+      "input_hash": "b3392ef109d7bd55df7b21f11f2d0bbb6a487d2f2175f5cd6a5fef1fcb2f93f4",
+      "raw": {
+        "tokens": [
+          34,
+          1,
+          151645
+        ],
+        "stopped": true,
+        "text": "C\"",
+        "next_token_logits": {},
+        "finish": "eos"
+      },
+      "original_frozen_score": {
+        "parser_version": "first-closed-quoted-field-four-labels-v2",
+        "field_complete": true,
+        "field_valid": true,
+        "valid": true,
+        "field_text": "C",
+        "field_value": "C",
+        "closing_quote_offset": 1,
+        "trailing_text": "",
+        "answer": "C",
+        "correct": true,
+        "diagnostic_label": "C",
+        "category": "C",
+        "eos_observed": true,
+        "generation_length_stop": false,
+        "token_count": 3,
+        "metadata_errors": []
+      }
+    },
+    {
+      "parent_query_id": "v5/source-report-v2/2008f6b687027e73f5c643a2b17e2d0fb56eda2891d7eefddd57a9c1d9aa5f01",
+      "parent_query_hash": "2008f6b687027e73f5c643a2b17e2d0fb56eda2891d7eefddd57a9c1d9aa5f01",
+      "world": "staged-v5-001",
+      "variant": 0,
+      "task_id": "staged-v5-001/v0/original/visible",
+      "kind": "calibration_missing",
+      "target_plate": "V5TF73KA",
+      "expected": "MISSING",
+      "checkpoint": 0,
+      "parent_rows": {
+        "staged-v5-001/v0/original/visible": "fefb080b191dc93729a8241a6035107a357e20567d8583843c88d4ecf8e7ea1e",
+        "staged-v5-001/v1/original/visible": "dae9abab1c820a1df1826cea7bb6a1dc91fe34500c0a91910d0a6d35278f4ba1"
+      },
+      "input_hash": "cdff0c342403aceea89bd8b7838e083947eae3b3364a01bae3e926b5db740c1c",
+      "raw": {
+        "tokens": [
+          53,
+          20,
+          10808,
+          22,
+          18,
+          26444,
+          760,
+          47425,
+          369,
+          65938,
+          79669,
+          760,
+          14539,
+          760,
+          53534,
+          760
+        ],
+        "stopped": false,
+        "text": "V5TF73KA | Designed for humid summers | Manual | Vinyl |",
+        "next_token_logits": {},
+        "finish": "length"
+      },
+      "original_frozen_score": {
+        "parser_version": "first-closed-quoted-field-four-labels-v2",
+        "field_complete": false,
+        "field_valid": false,
+        "valid": false,
+        "field_text": "V5TF73KA | Designed for humid summers | Manual | Vinyl |",
+        "field_value": "V5TF73KA | Designed for humid summers | Manual | Vinyl |",
+        "closing_quote_offset": null,
+        "trailing_text": null,
+        "answer": null,
+        "correct": false,
+        "diagnostic_label": null,
+        "category": "incomplete_field",
+        "eos_observed": false,
+        "generation_length_stop": true,
+        "token_count": 16,
+        "metadata_errors": []
+      }
+    },
+    {
+      "parent_query_id": "v5/source-report-v2/1f8e9ae1bfdabf5d0c972f23e62859d11a61338adf528ef6f54327b348c3ff35",
+      "parent_query_hash": "1f8e9ae1bfdabf5d0c972f23e62859d11a61338adf528ef6f54327b348c3ff35",
+      "world": "staged-v5-002",
+      "variant": 0,
+      "task_id": "staged-v5-002/v0/original/visible",
+      "kind": "calibration_present",
+      "target_plate": "V5TD48HZ",
+      "expected": "A",
+      "checkpoint": 0,
+      "parent_rows": {
+        "staged-v5-002/v0/original/visible": "80269b32a44f278c36c60afabe3b62c5e5deeb41650094de7cfacb7c0391e2e4"
+      },
+      "input_hash": "5872276edeb31474317af1e3f760901e7c8821d2a1d91eec62c0e5bdeb7811e1",
+      "raw": {
+        "tokens": [
+          32,
+          1,
+          151645
+        ],
+        "stopped": true,
+        "text": "A\"",
+        "next_token_logits": {},
+        "finish": "eos"
+      },
+      "original_frozen_score": {
+        "parser_version": "first-closed-quoted-field-four-labels-v2",
+        "field_complete": true,
+        "field_valid": true,
+        "valid": true,
+        "field_text": "A",
+        "field_value": "A",
+        "closing_quote_offset": 1,
+        "trailing_text": "",
+        "answer": "A",
+        "correct": true,
+        "diagnostic_label": "A",
+        "category": "A",
+        "eos_observed": true,
+        "generation_length_stop": false,
+        "token_count": 3,
+        "metadata_errors": []
+      }
+    },
+    {
+      "parent_query_id": "v5/source-report-v2/c44fe5a2c554c6751e8504733c9e442ab91e99616a9b132e45200ba50729ac08",
+      "parent_query_hash": "c44fe5a2c554c6751e8504733c9e442ab91e99616a9b132e45200ba50729ac08",
+      "world": "staged-v5-002",
+      "variant": 1,
+      "task_id": "staged-v5-002/v1/original/visible",
+      "kind": "calibration_present",
+      "target_plate": "V5TD48HZ",
+      "expected": "B",
+      "checkpoint": 0,
+      "parent_rows": {
+        "staged-v5-002/v1/original/visible": "33c73b8010b73bf5c09d5cb24df877dd2b38bbe4ea5e4f205b983606e772d9a3"
+      },
+      "input_hash": "3577d7b7e4b78cdac20e3bdcc8ce3c8d967449b1453b59a45119e13560302ae8",
+      "raw": {
+        "tokens": [
+          33,
+          1,
+          151645
+        ],
+        "stopped": true,
+        "text": "B\"",
+        "next_token_logits": {},
+        "finish": "eos"
+      },
+      "original_frozen_score": {
+        "parser_version": "first-closed-quoted-field-four-labels-v2",
+        "field_complete": true,
+        "field_valid": true,
+        "valid": true,
+        "field_text": "B",
+        "field_value": "B",
+        "closing_quote_offset": 1,
+        "trailing_text": "",
+        "answer": "B",
+        "correct": true,
+        "diagnostic_label": "B",
+        "category": "B",
+        "eos_observed": true,
+        "generation_length_stop": false,
+        "token_count": 3,
+        "metadata_errors": []
+      }
+    },
+    {
+      "parent_query_id": "v5/source-report-v2/9ecbb0b49b95f5924d248feb60cffb29fcb5a170646ffcb72ab7b62e44b3fbc2",
+      "parent_query_hash": "9ecbb0b49b95f5924d248feb60cffb29fcb5a170646ffcb72ab7b62e44b3fbc2",
+      "world": "staged-v5-002",
+      "variant": 0,
+      "task_id": "staged-v5-002/v0/original/visible",
+      "kind": "calibration_missing",
+      "target_plate": "V5TD48HZ",
+      "expected": "MISSING",
+      "checkpoint": 0,
+      "parent_rows": {
+        "staged-v5-002/v0/original/visible": "80269b32a44f278c36c60afabe3b62c5e5deeb41650094de7cfacb7c0391e2e4",
+        "staged-v5-002/v1/original/visible": "33c73b8010b73bf5c09d5cb24df877dd2b38bbe4ea5e4f205b983606e772d9a3"
+      },
+      "input_hash": "2f1350efd6019ebbb38649cdeed2e22d5ce1611aa1d843f4fbd412c99ded6b19",
+      "raw": {
+        "tokens": [
+          53,
+          20,
+          16985,
+          19,
+          23,
+          61759,
+          760,
+          11702,
+          6450,
+          369,
+          4017,
+          9278,
+          760,
+          33981,
+          760,
+          83635
+        ],
+        "stopped": false,
+        "text": "V5TD48HZ | Equipped for hot sand | Automatic | Cloth",
+        "next_token_logits": {},
+        "finish": "length"
+      },
+      "original_frozen_score": {
+        "parser_version": "first-closed-quoted-field-four-labels-v2",
+        "field_complete": false,
+        "field_valid": false,
+        "valid": false,
+        "field_text": "V5TD48HZ | Equipped for hot sand | Automatic | Cloth",
+        "field_value": "V5TD48HZ | Equipped for hot sand | Automatic | Cloth",
+        "closing_quote_offset": null,
+        "trailing_text": null,
+        "answer": null,
+        "correct": false,
+        "diagnostic_label": null,
+        "category": "incomplete_field",
+        "eos_observed": false,
+        "generation_length_stop": true,
+        "token_count": 16,
+        "metadata_errors": []
+      }
+    },
+    {
+      "parent_query_id": "v5/source-report-v2/d3cb43048d4d28d53f39e6878b29eca37a9d6d7622a91630fdde8ba375e21961",
+      "parent_query_hash": "d3cb43048d4d28d53f39e6878b29eca37a9d6d7622a91630fdde8ba375e21961",
+      "world": "staged-v5-003",
+      "variant": 0,
+      "task_id": "staged-v5-003/v0/original/visible",
+      "kind": "calibration_present",
+      "target_plate": "V5TT4GSL",
+      "expected": "A",
+      "checkpoint": 0,
+      "parent_rows": {
+        "staged-v5-003/v0/original/visible": "8288b8ce9a78cef9328712909a3dd35cfb4164bc93163ffdb96dc706493d3e1b"
+      },
+      "input_hash": "a976399fa0c8baa8e44cf048cd8744e09c996421c60c1e906e73a5e6de53b651",
+      "raw": {
+        "tokens": [
+          32,
+          1,
+          151645
+        ],
+        "stopped": true,
+        "text": "A\"",
+        "next_token_logits": {},
+        "finish": "eos"
+      },
+      "original_frozen_score": {
+        "parser_version": "first-closed-quoted-field-four-labels-v2",
+        "field_complete": true,
+        "field_valid": true,
+        "valid": true,
+        "field_text": "A",
+        "field_value": "A",
+        "closing_quote_offset": 1,
+        "trailing_text": "",
+        "answer": "A",
+        "correct": true,
+        "diagnostic_label": "A",
+        "category": "A",
+        "eos_observed": true,
+        "generation_length_stop": false,
+        "token_count": 3,
+        "metadata_errors": []
+      }
+    },
+    {
+      "parent_query_id": "v5/source-report-v2/3700358c00d90e06f255c353af7738c11992e1e0b774f9d3b0b8c106d725a647",
+      "parent_query_hash": "3700358c00d90e06f255c353af7738c11992e1e0b774f9d3b0b8c106d725a647",
+      "world": "staged-v5-003",
+      "variant": 1,
+      "task_id": "staged-v5-003/v1/original/visible",
+      "kind": "calibration_present",
+      "target_plate": "V5TT4GSL",
+      "expected": "C",
+      "checkpoint": 0,
+      "parent_rows": {
+        "staged-v5-003/v1/original/visible": "b0c0bda7bd00b527c4786637b74c84d741c5b3d96d3bc9e7d42aacd5be67b95f"
+      },
+      "input_hash": "80c49432e6614e59bfd6553b59c0bba8806e2c380c1f1b20d2a1f01068422eaf",
+      "raw": {
+        "tokens": [
+          34,
+          1,
+          151645
+        ],
+        "stopped": true,
+        "text": "C\"",
+        "next_token_logits": {},
+        "finish": "eos"
+      },
+      "original_frozen_score": {
+        "parser_version": "first-closed-quoted-field-four-labels-v2",
+        "field_complete": true,
+        "field_valid": true,
+        "valid": true,
+        "field_text": "C",
+        "field_value": "C",
+        "closing_quote_offset": 1,
+        "trailing_text": "",
+        "answer": "C",
+        "correct": true,
+        "diagnostic_label": "C",
+        "category": "C",
+        "eos_observed": true,
+        "generation_length_stop": false,
+        "token_count": 3,
+        "metadata_errors": []
+      }
+    },
+    {
+      "parent_query_id": "v5/source-report-v2/707185d144ee00b1c8ad45e950a518fdfd6f188e8d5e2afb302de1bf10f48135",
+      "parent_query_hash": "707185d144ee00b1c8ad45e950a518fdfd6f188e8d5e2afb302de1bf10f48135",
+      "world": "staged-v5-003",
+      "variant": 0,
+      "task_id": "staged-v5-003/v0/original/visible",
+      "kind": "calibration_missing",
+      "target_plate": "V5TT4GSL",
+      "expected": "MISSING",
+      "checkpoint": 0,
+      "parent_rows": {
+        "staged-v5-003/v0/original/visible": "8288b8ce9a78cef9328712909a3dd35cfb4164bc93163ffdb96dc706493d3e1b",
+        "staged-v5-003/v1/original/visible": "b0c0bda7bd00b527c4786637b74c84d741c5b3d96d3bc9e7d42aacd5be67b95f"
+      },
+      "input_hash": "c84b459bea4a1437349d8441a8d2f2873302e156a9522527bc53de51621ee5e9",
+      "raw": {
+        "tokens": [
+          53,
+          20,
+          14903,
+          19,
+          38,
+          7984,
+          760,
+          7461,
+          973,
+          389,
+          24660,
+          9853,
+          760,
+          14539,
+          760,
+          53534
+        ],
+        "stopped": false,
+        "text": "V5TT4GSL | Operates on polar ice | Manual | Vinyl",
+        "next_token_logits": {},
+        "finish": "length"
+      },
+      "original_frozen_score": {
+        "parser_version": "first-closed-quoted-field-four-labels-v2",
+        "field_complete": false,
+        "field_valid": false,
+        "valid": false,
+        "field_text": "V5TT4GSL | Operates on polar ice | Manual | Vinyl",
+        "field_value": "V5TT4GSL | Operates on polar ice | Manual | Vinyl",
+        "closing_quote_offset": null,
+        "trailing_text": null,
+        "answer": null,
+        "correct": false,
+        "diagnostic_label": null,
+        "category": "incomplete_field",
+        "eos_observed": false,
+        "generation_length_stop": true,
+        "token_count": 16,
+        "metadata_errors": []
+      }
+    }
+  ]
+}

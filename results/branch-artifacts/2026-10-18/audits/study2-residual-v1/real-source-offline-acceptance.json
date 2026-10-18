@@ -1,0 +1,264 @@
+{
+  "plan_hash": "e60aedd71ad24f2c93a7aa8ac56fce0c03bc9ccb6d842d5e2ae81a70bd0a7ea7",
+  "policy_hash": "c12bf5ab6c884fdf4935fbef245009aa327fd5244fa6c1d8e092f9359bb1a1d9",
+  "accounting": {
+    "retained_uncertain": 107,
+    "candidates_needing_new_judgments": 102,
+    "provider_decisions_needed": 119,
+    "retained_absent": 105,
+    "retained_present": 28,
+    "deferred_genuine_disagreement": 5,
+    "excluded_absent": 12,
+    "excluded_uncertain": 125,
+    "original_candidates": 377,
+    "historical_resolved": 122,
+    "salvage_resolved": 149,
+    "salvage_unresolved": 228,
+    "mechanically_excluded": 137,
+    "retained": 240,
+    "verification_requests": 21,
+    "coverage_requests": 9,
+    "total_requests": 30,
+    "openai_decisions_needed": 92,
+    "anthropic_decisions_needed": 27
+  },
+  "cost": {
+    "minimum_calls_to_attempt_complete_plan": 30,
+    "maximum_calls": 30,
+    "automatic_J3_calls": 0,
+    "smoke_maximum_calls": 4,
+    "smoke_request_ids": [
+      "r-c648ff927d7ea18a8aedbd0e",
+      "r-06e97dc1bd027a364b7cb163",
+      "r-d71c96df8ec43b6d2c9c2fa0",
+      "r-22d018c2e09313ebe6d3051e"
+    ],
+    "low_estimate_usd": 1.210284,
+    "reservation_upper_estimate_usd": 4.989262,
+    "smoke_low_estimate_usd": 0.173178,
+    "smoke_reservation_upper_estimate_usd": 0.694592,
+    "rates": {
+      "J1": {
+        "input_per_million": 2.0,
+        "cached_input_per_million": 0.5,
+        "output_per_million": 8.0,
+        "cache_write_per_million": 0
+      },
+      "J2": {
+        "input_per_million": 2.0,
+        "cached_input_per_million": 0.1,
+        "output_per_million": 10.0,
+        "cache_write_per_million": 2.5
+      }
+    },
+    "assumptions": "Saved historical rates, no caching discount. Low estimate: JSON bytes/4 input, 256+350 tokens per candidate batch or 1500 coverage output. Upper: shared journal reservation (JSON bytes+2048 input, full output cap). Not a billing guarantee; failures/budget stops can end before completion. Zero calls without separate authorization.",
+    "global_call_ceiling": 30,
+    "global_estimated_spend_ceiling": 25
+  },
+  "source_revalidation": "Every raw historical operation and salvage case reproduced before planning; no new judgments.",
+  "all_batches_four_to_eight": true,
+  "all_requests_bound_to_source": true,
+  "all_calls_unattempted": true,
+  "world001_M": {
+    "status": "present",
+    "span": [
+      1285,
+      1314
+    ],
+    "text": "- **Verified class**: MISSING",
+    "anchor": {
+      "before": "\n- **Doors**: Two\n- **Audit marker**: X\n",
+      "after": "\n\nWe will now compare this record to the"
+    },
+    "subtype": "prose_absence",
+    "rationale": "AUDIT-INFORMED RESIDUAL REVIEW. Independent explicit semantic agreement; reference checks passed; earliest resolved canonical assertion. Fallible annotation, not proof.",
+    "certificates": {
+      "reviewed_all_pre_answer_text": true,
+      "first_eligible_occurrence": true,
+      "target_verified_cell": true,
+      "asserted_not_hypothetical_or_negated": true,
+      "not_prediction_uncertainty_or_other_vehicle": true
+    }
+  },
+  "world003_P_supported_evidence": [
+    {
+      "id": "s-7a6d785486216655d475:P",
+      "statement_id": "s-7a6d785486216655d475",
+      "event": "P",
+      "span": [
+        3327,
+        3364
+      ],
+      "text": "This matches the **Class B** pattern:",
+      "provenance": [
+        {
+          "path": "structural",
+          "reason": "High-recall structural candidate, not semantic acceptance."
+        },
+        {
+          "path": "negative-audit",
+          "reason": "Endorses that the target matches the Class B pattern, a pattern-derived class different from the recorded A."
+        }
+      ],
+      "mechanical": {
+        "exact_span": true,
+        "target": "unknown",
+        "field": "unknown",
+        "role": "unknown",
+        "value": null,
+        "comparison": "unknown",
+        "value_span": null,
+        "structure": "prose",
+        "attribution": "unknown"
+      }
+    },
+    {
+      "id": "s-d45edc55b10b06dc5629:P",
+      "statement_id": "s-d45edc55b10b06dc5629",
+      "event": "P",
+      "span": [
+        3724,
+        3806
+      ],
+      "text": "Based on the patterns in the data, **V5TT4GSL** fits the **Class B** pattern best.",
+      "provenance": [
+        {
+          "path": "structural",
+          "reason": "High-recall structural candidate, not semantic acceptance."
+        },
+        {
+          "path": "negative-audit",
+          "reason": "The final decision says the target fits the Class B pattern best, endorsing a pattern-derived class different from recorded A."
+        }
+      ],
+      "mechanical": {
+        "exact_span": true,
+        "target": "yes",
+        "field": "unknown",
+        "role": "unknown",
+        "value": null,
+        "comparison": "unknown",
+        "value_span": null,
+        "structure": "prose",
+        "attribution": "explicit_mention"
+      }
+    }
+  ],
+  "world003_first_P": {
+    "status": "uncertain",
+    "span": null,
+    "text": null,
+    "anchor": null,
+    "subtype": null,
+    "rationale": "AUDIT-INFORMED RESIDUAL REVIEW. Positive evidence exists but first qualifying occurrence is unresolved.",
+    "certificates": {}
+  },
+  "world003_O": {
+    "status": "absent",
+    "span": null,
+    "text": null,
+    "anchor": null,
+    "subtype": null,
+    "rationale": "AUDIT-INFORMED RESIDUAL REVIEW. All candidates rejected after full-text extraction and independent negative audit.",
+    "certificates": {}
+  },
+  "revalidation_changes": [
+    {
+      "task_id": "staged-v5-000/v0/original/visible",
+      "candidate_id": "s-4ba7b2a2ebddd34dfb27:A",
+      "previous": "present",
+      "current": "uncertain",
+      "reason": "Missing or invalid provider evidence",
+      "text": "- **V5T9NUGW**: Manual, Cloth, Four doors, Y audit marker"
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "candidate_id": "s-23500c8d4581bf4681f2:A",
+      "previous": "present",
+      "current": "uncertain",
+      "reason": "Missing or invalid provider evidence",
+      "text": "- **V5TD48HZ** (Equipped for hot sand) \u2192 **B**"
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "candidate_id": "s-6e53213f88b9827c36f9:A",
+      "previous": "present",
+      "current": "uncertain",
+      "reason": "Missing or invalid provider evidence",
+      "text": "So the only record with \"Equipped for hot sand\" is **V5TD48HZ**, and it is classified as **B**."
+    },
+    {
+      "task_id": "staged-v5-002/v0/original/visible",
+      "candidate_id": "s-c6f161eb2dd493ba7797:A",
+      "previous": "present",
+      "current": "uncertain",
+      "reason": "Missing or invalid provider evidence",
+      "text": "- **V5TD48HZ**: Equipped for hot sand, Automatic, Cloth, Four, Z \u2192 A"
+    }
+  ],
+  "genuine_disagreements": [
+    {
+      "task_id": "staged-v5-000/v0/original/visible",
+      "candidate_id": "s-b37d2740caf6edc59a20:P",
+      "providers": {
+        "openai": "present",
+        "anthropic": "absent"
+      },
+      "within_provider_conflict": {
+        "openai": false,
+        "anthropic": false
+      }
+    },
+    {
+      "task_id": "staged-v5-001/v1/original/visible",
+      "candidate_id": "s-4422257f7c16e9d7564a:P",
+      "providers": {
+        "openai": "uncertain",
+        "anthropic": "absent"
+      },
+      "within_provider_conflict": {
+        "openai": true,
+        "anthropic": false
+      }
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "candidate_id": "s-6e53213f88b9827c36f9:P",
+      "providers": {
+        "openai": "present",
+        "anthropic": "absent"
+      },
+      "within_provider_conflict": {
+        "openai": false,
+        "anthropic": false
+      }
+    },
+    {
+      "task_id": "staged-v5-002/v1/original/visible",
+      "candidate_id": "s-29ff22bb39a9f47e97f7:P",
+      "providers": {
+        "openai": "present",
+        "anthropic": "absent"
+      },
+      "within_provider_conflict": {
+        "openai": false,
+        "anthropic": false
+      }
+    },
+    {
+      "task_id": "staged-v5-003/v0/original/visible",
+      "candidate_id": "s-4dfb5671ca30f83b792d:P",
+      "providers": {
+        "openai": "present",
+        "anthropic": "absent"
+      },
+      "within_provider_conflict": {
+        "openai": false,
+        "anthropic": false
+      }
+    }
+  ],
+  "network_blocked": true,
+  "paid_calls": 0,
+  "qwen_inference_calls": 0
+}

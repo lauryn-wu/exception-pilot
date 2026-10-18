@@ -1,6 +1,6 @@
 # Reasoning prompts and exception records
 
-**Results:** [complete index](results/README.md) · [branch/experiment status](results/BRANCH_STATUS.md) · [archive verification](results/VERIFY.md). All available local exports were consolidated on 2026-10-13, including completed, stopped and unstarted runs. Experimental code branches remain separate. The findings below summarize earlier GPT-4o comparisons; later GPT-4o and Mistral results are in the index.
+**Results:** [complete index](results/README.md) · [branch/experiment status](results/BRANCH_STATUS.md) · [archive verification](results/VERIFY.md). Located local exports and branch audit records were consolidated through 2026-10-18, including completed, stopped and unstarted runs; the index identifies incomplete exports and experiments without live results. Experimental code branches remain separate. The findings below summarize earlier GPT-4o comparisons; later GPT-4o, Mistral and Qwen results are in the index.
 
 These experiments ask GPT-4o to answer questions about synthetic vehicle records.
 Under the original classification wording, asking for reasoning made the model

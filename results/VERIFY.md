@@ -37,3 +37,11 @@ Verification is an integrity check, not a scientific replication or a signature
 of who collected the results. Some older archives may contain copies of the
 same underlying measurements; archive counts are not counts of independent
 experiments.
+
+The verifier supports both historical `archive`/`members` wrappers and newer flat
+member manifests. It checks the archive binding on wrapped manifests; the original
+manifest files are preserved. Run the offline regressions with:
+
+```bash
+PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s results -p 'test_verify_results.py' -v
+```

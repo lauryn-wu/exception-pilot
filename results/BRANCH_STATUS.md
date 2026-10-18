@@ -12,6 +12,22 @@ Updated 2026-10-18. This is an archival update, not a merge of experiment implem
 
 Read the [current results index](README.md) before the historical status below. The older statement that no live Qwen or downstream-history exports were found is superseded by this update. Code remains on existing branches and is not changed by the archival commit. No inference was performed.
 
+## Follow-up branch audit
+
+All 18 published branch tips were checked by Git blob and archived-member SHA256; see the [frozen branch inventory](branch-artifacts/2026-10-18/inventory.json). This consolidates results and documentation without merging experimental implementation code.
+
+| Branch | Current result status |
+|---|---|
+| `codex/reasoning-continuation-followup` | Failed real-model v3 validation now archived in full, with its smaller overlapping export. Scientific selection remains blocked; failure is preserved. |
+| `codex/study2-conditional-prefix-v4` | Passed technical same-input validation; incomplete 8/48-original pilot now archived. No completed 48-response collection claimed. |
+| `codex/study2-qwen-length-diagnostic` | Saved complete 4-response diagnostic report and case text now archived; full operation-journal export not located. |
+| `codex/study2-qwen-expanded-screen` | Saved complete 16-response exploratory screen report and case text now archived; full operation-journal export not located. |
+| `codex/study2-v5-evidence-interventions` / `codex/study2-v5-judge-review-v2` | Live v5/replication, review exports and source-user results were already archived; missing offline acceptance, salvage and request-plan records added. A planned intervention or review request does not establish execution. |
+| `codex/study2-native-thinking-draft` | **No live results located.** Three offline audit/design versions and current context documents preserved; pilot and main remain unexecuted in available artifacts. |
+| Earlier Study 1, column, evidence-role, query-form, position, instruction-interface and downstream branches | Located live results already archived. A filename difference or unmerged implementation branch does not imply missing result data. |
+
+The v4 longer diagnostics remain separate from its frozen 512-token collection. Failed and incomplete runs retain their original status. The older October 13 absence statements below are historical, not current result availability.
+
 ## Historical October 13 snapshot
 
 As of 2026-10-13, from inspected worktrees, remote branches and related local Downloads. This cleanup changes no experimental implementation, prompts, thresholds or configurations. Code remains on its existing branches.

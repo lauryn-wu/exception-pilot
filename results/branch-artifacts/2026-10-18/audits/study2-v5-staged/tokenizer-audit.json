@@ -1,0 +1,142 @@
+{
+  "design": "staged-60-v1",
+  "plan_hash": "7a7ad23ac63d8c06c1e68fd2a1232f159da7f1201ac1d970a07618394cedfc22",
+  "source_hash": "e545f0a756934f0d5c953db3a1c102146a1616dc2706913cb3537e8a5a6a2c2b",
+  "v4_hash": "913f64efa3f12a1a787575c14c7670e072e250d7e8a3690a9957cfa70bb88e78",
+  "counts": {
+    "pilot": {
+      "tasks": 32,
+      "total": 12980,
+      "min": 389,
+      "max": 420
+    },
+    "remaining": {
+      "tasks": 448,
+      "total": 181276,
+      "min": 386,
+      "max": 424
+    },
+    "full": {
+      "tasks": 480,
+      "total": 194256,
+      "min": 386,
+      "max": 424
+    }
+  },
+  "workload": {
+    "pilot": {
+      "worlds": 4,
+      "originals": 32,
+      "visible": 16,
+      "original_token_ceiling": 65536,
+      "technical": {
+        "generation_calls": 33,
+        "generated_tokens": 3882
+      },
+      "study_2a": {
+        "fixed_and_pre_answer_positions": 96,
+        "event_positions": 128,
+        "max_distinct_readouts": 448,
+        "max_candidate_sequences": 1344,
+        "generated_answers": 0,
+        "deduplication": "Exact task/cut/cue, within one combined fixed+event plan"
+      },
+      "family_M": {
+        "max_events": 16,
+        "max_edited_continuations": 64,
+        "generated_token_ceiling": 131072,
+        "max_candidate_sequences": 384,
+        "actual_generated_budget": "sum(4 * (2048-original_k)) over frozen eligible cases",
+        "annotation_requests": 0,
+        "annotation_mode": "independent manual reviewers; no paid calls"
+      },
+      "family_O": {
+        "max_events": 16,
+        "max_edited_continuations": 64,
+        "generated_token_ceiling": 131072,
+        "max_candidate_sequences": 384,
+        "actual_generated_budget": "sum(4 * (2048-original_k)) over frozen eligible cases",
+        "annotation_requests": 0,
+        "annotation_mode": "independent manual reviewers; no paid calls"
+      },
+      "timing_status": "NOT_MEASURED_LIVE"
+    },
+    "remaining": {
+      "worlds": 56,
+      "originals": 448,
+      "visible": 224,
+      "original_token_ceiling": 917504,
+      "technical": {
+        "generation_calls": 0,
+        "generated_tokens": 0,
+        "note": "reuse the original run technical validation"
+      },
+      "study_2a": {
+        "fixed_and_pre_answer_positions": 1344,
+        "event_positions": 1792,
+        "max_distinct_readouts": 6272,
+        "max_candidate_sequences": 18816,
+        "generated_answers": 0,
+        "deduplication": "Exact task/cut/cue, within one combined fixed+event plan"
+      },
+      "family_M": {
+        "max_events": 224,
+        "max_edited_continuations": 896,
+        "generated_token_ceiling": 1835008,
+        "max_candidate_sequences": 5376,
+        "actual_generated_budget": "sum(4 * (2048-original_k)) over frozen eligible cases",
+        "annotation_requests": 0,
+        "annotation_mode": "independent manual reviewers; no paid calls"
+      },
+      "family_O": {
+        "max_events": 224,
+        "max_edited_continuations": 896,
+        "generated_token_ceiling": 1835008,
+        "max_candidate_sequences": 5376,
+        "actual_generated_budget": "sum(4 * (2048-original_k)) over frozen eligible cases",
+        "annotation_requests": 0,
+        "annotation_mode": "independent manual reviewers; no paid calls"
+      },
+      "timing_status": "NOT_MEASURED_LIVE"
+    },
+    "full": {
+      "worlds": 60,
+      "originals": 480,
+      "visible": 240,
+      "original_token_ceiling": 983040,
+      "technical": {
+        "generation_calls": 33,
+        "generated_tokens": 3882
+      },
+      "study_2a": {
+        "fixed_and_pre_answer_positions": 1440,
+        "event_positions": 1920,
+        "max_distinct_readouts": 6720,
+        "max_candidate_sequences": 20160,
+        "generated_answers": 0,
+        "deduplication": "Exact task/cut/cue, within one combined fixed+event plan"
+      },
+      "family_M": {
+        "max_events": 240,
+        "max_edited_continuations": 960,
+        "generated_token_ceiling": 1966080,
+        "max_candidate_sequences": 5760,
+        "actual_generated_budget": "sum(4 * (2048-original_k)) over frozen eligible cases",
+        "annotation_requests": 0,
+        "annotation_mode": "independent manual reviewers; no paid calls"
+      },
+      "family_O": {
+        "max_events": 240,
+        "max_edited_continuations": 960,
+        "generated_token_ceiling": 1966080,
+        "max_candidate_sequences": 5760,
+        "actual_generated_budget": "sum(4 * (2048-original_k)) over frozen eligible cases",
+        "annotation_requests": 0,
+        "annotation_mode": "independent manual reviewers; no paid calls"
+      },
+      "timing_status": "NOT_MEASURED_LIVE"
+    }
+  },
+  "network_calls": 0,
+  "model_weights_loaded": false
+}
