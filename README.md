@@ -2,8 +2,6 @@
 
 Asking for reasoning sometimes makes a language model less likely to follow an explicit record. These experiments examine when that happens, using synthetic vehicle tables in which the target's recorded class can disagree with the pattern in the surrounding rows. The correct answer is known. Background labels can be changed while keeping the target record fixed.
 
-The question is whether a model can keep using an exception while explaining a general rule. The work builds on [*Mind Your Step (by Step)* (Liu et al., ICML 2025)](https://proceedings.mlr.press/v267/liu25t.html). Completed experiments with GPT-4o, Mistral and Qwen show that the errors depend on both the instructions and how the answer is requested. The evidence so far is behavioral and limited to the tested tasks; native thinking has not yet been evaluated in the available results.
-
 [Results and raw data](results/README.md) · [Experiment status](results/BRANCH_STATUS.md) · [Independent analyses](results/analyses/2026-10-18/README.md)
 
 ## Findings so far
@@ -20,7 +18,9 @@ The wording follow-up put a limit on that finding. Across 20 new worlds and 480 
 
 ### Query form in Mistral
 
-A 288-response experiment across 24 worlds asked about the target either through a descriptive profile or a lookup key. Direct answers were 48/48 correct in both conditions; visible-reasoning answers were 20/48 and 33/48, respectively. Compliance with the filler control was incomplete, and the prespecified decision was inconclusive. The experiment therefore leaves the proposed explanation of the query-form effect unresolved. [Report](results/reports/query-form-mistral-001/summary.md).
+Mistral was asked about the same vehicle in two ways: by its features, or by its license plate. When asked for just the answer, it got all 48 questions right in each version. When asked to write out its reasoning first, it got 20/48 right for the feature descriptions and 33/48 for the license plates.
+
+The full experiment collected 288 responses across 24 worlds. It also included a control that asked Mistral to copy a neutral paragraph before answering, which the model did not consistently follow. The planned decision rule classified the run as inconclusive. [Report](results/reports/query-form-mistral-001/summary.md).
 
 ### Asking Qwen to report the source
 
@@ -28,7 +28,7 @@ The Qwen3-32B study asked for the target table cell in a new user turn after 0, 
 
 Among the same 108 trajectories eligible at every checkpoint, correct responses fell from 107 to 96 to 80. The paired 0-to-512 change was −25 percentage points (descriptive world-bootstrap 95% interval: −33.3 to −16.8). All 27 newly incorrect responses said `MISSING`, although the cells contained a class. Four other trajectories were ineligible at 512 tokens and remain excluded under the original rules. [Execution report](results/reports/study2-source-user-main-v1/report.md) · [Independent audit](results/analyses/2026-10-18/Study2_Source_User_Main_Audit.md).
 
-The result depends on how the model is queried. Of those 27 false `MISSING` reports, 21 still favored the correct class under an existing restricted A/B/C `ANSWER:` readout. A restricted readout and a generated source report measure different things; neither reveals whether the fact was continuously retained internally. These runs used greedy decoding with native thinking disabled and an instruction to write visible reasoning.
+For 21 of those 27 histories, a separate test gave the correct letter the highest score among A, B and C after an `ANSWER:` cue. That cue was added to the assistant's text; the `MISSING` responses came from a new user question asking for the source cell. This difference is why the missingness reports alone cannot show that the model had forgotten the record. These runs used greedy decoding with native thinking disabled and an instruction to write visible reasoning.
 
 ## Limits of the evidence
 
@@ -38,7 +38,7 @@ The studies developed sequentially after earlier results were inspected. Repeate
 
 ## Next experiments
 
-The immediate priority is a Qwen native-thinking comparison on new controlled worlds, with the same sampling settings for thinking on and off. The draft allocates 64 responses to a development pilot and 896 to the main collection. The main token budget will be fixed after reviewing pilot truncation and repetition. Offline shortcut checks are complete; design review and live validation are still pending. Historical greedy responses will remain separate. [Draft protocol](results/branch-artifacts/2026-10-18/context/STUDY2_NATIVE_THINKING_DRAFT_PROTOCOL.md).
+Native thinking has not yet been tested in the archived runs. The planned Qwen comparison uses new controlled worlds and the same sampling settings for thinking on and off. The draft allocates 64 responses to a development pilot and 896 to the main collection. The main token budget will be fixed after reviewing pilot truncation and repetition. Offline shortcut checks are complete; design review and live validation are still pending. Historical greedy responses will remain separate. [Draft protocol](results/branch-artifacts/2026-10-18/context/STUDY2_NATIVE_THINKING_DRAFT_PROTOCOL.md).
 
 A second question is whether changing a specific false claim in the reasoning changes the final answer. This needs independently reviewed passages, an unedited comparator and controls for any answer information introduced by an edit. The intervention proposals are unexecuted, and the whole-history crossing proposal is on hold. [Plans](results/plans/README.md).
 
@@ -46,12 +46,16 @@ Additional support would pay for GPU time and independent annotation for this wo
 
 ## Data and reproduction
 
-The [results index](results/README.md) links reports, raw exports and provenance. [Branch status](results/BRANCH_STATUS.md) identifies failed, partial and unstarted work. Experimental code remains on its source branches. This overview covers artifacts inspected through 18 October 2026; it does not cover unexported remote activity.
+The [results index](results/README.md) links reports, raw exports and provenance. [Branch status](results/BRANCH_STATUS.md) identifies failed, partial and unstarted work. Experimental code remains on its source branches.
 
-Verify the archives offline with Python 3.10+:
+After cloning the repository, check the saved files with:
 
 ```bash
 python3 results/verify_results.py
 ```
 
 [Verification instructions](results/VERIFY.md) explain how to reconstruct split archives. The [historical study guide](STUDY_GUIDE.md) preserves earlier protocols and commands, including live commands that may incur charges.
+
+*The archive check requires Python 3.10 or later. Last archive review: 18 October 2026.*
+
+Related paper: [*Mind Your Step (by Step)*, Liu et al., ICML 2025](https://proceedings.mlr.press/v267/liu25t.html).
