@@ -4,37 +4,42 @@ Asking for reasoning sometimes makes a language model less likely to follow an e
 
 [Results and raw data](results/README.md) · [Experiment status](results/BRANCH_STATUS.md) · [Independent analyses](results/analyses/2026-10-18/README.md)
 
-## Findings so far
+## GPT-4o
 
-![GPT-4o: direct answers remain 40/40 correct under supporting and conflicting backgrounds; visible-reasoning answers fall from 40/40 to 16/40. Qwen: correct source reports on the same 108 trajectories fall from 107 to 96 to 80 after 0, 256 and 512 saved reasoning tokens.](docs/research-overview/evidence-summary.png)
+The first test changed the classes of the surrounding vehicles while leaving the target record alone. GPT-4o could either give just the answer or write out its reasoning first. It made mistakes only when asked to reason with a conflicting background.
 
-The panels show separate experiments with different tasks and answer interfaces. Counts and paired-effect intervals are discussed below. [Figure sources and reproduction](docs/research-overview/README.md) · [Vector figure](docs/research-overview/evidence-summary.svg).
+| Correct answers | Supporting background | Conflicting background |
+|---|---:|---:|
+| Answer only | 40/40 | 40/40 |
+| Reasoning before the answer | 40/40 | 16/40 |
 
-### Background labels and question wording
+An explicit request for the *recorded* class removed that drop under neutral reasoning in the [wording follow-up](results/reports/wording-001/summary.md). The original question still produced a large drop. The revised question also removed a clause about uncertainty, so either edit, or both together, could account for the difference. The effect did not survive the planned robustness check.
 
-In the first GPT-4o diagnostic, direct answers were correct on 40/40 cases under both supporting and conflicting backgrounds. Answers preceded by visible reasoning were 40/40 correct under support and 16/40 under conflict, despite unchanged target records. The experiment used 20 independent worlds and 160 responses. The extra conflict penalty under reasoning was 60 percentage points, with a descriptive world-bootstrap 95% interval of 47.5–72.5 points. [Report](results/reports/counterfactual-001/summary.md).
-
-The wording follow-up put a limit on that finding. Across 20 new worlds and 480 responses, neutral reasoning produced a 52.5-point extra conflict penalty under the original question. When explicitly asked for the recorded class, the observed penalty was zero. That version also removed an uncertainty clause, so the comparison did not isolate one wording change. The study failed its broader robustness criterion. [Report](results/reports/wording-001/summary.md).
-
-### Query form in Mistral
+## Mistral
 
 Mistral was asked about the same vehicle in two ways: by its features, or by its license plate. When asked for just the answer, it got all 48 questions right in each version. When asked to write out its reasoning first, it got 20/48 right for the feature descriptions and 33/48 for the license plates.
 
-The full experiment collected 288 responses across 24 worlds. It also included a control that asked Mistral to copy a neutral paragraph before answering, which the model did not consistently follow. The planned decision rule classified the run as inconclusive. [Report](results/reports/query-form-mistral-001/summary.md).
+The attempted control was to have Mistral copy a neutral paragraph before answering. It copied the paragraph exactly in only 60 of 96 responses. That fell short of the protocol's adherence requirement, so the experiment is marked inconclusive in the [report](results/reports/query-form-mistral-001/summary.md).
 
-### Asking Qwen to report the source
+## Qwen
 
-The Qwen3-32B study asked for the target table cell in a new user turn after 0, 256 or 512 tokens of saved visible reasoning. The original table stayed in context. All 332 planned source queries returned valid, completed answers.
+For Qwen3-32B, the source question came after the reasoning. The experiment took saved responses, kept the first 256 or 512 tokens, and added a new user message asking what was written in the target cell. A third version kept none of the reasoning. The original table remained in the conversation in all three versions.
 
-Among the same 108 trajectories eligible at every checkpoint, correct responses fell from 107 to 96 to 80. The paired 0-to-512 change was −25 percentage points (descriptive world-bootstrap 95% interval: −33.3 to −16.8). All 27 newly incorrect responses said `MISSING`, although the cells contained a class. Four other trajectories were ineligible at 512 tokens and remain excluded under the original rules. [Execution report](results/reports/study2-source-user-main-v1/report.md) · [Independent audit](results/analyses/2026-10-18/Study2_Source_User_Main_Audit.md).
+| Saved reasoning tokens | Correct source reports, same 108 histories |
+|---|---:|
+| 0 | 107/108 |
+| 256 | 96/108 |
+| 512 | 80/108 |
 
-For 21 of those 27 histories, a separate test gave the correct letter the highest score among A, B and C after an `ANSWER:` cue. That cue was added to the assistant's text; the `MISSING` responses came from a new user question asking for the source cell. This difference is why the missingness reports alone cannot show that the model had forgotten the record. These runs used greedy decoding with native thinking disabled and an instruction to write visible reasoning.
+At 512 tokens, 27 answers had changed from the correct class to `MISSING`, even though the class was written in the table. All 332 source questions completed with a valid answer format. The table above uses only the 108 histories available at every checkpoint; four others were ineligible at 512 tokens under the original rules.
 
-## Limits of the evidence
+There is a complication in calling this forgetting. For 21 of those 27 histories, the correct class had the highest score in a separate comparison of A, B and C. That comparison added `ANSWER:` to the assistant's text and scored the candidates; it did not generate an answer to the new user question. The same history could therefore give a false `MISSING` report under one test and favor the recorded class under another. The [independent audit](results/analyses/2026-10-18/Study2_Source_User_Main_Audit.md) examines both readouts.
 
-These studies do not establish internal forgetting, deliberate override, or a general disadvantage of reasoning. In the Qwen experiment, longer histories change the text, the distance from the source and where the assistant turn ends. Some prompts also explicitly discuss missing values. Further controls are needed to separate those influences. Semantic annotations of the generated text remain exploratory.
+Longer reasoning also puts more text between the table and the source question and changes where the assistant turn ends. Some prompts mention missing values. These features were not varied separately, so the experiment cannot identify which caused the decline. The runs used greedy decoding with native thinking disabled; Qwen was instructed to write its reasoning in the visible response.
 
-The studies developed sequentially after earlier results were inspected. Repeated queries and trajectories from one world are not independent samples. Technical failures are retained: the Qwen v3 replay check failed, the v4 pilot is incomplete at 8/48 originals, and two source-report interfaces failed calibration before the new-user-turn interface was tested. The [results index](results/README.md) also records invalid responses, truncation and overlapping exports.
+![GPT-4o accuracy under supporting and conflicting backgrounds, alongside Qwen source-report accuracy at three reasoning lengths. Exact counts are in the tables above.](docs/research-overview/evidence-summary.png)
+
+The figure brings together the separate GPT-4o classification and Qwen source-transcription experiments. [Sample sizes, paired estimates and figure sources](docs/research-overview/README.md) · [Download SVG](docs/research-overview/evidence-summary.svg).
 
 ## Next experiments
 
@@ -46,7 +51,9 @@ Additional support would pay for GPU time and independent annotation for this wo
 
 ## Data and reproduction
 
-The [results index](results/README.md) links reports, raw exports and provenance. [Branch status](results/BRANCH_STATUS.md) identifies failed, partial and unstarted work. Experimental code remains on its source branches.
+The studies were planned in sequence, with earlier results available when later tests were designed. Several responses can come from variants of the same synthetic world, so they should not be counted as independent samples. The text annotations still need independent validation before they can support claims of deliberate overriding. These small studies also cannot settle whether reasoning generally helps or hurts accuracy.
+
+The archive includes the failed Qwen v3 replay check, the unfinished v4 pilot (8/48 originals), and two source-report interfaces that failed calibration before the new-user-turn test. The [results index](results/README.md) links these alongside the completed runs, including invalid and truncated responses. It also identifies exports that overlap. [Branch status](results/BRANCH_STATUS.md) lists unfinished work and the code branches needed to reproduce each experiment.
 
 After cloning the repository, check the saved files with:
 

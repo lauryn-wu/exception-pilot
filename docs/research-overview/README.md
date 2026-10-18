@@ -1,6 +1,31 @@
-# Figure sources and reproduction
+# Sample sizes, paired estimates and figure sources
 
-The figure uses aggregate results from two archived reports. The panels have different tasks, populations and answer interfaces, so they should be read separately.
+The overview describes four experiments. The figure plots results from the first and fourth; their tasks, populations and answer interfaces differ.
+
+## Studies in the overview
+
+| Experiment | Independent worlds | Responses | Report |
+|---|---:|---:|---|
+| GPT-4o background labels | 20 | 160 | [Counterfactual diagnostic](../../results/reports/counterfactual-001/summary.md) |
+| GPT-4o question wording | 20 new worlds | 480 | [Wording follow-up](../../results/reports/wording-001/summary.md) |
+| Mistral query form | 24 | 288 | [Query-form study](../../results/reports/query-form-mistral-001/summary.md) |
+| Qwen source transcription | 56 | 332 source queries from 112 saved response histories | [Execution report](../../results/reports/study2-source-user-main-v1/report.md) |
+
+The Mistral count includes 96 requests to copy a neutral paragraph before answering. Exact copying succeeded in 36/48 feature-description requests and 24/48 license-plate requests. Both fell below the required 95% adherence within each query form, triggering the saved `output_manipulation_inconclusive` decision.
+
+## Paired estimates
+
+| Comparison | Estimate | Descriptive 95% world-bootstrap interval |
+|---|---:|---:|
+| GPT-4o: extra conflict penalty with reasoning, first diagnostic | 60 percentage points | 47.5 to 72.5 points |
+| GPT-4o: extra conflict penalty with neutral reasoning, original wording in the follow-up | 52.5 percentage points | 40 to 65 points |
+| Qwen: change in correct source reports from 0 to 512 saved tokens, same 108 histories | −25 percentage points | −33.3 to −16.8 points |
+
+For GPT-4o, the extra conflict penalty is the support-minus-conflict accuracy difference with reasoning, minus that difference for direct answers. The wording follow-up observed a zero penalty under the explicit recorded-class question with neutral reasoning. This does not establish equivalence: that wording also removed an uncertainty clause, and the study failed its planned robustness criterion.
+
+The estimates were copied from the saved reports. Resampling whole worlds keeps related responses together. The studies were developed sequentially after earlier results were inspected; the intervals are descriptive.
+
+## Figure data
 
 | Panel | Data source | Displayed population |
 |---|---|---|
@@ -9,7 +34,7 @@ The figure uses aggregate results from two archived reports. The panels have dif
 
 For Qwen, the renderer checks that the `0->512` and `256->512` transition tables contain the same trajectory IDs, then reconstructs the counts for that cohort. This is why the first two plotted counts differ from the full-sample counts of 111/112 and 100/112. All 332 queries remain in the original report.
 
-The axes start at zero, and labels give correct/eligible counts. The README reports the saved world-cluster bootstrap intervals for paired changes; the figure does not show pointwise intervals. In the Qwen study, the original table remains available when the new user turn asks for its contents. The plotted decline does not isolate the effect of a particular reasoning statement.
+The axes start at zero, and labels give correct/eligible counts. The table above gives the saved world-cluster bootstrap intervals for paired changes; the figure does not show pointwise intervals. In the Qwen study, the original table remains available when the new user turn asks for its contents. The plotted decline does not isolate the effect of a particular reasoning statement.
 
 - [PNG](evidence-summary.png): displayed in the repository README.
 - [SVG](evidence-summary.svg): vector export for reuse.
