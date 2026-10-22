@@ -1,0 +1,235 @@
+{
+  "code_contract": "701262504d095b23d2d3320fb1ec794647b55b1064c07bb9788eb8a4547b9998",
+  "counterbalance": {
+    "conflict/v0": {
+      "climate": {
+        "cold": 12,
+        "warm": 12
+      },
+      "doubled_marker": {
+        "X": 8,
+        "Y": 8,
+        "Z": 8
+      },
+      "expected": {
+        "A": 8,
+        "B": 8,
+        "C": 8
+      },
+      "pattern": {
+        "A": 8,
+        "B": 8,
+        "C": 8
+      },
+      "target_profile": {
+        "0": 6,
+        "1": 6,
+        "2": 6,
+        "3": 6
+      }
+    },
+    "conflict/v1": {
+      "climate": {
+        "cold": 12,
+        "warm": 12
+      },
+      "doubled_marker": {
+        "X": 8,
+        "Y": 8,
+        "Z": 8
+      },
+      "expected": {
+        "A": 8,
+        "B": 8,
+        "C": 8
+      },
+      "pattern": {
+        "A": 8,
+        "B": 8,
+        "C": 8
+      },
+      "target_profile": {
+        "0": 6,
+        "1": 6,
+        "2": 6,
+        "3": 6
+      }
+    },
+    "support/v0": {
+      "climate": {
+        "cold": 12,
+        "warm": 12
+      },
+      "doubled_marker": {
+        "X": 8,
+        "Y": 8,
+        "Z": 8
+      },
+      "expected": {
+        "A": 8,
+        "B": 8,
+        "C": 8
+      },
+      "pattern": {
+        "A": 8,
+        "B": 8,
+        "C": 8
+      },
+      "target_profile": {
+        "0": 6,
+        "1": 6,
+        "2": 6,
+        "3": 6
+      }
+    },
+    "support/v1": {
+      "climate": {
+        "cold": 12,
+        "warm": 12
+      },
+      "doubled_marker": {
+        "X": 8,
+        "Y": 8,
+        "Z": 8
+      },
+      "expected": {
+        "A": 8,
+        "B": 8,
+        "C": 8
+      },
+      "pattern": {
+        "A": 8,
+        "B": 8,
+        "C": 8
+      },
+      "target_profile": {
+        "0": 6,
+        "1": 6,
+        "2": 6,
+        "3": 6
+      }
+    }
+  },
+  "counts": {
+    "construction_blocks": 4,
+    "maximum_output_tokens": 1572864,
+    "responses": 384,
+    "tables": 96,
+    "worlds": 24
+  },
+  "files": {
+    "manifest.json.gz": "040c68359a99c4dbc1cc95e18649b38100ab93da648f501fe002279ea1844a36",
+    "shortcut-audit.json.gz": "4a4b21e74b913da06f65449885a98271f39a6d4985bdee01c17c3f30c7e0c1bc"
+  },
+  "histogram_only_upper_bound": {
+    "accuracy": 0.625,
+    "histograms": 12,
+    "label_counts_by_histogram": {
+      "4/5/7": {
+        "B": 4,
+        "C": 2
+      },
+      "4/6/6": {
+        "B": 4,
+        "C": 4
+      },
+      "4/7/5": {
+        "B": 2,
+        "C": 4
+      },
+      "5/4/7": {
+        "A": 4,
+        "C": 2
+      },
+      "5/5/6": {
+        "A": 2,
+        "B": 2,
+        "C": 8
+      },
+      "5/6/5": {
+        "A": 2,
+        "B": 8,
+        "C": 2
+      },
+      "5/7/4": {
+        "A": 4,
+        "B": 2
+      },
+      "6/4/6": {
+        "A": 4,
+        "C": 4
+      },
+      "6/5/5": {
+        "A": 8,
+        "B": 2,
+        "C": 2
+      },
+      "6/6/4": {
+        "A": 4,
+        "B": 4
+      },
+      "7/4/5": {
+        "A": 2,
+        "C": 4
+      },
+      "7/5/4": {
+        "A": 2,
+        "B": 4
+      }
+    },
+    "limitation": "In-sample histogram-only upper bound on this fixed manifest, not held-out accuracy or evidence of model use.",
+    "maximum_correct": 60,
+    "tables": 96
+  },
+  "manifest_content_hash": "f6a9cbb12c122481fab4711ae4ec9e8bb856df33c353018d4eeeca1f88f5b699",
+  "model": "Qwen/Qwen3.8-27B",
+  "not_tested": [
+    "GPU/model loading",
+    "Actual generated thinking/final boundaries",
+    "vLLM runtime sampling/EOS behavior",
+    "Real prefix continuation",
+    "Scientific model effects"
+  ],
+  "perfect_shortcuts": [],
+  "prompt_tokens": {
+    "maximum": 579,
+    "minimum": 550,
+    "total": 217328
+  },
+  "protocol": "study2-current-qwen-native-screen-v1",
+  "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+  "status": "OFFLINE_ONLY_NO_MODEL_RESPONSES",
+  "tokenizer": {
+    "assets": {
+      "chat_template.jinja": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+      "config.json": "191e0af232104ed8b65258cf3fb2b842e288008baca7633c11b82a1ac7203aab",
+      "generation_config.json": "e70c136c1b78ddc1fb0905bac8e733a4dc448d4f852a5dd75143fffc70be550e",
+      "merges.txt": "a9d356d7bdf1ef4949e3e748e95b8e10ad9d4e2e838eddc38a0a7b6b94d1db8d",
+      "model.safetensors.index.json": "77042094076611b69791a610065f28b7013b8c621795fa86ddccc8bac7d1b9df",
+      "preprocessor_config.json": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516",
+      "tokenizer.json": "0997f410c57a1f4e53b09e4be8f4a172d90edd9564368fb0847030937229b9f3",
+      "tokenizer_config.json": "b11349aafa7cdc6a320767cf7ceb29ed82f7eda5d65e8e0819e76f0ce947bf27",
+      "video_preprocessor_config.json": "7768af27c1fafa9cc9011c1dc20067e03f8915e03b63504550e11d5066986d13",
+      "vocab.json": "ce99b4cb2983d118806ce0a8b777a35b093e2000a503ebde25853284c9dfa003"
+    },
+    "eos_ids": [
+      248044,
+      248046
+    ],
+    "model": "Qwen/Qwen3.8-27B",
+    "native_context_limit": 262144,
+    "pad_id": 248044,
+    "processor_revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+    "revision": "1d4bf0f2ff6012fd82039f2fa52739d0dd7c60c0",
+    "template_sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041",
+    "thinking_close_id": 248069,
+    "thinking_open_id": 248068,
+    "versions": {
+      "huggingface-hub": "1.7.1",
+      "jinja2": "3.1.6",
+      "tokenizers": "0.22.2",
+      "transformers": "5.8.0"
+    }
+  },
+  "unique_request_hashes": 384
+}

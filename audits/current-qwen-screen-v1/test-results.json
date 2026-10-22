@@ -1,0 +1,81 @@
+{
+  "actual_tokenizer_checks": true,
+  "aggregate": {
+    "note": "Full initial run: 940 passed, 12 skipped, one import error because torch was absent. Installed torch 2.11.0 in the temporary test environment and reran only that legacy test: passed. No source changes were needed. This is combined verification, not a claim that the first full invocation was green.",
+    "passed": 941,
+    "skipped": 12,
+    "unique_tests": 953,
+    "unresolved_failures": 0
+  },
+  "code_contract": "701262504d095b23d2d3320fb1ec794647b55b1064c07bb9788eb8a4547b9998",
+  "commands": {
+    "full": "CURRENT_QWEN_TOKENIZER_DIR=<pinned assets> HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 python -m unittest discover -s tests -v",
+    "remediation": "python -m pip install --only-binary=:all: torch==2.11.0",
+    "retest": "PYTHONPATH=.:tests HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 python -m unittest test_study2_v5_staged.ReconstructionTests.test_portable_reconstruction_without_original_path_or_gpu_match -v",
+    "targeted": "CURRENT_QWEN_TOKENIZER_DIR=<pinned assets> HF_HUB_OFFLINE=1 TRANSFORMERS_OFFLINE=1 python -m unittest discover -s tests -p test_study2_current.py -v"
+  },
+  "limits": "GPU, vLLM/CUDA execution, real generated channels/EOS/prefixes, speed/memory and scientific outcomes remain untested. Historical missing-fixture skips are listed verbatim; no new-model test was skipped.",
+  "model_dispatches": "MOCK ONLY IN EXECUTION-CONTROL TESTS",
+  "model_weight_downloads": false,
+  "paid_api_calls": false,
+  "platform": "Darwin/arm64",
+  "python": "3.12.13",
+  "real_model_inference": false,
+  "tests": {
+    "full_offline_initial": {
+      "errors": [
+        "test_portable_reconstruction_without_original_path_or_gpu_match (test_study2_v5_staged.ReconstructionTests.test_portable_reconstruction_without_original_path_or_gpu_match)"
+      ],
+      "failures": [],
+      "log": "full-offline-tests.log.gz",
+      "passed": 940,
+      "seconds": 992.855,
+      "sha256": "1077a9e0a9fb98da5ac7778134b917746da98617698e16a2b807daa92ed6c44b",
+      "skipped": 12,
+      "skips": [
+        "test_existing_loader_scoring_and_saved_prefix_on_tiny_random_qwen (test_qwen3_continuation.ActualTokenizerTests.test_existing_loader_scoring_and_saved_prefix_on_tiny_random_qwen) ... skipped 'Set QWEN3_TOKENIZER_DIR to pinned local tokenizer assets; no downloads in tests'",
+        "test_official_template_eos_candidates_and_all_selection_prompts (test_qwen3_continuation.ActualTokenizerTests.test_official_template_eos_candidates_and_all_selection_prompts) ... skipped 'Set QWEN3_TOKENIZER_DIR to pinned local tokenizer assets; no downloads in tests'",
+        "test_real_native_templates_pilot_cells_offline_only (test_study2_native.RealTokenizerTests.test_real_native_templates_pilot_cells_offline_only) ... skipped 'Real pinned tokenizer absent; production prepare requires all contexts'",
+        "test_saved_v5_facts_earlier_generator_and_historical_option (test_study2_native.SavedPlanTests.test_saved_v5_facts_earlier_generator_and_historical_option) ... skipped 'Actual v5 plan unavailable'",
+        "test_supplied_archive_exact_inventory_prefixes_exclusions_and_controls (test_study2_source_report_evidence.SavedDataTests.test_supplied_archive_exact_inventory_prefixes_exclusions_and_controls) ... skipped 'Saved-data integration requires explicit local source/readout/tokenizer paths'",
+        "test_real_saved_inputs_v1_failed_provenance_and_pinned_v2_suffix (test_study2_source_report_v2.SavedDataTests.test_real_saved_inputs_v1_failed_provenance_and_pinned_v2_suffix) ... skipped 'Explicit local tokenizer/original/readout/v1 paths required; never downloads'",
+        "test_actual_pilot_reparse_and_all_332_real_tokenizer_contexts (test_study2_source_user_main.RealTokenizerTests.test_actual_pilot_reparse_and_all_332_real_tokenizer_contexts) ... skipped 'Actual pinned tokenizer unavailable; all 332 constructions REQUIRED by production prepare'",
+        "test_actual_pilot_execution_332_inventory_664_raw_joins_and_preservation (test_study2_source_user_main.SavedEvidenceTests.test_actual_pilot_execution_332_inventory_664_raw_joins_and_preservation) ... skipped 'Actual saved evidence unavailable'",
+        "test_actual_parent_all_twelve_real_tokenized_bridges_and_preservation (test_study2_source_user_pilot.RealIntegrationTests.test_actual_parent_all_twelve_real_tokenized_bridges_and_preservation) ... skipped 'Pinned tokenizer assets unavailable; real parent/tokenizer integration REQUIRED at RunPod prepare, never replaced by fixtures'",
+        "test_actual_parent_seals_inventory_source_binding_and_original_failed_report (test_study2_source_user_pilot.SavedEvidenceTests.test_actual_parent_seals_inventory_source_binding_and_original_failed_report) ... skipped 'Actual saved parent/source artifacts unavailable'",
+        "test_actual_tokenizer_empty_block_and_saved_prefix (test_study2_v4.Offline.test_actual_tokenizer_empty_block_and_saved_prefix) ... skipped 'Set QWEN3_TOKENIZER_DIR to existing pinned tokenizer assets; never downloaded'",
+        "test_pinned_v5_templates_candidates_and_no_block_reinsertion (test_study2_v5.TokenizerTests.test_pinned_v5_templates_candidates_and_no_block_reinsertion) ... skipped 'Explicit local pinned tokenizer path required; never downloads'"
+      ],
+      "tests_run": 953
+    },
+    "legacy_dependency_retest": {
+      "errors": [],
+      "failures": [],
+      "log": "legacy-dependency-retest.log.gz",
+      "passed": 1,
+      "seconds": 4.522,
+      "sha256": "1a90bfe38fe967bc927cdc8eaa59908880c790f3c244b5a2b21c1acff7da94b0",
+      "skipped": 0,
+      "skips": [],
+      "tests_run": 1
+    },
+    "targeted": {
+      "errors": [],
+      "failures": [],
+      "log": "targeted-tests.log.gz",
+      "passed": 27,
+      "seconds": 52.272,
+      "sha256": "ac8f748286dc1b28b8893b4aacefe9a2d4053e80ea8bfdd55fa98c06adfd9348",
+      "skipped": 0,
+      "skips": [],
+      "tests_run": 27
+    }
+  },
+  "tokenizer_runtime": {
+    "huggingface-hub": "1.7.1",
+    "jinja2": "3.1.6",
+    "tokenizers": "0.22.2",
+    "transformers": "5.8.0"
+  },
+  "unchanged_base": "f880581ed2cc29fca4f204f6b52777c6232c1c6c"
+}
