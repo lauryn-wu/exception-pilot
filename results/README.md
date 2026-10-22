@@ -26,3 +26,10 @@ Intervals are descriptive and use independent lists or worlds as the sample unit
 The [study guide](../STUDY_GUIDE.md) contains the longer development history,
 including later diagnostics whose full archives are not in this repository.
 The main [README](../README.md) summarizes the experiments listed here.
+
+## Qwen3.8 native-thinking screen (2026-10-22)
+
+[Results and audit](current-qwen-screen-v1/README.md): 384/384 correct final answers
+across native thinking off/on, original/lookup wording, and support/conflict.
+The folder includes the unchanged evidence ZIP and run log, machine-readable
+analysis, and SHA-256 checksums. No model calls were made while archiving.
