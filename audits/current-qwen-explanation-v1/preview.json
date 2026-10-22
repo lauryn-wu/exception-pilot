@@ -1,0 +1,356 @@
+{
+  "accounting": "Fixed budgets: invalid/truncated returned responses are unsuccessful; unavailable infrastructure outcomes are not wrong answers. Incomplete arm accuracies and the primary contrast stay undefined, with accuracy bounds shown.",
+  "arms": {
+    "direct": {
+      "conflict": {
+        "accuracy": 1.0,
+        "accuracy_bounds": [
+          1.0,
+          1.0
+        ],
+        "categories": {
+          "valid": 48
+        },
+        "conflict_other_wrong_labels": 0,
+        "conflict_pattern_errors": 0,
+        "correct": 48,
+        "explanation_format_compliant": 0,
+        "invalid": 0,
+        "malformed": 0,
+        "missing_answer": 0,
+        "planned": 48,
+        "returned": 48,
+        "truncated": 0,
+        "unavailable": 0,
+        "valid_wrong_labels": 0
+      },
+      "support": {
+        "accuracy": 1.0,
+        "accuracy_bounds": [
+          1.0,
+          1.0
+        ],
+        "categories": {
+          "valid": 48
+        },
+        "conflict_other_wrong_labels": 0,
+        "conflict_pattern_errors": 0,
+        "correct": 48,
+        "explanation_format_compliant": 0,
+        "invalid": 0,
+        "malformed": 0,
+        "missing_answer": 0,
+        "planned": 48,
+        "returned": 48,
+        "truncated": 0,
+        "unavailable": 0,
+        "valid_wrong_labels": 0
+      }
+    },
+    "explanation": {
+      "conflict": {
+        "accuracy": null,
+        "accuracy_bounds": [
+          0.0,
+          1.0
+        ],
+        "categories": {},
+        "conflict_other_wrong_labels": 0,
+        "conflict_pattern_errors": 0,
+        "correct": 0,
+        "explanation_format_compliant": 0,
+        "invalid": 0,
+        "malformed": 0,
+        "missing_answer": 0,
+        "planned": 48,
+        "returned": 0,
+        "truncated": 0,
+        "unavailable": 48,
+        "valid_wrong_labels": 0
+      },
+      "support": {
+        "accuracy": null,
+        "accuracy_bounds": [
+          0.0,
+          1.0
+        ],
+        "categories": {},
+        "conflict_other_wrong_labels": 0,
+        "conflict_pattern_errors": 0,
+        "correct": 0,
+        "explanation_format_compliant": 0,
+        "invalid": 0,
+        "malformed": 0,
+        "missing_answer": 0,
+        "planned": 48,
+        "returned": 0,
+        "truncated": 0,
+        "unavailable": 48,
+        "valid_wrong_labels": 0
+      }
+    },
+    "native_on": {
+      "conflict": {
+        "accuracy": 1.0,
+        "accuracy_bounds": [
+          1.0,
+          1.0
+        ],
+        "categories": {
+          "valid": 48
+        },
+        "conflict_other_wrong_labels": 0,
+        "conflict_pattern_errors": 0,
+        "correct": 48,
+        "explanation_format_compliant": 0,
+        "invalid": 0,
+        "malformed": 0,
+        "missing_answer": 0,
+        "planned": 48,
+        "returned": 48,
+        "truncated": 0,
+        "unavailable": 0,
+        "valid_wrong_labels": 0
+      },
+      "support": {
+        "accuracy": 1.0,
+        "accuracy_bounds": [
+          1.0,
+          1.0
+        ],
+        "categories": {
+          "valid": 48
+        },
+        "conflict_other_wrong_labels": 0,
+        "conflict_pattern_errors": 0,
+        "correct": 48,
+        "explanation_format_compliant": 0,
+        "invalid": 0,
+        "malformed": 0,
+        "missing_answer": 0,
+        "planned": 48,
+        "returned": 48,
+        "truncated": 0,
+        "unavailable": 0,
+        "valid_wrong_labels": 0
+      }
+    }
+  },
+  "complete": false,
+  "instruction": "Prepare a fresh execution directory on RunPod; this audit is not a runnable frozen plan.",
+  "limitations": [
+    "Matched diagnostic; not a novel mechanism or sufficient evidence for a paper.",
+    "Four shared construction blocks are the primary resampling units. The 24-world interval is a sensitivity analysis; 96 responses are not 96 independent worlds.",
+    "An all-perfect [0, 0] bootstrap interval only resamples these observed outcomes; it does not establish population certainty.",
+    "Native-ON comparisons are descriptive. There is no native-ON-plus-explanation arm, so this experiment cannot show native thinking protects against an explanation request.",
+    "Written output and the instruction effect on task interpretation are not isolated.",
+    "Semantic trace annotations remain not reviewed; nonempty preceding text is only an explanation-format observation."
+  ],
+  "measurement_mode": "UNEXECUTED",
+  "paired_changes": {
+    "direct": {
+      "conflict": {
+        "both_correct": 0,
+        "both_unsuccessful": 0,
+        "control_only_correct": 0,
+        "explanation_only_correct": 0,
+        "paired_accuracy_change": null,
+        "planned_pairs": 48,
+        "unavailable": 48
+      },
+      "support": {
+        "both_correct": 0,
+        "both_unsuccessful": 0,
+        "control_only_correct": 0,
+        "explanation_only_correct": 0,
+        "paired_accuracy_change": null,
+        "planned_pairs": 48,
+        "unavailable": 48
+      }
+    },
+    "native_on": {
+      "conflict": {
+        "both_correct": 0,
+        "both_unsuccessful": 0,
+        "control_only_correct": 0,
+        "explanation_only_correct": 0,
+        "paired_accuracy_change": null,
+        "planned_pairs": 48,
+        "unavailable": 48
+      },
+      "support": {
+        "both_correct": 0,
+        "both_unsuccessful": 0,
+        "control_only_correct": 0,
+        "explanation_only_correct": 0,
+        "paired_accuracy_change": null,
+        "planned_pairs": 48,
+        "unavailable": 48
+      }
+    }
+  },
+  "plan_hash": null,
+  "portable_request_manifest_hash": "6933f70072658590ca780652e815e5dbbdc43eb7f70ae87a4c8f36474bb13916",
+  "preview_only": true,
+  "primary": {
+    "block_interval_95": null,
+    "definition": "(explanation support - explanation conflict) - (OFF/direct support - OFF/direct conflict)",
+    "estimate": null,
+    "sign": "Positive means an additional conflict penalty under the explanation instruction.",
+    "unavailable": 96,
+    "world_sensitivity": null
+  },
+  "protocol": "study2-current-qwen-explicit-explanation-v1",
+  "recovery": {
+    "action": "Explicit recover quarantines debris only. Failed/ambiguous attempts remain held; no automatic resend.",
+    "held_attempts": [],
+    "pending_entries": [],
+    "recoveries": [],
+    "uncommitted_recovery_intents": []
+  },
+  "resource_summary": {
+    "generation_seconds": 0,
+    "invocation_seconds": 0,
+    "max_device_used_snapshot_bytes": 0,
+    "maximum_new_output_tokens": 393216,
+    "memory_note": "Parent-process peak may omit vLLM workers; device-used snapshots are not a continuous peak.",
+    "peak_process_allocated_bytes": 0,
+    "planned_new_input_tokens": 54264,
+    "returned_output_tokens": 0
+  },
+  "sensitivities": {
+    "direct": {
+      "cue": {
+        "change_rate_among_eligible": 0.0,
+        "denominator": 48,
+        "eligible_pairs": 48,
+        "fixed_budget_pair_denominator": 48,
+        "label_changes": 0,
+        "note": "Invalid or truncated outputs are unscorable, not label changes; eligible-pair rates may be selected.",
+        "planned_pairs": 48,
+        "unavailable_pairs": 0,
+        "unscorable_pairs": 0
+      },
+      "record": {
+        "change_rate_among_eligible": 1.0,
+        "denominator": 48,
+        "eligible_pairs": 48,
+        "fixed_budget_pair_denominator": 48,
+        "label_changes": 48,
+        "note": "Invalid or truncated outputs are unscorable, not label changes; eligible-pair rates may be selected.",
+        "planned_pairs": 48,
+        "unavailable_pairs": 0,
+        "unscorable_pairs": 0
+      }
+    },
+    "explanation": {
+      "cue": {
+        "change_rate_among_eligible": null,
+        "denominator": 0,
+        "eligible_pairs": 0,
+        "fixed_budget_pair_denominator": 48,
+        "label_changes": 0,
+        "note": "Invalid or truncated outputs are unscorable, not label changes; eligible-pair rates may be selected.",
+        "planned_pairs": 48,
+        "unavailable_pairs": 48,
+        "unscorable_pairs": 48
+      },
+      "record": {
+        "change_rate_among_eligible": null,
+        "denominator": 0,
+        "eligible_pairs": 0,
+        "fixed_budget_pair_denominator": 48,
+        "label_changes": 0,
+        "note": "Invalid or truncated outputs are unscorable, not label changes; eligible-pair rates may be selected.",
+        "planned_pairs": 48,
+        "unavailable_pairs": 48,
+        "unscorable_pairs": 48
+      }
+    },
+    "native_on": {
+      "cue": {
+        "change_rate_among_eligible": 0.0,
+        "denominator": 48,
+        "eligible_pairs": 48,
+        "fixed_budget_pair_denominator": 48,
+        "label_changes": 0,
+        "note": "Invalid or truncated outputs are unscorable, not label changes; eligible-pair rates may be selected.",
+        "planned_pairs": 48,
+        "unavailable_pairs": 0,
+        "unscorable_pairs": 0
+      },
+      "record": {
+        "change_rate_among_eligible": 1.0,
+        "denominator": 48,
+        "eligible_pairs": 48,
+        "fixed_budget_pair_denominator": 48,
+        "label_changes": 48,
+        "note": "Invalid or truncated outputs are unscorable, not label changes; eligible-pair rates may be selected.",
+        "planned_pairs": 48,
+        "unavailable_pairs": 0,
+        "unscorable_pairs": 0
+      }
+    }
+  },
+  "source": {
+    "backend_hash": "13b60eb6e62e4cc101c9d407c9be9c2b484656693545cec8856983140bb82b03",
+    "checksum_file_sha256": "bcc591315ea756eddc0061d2bb40cb7ace8df31eeb27bf1f907b80b3aa1af0b7",
+    "code_contract": "701262504d095b23d2d3320fb1ec794647b55b1064c07bb9788eb8a4547b9998",
+    "execution_hash": "93225fedd103f02438914d9ddef35774168a4a8ca7bd7fcf04ff60822fb688f2",
+    "manifest_sha256": "6b0f814213db7ebe3d80e400e789940a34161dc95b876d19065c60542ec14b5b",
+    "plan_hash": "edda713e841caafcd34d86f299d60a07cbde93a1b3d563a27ecfd13b7a4f52f6",
+    "smoke": {
+      "execution_hash": "3dab7e8bd676e121117645a16af35cfb9e5cbec0a5e3f30121b5bdb8635a271c",
+      "operations": {
+        "smoke-0/thinking-0": "a04713c3c60038687e0ab65f1f92cfb14ad3f7f9dc4caee1a661270d05643430",
+        "smoke-0/thinking-0/saved-prefix": "a155e680899c664ddb2a586ffe3bd906d4404d3b908f4b418a5b792f5fd718a1",
+        "smoke-0/thinking-1": "1e91dd6876ce372d6e85a52f43bae9927ee7fc0a5b75ad612ba32f95171c6e06",
+        "smoke-0/thinking-1/saved-prefix": "fe5139dedfe561a568d422144d3319d7e79ad94fdd3d926d4b3431606c5824b1",
+        "smoke-1/thinking-0": "2474448c91a8e145ae890f68ad392289135121609a44f21283bf51fea4944954",
+        "smoke-1/thinking-0/saved-prefix": "b03eef91756c4d9b1817b2693520e68c3085e4496390e887bde40586284ca9d8",
+        "smoke-1/thinking-1": "455a2c950e9c4542347e5c528fe41af412f3a93f7322c03fa29a49db8fbd7eb9",
+        "smoke-1/thinking-1/saved-prefix": "ce967717ca1128721db3088b43363c8ecf374978089bccd105ce236ff9957aa6"
+      },
+      "plan_hash": "068d21dd9126400888f9127267480fce5f8166b5a573abc99cd154f81d4bf799",
+      "scheduled_new_records": 0,
+      "verified_passing_records": 8
+    },
+    "startup_log": {
+      "line_number": 1,
+      "note": "Separate log evidence; the historical backend identity did not record this environment variable.",
+      "sha256": "0941eaab54b838e459e127caa53a7d7aa3cd6b25634778f309ab17738dc0b0a1",
+      "text": "VLLM_USE_FLASHINFER_SAMPLER=0"
+    },
+    "zip_sha256": "bb0e059f8a44a69b33990998b672e245405c4ca67c2d7d9214113283a6c9d31a"
+  },
+  "stop": "STOP_AFTER_96_EXPLANATIONS_NO_AUTOMATIC_EXPANSION",
+  "this_invocation": {
+    "cached_explanation_responses": 0,
+    "historical_controls_reused": 192,
+    "model_loads": 0,
+    "new_dispatches": 0,
+    "newly_returned": 0
+  },
+  "totals": {
+    "ambiguous": 0,
+    "failed": 0,
+    "historical_controls_reused": 192,
+    "model_load_attempts": 0,
+    "model_loads": 0,
+    "never_started": 96,
+    "planned_explanations": 96,
+    "returned": 0,
+    "scientific_dispatches": 0,
+    "unresolved_invocations": 0
+  },
+  "validation": {
+    "actual_record_cells_checked": true,
+    "model_loads": 0,
+    "new_real_generations": 0,
+    "raw_token_text_input_sampling_and_dispatch_checks": true,
+    "scientific_returns_checked": 384,
+    "sealed_source_members": 1582,
+    "smoke_returns_checked": 8,
+    "unchanged_original_contract": "701262504d095b23d2d3320fb1ec794647b55b1064c07bb9788eb8a4547b9998"
+  }
+}

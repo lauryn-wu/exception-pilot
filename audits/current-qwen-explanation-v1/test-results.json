@@ -1,0 +1,76 @@
+{
+  "cli": {
+    "all_exit_codes": 0,
+    "commands": [
+      "prepare",
+      "inspect",
+      "run",
+      "analyze",
+      "export"
+    ],
+    "model_loads": 0,
+    "new_generations": 0
+  },
+  "environment": {
+    "huggingface_hub": "1.7.1",
+    "jinja2": "3.1.6",
+    "python": "3.12.13",
+    "tokenizers": "0.22.2",
+    "torch": "2.11.0",
+    "transformers": "5.8.0",
+    "vllm": "not installed or invoked"
+  },
+  "new_paid_calls": 0,
+  "new_real_generations": 0,
+  "not_tested": [
+    "new real-model behavior",
+    "live GPU runtime",
+    "full repository suite"
+  ],
+  "status": "OFFLINE_ONLY",
+  "suites": [
+    {
+      "command": "python -m unittest discover -s tests -p 'test_study2_explanation.py' -v",
+      "failed": 0,
+      "log": "explanation-tests.log.gz",
+      "passed": 31,
+      "run": 31,
+      "seconds": 72.702,
+      "skip_details": [],
+      "skipped": 0,
+      "suite": "explanation"
+    },
+    {
+      "command": "python -m unittest discover -s tests -p 'test_study2_current.py' -v",
+      "failed": 0,
+      "log": "current-screen-tests.log.gz",
+      "passed": 27,
+      "run": 27,
+      "seconds": 61.098,
+      "skip_details": [],
+      "skipped": 0,
+      "suite": "current"
+    },
+    {
+      "command": "python -m unittest discover -s tests -p 'test_study2_native.py' -v",
+      "failed": 0,
+      "log": "native-tests.log.gz",
+      "passed": 33,
+      "run": 36,
+      "seconds": 58.579,
+      "skip_details": [
+        "test_real_native_templates_pilot_cells_offline_only (test_study2_native.RealTokenizerTests.test_real_native_templates_pilot_cells_offline_only) ... skipped 'Real pinned tokenizer absent; production prepare requires all contexts'",
+        "test_saved_v5_facts_earlier_generator_and_historical_option (test_study2_native.SavedPlanTests.test_saved_v5_facts_earlier_generator_and_historical_option) ... skipped 'Actual v5 plan unavailable'",
+        "test_actual_saved_pinned_template_mode_switch_without_tokenizer_or_weights (test_study2_native.SavedTemplateTests.test_actual_saved_pinned_template_mode_switch_without_tokenizer_or_weights) ... skipped 'Saved template/Jinja2 unavailable'"
+      ],
+      "skipped": 3,
+      "suite": "native"
+    }
+  ],
+  "totals": {
+    "failed": 0,
+    "passed": 91,
+    "run": 94,
+    "skipped": 3
+  }
+}
