@@ -1,0 +1,57 @@
+{
+  "cli": "prepare/inspect/default-run/analyze/export/relocation passed offline",
+  "code_contract": "59ce83e4ffea153e1ad737d83a4c6fd97ff06d93117f39295e5dff8f07e4887f",
+  "date": "2026-10-22",
+  "gpt_python": "3.12.13",
+  "gpt_standard_library_only": true,
+  "gpu_inference": 0,
+  "live_api_compatibility": "not_tested",
+  "model_downloads": 0,
+  "original_source_and_qwen_contracts": "unchanged",
+  "paid_api_calls": 0,
+  "suites": [
+    {
+      "exit_code": 0,
+      "failed": 0,
+      "log": "gpt-tests.log.gz",
+      "passed": 45,
+      "run": 45,
+      "seconds": 33.99,
+      "skipped": 0,
+      "suite": "GPT explanation"
+    },
+    {
+      "exit_code": 0,
+      "failed": 0,
+      "log": "qwen-explanation-tests.log.gz",
+      "passed": 31,
+      "run": 31,
+      "seconds": 76.506,
+      "skipped": 0,
+      "suite": "Qwen explanation"
+    },
+    {
+      "exit_code": 0,
+      "failed": 0,
+      "log": "current-screen-tests.log.gz",
+      "passed": 27,
+      "run": 27,
+      "seconds": 56.937,
+      "skipped": 0,
+      "suite": "Current Qwen screen"
+    },
+    {
+      "exit_code": 0,
+      "failed": 0,
+      "log": "native-tests.log.gz",
+      "passed": 33,
+      "run": 36,
+      "seconds": 56.595,
+      "skipped": 3,
+      "suite": "Historical native workflow"
+    }
+  ],
+  "total_passed": 136,
+  "total_run": 139,
+  "total_skipped": 3
+}

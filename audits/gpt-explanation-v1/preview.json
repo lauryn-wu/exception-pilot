@@ -1,0 +1,86 @@
+{
+  "api_settings": {
+    "max_output_tokens": 4096,
+    "model": "gpt-6-sol",
+    "reasoning": {
+      "effort": "none"
+    },
+    "service_tier": "default",
+    "store": false,
+    "stream": false,
+    "temperature": 1.0,
+    "top_p": 0.95
+  },
+  "code_contract": "59ce83e4ffea153e1ad737d83a4c6fd97ff06d93117f39295e5dff8f07e4887f",
+  "code_revision": "ea9ed2690164bd182e230286470ac34b0773e7cd",
+  "counts": {
+    "ambiguous": 0,
+    "cached": 0,
+    "completed": 0,
+    "failed": 0,
+    "matched_pairs": 96,
+    "pending": 192,
+    "planned": 192,
+    "qwen_outputs_reused": 0,
+    "scientific_dispatches": 0
+  },
+  "documentation": {
+    "caching": "https://developers.openai.com/api/docs/guides/prompt-caching",
+    "checked": "2026-10-22",
+    "model": "https://developers.openai.com/api/docs/models/gpt-6-sol",
+    "responses": "https://developers.openai.com/api/reference/typescript/resources/responses/methods/create",
+    "sampling": "https://developers.openai.com/api/docs/guides/latest-model?model=gpt-6-sol",
+    "snapshot": null,
+    "snapshot_note": "No dated snapshot listed; returned identifiers are recorded, not required to equal the requested alias.",
+    "support": "reasoning.effort=none supports temperature and top_p; API behavior has not been tested here."
+  },
+  "export": {
+    "complete": false,
+    "files": 9,
+    "network_calls": 0,
+    "sha256": "72ab51e502a548cd470409a56eef28eab29cad4bc62d332737b3f16415d0f15a"
+  },
+  "measurement_mode": "UNEXECUTED",
+  "note": "UNEXECUTED plan only. No GPT results, paid API calls, tokenizer loads or GPU inference. Audit revision is pre-commit provenance; code_contract identifies the actual implementation bytes.",
+  "prepare": {
+    "model_loads": 0,
+    "network_calls": 0,
+    "pairs": 96,
+    "plan_hash": "5c56be33cdddef7dd9caeb5139089da597893c9a47a84257b922a112ff3ca08e",
+    "requests": 192
+  },
+  "pricing": {
+    "accounting_source": "https://developers.openai.com/api/docs/guides/prompt-caching",
+    "as_of": "2026-10-22",
+    "assumption": "Standard global synchronous API; no Batch/Flex/priority/regional premiums. Missing usage components leave exact cost unknown.",
+    "cache_write_12h_per_million": 5.0,
+    "cache_write_30m_per_million": 2.5,
+    "cached_input_per_million": 0.2,
+    "currency": "USD",
+    "input_per_million": 2.0,
+    "long_context_threshold": 272000,
+    "output_per_million": 10.0,
+    "region": "global",
+    "service_tier": "default",
+    "source": "https://developers.openai.com/api/docs/models/gpt-6-sol"
+  },
+  "schedule": {
+    "direct_first_pairs": 48,
+    "explanation_first_pairs": 48,
+    "method": "Hash-sort matched pairs, adjacent opposite arms; alternate first arm by sorted world index.",
+    "seed": 20261022,
+    "seed_role": "Scheduling only; no model-generation seed is sent."
+  },
+  "source_sha256": "bb0e059f8a44a69b33990998b672e245405c4ca67c2d7d9214113283a6c9d31a",
+  "source_validation": {
+    "code_contract": "701262504d095b23d2d3320fb1ec794647b55b1064c07bb9788eb8a4547b9998",
+    "execution_hash": "93225fedd103f02438914d9ddef35774168a4a8ca7bd7fcf04ff60822fb688f2",
+    "manifest_sha256": "6b0f814213db7ebe3d80e400e789940a34161dc95b876d19065c60542ec14b5b",
+    "plan_hash": "edda713e841caafcd34d86f299d60a07cbde93a1b3d563a27ecfd13b7a4f52f6",
+    "sealed_files": 1582,
+    "validation_scope": "Archived seals, file hashes, prompt/table/operation bindings and saved input-ID identity. No independent Qwen token decoding, template rendering, or inference.",
+    "verified_returns": 384,
+    "verified_smoke_returns": 8,
+    "zip_sha256": "bb0e059f8a44a69b33990998b672e245405c4ca67c2d7d9214113283a6c9d31a"
+  }
+}
